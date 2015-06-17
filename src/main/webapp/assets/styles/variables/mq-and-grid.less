@@ -27,9 +27,9 @@
 // expanstion through these three media queries. Note that these do not have max widths, so they scale
 // If once you get to "small" screen, your object looks the same, you don't need further breakpoints. Just define
 // the object using the @mq-sm breakpoint and it will look like that for all the bigger breakpoints
-@mq-sm:                 ~"only screen and (min-width: @{screen-xs-min})";
-@mq-md:                 ~"only screen and (min-width: @{screen-sm-min})";
-@mq-lg:                 ~"only screen and (min-width: @{screen-md-min})";
+@mq-sm:                 ~"only screen and (min-width: @{screen-sm-min})";
+@mq-md:                 ~"only screen and (min-width: @{screen-md-min})";
+@mq-lg:                 ~"only screen and (min-width: @{screen-lg-min})";
 
 // There are instances where we will need to specify handling only in certain breakpoints. Rather than being the best
 // practice, this should be the exception case. These helpers will give you the ability to target only specific

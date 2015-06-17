@@ -42,7 +42,7 @@
 // We write out the icons we are using at the top of the LESS file for easy access
 
 // instead of importing fontawesome/icons.less which includes all the icons that can be used, we will manually
-// write out the ones we need here.
+// write out the ones we need here. We can just drop these classes into the DOM
 .@{fa-css-prefix}-twitter:before {
     content: @fa-var-twitter;
 }
@@ -54,6 +54,9 @@
 }
 .@{fa-css-prefix}-pinterest:before {
     content: @fa-var-pinterest;
+}
+.@{fa-css-prefix}-search:before {
+    content: @fa-var-search;
 }
 
 
@@ -68,7 +71,12 @@
 
 // we pull in the default font-awesome font path, as well as the core definition
 @import "../bower/fontawesome/path.less";
-@import "../bower/fontawesome/core.less";
+
+// we drop in our named icon class here using the fa-icon mixin. Allows us to also do extends for semantic class names if that's what we want
+// if we just use the variable here instead of the hardcoded name, we cannot do extends
+.icon {
+  .fa-icon()
+}
 
 
 /**

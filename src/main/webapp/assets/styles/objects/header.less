@@ -32,6 +32,7 @@
     background: @header-background;
     height: @header-height;
     padding: 0 @space-double;
+    position: relative;
     width: 100%;
 
     .bsp-share-links {
@@ -55,19 +56,126 @@
     margin: 0;
 }
 
-.bsp-header-extra-links {
-    &:extend(.bsp-list-inline all);
+
+
+.bsp-site-search {
+    &:extend(.vertical-center);
+
+    background: @header-background;
+    height: 0;
+    position: absolute;
+    top: @header-height;
+    left: 0;
+    overflow: hidden;
+    .transition(height .15s linear);
+    width: 100%;
+    z-index: 1;
+
+    &.toggle-in {
+        height: @header-search-height + 10;
+    }
+}
+
+.bsp-site-search-form {
+    margin: 0 auto;
+    position: relative;
+    width: 90%;
+}
+
+.bsp-search-input {
+    height: @header-search-height;
+    width: 100%;
+}
+
+.bsp-search-submit {
     &:extend(.ts-1);
 
+    background: none;
+    border: none;
+    right: 0;
+    position: absolute;
+    top: 0;
+}
+
+.bsp-site-search-trigger {
+    &:extend(.ts-2);
     float: right;
+    padding-right: @space-and-half;
+
+    a {
+        height: @header-height;
+        line-height: @header-height;
+    }
+}
+
+
+/** TODO: This should be politico only and not in BSP base **/
+.bsp-header-extra-links {
+    &:extend(.bsp-list-inline all);
+    &:extend(.ts-0);
+
     height: 100%;
+    float: right;
+    padding-left: @space-double;
 }
 
 .bsp-header-extra-link {
     background: @brand-dark;
+    border-left: 2px solid @header-background;
+    display: block;
     height: @header-height;
     line-height: @header-height;
+    padding: 0 @space-double;
+    text-transform: uppercase;
 }
 
+.bsp-header-extra {
+    display: none;
+}
+
+.bsp-site-search-centering {
+    &:extend(.vertical-center-wrapper all);
+
+    &:before {
+        display: none;
+    }
+}
+
+@media @mq-sm {
+    .bsp-site-search-centering {
+
+        &:before {
+            display: inline-block;
+        }
+
+        float: left;
+        height: 100%;
+    }
+    .bsp-site-search {
+        height: auto;
+        padding-left: @space-quad;
+        position: relative;
+        top: 0;
+        width: 300px;
+    }
+
+    .bsp-site-search-trigger {
+        display: none;
+    }
+}
+
+@media @mq-md {
+    .bsp-site-search {
+        width: 450px;
+    }
+}
+
+
+@media @mq-lg {
+
+    .bsp-header-extra {
+        display: block;
+    }
+}
 
 

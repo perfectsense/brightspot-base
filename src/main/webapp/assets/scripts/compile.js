@@ -10,6 +10,7 @@ define(function (require) {
     require('bsp-carousel-thumbnav-plugin');
     require('bsp-share');
     require('bsp-template-plugin');
+    require('plugins/bsp-toggle');
 
     // test including handlebars partials
     require('plugins/require-template-test');
