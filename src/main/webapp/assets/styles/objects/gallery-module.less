@@ -1,0 +1,65 @@
+@caption-margin: 1rem 0 0 0;
+@caption-color: #7b7b7b;
+
+// default carousel should have 0 px of bottom margin. Overriding slick's default here
+.slick-slider {
+	margin-bottom: 0px;
+
+	// if we have the carousel dots theme, we need allow the space for dots
+	&.carousel-dots {
+		margin-bottom: 30px;
+	}
+}
+
+.bsp-carousel-slide {
+	// prevents the fouc until carousel inits
+	display: none;
+
+	&:first-of-type {
+		display: block;
+	}
+
+	.slick-initialized & {
+		display: block;
+	}
+
+	// by default slide images are 100% of their container.
+	// Can't think of a use case where this isn't true, but we can always adjust if need be
+	img {
+		height: auto;
+		width: 100%;
+	}
+}
+
+// prevents the fouc until carousel inits and hides the nav on phones
+.bsp-carousel-nav {
+	display: none;
+}
+
+
+// for anything past medium, we want the thumbs, anything before, no thumbs
+@media @mq-md {
+
+	.bsp-carousel-stage.carousel-dots {
+		margin-bottom: 0;
+
+		.slick-dots {
+			display: none;
+		}
+	}
+
+	// overrides base slick specificity
+	.bsp-carousel-stage {
+		.slick-prev, .slick-next {
+			display: none !important;
+		}
+	}
+
+	.bsp-carousel-nav {
+
+		&.slick-initialized {
+			display: block;
+		}
+	}
+
+}

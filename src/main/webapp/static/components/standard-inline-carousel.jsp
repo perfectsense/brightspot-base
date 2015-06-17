@@ -1,0 +1,1 @@
+<p>Component: Standard inline carousel</p>

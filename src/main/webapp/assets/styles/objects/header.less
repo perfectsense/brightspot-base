@@ -1,0 +1,54 @@
+.bsp-tophat {
+    &:extend(.clearfix all);
+
+    background: @gray-dark-3;
+    width: 100%;
+}
+
+.bsp-tophat-links {
+    &:extend(.bsp-list-inline all);
+    &:extend(.ts-neg-1);
+
+    float: right;
+    padding: @space-half 0;
+
+    a {
+        color: @white;
+    }
+}
+
+.bsp-tophat-register {
+    margin-left: @space-double;
+}
+
+
+
+
+
+.bsp-site-header {
+    &:extend(.clearfix all);
+
+    background: @brand-dark;
+    height: @header-height;
+    padding: 0 @space-double;
+    width: 100%;
+
+    .bsp-share-links {
+        a {
+            color: @white;
+        }
+    }
+}
+
+.bsp-site-logo-centering {
+    &:extend(.vertical-center-wrapper all);
+
+    float: left;
+    height: 100%;
+}
+
+.bsp-site-logo {
+    &:extend(.vertical-center);
+    
+    margin: 0;
+}

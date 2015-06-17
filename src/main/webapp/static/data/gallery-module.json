@@ -1,0 +1,25 @@
+{
+	"galleryTitle" : "Test Gallery Title",
+
+	"gallerySlides" : [
+		{ "slideImage" : "/assets/images/1200x400.png" },
+		{ "slideImage" : "/assets/images/1200x400.png" },
+		{ "slideImage" : "/assets/images/1200x400.png" },
+		{ "slideImage" : "/assets/images/1200x400.png" },
+		{ "slideImage" : "/assets/images/1200x400.png" },
+		{ "slideImage" : "/assets/images/1200x400.png" },
+		{ "slideImage" : "/assets/images/1200x400.png" },
+		{ "slideImage" : "/assets/images/1200x400.png" }
+	],
+
+	"galleryNavItems" : [
+		{ "navImage" : "/assets/images/400x100.png" },
+		{ "navImage" : "/assets/images/400x100.png" },
+		{ "navImage" : "/assets/images/400x100.png" },
+		{ "navImage" : "/assets/images/400x100.png" },
+		{ "navImage" : "/assets/images/400x100.png" },
+		{ "navImage" : "/assets/images/400x100.png" },
+		{ "navImage" : "/assets/images/400x100.png" },
+		{ "navImage" : "/assets/images/400x100.png" }
+	]
+}

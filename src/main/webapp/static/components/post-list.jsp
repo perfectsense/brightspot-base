@@ -1,0 +1,1 @@
+<p>Component: Post list</p>

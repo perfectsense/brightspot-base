@@ -1,0 +1,14 @@
+// padding vs margin allows for cleaner separation between components, especially if things inside of them use margins
+.bsp-component {
+	padding-bottom: @space-double;
+
+	&:first-of-type {
+		padding-top: @space-double;
+	}
+}
+
+.bsp-component-title {
+	&:extend(.ts-1);
+
+	margin: 0 0 @space 0;
+}
