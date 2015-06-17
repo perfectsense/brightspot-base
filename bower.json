@@ -4,7 +4,7 @@
   "homepage": "https://github.com/perfectsense/brightspot-base",
   "dependencies": {
     "bsp-utils": "2.0.1",
-    "bsp-carousel": "perfectsense/brightspot-js-carousel#0.0.16",
+    "bsp-carousel": "perfectsense/brightspot-js-carousel#gallery-plugin",
     "bsp-share": "perfectsense/brightspot-js-share#2.0.1",
     "bsp-templates": "perfectsense/brightspot-js-templates#0.0.4",
     "bootstrap": "3.3.4",
