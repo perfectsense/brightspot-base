@@ -2,24 +2,6 @@ module.exports = function(grunt) {
 
     'use strict';
 
-    // When we run grunt via the maven build, this doesnt exist yet, as its something that is done by the bsp-grunt task
-    // but when we run our grunt watcher, it assumes its run after bsp-grunt is done, and this file already exists
-    var targetDir = '';
-    try {
-        targetDir = grunt.file.read('target/grunt-dest');
-    }
-    catch(err) {}
-
-    // when we do go through maven, this option gets set and we can gather the targetDir from the variable rather than the file
-    var buildName = grunt.option('bsp-maven-build-finalName');
-    if(buildName) {
-        targetDir = buildName;
-    }
-
-    var path = require('path');
-
-    grunt.loadNpmTasks('grunt-contrib-handlebars');
-
     require('bsp-grunt')(grunt, {
 
         bsp: {
@@ -101,17 +83,7 @@ module.exports = function(grunt) {
                         src: 'handlebars.js',
                         dest: '../scripts/bower/handlebars.js'
                     }
-                ],
-
-                'requirejs': {
-                  dynamic: {
-                    options: {
-                      paths: {
-                        'bsp-templates': 'empty:'
-                      }
-                    }
-                  }
-                }
+                ]
             }
         }
 
