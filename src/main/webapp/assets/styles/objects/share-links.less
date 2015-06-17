@@ -6,7 +6,20 @@
 }
 
 .bsp-share-links {
-	&:extend(.ts-2);
+	&:extend(.ts-1);
 	&:extend(.bsp-list-inline all);
 	&:extend(.vertical-center);
+
+	li {
+		padding: 0 @space;
+	}
 }	
+
+.bsp-share-link {
+	background: @brand-primary;
+	border-radius: 32px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	width: 32px;
+}
