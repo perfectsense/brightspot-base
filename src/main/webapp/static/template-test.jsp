@@ -9,6 +9,7 @@
         <title>Template test</title>
         <script src="/assets/scripts/jquery.js"></script>
         <script src="/assets/scripts/require.js" data-main="/assets/scripts/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="/assets/styles/main.min.css" />
     </head>
     <body>
         <h1>Template test</h1>
@@ -37,5 +38,11 @@
 
         <h2>Written from client side template (using individual RequireJS module as would be used in prod)</h2>
         <p data-bsp-require-template-test></p>
+
+        <h2>Pulled in less and a template from bsp-carousel</h2>
+        <div
+            data-bsp-template
+            data-bsp-template-options='{ "template": "bower/bsp-carousel-gallery", "data": {} }'
+        ></div>        
     </body>
 </html>

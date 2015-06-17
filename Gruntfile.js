@@ -59,6 +59,18 @@ module.exports = function(grunt) {
                         src: '*.js',
                         dest: '', //root of scripts
                         expand: true
+                    },
+                    {
+                        cwd: 'src/less/bsp-carousel-gallery-plugin/',
+                        src: '*.less',
+                        dest: '../styles/bower/bsp-carousel-gallery-plugin',
+                        expand: true
+                    },
+                    {
+                        cwd: 'src/templates/',
+                        src: '*.hbs',
+                        dest: '../../render/bower/',
+                        expand: true
                     }
                 ],
 
