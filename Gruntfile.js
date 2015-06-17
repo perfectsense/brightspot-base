@@ -74,6 +74,13 @@ module.exports = function(grunt) {
                     }
                 ],
 
+                'bsp-templates': [
+                    {
+                        src: 'dist/bsp-template-plugin.js',
+                        dest: '../scripts/bower/bsp-template-plugin.js'
+                    }
+                ],
+
                 'fontawesome': [
                     {
                         src: 'less/*',
@@ -96,12 +103,15 @@ module.exports = function(grunt) {
                     }
                 ],
 
-                'text': [
-                    {
-                        src: 'text.js',
-                        dest: '../scripts/bower/text.js'
+                'requirejs': {
+                  dynamic: {
+                    options: {
+                      paths: {
+                        'bsp-templates': 'empty:'
+                      }
                     }
-                ]
+                  }
+                }
             }
         }
 

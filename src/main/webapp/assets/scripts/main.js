@@ -4,7 +4,7 @@
 require.config({
     paths: {
     	'handlebars': 'bower/handlebars',
-    	'text': 'bower/text'
+    	'bsp-template-plugin': 'bower/bsp-template-plugin'
     },
     shim: {
     },

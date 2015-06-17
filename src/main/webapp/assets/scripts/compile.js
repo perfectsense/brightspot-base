@@ -6,13 +6,10 @@ define(function (require) {
 	require('bsp-utils'); // bsp-utils is pulled in via bower and includes standard utils and the bsp-plugin
 	
     // Plugins
-    require('plugins/template');
     require('bsp-carousel-plugin');
     require('bsp-carousel-thumbnav-plugin');
     require('bsp-share');
-
-    // test handlebar template renderer
-    require('plugins/template');
+    require('bsp-template-plugin');
 
     // test including handlebars partials
     require('plugins/require-template-test');
