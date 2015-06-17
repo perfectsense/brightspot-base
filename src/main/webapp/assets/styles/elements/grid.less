@@ -8,13 +8,24 @@
 }
 
 .bsp-column-full {
-    .make-md-column(12);
+	// no styles, this is full on every breakpoint
+	.make-xs-column(12);
 }
 
 .bsp-column-main {
+	.make-sm-column(7);
 	.make-md-column(8);
 }
 
 .bsp-column-aside {
+	.make-sm-column(5);
 	.make-md-column(4);
+}
+
+.bsp-column-half {
+	.make-sm-column(5);
+}
+
+.bsp-column-third {
+	.make-sm-column(4);
 }

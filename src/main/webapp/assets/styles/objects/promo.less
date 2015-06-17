@@ -1,0 +1,44 @@
+.bsp-promo {
+	position: relative;
+}
+
+.bsp-promo-image {
+	img {
+		height: auto;
+		width: 100%;
+	}
+}
+
+.bsp-promo-text {
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.bsp-promo-title {
+	&:extend(.ts-1);
+
+	padding: @space;
+	text-transform: uppercase;
+}
+
+.bsp-promo-desc {
+	display: none;
+}
+
+@media @mq-sm {
+
+	.bsp-promo-text {	
+		background: none;
+		position: relative;
+	}
+
+	.bsp-promo-title {
+		padding: @space 0;
+	}
+
+	.bsp-promo-desc {
+		display: block;
+	}
+}
