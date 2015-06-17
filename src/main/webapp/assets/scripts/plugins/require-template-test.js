@@ -6,17 +6,19 @@
 
     "use strict";
 
-    define(['jquery','bsp-utils','templates/test'], factory);
+    define(['jquery','bsp-utils','handlebars'], factory);
 
-})(this, function($, bsp_utils, template, globals) {
+})(this, function($, bsp_utils, Handlebars, globals) {
 
     "use strict";
 
     var module = {
         init: function($el, options) {
-			$el.html(template({
-				testVar: 'testVarValue'
-			}));
+            $.get('/render/test.hbs').then(function(template) {
+                $el.html(Handlebars.compile(template)({
+                    testVar: 'testVarValue'
+                }));
+            });
         }
     };
 

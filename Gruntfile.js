@@ -43,13 +43,19 @@ module.exports = function(grunt) {
 
                 'bsp-carousel': [
                     {
-                        cwd: 'dist/',
+                        cwd: 'dist/bsp-carousel/',
                         src: 'bsp-carousel.css',
                         dest: '../styles/bower/bsp-carousel',
                         expand: true
                     },
                     {
-                        cwd: 'dist/',
+                        cwd: 'dist/bsp-carousel/',
+                        src: '*.js',
+                        dest: '', //root of scripts
+                        expand: true
+                    },
+                    {
+                        cwd: 'dist/bsp-carousel-thumbnav/',
                         src: '*.js',
                         dest: '', //root of scripts
                         expand: true
@@ -82,6 +88,13 @@ module.exports = function(grunt) {
                     {
                         src: 'handlebars.js',
                         dest: '../scripts/bower/handlebars.js'
+                    }
+                ],
+
+                'text': [
+                    {
+                        src: 'text.js',
+                        dest: '../scripts/bower/text.js'
                     }
                 ]
             }
