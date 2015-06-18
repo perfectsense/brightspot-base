@@ -1,44 +1,45 @@
-.bsp-promo {
+.bsp-img-promo {
 	position: relative;
 }
 
-.bsp-promo-image {
+.bsp-img-promo-image {
 	img {
 		height: auto;
 		width: 100%;
 	}
 }
 
-.bsp-promo-text {
+.bsp-img-promo-text {
 	background: rgba(0,0,0,0.5);
 	position: absolute;
 	bottom: 0;
 	width: 100%;
 }
 
-.bsp-promo-title {
+.bsp-img-promo-title {
 	&:extend(.ts-1);
 
 	padding: @space;
 	text-transform: uppercase;
 }
 
-.bsp-promo-desc {
+.bsp-img-promo-desc {
 	display: none;
 }
 
 @media @mq-sm {
 
-	.bsp-promo-text {	
+	.bsp-img-promo-text {	
 		background: none;
 		position: relative;
 	}
 
-	.bsp-promo-title {
+	.bsp-img-promo-title {
+		.ts-2(); // cannot extend inside of media query
 		padding: @space 0;
 	}
 
-	.bsp-promo-desc {
+	.bsp-img-promo-desc {
 		display: block;
 	}
 }

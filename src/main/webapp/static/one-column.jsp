@@ -16,24 +16,16 @@
 				<div class="bsp-row">
 					<div class="bsp-column-main">
 						
-						<div class="bsp-promo">
-							<div class="bsp-promo-image">
-								<img src="/assets/images/800x450.png" alt="" />
-							</div>
-							<div class="bsp-promo-text">
-								<div class="bsp-promo-title">
-									Bacon ipsum dolor amet turducken jowl shankle, cupim fatback jerky 
-								</div>
-								<div class="bsp-promo-desc">
-									Shankle pork loin landjaeger pork chop t-bone. Shank capicola strip steak, salami prosciutto ham hock venison. Short ribs meatloaf doner hamburger frankfurter tri-tip.
-								</div>
-							</div>
-						</div>
-
+						<div data-bsp-template data-bsp-template-options='{ "template": "components/img-promo", "dataUrl": "/static/data/img-promo.json" }'></div>
 
 					</div>
+
 					<div class="bsp-column-aside">
-						
+
+						<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo.json" }'></div>
+
+						<div data-bsp-template data-bsp-template-options='{ "template": "components/img-promo", "dataUrl": "/static/data/img-promo-wicked.json" }'></div>
+
 					</div>
 				</div>
 

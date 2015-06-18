@@ -1,0 +1,35 @@
+.bsp-list-promo {
+	text-transform: uppercase;
+}
+
+.bsp-list-promo-title {
+	background: @brand-dark;
+	color: @brand-primary;
+	padding: @space-quarter @space;
+}
+
+.bsp-list-promo-list {
+
+	li {
+		border-top: @border-style-5;
+		padding: @space; 
+
+		// better IE support than first-of-type or last-child
+		&:first-child {
+			border-top: none;
+		}
+	}
+	
+}
+
+.bsp-list-promo-cta {
+
+	a {
+		background: @brand-primary;
+		display: block;
+		color: @brand-dark;
+		padding: @space-quarter 0;
+		text-align: center;
+	}
+	
+}
