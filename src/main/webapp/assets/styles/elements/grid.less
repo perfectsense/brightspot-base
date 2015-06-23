@@ -1,3 +1,15 @@
+// bsp-site-wrapper is around the entire site includeing header, site, and footer
+.bsp-site-wrapper {}
+
+/// bsp-site is just around the site other than the header and footer, mostly used for fixed position offset
+.bsp-site {
+	position: relative;
+
+	& when (@header-positioning = fixed) {
+    	top: @tophat-height + @header-height; 
+    }
+}
+
 // This will be our grid. We start out by creating our site container, which will determine the overall centered site width
 .bsp-container {
     .container();

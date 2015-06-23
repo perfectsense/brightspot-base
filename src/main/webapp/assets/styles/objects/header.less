@@ -1,3 +1,13 @@
+// wrapper allows us to create the fixed position look/feel
+.bsp-site-header-wrapper {
+    left: 0;
+    position: @header-positioning;
+    top: 0;
+    width: 100%;
+    z-index: @z-index-header;
+}
+
+
 // The top hat styles are included in the header since they are small 
 .bsp-tophat {
     &:extend(.clearfix all);
@@ -11,10 +21,12 @@
     &:extend(.ts-neg-1);
 
     float: right;
-    padding: @space-half 0;
+    height: @tophat-height;
+    line-height: @tophat-height;
 
     a {
         color: @white;
+        padding: 0 @space-and-half;
     }
 }
 
@@ -29,11 +41,9 @@
 // want them (such as the extra links)
 .bsp-site-header {
     &:extend(.clearfix all);
-
     background: @header-background;
     height: @header-height;
     padding: 0 @space-double;
-    position: relative;
     width: 100%;
 
     .bsp-share-links {
