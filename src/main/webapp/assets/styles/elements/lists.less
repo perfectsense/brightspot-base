@@ -14,10 +14,22 @@ ul, ol {
 
 // List options
 
-// Unstyled keeps list items block level, just removes default browser padding and list-style
+// Basic list has the list-style
 .bsp-list {
+    margin-left: @space-double;
     padding-left: @space;
-    list-style: none;
+}
+ul.bsp-list {
+    list-style: disc;
+}
+ol.bsp-list {
+    list-style: decimal;
+}
+
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+.bsp-unstyled-list {
+    margin-left: @space-double;
+    padding-left: @space;
 }
 
 // Inline turns list items into inline-block

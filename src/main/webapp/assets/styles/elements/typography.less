@@ -6,6 +6,7 @@ body {
 	
 }
 
+// these are used for regular elements with a regular standard line height
 .ts-neg-2 {
     .type-scale(-2);
 }
@@ -26,4 +27,10 @@ body {
 }
 .ts-4 {
     .type-scale(4);
+}
+
+// header elements, since they are usually just one line have a tighter line height. This rule allows us to 
+// use extending vs calling the mixin on each header type element each time
+.ts-header-3 {
+	.type-scale(3, @lh: @headings-line-height);
 }
