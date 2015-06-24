@@ -1,3 +1,5 @@
+export default function() {}
+/*
 define(function(require){
 
     var $ = require('jquery');
@@ -28,3 +30,4 @@ define(function(require){
 
     return bsp_utils.plugin(false, 'bsp', 'toggle-item', thePlugin);
 });
+*/

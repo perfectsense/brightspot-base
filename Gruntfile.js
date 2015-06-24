@@ -14,12 +14,7 @@ module.exports = function(grunt) {
             },
 
             scripts: {
-                dir: 'assets/scripts',
-                rjsModules: [
-                    {
-                        name: 'main'
-                    }
-                ]
+                dir: 'assets/scripts'
             },
 
             bower: {
@@ -100,13 +95,6 @@ module.exports = function(grunt) {
                     {
                         src: 'handlebars.js',
                         dest: '../scripts/bower/handlebars.js'
-                    }
-                ],
-
-                'text': [
-                    {
-                        src: 'text.js',
-                        dest: '../scripts/bower/text.js'
                     }
                 ]
             }

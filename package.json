@@ -2,6 +2,6 @@
   "name": "brightspot-base",
   "version": "1.0.0",
   "devDependencies": {
-    "bsp-grunt": "perfectsense/brightspot-js-grunt#daeda224f4c122ef4dcd790d882af0708aaccd38"
+    "bsp-grunt": "perfectsense/brightspot-js-grunt#a30eb9aefea989b1f3cd621d8bff3614b4968c4a"
   }
 }

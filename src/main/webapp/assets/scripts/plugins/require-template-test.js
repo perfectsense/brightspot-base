@@ -2,6 +2,8 @@
  * Template test js
  *
  */
+export default function() {}
+/*
 (function(globals, factory) {
 
     "use strict";
@@ -31,3 +33,4 @@
     });
 
 });
+*/
