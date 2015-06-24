@@ -28,13 +28,8 @@
     <script src="/assets/scripts/system.js"></script>
     <script src="/assets/scripts/config.js"></script>
     <script>
-      System.config({
-        map: {
-          babel: '/assets/scripts/browser.min.js',
-          baseURL: '/assets/scripts'
-        }
-      });
-      System.import('/assets/scripts/main');
+      System.config({ baseURL: '/assets/scripts' });
+      System.import('main');
     </script>
 
   </head>
