@@ -22,8 +22,20 @@
       </c:otherwise>
     </c:choose>
 
-    <script src="/assets/scripts/jquery.js"></script>
-    <script src="/assets/scripts/require.js" data-main="/assets/scripts/main.js"></script>
+    <!-- minified version -->
+    <!-- <script src="/assets/scripts.min/main.js"></script> -->
+
+    <script src="/assets/scripts/system.js"></script>
+    <script src="/assets/scripts/config.js"></script>
+    <script>
+      System.config({
+        map: {
+          babel: '/assets/scripts/browser.min.js',
+          baseURL: '/assets/scripts'
+        }
+      });
+      System.import('/assets/scripts/main');
+    </script>
 
   </head>
   <body class="${bodyClass}">

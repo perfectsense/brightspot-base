@@ -1,33 +1,24 @@
-export default function() {}
-/*
-define(function(require){
+import $ from 'jquery';
+import { bsp_utils } from 'bsp-utils';
+export default bsp_utils.plugin(false, 'bsp', 'toggle-item', {
 
-    var $ = require('jquery');
-    var bsp_utils = require('bsp-utils');
+    '_defaultOptions': {
+        toggleItem: '.toggle-item',
+        toggleTrigger: '.toggle-trigger'
+    },
 
-    var thePlugin = {
+    // each time stuff gets added to the DOM, pass everything that was added to the the lazy loader instance
+    '_each': function(parent) {
+        var options = this.option(parent);
 
-        '_defaultOptions': {
-            toggleItem: '.toggle-item',
-            toggleTrigger: '.toggle-trigger'
-        },
+        var $parent = $(parent);
+        var $triggerItem = $parent.find(options.toggleItem);
 
-        // each time stuff gets added to the DOM, pass everything that was added to the the lazy loader instance
-        '_each': function(parent) {
-            var options = this.option(parent);
+        $parent.find(options.toggleTrigger).on('click', function(){
 
-            var $parent = $(parent);
-            var $triggerItem = $parent.find(options.toggleItem);
+            $triggerItem.toggleClass('toggle-in');
 
-            $parent.find(options.toggleTrigger).on('click', function(){
-
-                $triggerItem.toggleClass('toggle-in');
-
-                return false;
-            });
-        }
-    };
-
-    return bsp_utils.plugin(false, 'bsp', 'toggle-item', thePlugin);
+            return false;
+        });
+    }
 });
-*/
