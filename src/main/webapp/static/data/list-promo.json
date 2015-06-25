@@ -1,10 +1,14 @@
 {
+	"options" : {
+		"hardcodeItemHeights" : true
+	},
+
 	"title" : "Top Stories on Broadway",
 
 	"listItems" : [
 		{ 
 			"link" : "#",
-			"text" : "8 Burning Questions with Darren Criss: sass, makeup" 
+			"text" : "8 Burning Questions" 
 		},
 		{ 
 			"link" : "#",

@@ -1,0 +1,19 @@
+{
+	"options" : {
+		"textNav" : true
+	},
+
+	"gallerySlides" : [
+		{ "slideImage" : "/assets/images/800x450.png", "navText" : "Shankle pork loin landjaeger pork chop" },
+		{ "slideImage" : "/assets/images/800x450.png", "navText" : "Salami prosciutto ham hock venison" },
+		{ "slideImage" : "/assets/images/800x450.png", "navText" : "Ribs meatloaf doner hamburger frankfurter tri-tip" },
+		{ "slideImage" : "/assets/images/800x450.png", "navText" : "Shank capicola strip steak" }
+	],
+
+	"galleryNavItems" : [
+		{ "navText" : "Shankle pork loin landjaeger pork chop" },
+		{ "navText" : "Salami prosciutto ham hock venison" },
+		{ "navText" : "Ribs meatloaf doner hamburger frankfurter tri-tip" },
+		{ "navText" : "Shank capicola strip steak" }
+	]
+}

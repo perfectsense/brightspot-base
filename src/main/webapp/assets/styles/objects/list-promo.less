@@ -24,6 +24,22 @@
 			border-top: none;
 		}
 	}
+
+	// when we hardcode items heights, we will hardcode the height here and vertically center the links
+	&.hard-item-heights {
+
+		li {
+			height: 60px;
+			padding: 0;
+
+			&:extend(.vertical-center-wrapper all);
+
+			a {
+				&:extend(.vertical-center all);
+			}
+		}
+
+	}
 	
 }
 

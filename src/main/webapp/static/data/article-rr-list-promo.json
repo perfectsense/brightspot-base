@@ -1,6 +1,6 @@
 {
 	"options" : {
-		"fixedPosition" : true
+		"fixedPosition" : false
 	},
 
 	"title" : "Top Stories on Broadway",

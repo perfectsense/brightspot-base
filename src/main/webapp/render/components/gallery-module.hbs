@@ -2,27 +2,8 @@
 	{{#if galleryTitle}}
 		<h3 class="bsp-component-title">{{galleryTitle}}</h1>
 	{{/if}}
-
-	<div data-bsp-carousel-thumbnav data-bsp-carousel-thumbnav-options='{ "stage" : { "theme" : "carousel-dots", "themeConfig" : { "arrows" : true } } }'>
-		<div class="bsp-carousel-stage">
-
-			{{#gallerySlides}}
-				<div class="bsp-carousel-slide"><img alt="" src="{{slideImage}}" /></div>
-			{{/gallerySlides}}
-
-		</div>
-		<div class="bsp-carousel-nav">
-
-			{{#galleryNavItems}}
-				<div class="bsp-carousel-slide"><img alt="" src="{{navImage}}" /></div>
-			{{/galleryNavItems}}
-			
-		</div>
-	</div>
-</div>
-
-<div class="bsp-component">
-	<div class="bsp-carousel" data-bsp-carousel data-bsp-carousel-options='{ "theme" : "carousel-dots", "themeConfig" : { "arrows" : true } }'>
+	
+	<div class="gallery-module bsp-carousel" data-bsp-carousel data-bsp-carousel-options='{ "theme" : "carousel-dots", "themeConfig" : { "arrows" : true } }'>
 		{{#gallerySlides}}
 			<div class="bsp-carousel-slide"><img alt="" src="{{slideImage}}" /></div>
 		{{/gallerySlides}}

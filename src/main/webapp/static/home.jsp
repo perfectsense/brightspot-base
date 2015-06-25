@@ -18,22 +18,16 @@
 					<div class="bsp-row">
 						<div class="bsp-column-main">
 							
-							<div data-bsp-template data-bsp-template-options='{ "template": "components/img-promo", "dataUrl": "/static/data/img-promo.json" }'></div>
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/gallery-module-thumbs-or-nav", "dataUrl": "/static/data/gallery-module-nav.json" }'></div>
 
 						</div>
 
 						<div class="bsp-column-aside">
 
-							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo.json" }'></div>
-
-							<div data-bsp-template data-bsp-template-options='{ "template": "components/img-promo", "dataUrl": "/static/data/img-promo-wicked.json" }'></div>
+							Aside?
 
 						</div>
 					</div>
-
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/gallery-module-thumbs-or-nav", "dataUrl": "/static/data/gallery-module-thumbs.json" }'></div>
-
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/gallery-module", "dataUrl": "/static/data/gallery-module.json" }'></div>
 
 				</main>
 			</div>
