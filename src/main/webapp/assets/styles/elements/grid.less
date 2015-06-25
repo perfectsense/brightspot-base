@@ -4,11 +4,11 @@
 /// bsp-site is just around the site other than the header and footer, mostly used for fixed position offset
 .bsp-site {
 	background: @white;
-	padding-top: @space;
+	padding-top: @header-below-padding;
 	position: relative;
 
 	& when (@header-positioning = fixed) {
-    	top: @tophat-height + @header-height; 
+    	top: @header-tophat-height + @header-height; 
     }
 }
 
@@ -45,4 +45,40 @@
 
 .bsp-column-third {
 	.make-sm-column(4);
+}
+
+
+// Putting the fixed component code here, as we are making site width decisions here. When a component is fixed, it needs
+// a hardcoded width as it's in context of the window. We will do that here based on grid widths setup above
+@media @mq-sm {
+
+	// fixed position, properly spaced from the header
+	.bsp-column-aside {
+		.bsp-component-fixed {
+			width: 282.5px;
+		}
+	}
+
+}
+
+@media @mq-md {
+
+	// fixed position, properly spaced from the header
+	.bsp-column-aside {
+		.bsp-component-fixed {
+			width: 293.328px;
+		}
+	}
+	
+}
+
+@media @mq-lg {
+	
+	// fixed position, properly spaced from the header
+	.bsp-column-aside {
+		.bsp-component-fixed {
+			width: 360px;
+		}
+	}
+	
 }

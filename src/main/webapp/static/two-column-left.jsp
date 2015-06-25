@@ -24,7 +24,7 @@
 
 				<div class="bsp-column-aside">
 
-					Aside!
+					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/article-rr-list-promo.json" }'></div>
 
 				</div>
 			</div>

@@ -13,3 +13,18 @@
 .bsp-component {
 	padding-bottom: @space-double;
 }
+
+
+// styles to create a fixed component that will be stuck on the screen
+// need media query for styling, as fixed never occurs on xsmall screen size anyways
+// the width of this component is hardcoded in grid.less, so that widths can be set in one less file
+@media @mq-sm {
+
+	// fixed position, properly spaced from the header
+	.bsp-component-fixed {
+		margin-top: @header-below-padding;
+		position: fixed;
+		top: @header-height + @header-tophat-height;
+	}
+
+}

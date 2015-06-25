@@ -9,10 +9,9 @@ define(function (require) {
     require('bsp-carousel-plugin');
     require('bsp-carousel-thumbnav-plugin');
     require('bsp-share');
-    require('bsp-template-plugin');
     require('plugins/bsp-toggle');
 
-    // test including handlebars partials
-    require('plugins/require-template-test');
-    require('bsp-templates-partials');
+    // This is the plugin that enables client side rendering of handlebar templates. This should be build into a styleguide.js, but we 
+    // are not doign that quite yet
+    require('bsp-template-plugin');
  });

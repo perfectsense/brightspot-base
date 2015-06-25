@@ -13,11 +13,11 @@
 	
 	<div class="bsp-tags">
 		<ul class="bsp-tag-list">
-			<li><a href="#">MTB</a></li>
-			<li><a href="#">Cycling</a></li>
-			<li><a href="#">Downhill</a></li>
-			<li><a href="#">Enduro</a></li>
-			<li><a href="#">Cross Country</a></li>
+
+			{{#tags}}
+				<li><a href="{{tagLink}}">{{tagName}}</a></li>
+			{{/tags}}
+
 		</ul>
 	</div>
 
