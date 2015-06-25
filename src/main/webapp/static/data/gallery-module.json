@@ -1,10 +1,11 @@
 {
+	"options" : {
+		"carouselDots" : true
+	},
+
 	"galleryTitle" : "Test Gallery No Thumbs",
 
 	"gallerySlides" : [
-		{ "slideImage" : "/assets/images/1200x400.png" },
-		{ "slideImage" : "/assets/images/1200x400.png" },
-		{ "slideImage" : "/assets/images/1200x400.png" },
 		{ "slideImage" : "/assets/images/1200x400.png" },
 		{ "slideImage" : "/assets/images/1200x400.png" },
 		{ "slideImage" : "/assets/images/1200x400.png" },

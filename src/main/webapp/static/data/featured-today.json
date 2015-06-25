@@ -3,6 +3,8 @@
 		"textNav" : true
 	},
 
+	"galleryTitle" : "Featured Today",
+
 	"gallerySlides" : [
 		{ "slideImage" : "/assets/images/800x450.png", "navText" : "Shankle pork loin landjaeger pork chop" },
 		{ "slideImage" : "/assets/images/800x450.png", "navText" : "Salami prosciutto ham hock venison" },

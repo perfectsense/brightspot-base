@@ -2,8 +2,37 @@
 	{{#if galleryTitle}}
 		<h3 class="bsp-component-title">{{galleryTitle}}</h1>
 	{{/if}}
+
+
 	
-	<div class="gallery-module bsp-carousel" data-bsp-carousel data-bsp-carousel-options='{ "theme" : "carousel-dots", "themeConfig" : { "arrows" : true } }'>
+	<div class="gallery-module gallery-module-{{#if options.carouselDots}}carousel-dots{{/if}}{{#if options.horizontalSlides}}horizontal-slides{{/if}} bsp-carousel" data-bsp-carousel data-bsp-carousel-options='{ 
+
+	"theme" : "{{#if options.carouselDots}}carousel-dots{{/if}}", 
+
+	"themeConfig" : { 
+
+		"arrows" : false 
+
+		{{#if options.horizontalSlides}},
+		"slidesToShow" : 5, 
+		"responsive": [
+	    {
+	      "breakpoint": 996,
+	      "settings": {
+	        "slidesToShow": 3
+	      }
+	    },
+	    {
+	      "breakpoint": 768,
+	      "settings": {
+	        "slidesToShow": 2
+	      }
+	    }]
+	    {{/if}} 
+
+    }
+    
+    }'>
 		{{#gallerySlides}}
 			<div class="bsp-carousel-slide"><img alt="" src="{{slideImage}}" /></div>
 		{{/gallerySlides}}

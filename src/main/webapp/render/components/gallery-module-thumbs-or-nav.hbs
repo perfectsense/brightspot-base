@@ -3,7 +3,7 @@
 		<h3 class="bsp-component-title">{{galleryTitle}}</h1>
 	{{/if}}
 
-	<div class="{{#if options.textNav}}gallery-module-nav{{else}}gallery-module-thumbs{{/if}}  bsp-carousel" data-bsp-carousel-thumbnav data-bsp-carousel-thumbnav-options='{ "stage" : { "themeConfig" : { "arrows" : true } }, "nav": { "themeConfig" : { "slidesToShow" : 4, "centerMode" : false } } }'>
+	<div class="{{#if options.textNav}}gallery-module-nav{{else}}gallery-module-thumbs{{/if}} bsp-carousel" data-bsp-carousel-thumbnav data-bsp-carousel-thumbnav-options='{ "stage" : { "theme" : "carousel-dots" , "themeConfig" : { } }, "nav": { "themeConfig" : { "slidesToShow" : 4, "centerMode" : false } } }'>
 		<div class="bsp-carousel-stage">
 
 			{{#gallerySlides}}
