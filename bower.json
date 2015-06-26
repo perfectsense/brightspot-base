@@ -5,7 +5,7 @@
   "dependencies": {
     "bsp-utils": "perfectsense/brightspot-js-utils#79b7e9bc1e2174df5b3dd6e54f1b85d5f0bcad67",
     "bsp-carousel": "perfectsense/brightspot-js-carousel#es6",
-    "bsp-share": "perfectsense/brightspot-js-share#2.0.1",
+    "bsp-share": "perfectsense/brightspot-js-share#es6",
     "bsp-templates": "perfectsense/brightspot-js-templates#1.0.3",
     "bootstrap": "3.3.4",
     "fontawesome": "4.3.0",
