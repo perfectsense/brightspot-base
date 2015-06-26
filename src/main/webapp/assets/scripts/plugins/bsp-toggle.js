@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { bsp_utils } from 'bsp-utils';
+import bsp_utils from 'bsp-utils';
 export default bsp_utils.plugin(false, 'bsp', 'toggle-item', {
 
     '_defaultOptions': {
