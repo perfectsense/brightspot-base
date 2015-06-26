@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "homepage": "https://github.com/perfectsense/brightspot-base",
   "dependencies": {
-    "bsp-utils": "perfectsense/brightspot-js-utils#c340df1192074eeb219971d9857064c955eabe1b",
-    "bsp-carousel": "perfectsense/brightspot-js-carousel#es6",
-    "bsp-share": "perfectsense/brightspot-js-share#es6",
+    "bsp-utils": "perfectsense/brightspot-js-utils#3.0.0",
+    "bsp-carousel": "perfectsense/brightspot-js-carousel#1.0.0",
+    "bsp-share": "perfectsense/brightspot-js-share#3.0.0",
     "bsp-templates": "perfectsense/brightspot-js-templates#1.0.4",
     "bootstrap": "3.3.4",
     "fontawesome": "4.3.0",
@@ -17,8 +17,5 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "resolutions": {
-    "bsp-utils": "c340df1192074eeb219971d9857064c955eabe1b"
-  }
+  ]
 }
