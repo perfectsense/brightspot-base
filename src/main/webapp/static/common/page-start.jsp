@@ -30,6 +30,7 @@
     <script>
       System.config({ baseURL: '/assets/scripts' });
       System.import('main');
+      System.import('bsp-template-plugin');
     </script>
 
   </head>
