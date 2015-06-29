@@ -1,0 +1,20 @@
+{
+	"heading" : "Top Stories on Broadway",
+
+	"listItems" : [
+		{ 
+			"imgSrc" : "/assets/images/300x120.png",
+			"imgAlt" : "Test Alt",
+			"link" : "#",
+			"linkText" : "8 Burning Questions"		},
+		{ 
+			"imgSrc" : "/assets/images/300x120.png",
+			"imgAlt" : "Test Alt",
+			"link" : "#",
+			"linkText" : "8 Burning Questions"
+		}
+	],
+
+	"ctaText" : "Test CTA",
+	"ctaLink" : "#"
+}

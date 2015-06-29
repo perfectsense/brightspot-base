@@ -11,7 +11,10 @@
 
     <title>Brightspot Base</title>
 
-    <c:choose>
+    <link rel="stylesheet/less" type="text/css" href="/assets/styles/main.less" />
+    <script src="/assets/scripts/less.js"></script>
+
+    <%--<c:choose>
       <c:when test="${param.useLess}">
         <link rel="stylesheet/less" type="text/css" href="/assets/styles/main.less" />
         <script src="/assets/scripts/less.js"></script>
@@ -20,7 +23,7 @@
       <c:otherwise>
         <link rel="stylesheet" type="text/css" href="/assets/styles/main.min.css" />
       </c:otherwise>
-    </c:choose>
+    </c:choose>--%>
 
     <!-- minified version -->
     <!-- <script src="/assets/scripts.min/main.js"></script> -->

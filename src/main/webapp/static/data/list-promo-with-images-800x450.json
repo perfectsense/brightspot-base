@@ -1,0 +1,9 @@
+{
+	"listItems" : [
+		{ 
+			"imgSrc" : "/assets/images/800x450.png",
+			"imgAlt" : "Test Alt",
+			"link" : "#"
+		}
+	]
+}

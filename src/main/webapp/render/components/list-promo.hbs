@@ -1,13 +1,36 @@
 <div class="bsp-component {{#if options.fixedPosition}}bsp-component-fixed{{/if}}">
 	<div class="bsp-list-promo">
-		<div class="bsp-list-promo-title">{{title}}</div>
+		{{#if heading}}
+			<div class="bsp-list-promo-heading">{{heading}}</div>
+		{{/if}}
 		<ul class="bsp-list-promo-list {{#if options.hardcodeItemHeights}}hard-item-heights{{/if}}">
 			{{#listItems}}
-				<li><a href="{{link}}">{{text}}</a></li>
+				<li>
+					{{#if imgSrc}}
+						<div class="bsp-list-promo-image">
+							<a href="{{link}}"><img src="{{imgSrc}}" alt="{{imgAlt}}" /></a>
+						</div>
+					{{/if}}
+					<div class="bsp-list-promo-text">
+						{{#if title}}
+							<div class="bsp-list-promo-title"><a href="{{link}}">{{title}}</a></div>
+						{{/if}}
+						
+						{{#if linkText}}
+							<div class="bsp-list-promo-link"><a href="{{link}}">{{linkText}}</a></div>
+						{{/if}}
+						
+						{{#if description}}
+							<div class="bsp-list-promo-desc">{{description}}</div>
+						{{/if}}
+					</div>
+				</li>
 			{{/listItems}}
 		</ul>
-		<div class="bsp-list-promo-cta">
-			<a href="{{ctaLink}}">{{ctaText}}</a>
-		</div>		
+		{{#if ctaText}}
+			<div class="bsp-list-promo-cta">
+				<a href="{{ctaLink}}">{{ctaText}}</a>
+			</div>	
+		{{/if}}	
 	</div>
 </div>

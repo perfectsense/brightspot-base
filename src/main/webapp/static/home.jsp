@@ -16,7 +16,7 @@
 					<div class="bsp-row">
 						<div class="bsp-column-main">
 
-							<div data-bsp-template data-bsp-template-options='{ "template": "components/gallery-module", "dataUrl": "/static/data/top-shows-on-broadway.json" }'></div>
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/gallery-module-horizontal", "dataUrl": "/static/data/top-shows-on-broadway.json" }'></div>
 							
 							<div data-bsp-template data-bsp-template-options='{ "template": "components/gallery-module-thumbs-or-nav", "dataUrl": "/static/data/featured-today.json" }'></div>
 
@@ -25,6 +25,28 @@
 						<div class="bsp-column-aside">
 
 							Aside?
+
+						</div>
+					</div>
+
+					<div class="bsp-row">
+						<div class="bsp-column-third">
+
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-6.json" }'></div>
+
+						</div>
+
+						<div class="bsp-column-third">
+
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-with-images-2.json" }'></div>
+
+						</div>
+
+						<div class="bsp-column-third">
+
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-with-images-800x450.json" }'></div>
+
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-2.json" }'></div>
 
 						</div>
 					</div>
