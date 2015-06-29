@@ -3,32 +3,42 @@
 		<h3 class="bsp-component-title">{{galleryTitle}}</h1>
 	{{/if}}
 
-	<div class="{{#if options.textNav}}gallery-module-nav{{else}}gallery-module-thumbs{{/if}} bsp-carousel" data-bsp-carousel-thumbnav data-bsp-carousel-thumbnav-options='{ "stage" : { "theme" : "carousel-dots" , "themeConfig" : { } }, "nav": { "themeConfig" : { "slidesToShow" : 4, "centerMode" : false } } }'>
-		<div class="bsp-carousel-stage">
+	<div class="bsp-component-content">
 
-			{{#gallerySlides}}
-				<div class="bsp-carousel-slide">
-					<img alt="" src="{{slideImage}}" />
-					{{#if navText}}
-						<div class="bsp-carousel-slide-nav-text">{{navText}}</div>
-					{{/if}}
-				</div>
-			{{/gallerySlides}}
+		<div class="{{#if options.textNav}}gallery-module-nav{{else}}gallery-module-thumbs{{/if}} bsp-carousel" data-bsp-carousel-thumbnav data-bsp-carousel-thumbnav-options='{ "stage" : { "theme" : "carousel-dots" , "themeConfig" : { } }, "nav": { "themeConfig" : { "slidesToShow" : 4, "centerMode" : false } } }'>
+			<div class="bsp-carousel-stage">
 
+				{{#gallerySlides}}
+					<div class="bsp-carousel-slide">
+						<img alt="" src="{{slideImage}}" />
+						{{#if navText}}
+							<div class="bsp-carousel-slide-nav-text">{{navText}}</div>
+						{{/if}}
+					</div>
+				{{/gallerySlides}}
+
+			</div>
+			<div class="bsp-carousel-nav">
+
+				{{#galleryNavItems}}
+					<div class="bsp-carousel-slide">
+						{{#if navImage}}
+							<img alt="" src="{{navImage}}" />
+						{{/if}}
+						{{#if navText}}
+							<p>{{navText}}</p>
+						{{/if}}
+					</div>
+				{{/galleryNavItems}}
+				
+			</div>
 		</div>
-		<div class="bsp-carousel-nav">
 
-			{{#galleryNavItems}}
-				<div class="bsp-carousel-slide">
-					{{#if navImage}}
-						<img alt="" src="{{navImage}}" />
-					{{/if}}
-					{{#if navText}}
-						<p>{{navText}}</p>
-					{{/if}}
-				</div>
-			{{/galleryNavItems}}
-			
-		</div>
 	</div>
+
+	{{#if ctaText}}
+		<div class="bsp-component-cta">
+			<a href="{{ctaLink}}">{{ctaText}}</a>
+		</div>	
+	{{/if}}	
 </div>

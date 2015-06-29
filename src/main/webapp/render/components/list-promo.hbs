@@ -1,36 +1,42 @@
 <div class="bsp-component {{#if options.fixedPosition}}bsp-component-fixed{{/if}}">
-	<div class="bsp-list-promo">
-		{{#if heading}}
-			<div class="bsp-list-promo-heading">{{heading}}</div>
-		{{/if}}
-		<ul class="bsp-list-promo-list {{#if options.hardcodeItemHeights}}hard-item-heights{{/if}}">
-			{{#listItems}}
-				<li>
-					{{#if imgSrc}}
-						<div class="bsp-list-promo-image">
-							<a href="{{link}}"><img src="{{imgSrc}}" alt="{{imgAlt}}" /></a>
+	{{#if heading}}
+		<div class="bsp-component-title">{{heading}}</div>
+	{{/if}}
+
+	<div class="bsp-component-content">
+
+		<div class="bsp-list-promo">
+			<ul class="bsp-list-promo-list {{#if options.hardcodeItemHeights}}hard-item-heights{{/if}}">
+				{{#listItems}}
+					<li>
+						{{#if imgSrc}}
+							<div class="bsp-list-promo-image">
+								<a href="{{link}}"><img src="{{imgSrc}}" alt="{{imgAlt}}" /></a>
+							</div>
+						{{/if}}
+						<div class="bsp-list-promo-text">
+							{{#if title}}
+								<div class="bsp-list-promo-title"><a href="{{link}}">{{title}}</a></div>
+							{{/if}}
+							
+							{{#if linkText}}
+								<div class="bsp-list-promo-link"><a href="{{link}}">{{linkText}}</a></div>
+							{{/if}}
+							
+							{{#if description}}
+								<div class="bsp-list-promo-desc">{{description}}</div>
+							{{/if}}
 						</div>
-					{{/if}}
-					<div class="bsp-list-promo-text">
-						{{#if title}}
-							<div class="bsp-list-promo-title"><a href="{{link}}">{{title}}</a></div>
-						{{/if}}
-						
-						{{#if linkText}}
-							<div class="bsp-list-promo-link"><a href="{{link}}">{{linkText}}</a></div>
-						{{/if}}
-						
-						{{#if description}}
-							<div class="bsp-list-promo-desc">{{description}}</div>
-						{{/if}}
-					</div>
-				</li>
-			{{/listItems}}
-		</ul>
-		{{#if ctaText}}
-			<div class="bsp-list-promo-cta">
-				<a href="{{ctaLink}}">{{ctaText}}</a>
-			</div>	
-		{{/if}}	
+					</li>
+				{{/listItems}}
+			</ul>
+		</div>
+
 	</div>
+
+	{{#if ctaText}}
+		<div class="bsp-component-cta">
+			<a href="{{ctaLink}}">{{ctaText}}</a>
+		</div>	
+	{{/if}}	
 </div>

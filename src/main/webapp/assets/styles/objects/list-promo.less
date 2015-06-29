@@ -7,13 +7,6 @@
 	text-transform: uppercase;
 }
 
-.bsp-list-promo-heading {
-	background: @brand-dark;
-	color: @brand-primary;
-	padding: @space-quarter @space;
-	margin-bottom: @space;
-}
-
 .bsp-list-promo-list {
 
 	li {
@@ -29,7 +22,7 @@
 }
 
 // if we have a heading and hardcoded heights, cancel out the bottom margin of the heading
-.bsp-list-promo-heading + .bsp-list-promo-list.hard-item-heights {
+.bsp-component-title + .bsp-component-content .bsp-list-promo .hard-item-heights {
 	margin-top: -@space;
 }
 
@@ -42,7 +35,7 @@
 	}
 }
 
-.bsp-list-promo-heading + .bsp-list-promo-list .bsp-list-promo-image {
+.bsp-component-title + .bsp-component-content .bsp-list-promo .bsp-list-promo-image {
 	margin-top: @space;
 }
 
@@ -62,18 +55,6 @@
 
 .bsp-list-promo-desc {
 	margin: @space 0;
-}
-
-.bsp-list-promo-cta {
-
-	a {
-		background: @brand-primary;
-		display: block;
-		color: @brand-dark;
-		padding: @space-quarter 0;
-		text-align: center;
-	}
-	
 }
 
 // when we hardcode items heights, we will hardcode the height here and vertically center the links

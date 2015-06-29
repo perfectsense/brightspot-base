@@ -3,38 +3,46 @@
 		<h3 class="bsp-component-title">{{galleryTitle}}</h1>
 	{{/if}}
 
+	<div class="bsp-component-content">
 
-	
-	<div class="gallery-module gallery-module-{{#if options.carouselDots}}carousel-dots{{/if}}{{#if options.horizontalSlides}}horizontal-slides{{/if}} bsp-carousel" data-bsp-carousel data-bsp-carousel-options='{ 
+		<div class="gallery-module gallery-module-{{#if options.carouselDots}}carousel-dots{{/if}}{{#if options.horizontalSlides}}horizontal-slides{{/if}} bsp-carousel" data-bsp-carousel data-bsp-carousel-options='{ 
 
-	"theme" : "{{#if options.carouselDots}}carousel-dots{{/if}}", 
+		"theme" : "{{#if options.carouselDots}}carousel-dots{{/if}}", 
 
-	"themeConfig" : { 
+		"themeConfig" : { 
 
-		"arrows" : false 
+			"arrows" : false 
 
-		{{#if options.horizontalSlides}},
-		"slidesToShow" : 5, 
-		"responsive": [
-	    {
-	      "breakpoint": 996,
-	      "settings": {
-	        "slidesToShow": 3
-	      }
-	    },
-	    {
-	      "breakpoint": 768,
-	      "settings": {
-	        "slidesToShow": 2
-	      }
-	    }]
-	    {{/if}} 
+			{{#if options.horizontalSlides}},
+			"slidesToShow" : 5, 
+			"responsive": [
+		    {
+		      "breakpoint": 996,
+		      "settings": {
+		        "slidesToShow": 3
+		      }
+		    },
+		    {
+		      "breakpoint": 768,
+		      "settings": {
+		        "slidesToShow": 2
+		      }
+		    }]
+		    {{/if}} 
 
-    }
-    
-    }'>
-		{{#gallerySlides}}
-			<div class="bsp-carousel-slide"><img alt="" src="{{slideImage}}" /></div>
-		{{/gallerySlides}}
+	    }
+	    
+	    }'>
+			{{#gallerySlides}}
+				<div class="bsp-carousel-slide"><img alt="" src="{{slideImage}}" /></div>
+			{{/gallerySlides}}
+		</div>
+
 	</div>
+
+	{{#if ctaText}}
+		<div class="bsp-component-cta">
+			<a href="{{ctaLink}}">{{ctaText}}</a>
+		</div>	
+	{{/if}}	
 </div>

@@ -1,17 +1,32 @@
 // padding vs margin allows for cleaner separation between components, especially if things inside of them use margins
 
-.bsp-component-wrapper {
+.bsp-component {
 	padding-bottom: @space-double;
 }
 
-.bsp-component-wrapper-title {
-	&:extend(.ts-1);
+.bsp-component-title {
+	&:extend(.ts-0);
 
+	background: @brand-dark;
+	color: @brand-primary;
+	padding: @space-quarter @space;
 	margin: 0 0 @space 0;
 }
 
-.bsp-component {
-	padding-bottom: @space-double;
+.bsp-component-content {
+	// no styles yet
+}
+
+.bsp-component-cta {
+
+	a {
+		background: @brand-primary;
+		display: block;
+		color: @brand-dark;
+		padding: @space-quarter 0;
+		text-align: center;
+	}
+	
 }
 
 
