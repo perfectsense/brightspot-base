@@ -1,1 +1,0 @@
-<p>Component: Social share</p>

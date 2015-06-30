@@ -21,12 +21,12 @@
 // this screen size to trigger that
 @screen-lg-min:         1200px;
 
-// Here are some helper media queries that allow you to write shorthand LESS throughout elements/objects/pages
+// Here are some helper media queries that allow you to write shorthand LESS throughout elements/components/pages
 // Best practice should be to write your original styles for the xsmall screen and allow your items to scale as much
 // as possible. Then if you need to add extra styles because of the wider screens, add in extra items or code in the
 // expanstion through these three media queries. Note that these do not have max widths, so they scale
-// If once you get to "small" screen, your object looks the same, you don't need further breakpoints. Just define
-// the object using the @mq-sm breakpoint and it will look like that for all the bigger breakpoints
+// If once you get to "small" screen, your component looks the same, you don't need further breakpoints. Just define
+// the component using the @mq-sm breakpoint and it will look like that for all the bigger breakpoints
 @mq-sm:                 ~"only screen and (min-width: @{screen-sm-min})";
 @mq-md:                 ~"only screen and (min-width: @{screen-md-min})";
 @mq-lg:                 ~"only screen and (min-width: @{screen-lg-min})";

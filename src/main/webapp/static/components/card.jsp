@@ -1,1 +1,0 @@
-<p>Component: Card</p>

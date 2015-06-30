@@ -1,1 +1,0 @@
-<p>Component: Tabber</p>

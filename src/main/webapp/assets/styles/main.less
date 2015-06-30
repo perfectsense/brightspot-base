@@ -36,9 +36,9 @@
 // importing base bsp-carousel styles
 @import (inline) "bower/bsp-carousel/bsp-carousel.css";
 // this should really be moved into bsp-carousel.css above, but I'm leaving it here for now for fast development
-@import "objects/move-to-bsp-carousel";
+@import "components/move-to-bsp-carousel";
 
-// These are elements. Some of these correspond to DOM elements, others are small building blocks that objects or parts of objects can extend
+// These are elements. Some of these correspond to DOM elements, others are small building blocks that components or parts of components can extend
 @import "elements/buttons";
 @import "elements/component";
 @import "elements/grid";
@@ -48,16 +48,18 @@
 @import "elements/typography";
 @import "elements/vertical-center";
 
-// Objects should be ties into CMS objects as closely as possible. It would be ideal to maintain a 1:1 relationship of object renderers to
-// object LESS files so they are easy to identify, find, and modify
-@import "objects/article";
-@import "objects/dropdown";
-@import "objects/footer";
-@import "objects/gallery";
-@import "objects/gallery-module";
-@import "objects/header";
-@import "objects/list-promo";
-@import "objects/meta-data";
-@import "objects/page-title";
-@import "objects/share-links";
-@import "objects/tags";
+// Components should be ties into CMS components as closely as possible. It would be ideal to maintain a 1:1 relationship of components renderers to
+// components LESS files so they are easy to identify, find, and modify
+@import "components/article";
+@import "components/dropdown";
+@import "components/footer";
+@import "components/gallery";
+@import "components/gallery-module";
+@import "components/header";
+@import "components/image-promo";
+@import "components/list-promo";
+@import "components/meta-data";
+@import "components/page-title";
+@import "components/section-title";
+@import "components/share-links";
+@import "components/tags";

@@ -19,6 +19,8 @@
 
 .bsp-component-cta {
 
+	margin-top: @space;
+
 	a {
 		background: @brand-primary;
 		display: block;
@@ -27,6 +29,11 @@
 		text-align: center;
 	}
 	
+}
+
+// if the content has hard item heights, there is no margin on the cta, it will screw up the hardcoded item heights
+.bsp-component-content.hard-item-heights + .bsp-component-cta {
+	margin-top: 0;
 }
 
 

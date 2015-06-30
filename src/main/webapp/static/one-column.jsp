@@ -18,15 +18,15 @@
 					<div class="bsp-row">
 						<div class="bsp-column-main">
 							
-							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-with-images-1-no-title.json" }'></div>
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-1-image-no-title.json" }'></div>
 
 						</div>
 
 						<div class="bsp-column-aside">
 
-							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-5.json" }'></div>
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-5-items.json" }'></div>
 
-							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-with-images-800x450.json" }'></div>
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-1-item-just-image.json" }'></div>
 
 						</div>
 						

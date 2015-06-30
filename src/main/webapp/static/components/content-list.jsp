@@ -1,1 +1,0 @@
-<p>Component: Content list</p>
