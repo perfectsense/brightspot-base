@@ -37,7 +37,7 @@
 
 									<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-1-item-just-image.json" }'></div>
 
-									<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-2-items.json" }'></div>
+									<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-3-items.json" }'></div>
 
 								</div>
 							</div>

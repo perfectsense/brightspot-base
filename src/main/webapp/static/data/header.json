@@ -1,3 +1,38 @@
 {
-	"pageTitle" : "Test Page"
+	"siteLogo" : "/assets/images/brightspot.png",
+	"siteName" : "Brightspot",
+
+	"EXAMPLE tophat" : {
+
+		"links" : [
+			{
+				"link" : "#",
+				"text" : "Link 1"
+			},
+			{
+				"link" : "#",
+				"text" : "Link 2"
+			}
+		]
+
+	},
+
+	"EXAMPLE extraLinks" : [
+		{
+			"link" : "#",
+			"text" : "Extra Link 1"
+		},
+		{
+			"link" : "#",
+			"text" : "Extra Link 2"
+		}
+	],
+
+	"sharing" : {
+		"facebook" 		: true,
+		"facebookApp" 	: "645138725541385",
+		"twitter" 		: true,
+		"pinterest"		: true,
+		"linkedin"		: true
+	}
 }

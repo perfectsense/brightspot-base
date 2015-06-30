@@ -1,20 +1,21 @@
 <div class="bsp-site-header-wrapper">
 
-	<!--<div class="bsp-tophat">
-		<ul class="bsp-tophat-links">
-			<li><a href="#">Link 1</a></li>
-			<li><a href="#">Link 1</a></li>
-			<li><a href="#">Link 1</a></li>
-			<li><a class="bsp-tophat-register" href="#">Register</a></li>
-		</ul>
-	</div>-->
+	{{#if tophat}}
+		<div class="bsp-tophat">
+			<ul class="bsp-tophat-links">
+				{{#tophat.links}}
+					<li><a href="{{link}}">{{text}}</a></li>
+				{{/tophat.links}}
+			</ul>
+		</div>
+	{{/if}}
 
 	<div class="bsp-site-header" data-bsp-toggle-item>
 		
 		<div class="bsp-site-logo-centering">
 			<h1 class="bsp-site-logo">
 				<a href="#">
-				<img class="" src="/assets/images/brightspot.png" alt="Brightspot"><span class="sr-only">Brightspot</span>
+				<img class="" src="{{siteLogo}}" alt="Brightspot"><span class="sr-only">{{siteName}}</span>
 				</a>
 			</h1>
 		</div>
@@ -28,21 +29,26 @@
 			</div>
 		</div>
 
-		<!--<div class="bsp-header-extra">
-			<ul class="bsp-header-extra-links">
-				<li><a class="bsp-header-extra-link" href="#">Extra Link</a></li>
-				<li><a class="bsp-header-extra-link" href="#">Extra Link</a></li>
-			</ul>
-		</div>-->
+		{{#if extraLinks}}
+			<div class="bsp-header-extra">
+				<ul class="bsp-header-extra-links">
+					{{# extraLinks}}
+					<li><a class="bsp-header-extra-link" href="{{link}}">{{text}}</a></li>
+					{{/ extraLinks}}
+				</ul>
+			</div>
+		{{/if}}
 
-		<div class="bsp-share-links-centering">
-			<ul class="bsp-share-links" data-bsp-share data-bsp-share-options='{"iconClass":"icon", "serviceProps":{"facebook":{"appId":"645138725541385"}}}'>
-				<li class="bsp-facebook-share"></li>   
-			    <li class="bsp-twitter-share"></li>    
-			    <li class="bsp-pinterest-share"></li>  
-			    <li class="bsp-linkedin-share"></li> 
-			</ul>
-		</div>
+		{{#if sharing}}
+			<div class="bsp-share-links-centering">
+				<ul class="bsp-share-links" data-bsp-share data-bsp-share-options='{"iconClass":"icon", "serviceProps":{"facebook":{"appId":"{{sharing.facebookApp}}"}}}'>
+					{{#if sharing.facebook}}<li class="bsp-facebook-share"></li> {{/if}}
+				    {{#if sharing.twitter}}<li class="bsp-twitter-share"></li> {{/if}}   
+				    {{#if sharing.pinterest}}<li class="bsp-pinterest-share"></li> {{/if}}
+				    {{#if sharing.linkedin}}<li class="bsp-linkedin-share"></li> {{/if}}
+				</ul>
+			</div>
+		{{/if}}
 
 		<div class="bsp-site-search-trigger toggle-trigger">
 			<a href="#"><i class="icon icon-search"><span class="sr-only">show search form</span></i></a>
