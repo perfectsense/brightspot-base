@@ -1,20 +1,22 @@
 module.exports = function(config) {
 	var _ = require('lodash');
-	var path = require('path');
-	var projectRoot = path.resolve(__dirname, '../..');
-	var scriptDir = projectRoot + '/src/main/webapp/assets/scripts';
+	
+	/**
+	 * Systemjs needs paths resolved, Karma needs
+	 * a list of files loaded. Load order matters to
+	 * SystemJS. So we share that config here.
+	 */
 	var files = [];
+	var nodeDir = '/base/node_modules';
+	var bowerDir = '/base/bower_components';
 	var paths = {
-		'babel': '/base/node_modules/bsp-grunt/lib/browser.js',
-		'jquery': '/base/bower_components/jquery/dist/jquery.js',
-		'bsp-utils': '/base/bower_components/bsp-utils/bsp-utils.js'
+		'babel': nodeDir + '/bsp-grunt/lib/browser.js',
+		'jquery': bowerDir + '/jquery/dist/jquery.js',
+		'bsp-utils': bowerDir + '/bsp-utils/bsp-utils.js'
 	};
 	_.map(paths, function(val) {
 		files.push(val.replace(/^\/base\//, ''));
 	});
-	files.push('src/main/webapp/assets/scripts/!(main).js');
-	files.push('src/main/webapp/assets/scripts/**/*.js');
-	files.push('spec/unit/**/*.js');
 
 	config.set({
 		autoWatch: true,
@@ -34,7 +36,11 @@ module.exports = function(config) {
 				paths: paths,
 				transpiler: 'babel'
 			},
-			files: files
+			files: files.concat([
+				'src/main/webapp/assets/scripts/!(main).js',
+				'src/main/webapp/assets/scripts/**/*.js',
+				'spec/unit/**/*.js'
+			])
 		}
 	});
 };
