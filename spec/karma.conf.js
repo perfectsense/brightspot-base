@@ -1,12 +1,12 @@
 module.exports = function(config) {
 	var _ = require('lodash');
 	var path = require('path');
-	var projectRoot = path.resolve(__dirname, '..');
+	var projectRoot = path.resolve(__dirname, '../..');
 	var scriptDir = projectRoot + '/src/main/webapp/assets/scripts';
 	
 	config.set({
 		autoWatch: true,
-		basePath: '',
+		basePath: '..',
 		browsers: ['PhantomJS'],
 		captureConsole: true,
 		files: [],
