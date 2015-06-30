@@ -17,6 +17,11 @@ module.exports = function(config) {
 	_.map(paths, function(val) {
 		files.push(val.replace(/^\/base\//, ''));
 	});
+	files = files.concat([
+		'src/main/webapp/assets/scripts/!(main).js',
+		'src/main/webapp/assets/scripts/**/*.js',
+		'spec/unit/**/*.js'
+	]);
 
 	config.set({
 		autoWatch: true,
@@ -36,11 +41,7 @@ module.exports = function(config) {
 				paths: paths,
 				transpiler: 'babel'
 			},
-			files: files.concat([
-				'src/main/webapp/assets/scripts/!(main).js',
-				'src/main/webapp/assets/scripts/**/*.js',
-				'spec/unit/**/*.js'
-			])
+			files: files
 		}
 	});
 };
