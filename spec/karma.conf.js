@@ -3,7 +3,19 @@ module.exports = function(config) {
 	var path = require('path');
 	var projectRoot = path.resolve(__dirname, '../..');
 	var scriptDir = projectRoot + '/src/main/webapp/assets/scripts';
-	
+	var files = [];
+	var paths = {
+		'babel': '/base/node_modules/bsp-grunt/lib/browser.js',
+		'jquery': '/base/bower_components/jquery/dist/jquery.js',
+		'bsp-utils': '/base/bower_components/bsp-utils/bsp-utils.js'
+	};
+	_.map(paths, function(val) {
+		files.push(val.replace(/^\/base\//, ''));
+	});
+	files.push('src/main/webapp/assets/scripts/!(main).js');
+	files.push('src/main/webapp/assets/scripts/**/*.js');
+	files.push('spec/unit/**/*.js');
+
 	config.set({
 		autoWatch: true,
 		basePath: '..',
@@ -19,21 +31,10 @@ module.exports = function(config) {
 		systemjs: {
 			configFile: 'src/main/webapp/assets/scripts/config.js',
 			config: {
-				paths: {
-					'babel': '/base/node_modules/babel-core/browser.js',
-					'jquery': '/base/bower_components/jquery/dist/jquery.js',
-					'bsp-utils': '/base/bower_components/bsp-utils/bsp-utils.js'
-				},
+				paths: paths,
 				transpiler: 'babel'
 			},
-			files: [
-				'node_modules/babel-core/browser.js',
-				'bower_components/jquery/dist/jquery.js',
-				'bower_components/bsp-utils/bsp-utils.js',
-				'src/main/webapp/assets/scripts/!(main).js',
-				'src/main/webapp/assets/scripts/**/*.js',
-				'spec/**/*.js'
-			]
+			files: files
 		}
 	});
 };
