@@ -46,39 +46,3 @@
 .bsp-column-third {
 	.make-sm-column(4);
 }
-
-
-// Putting the fixed component code here, as we are making site width decisions here. When a component is fixed, it needs
-// a hardcoded width as it's in context of the window. We will do that here based on grid widths setup above
-@media @mq-sm {
-
-	// fixed position, properly spaced from the header
-	.bsp-column-aside {
-		.bsp-component-fixed {
-			width: 282.5px;
-		}
-	}
-
-}
-
-@media @mq-md {
-
-	// fixed position, properly spaced from the header
-	.bsp-column-aside {
-		.bsp-component-fixed {
-			width: 293.328px;
-		}
-	}
-	
-}
-
-@media @mq-lg {
-	
-	// fixed position, properly spaced from the header
-	.bsp-column-aside {
-		.bsp-component-fixed {
-			width: 360px;
-		}
-	}
-	
-}

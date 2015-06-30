@@ -14,7 +14,7 @@
 }
 
 .bsp-component-content {
-	// no styles yet
+	overflow: hidden; // making sure things do not go outside of components
 }
 
 .bsp-component-cta {
@@ -34,19 +34,4 @@
 // if the content has hard item heights, there is no margin on the cta, it will screw up the hardcoded item heights
 .bsp-component-content.hard-item-heights + .bsp-component-cta {
 	margin-top: 0;
-}
-
-
-// styles to create a fixed component that will be stuck on the screen
-// need media query for styling, as fixed never occurs on xsmall screen size anyways
-// the width of this component is hardcoded in grid.less, so that widths can be set in one less file
-@media @mq-sm {
-
-	// fixed position, properly spaced from the header
-	.bsp-component-fixed {
-		margin-top: @header-below-padding;
-		position: fixed;
-		top: @header-height + @header-tophat-height;
-	}
-
 }

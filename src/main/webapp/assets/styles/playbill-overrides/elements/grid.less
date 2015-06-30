@@ -1,0 +1,39 @@
+// Playbill will have a custom grid for main and aside columns as the design has a slightly larger center well than normal
+.bsp-column-main {
+	.make-sm-column(12);
+	.make-md-column(9);
+	.make-lg-column(9);
+}
+
+// we also make the aside column and just plan hide it on anything xs or sm
+.bsp-column-aside {
+	display: none;
+	.make-md-column(3);
+	.make-lg-column(3);
+}
+
+
+@media @mq-md {
+	// on medium we bring back the aside column
+	.bsp-column-aside {
+		display: block;
+	}
+
+	// styles to create a fixed column that will be stuck on the screen
+	// this sucker doesn't exist on xs or sm
+	.bsp-column-fixed {
+		display: block;
+		position: fixed;
+		top: @header-height + @header-tophat-height;
+		width: 240px; // custom width for our site grid
+	}
+}
+
+@media @mq-lg {
+	
+	// up th width to match, has to stay hardcoded as it's fixed positioning
+	.bsp-column-fixed {
+		width: 317px;
+	}
+	
+}
