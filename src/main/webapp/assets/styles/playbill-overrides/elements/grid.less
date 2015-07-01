@@ -1,12 +1,12 @@
 // Playbill will have a custom grid for main and aside columns as the design has a slightly larger center well than normal
-.bsp-column-main {
+.bsp-column-persistent {
 	.make-sm-column(12);
 	.make-md-column(9);
 	.make-lg-column(9);
 }
 
 // we also make the aside column and just plan hide it on anything xs or sm
-.bsp-column-aside {
+.bsp-column-add-on {
 	display: none;
 	.make-md-column(3);
 	.make-lg-column(3);
@@ -15,7 +15,7 @@
 
 @media @mq-md {
 	// on medium we bring back the aside column
-	.bsp-column-aside {
+	.bsp-column-add-on {
 		display: block;
 	}
 

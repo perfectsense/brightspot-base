@@ -14,7 +14,7 @@
 				<main class="bsp-column-full">
 
 					<div class="bsp-row">
-						<div class="bsp-column-main">
+						<div class="bsp-column-persistent">
 
 							<div data-bsp-template data-bsp-template-options='{ "template": "components/gallery-module-horizontal", "dataUrl": "/static/data/top-shows-on-broadway.json" }'></div>
 							
@@ -70,7 +70,7 @@
 
 						</div>
 
-						<div class="bsp-column-aside">
+						<div class="bsp-column-add-on">
 
 							<div class="bsp-column-fixed">
 
