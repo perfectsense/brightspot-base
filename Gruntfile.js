@@ -2,8 +2,6 @@ module.exports = function(grunt) {
 
     'use strict';
 
-    grunt.loadNpmTasks('grunt-karma');
-
     require('bsp-grunt')(grunt, {
         bsp: {
             styles: {

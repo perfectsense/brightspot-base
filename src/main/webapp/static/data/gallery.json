@@ -1,0 +1,35 @@
+{
+	"options" : {
+		"carouselDots" : true
+	},
+
+	"galleryTitle" : "Test Gallery No Thumbs",
+
+	"gallerySlides" : [
+		{
+			"slideTitle": "SHANKLE PORK LOIN LANDJAEGER PORK CHOP T-BONE, SHANK",
+			"slideDescription": "Bacon ipsum dolor amet capicola short loin ribeye, picanha sausage salami flank brisket cow spare ribs prosciutto hamburger. Turducken ham hock tri-tip capicola sausage. Bacon tri-tip boudin pork chop, pig bresaola pork loin sirloin rump chuck doner tongue.",
+			"slideImage" : "/assets/images/1200x400.png"
+		},
+		{
+			"slideTitle": "SHANKLE PORK LOIN LANDJAEGER PORK CHOP T-BONE, SHANK",
+			"slideDescription": "Bacon ipsum dolor amet capicola short loin ribeye, picanha sausage salami flank brisket cow spare ribs prosciutto hamburger. Turducken ham hock tri-tip capicola sausage. Bacon tri-tip boudin pork chop, pig bresaola pork loin sirloin rump chuck doner tongue.",
+			"slideImage" : "/assets/images/1200x400.png"
+		},
+		{
+			"slideTitle": "SHANKLE PORK LOIN LANDJAEGER PORK CHOP T-BONE, SHANK",
+			"slideDescription": "Bacon ipsum dolor amet capicola short loin ribeye, picanha sausage salami flank brisket cow spare ribs prosciutto hamburger. Turducken ham hock tri-tip capicola sausage. Bacon tri-tip boudin pork chop, pig bresaola pork loin sirloin rump chuck doner tongue.",
+			"slideImage" : "/assets/images/1200x400.png"
+		},
+		{
+			"slideTitle": "SHANKLE PORK LOIN LANDJAEGER PORK CHOP T-BONE, SHANK",
+			"slideDescription": "Bacon ipsum dolor amet capicola short loin ribeye, picanha sausage salami flank brisket cow spare ribs prosciutto hamburger. Turducken ham hock tri-tip capicola sausage. Bacon tri-tip boudin pork chop, pig bresaola pork loin sirloin rump chuck doner tongue.",
+			"slideImage" : "/assets/images/1200x400.png"
+		},
+		{
+			"slideTitle": "SHANKLE PORK LOIN LANDJAEGER PORK CHOP T-BONE, SHANK",
+			"slideDescription": "Bacon ipsum dolor amet capicola short loin ribeye, picanha sausage salami flank brisket cow spare ribs prosciutto hamburger. Turducken ham hock tri-tip capicola sausage. Bacon tri-tip boudin pork chop, pig bresaola pork loin sirloin rump chuck doner tongue.",
+			"slideImage" : "/assets/images/1200x400.png"
+		}
+	]
+}

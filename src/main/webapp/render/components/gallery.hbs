@@ -1,0 +1,31 @@
+<div class="bsp-carousel-gallery-wrapper">
+
+	{{#if galleryTitle}}
+		<h2 class="bsp-section-title">{{galleryTitle}}</h2>
+	{{/if}}
+
+	<div data-bsp-carousel-gallery>
+		{{#gallerySlides}}
+			<div class="bsp-carousel-gallery-slide">
+				<img alt="" src="{{slideImage}}" />
+				{{#if slideTitle}}
+					<h3 class="bsp-carousel-gallery-slide-title">{{slideTitle}}</h3>
+				{{/if}}
+				{{#if slideDescription}}
+					<div class="bsp-carousel-gallery-slide-description">{{slideDescription}}</div>
+				{{/if}}
+			</div>
+		{{/gallerySlides}}
+	</div>
+
+	<!--
+	<div class="bsp-sharing" data-bsp-share data-bsp-share-options='{"iconClass":"icon", "serviceProps":{"facebook":{"appId":"645138725541385"}}}'>  
+	    <div class="bsp-facebook-share"></div>   
+	    <div class="bsp-twitter-share"></div>    
+	    <div class="bsp-google-share"></div> 
+	    <div class="bsp-pinterest-share"></div>  
+	    <div class="bsp-linkedin-share"></div>   
+	</div>
+	-->
+
+</div>
