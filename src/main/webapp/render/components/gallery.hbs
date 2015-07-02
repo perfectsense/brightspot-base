@@ -25,24 +25,41 @@
 
 	<div class="bsp-carousel-gallery-footer">	
 
+
+		{{#if thumbnails}}
 		<div class="bsp-carousel-gallery-footer-thumbnails-link">
 			<a href="">Thumbnails</a>
 		</div>
+		{{/if}}
 
-		<!--
-		<div class="bsp-sharing" data-bsp-share data-bsp-share-options='{"iconClass":"icon", "serviceProps":{"facebook":{"appId":"645138725541385"}}}'>  
-		    <div class="bsp-facebook-share"></div>   
-		    <div class="bsp-twitter-share"></div>    
-		    <div class="bsp-google-share"></div> 
-		    <div class="bsp-pinterest-share"></div>  
-		    <div class="bsp-linkedin-share"></div>   
+		
+		{{#if sharing}}
+		<div class="bsp-sharing" data-bsp-share data-bsp-share-options='{"iconClass":"icon", "serviceProps": { {{#if sharing.facebook}} {{#if sharing.facebook.appId}} "facebook" : { "appId": {{sharing.facebook.appId}} } {{/if}} {{/if}}  }}'>
+			{{#if sharingTitle}}
+				<h4 class="bsp-carousel-gallery-footer-header">{{sharingTitle}}:</h4>
+			{{/if}}
+			{{#if sharing.facebook}}
+		    	<div class="bsp-sharing-item bsp-facebook-share"></div>
+		    {{/if}}
+		    {{#if sharing.twitter}}
+		    	<div class="bsp-sharing-item bsp-twitter-share"></div>
+		    {{/if}}
+		    {{#if sharing.google}}
+		    	<div class="bsp-sharing-item bsp-google-share"></div>
+		    {{/if}}
+		    {{#if sharing.pinterest}}
+		    	<div class="bsp-sharing-item bsp-pinterest-share"></div>
+		    {{/if}}
+		    {{#if sharing.linkedin}}
+		    	<div class="bsp-sharing-item bsp-linkedin-share"></div>   
+		    {{/if}}
 		</div>
-		-->
+		{{/if}}
 
 		{{#if relatedLinks}}
 		<div class="bsp-carousel-gallery-footer-links">
 			{{#if relatedLinksTitle}}
-				<h4 class="bsp-carousel-gallery-related-links-header">{{relatedLinksTitle}}:</h4>
+				<h4 class="bsp-carousel-gallery-footer-header">{{relatedLinksTitle}}:</h4>
 			{{/if}}
 			<ul>
 				{{#relatedLinks}}

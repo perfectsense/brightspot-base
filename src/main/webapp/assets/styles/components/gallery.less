@@ -5,6 +5,7 @@
 @bsp-carousel-gallery-background: @brand-primary;
 @bsp-carousel-gallery-border-color: @brand-accent;
 @bsp-carousel-gallery-color: @brand-dark;
+@bsp-carousel-gallery-bold-font-weight: 700;
 
 @bsp-carousel-gallery-top: @header-height;
 @bsp-carousel-gallery-bottom: 0; // @todo will need to account for footer
@@ -133,6 +134,17 @@
 	.bsp-carousel-gallery {
 		position: relative;
 	}
+
+	.bsp-sharing {
+		margin-bottom: @bsp-carousel-gallery-space;
+	}
+
+	.bsp-sharing-item {
+		display: inline;
+	}
+	.bsp-share-link {
+		background: @bsp-carousel-gallery-color;
+	}
 }
 
 .bsp-carousel-gallery-header {
@@ -206,6 +218,7 @@
 	margin-bottom: @bsp-carousel-gallery-space;
 	a {
 		color: @bsp-carousel-gallery-color;
+		font-weight: @bsp-carousel-gallery-bold-font-weight;
 		text-transform: uppercase;
 	}
 }
@@ -224,7 +237,7 @@
 		text-transform: uppercase;
 	}
 }
-.bsp-carousel-gallery-related-links-header {
+.bsp-carousel-gallery-footer-header {
 	display: inline;
 	text-transform: uppercase;
 }
