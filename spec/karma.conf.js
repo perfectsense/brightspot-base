@@ -12,7 +12,9 @@ module.exports = function(config) {
 	var paths = {
 		'babel': nodeDir + '/bsp-grunt/lib/browser.js',
 		'jquery': bowerDir + '/jquery/dist/jquery.js',
-		'bsp-utils': bowerDir + '/bsp-utils/bsp-utils.js'
+		'bsp-utils': bowerDir + '/bsp-utils/bsp-utils.js',
+		'bsp-carousel': bowerDir + '/bsp-carousel/dist/bsp-carousel/bsp-carousel.js',
+		'slick': bowerDir + '/bsp-carousel/dist/bsp-carousel/slick.js'
 	};
 	_.map(paths, function(val) {
 		files.push(val.replace(/^\/base\//, ''));
