@@ -7,11 +7,22 @@
 
 // we also make the aside column and just plan hide it on anything xs or sm
 .bsp-column-add-on {
-	display: none;
 	.make-md-column(3);
 	.make-lg-column(3);
 }
 
+.bsp-column-fixed {
+	display: none;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+
+	// components inside of fixed columns lose their padding
+	.bsp-component {
+		padding: 0;
+	}
+}
 
 @media @mq-md {
 	// on medium we bring back the aside column
@@ -22,9 +33,10 @@
 	// styles to create a fixed column that will be stuck on the screen
 	// this sucker doesn't exist on xs or sm
 	.bsp-column-fixed {
+		bottom: auto;
 		display: block;
+		left: auto;
 		margin-top: @header-below-padding;
-		position: fixed;
 		top: @header-height + @header-tophat-height;
 		width: 240px; // custom width for our site grid
 	}

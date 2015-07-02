@@ -12,7 +12,7 @@
 		<div class="bsp-container">
 			
 			<div class="bsp-row">
-				<div class="bsp-column-main">
+				<div class="bsp-column-persistent">
 
 					<div class="bsp-article-wrapper">
 					
@@ -22,9 +22,13 @@
 
 				</div>
 
-				<div class="bsp-column-aside">
+				<div class="bsp-column-add-on">
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/article-rr-list-promo.json" }'></div>
+					<div class="bsp-column-fixed">
+
+						<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-article-rr.json" }'></div>
+
+					</div>
 
 				</div>
 			</div>

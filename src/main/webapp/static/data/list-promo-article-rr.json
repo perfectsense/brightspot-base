@@ -1,0 +1,33 @@
+{
+	"heading" : "Top Articles",
+
+	"listItems" : [
+		{ 
+			"link" : "#",
+			"linkText" : "8 Burning Questions" 
+		},
+		{ 
+			"link" : "#",
+			"linkText" : "Bacon ipsum dolor amet turducken jowl shankle, cupim" 
+		},
+		{ 
+			"link" : "#",
+			"linkText" : "Shankle pork loin landjaeger pork chop t-bone, shank" 
+		},
+		{ 
+			"link" : "#",
+			"linkText" : "Bacon ipsum dolor amet turducken jowl shankle, cupim" 
+		},
+		{ 
+			"link" : "#",
+			"linkText" : "Shankle pork loin landjaeger pork chop t-bone, shank" 
+		},
+		{ 
+			"link" : "#",
+			"linkText" : "Shankle pork loin landjaeger pork chop t-bone, shank" 
+		}
+	],
+
+	"ctaText" : "Moar Articles",
+	"ctaLink" : "#"
+}

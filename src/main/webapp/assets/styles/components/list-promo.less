@@ -13,9 +13,23 @@
 		border-top: @border-style-5;
 		padding: 0 @space; 
 
-		// better IE support than first-of-type or last-child
+		// first and last item has no border and no padding on the link (component owns that padding)
 		&:first-child {
 			border-top: none;
+
+			.bsp-list-promo-link {
+				a {
+					padding-top: 0;
+				}
+			}
+		}
+
+		&:last-child {
+			.bsp-list-promo-link {
+				a {
+					padding-bottom: 0;
+				}
+			}
 		}
 	}
 	
@@ -50,7 +64,10 @@
 }
 
 .bsp-list-promo-link {
-	margin: @space 0;
+	a {
+		display: block;
+		padding: @space 0;
+	}
 }
 
 .bsp-list-promo-desc {
@@ -74,7 +91,9 @@
 		.bsp-list-promo-link {
 			&:extend(.vertical-center all);
 
-			margin: 0;
+			a {
+				padding: 0;
+			}
 		}
 	}
 
