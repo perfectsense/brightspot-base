@@ -10,27 +10,32 @@
 		{
 			"slideTitle": "Pork loin prosciutto brisket tail pork chop jowl",
 			"slideDescription": "Bacon ipsum dolor amet capicola short loin ribeye, picanha sausage salami flank brisket cow spare ribs prosciutto hamburger. Turducken ham hock tri-tip capicola sausage. Bacon tri-tip boudin pork chop, pig bresaola pork loin sirloin rump chuck doner tongue.",
-			"slideImage" : "/assets/images/1200x400.png"
+			"slideImage" : "/assets/images/1200x400.png",
+			"thumbnailImage" : "/assets/images/300x120.png"
 		},
 		{
 			"slideTitle": "Pork loin prosciutto brisket tail pork chop jowl",
 			"slideDescription": "Bacon ipsum dolor amet capicola short loin ribeye, picanha sausage salami flank brisket cow spare ribs prosciutto hamburger. Turducken ham hock tri-tip capicola sausage. Bacon tri-tip boudin pork chop, pig bresaola pork loin sirloin rump chuck doner tongue.",
-			"slideImage" : "/assets/images/1200x400.png"
+			"slideImage" : "/assets/images/1200x400.png",
+			"thumbnailImage" : "/assets/images/300x120.png"
 		},
 		{
 			"slideTitle": "Pork loin prosciutto brisket tail pork chop jowl",
 			"slideDescription": "Bacon ipsum dolor amet capicola short loin ribeye, picanha sausage salami flank brisket cow spare ribs prosciutto hamburger. Turducken ham hock tri-tip capicola sausage. Bacon tri-tip boudin pork chop, pig bresaola pork loin sirloin rump chuck doner tongue.",
-			"slideImage" : "/assets/images/1200x400.png"
+			"slideImage" : "/assets/images/1200x400.png",
+			"thumbnailImage" : "/assets/images/300x120.png"
 		},
 		{
 			"slideTitle": "Pork loin prosciutto brisket tail pork chop jowl",
 			"slideDescription": "Bacon ipsum dolor amet capicola short loin ribeye, picanha sausage salami flank brisket cow spare ribs prosciutto hamburger. Turducken ham hock tri-tip capicola sausage. Bacon tri-tip boudin pork chop, pig bresaola pork loin sirloin rump chuck doner tongue.",
-			"slideImage" : "/assets/images/1200x400.png"
+			"slideImage" : "/assets/images/1200x400.png",
+			"thumbnailImage" : "/assets/images/300x120.png"
 		},
 		{
 			"slideTitle": "Pork loin prosciutto brisket tail pork chop jowl",
 			"slideDescription": "Bacon ipsum dolor amet capicola short loin ribeye, picanha sausage salami flank brisket cow spare ribs prosciutto hamburger. Turducken ham hock tri-tip capicola sausage. Bacon tri-tip boudin pork chop, pig bresaola pork loin sirloin rump chuck doner tongue.",
-			"slideImage" : "/assets/images/1200x400.png"
+			"slideImage" : "/assets/images/1200x400.png",
+			"thumbnailImage" : "/assets/images/300x120.png"
 		}
 	],
 
@@ -51,5 +56,6 @@
 		"linkedin": true
 	},
 
-	"thumbnails": true
+	"thumbnails": true,
+	"thumbnailsCloseText": "Close"
 }

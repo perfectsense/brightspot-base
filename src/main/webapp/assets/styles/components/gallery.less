@@ -40,18 +40,29 @@
 @bsp-carousel-gallery-mq-only-md: @mq-only-md;
 @bsp-carousel-gallery-mq-only-lg: @mq-only-lg;
 
+@bsp-carousel-gallery-thumbnail-cols-xs: 1;
+@bsp-carousel-gallery-thumbnail-cols-sm: 2;
+@bsp-carousel-gallery-thumbnail-cols-md: 3;
+@bsp-carousel-gallery-thumbnail-cols-lg: 3;
+
 @bsp-carousel-gallery-space: @space;
 
+
+
 // move below and copy vars above with hard-coded values to bsp-carousel
-.bsp-carousel-gallery-wrapper {
-	background: @bsp-carousel-gallery-background;
+.bsp-carousel-stage-dimensions {
 	bottom: @bsp-carousel-gallery-bottom;
-	color: @bsp-carousel-gallery-color;
 	left: @bsp-carousel-gallery-left;
 	overflow: scroll;
 	position: absolute;
 	right: @bsp-carousel-gallery-right;
 	top: @bsp-carousel-gallery-top;
+}
+
+.bsp-carousel-gallery-container {
+	.bsp-carousel-stage-dimensions;
+	background: @bsp-carousel-gallery-background;
+	color: @bsp-carousel-gallery-color;
 
 	&:before, &:after {
 		background: @bsp-carousel-gallery-border-color;
@@ -240,4 +251,42 @@
 .bsp-carousel-gallery-footer-header {
 	display: inline;
 	text-transform: uppercase;
+}
+
+.bsp-carousel-gallery-thumbnails {
+	.bsp-carousel-stage-dimensions;
+	
+	background: @bsp-carousel-gallery-background;
+	color: @bsp-carousel-gallery-color;
+	display: none;
+	padding: @bsp-carousel-gallery-space*2;
+	z-index: @bsp-carousel-gallery-overlays-z-index+1;
+	
+	&.visible {
+		display: block;
+	}
+}
+.bsp-carousel-gallery-thumbnail {
+	cursor: pointer;
+	float: left;
+	padding-bottom: @bsp-carousel-gallery-space*2;
+
+	@media @bsp-carousel-gallery-mq-only-xs {
+		width: ~"calc(100%/@{bsp-carousel-gallery-thumbnail-cols-xs})";	
+	}
+	@media @bsp-carousel-gallery-mq-only-sm {
+		width: ~"calc(100%/@{bsp-carousel-gallery-thumbnail-cols-sm})";
+	}
+	@media @bsp-carousel-gallery-mq-only-md {
+		width: ~"calc(100%/@{bsp-carousel-gallery-thumbnail-cols-md})";
+	}
+	@media @bsp-carousel-gallery-mq-only-lg {
+		width: ~"calc(100%/@{bsp-carousel-gallery-thumbnail-cols-lg})";	
+	}
+}
+.bsp-carousel-gallery-thumbnails-close-link {
+	color: @bsp-carousel-gallery-color;
+	position: absolute;
+	top: @bsp-carousel-gallery-space;
+	right: @bsp-carousel-gallery-space;
 }
