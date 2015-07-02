@@ -29,11 +29,15 @@
 @bsp-carousel-gallery-nav-button-offset-sm: @space;
 @bsp-carousel-gallery-nav-button-offset-md: ~"calc(((100% - @{bsp-carousel-gallery-content-width-medium})/2) + @{bsp-carousel-gallery-nav-button-width})";
 @bsp-carousel-gallery-nav-button-offset-lg: ~"calc(((100% - @{bsp-carousel-gallery-content-width-large})/2) + @{bsp-carousel-gallery-nav-button-width})";
+@bsp-carousel-gallery-nav-button-display-xs: none !important;
+@bsp-carousel-gallery-nav-button-display-sm: inline-block !important;
+@bsp-carousel-gallery-nav-button-display-md: inline-block !important;
+@bsp-carousel-gallery-nav-button-display-lg: inline-block !important;
 
 @bsp-carousel-gallery-content-width-large: @container-large-desktop - @grid-gutter-width;
 @bsp-carousel-gallery-content-width-medium: @container-desktop - @grid-gutter-width;
 @bsp-carousel-gallery-content-width-small: @container-tablet - @grid-gutter-width;
-@bsp-carousel-gallery-content-width-xsmall: 80%;
+@bsp-carousel-gallery-content-width-xsmall: 100%;
 
 @bsp-carousel-gallery-mq-only-xs: @mq-only-xs;
 @bsp-carousel-gallery-mq-only-sm: @mq-only-sm;
@@ -114,30 +118,38 @@
 
 	.bsp-carousel .slick-next {
 		@media @bsp-carousel-gallery-mq-only-xs {
+			display: @bsp-carousel-gallery-nav-button-display-xs;
 			right: @bsp-carousel-gallery-nav-button-offset-xs;
 		}
 		@media @bsp-carousel-gallery-mq-only-sm {
+			display: @bsp-carousel-gallery-nav-button-display-sm;
 			right: @bsp-carousel-gallery-nav-button-offset-sm;
 		}
 		@media @bsp-carousel-gallery-mq-only-md {
+			display: @bsp-carousel-gallery-nav-button-display-md;
 			right: @bsp-carousel-gallery-nav-button-offset-md;
 		}
 		@media @bsp-carousel-gallery-mq-only-lg {
+			display: @bsp-carousel-gallery-nav-button-display-lg;
 			right: @bsp-carousel-gallery-nav-button-offset-lg;
 		}
 	}
 
 	.bsp-carousel .slick-prev {
 		@media @bsp-carousel-gallery-mq-only-xs {
+			display: @bsp-carousel-gallery-nav-button-display-xs;
 			left: @bsp-carousel-gallery-nav-button-offset-xs;
 		}
 		@media @bsp-carousel-gallery-mq-only-sm {
+			display: @bsp-carousel-gallery-nav-button-display-sm;
 			left: @bsp-carousel-gallery-nav-button-offset-sm;
 		}
 		@media @bsp-carousel-gallery-mq-only-md {
+			display: @bsp-carousel-gallery-nav-button-display-md;
 			left: @bsp-carousel-gallery-nav-button-offset-md;
 		}
 		@media @bsp-carousel-gallery-mq-only-lg {
+			display: @bsp-carousel-gallery-nav-button-display-lg;
 			left: @bsp-carousel-gallery-nav-button-offset-lg;
 		}
 	}
@@ -203,7 +215,7 @@
 	margin: 0 auto;
 
 	@media @bsp-carousel-gallery-mq-only-xs {
-		width: ~"calc(@{bsp-carousel-gallery-content-width-xsmall} - (@{bsp-carousel-gallery-space}*2) - (@{bsp-carousel-gallery-nav-button-width}*2))";
+		width: ~"calc(@{bsp-carousel-gallery-content-width-xsmall} - (@{bsp-carousel-gallery-space}*2))";
 	}
 	@media @bsp-carousel-gallery-mq-only-sm {
 		width: ~"calc(@{bsp-carousel-gallery-content-width-small} - (@{bsp-carousel-gallery-space}*2))";
@@ -227,6 +239,7 @@
 }
 .bsp-carousel-gallery-footer-thumbnails-link {
 	margin-bottom: @bsp-carousel-gallery-space;
+	width: 150px; // @todo not sure why a width has to be hard-coded here
 	a {
 		color: @bsp-carousel-gallery-color;
 		font-weight: @bsp-carousel-gallery-bold-font-weight;
@@ -234,12 +247,14 @@
 
 		&:before {
 			color: @bsp-carousel-gallery-background;
+			// @todo this probably shouldn't be here or at least not hard-coded
 			padding-left: 10px;
 			padding-right: 15px;
 		}
 	}
 }
 .bsp-carousel-gallery-footer-links {
+	line-height: @bsp-carousel-gallery-space*2.5;
 	margin-bottom: @bsp-carousel-gallery-space;
 	ul {
 		display: inline;
@@ -253,10 +268,19 @@
 		padding: @bsp-carousel-gallery-space/4 @bsp-carousel-gallery-space/2;
 		text-transform: uppercase;
 	}
+
+	@media @bsp-carousel-gallery-mq-only-lg, @bsp-carousel-gallery-mq-only-md {
+		max-width: 50%;
+	}
 }
 .bsp-carousel-gallery-footer-header {
 	display: inline;
 	text-transform: uppercase;
+}
+
+.bsp-carousel-gallery-footer-item {
+	float: left;
+	padding-right: @bsp-carousel-gallery-space*2;
 }
 
 .bsp-carousel-gallery-thumbnails {

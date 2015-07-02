@@ -47,14 +47,14 @@
 
 
 			{{#if thumbnails}}
-			<div class="bsp-carousel-gallery-footer-thumbnails-link">
+			<div class="bsp-carousel-gallery-footer-item bsp-carousel-gallery-footer-thumbnails-link">
 				<a class="icon icon-th-large bsp-share-link" href="">Thumbnails</a>
 			</div>
 			{{/if}}
 
 			
 			{{#if sharing}}
-			<div class="bsp-sharing" data-bsp-share data-bsp-share-options='{"iconClass":"icon", "serviceProps": { {{#if sharing.facebook}} {{#if sharing.facebook.appId}} "facebook" : { "appId": {{sharing.facebook.appId}} } {{/if}} {{/if}}  }}'>
+			<div class="bsp-carousel-gallery-footer-item bsp-sharing" data-bsp-share data-bsp-share-options='{"iconClass":"icon", "serviceProps": { {{#if sharing.facebook}} {{#if sharing.facebook.appId}} "facebook" : { "appId": {{sharing.facebook.appId}} } {{/if}} {{/if}}  }}'>
 				{{#if sharingTitle}}
 					<h4 class="bsp-carousel-gallery-footer-header">{{sharingTitle}}:</h4>
 				{{/if}}
@@ -77,7 +77,7 @@
 			{{/if}}
 
 			{{#if relatedLinks}}
-			<div class="bsp-carousel-gallery-footer-links">
+			<div class="bsp-carousel-gallery-footer-item bsp-carousel-gallery-footer-links">
 				{{#if relatedLinksTitle}}
 					<h4 class="bsp-carousel-gallery-footer-header">{{relatedLinksTitle}}:</h4>
 				{{/if}}

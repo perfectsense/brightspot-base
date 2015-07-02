@@ -43,7 +43,10 @@
 	"relatedLinks": [
 		{ "href": "http://www.brightspot.com/", "text": "tenderloin salami" },
 		{ "href": "http://www.brightspot.com/", "text": "cupim venison" },
-		{ "href": "http://www.brightspot.com/", "text": "kielbasa" }
+		{ "href": "http://www.brightspot.com/", "text": "kielbasa" },
+		{ "href": "http://www.brightspot.com/", "text": "pancetta frankfurter" },
+		{ "href": "http://www.brightspot.com/", "text": "jowl chuck" },
+		{ "href": "http://www.brightspot.com/", "text": "prosciutto ham turkey" }
 	],
 
 	"sharingTitle": "Share",
