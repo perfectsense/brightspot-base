@@ -1,7 +1,12 @@
 <div class="bsp-carousel-gallery-wrapper">
 
 	{{#if galleryTitle}}
-		<h2 class="bsp-section-title">{{galleryTitle}}</h2>
+		<h2 class="bsp-carousel-gallery-header">
+			{{#if galleryTitleType}}
+				<span>{{galleryTitleType}}:</span>
+			{{/if}}
+			{{galleryTitle}}
+		</h2>
 	{{/if}}
 
 	<div data-bsp-carousel-gallery>

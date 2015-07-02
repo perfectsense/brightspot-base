@@ -10,9 +10,8 @@
 @bsp-carousel-gallery-bottom: 0; // @todo will need to account for footer
 @bsp-carousel-gallery-left: 0;
 @bsp-carousel-gallery-right: 0;
-@bsp-carousel-gallery-z-index: 1;
+@bsp-carousel-gallery-overlays-z-index: 1;
 
-@bsp-carousel-gallery-border-main-zindex: 1;
 @bsp-carousel-gallery-border-main-width: @space-half;
 @bsp-carousel-gallery-border-main-offset-xs: @space;
 @bsp-carousel-gallery-border-main-offset-sm: @space;
@@ -60,7 +59,7 @@
 		bottom: 0;
 		position: fixed;
 		width: @bsp-carousel-gallery-border-main-width;
-		z-index: @bsp-carousel-gallery-border-main-zindex;
+		z-index: @bsp-carousel-gallery-overlays-z-index;
 	}
 
 	&:before {
@@ -136,6 +135,38 @@
 	}
 }
 
+.bsp-carousel-gallery-header {
+	background: @bsp-carousel-gallery-background;
+	text-transform: uppercase;
+	z-index: @bsp-carousel-gallery-overlays-z-index;
+
+	span {
+		color: @bsp-carousel-gallery-color;
+	}
+
+	@media @bsp-carousel-gallery-mq-only-xs {
+		text-align: center;
+	}
+	@media @bsp-carousel-gallery-mq-only-sm {
+		text-align: center;
+	}
+	@media @bsp-carousel-gallery-mq-only-md {
+		left: @bsp-carousel-gallery-nav-button-offset-md;
+	}
+	@media @bsp-carousel-gallery-mq-only-lg {
+		left: @bsp-carousel-gallery-nav-button-offset-lg;
+	}
+	@media @bsp-carousel-gallery-mq-only-lg, @bsp-carousel-gallery-mq-only-md {
+		padding: @bsp-carousel-gallery-space*2;
+		position: absolute;
+
+		span {
+			display: block;
+			font-size: 80%;
+		}
+	}
+}
+
 .bsp-carousel-gallery-slide {
 	img {
 		height: auto;
@@ -163,6 +194,7 @@
 
 .bsp-carousel-gallery-slide-title {
 	padding-top: @bsp-carousel-gallery-space;
+	text-transform: uppercase;
 }
 .bsp-carousel-gallery-slide-description {
 	padding-bottom: @bsp-carousel-gallery-space*2;
