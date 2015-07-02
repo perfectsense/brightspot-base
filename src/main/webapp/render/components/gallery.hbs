@@ -23,14 +23,35 @@
 		{{/gallerySlides}}
 	</div>
 
-	<!--
-	<div class="bsp-sharing" data-bsp-share data-bsp-share-options='{"iconClass":"icon", "serviceProps":{"facebook":{"appId":"645138725541385"}}}'>  
-	    <div class="bsp-facebook-share"></div>   
-	    <div class="bsp-twitter-share"></div>    
-	    <div class="bsp-google-share"></div> 
-	    <div class="bsp-pinterest-share"></div>  
-	    <div class="bsp-linkedin-share"></div>   
+	<div class="bsp-carousel-gallery-footer">	
+
+		<div class="bsp-carousel-gallery-footer-thumbnails-link">
+			<a href="">Thumbnails</a>
+		</div>
+
+		<!--
+		<div class="bsp-sharing" data-bsp-share data-bsp-share-options='{"iconClass":"icon", "serviceProps":{"facebook":{"appId":"645138725541385"}}}'>  
+		    <div class="bsp-facebook-share"></div>   
+		    <div class="bsp-twitter-share"></div>    
+		    <div class="bsp-google-share"></div> 
+		    <div class="bsp-pinterest-share"></div>  
+		    <div class="bsp-linkedin-share"></div>   
+		</div>
+		-->
+
+		{{#if relatedLinks}}
+		<div class="bsp-carousel-gallery-footer-links">
+			{{#if relatedLinksTitle}}
+				<h4 class="bsp-carousel-gallery-related-links-header">{{relatedLinksTitle}}:</h4>
+			{{/if}}
+			<ul>
+				{{#relatedLinks}}
+					<li><a href="{{href}}">{{text}}</a></li>
+				{{/relatedLinks}}			
+			</ul>
+		</div>
+		{{/if}}
+
 	</div>
-	-->
 
 </div>
