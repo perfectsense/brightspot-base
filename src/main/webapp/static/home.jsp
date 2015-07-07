@@ -65,6 +65,8 @@
 
 									<div data-bsp-template data-bsp-template-options='{ "template": "components/image-promo-3-across", "dataUrl": "/static/data/image-promo-3-images-1-link.json" }'></div>
 
+									<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-2-items-with-images-extra-text.json" }'></div>
+
 								</div>
 							</div>
 

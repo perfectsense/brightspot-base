@@ -1,0 +1,27 @@
+{
+	"heading" : "Top Stories on Broadway",
+
+	"listItems" : [
+		{ 
+			"imgSrc" : "/assets/images/300x120.png",
+			"imgAlt" : "Test Alt",
+			"imgAlign" : "top",
+			"link" : "#",
+			"linkText" : "8 Burning Questions",
+			"title" : "Shankle pork loin landjaeger",
+			"description" : "Shankle pork loin landjaeger pork chop t-bone. Shank capicola strip steak, salami prosciutto ham hock venison. Short ribs meatloaf doner hamburger frankfurter tri-tip."
+		},
+		{ 
+			"imgSrc" : "/assets/images/300x120.png",
+			"imgAlt" : "Test Alt",
+			"imgAlign" : "top",
+			"link" : "#",
+			"linkText" : "8 Burning Questions",
+			"title" : "Shankle pork loin landjaeger",
+			"description" : "Shankle pork loin landjaeger pork chop t-bone. Shank capicola strip steak, salami prosciutto ham hock venison. Short ribs meatloaf doner hamburger frankfurter tri-tip."
+		}
+	],
+
+	"ctaText" : "Test CTA",
+	"ctaLink" : "#"
+}

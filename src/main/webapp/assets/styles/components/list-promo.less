@@ -4,7 +4,13 @@
 // number of items in the list vs hardcoded CSS rules as much as possible
 
 .bsp-list-promo {
+	margin: -@space 0; // cancels out the margin of the first and last item
 	text-transform: uppercase;
+
+	// when we have hardcoded heights, we do not want the bottom negative margin, it screws up our centering
+	.hard-item-heights & {
+		margin-bottom: 0;
+	}
 }
 
 .bsp-list-promo-list {
@@ -17,27 +23,22 @@
 		&:first-child {
 			border-top: none;
 
-			.bsp-list-promo-link {
-				a {
-					padding-top: 0;
-				}
-			}
+			// .bsp-list-promo-link {
+			// 	a {
+			// 		margin-top: 0;
+			// 	}
+			// }
 		}
 
-		&:last-child {
-			.bsp-list-promo-link {
-				a {
-					padding-bottom: 0;
-				}
-			}
-		}
+		// &:last-child {
+		// 	.bsp-list-promo-link {
+		// 		a {
+		// 			margin-bottom: 0;
+		// 		}
+		// 	}
+		// }
 	}
 	
-}
-
-// if we have a heading and hardcoded heights, cancel out the bottom margin of the heading
-.bsp-component-title + .bsp-component-content .bsp-list-promo .hard-item-heights {
-	margin-top: -@space;
 }
 
 // images have no margin on either side
@@ -49,6 +50,7 @@
 	}
 }
 
+// if you have a title and an image, give that top margin to space it. Otherwise, it's flush to the top of the component
 .bsp-component-title + .bsp-component-content .bsp-list-promo .bsp-list-promo-image {
 	margin-top: @space;
 }
@@ -66,7 +68,7 @@
 .bsp-list-promo-link {
 	a {
 		display: block;
-		padding: @space 0;
+		margin: @space 0;
 	}
 }
 
