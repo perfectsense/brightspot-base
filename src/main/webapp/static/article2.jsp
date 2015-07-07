@@ -18,7 +18,7 @@
 					
 						<div class="bsp-article bsp-infinite-load-item">
 
-							<h1 class="bsp-article-title">11111111 Bacon meatball leberkas jerky strip steak beef ham ground round hamburger short loin</h1>
+							<h1 class="bsp-article-title">22222222 Bacon meatball leberkas jerky strip steak beef ham ground round hamburger short loin</h1>
 
 							<div class="bsp-meta-data">
 							  	<div class="bsp-meta-author">By <a href="#">Robert Simonson</a></div>
@@ -70,7 +70,7 @@
 					</div>
 
 					<div class="bsp-article-load-more">
-						<a class="bsp-infinite-load-trigger" href="article2.jsp">Load MOAR</a>
+						<a class="bsp-infinite-load-trigger" href="article3.jsp">Load MOAR</a>
 					</div>
 
 				</div>
