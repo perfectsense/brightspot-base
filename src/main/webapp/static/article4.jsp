@@ -12,7 +12,7 @@
 		<div class="bsp-container">
 			
 			<div class="bsp-row">
-				<div class="bsp-column-persistent">
+				<div class="bsp-column-scrolling">
 
 					<div class="bsp-article-wrapper bsp-infinite-load-wrapper" data-bsp-infinite-scroll>
 					
@@ -71,7 +71,7 @@
 
 				</div>
 
-				<div class="bsp-column-add-on">
+				<div class="bsp-column-fixed-wrap">
 
 					<div class="bsp-column-fixed">
 
