@@ -81,6 +81,16 @@ module.exports = function(grunt) {
                         expand: true,
                         flatten: true
                     }
+                ], 
+
+                'waypoints' : [
+                {
+                    src: 'lib/**/*.js',
+                    dest: 'bower/waypoints',
+                    expand: true,
+                    flatten: true
+                }
+
                 ]
             }
         }

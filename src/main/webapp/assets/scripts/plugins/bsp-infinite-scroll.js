@@ -15,8 +15,8 @@
 
 import $ from 'jquery';
 import bsp_utils from 'bsp-utils';
-import infinite from 'jquery.waypoints.min';
-import waypoints from 'infinite.min';
+import waypoints from 'bower/waypoints/jquery.waypoints';
+import infinite from 'bower/waypoints/infinite';
 
 var bsp_infinite_scroll = {
 
