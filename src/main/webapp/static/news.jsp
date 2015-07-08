@@ -68,7 +68,7 @@
 
 						<div class="bsp-column-main">
 							
-							<div data-bsp-template data-bsp-template-options='{ "template": "components/gallery-module", "dataUrl": "/static/data/gallery-module.json" }'></div>
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/gallery-module", "dataUrl": "/static/gallery-module/5-slides.json" }'></div>
 
 						</div>
 						
