@@ -1,14 +1,18 @@
 {
 	"options" : {
-		"hardcodeItemHeights" : true
+		"hardcodeItemHeights" : false
 	},
 
-	"heading" : "Top Stories on Broadway",
+	"heading" : "4 items with dynamic heights",
 
 	"listItems" : [
 		{ 
 			"link" : "#",
 			"linkText" : "8 Burning Questions" 
+		},
+		{ 
+			"link" : "#",
+			"linkText" : "Bacon ipsum dolor amet turducken jowl shankle, cupim" 
 		},
 		{ 
 			"link" : "#",

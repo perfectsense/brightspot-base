@@ -1,7 +1,9 @@
 {
+	"heading" : "Image with Overlay",
+
 	"listItems" : [
 		{ 
-			"imgSrc" : "/assets/images/300x120.png",
+			"imgSrc" : "/assets/images/800x450.png",
 			"imgAlt" : "Test Alt",
 			"imgAlign" : "overlay",
 			"link" : "#",

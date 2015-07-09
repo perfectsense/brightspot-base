@@ -1,5 +1,5 @@
 {
-	"heading" : "Top Stories on Broadway",
+	"heading" : "1 Image with title, text, and CTA",
 
 	"listItems" : [
 		{ 
@@ -12,6 +12,6 @@
 		}
 	],
 
-	"ctaText" : "Test CTA",
+	"ctaText" : "CTA goes here",
 	"ctaLink" : "#"
 }

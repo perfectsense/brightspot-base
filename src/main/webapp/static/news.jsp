@@ -18,15 +18,15 @@
 					<div class="bsp-row">
 						<div class="bsp-column-main">
 							
-							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-1-image-no-title.json" }'></div>
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/1-item-with-image-no-title.json" }'></div>
 
 						</div>
 
 						<div class="bsp-column-aside">
 
-							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-5-items.json" }'></div>
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/5-items.json" }'></div>
 
-							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-1-item-just-image.json" }'></div>
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/1-item-just-image.json" }'></div>
 
 						</div>
 						
@@ -38,21 +38,21 @@
 
 						<div class="bsp-column-third">
 							
-							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-1-item-just-image.json" }'></div>
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/1-item-just-image.json" }'></div>
 
-							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-3-items.json" }'></div>
-
-						</div>
-
-						<div class="bsp-column-third">
-
-							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-7-items.json" }'></div>
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/3-items.json" }'></div>
 
 						</div>
 
 						<div class="bsp-column-third">
 
-							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-7-items.json" }'></div>
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/7-items.json" }'></div>
+
+						</div>
+
+						<div class="bsp-column-third">
+
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/7-items.json" }'></div>
 
 						</div>
 						
@@ -62,7 +62,7 @@
 
 						<div class="bsp-column-aside">
 
-							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-6-items.json" }'></div>
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/6-items.json" }'></div>
 
 						</div>
 
@@ -74,7 +74,7 @@
 						
 					</div>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/gallery-module-thumbs-or-nav", "dataUrl": "/static/data/gallery-module-thumbs.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "template": "components/gallery-module-thumbs-or-nav", "dataUrl": "/static/gallery-module/5-slides-with-thumbs.json" }'></div>
 
 				</main>
 			</div>

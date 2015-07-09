@@ -1,0 +1,41 @@
+{
+	"options" : {
+		"hardcodeItemHeights" : false
+	},
+
+	"heading" : "6 items with one item with image",
+
+	"listItems" : [
+		{ 
+			"imgSrc" : "/assets/images/800x450.png",
+			"imgAlt" : "Test Alt",
+			"imgAlign" : "top",
+			"link" : "#",
+			"linkText" : "8 Burning Questions",
+			"title" : "8 Burning Questions"
+		},
+		{ 
+			"link" : "#",
+			"linkText" : "Bacon ipsum dolor amet turducken jowl shankle, cupim" 
+		},
+		{ 
+			"link" : "#",
+			"linkText" : "Bacon ipsum dolor amet turducken jowl shankle, cupim" 
+		},
+		{ 
+			"link" : "#",
+			"linkText" : "Bacon ipsum dolor amet turducken jowl shankle, cupim" 
+		},
+		{ 
+			"link" : "#",
+			"linkText" : "Bacon ipsum dolor amet turducken jowl shankle, cupim" 
+		},
+		{ 
+			"link" : "#",
+			"linkText" : "Bacon ipsum dolor amet turducken jowl shankle, cupim" 
+		}
+	],
+
+	"ctaText" : "Test CTA",
+	"ctaLink" : "#"
+}

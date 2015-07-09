@@ -1,9 +1,9 @@
 {
 	"options" : {
-		"hardcodeItemHeights" : true
+		"hardcodeItemHeights" : false
 	},
 
-	"heading" : "Top Stories on Broadway",
+	"heading" : "6 items with dynamic heights",
 
 	"listItems" : [
 		{ 
@@ -16,11 +16,19 @@
 		},
 		{ 
 			"link" : "#",
-			"linkText" : "Bacon ipsum dolor amet turducken jowl shankle, cupim" 
+			"linkText" : "Shankle pork loin landjaeger pork chop t-bone, shank" 
 		},
 		{ 
 			"link" : "#",
 			"linkText" : "Bacon ipsum dolor amet turducken jowl shankle, cupim" 
+		},
+		{ 
+			"link" : "#",
+			"linkText" : "Shankle pork loin landjaeger pork chop t-bone, shank" 
+		},
+		{ 
+			"link" : "#",
+			"linkText" : "Shankle pork loin landjaeger pork chop t-bone, shank" 
 		}
 	],
 

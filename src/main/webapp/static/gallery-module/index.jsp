@@ -9,15 +9,29 @@
 
 	<div class="bsp-site">
 
-		<div data-bsp-template data-bsp-template-options='{ "template": "components/page-title", "dataUrl": "/static/data/page-title.json" }'></div>
-
 		<div class="bsp-container">
 			<div class="bsp-row">
 				<main class="bsp-column-full">
 
+					<%-- 5 slides at a time (2 on mobile) --%>
+
+					<div data-bsp-template data-bsp-template-options='{ "template": "components/gallery-module-horizontal", "dataUrl": "/static/gallery-module/5-slides-horizontal.json" }'></div>
+
+					<%-- 4 slides with text nav --%>
+
+					<div data-bsp-template data-bsp-template-options='{ "template": "components/gallery-module-thumbs-or-nav", "dataUrl": "/static/gallery-module/4-slides-text-nav.json" }'></div>
+
+					<%-- 5 slides --%>
+
 					<div data-bsp-template data-bsp-template-options='{ "template": "components/gallery-module", "dataUrl": "/static/gallery-module/5-slides.json" }'></div>
+					
+					<%-- 7 slides with dots --%>
 
 					<div data-bsp-template data-bsp-template-options='{ "template": "components/gallery-module", "dataUrl": "/static/gallery-module/7-slides-dots.json" }'></div>
+
+					<%-- 7 slides with thumbnails --%>
+
+					<div data-bsp-template data-bsp-template-options='{ "template": "components/gallery-module-thumbs-or-nav", "dataUrl": "/static/gallery-module/5-slides-with-thumbs.json" }'></div>
 
 
 				</main>

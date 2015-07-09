@@ -3,7 +3,7 @@
 		"carouselDots" : true
 	},
 
-	"galleryTitle" : "Test Gallery No Thumbs",
+	"galleryTitle" : "7 slides, with dots, no thumbs",
 
 	"gallerySlides" : [
 		{ "slideImage" : "/assets/images/1200x400.png" },

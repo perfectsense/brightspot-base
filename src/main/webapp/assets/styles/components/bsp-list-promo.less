@@ -4,7 +4,7 @@
 // number of items in the list vs hardcoded CSS rules as much as possible
 
 .bsp-list-promo {
-	margin: -@space 0; // other modules need to get space between the title. The list promo needs to cancel that out, as the list items are supposed to butt up to the title and CTA
+	//margin: -@space 0; // other modules need to get space between the title. The list promo needs to cancel that out, as the list items are supposed to butt up to the title and CTA
 	text-transform: uppercase;
 
 	// when we have hardcoded heights, we do not want the bottom negative margin, it screws up our centering
@@ -24,10 +24,24 @@
 		padding: 0 @space; 
 		position: relative;
 
-		// first item has no border 
+		// first item has no border or padding, and default has no image, so it's scooted up to the title
 		&:first-child {
 			border-top: none;
+			margin-top: -@space; // if you are the first item, margin you up to the header
+			padding-top: 0 !important;
 		}
+
+		// if there is an image at the top or you have the dark background for left align, give it padding and a normal margin away
+		&.image-align-top, &.image-align-left-dark {
+			padding-top: @space;
+			margin-top: 0;
+		}
+
+		// if there is an image to the left, give it padding
+		&.image-align-left {
+			margin-top: 0;
+		}
+		
 	}
 	
 }
@@ -39,11 +53,11 @@
 	margin: 0 -@space; 
 
 	// if you have a title and an image, give that top margin to space it. Otherwise, it's flush to the top of the component
-	.bsp-component-title + .bsp-component-content .bsp-list-promo & {
-		margin-top: @space;
-	}
+	// .bsp-component-title + .bsp-component-content .bsp-list-promo & {
+	// 	margin-top: @space;
+	// }
 
-	.image-align-left & {
+	.image-align-left &, .image-align-left-dark & {
 		float: left;
 		width: 45%;
 	}
@@ -67,16 +81,22 @@
 		right: 0;
 	}
 
-	.image-align-left & {
+	.image-align-left &, .image-align-left-dark & {
 		background: @brand-dark;
 		color: @white;
 		margin-left: -@space; // butts it up against the image
-		padding: @space;
+		padding: 0 @space;
 		position: absolute;
 		right: 0;
 		top: 0;
 		bottom: 0;
 		left: 45%;
+	}
+
+	.image-align-left & {
+		background: none;
+		color: @text-color;
+		margin-top: -1rem;
 	}
 
 }
@@ -95,7 +115,7 @@
 			color: @white;
 		}
 
-		.image-align-left & {
+		.image-align-left-dark & {
 			color: @white;
 		}
 	}
@@ -108,14 +128,13 @@
 		display: block;
 	}
 
-	.image-align-left & {
+	.image-align-left-dark & {
 		
 		a {
 			background: @brand-primary;
 			bottom: 0;
 			color: @brand-dark;
 			left: 0;
-			margin: 0 0 @space 0;
 			position: absolute;
 			right: 0;
 			text-align: center;
@@ -137,6 +156,7 @@
 // when we hardcode items heights, we will hardcode the height here and vertically center the links
 // this is at the end of the less file so we can provide cascading overrides without important tags
 .bsp-list-promo-list.hard-item-heights {
+	margin-top: -@space;
 
 	.bsp-list-promo-text {
 		height: 60px;

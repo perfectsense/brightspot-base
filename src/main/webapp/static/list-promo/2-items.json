@@ -1,0 +1,21 @@
+{
+	"options" : {
+		"hardcodeItemHeights" : true
+	},
+
+	"heading" : "2 items with hardcoded heights",
+
+	"listItems" : [
+		{ 
+			"link" : "#",
+			"linkText" : "8 Burning Questions" 
+		},
+		{ 
+			"link" : "#",
+			"linkText" : "Bacon ipsum dolor amet turducken jowl shankle, cupim" 
+		}
+	],
+
+	"ctaText" : "Test CTA",
+	"ctaLink" : "#"
+}

@@ -1,0 +1,16 @@
+{
+	"options" : {
+		"carouselDots" : false,
+		"horizontalSlides" : true
+	},
+
+	"galleryTitle" : "5 slides at a time, 2 on mobile",
+
+	"gallerySlides" : [
+		{ "slideImage" : "/assets/images/800x450.png" },
+		{ "slideImage" : "/assets/images/800x450.png" },
+		{ "slideImage" : "/assets/images/800x450.png" },
+		{ "slideImage" : "/assets/images/800x450.png" },
+		{ "slideImage" : "/assets/images/800x450.png" }
+	]
+}

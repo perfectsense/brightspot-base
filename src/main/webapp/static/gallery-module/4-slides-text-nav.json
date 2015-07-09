@@ -3,7 +3,7 @@
 		"textNav" : true
 	},
 
-	"galleryTitle" : "Featured Today",
+	"galleryTitle" : "4 Slide with text nav instead of thumbs",
 
 	"gallerySlides" : [
 		{ "slideImage" : "/assets/images/800x450.png", "navText" : "Shankle pork loin landjaeger pork chop" },
