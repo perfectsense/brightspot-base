@@ -65,6 +65,10 @@
 
 						</div>
 
+					</div>
+
+					<div class="bsp-row">
+
 						<div class="bsp-column-half">
 
 							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-2-items-with-images-extra-text.json" }'></div>
@@ -86,6 +90,10 @@
 
 						</div>
 
+					</div>
+
+					<div class="bsp-row">
+
 						<div class="bsp-column-half">
 
 							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-1-item-with-image-left-align.json" }'></div>
@@ -95,6 +103,22 @@
 						<div class="bsp-column-half">
 
 							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-1-item-with-image-left-align.json" }'></div>
+
+						</div>
+
+					</div>
+
+					<div class="bsp-row">
+
+						<div class="bsp-column-half">
+
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-1-item-with-image-overlay.json" }'></div>
+
+						</div>
+
+						<div class="bsp-column-half">
+
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-1-item-with-image-overlay.json" }'></div>
 
 						</div>
 

@@ -1,9 +1,9 @@
 {
 	"listItems" : [
 		{ 
-			"imgSrc" : "/assets/images/300x120.png",
+			"imgSrc" : "/assets/images/200x300.png",
 			"imgAlt" : "Test Alt",
-			"imgAlign" : "top",
+			"imgAlign" : "left",
 			"link" : "#",
 			"linkText" : "8 Burning Questions",
 			"title" : "Shankle pork loin landjaeger",

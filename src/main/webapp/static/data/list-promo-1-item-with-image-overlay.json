@@ -1,0 +1,12 @@
+{
+	"listItems" : [
+		{ 
+			"imgSrc" : "/assets/images/300x120.png",
+			"imgAlt" : "Test Alt",
+			"imgAlign" : "overlay",
+			"link" : "#",
+			"linkText" : "8 Burning Questions",
+			"title" : "Shankle pork loin landjaeger"
+		}
+	]
+}

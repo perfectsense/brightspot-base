@@ -4,7 +4,7 @@
 // number of items in the list vs hardcoded CSS rules as much as possible
 
 .bsp-list-promo {
-	margin: -@space 0; // cancels out the margin of the first and last item
+	margin: -@space 0; // other modules need to get space between the title. The list promo needs to cancel that out, as the list items are supposed to butt up to the title and CTA
 	text-transform: uppercase;
 
 	// when we have hardcoded heights, we do not want the bottom negative margin, it screws up our centering
@@ -13,47 +13,74 @@
 	}
 }
 
+
+
 .bsp-list-promo-list {
 
 	li {
+		&:extend(.clearfix all);
+
 		border-top: @border-style-5;
 		padding: 0 @space; 
+		position: relative;
 
-		// first and last item has no border and no padding on the link (component owns that padding)
+		// first item has no border 
 		&:first-child {
 			border-top: none;
-
-			// .bsp-list-promo-link {
-			// 	a {
-			// 		margin-top: 0;
-			// 	}
-			// }
 		}
-
-		// &:last-child {
-		// 	.bsp-list-promo-link {
-		// 		a {
-		// 			margin-bottom: 0;
-		// 		}
-		// 	}
-		// }
 	}
 	
 }
 
+
+
 // images have no margin on either side
 .bsp-list-promo-image {
 	margin: 0 -@space; 
+
+	// if you have a title and an image, give that top margin to space it. Otherwise, it's flush to the top of the component
+	.bsp-component-title + .bsp-component-content .bsp-list-promo & {
+		margin-top: @space;
+	}
+
+	.image-align-left & {
+		float: left;
+		width: 45%;
+	}
 
 	img {
 		width: 100%;
 	}
 }
 
-// if you have a title and an image, give that top margin to space it. Otherwise, it's flush to the top of the component
-.bsp-component-title + .bsp-component-content .bsp-list-promo .bsp-list-promo-image {
-	margin-top: @space;
+
+.bsp-list-promo-text {
+
+	// when we are overlayed, provide the background and positioning/padding
+	.image-align-overlay & {
+		background: rgba(0,0,0,0.5);
+		bottom: 0;
+		color: @white;
+		left: 0;
+		padding: 0 @space @space;
+		position: absolute;
+		right: 0;
+	}
+
+	.image-align-left & {
+		background: @brand-dark;
+		color: @white;
+		margin-left: -@space; // butts it up against the image
+		padding: @space;
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		left: 45%;
+	}
+
 }
+
 
 .bsp-list-promo-title {
 	&:extend(.ts-1);
@@ -62,28 +89,54 @@
 
 	a {
 		color: @text-color;
+
+		// since the image overlay is dark, this needs to be white not text-color
+		.image-align-overlay & {
+			color: @white;
+		}
+
+		.image-align-left & {
+			color: @white;
+		}
 	}
 }
 
 .bsp-list-promo-link {
+	margin: @space 0;
+
 	a {
 		display: block;
-		margin: @space 0;
 	}
+
+	.image-align-left & {
+		
+		a {
+			background: @brand-primary;
+			bottom: 0;
+			color: @brand-dark;
+			left: 0;
+			margin: 0 0 @space 0;
+			position: absolute;
+			right: 0;
+			text-align: center;
+			padding: @space-quarter 0;
+		}
+	}
+
 }
+
+
 
 .bsp-list-promo-desc {
 	margin: @space 0;
 	text-transform: none;
 }
 
+
+
 // when we hardcode items heights, we will hardcode the height here and vertically center the links
 // this is at the end of the less file so we can provide cascading overrides without important tags
 .bsp-list-promo-list.hard-item-heights {
-
-	li {
-		padding: 0 @space;
-	}
 
 	.bsp-list-promo-text {
 		height: 60px;
@@ -92,10 +145,7 @@
 
 		.bsp-list-promo-link {
 			&:extend(.vertical-center all);
-
-			a {
-				padding: 0;
-			}
+			margin: 0;
 		}
 	}
 
