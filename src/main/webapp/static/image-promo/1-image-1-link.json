@@ -1,10 +1,12 @@
 {
-	"heading" : "Top Stories on Broadway",
+	"heading" : "1 Image with 1 Link",
 
 	"images" : [
 		{ 
-			"imgSrc" : "/assets/images/800x450.png",
-			"imgAlt" : "textAlt",
+			"imgSrc" 	: "/assets/images/800x450.png",
+			"imgAlt" 	: "textAlt",
+			"imgLink" 	: "#",
+			
 			"links" : [
 				{
 					"link" : "#",

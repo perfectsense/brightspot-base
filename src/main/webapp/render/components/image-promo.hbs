@@ -7,16 +7,30 @@
 
 		<div class="bsp-image-promo">
 
+		{{#if options.imageSplit}}
+			<div class="bsp-row">
+		{{/if}}
+
 			{{#images}}
-			<div class="bsp-image-promo-image">
-				<img src="{{imgSrc}}" alt="{{imgAlt}}" />
-				<ul class="bsp-image-promo-links">
-					{{#links}}
-					<li><a href="{{link}}">{{text}}</a></li>
-					{{/links}}
-				</ul>
-			</div>
+
+				<div class="bsp-column-{{../options.imageSplit}}">
+
+					<div class="bsp-image-promo-image">
+						<a href="{{imgLink}}"><img src="{{imgSrc}}" alt="{{imgAlt}}" /></a>
+						<ul class="bsp-image-promo-links">
+							{{#links}}
+							<li><a href="{{link}}">{{text}}</a></li>
+							{{/links}}
+						</ul>
+					</div>
+
+				</div>
+
 			{{/images}}
+
+		{{#if options.imageSplit}}
+			</div>
+		{{/if}}
 
 		</div>
 

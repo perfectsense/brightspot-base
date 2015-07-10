@@ -3,18 +3,20 @@
 		{ 
 			"imgSrc" : "/assets/images/800x450.png",
 			"imgAlt" : "textAlt",
+			"imgLink" 	: "#",
+			
 			"links" : [
 				{
 					"link" : "#",
-					"text" : "Bacon ipsum Bacon ipsum"
+					"text" : "No Title"
 				},
 				{
 					"link" : "#",
-					"text" : "Bacon ipsum"
+					"text" : "But This"
 				},
 				{
 					"link" : "#",
-					"text" : "Bacon ipsum"
+					"text" : "Has 3 Links"
 				}
 			]
 		}

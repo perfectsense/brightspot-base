@@ -1,10 +1,18 @@
 {
+	"options" : {
+
+		"imageSplit" : "half"
+
+	},
+
 	"heading" : "Top Stories on Broadway",
 
 	"images" : [
 		{ 
 			"imgSrc" : "/assets/images/800x450.png",
 			"imgAlt" : "textAlt",
+			"imgLink" 	: "#",
+
 			"links" : [
 				{
 					"link" : "#",
@@ -15,20 +23,8 @@
 		{ 
 			"imgSrc" : "/assets/images/800x450.png",
 			"imgAlt" : "textAlt",
-			"links" : [
-				{
-					"link" : "#",
-					"text" : "Bacon ipsum Bacon ipsum"
-				},
-				{
-					"link" : "#",
-					"text" : "Bacon ipsum"
-				}
-			]
-		},
-		{ 
-			"imgSrc" : "/assets/images/800x450.png",
-			"imgAlt" : "textAlt",
+			"imgLink" 	: "#",
+
 			"links" : [
 				{
 					"link" : "#",
@@ -43,6 +39,24 @@
 		{ 
 			"imgSrc" : "/assets/images/800x450.png",
 			"imgAlt" : "textAlt",
+			"imgLink" 	: "#",
+
+			"links" : [
+				{
+					"link" : "#",
+					"text" : "Bacon ipsum Bacon ipsum"
+				},
+				{
+					"link" : "#",
+					"text" : "Bacon ipsum"
+				}
+			]
+		},
+		{ 
+			"imgSrc" : "/assets/images/800x450.png",
+			"imgAlt" : "textAlt",
+			"imgLink" 	: "#",
+			
 			"links" : [
 				{
 					"link" : "#",
