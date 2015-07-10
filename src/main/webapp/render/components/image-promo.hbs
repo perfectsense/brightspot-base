@@ -7,13 +7,13 @@
 
 		<div class="bsp-image-promo">
 
-		{{#if options.itemSplit}}
+		{{#if options.horizontalSplit}}
 			<div class="bsp-row">
 		{{/if}}
 
 			{{#images}}
 
-				<div class="bsp-column-{{../options.itemSplit}}">
+				<div class="bsp-column-{{../options.horizontalSplit}}">
 
 					<div class="bsp-image-promo-image">
 						<a href="{{imgLink}}"><img src="{{imgSrc}}" alt="{{imgAlt}}" /></a>
@@ -28,7 +28,7 @@
 
 			{{/images}}
 
-		{{#if options.itemSplit}}
+		{{#if options.horizontalSplit}}
 			</div>
 		{{/if}}
 

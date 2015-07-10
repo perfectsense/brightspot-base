@@ -1,7 +1,7 @@
 {
 	"options" : {
 
-		"itemSplit" : "half"
+		"horizontalSplit" : "half"
 
 	},
 
