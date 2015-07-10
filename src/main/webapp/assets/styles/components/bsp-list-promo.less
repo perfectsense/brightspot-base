@@ -1,17 +1,14 @@
-// The standard list promo contains an optional title, a list of links and a bottom call to action. 
-// It scales up to the size of it's container and accepts any number of items. 
-// If there is a certain height restriction that is part of the design, we should enforce that with character counts and 
-// number of items in the list vs hardcoded CSS rules as much as possible
+/** 
+ * The standard list promo is a list of items. It scales up to the size of it's container and accepts any number of items. 
+ *
+ * These items can have images, titles, links, and descriptions with 3 options for image alignment: top, left, or overlayed
+ * There is the option of having hard coded item heights if design chooses to, to allow for vertical centering of items
+ */
+
 
 .bsp-list-promo {
-	text-transform: uppercase;
-
-	// when we have hardcoded heights, we do not want the bottom negative margin, it screws up our centering
-	.hard-item-heights & {
-		margin-bottom: 0;
-	}
+	text-transform: @list-promo-text-transform;
 }
-
 
 
 .bsp-list-promo-list {
@@ -22,27 +19,27 @@
 		border-top: @border-style-5;
 		position: relative;
 
-		// first item has no border or padding, and default has no image, so it's scooted up to the title
+		// first item has no border or padding, and default has no image, so it's scooted up with negative margin to the title
 		&:first-child {
 			border-top: none;
-			margin-top: -@space; // if you are the first item, margin you up to the header
-			padding-top: 0 !important; // make sure the first item has no top padding always
+			margin-top: -@space;
+			padding-top: 0;
 		}
 
-		// if there is an image at the top or you have the dark background for left align, give it padding and a normal margin away
-		&.image-align-overlay, &.image-align-top, &.image-align-left-dark {
+		// if there is an image vs text, there is a space to set it apart from the item before it
+		&.image-align-overlay, &.image-align-top, &.image-align-left, &.image-align-right {
 			padding-top: @space;
-			margin-top: 0;
 		}
 
-		// if there is an image to the left, give it padding
-		&.image-align-left {
+		// except when it's the first item, no extra space
+		&.image-align-overlay:first-child, &.image-align-top:first-child, &.image-align-left:first-child, &.image-align-right:first-child {
 			margin-top: 0;
+			padding-top: 0;
 		}
 
-		// when we have an overlay, or left image alignment, it cannot use the natural margins of the text items space themselves away from the next element
-		// so we need to add a bottom margin for that spacing
-		&.image-align-overlay, &.image-align-left-dark, &.image-align-left{
+		// when we have an overlay, or left image alignment, it cannot use the natural margins of the text items underneath 
+		// to space themselves away from the next element so we need to add a bottom margin for that spacing
+		&.image-align-overlay, &.image-align-left, &.image-align-right {
 			margin-bottom: @space;
 		}
 		
@@ -64,18 +61,21 @@
 
 
 
-// images have no margin on either side
 .bsp-list-promo-image {
 
-	.image-align-left &, .image-align-left-dark & {
+	.image-align-left & {
 		float: left;
-		width: 45%;
+	}
+
+	.image-align-right & {
+		float: right;
 	}
 
 	img {
 		width: 100%;
 	}
 }
+
 
 
 .bsp-list-promo-text {
@@ -96,28 +96,15 @@
 		margin: 0 @grid-gutter-width/2;
 	}
 
-	// when the image is aligned left, we absolutely position the text to the right
-	.image-align-left &, .image-align-left-dark & {
-		background: @brand-dark;
-		color: @white;
-		position: absolute;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		left: 45%;
-	}
-
-	// when the image is aligned left inside of a horizontal layout, we need to margin ourselves
-	.bsp-list-promo-list.bsp-row .image-align-left &,
-	.bsp-list-promo-list.bsp-row .image-align-left-dark & {
-		margin-right: @grid-gutter-width/2;
-	}
-
-	// when the image is aligned left, but not dark, we want the text to be flush to the top
+	// when the image is aligned left, we position the text to the right
 	.image-align-left & {
-		background: none;
-		color: @text-color;
-		margin-top: -1rem;
+		margin-top: -@space;
+		float: right;
+	}
+
+	.image-align-right & {
+		margin-top: -@space;
+		float: left;
 	}
 
 }
@@ -135,12 +122,10 @@
 		.image-align-overlay & {
 			color: @white;
 		}
-
-		.image-align-left-dark & {
-			color: @white;
-		}
 	}
 }
+
+
 
 .bsp-list-promo-link {
 	margin: @space 0;
@@ -148,21 +133,6 @@
 	a {
 		display: block;
 	}
-
-	.image-align-left-dark & {
-		
-		a {
-			background: @brand-primary;
-			bottom: 0;
-			color: @brand-dark;
-			left: 0;
-			position: absolute;
-			right: 0;
-			text-align: center;
-			padding: @space-quarter 0;
-		}
-	}
-
 }
 
 
@@ -173,21 +143,3 @@
 }
 
 
-
-// when we hardcode items heights, we will hardcode the height here and vertically center the links
-// this is at the end of the less file so we can provide cascading overrides without important tags
-.bsp-list-promo-list.hard-item-heights {
-	margin-top: -@space;
-
-	.bsp-list-promo-text {
-		height: 60px;
-
-		&:extend(.vertical-center-wrapper all);
-
-		.bsp-list-promo-link {
-			&:extend(.vertical-center all);
-			margin: 0;
-		}
-	}
-
-}

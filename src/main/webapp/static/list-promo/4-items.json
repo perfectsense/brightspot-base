@@ -1,7 +1,4 @@
 {
-	"options" : {
-		"hardcodeItemHeights" : false
-	},
 
 	"heading" : "4 items with dynamic heights",
 

@@ -1,8 +1,8 @@
 {
 	"options" : {
 
-		"itemSplit" : "third"
-
+		"horizontalSplit" : "third"
+		
 	},
 
 	"heading" : "6 Images, horizontal align, with title, text, and CTA, 3 overlayed",

@@ -1,11 +1,16 @@
 {
-	"heading" : "1 Image left aligned with dark background for text",
+	"options" : {
+		"modifierClass" : "image-50-width-background"
+	},
+
+	"heading" : "1 Image left aligned with no background for text",
 
 	"listItems" : [
 		{ 
 			"imgSrc" : "/assets/images/200x300.png",
 			"imgAlt" : "Test Alt",
-			"imgAlign" : "left-dark",
+			"imgAlign" : "left",
+
 			"link" : "#",
 			"linkText" : "8 Burning Questions",
 			"title" : "Shankle pork loin landjaeger",

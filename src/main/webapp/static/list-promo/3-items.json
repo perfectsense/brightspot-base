@@ -1,6 +1,6 @@
 {
 	"options" : {
-		"hardcodeItemHeights" : true
+		"modifierClass" : "hard-item-heights"
 	},
 
 	"heading" : "3 items with hardcoded heights",

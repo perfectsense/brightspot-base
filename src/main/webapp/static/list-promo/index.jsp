@@ -63,7 +63,19 @@
 
 					<%-- 2 Item with image, text, left align, split in half  --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/2-items-with-image-left-align-dark-horizontal.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/2-items-with-image-left-align-horizontal.json" }'></div>
+
+				</div>
+
+			</div>
+
+			<div class="bsp-row">
+
+				<div class="bsp-column-full">
+
+					<%-- 2 Item with image, text, right align, split in half  --%>
+
+					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/2-items-with-image-right-align-horizontal.json" }'></div>
 
 				</div>
 

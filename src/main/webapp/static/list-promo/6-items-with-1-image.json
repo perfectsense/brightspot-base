@@ -1,8 +1,4 @@
 {
-	"options" : {
-		"hardcodeItemHeights" : false
-	},
-
 	"heading" : "6 items with one item with image",
 
 	"listItems" : [
