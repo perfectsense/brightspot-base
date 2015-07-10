@@ -6,9 +6,9 @@
 	<div class="bsp-component-content {{#if options.hardcodeItemHeights}}hard-item-heights{{/if}}">
 
 		<div class="bsp-list-promo">
-			<ul class="bsp-list-promo-list {{#if options.hardcodeItemHeights}}hard-item-heights{{/if}}">
+			<ul class="bsp-list-promo-list {{#if options.itemSplit}}bsp-row{{/if}} {{#if options.hardcodeItemHeights}}hard-item-heights{{/if}}">
 				{{#listItems}}
-					<li{{#if imgAlign}} class="image-align-{{imgAlign}}"{{/if}}>
+					<li class="{{#if ../options.itemSplit}}bsp-column-{{/if}}{{../options.itemSplit}} {{#if imgAlign}}image-align-{{/if}}{{imgAlign}}">
 						{{#if imgSrc}}
 							<div class="bsp-list-promo-image">
 								<a href="{{link}}"><img src="{{imgSrc}}" alt="{{imgAlt}}" /></a>

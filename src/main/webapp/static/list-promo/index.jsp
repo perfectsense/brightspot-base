@@ -35,6 +35,43 @@
 
 			<div class="bsp-row">
 
+				<div class="bsp-column-full">
+
+					<%-- 3 Item with image, text, split in thirds  --%>
+
+					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/3-items-with-image-horizontal.json" }'></div>
+
+				</div>
+
+			</div>
+
+			<div class="bsp-row">
+
+				<div class="bsp-column-full">
+
+					<%-- 6 Item with image, text, split in thirds  --%>
+
+					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/6-items-with-image-horizontal.json" }'></div>
+
+				</div>
+
+			</div>
+
+			<div class="bsp-row">
+
+				<div class="bsp-column-full">
+
+					<%-- 2 Item with image, text, left align, split in half  --%>
+
+					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/2-items-with-image-left-align-dark-horizontal.json" }'></div>
+
+				</div>
+
+			</div>
+
+
+			<div class="bsp-row">
+
 				<div class="bsp-column-half">
 
 					<%-- Item with Left Align, Dark Background --%>

@@ -4,7 +4,6 @@
 // number of items in the list vs hardcoded CSS rules as much as possible
 
 .bsp-list-promo {
-	//margin: -@space 0; // other modules need to get space between the title. The list promo needs to cancel that out, as the list items are supposed to butt up to the title and CTA
 	text-transform: uppercase;
 
 	// when we have hardcoded heights, we do not want the bottom negative margin, it screws up our centering
@@ -21,18 +20,17 @@
 		&:extend(.clearfix all);
 
 		border-top: @border-style-5;
-		padding: 0 @space; 
 		position: relative;
 
 		// first item has no border or padding, and default has no image, so it's scooted up to the title
 		&:first-child {
 			border-top: none;
 			margin-top: -@space; // if you are the first item, margin you up to the header
-			padding-top: 0 !important;
+			padding-top: 0 !important; // make sure the first item has no top padding always
 		}
 
 		// if there is an image at the top or you have the dark background for left align, give it padding and a normal margin away
-		&.image-align-top, &.image-align-left-dark {
+		&.image-align-overlay, &.image-align-top, &.image-align-left-dark {
 			padding-top: @space;
 			margin-top: 0;
 		}
@@ -41,7 +39,25 @@
 		&.image-align-left {
 			margin-top: 0;
 		}
+
+		// when we have an overlay, or left image alignment, it cannot use the natural margins of the text items space themselves away from the next element
+		// so we need to add a bottom margin for that spacing
+		&.image-align-overlay, &.image-align-left-dark, &.image-align-left{
+			margin-bottom: @space;
+		}
 		
+	}
+
+	// if we are a horizontal list, we are in a list AND row at the same time
+	// in that case, we have no borders, no margin and no padding anywhere
+	&.bsp-row {
+
+		li {
+			border-top: none;
+			margin-top: 0;
+			padding-top: 0;
+		}
+
 	}
 	
 }
@@ -50,12 +66,6 @@
 
 // images have no margin on either side
 .bsp-list-promo-image {
-	margin: 0 -@space; 
-
-	// if you have a title and an image, give that top margin to space it. Otherwise, it's flush to the top of the component
-	// .bsp-component-title + .bsp-component-content .bsp-list-promo & {
-	// 	margin-top: @space;
-	// }
 
 	.image-align-left &, .image-align-left-dark & {
 		float: left;
@@ -69,6 +79,7 @@
 
 
 .bsp-list-promo-text {
+	padding: 0 @space;
 
 	// when we are overlayed, provide the background and positioning/padding
 	.image-align-overlay & {
@@ -76,16 +87,19 @@
 		bottom: 0;
 		color: @white;
 		left: 0;
-		padding: 0 @space @space;
 		position: absolute;
 		right: 0;
 	}
 
+	// when we are overlayed inside of a horizontal layout, we need to margin ourselves
+	.bsp-list-promo-list.bsp-row .image-align-overlay & {
+		margin: 0 @grid-gutter-width/2;
+	}
+
+	// when the image is aligned left, we absolutely position the text to the right
 	.image-align-left &, .image-align-left-dark & {
 		background: @brand-dark;
 		color: @white;
-		margin-left: -@space; // butts it up against the image
-		padding: 0 @space;
 		position: absolute;
 		right: 0;
 		top: 0;
@@ -93,6 +107,13 @@
 		left: 45%;
 	}
 
+	// when the image is aligned left inside of a horizontal layout, we need to margin ourselves
+	.bsp-list-promo-list.bsp-row .image-align-left &,
+	.bsp-list-promo-list.bsp-row .image-align-left-dark & {
+		margin-right: @grid-gutter-width/2;
+	}
+
+	// when the image is aligned left, but not dark, we want the text to be flush to the top
 	.image-align-left & {
 		background: none;
 		color: @text-color;

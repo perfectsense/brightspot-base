@@ -1,11 +1,11 @@
 {
 	"options" : {
 
-		"imageSplit" : "half"
+		"itemSplit" : "half"
 
 	},
 
-	"heading" : "Top Stories on Broadway",
+	"heading" : "2 images with 1 link",
 
 	"images" : [
 		{ 

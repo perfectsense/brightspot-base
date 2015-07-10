@@ -45,13 +45,13 @@
 
 							<div data-bsp-template data-bsp-template-options='{ "template": "components/section-title", "dataUrl": "/static/data/section-title.json" }'></div>
 
-							<div data-bsp-template data-bsp-template-options='{ "template": "components/image-promo", "dataUrl": "/static/data/image-promo-1-image-3-links.json" }'></div>
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/image-promo", "dataUrl": "/static/image-promo/1-image-3-links.json" }'></div>
 
-							<div data-bsp-template data-bsp-template-options='{ "template": "components/image-promo-2-across", "dataUrl": "/static/data/image-promo-2-images-1-link.json" }'></div>
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/image-promo", "dataUrl": "/static/image-promo/2-images-1-link.json" }'></div>
 
-							<div data-bsp-template data-bsp-template-options='{ "template": "components/image-promo", "dataUrl": "/static/data/image-promo-1-image-3-links.json" }'></div>
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/image-promo", "dataUrl": "/static/image-promo/1-image-3-links.json" }'></div>
 
-							<div data-bsp-template data-bsp-template-options='{ "template": "components/image-promo-2-across", "dataUrl": "/static/data/image-promo-4-images-1-link.json" }'></div>
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/image-promo", "dataUrl": "/static/image-promo/4-images-1-link.json" }'></div>
 
 						</div>
 					</div>
@@ -61,7 +61,7 @@
 
 							<div data-bsp-template data-bsp-template-options='{ "template": "components/section-title", "dataUrl": "/static/data/section-title.json" }'></div>
 
-							<div data-bsp-template data-bsp-template-options='{ "template": "components/image-promo-3-across", "dataUrl": "/static/data/image-promo-3-images-1-link.json" }'></div>
+							<div data-bsp-template data-bsp-template-options='{ "template": "components/image-promo", "dataUrl": "/static/image-promo/3-images-1-link.json" }'></div>
 
 						</div>
 

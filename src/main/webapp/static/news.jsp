@@ -32,7 +32,7 @@
 						
 					</div>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/image-promo-2-across", "dataUrl": "/static/data/image-promo-4-images-1-link.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "template": "components/image-promo", "dataUrl": "/static/image-promo/4-images-1-link.json" }'></div>
 
 					<div class="bsp-row">
 
