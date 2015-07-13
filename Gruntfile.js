@@ -83,15 +83,20 @@ module.exports = function(grunt) {
                     }
                 ], 
 
+                'history.js' : {
+                    src: 'scripts/bundled-uncompressed/html5/native.history.js',
+                    dest: './',
+                    expand: true,
+                    flatten: true
+                },
+
                 'waypoints' : [
                 {
                     src: 'lib/**/*.js',
                     dest: 'bower/waypoints',
                     expand: true,
                     flatten: true
-                }
-
-                ]
+                }]
             }
         }
 

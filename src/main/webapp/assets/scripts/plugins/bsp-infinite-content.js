@@ -19,10 +19,14 @@
  * </ul>
  */
 
+
+// TODO: this plugin should bower in waypoints and history.js in it's own repo, then push everything out to dist
+
 import $ from 'jquery';
 import bsp_utils from 'bsp-utils';
 import waypoints from 'bower/waypoints/jquery.waypoints';
 import infinite from 'bower/waypoints/infinite';
+import historyAPI from 'native.history';
 
 var bsp_infinite_scroll = {
 
@@ -92,6 +96,10 @@ var bsp_infinite_scroll = {
 
                 // helper function to do the CSS classing
                 self.markCurrentInNavModule();
+
+                // Replace state in History API vs Push. We don't want to deal with the back
+                // and forward buttons. That just gets too complicated and there is no need
+                History.replaceState({},"",self.currentArticleUrl);
             },
             // we use 50 px as the default additional offset, which marks the current item just before it comes back to the original point
             offset: position + self.settings.additionalOffset
