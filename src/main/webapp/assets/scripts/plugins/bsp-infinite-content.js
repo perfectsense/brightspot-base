@@ -110,7 +110,7 @@ var bsp_infinite_scroll = {
             more      : self.settings.triggerSel,
             onAfterPageLoad : function() {
                 // after we load each item back into the DOM create the waypoints for it to mark itself in the nav
-                self.createItemWaypoints();
+                self.createItemWaypointsForNav();
             }
         });
 
