@@ -1,162 +1,22 @@
-// uncomment, move to main when done
-//@import '../bower/bsp-carousel-gallery/bsp-carousel-gallery';
-
-// move to variables when done
-@bsp-carousel-gallery-background: @brand-primary;
+@bsp-carousel-gallery-background: #fff;
 @bsp-carousel-gallery-border-color: @brand-accent;
 @bsp-carousel-gallery-color: @brand-dark;
 @bsp-carousel-gallery-bold-font-weight: 700;
-
-@bsp-carousel-gallery-top: @header-height;
-@bsp-carousel-gallery-bottom: 0; // @todo will need to account for footer
-@bsp-carousel-gallery-left: 0;
-@bsp-carousel-gallery-right: 0;
+@bsp-carousel-gallery-space: @space;
 @bsp-carousel-gallery-overlays-z-index: 1;
 
-@bsp-carousel-gallery-border-main-width: @space-half;
-@bsp-carousel-gallery-border-main-offset-xs: @space;
-@bsp-carousel-gallery-border-main-offset-sm: @space;
-@bsp-carousel-gallery-border-main-offset-md: ~"calc((100% - @{bsp-carousel-gallery-content-width-medium})/2)";
-@bsp-carousel-gallery-border-main-offset-lg: ~"calc((100% - @{bsp-carousel-gallery-content-width-large})/2)";
-@bsp-carousel-gallery-border-main-display-xs: none;
-@bsp-carousel-gallery-border-main-display-sm: none;
-@bsp-carousel-gallery-border-main-display-md: block;
-@bsp-carousel-gallery-border-main-display-lg: block;
-
-@bsp-carousel-gallery-nav-button-height: 40px;
-@bsp-carousel-gallery-nav-button-width: 40px;
-@bsp-carousel-gallery-nav-button-offset-xs: @space;
-@bsp-carousel-gallery-nav-button-offset-sm: @space;
-@bsp-carousel-gallery-nav-button-offset-md: ~"calc(((100% - @{bsp-carousel-gallery-content-width-medium})/2) + @{bsp-carousel-gallery-nav-button-width})";
-@bsp-carousel-gallery-nav-button-offset-lg: ~"calc(((100% - @{bsp-carousel-gallery-content-width-large})/2) + @{bsp-carousel-gallery-nav-button-width})";
-@bsp-carousel-gallery-nav-button-display-xs: none !important;
-@bsp-carousel-gallery-nav-button-display-sm: inline-block !important;
-@bsp-carousel-gallery-nav-button-display-md: inline-block !important;
-@bsp-carousel-gallery-nav-button-display-lg: inline-block !important;
-
-@bsp-carousel-gallery-content-width-large: @container-large-desktop - @grid-gutter-width;
-@bsp-carousel-gallery-content-width-medium: @container-desktop - @grid-gutter-width;
-@bsp-carousel-gallery-content-width-small: @container-tablet - @grid-gutter-width;
-@bsp-carousel-gallery-content-width-xsmall: 100%;
-
-@bsp-carousel-gallery-mq-only-xs: @mq-only-xs;
-@bsp-carousel-gallery-mq-only-sm: @mq-only-sm;
-@bsp-carousel-gallery-mq-only-md: @mq-only-md;
-@bsp-carousel-gallery-mq-only-lg: @mq-only-lg;
-
-@bsp-carousel-gallery-thumbnail-cols-xs: 1;
-@bsp-carousel-gallery-thumbnail-cols-sm: 2;
-@bsp-carousel-gallery-thumbnail-cols-md: 3;
-@bsp-carousel-gallery-thumbnail-cols-lg: 3;
-
-@bsp-carousel-gallery-space: @space;
-
-
-
-// move below and copy vars above with hard-coded values to bsp-carousel
-.bsp-carousel-stage-dimensions {
-	bottom: @bsp-carousel-gallery-bottom;
-	left: @bsp-carousel-gallery-left;
+.bsp-carousel-overlay-dimensions {
+	bottom: 0;
+	left: 0;
 	overflow: scroll;
 	position: absolute;
-	right: @bsp-carousel-gallery-right;
-	top: @bsp-carousel-gallery-top;
+	right: 0;
+	top: 0;
 }
 
 .bsp-carousel-gallery-container {
-	.bsp-carousel-stage-dimensions;
 	background: @bsp-carousel-gallery-background;
 	color: @bsp-carousel-gallery-color;
-
-	&:before, &:after {
-		background: @bsp-carousel-gallery-border-color;
-		content: '';
-		top: 0;
-		bottom: 0;
-		position: fixed;
-		width: @bsp-carousel-gallery-border-main-width;
-		z-index: @bsp-carousel-gallery-overlays-z-index;
-	}
-
-	&:before {
-		@media @bsp-carousel-gallery-mq-only-xs {
-			display: @bsp-carousel-gallery-border-main-display-xs;
-			left: @bsp-carousel-gallery-border-main-offset-xs;
-		}
-		@media @bsp-carousel-gallery-mq-only-sm {
-			display: @bsp-carousel-gallery-border-main-display-sm;
-			left: @bsp-carousel-gallery-border-main-offset-sm;
-		}
-		@media @bsp-carousel-gallery-mq-only-md {
-			display: @bsp-carousel-gallery-border-main-display-md;
-			left: @bsp-carousel-gallery-border-main-offset-md;
-		}
-		@media @bsp-carousel-gallery-mq-only-lg {
-			display: @bsp-carousel-gallery-border-main-display-lg;
-			left: @bsp-carousel-gallery-border-main-offset-lg;
-		}
-	}
-
-	&:after {
-		@media @bsp-carousel-gallery-mq-only-xs {
-			display: @bsp-carousel-gallery-border-main-display-xs;
-			right: @bsp-carousel-gallery-border-main-offset-xs;
-		}
-		@media @bsp-carousel-gallery-mq-only-sm {
-			display: @bsp-carousel-gallery-border-main-display-sm;
-			right: @bsp-carousel-gallery-border-main-offset-sm;
-		}
-		@media @bsp-carousel-gallery-mq-only-md {
-			display: @bsp-carousel-gallery-border-main-display-md;
-			right: @bsp-carousel-gallery-border-main-offset-md;
-		}
-		@media @bsp-carousel-gallery-mq-only-lg {
-			display: @bsp-carousel-gallery-border-main-display-lg;
-			right: @bsp-carousel-gallery-border-main-offset-lg;
-		}
-	}
-
-	.bsp-carousel .slick-next {
-		@media @bsp-carousel-gallery-mq-only-xs {
-			display: @bsp-carousel-gallery-nav-button-display-xs;
-			right: @bsp-carousel-gallery-nav-button-offset-xs;
-		}
-		@media @bsp-carousel-gallery-mq-only-sm {
-			display: @bsp-carousel-gallery-nav-button-display-sm;
-			right: @bsp-carousel-gallery-nav-button-offset-sm;
-		}
-		@media @bsp-carousel-gallery-mq-only-md {
-			display: @bsp-carousel-gallery-nav-button-display-md;
-			right: @bsp-carousel-gallery-nav-button-offset-md;
-		}
-		@media @bsp-carousel-gallery-mq-only-lg {
-			display: @bsp-carousel-gallery-nav-button-display-lg;
-			right: @bsp-carousel-gallery-nav-button-offset-lg;
-		}
-	}
-
-	.bsp-carousel .slick-prev {
-		@media @bsp-carousel-gallery-mq-only-xs {
-			display: @bsp-carousel-gallery-nav-button-display-xs;
-			left: @bsp-carousel-gallery-nav-button-offset-xs;
-		}
-		@media @bsp-carousel-gallery-mq-only-sm {
-			display: @bsp-carousel-gallery-nav-button-display-sm;
-			left: @bsp-carousel-gallery-nav-button-offset-sm;
-		}
-		@media @bsp-carousel-gallery-mq-only-md {
-			display: @bsp-carousel-gallery-nav-button-display-md;
-			left: @bsp-carousel-gallery-nav-button-offset-md;
-		}
-		@media @bsp-carousel-gallery-mq-only-lg {
-			display: @bsp-carousel-gallery-nav-button-display-lg;
-			left: @bsp-carousel-gallery-nav-button-offset-lg;
-		}
-	}
-
-	.bsp-carousel-gallery {
-		position: relative;
-	}
 
 	.bsp-sharing {
 		margin-bottom: @bsp-carousel-gallery-space;
@@ -170,36 +30,29 @@
 	}
 }
 
-.bsp-carousel-gallery-header {
+.bsp-carousel-gallery-thumbnails {
+	.bsp-carousel-overlay-dimensions;
+	
 	background: @bsp-carousel-gallery-background;
-	text-transform: uppercase;
-	z-index: @bsp-carousel-gallery-overlays-z-index;
-
-	span {
-		color: @bsp-carousel-gallery-color;
+	color: @bsp-carousel-gallery-color;
+	display: none;
+	padding: @bsp-carousel-gallery-space*2;
+	z-index: @bsp-carousel-gallery-overlays-z-index+1;
+	
+	&.visible {
+		display: block;
 	}
-
-	@media @bsp-carousel-gallery-mq-only-xs {
-		text-align: center;
-	}
-	@media @bsp-carousel-gallery-mq-only-sm {
-		text-align: center;
-	}
-	@media @bsp-carousel-gallery-mq-only-md {
-		left: @bsp-carousel-gallery-nav-button-offset-md;
-	}
-	@media @bsp-carousel-gallery-mq-only-lg {
-		left: @bsp-carousel-gallery-nav-button-offset-lg;
-	}
-	@media @bsp-carousel-gallery-mq-only-lg, @bsp-carousel-gallery-mq-only-md {
-		padding: @bsp-carousel-gallery-space*2;
-		position: absolute;
-
-		span {
-			display: block;
-			font-size: 80%;
-		}
-	}
+}
+.bsp-carousel-gallery-thumbnail {
+	cursor: pointer;
+	float: left;
+	padding-bottom: @bsp-carousel-gallery-space*2;
+}
+.bsp-carousel-gallery-thumbnails-close-link {
+	color: @bsp-carousel-gallery-color;
+	position: absolute;
+	top: @bsp-carousel-gallery-space;
+	right: @bsp-carousel-gallery-space;
 }
 
 .bsp-carousel-gallery-slide {
@@ -208,28 +61,6 @@
 		width: 100%;
 	}
 }
-
-.bsp-carousel-gallery-slide-title,
-.bsp-carousel-gallery-slide-description,
-.bsp-carousel-gallery-footer {
-	margin: 0 auto;
-
-	@media @bsp-carousel-gallery-mq-only-xs {
-		width: ~"calc(@{bsp-carousel-gallery-content-width-xsmall} - (@{bsp-carousel-gallery-space}*2))";
-	}
-	@media @bsp-carousel-gallery-mq-only-sm {
-		width: ~"calc(@{bsp-carousel-gallery-content-width-small} - (@{bsp-carousel-gallery-space}*2))";
-	}
-	@media @bsp-carousel-gallery-mq-only-md {
-		padding-left: @bsp-carousel-gallery-nav-button-offset-md;
-		padding-right: @bsp-carousel-gallery-nav-button-offset-md;
-	}
-	@media @bsp-carousel-gallery-mq-only-lg {
-		padding-left: @bsp-carousel-gallery-nav-button-offset-lg;
-		padding-right: @bsp-carousel-gallery-nav-button-offset-lg;
-	}
-}
-
 .bsp-carousel-gallery-slide-title {
 	padding-top: @bsp-carousel-gallery-space;
 	text-transform: uppercase;
@@ -239,7 +70,6 @@
 }
 .bsp-carousel-gallery-footer-thumbnails-link {
 	margin-bottom: @bsp-carousel-gallery-space;
-	width: 150px; // @todo not sure why a width has to be hard-coded here
 	a {
 		color: @bsp-carousel-gallery-color;
 		font-weight: @bsp-carousel-gallery-bold-font-weight;
@@ -252,6 +82,10 @@
 			padding-right: 15px;
 		}
 	}
+}
+.bsp-carousel-gallery-footer-header {
+	display: inline;
+	text-transform: uppercase;
 }
 .bsp-carousel-gallery-footer-links {
 	line-height: @bsp-carousel-gallery-space*2.5;
@@ -269,54 +103,12 @@
 		text-transform: uppercase;
 	}
 
+	/*
 	@media @bsp-carousel-gallery-mq-only-lg, @bsp-carousel-gallery-mq-only-md {
 		max-width: 50%;
 	}
+	*/
 }
-.bsp-carousel-gallery-footer-header {
-	display: inline;
-	text-transform: uppercase;
-}
-
 .bsp-carousel-gallery-footer-item {
-	float: left;
 	padding-right: @bsp-carousel-gallery-space*2;
-}
-
-.bsp-carousel-gallery-thumbnails {
-	.bsp-carousel-stage-dimensions;
-	
-	background: @bsp-carousel-gallery-background;
-	color: @bsp-carousel-gallery-color;
-	display: none;
-	padding: @bsp-carousel-gallery-space*2;
-	z-index: @bsp-carousel-gallery-overlays-z-index+1;
-	
-	&.visible {
-		display: block;
-	}
-}
-.bsp-carousel-gallery-thumbnail {
-	cursor: pointer;
-	float: left;
-	padding-bottom: @bsp-carousel-gallery-space*2;
-
-	@media @bsp-carousel-gallery-mq-only-xs {
-		width: ~"calc(100%/@{bsp-carousel-gallery-thumbnail-cols-xs})";	
-	}
-	@media @bsp-carousel-gallery-mq-only-sm {
-		width: ~"calc(100%/@{bsp-carousel-gallery-thumbnail-cols-sm})";
-	}
-	@media @bsp-carousel-gallery-mq-only-md {
-		width: ~"calc(100%/@{bsp-carousel-gallery-thumbnail-cols-md})";
-	}
-	@media @bsp-carousel-gallery-mq-only-lg {
-		width: ~"calc(100%/@{bsp-carousel-gallery-thumbnail-cols-lg})";	
-	}
-}
-.bsp-carousel-gallery-thumbnails-close-link {
-	color: @bsp-carousel-gallery-color;
-	position: absolute;
-	top: @bsp-carousel-gallery-space;
-	right: @bsp-carousel-gallery-space;
 }

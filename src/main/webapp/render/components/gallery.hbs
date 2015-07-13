@@ -10,7 +10,7 @@
 
 			{{#gallerySlides}}
 				{{#if thumbnailImage}}
-				<div class="bsp-carousel-gallery-thumbnail" data-index="{{@index}}">
+				<div class="bsp-carousel-gallery-thumbnail bsp-column-third" data-index="{{@index}}">
 					<img alt="" src="{{thumbnailImage}}" />
 				</div>
 				{{/if}}
@@ -28,11 +28,17 @@
 				{{galleryTitle}}
 			</h2>
 		{{/if}}
-
-		<div class="bsp-carousel-gallery">
+		<div class="bsp-carousel-gallery bsp-column-full">
 			{{#gallerySlides}}
 				<div class="bsp-carousel-gallery-slide">
-					<img alt="" src="{{slideImage}}" />
+					{{#slideImages}}
+					<picture>
+						<source media="(min-width: 1200px)" srcset="{{lg.src}}" />
+						<source media="(min-width: 992px)" srcset="{{md.src}}" />
+						<source media="(min-width: 768px)" srcset="{{sm.src}}" />
+						<img alt="" src="{{xs.src}}" />
+					</picture>
+					{{/slideImages}}
 					{{#if slideTitle}}
 						<h3 class="bsp-carousel-gallery-slide-title">{{slideTitle}}</h3>
 					{{/if}}
@@ -47,14 +53,14 @@
 
 
 			{{#if thumbnails}}
-			<div class="bsp-carousel-gallery-footer-item bsp-carousel-gallery-footer-thumbnails-link">
+			<div class="bsp-carousel-gallery-footer-item bsp-carousel-gallery-footer-thumbnails-link bsp-column-fourth">
 				<a class="icon icon-th-large bsp-share-link" href="">Thumbnails</a>
 			</div>
 			{{/if}}
 
 			
 			{{#if sharing}}
-			<div class="bsp-carousel-gallery-footer-item bsp-sharing" data-bsp-share data-bsp-share-options='{"iconClass":"icon", "serviceProps": { {{#if sharing.facebook}} {{#if sharing.facebook.appId}} "facebook" : { "appId": {{sharing.facebook.appId}} } {{/if}} {{/if}}  }}'>
+			<div class="bsp-carousel-gallery-footer-item bsp-sharing bsp-column-third" data-bsp-share data-bsp-share-options='{"iconClass":"icon", "serviceProps": { {{#if sharing.facebook}} {{#if sharing.facebook.appId}} "facebook" : { "appId": {{sharing.facebook.appId}} } {{/if}} {{/if}}  }}'>
 				{{#if sharingTitle}}
 					<h4 class="bsp-carousel-gallery-footer-header">{{sharingTitle}}:</h4>
 				{{/if}}
@@ -77,7 +83,7 @@
 			{{/if}}
 
 			{{#if relatedLinks}}
-			<div class="bsp-carousel-gallery-footer-item bsp-carousel-gallery-footer-links">
+			<div class="bsp-carousel-gallery-footer-item bsp-carousel-gallery-footer-links bsp-column-third">
 				{{#if relatedLinksTitle}}
 					<h4 class="bsp-carousel-gallery-footer-header">{{relatedLinksTitle}}:</h4>
 				{{/if}}

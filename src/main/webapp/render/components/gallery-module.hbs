@@ -7,7 +7,9 @@
 
 		<div class="gallery-module gallery-module-{{#if options.carouselDots}}carousel-dots{{/if}}" data-bsp-carousel data-bsp-carousel-options='{ "theme" : "{{#if options.carouselDots}}carousel-dots{{/if}}" }'>
 			{{#gallerySlides}}
-				<div class="bsp-carousel-slide"><img alt="" src="{{slideImage}}" /></div>
+				<div class="bsp-carousel-slide">
+					<img alt="" src="{{slideImage}}" />
+				</div>
 			{{/gallerySlides}}
 		</div>
 
