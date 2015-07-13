@@ -111,11 +111,9 @@
 
 				</div>
 
-				<div class="bsp-column-fixed-wrap" data-bsp-toggle>
+				<div class="bsp-column-fixed-wrap">
 
-					<a href="#" class="toggle-trigger">Open</a>
-
-					<div class="bsp-column-fixed toggle-item">
+					<div class="bsp-column-fixed">
 
 						<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/6-items.json" }'></div>
 

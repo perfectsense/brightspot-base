@@ -16,6 +16,8 @@ export default bsp_utils.plugin(false, 'bsp', 'toggle-item', {
 
         $parent.find(options.toggleTrigger).on('click', function(){
 
+            $(this).toggleClass('toggle-trigger-in');
+
             $triggerItem.toggleClass('toggle-in');
 
             return false;

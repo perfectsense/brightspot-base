@@ -1,0 +1,89 @@
+/** 
+ * Mixins helpers for the bsp-list-promo-modifiers go here 
+ */
+
+// when we hardcode items heights, we will hardcode the height here and vertically center the links
+// this is at the end of the less file so we can provide cascading overrides without important tags
+.bsp-list-promo-hard-item-heights(@item-height: @hardcoded-item-height) {
+
+	.bsp-list-promo-list{
+		margin-top: -@space;
+
+		.bsp-list-promo-text {
+			height: @item-height;
+
+			&:extend(.vertical-center-wrapper all);
+
+			.bsp-list-promo-link {
+				&:extend(.vertical-center all);
+				margin: 0;
+			}
+		}
+	}
+
+}
+
+
+// this mixin allows us to create a modifier depending on how we want to arrange the image and text
+.bsp-list-promo-image-size(@size: 50%) {
+	.bsp-list-promo-image {
+		width: @size;
+	}
+
+	.bsp-list-promo-text {
+		width: (100%-@size);
+	}
+}
+
+
+
+// this mixin is used for a certain kind of use use. The text has background color and grows to the size
+// of the image with absolute positioning
+.list-promo-image-width-background(@width: 50%, @bg-color: @brand-dark, @promo-text-color: @white) {
+
+	.bsp-list-promo-image {
+		width: @width;
+	}
+
+	.bsp-list-promo-text {
+		background: @bg-color;
+		color: @promo-text-color;
+		margin-top: 0;
+		position: absolute;
+		height: 100%;
+	}
+
+	.image-align-left {
+		.bsp-list-promo-text {
+			left: @width;
+		}
+	}
+
+	.image-align-right {
+		.bsp-list-promo-text {
+			right: @width;
+		}
+	}
+
+	.bsp-list-promo-title {
+		a {
+			color: @white;
+		}
+	}
+
+	.bsp-list-promo-link {
+		
+		a {
+			background: @brand-primary;
+			bottom: 0;
+			color: @brand-dark;
+			left: 0;
+			position: absolute;
+			right: 0;
+			text-align: center;
+			padding: @space-quarter 0;
+		}
+
+	}
+
+}

@@ -1,11 +1,11 @@
-<div class="bsp-component">
+<div class="bsp-component {{#if options.modifierClass}}{{options.modifierClass}}{{/if}}">
 	{{#if heading}}
 		<div class="bsp-component-title">{{heading}}</div>
 	{{/if}}
 
 	<div class="bsp-component-content">
 
-		<div class="bsp-list-promo {{#if options.modifierClass}}{{options.modifierClass}}{{/if}}">
+		<div class="bsp-list-promo">
 			<ul class="bsp-list-promo-list {{#if options.horizontalSplit}}bsp-row{{/if}}">
 				{{#listItems}}
 					<li class="{{#if ../options.horizontalSplit}}bsp-column-{{/if}}{{../options.horizontalSplit}} {{#if imgAlign}}image-align-{{/if}}{{imgAlign}}">

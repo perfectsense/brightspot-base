@@ -24,92 +24,27 @@
 }
 
 
+.bsp-infinite-load-status {
 
+	li {
+		border-left: 5px solid transparent;
+	}
 
+	.bsp-infinite-load-current {
+		border-left: 5px solid @brand-dark;
+	}
 
-/** 
- * Mixins helpers for the modifiers go here 
- */
+	// only on xs and sm sizes, the article status gets a fancy header since it has to be popped up via user action
+	@media @mq-only-xs, @mq-only-sm {
 
-// when we hardcode items heights, we will hardcode the height here and vertically center the links
-// this is at the end of the less file so we can provide cascading overrides without important tags
-.bsp-list-promo-hard-item-heights(@item-height: @hardcoded-item-height) {
-
-	.bsp-list-promo-list{
-		margin-top: -@space;
-
-		.bsp-list-promo-text {
-			height: @item-height;
-
-			&:extend(.vertical-center-wrapper all);
-
-			.bsp-list-promo-link {
-				&:extend(.vertical-center all);
-				margin: 0;
-			}
+		.bsp-component-title {
+			height: 50px;
+			line-height: 50px;
+			padding: 0 @space;
 		}
+
 	}
-
-}
-
-
-.bsp-list-promo-image-size(@size: 50%) {
-	.bsp-list-promo-image {
-		width: @size;
-	}
-
-	.bsp-list-promo-text {
-		width: (100%-@size);
-	}
-}
-
-
-
-.list-promo-image-width-background(@width: 50%, @bg-color: @brand-dark, @promo-text-color: @white) {
-
-	.bsp-list-promo-image {
-		width: @width;
-	}
-
-	.bsp-list-promo-text {
-		background: @bg-color;
-		color: @promo-text-color;
-		margin-top: 0;
-		position: absolute;
-		height: 100%;
-	}
-
-	.image-align-left {
-		.bsp-list-promo-text {
-			left: @width;
-		}
-	}
-
-	.image-align-right {
-		.bsp-list-promo-text {
-			right: @width;
-		}
-	}
-
-	.bsp-list-promo-title {
-		a {
-			color: @white;
-		}
-	}
-
-	.bsp-list-promo-link {
 		
-		a {
-			background: @brand-primary;
-			bottom: 0;
-			color: @brand-dark;
-			left: 0;
-			position: absolute;
-			right: 0;
-			text-align: center;
-			padding: @space-quarter 0;
-		}
-
-	}
 
 }
+
