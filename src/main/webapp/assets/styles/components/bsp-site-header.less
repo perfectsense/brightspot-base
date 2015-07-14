@@ -78,18 +78,16 @@
 
 
 
-
-
 .bsp-site-search {
     &:extend(.vertical-center);
 
     background: @header-background;
-    height: @header-search-height;
+    height: @header-height;
     position: absolute;
-    top: (@header-height - @header-search-height) / 2;
+    top: 0;
     right: 30px;
     overflow: hidden;
-    .transition(height .15s linear);
+    .transition(width .15s linear);
     width: 0;
     z-index: 1;
 
@@ -99,8 +97,10 @@
 }
 
 .bsp-site-search-form {
+    height: @header-search-height;
     margin: 0;
     position: relative;
+    top: (@header-height - @header-search-height) / 2;
 }
 
 .bsp-site-search-input {
@@ -135,6 +135,9 @@
 
     .toggle-trigger.toggle-trigger-in {
         i {
+            // this icon is just a bit smaller, so making sure everything stays the same size
+            padding-left: 3px;
+
             &:before {
                 content: @fa-var-close;
             }
@@ -207,7 +210,7 @@
     padding-bottom: @space-half;
     position: absolute;
     top: @header-height;
-    .transition(opacity .15s linear);
+    .transition(opacity .25s linear);
     visibility: hidden;
     width: auto;
 
