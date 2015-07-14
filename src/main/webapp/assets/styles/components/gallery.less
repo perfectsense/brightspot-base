@@ -1,9 +1,14 @@
-@bsp-carousel-gallery-background: #fff;
+//@bsp-carousel-gallery-background: #fff;
+@bsp-carousel-gallery-background: @brand-primary;
 @bsp-carousel-gallery-border-color: @brand-accent;
 @bsp-carousel-gallery-color: @brand-dark;
 @bsp-carousel-gallery-bold-font-weight: 700;
 @bsp-carousel-gallery-space: @space;
 @bsp-carousel-gallery-overlays-z-index: 1;
+@bsp-carousel-gallery-mq-only-xs: @mq-only-xs;
+@bsp-carousel-gallery-mq-only-sm: @mq-only-sm;
+@bsp-carousel-gallery-mq-only-md: @mq-only-md;
+@bsp-carousel-gallery-mq-only-lg: @mq-only-lg;
 
 .bsp-carousel-overlay-dimensions {
 	bottom: 0;
@@ -15,7 +20,7 @@
 }
 
 .bsp-carousel-gallery-container {
-	background: @bsp-carousel-gallery-background;
+	//background: @bsp-carousel-gallery-background;
 	color: @bsp-carousel-gallery-color;
 
 	.bsp-sharing {
@@ -27,6 +32,37 @@
 	}
 	.bsp-share-link {
 		background: @bsp-carousel-gallery-color;
+	}
+}
+
+.bsp-carousel-gallery-header {
+	text-transform: uppercase;
+	z-index: @bsp-carousel-gallery-overlays-z-index;
+	span {
+		color: @bsp-carousel-gallery-color;
+	}
+	@media @bsp-carousel-gallery-mq-only-xs {
+		text-align: center;
+	}
+	@media @bsp-carousel-gallery-mq-only-sm {
+		text-align: center;
+	}
+	@media @bsp-carousel-gallery-mq-only-md {
+		background: @bsp-carousel-gallery-background;
+		left: @bsp-carousel-gallery-space*2;
+	}
+	@media @bsp-carousel-gallery-mq-only-lg {
+		background: @bsp-carousel-gallery-background;
+		left: @bsp-carousel-gallery-space*2;
+	}
+	@media @bsp-carousel-gallery-mq-only-lg, @bsp-carousel-gallery-mq-only-md {
+		padding: @bsp-carousel-gallery-space*2;
+		position: absolute;
+
+		span {
+			display: block;
+			font-size: 80%;
+		}
 	}
 }
 
