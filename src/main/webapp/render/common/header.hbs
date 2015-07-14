@@ -41,11 +41,11 @@
 
 		{{#if sharing}}
 			<div class="bsp-share-links-centering">
-				<ul class="bsp-share-links" data-bsp-share data-bsp-share-options='{"iconClass":"icon", "serviceProps":{"facebook":{"appId":"{{sharing.facebookApp}}"}}}'>
-					{{#if sharing.facebook}}<li class="bsp-facebook-share"></li> {{/if}}
-				    {{#if sharing.twitter}}<li class="bsp-twitter-share"></li> {{/if}}   
-				    {{#if sharing.pinterest}}<li class="bsp-pinterest-share"></li> {{/if}}
-				    {{#if sharing.linkedin}}<li class="bsp-linkedin-share"></li> {{/if}}
+				<ul class="bsp-share-links">
+					{{#if sharing.facebook}}<li class="bsp-facebook-share"><a class="bsp-share-link icon icon-facebook" href="{{sharing.facebook.url}}" target="_blank"></a></li>{{/if}}
+				    {{#if sharing.twitter}}<li class="bsp-twitter-share"><a class="bsp-share-link icon icon-twitter" href="{{sharing.twitter.url}}" target="_blank"></a></li>{{/if}}    
+				    {{#if sharing.pinterest}}<li class="bsp-pinterest-share"><a class="bsp-share-link icon icon-pinterest" href="{{sharing.pinterest.url}}" target="_blank"></a></li>{{/if}} 
+				    {{#if sharing.linkedin}}<li class="bsp-linkedin-share"><a class="bsp-share-link icon icon-linkedin" href="{{sharing.linkedin.url}}" target="_blank"></a></li>{{/if}} 
 				</ul>
 			</div>
 		{{/if}}

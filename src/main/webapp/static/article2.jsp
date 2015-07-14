@@ -18,6 +18,24 @@
 					
 						<div class="bsp-article bsp-infinite-load-item" id="article2.jsp" data-bsp-infinite-load-item-url="article2.jsp">
 
+							<ul class="bsp-share-links" data-bsp-share data-bsp-share-options='
+							{
+								"description":"22222222 Bacon meatball leberkas jerky strip steak beef ham ground round hamburger short loin",
+								"image":"http://placehold.it/300x250",
+								"title":"11111111 Bacon meatball leberkas",
+								"url":"http://localhost:8080/article2.jsp",
+								"redirectUrl":"http://localhost:8080/article2.jsp",
+								"iconClass":"icon", 
+								"serviceProps":{
+									"facebook":{"appId":"645138725541385"}
+								}
+							}'>
+								<li class="bsp-facebook-share"></li>
+							    <li class="bsp-twitter-share"></li>
+							    <li class="bsp-pinterest-share"></li>
+							    <li class="bsp-linkedin-share"></li>
+							</ul>
+
 							<h1 class="bsp-article-title">22222222 Bacon meatball leberkas jerky strip steak beef ham ground round hamburger short loin</h1>
 
 							<div class="bsp-meta-data">

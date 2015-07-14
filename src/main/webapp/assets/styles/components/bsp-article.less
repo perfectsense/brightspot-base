@@ -7,6 +7,22 @@
 }
 
 .bsp-article {
+
+	border-top: @border-style-1;
+	padding: @space-triple 0 @space;
+
+	&:first-of-type {
+		border-top: none;
+		margin-top: -@space-triple;
+	}
+
+	.bsp-share-links {
+		margin: 0 0 @space 0;
+
+		a {
+			color: @white;
+		}
+	}
 	
 }
 

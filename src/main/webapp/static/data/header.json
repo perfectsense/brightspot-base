@@ -29,10 +29,17 @@
 	],
 
 	"sharing" : {
-		"facebook" 		: true,
-		"facebookApp" 	: "645138725541385",
-		"twitter" 		: true,
-		"pinterest"		: true,
-		"linkedin"		: true
+		"facebook" 		: {
+			"url" : "http://www.facebook.com"
+		},
+		"twitter" 		: {
+			"url" : "http://www.twitter.com"
+		},
+		"pinterest"		: {
+			"url" : "http://www.pinterest.com"
+		},
+		"linkedin"		: {
+			"url" : "http://www.linkedin.com"
+		}
 	}
 }

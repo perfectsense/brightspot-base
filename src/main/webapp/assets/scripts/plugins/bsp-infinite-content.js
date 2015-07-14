@@ -43,7 +43,8 @@ var bsp_infinite_scroll = {
         // we have to fi
         'itemUrlAttr'   : 'bsp-infinite-load-item-url',
 
-        'additionalOffset' : 50
+        'additionalOffset' : 50,
+        'scrollSpeed'      : 350
 	},
 
     init: function($el, options) {
@@ -173,21 +174,17 @@ var bsp_infinite_scroll = {
         History.replaceState({},"",self.currentArticleUrl);
     },
 
-    // this scroll helper does a 350ms scroll no matter how far we are going
+    // we can go as crazy as we want with the scrolling code here. For now, simple jquery
     smoothScrollHelper: function($targetElement) {
-
-        var currentOffset = $(window).scrollTop();
+        var self = this;
 
         // item we want (and adding any body top padding if we have fixed positioning)
         var itemTop = $targetElement.offset().top - parseInt($('body').css('padding-top')); 
 
-        var offsetDiff = Math.abs(currentOffset - itemTop);
-
-        var speed = (offsetDiff * 350) / 1000;
-
+        // go there via jquery, makes it easy
         $("html,body").animate({
             scrollTop: itemTop
-        }, speed);
+        }, self.settings.scrollSpeed);
 
     }
 
