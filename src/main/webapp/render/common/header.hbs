@@ -20,15 +20,6 @@
 			</h1>
 		</div>
 
-		<div class="bsp-site-search-centering">
-			<div class="bsp-site-search toggle-item">
-				<form class="bsp-site-search-form">
-					<input class="bsp-search-input" type="text" />
-					<button class="bsp-search-submit" type="submit"><i class="icon icon-search"><span class="sr-only">Go</span></i></button>
-				</form>
-			</div>
-		</div>
-
 		{{#if extraLinks}}
 			<div class="bsp-header-extra">
 				<ul class="bsp-header-extra-links">
@@ -50,8 +41,19 @@
 			</div>
 		{{/if}}
 
-		<div class="bsp-site-search-trigger toggle-trigger">
-			<a href="#"><i class="icon icon-search"><span class="sr-only">show search form</span></i></a>
+		<div class="bsp-site-search-trigger">
+			<div class="bsp-site-search-centering">
+				<div class="bsp-site-search toggle-item">
+					<form class="bsp-site-search-form">
+						<input class="bsp-search-input" type="text" />
+						<button class="bsp-search-submit" type="submit"><i class="icon icon-search"><span class="sr-only">Go</span></i></button>
+					</form>
+				</div>
+			</div>
+
+			<div class="toggle-trigger">
+				<a href="#"><i class="icon icon-search"><span class="sr-only">show search form</span></i></a>
+			</div>
 		</div>
 
 	</div>

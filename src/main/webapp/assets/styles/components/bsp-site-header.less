@@ -67,27 +67,30 @@
     &:extend(.vertical-center);
 
     background: @header-background;
-    height: 0;
+    height: @header-search-height;
     position: absolute;
-    top: @header-height;
-    left: 0;
+    top: (@header-height - @header-search-height) / 2;
+    right: 30px;
     overflow: hidden;
     .transition(height .15s linear);
-    width: 100%;
+    width: 0;
     z-index: 1;
 
     &.toggle-in {
-        height: @header-search-height + 10;
+        width: 250px;
     }
 }
 
 .bsp-site-search-form {
-    margin: 0 auto;
+    margin: 0;
     position: relative;
-    width: 90%;
 }
 
 .bsp-search-input {
+    background: @brand-dark;
+    border: @brand-dark;
+    border-bottom: 1px solid @brand-primary;
+    color: @white;
     height: @header-search-height;
     width: 100%;
 }
@@ -97,6 +100,7 @@
 
     background: none;
     border: none;
+    color: @brand-primary;
     right: 0;
     position: absolute;
     top: 0;
@@ -105,11 +109,19 @@
 .bsp-site-search-trigger {
     &:extend(.ts-2);
     float: right;
-    padding-right: @space-and-half;
+    position: relative;
 
     a {
         height: @header-height;
         line-height: @header-height;
+    }
+
+    .toggle-trigger.toggle-trigger-in {
+        i {
+            &:before {
+                content: @fa-var-close;
+            }
+        }
     }
 }
 
@@ -147,36 +159,42 @@
 }
 
 @media @mq-sm {
-    .bsp-site-search-centering {
 
-        &:before {
-            display: inline-block;
+    .bsp-site-search {
+
+        right: 50px;
+
+        &.toggle-in {
+            width: 260px;
         }
 
-        float: left;
-        height: 100%;
-    }
-    .bsp-site-search {
-        height: auto;
-        padding-left: @space-quad;
-        position: relative;
-        top: 0;
-        width: 300px;
     }
 
     .bsp-site-search-trigger {
-        display: none;
+        padding-right: @space-triple;
     }
 }
 
 @media @mq-md {
+
     .bsp-site-search {
-        width: 450px;
+
+        &.toggle-in {
+            width: 500px;
+        }
     }
+
 }
 
 
 @media @mq-lg {
+
+    .bsp-site-search {
+
+        &.toggle-in {
+            width: 550px;
+        }
+    }
 
     .bsp-header-extra {
         display: block;
