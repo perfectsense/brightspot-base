@@ -15,7 +15,7 @@
 				<div class="bsp-column-scrolling">
 
 					<div class="bsp-article-wrapper bsp-infinite-load-wrapper" data-bsp-infinite-content>
-					
+
 						<div class="bsp-article bsp-infinite-load-item" data-bsp-infinite-load-item-url="article.jsp">
 
 							<h1 class="bsp-article-title">11111111 Bacon meatball leberkas jerky strip steak beef ham ground round hamburger short loin</h1>

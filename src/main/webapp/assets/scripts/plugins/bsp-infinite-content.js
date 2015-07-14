@@ -52,15 +52,17 @@ var bsp_infinite_scroll = {
     	self.$el = $el;
     	self.settings = $.extend({}, self.defaults, options);
 
-        // create infinite scroll to start with
+        // setup nav Module selector so we can only crawl the DOM once
+        self.$navModule = $(self.settings.navModuleSel);
+
+        // create infinite scroll to start with. This is for the "load more" at the bottom of the article
         self.createInfiniteScroll();
 
-        // setup nav Module selector so we can only crawl the DOM once
-        self.navModule = $(self.settings.navModuleSel);
+        // create the waypoints for the nav for when the user scrolls between articles, so the nav gets marked
+        self.createItemWaypointsForNav();  
 
-        // if there is no nav module, there is nothing to do here
-        self.createItemWaypointsForNav();         
-
+        // we have the first bit of content (loaded by server), replace the link on the first item
+        self.replaceNavLinkWithScrollEvent();       
     },
 
     // we create the waypoints for the top of the content so that we can determine what 
@@ -69,7 +71,7 @@ var bsp_infinite_scroll = {
         var self = this;
 
         // if there is no nav module, there is nothing to do here
-        if (!self.navModule) { 
+        if (!self.$navModule) { 
             return;
         }
 
@@ -97,9 +99,8 @@ var bsp_infinite_scroll = {
                 // helper function to do the CSS classing
                 self.markCurrentInNavModule();
 
-                // Replace state in History API vs Push. We don't want to deal with the back
-                // and forward buttons. That just gets too complicated and there is no need
-                History.replaceState({},"",self.currentArticleUrl);
+                // helper to deal with History
+                self.createHistoryEntryAndAddMeta();
             },
             // we use 50 px as the default additional offset, which marks the current item just before it comes back to the original point
             offset: position + self.settings.additionalOffset
@@ -119,24 +120,77 @@ var bsp_infinite_scroll = {
             onAfterPageLoad : function() {
                 // after we load each item back into the DOM create the waypoints for it to mark itself in the nav
                 self.createItemWaypointsForNav();
+
+                // and also remove it's link in the nav with a scroll event
+                self.replaceNavLinkWithScrollEvent();
             }
         });
 
     },
 
-    markCurrentInNavModule: function() {
+    replaceNavLinkWithScrollEvent: function() {
         var self = this;
 
         // if there is no nav module, there is nothing to do here
-        if (!self.navModule) { return; }
+        if (!self.$navModule) { return; }
+
+        // we get the URL from the content we just retrieved
+        var $contentDiv = $(self.settings.itemSel + ':last');
+
+        // the content div has the url of the article in it's data element
+        var urlFromContentDiv = $contentDiv.data(self.settings.itemUrlAttr);
+
+        // go into the nav module and find the link we need
+        var $navLink = self.$navModule.find('a[href="' + urlFromContentDiv + '"]');
+
+        // now that we have already loaded that item, we change it's href do scroll there instead
+        $navLink.on('click', function(e) {
+            e.preventDefault();
+
+            self.smoothScrollHelper($contentDiv);
+        });
+    },
+
+    markCurrentInNavModule: function() {
+        var self = this;
+        var $navLink = $(self.settings.navModuleSel).find('a[href="' + self.currentArticleUrl + '"]');
+        
+        // if there is no nav module, there is nothing to do here
+        if (!self.$navModule) { return; }
 
         // go through all the list items and unmark them
         $(self.settings.navModuleSel).find('li').removeClass(self.settings.currentItemClass);
 
         // find the current article link we are viewing and mark it's parent list item as active
-        $(self.settings.navModuleSel).find('a[href="' + self.currentArticleUrl + '"]').parents('li').addClass(self.settings.currentItemClass);
+        $navLink.parents('li').addClass(self.settings.currentItemClass);
+    },
+
+    createHistoryEntryAndAddMeta: function() {
+        var self = this;
+
+        // Replace state in History API vs Push. We don't want to deal with the back
+        // and forward buttons. That just gets too complicated and there is no need
+        History.replaceState({},"",self.currentArticleUrl);
+    },
+
+    // this scroll helper does a 350ms scroll no matter how far we are going
+    smoothScrollHelper: function($targetElement) {
+
+        var currentOffset = $(window).scrollTop();
+
+        // item we want (and adding any body top padding if we have fixed positioning)
+        var itemTop = $targetElement.offset().top - parseInt($('body').css('padding-top')); 
+
+        var offsetDiff = Math.abs(currentOffset - itemTop);
+
+        var speed = (offsetDiff * 350) / 1000;
+
+        $("html,body").animate({
+            scrollTop: itemTop
+        }, speed);
 
     }
+
 
 };
 

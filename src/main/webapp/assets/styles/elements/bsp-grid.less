@@ -1,14 +1,17 @@
 // bsp-site-wrapper is around the entire site includeing header, site, and footer
 .bsp-site-wrapper {}
 
-/// bsp-site is just around the site other than the header and footer, mostly used for fixed position offset
+/// bsp-site is just around the site other than the header and footer
 .bsp-site {
 	background: @white;
 	padding-top: @header-below-padding;
 	position: relative;
+}
 
+// fixed positioning offset if applicable
+body {
 	& when (@header-positioning = fixed) {
-    	top: @header-tophat-height + @header-height; 
+    	padding-top: @header-tophat-height + @header-height;
     }
 }
 

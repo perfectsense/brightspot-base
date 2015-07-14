@@ -16,7 +16,7 @@
 
 					<div class="bsp-article-wrapper bsp-infinite-load-wrapper" data-bsp-infinite-content>
 					
-						<div class="bsp-article bsp-infinite-load-item" data-bsp-infinite-load-item-url="article4.jsp">
+						<div class="bsp-article bsp-infinite-load-item" id="article4.jsp" data-bsp-infinite-load-item-url="article4.jsp">
 
 							<h1 class="bsp-article-title">4444444 Bacon meatball leberkas jerky strip steak beef ham ground round hamburger short loin</h1>
 
@@ -71,15 +71,21 @@
 
 				</div>
 
-				<div class="bsp-column-fixed-wrap">
+				<div class="bsp-column-fixed-wrap" data-bsp-toggle-item>
 
-					<div class="bsp-column-fixed">
+					<div class="bsp-column-fixed toggle-item">
 
-						<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/data/list-promo-article-rr.json" }'></div>
+						<div class="bsp-trigger-fixed-column toggle-trigger">
+							<a class="toggle-trigger-link-out" href="#">Open</a>
+							<a class="toggle-trigger-link-in" href="#">Close</a>
+						</div>
+
+						<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/article/rr-status-list.json" }'></div>
 
 					</div>
 
 				</div>
+
 			</div>
 
 		</div>
