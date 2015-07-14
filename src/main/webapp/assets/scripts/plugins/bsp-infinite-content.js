@@ -1,5 +1,5 @@
 /**
- * The current infinite scroll is just a wrapper for the jquery waypoints ifinite functionality. 
+ * The current infinite scroll is essentially just a wrapper for the jquery waypoints ifinite functionality. 
  * Surround the infinite load content with a wrapper, give your content the appropriate class, and 
  * create a "load more" link outside the wrapper which links to the next piece of content. Once
  * the next piece of content doesn't contain the "load more" link, the infinite loading stops. 
@@ -12,11 +12,21 @@
  * </div>
  * <a class="bsp-infinite-load-trigger" href="next.html">Next Content</a>
  *
- * This is the markup for the load status. This plugin will check the top of the page 
+ * We also support an additional nav where we can indicate the status as we scroll down the page
+ *
+ * This is the markup for the load status. This plugin will check the top of the content as you 
+ * scroll and when it loads and you get to that item, it will mark it as current on the li
+ * 
  * <ul class="bsp-infinite-load-status">
  *      <li><a href="myURL.html">Current Article</a></li>
  *      <li><a href="next.html">Next Article</a></li>
  * </ul>
+ *
+ * Lastly, we are doing light history management. Deciding to just do a simple replaceState on the history
+ * this go around. It accomplishes us changing the URL for social media purposes and since this isn't a 
+ * big standalone single app page that tries to load up and down, we don't want to have to deal with
+ * back button handling. We can enhance later if need be. 
+ *
  */
 
 
@@ -63,6 +73,7 @@ var bsp_infinite_scroll = {
         self.createItemWaypointsForNav();  
 
         // we have the first bit of content (loaded by server), replace the link on the first item
+        // this function gets called by the wayponts as you scroll past articles otherwise
         self.replaceNavLinkWithScrollEvent();       
     },
 
@@ -101,7 +112,7 @@ var bsp_infinite_scroll = {
                 self.markCurrentInNavModule();
 
                 // helper to deal with History
-                self.createHistoryEntryAndAddMeta();
+                self.createHistoryEntry();
             },
             // we use 50 px as the default additional offset, which marks the current item just before it comes back to the original point
             offset: position + self.settings.additionalOffset
@@ -129,6 +140,9 @@ var bsp_infinite_scroll = {
 
     },
 
+    // this helper function replaces the nav item clicks with scroll events. Once we have content
+    // we want the page to scroll back to it if the user clicks. If they click on an article that is
+    // not there yet, we will go ahead and take them to that page instead
     replaceNavLinkWithScrollEvent: function() {
         var self = this;
 
@@ -144,12 +158,21 @@ var bsp_infinite_scroll = {
         // go into the nav module and find the link we need
         var $navLink = self.$navModule.find('a[href="' + urlFromContentDiv + '"]');
 
+        var $nextNavLink = $navLink.parents('li').next().find('a');
+
         // now that we have already loaded that item, we change it's href do scroll there instead
-        $navLink.on('click', function(e) {
+        $navLink.off('click.bsp-infinite-content').on('click.bsp-infinite-content', function(e) {
             e.preventDefault();
 
             self.smoothScrollHelper($contentDiv);
         });
+
+        $nextNavLink.on('click.bsp-infinite-content', function(e) {
+            e.preventDefault();
+
+            self.smoothScrollHelper($contentDiv, {'location':'bottom'});
+        });
+
     },
 
     markCurrentInNavModule: function() {
@@ -166,7 +189,7 @@ var bsp_infinite_scroll = {
         $navLink.parents('li').addClass(self.settings.currentItemClass);
     },
 
-    createHistoryEntryAndAddMeta: function() {
+    createHistoryEntry: function() {
         var self = this;
 
         // Replace state in History API vs Push. We don't want to deal with the back
@@ -175,15 +198,26 @@ var bsp_infinite_scroll = {
     },
 
     // we can go as crazy as we want with the scrolling code here. For now, simple jquery
-    smoothScrollHelper: function($targetElement) {
+    smoothScrollHelper: function($targetElement, options) {
         var self = this;
 
+        // we might want to scroll to the top or bottom, top has nothing
+        options = options || {};
+
+        // if we are fixed positioning in the header, the body will have padding that we have to account for
+        var bodyPadding = parseInt($('body').css('padding-top'));
+
         // item we want (and adding any body top padding if we have fixed positioning)
-        var itemTop = $targetElement.offset().top - parseInt($('body').css('padding-top')); 
+        var itemScroll = $targetElement.offset().top - bodyPadding; 
+
+        // if we are scrolling to the bottom of the element instead, add back the body padding and also the height of the element
+        if (options.location === 'bottom') {
+            itemScroll = itemScroll + $targetElement.height() + bodyPadding;
+        }
 
         // go there via jquery, makes it easy
         $("html,body").animate({
-            scrollTop: itemTop
+            scrollTop: itemScroll
         }, self.settings.scrollSpeed);
 
     }
