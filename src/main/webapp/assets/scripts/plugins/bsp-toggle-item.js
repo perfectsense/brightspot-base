@@ -18,6 +18,11 @@ export default bsp_utils.plugin(false, 'bsp', 'toggle-item', {
 
             $(this).toggleClass('toggle-trigger-in');
 
+            // gets the base class from the trigger item
+            var baseClass = $triggerItem.attr('class').split(' ')[0];
+
+            $('body').toggleClass(baseClass + '-toggle-in');
+            
             $triggerItem.toggleClass('toggle-in');
 
             return false;

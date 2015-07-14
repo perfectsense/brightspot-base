@@ -69,6 +69,7 @@ body {
 	.transition(height .15s linear);
 
 	background: @white;
+	border-top: @border-style-2;
 	height: 50px;
 	position: fixed;
 	left: 0;
@@ -76,13 +77,23 @@ body {
 	width: 100%;
 
 	&.toggle-in {
-		height: auto;
+		height: 50%;
+		overflow-y: auto;
+
+		@media @mq-only-sm {
+			height: 25%;
+		}
 	}
 
 	// components inside of fixed columns lose their padding
 	.bsp-component {
 		padding: 0;
 	}
+}
+
+body.bsp-column-fixed-toggle-in {
+	overflow: hidden;
+	background: rgb(0,0,0,0.5);	
 }
 
 .bsp-trigger-fixed-column {
@@ -121,6 +132,7 @@ body {
 
 	// styles to create a fixed column that will be stuck on the screen
 	.bsp-column-fixed {
+		border-top: none;
 		bottom: auto;
 		display: block;
 		left: auto;
