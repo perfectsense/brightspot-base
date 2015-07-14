@@ -21,7 +21,7 @@
 		</div>
 
 		{{#if extraLinks}}
-			<div class="bsp-header-extra">
+			<div class="bsp-header-extra-links-wrapper">
 				<ul class="bsp-header-extra-links">
 					{{# extraLinks}}
 					<li><a class="bsp-header-extra-link" href="{{link}}">{{text}}</a></li>
@@ -45,16 +45,35 @@
 			<div class="bsp-site-search-centering">
 				<div class="bsp-site-search toggle-item">
 					<form class="bsp-site-search-form">
-						<input class="bsp-search-input" type="text" />
-						<button class="bsp-search-submit" type="submit"><i class="icon icon-search"><span class="sr-only">Go</span></i></button>
+						<input class="bsp-site-search-input" type="text" />
+						<button class="bsp-site-search-submit" type="submit"><i class="icon icon-search"><span class="sr-only">Go</span></i></button>
 					</form>
 				</div>
 			</div>
 
 			<div class="toggle-trigger">
-				<a href="#"><i class="icon icon-search"><span class="sr-only">show search form</span></i></a>
+				<a href="#"><i class="icon icon-search"><span class="sr-only">toggle search form</span></i></a>
 			</div>
 		</div>
+
+		{{#if extraMenu}}
+			<div class="bsp-extra-menu-wrapper">
+				<ul class="bsp-extra-menu">
+					{{# extraMenu}}
+					<li>
+						<a href="{{link}}">{{text}}{{#if subMenu}}<i class="icon"></i>{{/if}}</a>
+						{{#if subMenu}}
+						<ul class="bsp-extra-menu-submenu">
+							{{# subMenu}}
+							<li><a href="{{link}}">{{text}}</a></li>
+							{{/ subMenu}}
+						</ul>
+						{{/if}}
+					</li>
+					{{/ extraMenu}}
+				</ul>
+			</div>
+		{{/if}}
 
 	</div>
 

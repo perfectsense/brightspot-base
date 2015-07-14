@@ -8,6 +8,10 @@
 }
 
 
+
+
+
+
 // The top hat styles are included in the header since they are small 
 .bsp-tophat {
     &:extend(.clearfix all);
@@ -29,6 +33,12 @@
         padding: 0 @space-and-half;
     }
 }
+
+
+
+
+
+
 
 
 // This is our standard header. There will be some options here in the CSS that we can just leave and pull out of the HTML if we do not
@@ -63,6 +73,13 @@
 
 
 
+
+
+
+
+
+
+
 .bsp-site-search {
     &:extend(.vertical-center);
 
@@ -86,7 +103,7 @@
     position: relative;
 }
 
-.bsp-search-input {
+.bsp-site-search-input {
     background: @brand-dark;
     border: @brand-dark;
     border-bottom: 1px solid @brand-primary;
@@ -95,7 +112,7 @@
     width: 100%;
 }
 
-.bsp-search-submit {
+.bsp-site-search-submit {
     &:extend(.ts-1);
 
     background: none;
@@ -126,7 +143,92 @@
 }
 
 
-/** TODO: This should be politico only and not in BSP base **/
+
+
+
+
+.bsp-extra-menu-wrapper {
+    display: none;
+}
+
+.bsp-extra-menu {
+    &:extend(.bsp-list-inline all);
+    &:extend(.ts-0);
+
+    height: 100%;
+    float: right;
+    padding-right: @space-triple;
+
+    > li {
+        position: relative;
+
+        a {
+            display: block;
+            line-height: @header-height;
+            padding: 0 @space-and-half;
+
+            .icon {
+                padding-left: @space-half;
+
+                &:before {
+                    content: @fa-var-caret-down;
+                }
+            }
+        }
+
+        &:hover {
+
+            a {
+                background-color: @gray-light-2;
+                color: @black;
+
+                .icon {
+                    &:before {
+                        content: @fa-var-caret-up;
+                    }
+                }
+            }
+
+            .bsp-extra-menu-submenu {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+        }
+
+    }
+}
+
+.bsp-extra-menu-submenu {
+    background-color: @gray-light-2;
+    left: 0;
+    min-width: 175px;
+    opacity: 0;
+    padding-bottom: @space-half;
+    position: absolute;
+    top: @header-height;
+    .transition(opacity .15s linear);
+    visibility: hidden;
+    width: auto;
+
+    > li {
+
+        a {
+            color: @black;
+            line-height: @space-quad;
+            height: @space-quad;
+            overflow: hidden;
+            padding: 0 @space-and-half;
+        }
+
+    }
+}
+
+
+.bsp-header-extra-links-wrapper {
+    display: none;
+}
+
 .bsp-header-extra-links {
     &:extend(.bsp-list-inline all);
     &:extend(.ts-0);
@@ -146,23 +248,23 @@
     text-transform: uppercase;
 }
 
-.bsp-header-extra {
-    display: none;
-}
 
-.bsp-site-search-centering {
-    &:extend(.vertical-center-wrapper all);
 
-    &:before {
-        display: none;
-    }
-}
+
+
+
+
+
+
+
+
+
 
 @media @mq-sm {
 
     .bsp-site-search {
 
-        right: 50px;
+        right: 60px;
 
         &.toggle-in {
             width: 260px;
@@ -173,15 +275,22 @@
     .bsp-site-search-trigger {
         padding-right: @space-triple;
     }
+
 }
 
 @media @mq-md {
 
     .bsp-site-search {
 
+        right: 70px;
+
         &.toggle-in {
             width: 500px;
         }
+    }
+
+    .bsp-extra-menu-wrapper {
+        display: block;
     }
 
 }
@@ -196,7 +305,7 @@
         }
     }
 
-    .bsp-header-extra {
+    .bsp-header-extra-links-wrapper {
         display: block;
     }
 }

@@ -17,6 +17,71 @@
 
 	},
 
+	"extraMenu" : [
+		{
+			"link" : "#",
+			"text" : "News",
+			"subMenu" : [
+				{
+					"link" : "#",
+					"text" : "Sublink 1"
+				},
+				{
+					"link" : "#",
+					"text" : "Sublink 2 Sublink 2 Sublink 2"
+				},
+				{
+					"link" : "#",
+					"text" : "Sublink 3"
+				}
+			]
+		},
+		{
+			"link" : "#",
+			"text" : "Shows",
+			"subMenu" : [
+				{
+					"link" : "#",
+					"text" : "Sublink 1"
+				},
+				{
+					"link" : "#",
+					"text" : "Sublink 2"
+				},
+				{
+					"link" : "#",
+					"text" : "Sublink 3 Sublink 3 Sublink 3"
+				}
+			]
+		},
+		{
+			"link" : "#",
+			"text" : "Experience NYC"
+		},
+		{
+			"link" : "#",
+			"text" : "Jobs",
+			"subMenu" : [
+				{
+					"link" : "#",
+					"text" : "Sublink 1"
+				},
+				{
+					"link" : "#",
+					"text" : "Sublink 2"
+				},
+				{
+					"link" : "#",
+					"text" : "Sublink 3"
+				}
+			]
+		},
+		{
+			"link" : "#",
+			"text" : "Buy Tickets"
+		}
+	],
+
 	"EXAMPLE extraLinks" : [
 		{
 			"link" : "#",
