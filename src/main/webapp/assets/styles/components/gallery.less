@@ -1,4 +1,3 @@
-//@bsp-carousel-gallery-background: #fff;
 @bsp-carousel-gallery-background: @brand-primary;
 @bsp-carousel-gallery-border-color: @brand-accent;
 @bsp-carousel-gallery-color: @brand-dark;
@@ -9,6 +8,15 @@
 @bsp-carousel-gallery-mq-only-sm: @mq-only-sm;
 @bsp-carousel-gallery-mq-only-md: @mq-only-md;
 @bsp-carousel-gallery-mq-only-lg: @mq-only-lg;
+@bsp-carousel-gallery-nav-button-display-xs: none !important;
+@bsp-carousel-gallery-nav-button-display-sm: inline-block !important;
+@bsp-carousel-gallery-nav-button-display-md: inline-block !important;
+@bsp-carousel-gallery-nav-button-display-lg: inline-block !important;
+@bsp-carousel-gallery-nav-button-size: 40px;
+@bsp-carousel-gallery-nav-button-top-xs: 25%;
+@bsp-carousel-gallery-nav-button-top-sm: 25%;
+@bsp-carousel-gallery-nav-button-top-md: ~"calc(50% - (@{bsp-carousel-gallery-nav-button-size}/2))";
+@bsp-carousel-gallery-nav-button-top-lg: ~"calc(50% - (@{bsp-carousel-gallery-nav-button-size}/2))";
 
 .bsp-carousel-overlay-dimensions {
 	bottom: 0;
@@ -20,7 +28,6 @@
 }
 
 .bsp-carousel-gallery-container {
-	//background: @bsp-carousel-gallery-background;
 	color: @bsp-carousel-gallery-color;
 
 	.bsp-sharing {
@@ -32,6 +39,32 @@
 	}
 	.bsp-share-link {
 		background: @bsp-carousel-gallery-color;
+	}
+
+	.bsp-carousel .slick-prev,
+	.bsp-carousel .slick-next {
+		height: @bsp-carousel-gallery-nav-button-size;
+		width: @bsp-carousel-gallery-nav-button-size;
+		@media @bsp-carousel-gallery-mq-only-xs {
+			display: @bsp-carousel-gallery-nav-button-display-xs;
+			top: @bsp-carousel-gallery-nav-button-top-xs;
+		}
+		@media @bsp-carousel-gallery-mq-only-sm {
+			display: @bsp-carousel-gallery-nav-button-display-sm;
+			top: @bsp-carousel-gallery-nav-button-top-sm;
+		}
+		@media @bsp-carousel-gallery-mq-only-md {
+			display: @bsp-carousel-gallery-nav-button-display-md;
+			top: @bsp-carousel-gallery-nav-button-top-md;
+		}
+		@media @bsp-carousel-gallery-mq-only-lg {
+			display: @bsp-carousel-gallery-nav-button-display-lg;
+			top: @bsp-carousel-gallery-nav-button-top-lg;
+		}
+		&:before {
+			color: @bsp-carousel-gallery-color;
+			font-size: @bsp-carousel-gallery-nav-button-size;
+		}
 	}
 }
 
@@ -138,12 +171,6 @@
 		padding: @bsp-carousel-gallery-space/4 @bsp-carousel-gallery-space/2;
 		text-transform: uppercase;
 	}
-
-	/*
-	@media @bsp-carousel-gallery-mq-only-lg, @bsp-carousel-gallery-mq-only-md {
-		max-width: 50%;
-	}
-	*/
 }
 .bsp-carousel-gallery-footer-item {
 	padding-right: @bsp-carousel-gallery-space*2;
