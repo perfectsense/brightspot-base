@@ -8,6 +8,7 @@
 	}
 	.bsp-carousel-slide {
 		padding: 0 @space;
+		width: 50%;
 	}
 
 }
@@ -53,6 +54,20 @@
 
 // for medium and up, we kill the margin and also hide the nav text, as by default the
 // thumbs gallery at that point drops in the thumbnav
+
+@media @mq-sm {
+
+	.gallery-module-horizontal-slides {
+
+		.bsp-carousel-slide {
+			width: 20%;
+		}
+
+	}
+
+}
+
+
 @media @mq-md {
 
 	.gallery-module-nav {
