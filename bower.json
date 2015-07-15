@@ -6,7 +6,7 @@
     "bsp-utils": "perfectsense/brightspot-js-utils#3.0.0",
     "bsp-carousel": "perfectsense/brightspot-js-carousel#1.0.0",
     "bsp-share": "perfectsense/brightspot-js-share#3.0.0",
-    "bsp-templates": "perfectsense/brightspot-js-templates#1.1.2",
+    "bsp-templates": "perfectsense/brightspot-js-templates#1.1.4",
     "bootstrap": "3.3.4",
     "fontawesome": "4.3.0",
     "jquery": "2.1.3",
