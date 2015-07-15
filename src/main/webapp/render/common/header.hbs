@@ -3,9 +3,22 @@
 	{{#if tophat}}
 		<div class="bsp-tophat">
 			<ul class="bsp-tophat-links">
-				{{#tophat.links}}
-					<li><a href="{{link}}">{{text}}</a></li>
-				{{/tophat.links}}
+
+				{{#each tophat.links}}
+
+					{{#link}}
+						<a href="{{href}}" title="{{title}}" target="{{target}}">
+							{{#if image}}
+								{{#image}}
+									<img src="{{src}}" alt="{{alt}}" width="{{width}}" height="{{height}}" />
+								{{/image}}
+							{{/if}}
+							{{text}}
+						</a>
+					{{/link}}
+
+				{{/each}}
+
 			</ul>
 		</div>
 	{{/if}}
@@ -14,18 +27,20 @@
 		
 		<div class="bsp-site-logo-centering">
 			<h1 class="bsp-site-logo">
-				<a href="#">
-				<img class="" src="{{siteLogo}}" alt="Brightspot"><span class="sr-only">{{siteName}}</span>
-				</a>
+
+				{{#with siteLogo}}
+					{{> common/link }}
+				{{/with}}
+
 			</h1>
 		</div>
 
 		{{#if extraLinks}}
 			<div class="bsp-header-extra-links-wrapper">
 				<ul class="bsp-header-extra-links">
-					{{# extraLinks}}
-					<li><a class="bsp-header-extra-link" href="{{link}}">{{text}}</a></li>
-					{{/ extraLinks}}
+					{{#each extraLinks}}
+						<li><a class="bsp-header-extra-link" href="{{link}}">{{text}}</a></li>
+					{{/each}}
 				</ul>
 			</div>
 		{{/if}}
@@ -57,18 +72,18 @@
 		{{#if extraMenu}}
 			<div class="bsp-extra-menu-wrapper">
 				<ul class="bsp-extra-menu">
-					{{# extraMenu}}
+					{{#each extraMenu}}
 					<li>
 						<a href="{{link}}">{{text}}{{#if subMenu}}<i class="icon"></i>{{/if}}</a>
 						{{#if subMenu}}
 						<ul class="bsp-extra-menu-submenu">
-							{{# subMenu}}
-							<li><a href="{{link}}">{{text}}</a></li>
-							{{/ subMenu}}
+							{{#each subMenu}}
+								<li><a href="{{link}}">{{text}}</a></li>
+							{{/each}}
 						</ul>
 						{{/if}}
 					</li>
-					{{/ extraMenu}}
+					{{/each}}
 				</ul>
 			</div>
 		{{/if}}

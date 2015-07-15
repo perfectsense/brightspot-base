@@ -1,17 +1,42 @@
 {
-	"siteLogo" : "/assets/images/brightspot.png",
-	"siteName" : "Brightspot",
+	"siteName" : "Brightspot Base",
 
-	"EXAMPLE tophat" : {
+	"siteLogo" : {
+
+		"link" : {
+
+			"href" : "http://localhost:8080/home.jsp",
+			"title" : "Brightspot Base",
+
+			"image" : {
+				"alt" : "Brightspot",
+				"src" : "/assets/images/brightspot.png"
+			}
+			
+		}
+	},
+	
+
+	"tophat" : {
 
 		"links" : [
 			{
-				"link" : "#",
-				"text" : "Link 1"
+				"link" : {
+
+					"href" : "link1",
+					"title" : "Brightspot Base",
+					"text"  : "link 1"
+			
+				}
 			},
 			{
-				"link" : "#",
-				"text" : "Link 2"
+				"link" : {
+
+					"href" : "link2",
+					"title" : "Brightspot Base",
+					"text"  : "link 2"
+				
+				}
 			}
 		]
 
