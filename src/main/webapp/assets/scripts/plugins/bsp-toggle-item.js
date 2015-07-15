@@ -31,22 +31,24 @@ var bsp_toggle_item = {
     init: function($parent, options) {
 
         var self = this;
-
-        self.$parent = $parent;
         self.settings = $.extend({}, self.defaults, options);
 
+        // cache a bunch of selectors
+        self.$parent = $parent;
         self.$toggleItem = self.$parent.find(self.settings.toggleItem);
         self.$trigger = self.$parent.find(self.settings.toggleTrigger);
         self.$body = $('body');
 
+        // kick it off
         self.addClickHandler();
-
         
     },
 
     'addClickHandler': function() {
         var self = this;
 
+        // when we click on the trigger we want to go ahead and toggle, as well as add 
+        // a handler to the body so when you click "off" the toggled item, it will untoggle it
         self.$parent.find(self.settings.toggleTrigger).on('click', function(e){
             e.preventDefault();
 
@@ -63,12 +65,15 @@ var bsp_toggle_item = {
         // kill any other clicks for toggling
         self.$body.off('click.toggle-out');
 
+        // note no return false or prevent default here, we want those actions to happen, we just want to 
+        // toggle out the toggled in item
         self.$body.on('click.toggle-out', function(e) {
 
             // if the click is outside the toggle item and trigger, then toggle it out
             if (!$(e.target).parents(self.settings.toggleItem).length && !$(e.target).parents(self.settings.toggleTrigger).length) {
                 self.toggleHelper();
             }
+
         });
     },
 
@@ -91,6 +96,6 @@ var bsp_toggle_item = {
         self.$body.off('click.toggle-out');
     }
 
-}
+};
 
 export default bsp_toggle_item;
