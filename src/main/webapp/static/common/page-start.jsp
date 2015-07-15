@@ -33,8 +33,7 @@
     <script>
       System.config({ baseURL: '/assets/scripts' });
       System.import('main');
-      //System.import('bsp-template-plugin');
-      System.import('plugins/bsp-templates-plugin-temp');
+      System.import('bsp-template-plugin');
     </script>
 
   </head>
