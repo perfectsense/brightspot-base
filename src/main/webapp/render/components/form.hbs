@@ -23,15 +23,17 @@ label {
 <p>Mobile: Need to test Android (Browser and Chrome) and iOS Safari</p>
 
 <h3>type: checkbox</h3>
-<p>Desktop: works consistently in all browsers</p>
+<p>Desktop/Mobile: works consistently in all browsers</p>
 {{> common/input inputs.checkbox1 }}
 
 <h3>type: color</h3>
 <p>Desktop: native control in Chrome, acts like text field in Firefox/Safari, IE tbd</p>
+<p>Mobile: iOS acts as text field, Android tbd</p>
 {{> common/input inputs.color1 }}
 
 <h3>type: date</h3>
 <p>Desktop: native control in Chrome, acts like text field in Firefox/Safari, IE tbd</p>
+<p>Mobile: iOS has native control, Android tbd</p>
 {{> common/input inputs.date1 }}
 
 <h3>type: datetime</h3>
@@ -40,6 +42,7 @@ label {
 
 <h3>type: datetime-local</h3>
 <p>Desktop: native control in Chrome, acts like text field in Firefox/Safari, IE tbd</p>
+<p>Mobile: iOS has native control, Android tbd</p>
 {{> common/input inputs.datetimelocal1 }}
 
 <h3>type: email</h3>
@@ -52,11 +55,12 @@ label {
 
 <h3>type: number</h3>
 <p>Desktop: native controls in Chrome/Firefox/Safari, IE tbd</p>
+<p>Mobile: acts as text field but has correct validation in iOS, Android tbd</p>
 {{> common/input inputs.number1 }}
 
 <h3>type: password</h3>
 <p>(with custom bsp-form-constraint-matches constraint)</p>
-
+<p>Desktop/Mobile: acts consistently in all browsers</p>
 {{> common/input inputs.password1 }}
 {{> common/input inputs.password2 }}
 
@@ -67,27 +71,31 @@ label {
 <p>to be implemented</p>
 
 <h3>type: search</h3>
-<p>Desktop: works consistently in Chrome/Firefox/Safari, IE tbd</p>
+<p>Desktop/Mobile: acts consistently in all browsers</p>
 {{> common/input inputs.search1 }}
 
 <h3>type: tel</h3>
 <p>Desktop: works consistently in Chrome/Firefox/Safari, IE tbd</p>
+<p>Mobile: works in iOS, Android tbd</p>
 {{> common/input inputs.tel1 }}
 
 <h3>type: text</h3>
-<p>Desktop: works consistently in Chrome/Firefox/Safari, IE tbd</p>
+<p>Desktop/Mobile: works consistently in all browsers</p>
 {{> common/input inputs.textfield1 }}
 
 <h3>type: time</h3>
 <p>Desktop: native control in Chrome, acts like text field in Firefox/Safari, IE tbd</p>
+<p>Mobile: native control in iOS, Android tbd</p>
 {{> common/input inputs.time1 }}
 
 <h3>type: url</h3>
 <p>Desktop: works in Chrome/Firefox/Safari, but validation patterns are inconsistent. IE tbd.</p>
+<p>Mobile: works in iOS, but validation pattern inconsistent with desktop Chrome<, Android tbd</p>
 {{> common/input inputs.url1 }}
 
 <h3>type: week</h3>
 <p>Desktop: native control in Chrome, acts like text field in Firefox/Safari, IE tbd</p>
+<p>Mobile: totally jacked in iOS, Android tbd</p>
 {{> common/input inputs.week1 }}
 
 <h2>others</h2>
