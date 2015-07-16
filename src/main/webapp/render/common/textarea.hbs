@@ -2,7 +2,7 @@
 	{{> common/field-error this}}
 {{/if}}
 {{#if label}}<label {{> common/attributes label.attributes }}>{{label.text}}{{/if}}
-	<input {{> common/attributes attributes }} {{> common/constraints constraints }} />
+	<textarea {{> common/attributes attributes }} {{> common/constraints constraints }}>{{#if text}}{{text}}{{/if}}</textarea>
 {{#if label}}</label>{{/if}}
 {{#if show-errors-below}}
 	{{> common/field-error this}}
