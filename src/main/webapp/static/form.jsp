@@ -16,12 +16,8 @@
 				<main class="bsp-column-full">
 
 					<div class="bsp-row">
-
-						<div class="bsp-column-main">
 							
 							<div data-bsp-template data-bsp-template-options='{ "template": "components/form", "dataUrl": "/static/data/form.json" }'></div>
-
-						</div>
 						
 					</div>
 
