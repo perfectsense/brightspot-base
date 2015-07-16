@@ -1,0 +1,31 @@
+{{#if showErrorsAbove}}
+	{{> common/inputError this}}
+{{/if}}
+<label>{{#if label}}{{label}}{{/if}}
+	<input
+		{{#if type}}
+			type="{{type}}"
+		{{else}}
+			type="text"
+		{{/if}}
+		{{#if id}}id="{{id}}"{{/if}}
+		{{#if name}}name="{{name}}"{{/if}}
+		{{#if pattern}}pattern="{{pattern}}"{{/if}}
+		{{#if placeholder}}placeholder="{{placeholder}}"{{/if}}
+		{{#if required}}required{{/if}}
+		{{#if title}}title="{{title}}"{{/if}}
+		{{#if value}}value="{{value}}"{{/if}}
+		{{#if constraints}}
+			{{#each constraints}}
+				{{#if arg}}
+					data-{{name}}="{{arg}}"
+				{{else}}
+					data-{{name}}
+				{{/if}}
+			{{/each}}
+		{{/if}}
+	/>
+</label>
+{{#if showErrorsBelow}}
+	{{> common/inputError this}}
+{{/if}}

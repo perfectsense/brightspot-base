@@ -1,0 +1,14 @@
+{{!-- Forms do not seem like they can be/should be generic, so this contains an example --}}
+
+<style>
+.error {
+	color: red;
+}
+</style>
+
+<form action="" method="GET" data-bsp-form>
+{{> common/input inputs.textfield1 }}
+{{> common/input inputs.password1 }}
+{{> common/input inputs.password2 }}
+{{> common/input inputs.submit }}
+</form>

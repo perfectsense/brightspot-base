@@ -1,0 +1,46 @@
+{
+	"inputs": {
+		"textfield1": {
+			"id": "textfield1",
+			"label": "Text Field 1",
+			"placeholder": "textfield1 placeholder",
+			"required": true,
+			"title": "Text Field 1",
+			"errors": [
+				{ "valueMissing": "Missing value, please enter something" }
+			],
+			"showErrorsBelow": true
+		},
+		"password1": {
+			"label": "Password",
+			"id": "password1",
+			"type": "password",
+			"required": true,
+			"errors": [
+				{ "valueMissing": "Please enter your password" }
+			],
+			"showErrorsBelow": true
+		},
+		"password2": {
+			"label": "Repeat Password",
+			"id": "password2",
+			"type": "password",
+			"required": true,
+			"constraints": [
+				{
+					"arg": "#password1",
+					"name": "bsp-form-constraint-matches"
+				}
+			],
+			"errors": [
+				{ "valueMissing": "Please enter your password a second time" },
+				{ "constraintMatches": "Passwords must match" }
+			],
+			"showErrorsBelow": true
+		},
+		"submit": {
+			"type": "submit",
+			"value": "Submit"
+		}
+	}
+}
