@@ -14,29 +14,23 @@
 			}
 			
 		}
+
 	},
 	
 
-	"tophat" : {
+	"EXAMPLE tophat" : {
 
 		"links" : [
 			{
-				"link" : {
-
-					"href" : "link1",
-					"title" : "Brightspot Base",
-					"text"  : "link 1"
-			
-				}
+				"href" : "link1",
+				"title" : "Brightspot Base",
+				"text"  : "link 1"
 			},
 			{
-				"link" : {
 
-					"href" : "link2",
-					"title" : "Brightspot Base",
-					"text"  : "link 2"
-				
-				}
+				"href" : "link2",
+				"title" : "Brightspot Base",
+				"text"  : "link 2"
 			}
 		]
 
@@ -44,92 +38,139 @@
 
 	"extraMenu" : [
 		{
-			"link" : "#",
-			"text" : "News",
+			"link": {
+				"href" : "news",
+				"title" : "News",
+				"text"  : "News"
+			},
+
 			"subMenu" : [
 				{
-					"link" : "#",
-					"text" : "Sublink 1"
+					"href" : "sublink1",
+					"title" : "Sublink 1",
+					"text"  : "Sublink 1"
 				},
 				{
-					"link" : "#",
-					"text" : "Sublink 2 Sublink 2 Sublink 2"
+					"href" : "sublink2",
+					"title" : "Sublink 2",
+					"text"  : "Sublink 2"
 				},
 				{
-					"link" : "#",
-					"text" : "Sublink 3"
+					"href" : "sublink3",
+					"title" : "Sublink 3",
+					"text"  : "Sublink 3 Sublink 3 Sublink 3"
 				}
 			]
 		},
 		{
-			"link" : "#",
-			"text" : "Shows",
+			"link": {
+				"href" : "shows",
+				"title" : "Shows",
+				"text"  : "Shows"
+			},
+
 			"subMenu" : [
 				{
-					"link" : "#",
-					"text" : "Sublink 1"
+					"href" : "sublink1",
+					"title" : "Sublink 1",
+					"text"  : "Sublink 1"
 				},
 				{
-					"link" : "#",
-					"text" : "Sublink 2"
+					"href" : "sublink2",
+					"title" : "Sublink 2",
+					"text"  : "Sublink 2"
 				},
 				{
-					"link" : "#",
-					"text" : "Sublink 3 Sublink 3 Sublink 3"
+					"href" : "sublink3",
+					"title" : "Sublink 3",
+					"text"  : "Sublink 3 Sublink 3 Sublink 3"
 				}
 			]
 		},
 		{
-			"link" : "#",
-			"text" : "Experience NYC"
+			"link": {
+				"href" : "experience",
+				"title" : "Experience NYC",
+				"text"  : "Experience NYC"
+			}
 		},
 		{
-			"link" : "#",
-			"text" : "Jobs",
+			"link": {
+				"href" : "jobs",
+				"title" : "Jobs",
+				"text"  : "Jobs"
+			},
+
 			"subMenu" : [
 				{
-					"link" : "#",
-					"text" : "Sublink 1"
+					"href" : "sublink1",
+					"title" : "Sublink 1",
+					"text"  : "Sublink 1"
 				},
 				{
-					"link" : "#",
-					"text" : "Sublink 2"
+					"href" : "sublink2",
+					"title" : "Sublink 2",
+					"text"  : "Sublink 2"
 				},
 				{
-					"link" : "#",
-					"text" : "Sublink 3"
+					"href" : "sublink3",
+					"title" : "Sublink 3",
+					"text"  : "Sublink 3 Sublink 3 Sublink 3"
 				}
 			]
 		},
 		{
-			"link" : "#",
-			"text" : "Buy Tickets"
+			"link": {
+				"href" : "buy",
+				"title" : "Buy Tickets",
+				"text"  : "Buy Tickets"
+			}
 		}
 	],
 
 	"EXAMPLE extraLinks" : [
 		{
-			"link" : "#",
-			"text" : "Extra Link 1"
+			"href"  : "link1",
+			"title" : "Brightspot Base",
+			"text"  : "link 1 haha!"
 		},
 		{
-			"link" : "#",
-			"text" : "Extra Link 2"
+			"href" : "link2",
+			"title" : "Brightspot Base",
+			"text"  : "link 2"
 		}
 	],
 
 	"sharing" : {
-		"facebook" 		: {
-			"url" : "http://www.facebook.com"
+
+		"links" : [{
+			"icon"  : "facebook",
+
+			"href"  : "http://www.facebook.com",
+			"title" : "Facebook",
+			"target" : "_blank"
 		},
-		"twitter" 		: {
-			"url" : "http://www.twitter.com"
+		{
+			"icon"  : "twitter",
+
+			"href"  : "http://www.twitter.com",
+			"title" : "Twitter",
+			"target" : "_blank"
 		},
-		"pinterest"		: {
-			"url" : "http://www.pinterest.com"
+		{
+			"icon"  : "pinterest",
+
+			"href"  : "http://www.pinterest.com",
+			"title" : "Pinterest",
+			"target" : "_blank"
 		},
-		"linkedin"		: {
-			"url" : "http://www.linkedin.com"
-		}
+		{
+			"icon"  : "linkedin",
+
+			"href"  : "http://www.linkedin.com",
+			"title" : "LinkedIn",
+			"target" : "_blank"
+		}]
+
 	}
 }

@@ -3,22 +3,9 @@
 	{{#if tophat}}
 		<div class="bsp-tophat">
 			<ul class="bsp-tophat-links">
-
 				{{#each tophat.links}}
-
-					{{#link}}
-						<a href="{{href}}" title="{{title}}" target="{{target}}">
-							{{#if image}}
-								{{#image}}
-									<img src="{{src}}" alt="{{alt}}" width="{{width}}" height="{{height}}" />
-								{{/image}}
-							{{/if}}
-							{{text}}
-						</a>
-					{{/link}}
-
+					<li>{{> common/link }}</li>
 				{{/each}}
-
 			</ul>
 		</div>
 	{{/if}}
@@ -27,11 +14,9 @@
 		
 		<div class="bsp-site-logo-centering">
 			<h1 class="bsp-site-logo">
-
-				{{#with siteLogo}}
-					{{> common/link }}
+				{{#with siteLogo.link}}
+					{{> common/link imgClass="bsp-site-logo-img"}}
 				{{/with}}
-
 			</h1>
 		</div>
 
@@ -39,7 +24,7 @@
 			<div class="bsp-header-extra-links-wrapper">
 				<ul class="bsp-header-extra-links">
 					{{#each extraLinks}}
-						<li><a class="bsp-header-extra-link" href="{{link}}">{{text}}</a></li>
+						<li>{{> common/link }}</li>
 					{{/each}}
 				</ul>
 			</div>
@@ -48,10 +33,9 @@
 		{{#if sharing}}
 			<div class="bsp-share-links-centering">
 				<ul class="bsp-share-links">
-					{{#if sharing.facebook}}<li class="bsp-facebook-share"><a class="bsp-share-link icon icon-facebook" href="{{sharing.facebook.url}}" target="_blank"></a></li>{{/if}}
-				    {{#if sharing.twitter}}<li class="bsp-twitter-share"><a class="bsp-share-link icon icon-twitter" href="{{sharing.twitter.url}}" target="_blank"></a></li>{{/if}}    
-				    {{#if sharing.pinterest}}<li class="bsp-pinterest-share"><a class="bsp-share-link icon icon-pinterest" href="{{sharing.pinterest.url}}" target="_blank"></a></li>{{/if}} 
-				    {{#if sharing.linkedin}}<li class="bsp-linkedin-share"><a class="bsp-share-link icon icon-linkedin" href="{{sharing.linkedin.url}}" target="_blank"></a></li>{{/if}} 
+					{{#each sharing.links}}
+						<li class="bsp-{{icon}}-share">{{> common/link class="bsp-share-link"}}<li>
+					{{/each}}
 				</ul>
 			</div>
 		{{/if}}
@@ -74,11 +58,15 @@
 				<ul class="bsp-extra-menu">
 					{{#each extraMenu}}
 					<li>
-						<a href="{{link}}">{{text}}{{#if subMenu}}<i class="icon"></i>{{/if}}</a>
+						{{!-- This one doesn't use the partial as we needed a custom icon inside --}}
+						{{#with link}}
+							<a href="{{href}}" {{#if title}}title="{{title}}"{{/if}} {{#if target}}target="{{target}}"{{/if}}>{{text}}{{#if ../subMenu}}<i class="icon"></i>{{/if}}</a>
+						{{/with}}
+
 						{{#if subMenu}}
 						<ul class="bsp-extra-menu-submenu">
 							{{#each subMenu}}
-								<li><a href="{{link}}">{{text}}</a></li>
+								<li>{{> common/link }}</li>
 							{{/each}}
 						</ul>
 						{{/if}}

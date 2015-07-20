@@ -1,5 +1,6 @@
-// The share links handle their own sharing icons via the JS plugin. These styles just vertically center them and give them 
-// rounded corners and color treatment
+// Here we provide styles for the share bar
+// We also allow for some extending of icon fonts vs using the icon-xxxxx designation in the HTML
+
 
 .bsp-share-links-centering {
     &:extend(.vertical-center-wrapper all);
@@ -20,12 +21,34 @@
 }	
 
 .bsp-share-link {
+	&:extend(.icon);
+
 	background: @brand-primary;
 	border-radius: 32px;
 	height: 32px;
 	line-height: 32px;
 	text-align: center;
 	width: 32px;
+
+	&:before {
+		
+		.bsp-facebook-share & {
+			content: @fa-var-facebook;
+		}
+
+		.bsp-twitter-share & {
+			content: @fa-var-twitter;
+		}
+
+		.bsp-pinterest-share & {
+			content: @fa-var-pinterest;
+		}
+
+		.bsp-linkedin-share & {
+			content: @fa-var-linkedin;
+		}
+	}
+
 }
 
 

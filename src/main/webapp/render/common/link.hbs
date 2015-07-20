@@ -1,10 +1,6 @@
-{{#link}}
-	<a href="{{href}}" title="{{title}}" target="{{target}}">
-		{{#if image}}
-			{{#image}}
-				<img src="{{src}}" alt="{{alt}}" width="{{width}}" height="{{height}}" />
-			{{/image}}
-		{{/if}}
-		{{text}}
-	</a>
-{{/link}}
+<a {{#if class}}class="{{class}}"{{/if}} href="{{href}}" {{#if title}}title="{{title}}"{{/if}} {{#if target}}target="{{target}}"{{/if}}>
+	{{#if image}}
+		<img {{#if imgClass}}class="{{imgClass}}"{{/if}} src="{{image.src}}" alt="{{image.alt}}" {{#if image.width}}width="{{image.width}}"{{/if}} {{#if image.height}}height="{{image.height}}"{{/if}} />
+	{{/if}}
+	{{text}}
+</a>
