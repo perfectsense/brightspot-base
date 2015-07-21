@@ -5,8 +5,10 @@
 
 		"link" : {
 
-			"href" : "http://localhost:8080/home.jsp",
-			"title" : "Brightspot Base",
+			"attributes" : {
+				"href"  : "http://localhost:8080/home.jsp",
+				"title" : "Brightspot Base"
+			},
 
 			"image" : {
 				"alt" : "Brightspot",
@@ -22,14 +24,17 @@
 
 		"links" : [
 			{
-				"href" : "link1",
-				"title" : "Brightspot Base",
+				"attributes" : {
+					"href"  : "link1",
+					"title" : "Brightspot Base"
+				},
 				"text"  : "link 1"
 			},
 			{
-
-				"href" : "link2",
-				"title" : "Brightspot Base",
+				"attributes" : {
+					"href"  : "link2",
+					"title" : "Brightspot Base"
+				},
 				"text"  : "link 2"
 			}
 		]
@@ -39,90 +44,118 @@
 	"extraMenu" : [
 		{
 			"link": {
-				"href" : "news",
-				"title" : "News",
+				"attributes" : {
+					"href"  : "news",
+					"title" : "News"
+				},
 				"text"  : "News"
 			},
 
 			"subMenu" : [
 				{
-					"href" : "sublink1",
-					"title" : "Sublink 1",
+					"attributes" : {
+						"href"  : "sublink1",
+						"title" : "Sublink 1"
+					},
 					"text"  : "Sublink 1"
 				},
 				{
-					"href" : "sublink2",
-					"title" : "Sublink 2",
+					"attributes" : {
+						"href"  : "sublink2",
+						"title" : "Sublink 2"
+					},
 					"text"  : "Sublink 2"
 				},
 				{
-					"href" : "sublink3",
-					"title" : "Sublink 3",
+					"attributes" : {
+						"href"  : "sublink3",
+						"title" : "Sublink 3"
+					},
 					"text"  : "Sublink 3 Sublink 3 Sublink 3"
 				}
 			]
 		},
 		{
 			"link": {
-				"href" : "shows",
-				"title" : "Shows",
+				"attributes" : {
+					"href"  : "shows",
+					"title" : "Shows"
+				},
 				"text"  : "Shows"
 			},
 
 			"subMenu" : [
 				{
-					"href" : "sublink1",
-					"title" : "Sublink 1",
+					"attributes" : {
+						"href" : "sublink1",
+						"title" : "Sublink 1"
+					},
 					"text"  : "Sublink 1"
 				},
 				{
-					"href" : "sublink2",
-					"title" : "Sublink 2",
+					"attributes" : {
+						"href" : "sublink2",
+						"title" : "Sublink 2"
+					},
 					"text"  : "Sublink 2"
 				},
 				{
-					"href" : "sublink3",
-					"title" : "Sublink 3",
+					"attributes" : {
+						"href" : "sublink3",
+						"title" : "Sublink 3"
+					},
 					"text"  : "Sublink 3 Sublink 3 Sublink 3"
 				}
 			]
 		},
 		{
 			"link": {
-				"href" : "experience",
-				"title" : "Experience NYC",
+				"attributes" : {
+					"href" : "experience",
+					"title" : "Experience NYC"
+				},
 				"text"  : "Experience NYC"
 			}
 		},
 		{
 			"link": {
-				"href" : "jobs",
-				"title" : "Jobs",
+				"attributes" : {
+					"href" : "jobs",
+					"title" : "Jobs"
+				},
 				"text"  : "Jobs"
 			},
 
 			"subMenu" : [
 				{
-					"href" : "sublink1",
-					"title" : "Sublink 1",
+					"attributes" : {
+						"href" : "sublink1",
+						"title" : "Sublink 1"
+					},
 					"text"  : "Sublink 1"
 				},
 				{
-					"href" : "sublink2",
-					"title" : "Sublink 2",
+					"attributes" : {
+						"href" : "sublink2",
+						"title" : "Sublink 2"
+					},
 					"text"  : "Sublink 2"
 				},
 				{
-					"href" : "sublink3",
-					"title" : "Sublink 3",
+					"attributes" : {
+						"href" : "sublink3",
+						"title" : "Sublink 3"
+					},
 					"text"  : "Sublink 3 Sublink 3 Sublink 3"
 				}
 			]
 		},
 		{
 			"link": {
-				"href" : "buy",
-				"title" : "Buy Tickets",
+				"attributes" : {
+					"href" : "buy",
+					"title" : "Buy Tickets"
+				},
 				"text"  : "Buy Tickets"
 			}
 		}
@@ -130,13 +163,17 @@
 
 	"EXAMPLE extraLinks" : [
 		{
-			"href"  : "link1",
-			"title" : "Brightspot Base",
+			"attributes" : {
+				"href"  : "link1",
+				"title" : "Brightspot Base"
+			},
 			"text"  : "link 1 haha!"
 		},
 		{
-			"href" : "link2",
-			"title" : "Brightspot Base",
+			"attributes" : {
+				"href" : "link2",
+				"title" : "Brightspot Base"
+			},
 			"text"  : "link 2"
 		}
 	],
@@ -146,30 +183,38 @@
 		"links" : [{
 			"icon"  : "facebook",
 
-			"href"  : "http://www.facebook.com",
-			"title" : "Facebook",
-			"target" : "_blank"
+			"attributes" : {
+				"href"  : "http://www.facebook.com",
+				"title" : "Facebook",
+				"target" : "_blank"
+			}
 		},
 		{
 			"icon"  : "twitter",
 
-			"href"  : "http://www.twitter.com",
-			"title" : "Twitter",
-			"target" : "_blank"
+			"attributes" : {
+				"href"  : "http://www.twitter.com",
+				"title" : "Twitter",
+				"target" : "_blank"
+			}
 		},
 		{
 			"icon"  : "pinterest",
 
-			"href"  : "http://www.pinterest.com",
-			"title" : "Pinterest",
-			"target" : "_blank"
+			"attributes" : {
+				"href"  : "http://www.pinterest.com",
+				"title" : "Pinterest",
+				"target" : "_blank"
+			}
 		},
 		{
 			"icon"  : "linkedin",
 
-			"href"  : "http://www.linkedin.com",
-			"title" : "LinkedIn",
-			"target" : "_blank"
+			"attributes" : {
+				"href"  : "http://www.linkedin.com",
+				"title" : "LinkedIn",
+				"target" : "_blank"
+			}
 		}]
 
 	}

@@ -49,35 +49,37 @@ var bsp_toggle_item = {
 
         // when we click on the trigger we want to go ahead and toggle, as well as add 
         // a handler to the body so when you click "off" the toggled item, it will untoggle it
-        self.$parent.find(self.settings.toggleTrigger).on('click', function(e){
+        self.$parent.find(self.settings.toggleTrigger).on('click.toggle', function(e){
             e.preventDefault();
 
+            //self.addBodyHandler();
+
             self.toggleHelper($(this));
-
-            self.addBodyHandler();
         });
     },
 
+    // TODO: figure out a prettier way to do this
+    // 
     // if we detect a click somewhere on the body not on the toggle item itself, close itself
-    'addBodyHandler': function() {
-        var self = this;
+    // 'addBodyHandler': function() {
+    //     var self = this;
 
-        // kill any other clicks for toggling
-        self.$body.off('click.toggle-out');
+    //     // kill any other clicks for toggling
+    //     self.$body.off('click.toggle-out');
 
-        // note no return false or prevent default here, we want those actions to happen, we just want to 
-        // toggle out the toggled in item
-        self.$body.on('click.toggle-out', function(e) {
+    //     // note no return false or prevent default here, we want those actions to happen, we just want to 
+    //     // toggle out the toggled in item
+    //     self.$body.on('click.toggle-out', function(e) {
 
-            // if the click is outside the toggle item and trigger, then toggle it out
-            if (!$(e.target).parents(self.settings.toggleItem).length && !$(e.target).parents(self.settings.toggleTrigger).length) {
-                self.toggleHelper();
-            }
+    //         // if the click is outside the toggle item and trigger, then toggle it out
+    //         if (!$(e.target).parents(self.settings.toggleItem).length && !$(e.target).parents(self.settings.toggleTrigger).length) {
+    //             self.toggleHelper(self.$body);
+    //         }
 
-        });
-    },
+    //     });
+    // },
 
-    'toggleHelper' : function() {
+    'toggleHelper' : function($target) {
         var self = this;
 
         // gets the base class from the trigger item

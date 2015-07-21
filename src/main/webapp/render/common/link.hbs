@@ -1,6 +1,6 @@
-<a {{#if class}}class="{{class}}"{{/if}} href="{{href}}" {{#if title}}title="{{title}}"{{/if}} {{#if target}}target="{{target}}"{{/if}}>
+<a {{#if class}}class="{{class}}"{{/if}} {{> common/attributes attributes }}>
 	{{#if image}}
-		<img {{#if imgClass}}class="{{imgClass}}"{{/if}} src="{{image.src}}" alt="{{image.alt}}" {{#if image.width}}width="{{image.width}}"{{/if}} {{#if image.height}}height="{{image.height}}"{{/if}} />
+		{{> common/image }}
 	{{/if}}
 	{{text}}
 </a>
