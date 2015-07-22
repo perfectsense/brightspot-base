@@ -4,6 +4,9 @@ module.exports = function(grunt) {
 
     require('bsp-grunt')(grunt, {
         bsp: {
+            brightspotBase: {
+                enable: true
+            },
             styles: {
                 dir: 'assets/styles',
                 less: [
