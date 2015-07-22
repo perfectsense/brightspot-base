@@ -1,0 +1,55 @@
+{
+	"options" : {
+		"columnAlignment" : "left-aligned",
+		"tableWidth" : "full-width"
+	},
+
+	"title" : "this is a full width left aligned table",
+
+	"headings" : [
+		"Title",
+		"Category",
+		"Organization",
+		"State",
+		"Paid?",
+		"Date Posted"
+	],
+
+	"rows" : [
+		{
+			"row" : [
+				{
+					"link" : {
+						"href" : "#",
+						"text" : "School Coordinator",
+						"title" : "Get details on this job"
+					}
+
+				},
+				"Administrative",
+				"Atlantic Theater Company",
+				"NY",
+				"Yes",
+				"07/07/2015"
+			]
+		},
+		{
+			"row" : [
+				{
+					"link" : {
+						"href" : "#",
+						"text" : "Artistic and Management Assistant",
+						"title" : "Get details on this job"
+					}
+
+				},
+				"Administrative",
+				"Westport Country Playhouse",
+				"FL",
+				"Yes",
+				"07/07/2015"
+			]
+		}
+	]
+
+}

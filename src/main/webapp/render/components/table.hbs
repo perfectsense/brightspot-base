@@ -1,0 +1,27 @@
+<div class="bsp-table">
+	<h2>{{title}}</h2>
+	<table{{#if options}}{{> components/bsp-table-options this}}{{/if}}>
+		{{#if headings}}
+			<thead>
+				{{#each headings}}
+					<th>{{this}}</th>
+				{{/each}}
+			</thead>
+		{{/if}}
+		{{#each rows}}
+			<tr>
+				{{#each row}}
+					<td>
+						{{#if link.href}}
+							{{> common/link this}}
+						{{else}}
+							{{this}}
+						{{/if}}
+					</td>
+				{{/each}}
+			</tr>
+		{{/each}}			
+	</table>
+
+</div>
+
