@@ -11,8 +11,11 @@
 			},
 
 			"image" : {
-				"alt" : "Brightspot",
-				"src" : "/assets/images/brightspot.png"
+
+				"attributes" : {
+					"alt" : "Brightspot",
+					"src" : "/assets/images/brightspot.png"
+				}
 			}
 			
 		}

@@ -1,3 +1,8 @@
+{{!# Here we list our compiled templates, these are what the gallery module will support as slides #}} 
+{{> common/image compile }}
+{{> components/image-promo compile }}
+{{> components/list-promo compile }}
+
 <div class="bsp-component">
 	{{#if galleryTitle}}
 		<h3 class="bsp-component-title">{{galleryTitle}}</h1>
@@ -6,11 +11,13 @@
 	<div class="bsp-component-content">
 
 		<div class="gallery-module gallery-module-{{#if options.carouselDots}}carousel-dots{{/if}}" data-bsp-carousel data-bsp-carousel-options='{ "theme" : "{{#if options.carouselDots}}carousel-dots{{/if}}" }'>
-			{{#gallerySlides}}
+			{{#each gallerySlides}}
 				<div class="bsp-carousel-slide">
-					<img alt="" src="{{slideImage}}" />
+
+					{{> (lookup . '_template') }}
+
 				</div>
-			{{/gallerySlides}}
+			{{/each}}
 		</div>
 
 	</div>

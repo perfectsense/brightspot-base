@@ -1,0 +1,74 @@
+{
+	"_template" : "components/bsp-article",
+
+	"options" : {
+		"carouselDots" : false
+	},
+
+	"galleryTitle" : "5 slides, no dots, no thumbs",
+
+	"gallerySlides" : [
+		{ 
+			"_template" : "common/image",
+
+			"attributes" : {
+				"src" : "/assets/images/1200x400.png"
+			}
+		},
+		{ 
+			"_template" : "components/image-promo",
+
+			"images" : [
+				{ 
+					"imgSrc" 	: "/assets/images/1200x400.png",
+					"imgAlt" 	: "textAlt",
+					"imgLink" 	: "#",
+					
+					"links" : [
+						{
+							"link" : "#",
+							"text" : "Bacon ipsum"
+						}
+					]
+				}
+			]
+
+		},
+		{ 
+			"_template" : "components/list-promo",
+
+			"listItems" : [
+				{ 
+					"link" : "#",
+					"linkText" : "8 Burning Questions" 
+				},
+				{ 
+					"link" : "#",
+					"linkText" : "Bacon ipsum dolor amet turducken jowl shankle, cupim" 
+				},
+				{ 
+					"link" : "#",
+					"linkText" : "Bacon ipsum dolor amet turducken jowl shankle, cupim" 
+				},
+				{ 
+					"link" : "#",
+					"linkText" : "Bacon ipsum dolor amet turducken jowl shankle, cupim" 
+				}
+			]
+		},
+		{ 
+			"_template" : "common/image",
+
+			"attributes" : {
+				"src" : "/assets/images/1200x400.png"
+			}
+		},
+		{ 
+			"_template" : "common/image",
+
+			"attributes" : {
+				"src" : "/assets/images/1200x400.png"
+			}
+		}
+	]
+}
