@@ -10,7 +10,9 @@
 
 				{{#gallerySlides}}
 					<div class="bsp-carousel-slide">
-						<img alt="" src="{{slideImage}}" />
+						
+						{{> (lookup . '_template') }}
+
 						{{#if navText}}
 							<div class="bsp-carousel-slide-nav-text">{{navText}}</div>
 						{{/if}}
@@ -22,9 +24,9 @@
 
 				{{#galleryNavItems}}
 					<div class="bsp-carousel-slide">
-						{{#if navImage}}
-							<img alt="" src="{{navImage}}" />
-						{{/if}}
+						{{#with navImage}}
+							{{> (lookup . '_template') }}
+						{{/with}}
 						{{#if navText}}
 							<p>{{navText}}</p>
 						{{/if}}

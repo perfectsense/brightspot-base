@@ -1,4 +1,6 @@
 {
+	"_template" : "components/form",
+
 	"dropdowns": {
 		"dropdown1": {
 			"label": {

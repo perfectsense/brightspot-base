@@ -1,5 +1,6 @@
 {
-
+	"_template" : "components/list-promo",
+	
 	"heading" : "6 items with dynamic heights",
 
 	"listItems" : [

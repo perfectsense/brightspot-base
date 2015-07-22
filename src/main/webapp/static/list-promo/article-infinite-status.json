@@ -1,4 +1,6 @@
 {
+	"_template" : "components/list-promo",
+
 	"options" : {
 		"modifierClass" : "bsp-infinite-load-status"
 	},
@@ -11,7 +13,7 @@
 			"linkText" : "1111 ipsum dolor amet turducken jowl shankle, cupim" 
 		},
 		{ 
-			"link" : "/static/bsp-article/article-infinite-3.jsp",
+			"link" : "/static/bsp-article/article-infinite-2.jsp",
 			"linkText" : "22222 ipsum dolor amet turducken jowl shankle, cupim" 
 		},
 		{ 

@@ -1,4 +1,6 @@
 {
+	"_template" : "components/list-promo",
+
 	"options" : {
 		"modifierClass" : "hard-item-heights"
 	},

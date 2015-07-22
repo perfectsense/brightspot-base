@@ -5,19 +5,28 @@ import Handlebars from 'handlebars';
 
 export default {
     defaults: {
-        dataUrl: false,
-        // we skip any partials that have the "lookup" sub expression, as there will be no data to grab
-        partialsRegexp: /\{\{>\s(?!\(lookup)+([^\s]+)[\S\s]+?\}\}/g, 
-        // if we had any partials compiled in for dynamic use, remove these statements, so they aren't run with no data
-        removeCompileRegexp: /\{\{>\s+([^\s]+)[\S\s]compile\s?\}\}/g,
+        templateKey: '_template',
         templatePath: '/render/',
         templateExtension: '.hbs'
     },
+
     data: false,
+
     fetchingTemplate: false,
+
     fetchingData: false,
-    partials: {},
+
+    // we need to do this dynamically. Rusty, thoughts?
+    partials: {
+        'helpers/attributes' : {
+            checked: true, 
+            registered: false,
+            content: '{{#each this}}{{@key}}{{#if this}}="{{this}}"{{/if}}{{/each}}'
+        }
+    },
+
     partialsAllFound: false,
+
     template: false,
 
     init($el, options) {        
@@ -25,120 +34,116 @@ export default {
         this.options = $.extend(true, {}, this.defaults, options);
         return this;
     },
-    fetch(template = this.options.template, data = this.options.data, dataUrl = this.options.dataUrl) {
+
+    fetch(dataUrl = this.options.dataUrl) {
         this.done = new $.Deferred();
-        this.fetchTemplate();
         this.fetchData();
         return this.done.promise();
     },
+
     fetchData() {
         var fakeDataGet;
         var fakeResolveData = {};
         var self = this;
-        if (this.options.dataUrl && !this.options.data && !this.fetchingData) {
+
+        if (this.options.dataUrl && !this.fetchingData) {
             this.fetchingData = $.get(this.options.dataUrl);
+
             this.fetchingData.then((data) => {
                 self.data = data;
+                self.findPartials();
             });
-        } else if (!this.fetchingData) {
-            if (this.options.data) {
-                fakeResolveData = this.options.data;
-            }
-            fakeDataGet = new $.Deferred();
-            fakeDataGet.resolve(fakeResolveData);
-            this.fetchingData = fakeDataGet.promise();
         }
     },
-    fetchTemplate(template = this.options.template) {
-        this.fetchingTemplate = $.get(this.templateUrl(template));
-        this.fetchPartials();
-    },
-    fetchPartials() {
+
+    findPartials() {
         var self = this;
-        $.when(this.fetchingTemplate, this.fetchingData).then((template, data) => {
-            if (!self.template) {
-                self.template = template[0];
-                self.partials[self.options.template] = {
-                    checked: true,
-                    registered: false,
-                    content: template[0]
-                };
-            }
-            self.findPartials(template[0]);
-        });
-    },
-    findPartials(template = '') {
         var matches = new Set();
-        var match = null;
-        var self = this;
-        while(match = this.options.partialsRegexp.exec(template)) { // jshint ignore:line            
-            if (!self.partials[match[1]]) {
-                matches.add(match[1]);
+
+        function recursiveSearch(theObject) {
+            for (var key in theObject)
+            {
+                if (typeof theObject[key] == "object" && theObject[key] !== null) {
+                    recursiveSearch(theObject[key]);
+                }
+                else {
+                    if(theObject[self.options.templateKey]) {
+                        if (!self.partials[theObject[self.options.templateKey]]) {
+                            matches.add(theObject[self.options.templateKey]);
+                        }
+                    }
+                }
             }
         }
+
+        self.template = (self.data[self.options.templateKey]);
+
+        recursiveSearch(self.data);
+
         if (matches.size) {
             this.loadPartials(matches);
-        } else {
-            this.checkNextPartial();
-        }
+        } 
     },
+
     loadPartials(partials) {
         var promises = {};
+
         var self = this;
+
         var promisesResolved = 0;
+
         partials.forEach((value) => {
             if (!promises[value] && !self.partials[value]) {
+
                 promises[value] = $.get( self.templateUrl(value) );
+
                 promises[value].then((template) => {
                     self.partials[value] = {
-                        checked: false,
                         registered: false,
                         content: template
                     };
+
                     promisesResolved++;
+
                     if (promisesResolved === partials.size) {
-                        self.checkNextPartial();
+                        self.registerPartials();
                     }
+
                 });
             }
         });
     },
-    checkNextPartial() {
-        var partialFound = false;
-        var self = this;
-        $.each(this.partials, (key, value) => {
-            if (!value.checked) {
-                if (!partialFound) {
-                    self.partials[key].checked = true;
-                    self.findPartials(value.content);
-                }
-                partialFound = true;
-            }
-        });
-        if (!partialFound) {
-            self.registerPartials();
-        }
-    },
+
     registerPartials() {
+        var self = this;
+
         $.each(this.partials, (key, value) => {
             if (!Handlebars.partials[key]) {
                 Handlebars.registerPartial(key, value.content);
             }
         });
-        this.compileTemplate();
-    },
-    compileTemplate() {
-        this.template = this.template.replace(this.options.removeCompileRegexp,'');
 
-        this.template = Handlebars.compile(this.template);
-        this.done.resolve();
+        self.compileTemplate();
     },
+
+    compileTemplate() {
+        var self = this;
+
+        self.template = self.partials[self.template].content;
+
+        self.template = Handlebars.compile(self.template);
+
+        self.done.resolve();
+    },
+
     render() {
         var self = this;
+
         this.fetchingData.then((data) => {
             self.$el.html( self.template( data ) );
         });
     },
+
     templateUrl(templateName = '') {
         return this.options.templatePath + templateName + this.options.templateExtension;
     }

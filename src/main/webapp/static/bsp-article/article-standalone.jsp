@@ -14,7 +14,7 @@
 			<div class="bsp-row">
 				<div class="bsp-column-scrolling">
 
-					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/bsp-article/article-infinite-4.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/bsp-article/article-standalone.json" }'></div>
 
 				</div>
 
@@ -27,7 +27,7 @@
 							<a class="toggle-trigger-link-in" href="#">Close</a>
 						</div>
 
-						<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/article-infinite-status.json" }'></div>
+						<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/5-items.json" }'></div>
 
 					</div>
 

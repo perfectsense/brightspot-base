@@ -5,11 +5,11 @@
 
 <div class="bsp-site-wrapper">
 
-	<div data-bsp-template data-bsp-template-options='{ "template": "components/bsp-site-header", "dataUrl": "/static/bsp-site-header/logo-extra-menu-social.json" }'></div>
+	<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/bsp-site-header/logo-extra-menu-social.json" }'></div>
 
 	<div class="bsp-site">
 
-		<div data-bsp-template data-bsp-template-options='{ "template": "components/page-title", "dataUrl": "/static/data/page-title.json" }'></div>
+		<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/bsp-page-title/test-title.json" }'></div>
 
 		<div class="bsp-container">
 
@@ -19,7 +19,7 @@
 
 					<%-- Item with just image, no text  --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/1-item-just-image.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/1-item-just-image.json" }'></div>
 
 				</div>
 
@@ -27,7 +27,7 @@
 
 					<%-- Item with just image, no text  --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/1-item-with-image-no-title.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/1-item-with-image-no-title.json" }'></div>
 
 				</div>
 
@@ -39,7 +39,7 @@
 
 					<%-- 3 Item with image, text, split in thirds  --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/3-items-with-image-horizontal.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/3-items-with-image-horizontal.json" }'></div>
 
 				</div>
 
@@ -51,7 +51,7 @@
 
 					<%-- 6 Item with image, text, split in thirds  --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/6-items-with-image-horizontal.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/6-items-with-image-horizontal.json" }'></div>
 
 				</div>
 
@@ -63,7 +63,7 @@
 
 					<%-- 2 Item with image, text, left align, split in half  --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/2-items-with-image-left-align-horizontal.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/2-items-with-image-left-align-horizontal.json" }'></div>
 
 				</div>
 
@@ -75,7 +75,7 @@
 
 					<%-- 2 Item with image, text, right align, split in half  --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/2-items-with-image-right-align-horizontal.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/2-items-with-image-right-align-horizontal.json" }'></div>
 
 				</div>
 
@@ -88,7 +88,7 @@
 
 					<%-- Item with Left Align, Dark Background --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/1-item-with-image-left-align-dark.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/1-item-with-image-left-align-dark.json" }'></div>
 
 				</div>
 
@@ -96,7 +96,7 @@
 
 					<%-- Item with Left Align, No Background --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/1-item-with-image-left-align.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/1-item-with-image-left-align.json" }'></div>
 
 				</div>
 
@@ -108,7 +108,7 @@
 
 					<%-- 1 Item with Image Overlay --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/1-item-with-image-overlay.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/1-item-with-image-overlay.json" }'></div>
 
 				</div>
 
@@ -116,7 +116,7 @@
 
 					<%-- 1 Item with Image --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/1-item-with-image.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/1-item-with-image.json" }'></div>
 
 				</div>
 
@@ -128,7 +128,7 @@
 
 					<%-- 2 Items with images and extra text --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/2-items-with-images-extra-text.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/2-items-with-images-extra-text.json" }'></div>
 
 				</div>
 
@@ -136,7 +136,7 @@
 
 					<%-- 2 items with images --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/2-items-with-images.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/2-items-with-images.json" }'></div>
 
 				</div>
 
@@ -148,7 +148,7 @@
 
 					<%-- 2 Items no images --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/2-items.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/2-items.json" }'></div>
 
 				</div>
 
@@ -156,7 +156,7 @@
 
 					<%-- 3 Items no images --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/3-items.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/3-items.json" }'></div>
 
 				</div>
 
@@ -164,7 +164,7 @@
 
 					<%-- 4 Items no images --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/4-items.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/4-items.json" }'></div>
 
 				</div>
 
@@ -176,7 +176,7 @@
 
 					<%-- 5 Items no images --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/5-items.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/5-items.json" }'></div>
 
 				</div>
 
@@ -184,7 +184,7 @@
 
 					<%-- 6 Items no images --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/6-items.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/6-items.json" }'></div>
 
 				</div>
 
@@ -192,7 +192,7 @@
 
 					<%-- 7 Items no images --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/7-items.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/7-items.json" }'></div>
 
 				</div>
 
@@ -204,7 +204,7 @@
 
 					<%-- 5 Items no images --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/6-items-with-1-image.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/6-items-with-1-image.json" }'></div>
 
 				</div>
 
@@ -212,7 +212,7 @@
 
 					<%-- 6 Items no images --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/4-items-with-2-images.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/4-items-with-2-images.json" }'></div>
 
 				</div>
 
@@ -220,7 +220,7 @@
 
 					<%-- 7 Items no images --%>
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/3-items-with-1-image-extra-text.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/3-items-with-1-image-extra-text.json" }'></div>
 
 				</div>
 
@@ -230,7 +230,7 @@
 
 	</div>
 
-	<div data-bsp-template data-bsp-template-options='{ "template": "components/bsp-site-footer", "dataUrl": "/static/bsp-site-footer/standard.json" }'></div>
+	<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/bsp-site-footer/standard.json" }'></div>
 
 </div>
 

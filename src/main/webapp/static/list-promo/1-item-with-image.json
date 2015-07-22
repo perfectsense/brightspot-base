@@ -1,4 +1,6 @@
 {
+	"_template" : "components/list-promo",
+
 	"heading" : "1 Image with title, text, and CTA",
 
 	"listItems" : [

@@ -1,5 +1,7 @@
 {
 
+	"_template" : "components/list-promo",
+
 	"heading" : "3 items with one items with image and extra text",
 
 	"listItems" : [

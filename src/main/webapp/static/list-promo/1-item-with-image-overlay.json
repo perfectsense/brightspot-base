@@ -1,4 +1,6 @@
 {
+	"_template" : "components/list-promo",
+
 	"heading" : "Image with Overlay",
 
 	"listItems" : [

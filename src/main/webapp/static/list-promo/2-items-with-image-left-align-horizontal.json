@@ -1,4 +1,6 @@
 {
+	"_template" : "components/list-promo",
+
 	"options" : {
 		"modifierClass" : "image-50-width",
 		"horizontalSplit" : "half"

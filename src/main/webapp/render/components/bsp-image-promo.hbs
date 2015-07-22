@@ -16,11 +16,13 @@
 				<div class="bsp-column-{{../options.horizontalSplit}}">
 
 					<div class="bsp-image-promo-image">
-						<a href="{{imgLink}}"><img src="{{imgSrc}}" alt="{{imgAlt}}" /></a>
+
+						{{> common/link image }}
+
 						<ul class="bsp-image-promo-links">
-							{{#links}}
-							<li><a href="{{link}}">{{text}}</a></li>
-							{{/links}}
+							{{#promoLinks}}
+								<li>{{> common/link }}</li>
+							{{/promoLinks}}
 						</ul>
 					</div>
 

@@ -1,4 +1,6 @@
 {
+	"_template" : "components/list-promo",
+
 	"heading" : "2 items with image, title, link and description",
 
 	"listItems" : [

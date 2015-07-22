@@ -1,4 +1,6 @@
 {
+	"_template" : "components/bsp-gallery-module",
+
 	"options" : {
 		"carouselDots" : true
 	},
@@ -6,13 +8,138 @@
 	"galleryTitle" : "7 slides, with dots, no thumbs",
 
 	"gallerySlides" : [
-		{ "slideImage" : "/assets/images/1200x400.png" },
-		{ "slideImage" : "/assets/images/1200x400.png" },
-		{ "slideImage" : "/assets/images/1200x400.png" },
-		{ "slideImage" : "/assets/images/1200x400.png" },
-		{ "slideImage" : "/assets/images/1200x400.png" },
-		{ "slideImage" : "/assets/images/1200x400.png" },
-		{ "slideImage" : "/assets/images/1200x400.png" },
-		{ "slideImage" : "/assets/images/1200x400.png" }
+		{ 
+			"_template" : "components/image-promo",
+
+			"images" : [
+				{ 
+					"imgSrc" 	: "/assets/images/1200x400.png",
+					"imgAlt" 	: "textAlt",
+					"imgLink" 	: "#",
+					
+					"links" : [
+						{
+							"link" : "#",
+							"text" : "Bacon ipsum"
+						}
+					]
+				}
+			]
+
+		},
+		{ 
+			"_template" : "components/image-promo",
+
+			"images" : [
+				{ 
+					"imgSrc" 	: "/assets/images/1200x400.png",
+					"imgAlt" 	: "textAlt",
+					"imgLink" 	: "#",
+					
+					"links" : [
+						{
+							"link" : "#",
+							"text" : "Bacon ipsum"
+						}
+					]
+				}
+			]
+
+		},
+		{ 
+			"_template" : "components/image-promo",
+
+			"images" : [
+				{ 
+					"imgSrc" 	: "/assets/images/1200x400.png",
+					"imgAlt" 	: "textAlt",
+					"imgLink" 	: "#",
+					
+					"links" : [
+						{
+							"link" : "#",
+							"text" : "Bacon ipsum"
+						}
+					]
+				}
+			]
+
+		},
+		{ 
+			"_template" : "components/image-promo",
+
+			"images" : [
+				{ 
+					"imgSrc" 	: "/assets/images/1200x400.png",
+					"imgAlt" 	: "textAlt",
+					"imgLink" 	: "#",
+					
+					"links" : [
+						{
+							"link" : "#",
+							"text" : "Bacon ipsum"
+						}
+					]
+				}
+			]
+
+		},
+		{ 
+			"_template" : "components/image-promo",
+
+			"images" : [
+				{ 
+					"imgSrc" 	: "/assets/images/1200x400.png",
+					"imgAlt" 	: "textAlt",
+					"imgLink" 	: "#",
+					
+					"links" : [
+						{
+							"link" : "#",
+							"text" : "Bacon ipsum"
+						}
+					]
+				}
+			]
+
+		},
+		{ 
+			"_template" : "components/image-promo",
+
+			"images" : [
+				{ 
+					"imgSrc" 	: "/assets/images/1200x400.png",
+					"imgAlt" 	: "textAlt",
+					"imgLink" 	: "#",
+					
+					"links" : [
+						{
+							"link" : "#",
+							"text" : "Bacon ipsum"
+						}
+					]
+				}
+			]
+
+		},
+		{ 
+			"_template" : "components/image-promo",
+
+			"images" : [
+				{ 
+					"imgSrc" 	: "/assets/images/1200x400.png",
+					"imgAlt" 	: "textAlt",
+					"imgLink" 	: "#",
+					
+					"links" : [
+						{
+							"link" : "#",
+							"text" : "Bacon ipsum"
+						}
+					]
+				}
+			]
+
+		}
 	]
 }

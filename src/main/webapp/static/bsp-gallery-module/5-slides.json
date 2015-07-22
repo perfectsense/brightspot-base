@@ -1,5 +1,5 @@
 {
-	"_template" : "components/bsp-article",
+	"_template" : "components/bsp-gallery-module",
 
 	"options" : {
 		"carouselDots" : false
@@ -11,7 +11,7 @@
 		{ 
 			"_template" : "common/image",
 
-			"attributes" : {
+			"attributes" : {				
 				"src" : "/assets/images/1200x400.png"
 			}
 		},

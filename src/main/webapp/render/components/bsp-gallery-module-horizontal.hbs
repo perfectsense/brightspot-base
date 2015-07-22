@@ -28,7 +28,9 @@
 	    
 	    }'>
 			{{#gallerySlides}}
-				<div class="bsp-carousel-slide"><img alt="" src="{{slideImage}}" /></div>
+				<div class="bsp-carousel-slide">
+					{{> (lookup . '_template') }}
+				</div>
 			{{/gallerySlides}}
 		</div>
 

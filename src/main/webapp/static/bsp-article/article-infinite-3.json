@@ -1,4 +1,6 @@
 {
+	"_template" : "components/bsp-article",
+
 	"options" : {
 		"infinite" : true
 	},

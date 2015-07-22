@@ -1,4 +1,6 @@
 {
+	"_template" : "components/list-promo",
+
 	"listItems" : [
 		{ 
 			"imgSrc" : "/assets/images/800x450.png",
