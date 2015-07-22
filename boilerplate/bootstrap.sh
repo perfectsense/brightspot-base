@@ -23,7 +23,7 @@ dl() {
 }
 
 # download build files
-CONFIG_FILES=( bower.json Gruntfile.js package.json )
+CONFIG_FILES=( bower.json Gruntfile.js package.json .jshintrc )
 for i in "${CONFIG_FILES[@]}"
 do
 	dl $BOILERPLATE_DIR/$i $i
