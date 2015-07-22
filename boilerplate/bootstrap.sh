@@ -23,11 +23,12 @@ dl() {
 }
 
 # download build files
-CONFIG_FILES=( bower.json Gruntfile.js package.json .jshintrc )
+CONFIG_FILES=( bower.json Gruntfile.js package.json )
 for i in "${CONFIG_FILES[@]}"
 do
 	dl $BOILERPLATE_DIR/$i $i
 done 
+dl .jshintrc
 
 # download spec runner files
 mkdir -p $SPEC_PLUGINS_DIR
