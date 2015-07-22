@@ -5,7 +5,7 @@
 
 <div class="bsp-site-wrapper">
 
-	<div data-bsp-template data-bsp-template-options='{ "template": "common/header", "dataUrl": "/static/data/header.json" }'></div>
+	<div data-bsp-template data-bsp-template-options='{ "template": "components/bsp-site-header", "dataUrl": "/static/bsp-site-header/logo-extra-menu-social.json" }'></div>
 
 	<div class="bsp-site">
 
@@ -73,7 +73,7 @@
 
 	</div>
 
-	<div data-bsp-template data-bsp-template-options='{ "template": "common/footer", "dataUrl": "/static/data/footer.json" }'></div>
+	<div data-bsp-template data-bsp-template-options='{ "template": "components/bsp-site-footer", "dataUrl": "/static/bsp-site-footer/standard.json" }'></div>
 
 </div>
 

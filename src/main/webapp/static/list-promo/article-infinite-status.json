@@ -7,19 +7,19 @@
 
 	"listItems" : [
 		{ 
-			"link" : "article.jsp",
+			"link" : "/static/bsp-article/article-infinite-1.jsp",
 			"linkText" : "1111 ipsum dolor amet turducken jowl shankle, cupim" 
 		},
 		{ 
-			"link" : "article2.jsp",
+			"link" : "/static/bsp-article/article-infinite-3.jsp",
 			"linkText" : "22222 ipsum dolor amet turducken jowl shankle, cupim" 
 		},
 		{ 
-			"link" : "article3.jsp",
+			"link" : "/static/bsp-article/article-infinite-3.jsp",
 			"linkText" : "33333 pork loin landjaeger pork chop t-bone, shank" 
 		},
 		{ 
-			"link" : "article4.jsp",
+			"link" : "/static/bsp-article/article-infinite-4.jsp",
 			"linkText" : "44444 ipsum dolor amet turducken jowl shankle, cupim" 
 		}
 	],

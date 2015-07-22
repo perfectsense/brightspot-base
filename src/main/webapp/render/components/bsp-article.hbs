@@ -1,0 +1,65 @@
+<div class="bsp-article-wrapper {{#if nextArticle}}bsp-infinite-load-wrapper{{/if}}" {{#if nextArticle}}data-bsp-infinite-content{{/if}}>
+
+	<div class="bsp-article {{#if nextArticle}}bsp-infinite-load-item{{/if}}" {{#if nextArticle}}data-bsp-infinite-load-item-url="{{permalink}}"{{/if}}>
+
+		<ul class="bsp-share-links" data-bsp-share data-bsp-share-options='
+		{
+			"description":"{{sharing.description}}",
+			"image":"{{sharing.image}}",
+			"title":"{{sharing.title}}",
+			"url":"{{permalink}}",
+			"redirectUrl":"{{permalink}}",
+			"iconClass":"icon", 
+			"serviceProps":{
+				"facebook":{"appId":"{{sharing.facebookId}}"}
+			}
+		}'>
+			{{#each sharing.services}}
+				<li class="bsp-{{this}}-share"></li>
+		    {{/each}}
+		</ul>
+
+		<h1 class="bsp-article-title">{{title}}</h1>
+
+		{{#if subTitle}}
+			<h3 class="bsp-article-subtitle">{{subTitle}}</h1>
+		{{/if}}
+
+		<div class="bsp-meta-data">
+			{{#if authors}}
+		  		<div class="bsp-meta-author">By {{#each authors}}{{#unless @first}}, {{/unless}}{{> common/link link}}{{/each}}</div>
+			{{/if}}
+			{{#if publishDate}}
+				<div class="bsp-meta-date">{{publishDate}}</div>
+			{{/if}}
+		</div>
+
+		{{#if leadImage}}
+		<div class="bsp-article-lead-img">
+			{{> common/image leadImage}}
+		</div>
+		{{/if}}
+
+		<div class="bsp-article-content">
+			{{{articleContent}}}
+		</div>
+
+		<div class="bsp-tags">
+			<ul class="bsp-tag-list">
+
+				{{#tags}}
+					<li>{{> common/link }}</li>
+				{{/tags}}
+
+			</ul>
+		</div>
+
+	</div>
+
+</div>
+
+{{#with nextArticle}}
+	<div class="bsp-article-load-more">
+		{{> common/link class="bsp-infinite-load-trigger"}}
+	</div>
+{{/with}}
