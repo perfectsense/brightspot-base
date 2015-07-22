@@ -6,7 +6,9 @@ import Handlebars from 'handlebars';
 export default {
     defaults: {
         dataUrl: false,
+        // we skip any partials that have the "lookup" sub expression, as there will be no data to grab
         partialsRegexp: /\{\{>\s(?!\(lookup)+([^\s]+)[\S\s]+?\}\}/g, 
+        // if we had any partials compiled in for dynamic use, remove these statements, so they aren't run with no data
         removeCompileRegexp: /\{\{>\s+([^\s]+)[\S\s]compile\s?\}\}/g,
         templatePath: '/render/',
         templateExtension: '.hbs'
