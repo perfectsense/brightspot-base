@@ -2,6 +2,6 @@
   "name": "project-name",
   "version": "0.0.1",
   "devDependencies": {
-    "bsp-grunt": "perfectsense/brightspot-js-grunt#2.0.1"
+    "bsp-grunt": "perfectsense/brightspot-js-grunt#7cfd57de697b32e093af807391e4653677909510"
   }
 }
