@@ -12,8 +12,6 @@ export default {
 
     data: false,
 
-    fetchingTemplate: false,
-
     fetchingData: false,
 
     // we need to do this dynamically. Rusty, thoughts?
@@ -24,8 +22,6 @@ export default {
             content: '{{#each this}}{{@key}}{{#if this}}="{{this}}"{{/if}}{{/each}}'
         }
     },
-
-    partialsAllFound: false,
 
     template: false,
 
@@ -42,13 +38,13 @@ export default {
     },
 
     fetchData() {
-        var fakeDataGet;
-        var fakeResolveData = {};
         var self = this;
 
+        // grab the data from the URL we were given
         if (this.options.dataUrl && !this.fetchingData) {
             this.fetchingData = $.get(this.options.dataUrl);
 
+            // once done, go through and find the templates we need. They are all essentially "partials"
             this.fetchingData.then((data) => {
                 self.data = data;
                 self.findPartials();
@@ -56,6 +52,8 @@ export default {
         }
     },
 
+    // runs recursive search through the data object that comes back. Picks up any _templates that 
+    // are specified and adds them to the matches object. Then loads them. 
     findPartials() {
         var self = this;
         var matches = new Set();
@@ -85,6 +83,8 @@ export default {
         } 
     },
 
+    // takes the list of partials, gets them, and when we are done getting all of them
+    // registers them with Handlebars
     loadPartials(partials) {
         var promises = {};
 
@@ -114,6 +114,7 @@ export default {
         });
     },
 
+    // register all the partials we have found and not registered yet. When done, compile
     registerPartials() {
         var self = this;
 
@@ -126,6 +127,7 @@ export default {
         self.compileTemplate();
     },
 
+    // the actual "template" is the top level template that is defined in the JSON. Compile that sucker
     compileTemplate() {
         var self = this;
 
