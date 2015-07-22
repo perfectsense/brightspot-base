@@ -1,7 +1,7 @@
 {
   "name": "brightspot-base",
   "version": "0.0.1",
-  "dependencies": {
+  "peerDependencies": {
     "babel-core": "^5.6.14",
     "bsp-grunt": "perfectsense/brightspot-js-grunt#7cfd57de697b32e093af807391e4653677909510",
     "es6-module-loader": "0.16.6",
