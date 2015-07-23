@@ -1,6 +1,8 @@
 <div class="bsp-table">
 	<h2>{{title}}</h2>
-	<table{{#if options}}{{> components/bsp-table-options this}}{{/if}}>
+	{{!-- Earl, I took out the partial, as we are currently redoing the way we load partials and I wanted
+	      your code to just "work" vs breaking as we were messing with it --}}
+	<table{{#with options}}{{#if columnAlignment}}{{#if tableWidth}} class="{{tableWidth}}-{{columnAlignment}}"{{/if}}{{/if}}{{/with}}>
 		{{#if headings}}
 			<thead>
 				{{#each headings}}

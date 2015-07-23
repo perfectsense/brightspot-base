@@ -14,6 +14,8 @@
 			<div class="bsp-row">
 				<div class="bsp-column-main">
 
+					<!-- Earl, not we removed the template here and are instead pulling it through the JSON at the top _template -->
+
 					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/data/table-standard.json" }'></div>
 					
 				</div>
