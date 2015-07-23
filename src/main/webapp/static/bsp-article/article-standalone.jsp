@@ -9,32 +9,7 @@
 
 	<div class="bsp-site">
 
-		<div class="bsp-container">
-			
-			<div class="bsp-row">
-				<div class="bsp-column-scrolling">
-
-					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/bsp-article/article-standalone.json" }'></div>
-
-				</div>
-
-				<div class="bsp-column-fixed-wrap" data-bsp-toggle-item>
-
-					<div class="bsp-column-fixed toggle-item">
-
-						<div class="bsp-trigger-fixed-column toggle-trigger">
-							<a class="toggle-trigger-link-out" href="#">Open</a>
-							<a class="toggle-trigger-link-in" href="#">Close</a>
-						</div>
-
-						<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/5-items.json" }'></div>
-
-					</div>
-
-				</div>
-			</div>
-
-		</div>
+		<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/bsp-article/article-standalone.json" }'></div>
 
 	</div>
 
