@@ -9,137 +9,53 @@
 
 	"gallerySlides" : [
 		{ 
-			"_template" : "components/image-promo",
+			"_template" : "common/image",
 
-			"images" : [
-				{ 
-					"imgSrc" 	: "/assets/images/1200x400.png",
-					"imgAlt" 	: "textAlt",
-					"imgLink" 	: "#",
-					
-					"links" : [
-						{
-							"link" : "#",
-							"text" : "Bacon ipsum"
-						}
-					]
-				}
-			]
-
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
 		},
 		{ 
-			"_template" : "components/image-promo",
+			"_template" : "common/image",
 
-			"images" : [
-				{ 
-					"imgSrc" 	: "/assets/images/1200x400.png",
-					"imgAlt" 	: "textAlt",
-					"imgLink" 	: "#",
-					
-					"links" : [
-						{
-							"link" : "#",
-							"text" : "Bacon ipsum"
-						}
-					]
-				}
-			]
-
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
 		},
 		{ 
-			"_template" : "components/image-promo",
+			"_template" : "common/image",
 
-			"images" : [
-				{ 
-					"imgSrc" 	: "/assets/images/1200x400.png",
-					"imgAlt" 	: "textAlt",
-					"imgLink" 	: "#",
-					
-					"links" : [
-						{
-							"link" : "#",
-							"text" : "Bacon ipsum"
-						}
-					]
-				}
-			]
-
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
 		},
 		{ 
-			"_template" : "components/image-promo",
+			"_template" : "common/image",
 
-			"images" : [
-				{ 
-					"imgSrc" 	: "/assets/images/1200x400.png",
-					"imgAlt" 	: "textAlt",
-					"imgLink" 	: "#",
-					
-					"links" : [
-						{
-							"link" : "#",
-							"text" : "Bacon ipsum"
-						}
-					]
-				}
-			]
-
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
 		},
 		{ 
-			"_template" : "components/image-promo",
+			"_template" : "common/image",
 
-			"images" : [
-				{ 
-					"imgSrc" 	: "/assets/images/1200x400.png",
-					"imgAlt" 	: "textAlt",
-					"imgLink" 	: "#",
-					
-					"links" : [
-						{
-							"link" : "#",
-							"text" : "Bacon ipsum"
-						}
-					]
-				}
-			]
-
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
 		},
 		{ 
-			"_template" : "components/image-promo",
+			"_template" : "common/image",
 
-			"images" : [
-				{ 
-					"imgSrc" 	: "/assets/images/1200x400.png",
-					"imgAlt" 	: "textAlt",
-					"imgLink" 	: "#",
-					
-					"links" : [
-						{
-							"link" : "#",
-							"text" : "Bacon ipsum"
-						}
-					]
-				}
-			]
-
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
 		},
 		{ 
-			"_template" : "components/image-promo",
+			"_template" : "common/image",
 
-			"images" : [
-				{ 
-					"imgSrc" 	: "/assets/images/1200x400.png",
-					"imgAlt" 	: "textAlt",
-					"imgLink" 	: "#",
-					
-					"links" : [
-						{
-							"link" : "#",
-							"text" : "Bacon ipsum"
-						}
-					]
-				}
-			]
-
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
 		}
 	]
 }
