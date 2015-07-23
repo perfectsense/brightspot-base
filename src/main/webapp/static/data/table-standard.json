@@ -1,5 +1,9 @@
 {
+	"_template" : "components/table",
+
 	"options" : {
+		"_template" : "components/bsp-table-options",
+
 		"columnAlignment" : "left-aligned",
 		"tableWidth" : "full-width"
 	},

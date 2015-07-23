@@ -5,26 +5,22 @@
 
 <div class="bsp-site-wrapper">
 
-	<div data-bsp-template data-bsp-template-options='{ "template": "common/header", "dataUrl": "/static/data/header.json" }'></div>
+	<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/bsp-site-header/logo-extra-menu-social.json" }'></div>
 
 	<div class="bsp-site">
 
 		<div class="bsp-container">
 
 			<div class="bsp-row">
-				<div class="bsp-column-scrolling">
+				<div class="bsp-column-main">
 
-					<div data-bsp-template data-bsp-template-options='{ "template": "components/table", "dataUrl": "/static/data/table-standard.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/data/table-standard.json" }'></div>
 					
 				</div>
 
-				<div class="bsp-column-fixed-wrap">
+				<div class="bsp-column-aside">
 
-					<div class="bsp-column-fixed">
-
-						<div data-bsp-template data-bsp-template-options='{ "template": "components/list-promo", "dataUrl": "/static/list-promo/6-items.json" }'></div>
-
-					</div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/6-items.json" }'></div>
 
 				</div>
 			</div>
@@ -33,7 +29,7 @@
 
 	</div>
 
-	<div data-bsp-template data-bsp-template-options='{ "template": "common/footer", "dataUrl": "/static/data/footer.json" }'></div>
+	<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/bsp-site-footer/standard.json" }'></div>
 
 </div>
 
