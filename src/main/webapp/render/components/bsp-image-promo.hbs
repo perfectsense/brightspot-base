@@ -17,12 +17,14 @@
 
 					<div class="bsp-image-promo-image">
 
-						{{> common/link image }}
+						{{#with image}}
+							{{> (lookup . '_template') }}
+						{{/with}}
 
 						<ul class="bsp-image-promo-links">
-							{{#promoLinks}}
-								<li>{{> common/link }}</li>
-							{{/promoLinks}}
+							{{#each promoLinks}}
+								<li>{{> (lookup . '_template') }}</li>
+							{{/each}}
 						</ul>
 					</div>
 

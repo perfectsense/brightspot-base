@@ -27,7 +27,7 @@
 							<a class="toggle-trigger-link-in" href="#">Close</a>
 						</div>
 
-						<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/list-promo/article-infinite-status.json" }'></div>
+						<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/bsp-list-promo/article-infinite-status.json" }'></div>
 
 					</div>
 

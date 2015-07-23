@@ -1,0 +1,71 @@
+{
+	"_template" : "components/bsp-list-promo",
+
+	"options" : {
+		"modifierClass" : "bsp-infinite-load-status"
+	},
+
+	"heading" : "Top Articles",
+
+	"listItems" : [
+		{ 
+			"link" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "/static/bsp-article/article-infinite-1.jsp",
+					"title" : "Link Title"
+				},
+
+				"text" : "1111 ipsum dolor amet turducken jowl shankle, cupim"
+
+			}
+		},
+		{ 
+			"link" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "/static/bsp-article/article-infinite-2.jsp",
+					"title" : "Link Title"
+				},
+
+				"text" : "2222 ipsum dolor amet turducken jowl shankle, cupim"
+
+			}
+		},
+		{ 
+			"link" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "/static/bsp-article/article-infinite-3.jsp",
+					"title" : "Link Title"
+				},
+
+				"text" : "3333 ipsum dolor amet turducken jowl shankle, cupim"
+
+			}
+		},
+		{ 
+			"link" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "/static/bsp-article/article-infinite-4.jsp",
+					"title" : "Link Title"
+				},
+
+				"text" : "4444 ipsum dolor amet turducken jowl shankle, cupim"
+
+			}
+		}
+	],
+
+	"ctaText" : "Moar Articles",
+	"ctaLink" : "#"
+}

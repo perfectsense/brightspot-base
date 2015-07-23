@@ -7,28 +7,30 @@
 
 		<div class="bsp-list-promo">
 			<ul class="bsp-list-promo-list {{#if options.horizontalSplit}}bsp-row{{/if}}">
-				{{#listItems}}
+				{{#each listItems}}
 					<li class="{{#if ../options.horizontalSplit}}bsp-column-{{/if}}{{../options.horizontalSplit}} {{#if imgAlign}}image-align-{{/if}}{{imgAlign}}">
-						{{#if imgSrc}}
+
+						{{#with image}}
 							<div class="bsp-list-promo-image">
-								<a href="{{link}}"><img src="{{imgSrc}}" alt="{{imgAlt}}" /></a>
+								{{> (lookup . '_template') }}
 							</div>
-						{{/if}}
+						{{/with}}
+
 						<div class="bsp-list-promo-text">
-							{{#if title}}
-								<div class="bsp-list-promo-title"><a href="{{link}}">{{title}}</a></div>
-							{{/if}}
+							{{#with title}}
+								<div class="bsp-list-promo-title">{{> (lookup . '_template') }}</div>
+							{{/with}}
 							
 							{{#if description}}
 								<div class="bsp-list-promo-desc">{{{description}}}</div>
 							{{/if}}
 
-							{{#if linkText}}
-								<div class="bsp-list-promo-link"><a href="{{link}}">{{linkText}}</a></div>
-							{{/if}}
+							{{#with link}}
+								<div class="bsp-list-promo-link">{{> (lookup . '_template') }}</div>
+							{{/with}}
 						</div>
 					</li>
-				{{/listItems}}
+				{{/each}}
 			</ul>
 		</div>
 

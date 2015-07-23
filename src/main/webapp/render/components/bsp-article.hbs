@@ -34,11 +34,11 @@
 			{{/if}}
 		</div>
 
-		{{#if leadImage}}
+		{{#with leadImage}}
 		<div class="bsp-article-lead-img">
-			{{> common/image leadImage}}
+			{{> (lookup . '_template') }}
 		</div>
-		{{/if}}
+		{{/with}}
 
 		<div class="bsp-article-content">
 			{{{articleContent}}}
@@ -47,9 +47,9 @@
 		<div class="bsp-tags">
 			<ul class="bsp-tag-list">
 
-				{{#tags}}
-					<li>{{> common/link }}</li>
-				{{/tags}}
+				{{#each tags}}
+					<li>{{> (lookup . '_template') }}</li>
+				{{/each}}
 
 			</ul>
 		</div>
@@ -60,6 +60,6 @@
 
 {{#with nextArticle}}
 	<div class="bsp-article-load-more">
-		{{> common/link class="bsp-infinite-load-trigger"}}
+		{{> (lookup . '_template') class="bsp-infinite-load-trigger"}}
 	</div>
 {{/with}}
