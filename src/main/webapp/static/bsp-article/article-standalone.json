@@ -96,8 +96,6 @@
 		],
 
 		"leadImage" : { 
-			"_template" : "common/image",
-
 			"attributes" : {
 				"alt" : "Bacon meatball",
 				"src" : "/assets/images/800x450.png"
