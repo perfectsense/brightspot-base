@@ -8,6 +8,7 @@ SPEC_DIR=spec
 SPEC_PLUGINS_DIR=$SPEC_DIR/unit/plugins
 STYLES_DIR=$ASSETS_DIR/styles
 STYLES_VARIABLES_DIR=$STYLES_DIR/variables
+STYLEGUIDE_DIR=styleguide
 TEMPLATE_DIR=$SRC_DIR/render
 
 # download a file
@@ -60,6 +61,11 @@ for i in "${STYLES_VARIABLES_FILES[@]}"
 do
 	dl $STYLES_VARIABLES_DIR/$i
 done 
+
+# download styleguide files
+mkdir styleguide
+dl $BOILERPLATE_DIR/$STYLEGUIDE_DIR/index.html $STYLEGUIDE_DIR/index.html
+dl $BOILERPLATE_DIR/$STYLEGUIDE_DIR/server.js $STYLEGUIDE_DIR/server.js
 
 # create template directory structure
 mkdir -p $TEMPLATE_DIR/common

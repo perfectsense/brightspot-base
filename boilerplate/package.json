@@ -4,6 +4,7 @@
   "devDependencies": {
     "babel-core": "^5.6.14",
     "bsp-grunt": "perfectsense/brightspot-js-grunt#7cfd57de697b32e093af807391e4653677909510",
+    "brightspot-base": "perfectsense/brightspot-base#0.0.3",
     "es6-module-loader": "0.16.6",
     "express": "^4.13.1",
     "jasmine-core": "^2.3.4",
@@ -14,6 +15,7 @@
     "lodash": "^3.9.3",
     "phantomjs": "^1.9.17",
     "phantomjs-polyfill": "0.0.1",
-    "systemjs": "^0.18.3"
+    "systemjs": "^0.18.3",
+    "xml2json": "^0.7.1"
   }
 }
