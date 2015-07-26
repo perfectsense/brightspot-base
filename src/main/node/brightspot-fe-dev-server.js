@@ -1,90 +1,68 @@
 /**
- * Brightspot front end development server 
+ * @todo lodash in package.json
  */
+var _ = require('lodash');
+var express = require('express');
 var fs = require('fs');
 var parser = require('xml2json');
-var express = require('express');
-var app = express();
-
-var checkDirExists = function(dir) {
-	if (!fs.existsSync(dir)) {
-		console.error('Directory %s not found', dir);
-		process.exit(1);
-	}
-	return true;
-};
-var checkFileExists = function(file) {
-	if (!fs.existsSync(file)) {
-		console.error('File %s not found', file);
-		process.exit(1);
-	}
-	return true;
-};
+var path = require('path');
 var targetNameFromPomXml = function(file) {
 	var xml = parser.toJson( fs.readFileSync(file), { object: true } );
 	return xml.project.artifactId + '-' + xml.project.version;
 };
-
+var defaults = {
+	brightSpotBaseRelPath: 'node_modules/brightspot-base',
+	pom: 'pom.xml',
+	wwwroot: 'styleguide',
+	srcRelPath: 'src/main/webapp',
+	host: 'localhost',
+	port: 3000
+};
 module.exports = {
 	listen: function(config) {
-		var pomFile = config.projectDir + '/pom.xml';
-		var targetName = targetNameFromPomXml(pomFile);
-		var targetDir = config.projectDir + '/target/' + targetName;
-		var host = 'localhost';
-		var port = 3000;
-		var srcRelPath = 'src/main/webapp';
-		var projectSrcDir = config.projectDir + '/' + srcRelPath;
-		var projectServerRoot = config.projectDir + '/styleguide';
-		var brightspotBaseServerRoot = config.projectDir + '/node_modules/brightspot-base';
+		var app = express();
+		var target;
 
-		checkDirExists(config.projectDir);
-		checkFileExists(pomFile);
-		checkDirExists(targetDir);
-		checkDirExists(projectSrcDir);
-		checkDirExists(projectServerRoot);
+		// merge config with defaults
+		config = _.extend({}, defaults, config);
 
-		if (typeof config.port === 'number') {
-			port = config.port;
-		}
-		if (typeof config.host === 'string') {
-			host = config.host;
+		// check project dir
+		if (!fs.existsSync(config.projectDir)) {
+			console.error('Project directory %s not specified or does not exist', config.projectDir);
+			process.exit(1);
 		}
 
-		/**
-		 * Look in the src for files under /assets or /render first.
-		 * If found, serve from there. If not, look in target and serve
-		 * from there if found. If not found there, serve a 404.
-		 */
-		app.get(/^\/(assets|render)\/(.*)$/, function(req, res, next) {
-			var fileRelPath = req.params[0] + '/' + req.params[1];
-			var projectFile = projectSrcDir + '/' + fileRelPath;
-			var targetFile = targetDir + '/' + fileRelPath;
-			if (fs.existsSync(projectFile))
-			{
-				console.log('Serving project file: ', projectFile);
-				res.send( fs.readFileSync(projectFile) );
-			}
-			else if (fs.existsSync(targetFile))
-			{
-				console.log('Serving target file: ', targetFile);
-				res.send( fs.readFileSync(targetFile) );
-			}
-			else
-			{
-				res.sendStatus(404);
-			}
-		});
+		// configure/check target path
+		config.targetPath = config.projectDir + '/target/' + targetNameFromPomXml( config.projectDir + '/' + config.pom );
+		if (!fs.existsSync(config.targetPath)) {
+			console.error('Target dir %s does not exist', config.targetRelPath);
+			process.exit(1);
+		}
 
-		/**
-		 * @todo should set this up to serve Brightspot Base styleguide files
-		 * if local styleguide files not found
-		 */
-		app.use( express.static(projectServerRoot) );
+		// configure/check brightspot base path
+		config.brightspotBasePath = config.projectDir + '/' + config.brightSpotBaseRelPath + '/' + config.wwwroot;
+		if (!fs.existsSync(config.brightspotBasePath)) {
+			console.error('Target dir %s does not exist', config.brightspotBasePath);
+			process.exit(1);
+		}
 
-		app.listen(port, host, function() {
+		// server root looks for files in project first, then in brightspot base
+		app.use( express.static(config.projectDir + '/' + config.wwwroot) );
+		app.use( express.static(config.brightspotBasePath) );
+
+		// assets/render/static looks for file in project first, then in target
+		app.use( '/assets', express.static( config.projectDir + '/' + config.srcRelPath + '/assets') );
+		app.use( '/assets', express.static( config.targetPath + '/assets') );
+		app.use( '/render', express.static( config.projectDir + '/' + config.srcRelPath + '/render') );
+		app.use( '/render', express.static( config.targetPath + '/render') );
+		app.use( '/static', express.static( config.projectDir + '/' + config.srcRelPath + '/static') );
+		app.use( '/static', express.static( config.targetPath + '/static') );
+
+		// start the server
+		app.listen(config.port, config.host, function() {
 			console.log('BRIGHTSPOT FRONT END DEVELOPMENT SERVER');
 			console.log('=======================================');
-			console.log('Listening on %s:%s', host, port);
+			console.log('Listening on %s:%s', config.host, config.port);
 		});
 	}
 };
