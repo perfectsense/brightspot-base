@@ -2,124 +2,133 @@ import $ from 'jquery';
 import Handlebars from 'handlebars';
 
 export default {
+
     defaults: {
         dataUrl: false,
         partialsRegexp: /\{\{>\s(?!\(lookup)+([^\s]+)[\S\s]+?\}\}/g,
         templateKey: '_template',
+        dataKey: '_dataUrl',
         templatePath: '/render/',
         templateExtension: '.hbs',
         templateName: ''
     },
 
-    data: false,
-    fetchingTemplate: false,
-    fetchingData: false,
-    partials: {},
-    partialsAllFound: false,
-    template: false,
-    fetchingJson: false,
-    templateFetchPromises: 0,
+    templatePromises: 0,
+
     templateRecursion: 0,
 
     init($el, options) {
-        this.$el = $el;
-        this.options = $.extend(true, {}, this.defaults, options);
-        return this;
-    },
-
-    fetch(dataUrl = this.options.dataUrl) {
         var self = this;
 
-        self.done = new $.Deferred();
+        self.$el = $el;
+        self.options = $.extend(true, {}, self.defaults, options);
 
-        self.fetchData();
+        self.partialMatches = new Set();
 
-        return self.done.promise();
-    },
+        self.partials = {};
 
-    // goes and gets the initial JSON which kicks everything off
-    fetchData() {
-        var self = this;
-        if (this.options.dataUrl) {
+        var fullDataReady = self._createFullJSON();
 
-            this.fetchingData = $.get(this.options.dataUrl);
+        fullDataReady.done(() => {
 
-            this.fetchingData.then((data) => {
-                self.data = data;
+            self.partialMatches = self._getTemplatesFromJSON();
 
-                // we have the template name
-                self.templateName = self.data[self.options.templateKey];
+            self.loadingJSONPartials = new $.Deferred();
 
-                // lets go get it
-                self.fetchTemplate();
+            self._loadPartials(self.partialMatches, self.loadingJSONPartials);
+
+            self.loadingJSONPartials.done(() => {
+
+                $.each(self.partials, function(key, value) {
+                    if (!self.partials[key].checked) {
+
+                        self._findPartialsInTemplate(self.partials[key].content, key);
+
+                    }
+                });
+
             });
-        }
-    },
-
-    fetchTemplate() {
-        var self = this;
-
-        this.fetchingTemplate = $.get(this.templateUrl(self.templateName));
-
-        // once we retreive the main template, we add it to the list of partials. 
-        this.fetchingTemplate.then((template) => {
-
-            self.template = template;
-
-            self.partials[self.templateName] = {
-                checked: true,
-                registered: false,
-                content: template
-            };
 
         });
 
-        // we also need to go through the JSON and find the other partials in there
-        this.findPartialsInJSON();
+        self.handlebarsReady = $.Deferred();
+
+        self.handlebarsReady.done(() => {
+            self._render();
+        });
+
+        // need to find a better way around this hack
+        function checkPartials() {
+            self._checkPartials();
+        }
+
+        checkPartials();
+
+        self.checkPartialInterval = setInterval(checkPartials, 100);
+
+        return self;
     },
 
-
-    findPartialsInJSON() {
+    _checkPartials() {  
         var self = this;
 
-        var matches = new Set();
+        var isEmpty = $.isEmptyObject(self.partials);
+        var unchecked = 0;
 
-        function recursiveSearch(theObject) {
-            for (var key in theObject)
-            {
-                if (typeof theObject[key] == "object" && theObject[key] !== null) {
-                    recursiveSearch(theObject[key]);
+        if (!isEmpty) {
+            $.each(self.partials, function() {
+                if(!this.checked) {
+                    unchecked++;
                 }
-                else {
-                    if(theObject[self.options.templateKey]) {
-                        if (!self.partials[theObject[self.options.templateKey]]) {
-                            matches.add(theObject[self.options.templateKey]);
-                        }
-                    }
-                }
+            });
+            if(unchecked === 0) {
+                clearInterval(self.checkPartialInterval);
+                self._registerPartials();
+            }
+        } 
+        
+    },
+
+    _findPartialsInTemplate(template = '', partialsKey = '') {
+        var matches = new Set();
+        var match = null;
+        var self = this;
+
+        var currentTemplateDone = $.Deferred();
+
+         // go through the template and if you find any new partials, add them to the list
+        while(match = self.options.partialsRegexp.exec(template)) { // jshint ignore:line
+            if (!self.partials[match[1]]) {
+                matches.add(match[1]);
             }
         }
 
-        // we do a recursive search through the JSON object and pull put and templates we found
-        // add them to a list of matches and load them with a deferred that is called when thy are loaded
-        recursiveSearch(self.data);
-
-        self.loadingJSONPartials = new $.Deferred();
-
+        // if we found matches, load them, but also keep track of how many times we have fetched
         if (matches.size) {
-           this.loadPartials(matches, self.loadingJSONPartials);
-        } 
+            self.templatePromises++;
+            self._loadPartials(matches, currentTemplateDone);
+        } else {
+            self.partials[partialsKey].checked = true;
+        }
 
-        // once the partials are loaded and they are in our partials object
-        // we will go through those partials and try to find templates in each of them
-        self.loadingJSONPartials.done(function() {
+        // when the current template is done, which means all the partials for it have been loaded
+        // see if there are promises left. If there aren't it means we are done loading and we 
+        // can iterate back through to see if we need get THEIR embedded partials
+        currentTemplateDone.done(function() {
 
-            $.each(self.partials, function() {
+            self.partials[partialsKey].checked = true;
 
-                self.findPartialsInTemplate(this.content);
-                this.checked = true;
+            self.templatePromises = self.templatePromises - 1;
 
-            });
+            if(self.templatePromises === 0) {
+
+                $.each(self.partials, function(key, value) {
+                    if (!self.partials[key].checked) {
+                        self._findPartialsInTemplate(self.partials[key].content, key);
+                    }
+                });
+
+            }
 
         });
 
@@ -128,14 +137,16 @@ export default {
 
     // helper function that loads partials and adds them into our global object
     // once all the partials in the list are loaded it resolves the promise
-    loadPartials(partials, promise) {
+    _loadPartials(partials, promise) {
         var self = this;
         var promises = {};
         var promisesResolved = 0;
 
         partials.forEach((value) => {
+
+            // try to make sure we do not load the same partial multiple times if not necessary
             if (!promises[value] && !self.partials[value]) {
-                promises[value] = $.get( self.templateUrl(value) );
+                promises[value] = $.get( self._templateUrl(value) );
 
                 promises[value].then((template) => {
 
@@ -156,69 +167,150 @@ export default {
 
     },
 
+    _fetch(dataUrl) {
 
-    // recursive function that goes into a hbs template and finds all the specified partials
-    // and their partials, loads them all, and once everything is done, calls to register the partials
-    findPartialsInTemplate(template = '') {
-        var matches = new Set();
-        var match = null;
         var self = this;
-        // we keep a global count of how many templates we go through
-        self.templateRecursion++;
+        var fetching;
 
-        var currentTemplateDone = $.Deferred();
-
-        // go through the template and if you find any new partials, add them to the list
-        while(match = this.options.partialsRegexp.exec(template)) { // jshint ignore:line
-            if (!self.partials[match[1]]) {
-                matches.add(match[1]);
-            }
-        }
-
-        // if we found matches, load them, but also keep track of how many times we have fetched
-        if (matches.size) {
-            self.templateFetchPromises++;
-            this.loadPartials(matches, currentTemplateDone);
-        } else {
-            // if there are no matches, we are done with this template
-            self.templateRecursion--;
-        }
-
-        // when the current template is done, which means all the partials have been loaded
-        currentTemplateDone.done(function() {
-
-            // we are done with this template and done fetchings. 
-            self.templateFetchPromises--;
-            self.templateRecursion--;
-
-            // if we are done fetching all the templates and they are loaded in our partials object
-            // we go through them again to see if there any partials we missed
-            if(self.templateFetchPromises === 0) {
-                
-                $.each(self.partials, function() {
-
-                    // we also mark it checked so we won't check it again
-                    if(!this.checked) {
-                        self.findPartialsInTemplate(this.content);
-                        this.checked = true;
-                    }
-
-                });
-
-            }
-
-            // once we have gone through all the recursion, then register partials with handlebars and continue
-            if(self.templateRecursion === 0) {
-                self.registerPartials();
-            }
-
-        });
-
+        fetching = $.get(dataUrl);
+        
+        return fetching;
 
     },
 
 
-    registerPartials() {
+    _createFullJSON() {
+
+        var self = this;
+
+        var fullDataReady = $.Deferred();
+
+        var getData = self._fetch(self.options.dataUrl);
+
+        var dataToGet = new Set();
+
+        function recursiveGet() {
+
+            if(dataToGet.size === 0) {
+
+                fullDataReady.resolve();
+
+            } else {
+
+                dataToGet.forEach((value) => {
+
+                    var getData = self._fetch(value);
+
+                    getData.done((data) => {
+                        
+                        self.data = self._replaceUrlWithData(self.data, self.options.dataKey, value, data);
+
+                            dataToGet = new Set();
+
+                            self._recursiveSearch(self.data, self.options.dataKey, dataToGet);
+
+                            if (dataToGet.size) {
+                                recursiveGet();
+                            }
+                            else {
+                                fullDataReady.resolve();
+                            }
+                    });
+
+                });
+            }
+        }
+
+        getData.done((data) => {
+
+            self.data = data;
+
+            // go through the data and pull out and JSON we need to retrieve and make a set of values
+            self._recursiveSearch(self.data, self.options.dataKey, dataToGet);
+
+            // go through the data set, ajax in the actual JSON and refull
+            recursiveGet();
+
+        });
+
+        return fullDataReady;
+
+    },
+
+    _replaceUrlWithData(theObject, theKey, value, data) {
+        var self = this;
+
+        function recursiveReplace(theObject) {
+
+            for (var key in theObject) {
+
+                if (typeof theObject[key] == "object" && theObject[key] !== null) {
+
+                    for (var deepKey in theObject[key]) {
+
+                        if(theObject[key][deepKey][theKey] === value) {
+                            theObject[key][deepKey] = data;
+                        } else {
+                            recursiveReplace(theObject[key]);
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        recursiveReplace(theObject);
+
+        return theObject;
+
+    },
+
+    _recursiveSearch(theObject, theKey, matches) {
+        var self = this;
+
+        function recursiveSearch(theObject) {
+            for (var key in theObject)
+            {
+                if (typeof theObject[key] == "object" && theObject[key] !== null) {
+                    recursiveSearch(theObject[key]);
+                }
+                else {
+                     if(theObject[theKey]) {
+                        if (!matches[theObject[theKey]]) {
+                            matches.add(theObject[theKey]);
+                        }
+                    }
+                }
+            }
+        }
+
+        recursiveSearch(theObject);
+
+        return matches;
+    },
+
+
+    _getTemplatesFromJSON() {
+        var self = this;
+
+        var templates = new Set();
+
+        self._recursiveSearch(self.data, self.options.templateKey, templates);
+
+        return templates;
+    },
+
+    _templateUrl(templateName = '') {
+        var self = this;
+
+        return self.options.templatePath + templateName + self.options.templateExtension;
+    },
+
+
+    _registerPartials() {
         var self = this;
 
         $.each(self.partials, (key, value) => {
@@ -227,27 +319,23 @@ export default {
             }
         });
 
-        self.compileTemplate();
+        this._compileTemplate();
     },
 
-
-    compileTemplate() {
-        var self = this;
-    
-        self.template = Handlebars.compile(self.template);
-
-        this.done.resolve();
-    },
-
-    render() {
+    _compileTemplate() {
         var self = this;
 
-        this.fetchingData.then((data) => {
-            self.$el.html( self.template( data ) );
-        });
+        var mainTemplateName = self.data._template;
+        var mainTemplate = self.partials[mainTemplateName].content;
+
+        self.template = Handlebars.compile(mainTemplate);
+
+        self.handlebarsReady.resolve();
     },
 
-    templateUrl(templateName = '') {
-        return this.options.templatePath + templateName + this.options.templateExtension;
-    }
+    _render() {
+        var self = this;
+        self.$el.html( self.template( self.data ) );
+    },
+   
 };

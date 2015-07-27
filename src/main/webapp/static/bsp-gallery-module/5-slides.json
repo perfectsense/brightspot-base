@@ -9,115 +9,19 @@
 
 	"gallerySlides" : [
 		{ 
-			"_template" : "components/bsp-image-promo",
-
-			"images" : [
-				{ 
-					"image" : {
-
-						"_template" : "common/link",
-
-						"attributes" : {
-							"href"  : "imageLink",
-							"title" : "Link Title"
-						},
-
-						"image" : {
-
-							"_template" : "common/image",
-
-							"attributes" : {
-								"alt" : "Image",
-								"src" : "/assets/images/1200x400.png"
-							}
-						}
-						
-					},
-						
-					"promoLinks" : [
-						{
-							"_template" : "common/link",
-
-							"attributes" : {
-								"href"  : "promoLink",
-								"title" : "Link"
-							},
-
-							"text" : "Promo Link Text"
-						}
-					]
-				}
-			]
+			"_dataUrl" : "/static/common/image-1200x400.json"
+		},
+		{ 	
+			"_dataUrl" : "/static/bsp-list-promo/5-items.json"
+		},
+		{ 	
+			"_dataUrl" : "/static/common/link-with-1200x400-image.json"
 		},
 		{ 
-			"_template" : "components/bsp-list-promo",
-
-			"listItems" : [
-				{ 
-					"link" : {
-
-						"_template" : "common/link",
-
-						"attributes" : {
-							"href"  : "link",
-							"title" : "Link Title"
-						},
-
-						"text" : "8 Burning Questions Link"
-
-					}
-				},
-				{ 
-					"link" : {
-
-						"_template" : "common/link",
-
-						"attributes" : {
-							"href"  : "link",
-							"title" : "Link Title"
-						},
-
-						"text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
-
-					}
-				},
-				{ 
-					"link" : {
-
-						"_template" : "common/link",
-
-						"attributes" : {
-							"href"  : "link",
-							"title" : "Link Title"
-						},
-
-						"text" : "8 Burning Questions Link"
-
-					}
-				}
-			]
-
+			"_dataUrl" : "/static/common/image-1200x400.json"
 		},
 		{ 
-			"_template" : "common/image",
-
-			"attributes" : {				
-				"src" : "/assets/images/1200x400.png"
-			}
-		},
-		{ 
-			"_template" : "common/image",
-
-			"attributes" : {
-				"src" : "/assets/images/1200x400.png"
-			}
-		},
-		{ 
-			"_template" : "common/image",
-
-			"attributes" : {
-				"src" : "/assets/images/1200x400.png"
-			}
+			"_dataUrl" : "/static/common/image-1200x400.json"
 		}
 	]
 }

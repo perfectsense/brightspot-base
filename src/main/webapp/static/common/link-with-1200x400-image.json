@@ -1,0 +1,18 @@
+{
+	"_template" : "common/link",
+
+	"attributes" : {
+		"href"  : "http://localhost:8080/home.jsp",
+		"title" : "Brightspot Base"
+	},
+
+	"image" : {
+
+		"_template" : "common/image",
+
+		"attributes" : {
+			"alt" : "Image",
+			"src" : "/assets/images/1200x400.png"
+		}
+	}
+}
