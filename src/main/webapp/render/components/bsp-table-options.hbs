@@ -1,7 +1,3 @@
-{{#options}}
 {{#if columnAlignment}}
-{{#if tableWidth}}
- class="{{tableWidth}}-{{columnAlignment}}"
+    {{#if fullWidth}} class="full-width-{{columnAlignment}}"{{else}} class="{{columnAlignment}}"{{/if}}
 {{/if}}
-{{/if}}
-{{/options}}

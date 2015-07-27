@@ -2,8 +2,9 @@
 	"_template" : "components/table",
 
 	"options" : {
+		"_template" : "components/bsp-table-options",
 		"columnAlignment" : "left-aligned",
-		"tableWidth" : "full-width"
+		"fullWidth" : "true"
 	},
 
 	"title" : "this is a full width left aligned table",
@@ -22,36 +23,60 @@
 			"row" : [
 				{
 					"link" : {
-						"href" : "#",
-						"text" : "School Coordinator",
-						"title" : "Get details on this job"
+						"_template" : "common/link",
+						"attributes" : {
+							"href" : "#",
+							"title" : "Get details on this job"							
+						},
+						"text" : "School Coordinator"
 					}
-
 				},
-				"Administrative",
-				"Atlantic Theater Company",
-				"NY",
-				"Yes",
-				"07/07/2015"
+				{"text" : "Administrative"},
+				{"text" : "Atlantic Theater Company"},
+				{"text" : "NY"},
+				{"text" : "Yes"},
+				{"text" : "07/07/2015"}
 			]
 		},
 		{
 			"row" : [
 				{
 					"link" : {
-						"href" : "#",
-						"text" : "Artistic and Management Assistant",
-						"title" : "Get details on this job"
+						"_template" : "common/link",
+						"attributes" : {
+							"href" : "#",
+							"title" : "Get details on this job"
+						},
+						"text" : "Artistic and Management Assistant"						
 					}
 
 				},
-				"Administrative",
-				"Westport Country Playhouse",
-				"FL",
-				"Yes",
-				"07/07/2015"
+				{"text" : "Administrative"},
+				{"text" : "Westport Country Playhouse"},
+				{"text" : "FL"},
+				{"text" : "Yes"},
+				{"text" : "07/07/2015"}
 			]
+		},
+		{
+			"row" : [
+				{
+					"image" : {
+
+						"_template" : "common/image",
+
+						"attributes" : {
+							"alt" : "Test Alt",
+							"src" : "/assets/images/800x450.png"
+						}
+					}
+				},
+				{"text" : "Administrative"},
+				{"text" : "Westport Country Playhouse"},
+				{"text" : "FL"},
+				{"text" : "Yes"},
+				{"text" : "07/07/2015"}
+			]	
 		}
 	]
-
 }

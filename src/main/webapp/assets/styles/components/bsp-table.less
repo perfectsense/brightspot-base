@@ -9,27 +9,38 @@
 	}
 }
 
-.full-width-left-aligned {
-	width: 100%;		
-
+.left-aligned {
 	td, th {
-		text-align: left;
+		text-align: left;		
 	}
 }
 
-.full-width-center-aligned {
-	width: 100%;
-
+.center-aligned {
 	td, th {
 		text-align: center;
 	}
 }
 
-.full-width-right-aligned {
-	width: 100%;
-
+.right-aligned {
 	td, th {
 		text-align: right;
 	}
 }
+
+.full-width-left-aligned {
+	width: 100%;		
+	.left-aligned;
+}
+
+.full-width-center-aligned {
+	width: 100%;
+	.center-aligned;
+}
+
+.full-width-right-aligned {
+	width: 100%;
+	.right-aligned
+}
+
+
 

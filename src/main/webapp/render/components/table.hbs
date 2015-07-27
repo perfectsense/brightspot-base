@@ -1,8 +1,6 @@
 <div class="bsp-table">
 	<h2>{{title}}</h2>
-	{{!-- Earl, I took out the partial, as we are currently redoing the way we load partials and I wanted
-	      your code to just "work" vs breaking as we were messing with it --}}
-	<table{{#with options}}{{#if columnAlignment}}{{#if tableWidth}} class="{{tableWidth}}-{{columnAlignment}}"{{/if}}{{/if}}{{/with}}>
+	<table{{#with options}}{{> (lookup . '_template')}}{{/with}}>
 		{{#if headings}}
 			<thead>
 				{{#each headings}}
@@ -11,13 +9,21 @@
 			</thead>
 		{{/if}}
 		{{#each rows}}
-			<tr>
+			<tr class="row-{{@key}}">
 				{{#each row}}
-					<td>
-						{{#if link.href}}
-							{{> common/link this}}
-						{{else}}
-							{{this}}
+					<td class="col-{{@key}}">
+						{{#if link.attributes}}
+							{{#with link}}
+								{{> (lookup . '_template') }}
+							{{/with}}
+						{{/if}}
+						{{#if image}}
+							{{#with image}}
+								{{> (lookup . '_template')}}
+							{{/with}}
+						{{/if}}
+						{{#if text}}
+							{{this.text}}
 						{{/if}}
 					</td>
 				{{/each}}
