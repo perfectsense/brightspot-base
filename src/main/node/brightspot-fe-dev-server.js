@@ -28,28 +28,27 @@ module.exports = {
 
 		// check project dir
 		if (!fs.existsSync(config.projectDir)) {
-			console.error('Project directory %s not specified or does not exist', config.projectDir);
+			console.error('ERROR: Project directory %s not specified or does not exist', config.projectDir);
 			process.exit(1);
 		}
 
 		// configure/check target path
 		config.targetPath = config.projectDir + '/target/' + targetNameFromPomXml( config.projectDir + '/' + config.pom );
 		if (!fs.existsSync(config.targetPath)) {
-			console.error('Target dir %s does not exist', config.targetRelPath);
+			console.error('ERROR: Target dir %s does not exist', config.targetRelPath);
 			process.exit(1);
 		}
 
 		// configure/check brightspot base path
 		config.brightspotBasePath = config.projectDir + '/' + config.brightSpotBaseRelPath + '/' + config.wwwroot;
 		if (!fs.existsSync(config.brightspotBasePath)) {
-			console.error('Target dir %s does not exist', config.brightspotBasePath);
-			process.exit(1);
+			console.error('WARNING: Brightspot Base dir %s does not exist', config.brightspotBasePath);
 		}
 
 		// configure/check project server root
 		config.projectServerRoot = config.projectDir + '/' + config.wwwroot;
 		if (!fs.existsSync(config.projectServerRoot)) {
-			console.error('Target dir %s does not exist', config.projectServerRoot);
+			console.error('ERROR: Styleguide dir %s does not exist', config.projectServerRoot);
 			process.exit(1);
 		}
 
