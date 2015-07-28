@@ -64,7 +64,8 @@ done
 
 # download styleguide files
 mkdir styleguide
-dl $BOILERPLATE_DIR/$STYLEGUIDE_DIR/index.html $STYLEGUIDE_DIR/index.html
+dl $STYLEGUIDE_DIR/index.html
+dl $STYLEGUIDE_DIR/_head.js
 dl $BOILERPLATE_DIR/$STYLEGUIDE_DIR/server.js $STYLEGUIDE_DIR/server.js
 
 # create template directory structure
