@@ -13,7 +13,7 @@
 		"image" : "/assets/images/800x450.png"
 	},
 
-	"permalink" : "/static/bsp-article/article-infinite-1.jsp",
+	"permalink" : "/bsp-article/infinite.html",
 
 	"publishDate" : "05 Apr 2015",
 
@@ -106,7 +106,7 @@
 		"_template" : "common/link",
 		
 		"attributes" : {
-			"href" : "/static/bsp-article/article-infinite-2.jsp"
+			"href" : "/bsp-article/infinite-2.html"
 		},
 		"text" : "Load Next Article"
 	}
