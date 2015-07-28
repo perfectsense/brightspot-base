@@ -1,0 +1,61 @@
+{
+	"_template" : "components/bsp-gallery-module",
+
+	"options" : {
+		"carouselDots" : true
+	},
+
+	"galleryTitle" : "7 slides, with dots, no thumbs",
+
+	"gallerySlides" : [
+		{ 
+			"_template" : "common/image",
+
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
+		},
+		{ 
+			"_template" : "common/image",
+
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
+		},
+		{ 
+			"_template" : "common/image",
+
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
+		},
+		{ 
+			"_template" : "common/image",
+
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
+		},
+		{ 
+			"_template" : "common/image",
+
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
+		},
+		{ 
+			"_template" : "common/image",
+
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
+		},
+		{ 
+			"_template" : "common/image",
+
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
+		}
+	]
+}

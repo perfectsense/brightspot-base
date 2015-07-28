@@ -1,0 +1,139 @@
+{
+	"_template" : "components/bsp-gallery-module-thumbs-or-nav",
+
+	"galleryTitle" : "5 slides with thumbs",
+
+	"gallerySlides" : [
+		{ 
+			"_template" : "common/image",
+
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
+		},
+		{ 
+			"_template" : "common/image",
+
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
+		},
+		{ 
+			"_template" : "common/image",
+
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
+		},
+		{ 
+			"_template" : "common/image",
+
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
+		},
+		{ 
+			"_template" : "common/image",
+
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
+		},
+		{ 
+			"_template" : "common/image",
+
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
+		},
+		{ 
+			"_template" : "common/image",
+
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
+		},
+		{ 
+			"_template" : "common/image",
+
+			"attributes" : {				
+				"src" : "/assets/images/1200x400.png"
+			}
+		}
+	],
+
+	"galleryNavItems" : [
+		{ 
+			"navImage" : {
+				"_template" : "common/image",
+
+				"attributes" : {				
+					"src" : "/assets/images/400x100.png"
+				}
+			}
+		},
+		{ 
+			"navImage" : {
+				"_template" : "common/image",
+
+				"attributes" : {				
+					"src" : "/assets/images/400x100.png"
+				}
+			}
+		},
+		{ 
+			"navImage" : {
+				"_template" : "common/image",
+
+				"attributes" : {				
+					"src" : "/assets/images/400x100.png"
+				}
+			}
+		},
+		{ 
+			"navImage" : {
+				"_template" : "common/image",
+
+				"attributes" : {				
+					"src" : "/assets/images/400x100.png"
+				}
+			}
+		},
+		{ 
+			"navImage" : {
+				"_template" : "common/image",
+
+				"attributes" : {				
+					"src" : "/assets/images/400x100.png"
+				}
+			}
+		},
+		{ 
+			"navImage" : {
+				"_template" : "common/image",
+
+				"attributes" : {				
+					"src" : "/assets/images/400x100.png"
+				}
+			}
+		},
+		{ 
+			"navImage" : {
+				"_template" : "common/image",
+
+				"attributes" : {				
+					"src" : "/assets/images/400x100.png"
+				}
+			}
+		},
+		{ 
+			"navImage" : {
+				"_template" : "common/image",
+
+				"attributes" : {				
+					"src" : "/assets/images/400x100.png"
+				}
+			}
+		}
+	]
+}
