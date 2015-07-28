@@ -252,7 +252,7 @@ export default {
                     // once we are done, we replace the _dataUrl entry in the JSON with the actual data to 
                     // create a nice and pretty JSON object
                     getData.done((data) => {
-                        
+
                         self.data = self._replaceUrlWithData(self.data, self.options.dataKey, value, data);
 
                         dataToGet = new Set();
@@ -262,7 +262,7 @@ export default {
                         self._recursiveSearch(self.data, self.options.dataKey, dataToGet);
 
                         if (dataToGet.size) {
-                            recursiveGet();
+                            //recursiveGet();
                         }
                         else {
                             fullDataReady.resolve();
@@ -289,14 +289,19 @@ export default {
 
                 if (typeof theObject[key] == "object" && theObject[key] !== null) {
 
-                    for (var deepKey in theObject[key]) {
+                    if(theObject[key][theKey] === value) {
+                        theObject[key] = replacementData;
+                    } else {
 
-                        if(theObject[key][deepKey][theKey] === value) {
-                            theObject[key][deepKey] = replacementData;
-                        } else {
-                            recursiveReplace(theObject[key]);
+                        for (var deepKey in theObject[key]) {
+
+                            if(theObject[key][deepKey][theKey] === value) {
+                                theObject[key][deepKey] = replacementData;
+                            } else {
+                                recursiveReplace(theObject[key]);
+                            }
+
                         }
-
                     }
 
                 }

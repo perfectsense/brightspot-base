@@ -9,7 +9,7 @@
 
 	<div class="bsp-site">
 
-		<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/bsp-article/article-standalone.json" }'></div>
+		<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/bsp-article/article-template.json" }'></div>
 
 	</div>
 

@@ -1,0 +1,15 @@
+{
+	"_template" : "layouts/main-left-fixed-right",
+
+	"main" : {
+
+		"_dataUrl" : "/static/bsp-article/article.json"
+
+	},
+
+	"aside" : {
+
+		"_dataUrl" : "/static/bsp-list-promo/5-items.json"
+	}
+
+}
