@@ -66,6 +66,7 @@ done
 mkdir styleguide
 dl $STYLEGUIDE_DIR/index.html
 dl $STYLEGUIDE_DIR/_head.js
+dl $STYLEGUIDE_DIR/README.md
 dl $BOILERPLATE_DIR/$STYLEGUIDE_DIR/server.js $STYLEGUIDE_DIR/server.js
 
 # create template directory structure
