@@ -1,0 +1,13 @@
+{{#if link.attributes}}
+    {{#with link}}
+        {{> (lookup . '_template') }}
+    {{/with}}
+{{/if}}
+{{#if image}}
+    {{#with image}}
+        {{> (lookup . '_template')}}
+    {{/with}}
+{{/if}}
+{{#if text}}
+    {{this.text}}
+{{/if}}

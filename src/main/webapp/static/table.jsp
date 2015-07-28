@@ -14,8 +14,13 @@
 			<div class="bsp-row">
 				<div class="bsp-column-main">
 
-					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/data/table-standard.json" }'></div>
-					
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/bsp-table/basic-table.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/bsp-table/table-standard.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/bsp-table/table-fixed-width.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/bsp-table/table-horiz-stripe.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/bsp-table/table-vert-stripe.json" }'></div>
+					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/static/bsp-table/table-with-image.json" }'></div>
+
 				</div>
 
 				<div class="bsp-column-aside">

@@ -3,19 +3,23 @@
 
 	"options" : {
 		"_template" : "components/bsp-table-options",
-		"columnAlignment" : "left-aligned",
-		"fullWidth" : "true"
+		"textAlignment" : "left-aligned",
+		"verticalAlignment" : "top-aligned",
+		"fullWidth" : true,
+		"fixedColWidth" : true,
+		"verticalStripes" : false,
+		"horizontalStripes" : false
 	},
 
-	"title" : "this is a full width left aligned table",
+	"title" : "this is a full width left aligned table with fixed width columns",
 
 	"headings" : [
-		"Title",
-		"Category",
-		"Organization",
-		"State",
-		"Paid?",
-		"Date Posted"
+		{"text" : "Title"},
+		{"text" : "Category"},
+		{"text" : "Organization"},
+		{"text" : "State"},
+		{"text" : "Paid?"},
+		{"text" : "Date Posted"}
 	],
 
 	"rows" : [
@@ -61,14 +65,13 @@
 		{
 			"row" : [
 				{
-					"image" : {
-
-						"_template" : "common/image",
-
+					"link" : {
+						"_template" : "common/link",
 						"attributes" : {
-							"alt" : "Test Alt",
-							"src" : "/assets/images/800x450.png"
-						}
+							"href" : "#",
+							"title" : "Get details on this job"							
+						},
+						"text" : "American Music Machine - Open Call Singers"
 					}
 				},
 				{"text" : "Administrative"},

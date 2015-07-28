@@ -3,11 +3,29 @@
  */
 
 
-.bsp-table {
+@bsp-table-stripe-color: #eee;
+@bsp-cell-padding: @space;
+
+.bsp-table {	
 	td, th {
 		padding: @space;
 	}
+	&.horizontal-stripes {
+		tbody {
+			tr:nth-child(odd) {
+				background-color: @bsp-table-stripe-color;
+			}			
+		}
+	}
+	&.vertical-stripes {
+		td:nth-child(odd), th:nth-child(odd) {
+			background-color: @bsp-table-stripe-color;
+		}
+	}
 }
+
+// for now I'm keeping these as plain rules (not nested in bsp-table)
+// that may change
 
 .left-aligned {
 	td, th {
@@ -27,20 +45,30 @@
 	}
 }
 
-.full-width-left-aligned {
-	width: 100%;		
-	.left-aligned;
+.top-aligned {
+	td, th {
+		vertical-align: top;		
+	}
 }
 
-.full-width-center-aligned {
+.middle-aligned {
+	td, th {
+		vertical-align: middle;
+	}
+}
+
+.bottom-aligned {
+	td, th {
+		vertical-align: bottom;
+	}
+}
+
+.full-width {
 	width: 100%;
-	.center-aligned;
 }
 
-.full-width-right-aligned {
-	width: 100%;
-	.right-aligned
+.fixed-col-width {
+	table-layout: fixed;
 }
-
 
 

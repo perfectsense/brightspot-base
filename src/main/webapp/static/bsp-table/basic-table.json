@@ -1,0 +1,75 @@
+{
+	"_template" : "components/table",
+
+	"title" : "table - no options",
+
+	"headings" : [
+		{"text" : "Title"},
+		{"text" : "Category"},
+		{"text" : "Organization"},
+		{"text" : "State"},
+		{"text" : "Paid?"},
+		{"text" : "Date Posted"}
+	],
+
+	"rows" : [
+		{
+			"row" : [
+				{
+					"link" : {
+						"_template" : "common/link",
+						"attributes" : {
+							"href" : "#",
+							"title" : "Get details on this job"							
+						},
+						"text" : "School Coordinator"
+					}
+				},
+				{"text" : "Administrative"},
+				{"text" : "Atlantic Theater Company"},
+				{"text" : "NY"},
+				{"text" : "Yes"},
+				{"text" : "07/07/2015"}
+			]
+		},
+		{
+			"row" : [
+				{
+					"link" : {
+						"_template" : "common/link",
+						"attributes" : {
+							"href" : "#",
+							"title" : "Get details on this job"
+						},
+						"text" : "Artistic and Management Assistant"						
+					}
+
+				},
+				{"text" : "Administrative"},
+				{"text" : "Westport Country Playhouse"},
+				{"text" : "FL"},
+				{"text" : "Yes"},
+				{"text" : "07/07/2015"}
+			]
+		},
+		{
+			"row" : [
+				{
+					"link" : {
+						"_template" : "common/link",
+						"attributes" : {
+							"href" : "#",
+							"title" : "Get details on this job"							
+						},
+						"text" : "American Music Machine - Open Call Singers"
+					}
+				},
+				{"text" : "Administrative"},
+				{"text" : "Westport Country Playhouse"},
+				{"text" : "FL"},
+				{"text" : "Yes"},
+				{"text" : "07/07/2015"}
+			]	
+		}
+	]
+}
