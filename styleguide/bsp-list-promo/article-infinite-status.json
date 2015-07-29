@@ -14,7 +14,7 @@
 				"_template" : "common/link",
 
 				"attributes" : {
-					"href"  : "/static/bsp-article/article-infinite-1.jsp",
+					"href"  : "/bsp-article/article-infinite-1.jsp",
 					"title" : "Link Title"
 				},
 
@@ -28,7 +28,7 @@
 				"_template" : "common/link",
 
 				"attributes" : {
-					"href"  : "/static/bsp-article/article-infinite-2.jsp",
+					"href"  : "/bsp-article/article-infinite-2.jsp",
 					"title" : "Link Title"
 				},
 
@@ -42,7 +42,7 @@
 				"_template" : "common/link",
 
 				"attributes" : {
-					"href"  : "/static/bsp-article/article-infinite-3.jsp",
+					"href"  : "/bsp-article/article-infinite-3.jsp",
 					"title" : "Link Title"
 				},
 
@@ -56,7 +56,7 @@
 				"_template" : "common/link",
 
 				"attributes" : {
-					"href"  : "/static/bsp-article/article-infinite-4.jsp",
+					"href"  : "/bsp-article/article-infinite-4.jsp",
 					"title" : "Link Title"
 				},
 

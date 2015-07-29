@@ -67,17 +67,14 @@ module.exports = {
 			console.log('WARNING: Path %s does not exist', config.brightspotBasePath);
 		}
 
-		// assets/render/static looks for file in project first, then in target
+		// assets/render looks for file in project first, then in target
 		var serverPaths = [
 			{ '/assets': config.projectDir + '/' + config.srcRelPath + '/assets' },
 			{ '/assets': config.targetPath + '/assets' },
 			{ '/assets': config.projectDir + '/' + config.brightSpotBaseRelPath  + '/' + config.srcRelPath + '/assets' },
 			{ '/render': config.projectDir + '/' + config.srcRelPath + '/render' },
 			{ '/render': config.targetPath + '/render' },
-			{ '/render': config.projectDir + '/' + config.brightSpotBaseRelPath  + '/' + config.srcRelPath + '/render' },
-			{ '/static': config.projectDir + '/' + config.srcRelPath + '/static' },
-			{ '/static': config.targetPath + '/static' },
-			{ '/static': config.projectDir + '/' + config.brightSpotBaseRelPath  + '/' + config.srcRelPath + '/static' }
+			{ '/render': config.projectDir + '/' + config.brightSpotBaseRelPath  + '/' + config.srcRelPath + '/render' }
 		];
 		_.forEach(serverPaths, function(value) {
 			_.forEach(value, function(localPath, serverPath) {

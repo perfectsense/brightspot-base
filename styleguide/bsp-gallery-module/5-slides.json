@@ -9,19 +9,19 @@
 
 	"gallerySlides" : [
 		{ 
-			"_dataUrl" : "/static/common/image-1200x400.json"
+			"_dataUrl" : "/common/image-1200x400.json"
 		},
 		{ 	
-			"_dataUrl" : "/static/bsp-list-promo/5-items.json"
+			"_dataUrl" : "/bsp-list-promo/5-items.json"
 		},
 		{ 	
-			"_dataUrl" : "/static/common/link-with-1200x400-image.json"
+			"_dataUrl" : "/common/link-with-1200x400-image.json"
 		},
 		{ 
-			"_dataUrl" : "/static/common/image-1200x400.json"
+			"_dataUrl" : "/common/image-1200x400.json"
 		},
 		{ 
-			"_dataUrl" : "/static/common/image-1200x400.json"
+			"_dataUrl" : "/common/image-1200x400.json"
 		}
 	]
 }
