@@ -11,6 +11,6 @@
     "karma-phantomjs-launcher": "^0.2.0",
     "karma-systemjs": "^0.5.0",
     "phantomjs": "^1.9.17",
-    "phantomjs-polyfill": "0.0.1",
+    "phantomjs-polyfill": "0.0.1"
     }
 }
