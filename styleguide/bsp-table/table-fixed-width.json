@@ -1,8 +1,8 @@
 {
-	"_template" : "components/table",
+	"_template" : "components/bsp-table/bsp-table",
 
 	"options" : {
-		"_template" : "components/bsp-table-options",
+		"_template" : "components/bsp-table/bsp-table-options",
 		"textAlignment" : "left-aligned",
 		"verticalAlignment" : "top-aligned",
 		"fullWidth" : true,

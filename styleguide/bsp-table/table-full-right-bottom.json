@@ -1,7 +1,17 @@
 {
 	"_template" : "components/bsp-table/bsp-table",
 
-	"title" : "table - no options",
+	"options" : {
+		"_template" : "components/bsp-table/bsp-table-options",
+		"textAlignment" : "left-aligned",
+		"verticalAlignment" : "bottom-aligned",
+		"fullWidth" : true,
+		"fixedColWidth" : false,
+		"verticalStripes" : false,
+		"horizontalStripes" : false
+	},
+
+	"title" : "this is a full width left-bottom aligned table",
 
 	"headings" : [
 		{"text" : "Title"},

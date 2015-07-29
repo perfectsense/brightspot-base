@@ -1,8 +1,8 @@
 {
-	"_template" : "components/table",
+	"_template" : "components/bsp-table/bsp-table",
 
 	"options" : {
-		"_template" : "components/bsp-table-options",
+		"_template" : "components/bsp-table/bsp-table-options",
 		"textAlignment" : "left-aligned",
 		"verticalAlignment" : "top-aligned",
 		"fullWidth" : true,
@@ -74,7 +74,7 @@
 							"src" : "http://placehold.it/100x100"
 						}
 					},
-					"text" : "This is a caption for the image"
+					"text" : "This <div class=\"howdy\" />is a caption </div> for the image"
 				},
 				{"text" : "Administrative"},
 				{"text" : "Westport Country Playhouse"},
