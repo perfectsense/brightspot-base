@@ -22,7 +22,12 @@ In most projects, you can run `mvn clean install` to generate a target directory
 
 For front end development done in the styleguide, Maven will only need to run again if new Bower or [NPM](https://www.npmjs.com) dependencies are added.
 
+Test runner
+-----------
+Run `karma start spec/karma.conf.js`
+
 System requirements
 -------------------
 *	[Java](https://java.com) and [Maven](https://maven.apache.org/). See [Brightspot documentation](http://www.brightspot.com/docs/3.0/overview/installation) for more specific information about which versions to install.
 *	[NodeJS](https://nodejs.org)
+*	Karma test runner (run `npm install -g karma` after NodeJS is installed)
