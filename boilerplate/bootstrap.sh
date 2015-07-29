@@ -1,5 +1,5 @@
 # variables
-BASE_URL=https://raw.githubusercontent.com/perfectsense/brightspot-base/v0.0.5
+BASE_URL=https://raw.githubusercontent.com/perfectsense/brightspot-base/v0.0.6
 BOILERPLATE_DIR=boilerplate
 SRC_DIR=src/main/webapp
 ASSETS_DIR=$SRC_DIR/assets
