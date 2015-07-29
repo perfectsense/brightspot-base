@@ -26,6 +26,14 @@ Test runner
 -----------
 Run `karma start spec/karma.conf.js`
 
+Running the local styleguide server
+-----------------------------------
+Run `node styleguide/server.js` from the project root directory.
+
+The styleguide will then be accessible at http://localhost:3000.
+
+See the README in [the styleguide](styleguide/) for more detail.
+
 System requirements
 -------------------
 *	[Java](https://java.com) and [Maven](https://maven.apache.org/). See [Brightspot documentation](http://www.brightspot.com/docs/3.0/overview/installation) for more specific information about which versions to install.
