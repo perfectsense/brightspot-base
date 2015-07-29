@@ -16,6 +16,12 @@ How to use it
 *	Override configuration, styles, scripts and templates to customize your project's appearance
 *	Test front end components using the [styleguide](styleguide/) prior to integrating them into Brightspot
 
+Building
+--------
+In most projects, you can run `mvn clean install` to generate a target directory. The target directory is needed by the styleguide server, as it combines files from [Bower](http://bower.io/), Brightspot Base and your project source.
+
+For front end development done in the styleguide, Maven will only need to run again if new Bower or [NPM](https://www.npmjs.com) dependencies are added.
+
 System requirements
 -------------------
 *	[Java](https://java.com) and [Maven](https://maven.apache.org/). See [Brightspot documentation](http://www.brightspot.com/docs/3.0/overview/installation) for more specific information about which versions to install.
