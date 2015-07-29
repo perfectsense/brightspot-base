@@ -20,7 +20,7 @@ The Maven build pulls files into the target directory in the following order:
 2)	Brightspot Base files
 3)	Project files
 
-The Express server looks in multiple directories to attempt to serve a file at a given file.
+The Express server looks in multiple directories to attempt to serve a file at a given path.
 
 Example: if you delete `/assets/main.js` from your project, the build will have pulled main.js into the target directory from Brightspot Base and the styleguide will serve it from the target directory. But if you do not delete main.js from your project source, the styleguide will serve it from your source.
 
