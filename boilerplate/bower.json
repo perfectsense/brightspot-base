@@ -5,10 +5,10 @@
       "name": "Perfect Sense Digital"
     }
   ],
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "brightspot-base": "perfectsense/brightspot-base#0.0.4"
   },
+  "devDependencies": {},
   "homepage": "https://github.com/perfectsense/project-name",
   "ignore": [
     "demo",
