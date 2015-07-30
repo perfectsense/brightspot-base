@@ -52,9 +52,20 @@
 				
 				"attributes" : {
 					"href"  : "/bsp-table/",
-					"title" : "BSP Table"
+					"title" : "BSP Table - Basic Configurations"
 				},
-				"text"  : "BSP Table"
+				"text"  : "BSP Table - Basic Configurations"
+			}
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
+					"href"  : "/bsp-table/tables-themed.html",
+					"title" : "BSP Table - Sample Themes"
+				},
+				"text"  : "BSP Table - Sample Themes"
 			}
 		}
 	]
