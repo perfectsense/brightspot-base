@@ -6,7 +6,7 @@
     }
   ],
   "dependencies": {
-    "brightspot-base": "perfectsense/brightspot-base#0.0.6"
+    "brightspot-base": "perfectsense/brightspot-base#1.0.1"
   },
   "devDependencies": {},
   "homepage": "https://github.com/perfectsense/project-name",
