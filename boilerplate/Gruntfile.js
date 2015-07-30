@@ -21,23 +21,18 @@ module.exports = function(grunt) {
 
             bower: {
 
-                // history.js and waypoints will go away when brightspot-js-infinite-content gets to be 
-                // it's own separate repo vs being included directly in base
+                // Here you can specify extra bower packages that dont come as part of base if you need them
+                // if you add something into bower.json and do NOT specify in here, it will just copy whatever is
+                // in that packages' bower.json main entry. Otherwise, you can grab other types of files here
 
-                'history.js' : {
-                    src: 'scripts/bundled-uncompressed/html5/native.history.js',
-                    dest: './',
-                    expand: true,
-                    flatten: true
-                },
-
-                'waypoints' : [
-                {
-                    src: 'lib/**/*.js',
-                    dest: 'bower/waypoints',
-                    expand: true,
-                    flatten: true
-                }]
+                // example
+                //'history.js' : {
+                //    src: 'scripts/bundled-uncompressed/html5/native.history.js',
+                //    dest: './',
+                //    expand: true,
+                //    flatten: true
+                //}
+                
             }
         }
 
