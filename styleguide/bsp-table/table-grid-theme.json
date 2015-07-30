@@ -1,0 +1,67 @@
+{
+	"_template" : "components/bsp-table/bsp-table",
+
+	"title" : "table - grid theme",
+
+	"options" : {
+		"_template" : "components/bsp-table/bsp-table-options",
+		"theme" : "theme-grid"
+	},
+
+	"headings" : [
+		{"text" : "B"},
+		{"text" : "I"},
+		{"text" : "N"},
+		{"text" : "G"},
+		{"text" : "O"}
+	],
+
+	"rows" : [
+		{
+			"row" : [
+				{"text" : "7"},
+				{"text" : "25"},
+				{"text" : "44"},
+				{"text" : "57"},
+				{"text" : "62"}
+			]
+		},
+		{
+			"row" : [
+				{"text" : "15"},
+				{"text" : "22"},
+				{"text" : "40"},
+				{"text" : "50"},
+				{"text" : "70"}
+			]
+		},
+		{
+			"row" : [
+				{"text" : "11"},
+				{"text" : "30"},
+				{"text" : "free"},
+				{"text" : "46"},
+				{"text" : "74"}
+			]
+		},
+		{
+			"row" : [
+				{"text" : "2"},
+				{"text" : "28"},
+				{"text" : "37"},
+				{"text" : "55"},
+				{"text" : "68"}
+			]
+		},
+		{
+			"row" : [
+				{"text" : "10"},
+				{"text" : "27"},
+				{"text" : "39"},
+				{"text" : "59"},
+				{"text" : "75"}
+			]
+		}
+
+	]
+}

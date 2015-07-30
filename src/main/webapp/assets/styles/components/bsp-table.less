@@ -14,22 +14,34 @@
 	td, th {
 		padding: @space;
 	}
-	&.horizontal-stripes {
-		tbody {
-			tr:nth-child(odd) {
-				background-color: @bsp-table-stripe-color;
+	// theme 1
+	&.theme-1 {
+		.left-aligned();
+		.full-width();
+		.horizontal-stripes();
+		td, th {
+			&.col-3, &.col-4 {
+				text-align: center;
+			}
+			&.col-5 {
+				text-align: right;
 			}			
 		}
-	}
-	&.vertical-stripes {
-		td:nth-child(odd), th:nth-child(odd) {
-			background-color: @bsp-table-stripe-color;
+		th {
+			text-transform: uppercase;
 		}
+	}
+
+	&.theme-grid {
+		width: 50%;
+		.center-aligned();
+		.middle-aligned();
+		.fixed-col-width();
 	}
 }
 
-// for now I'm keeping these as plain rules (not nested in bsp-table)
-// that may change
+// The following can be added to the table element individually or
+// can be used as mixins to create a table theme
 
 .left-aligned {
 	td, th {
@@ -74,5 +86,21 @@
 .fixed-col-width {
 	table-layout: fixed;
 }
+
+.horizontal-stripes {
+	tbody {
+		tr:nth-child(odd) {
+			background-color: @bsp-table-stripe-color;
+		}
+	}
+}
+
+.vertical-stripes {
+	td:nth-child(odd), th:nth-child(odd) {
+		background-color: @bsp-table-stripe-color;
+	}
+}
+
+
 
 

@@ -4,7 +4,7 @@
 		{{#if headings}}
 			<thead>
 				{{#each headings}}
-					<th>
+					<th class="col-{{@key}}">
 						{{#if link.attributes}}
 						    {{#with link}}
 						        {{> (lookup . '_template') }}
