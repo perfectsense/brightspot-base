@@ -4,6 +4,7 @@
   "devDependencies": {
     "bsp-grunt": "perfectsense/brightspot-js-grunt#v2.0.1",
     "brightspot-base": "perfectsense/brightspot-base#1.0.1",
+    "es6-module-loader": "^0.17.3",
     "express": "^4.13.1",
     "jasmine-core": "^2.3.4",
     "karma": "^0.12.36",
@@ -12,6 +13,7 @@
     "karma-systemjs": "^0.5.0",
     "phantomjs": "^1.9.17",
     "phantomjs-polyfill": "0.0.1",
+    "systemjs": "^0.18.4",
     "xml2json": "^0.8.1"
     }
 }
