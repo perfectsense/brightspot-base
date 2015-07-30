@@ -3,7 +3,9 @@
 
 		<div class="bsp-column-scrolling">
 			{{#with main}}
-				{{> (lookup . '_template') }}
+				{{#each components}}
+					{{> (lookup . '_template') }}
+				{{/each}}
 			{{/with}}
 		</div>
 
@@ -16,7 +18,9 @@
 				</div>
 
 				{{#with aside}}
-					{{> (lookup . '_template') }}
+					{{#each components}}
+						{{> (lookup . '_template') }}
+					{{/each}}
 				{{/with}}
 			</div>
 		</div>

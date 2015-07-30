@@ -1,0 +1,19 @@
+{
+	"_template" : "layouts/two-col-main-left-fixed-right",
+
+	"main" : {
+		"components" : [
+			{
+				"_dataUrl" : "/bsp-article/article-standalone.json"
+			}
+		]
+	},
+		
+	"aside" : {
+		"components" : [
+			{
+				"_dataUrl" : "/bsp-list-promo/5-items.json"
+			}
+		]
+	}
+}

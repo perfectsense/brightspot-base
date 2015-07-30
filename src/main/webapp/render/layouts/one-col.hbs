@@ -3,7 +3,9 @@
 
 		<div class="bsp-column-full">
 			{{#with main}}
-				{{> (lookup . '_template') }}
+				{{#each components}}
+					{{> (lookup . '_template') }}
+				{{/each}}
 			{{/with}}
 		</div>
 		

@@ -9,17 +9,33 @@
 
 	"gallerySlides" : [
 		{ 
-			"_dataUrl" : "/common/image-1200x400.json"
-		},
-		{ 	
-			"_dataUrl" : "/bsp-list-promo/5-items.json"
-		},
-		{ 	
-			"_dataUrl" : "/common/link-with-1200x400-image.json"
-		},
+	"_template" : "common/image",
+
+	"attributes" : {
+		"src" : "/assets/images/1200x400.png"
+	}
+},
 		{ 
-			"_dataUrl" : "/common/image-1200x400.json"
-		},
+	"_template" : "common/image",
+
+	"attributes" : {
+		"src" : "/assets/images/1200x400.png"
+	}
+},
+		{ 
+	"_template" : "common/image",
+
+	"attributes" : {
+		"src" : "/assets/images/1200x400.png"
+	}
+},
+		{ 
+	"_template" : "common/image",
+
+	"attributes" : {
+		"src" : "/assets/images/1200x400.png"
+	}
+},
 		{ 
 			"_dataUrl" : "/common/image-1200x400.json"
 		}
