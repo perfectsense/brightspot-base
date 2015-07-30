@@ -1,0 +1,61 @@
+{
+	"_template" : "components/bsp-list-promo",
+
+	"listItems" : [
+		{ 
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
+					"href"  : "/bsp-article/",
+					"title" : "BSP Article"
+				},
+				"text"  : "BSP Article"
+			}
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
+					"href"  : "/bsp-gallery-module/",
+					"title" : "BSP Gallery Module"
+				},
+				"text"  : "BSP Gallery Module"
+			}
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
+					"href"  : "/bsp-image-promo/",
+					"title" : "BSP Image Promo"
+				},
+				"text"  : "BSP Image Promo"
+			}
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
+					"href"  : "/bsp-list-promo/",
+					"title" : "BSP List Promo"
+				},
+				"text"  : "BSP List Promo"
+			}
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
+					"href"  : "/bsp-table/",
+					"title" : "BSP Table"
+				},
+				"text"  : "BSP Table"
+			}
+		}
+	]
+}

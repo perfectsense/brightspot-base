@@ -1,0 +1,91 @@
+{
+	"_template" : "components/bsp-site-header",
+
+	"siteName" : "Brightspot Base Styleguide",
+
+	"siteLogo" : {
+
+		"link" : {
+
+			"_template" : "common/link",
+
+			"attributes" : {
+				"href"  : "/",
+				"title" : "Brightspot Base Styleguide"
+			},
+
+			"image" : {
+
+				"_template" : "common/image",
+
+				"attributes" : {
+					"alt" : "Brightspot",
+					"src" : "/assets/images/brightspot.png"
+				}
+			}
+			
+		}
+
+	},
+	"extraMenu" : [
+		{
+			"link": {
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "/#components",
+					"title" : "Components"
+				},
+				"text"  : "Components"
+			},
+
+			"subMenu" : [
+				{
+					"_template" : "common/link",
+					
+					"attributes" : {
+						"href"  : "/bsp-article/",
+						"title" : "BSP Article"
+					},
+					"text"  : "BSP Article"
+				},
+				{
+					"_template" : "common/link",
+					
+					"attributes" : {
+						"href"  : "/bsp-gallery-module/",
+						"title" : "BSP Gallery Module"
+					},
+					"text"  : "BSP Gallery Module"
+				},
+				{
+					"_template" : "common/link",
+					
+					"attributes" : {
+						"href"  : "/bsp-image-promo/",
+						"title" : "BSP Image Promo"
+					},
+					"text"  : "BSP Image Promo"
+				},
+				{
+					"_template" : "common/link",
+					
+					"attributes" : {
+						"href"  : "/bsp-list-promo/",
+						"title" : "BSP List Promo"
+					},
+					"text"  : "BSP List Promo"
+				},
+				{
+					"_template" : "common/link",
+					
+					"attributes" : {
+						"href"  : "/bsp-table/",
+						"title" : "BSP Table"
+					},
+					"text"  : "BSP Table"
+				}
+			]
+		}
+	]
+}
