@@ -51,6 +51,28 @@
 				"_template" : "common/link",
 				
 				"attributes" : {
+					"href"  : "/components/bsp-site-header/",
+					"title" : "BSP Site Header"
+				},
+				"text"  : "BSP Site Header"
+			}
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
+					"href"  : "/components/bsp-site-footer/",
+					"title" : "BSP Site Footer"
+				},
+				"text"  : "BSP Site Footer"
+			}
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
 					"href"  : "/components/bsp-table/",
 					"title" : "BSP Table - Basic Configurations"
 				},

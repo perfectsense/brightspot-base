@@ -12,16 +12,26 @@
 
 	<div class="bsp-site-header">
 
-		<div class="bsp-site-menu" data-bsp-toggle-item>
-			<div class="bsp-site-menu-content toggle-item">
+		{{#with mainMenu}}
+			<div class="bsp-site-menu" data-bsp-toggle-item>
+				<div class="bsp-site-menu-content toggle-item">	
+					
+					{{#each menuItems}}
+						<ul class="bsp-site-menu-simple-list">
+							<li class="heading">{{> common/link heading}}</li>
+							{{#each items}}
+								<li>{{> common/link this}}</li>
+							{{/each}}
+						</ul>
+					{{/each}}
+					</li>
+				</div>
 
-
+				<div class="bsp-site-menu-trigger toggle-trigger">
+					<a href="#"><i class="icon icon-bars"><span class="sr-only">toggle menu</span></i></a>
+				</div>
 			</div>
-
-			<div class="bsp-site-menu-trigger toggle-trigger">
-				<a href="#"><i class="icon icon-bars"><span class="sr-only">toggle menu</span></i></a>
-			</div>
-		</div>
+		{{/with}}
 		
 		<div class="bsp-site-logo-centering">
 			<h1 class="bsp-site-logo">
