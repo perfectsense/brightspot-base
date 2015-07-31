@@ -86,6 +86,29 @@
 					"text"  : "BSP Table"
 				}
 			]
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "/#pages",
+					"title" : "Pages"
+				},
+				"text"  : "Pages"
+			},
+
+			"subMenu" : [
+				{
+					"_template" : "common/link",
+					
+					"attributes" : {
+						"href"  : "/pages/example/",
+						"title" : "Example Page"
+					},
+					"text"  : "Example Page"
+				}
+			]
 		}
 	]
 }
