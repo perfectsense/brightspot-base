@@ -4,7 +4,7 @@
 	"main" : {
 		"components" : [
 			{
-				"_dataUrl" : "/bsp-article/article-standalone.json"
+				"_dataUrl" : "/components/bsp-article/article-standalone.json"
 			}
 		]
 	},
@@ -12,7 +12,7 @@
 	"aside" : {
 		"components" : [
 			{
-				"_dataUrl" : "/bsp-list-promo/5-items.json"
+				"_dataUrl" : "/components/bsp-list-promo/5-items.json"
 			}
 		]
 	}

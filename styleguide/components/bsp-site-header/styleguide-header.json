@@ -44,7 +44,7 @@
 					"_template" : "common/link",
 					
 					"attributes" : {
-						"href"  : "/bsp-article/",
+						"href"  : "/components/bsp-article/",
 						"title" : "BSP Article"
 					},
 					"text"  : "BSP Article"
@@ -53,7 +53,7 @@
 					"_template" : "common/link",
 					
 					"attributes" : {
-						"href"  : "/bsp-gallery-module/",
+						"href"  : "/components/bsp-gallery-module/",
 						"title" : "BSP Gallery Module"
 					},
 					"text"  : "BSP Gallery Module"
@@ -62,7 +62,7 @@
 					"_template" : "common/link",
 					
 					"attributes" : {
-						"href"  : "/bsp-image-promo/",
+						"href"  : "/components/bsp-image-promo/",
 						"title" : "BSP Image Promo"
 					},
 					"text"  : "BSP Image Promo"
@@ -71,7 +71,7 @@
 					"_template" : "common/link",
 					
 					"attributes" : {
-						"href"  : "/bsp-list-promo/",
+						"href"  : "/components/bsp-list-promo/",
 						"title" : "BSP List Promo"
 					},
 					"text"  : "BSP List Promo"
@@ -80,7 +80,7 @@
 					"_template" : "common/link",
 					
 					"attributes" : {
-						"href"  : "/bsp-table/",
+						"href"  : "/components/bsp-table/",
 						"title" : "BSP Table"
 					},
 					"text"  : "BSP Table"
