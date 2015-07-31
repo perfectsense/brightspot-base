@@ -44,28 +44,11 @@ dl $SCRIPTS_DIR/main.js
 # download less files
 mkdir -p $STYLES_VARIABLES_DIR
 dl $STYLES_DIR/main.less
-STYLES_VARIABLES_FILES=(
-	borders.less
-	bsp-list-promo.less
-	colors.less
-	gallery.less
-	header.less
-	misc.less
-	mq-and-grid.less
-	spacing.less
-	typography.less
-	variables.less
-	z-index.less
-)
-for i in "${STYLES_VARIABLES_FILES[@]}"
-do
-	dl $STYLES_VARIABLES_DIR/$i
-done 
+dl $STYLES_VARIABLES_DIR/variables.less
 
 # download styleguide files
 mkdir styleguide
 dl $STYLEGUIDE_DIR/index.html
-# dl $STYLEGUIDE_DIR/_head.js
 dl $STYLEGUIDE_DIR/README.md
 dl $BOILERPLATE_DIR/$STYLEGUIDE_DIR/server.js $STYLEGUIDE_DIR/server.js
 
