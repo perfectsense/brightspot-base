@@ -2,8 +2,14 @@
  * bsp table css
  */
 
+// import all of the sample themes for styleguide
+@import (reference) "bsp-table-themes";
 
-@bsp-table-stripe-color: #eee;
+// should I pull these into a separate file ??
+@bsp-table-heading-font: @font-family-base;
+@bsp-table-body-font: @font-family-base;
+@bsp-table-background-color-1: @gray-light-1;
+@bsp-table-background-color-2: @light-blue;
 @bsp-cell-padding: @space;
 
 .bsp-table-wrapper {
@@ -12,37 +18,23 @@
 
 .bsp-table {	
 	td, th {
-		padding: @space;
-	}
-	// theme 1
-	&.theme-1 {
-		.left-aligned();
-		.full-width();
-		.horizontal-stripes();
-		td, th {
-			&.col-3, &.col-4 {
-				text-align: center;
-			}
-			&.col-5 {
-				text-align: right;
-			}			
-		}
-		th {
-			text-transform: uppercase;
-		}
+		padding: @space;		
 	}
 
-	&.theme-grid {
-		width: 50%;
-		.center-aligned();
-		.middle-aligned();
-		.fixed-col-width();
+	th {
+		font-family: @bsp-table-heading-font;
 	}
+
+	tbody {
+		font-family: @bsp-table-body-font;
+	}
+
+	// added additional theming here for styleguide purposes only 
+	&:extend(.bsp-table-themes all);
 }
 
 // The following can be added to the table element individually or
 // can be used as mixins to create a table theme
-
 .left-aligned {
 	td, th {
 		text-align: left;		
@@ -90,15 +82,21 @@
 .horizontal-stripes {
 	tbody {
 		tr:nth-child(odd) {
-			background-color: @bsp-table-stripe-color;
+			background-color: @bsp-table-background-color-1;
 		}
 	}
 }
 
 .vertical-stripes {
 	td:nth-child(odd), th:nth-child(odd) {
-		background-color: @bsp-table-stripe-color;
+		background-color: @bsp-table-background-color-1;
 	}
+}
+
+.vertical-stripes-body {
+	td:nth-child(odd) {
+		background-color: @bsp-table-background-color-1;
+	}	
 }
 
 

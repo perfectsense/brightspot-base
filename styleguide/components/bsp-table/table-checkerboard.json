@@ -1,0 +1,108 @@
+{
+	"_template" : "components/bsp-table/bsp-table",
+
+	"title" : "table - checkerboard theme",
+
+	"options" : {
+		"_template" : "components/bsp-table/bsp-table-options",
+		"theme" : "theme-checkerboard"
+	},
+
+	"rows" : [
+		{
+			"row" : [
+				{"text" : "<div class=\"black-checker\"> </div>"},
+				{"text" : "<div class=\"black-checker\"> </div>"},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : "<div class=\"red-checker\"> </div>"},
+				{"text" : "<div class=\"red-checker\"> </div>"}
+			]
+		},
+		{
+			"row" : [
+				{"text" : "<div class=\"black-checker\"> </div>"},
+				{"text" : "<div class=\"black-checker\"> </div>"},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : "<div class=\"red-checker\"> </div>"},
+				{"text" : "<div class=\"red-checker\"> </div>"}
+			]
+		},
+		{
+			"row" : [
+				{"text" : "<div class=\"black-checker\"> </div>"},
+				{"text" : "<div class=\"black-checker\"> </div>"},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : "<div class=\"red-checker\"> </div>"},
+				{"text" : "<div class=\"red-checker\"> </div>"}
+			]
+		},
+		{
+			"row" : [
+				{"text" : "<div class=\"black-checker\"> </div>"},
+				{"text" : "<div class=\"black-checker\"> </div>"},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : "<div class=\"red-checker\"> </div>"},
+				{"text" : "<div class=\"red-checker\"> </div>"}			]
+		},
+		{
+			"row" : [
+				{"text" : "<div class=\"black-checker\"> </div>"},
+				{"text" : "<div class=\"black-checker\"> </div>"},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : "<div class=\"red-checker\"> </div>"},
+				{"text" : "<div class=\"red-checker\"> </div>"}	
+			]
+		},
+		{
+			"row" : [
+				{"text" : "<div class=\"black-checker\"> </div>"},
+				{"text" : "<div class=\"black-checker\"> </div>"},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : "<div class=\"red-checker\"> </div>"},
+				{"text" : "<div class=\"red-checker\"> </div>"}			
+			]
+		},
+		{
+			"row" : [
+				{"text" : "<div class=\"black-checker\"> </div>"},
+				{"text" : "<div class=\"black-checker\"> </div>"},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : "<div class=\"red-checker\"> </div>"},
+				{"text" : "<div class=\"red-checker\"> </div>"}			
+			]
+		},
+		{
+			"row" : [
+				{"text" : "<div class=\"black-checker\"> </div>"},
+				{"text" : "<div class=\"black-checker\"> </div>"},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : ""},
+				{"text" : "<div class=\"red-checker\"> </div>"},
+				{"text" : "<div class=\"red-checker\"> </div>"}
+			]
+		}
+	]
+}

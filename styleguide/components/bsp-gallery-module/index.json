@@ -1,0 +1,23 @@
+{
+	"_template" : "layouts/one-col",
+
+	"main" : {
+		"components" : [
+			{
+				"_dataUrl": "/components/bsp-gallery-module/4-slides-text-nav.json"
+			},
+			{
+				"_dataUrl": "/components/bsp-gallery-module/5-slides-horizontal.json"
+			},
+			{
+				"_dataUrl": "/components/bsp-gallery-module/5-slides-with-thumbs.json"
+			},
+			{
+				"_dataUrl": "/components/bsp-gallery-module/5-slides.json"
+			},
+			{
+				"_dataUrl": "/components/bsp-gallery-module/7-slides-dots.json"
+			}
+		]
+	}
+}

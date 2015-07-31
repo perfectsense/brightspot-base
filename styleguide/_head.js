@@ -1,5 +1,6 @@
 /* jshint ignore:start */
 document.write('<link rel="stylesheet/less" type="text/css" href="/assets/styles/main.less" />');
+document.write('<link rel="stylesheet/less" type="text/css" href="/styleguide.less" />');
 document.write('<script src="/assets/scripts/less.js"></script>');
 document.write('<script src="/assets/scripts/system.js"></script>');
 document.write('<script src="/assets/scripts/config.js"></script>');

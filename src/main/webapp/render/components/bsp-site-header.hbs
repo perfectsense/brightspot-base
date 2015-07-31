@@ -10,7 +10,18 @@
 		</div>
 	{{/if}}
 
-	<div class="bsp-site-header" data-bsp-toggle-item>
+	<div class="bsp-site-header">
+
+		<div class="bsp-site-menu" data-bsp-toggle-item>
+			<div class="bsp-site-menu-content toggle-item">
+
+
+			</div>
+
+			<div class="bsp-site-menu-trigger toggle-trigger">
+				<a href="#"><i class="icon icon-bars"><span class="sr-only">toggle menu</span></i></a>
+			</div>
+		</div>
 		
 		<div class="bsp-site-logo-centering">
 			<h1 class="bsp-site-logo">
@@ -34,13 +45,13 @@
 			<div class="bsp-share-links-centering">
 				<ul class="bsp-share-links">
 					{{#each sharing.links}}
-						<li class="bsp-{{icon}}-share">{{> common/link class="bsp-share-link"}}<li>
+						<li class="bsp-{{icon}}-share">{{> common/link class="bsp-share-link"}}</li>
 					{{/each}}
 				</ul>
 			</div>
 		{{/if}}
 
-		<div class="bsp-site-search-trigger">
+		<div class="bsp-site-search-trigger" data-bsp-toggle-item>
 			<div class="bsp-site-search toggle-item">
 				<form class="bsp-site-search-form">
 					<input class="bsp-site-search-input" type="text" />

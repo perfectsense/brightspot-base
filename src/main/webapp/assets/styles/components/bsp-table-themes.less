@@ -1,0 +1,73 @@
+.bsp-table-themes {
+
+    // theme 1
+    &.theme-1 {
+        .left-aligned();
+        .full-width();
+        .horizontal-stripes();
+        td, th {
+            &.col-3, &.col-4 {
+                text-align: center;
+            }
+            &.col-5 {
+                text-align: right;
+            }           
+        }
+        th {
+            text-transform: uppercase;
+        }
+    }
+    // theme 2
+    &.theme-2 {
+        .center-aligned();
+        .vertical-stripes-body();
+        thead {
+            background-color: @bsp-table-background-color-2;        
+        }
+    }
+
+    // grid theme
+    &.theme-grid {
+        .center-aligned();
+        .middle-aligned();
+        .fixed-col-width();
+        td, th {
+            border : @border-style-2;
+        }
+        thead {
+            background-color: @bsp-table-background-color-1;            
+        }
+    }
+
+    // checkerboard theme
+    &.theme-checkerboard {
+        .center-aligned();
+        .middle-aligned();
+        .fixed-col-width();
+        td {
+            border : @border-style-2;
+            height: 50px;
+            width: 50px;
+        }
+        tr:nth-child(even) td:nth-child(odd) {
+            background-color: @bsp-table-background-color-1;
+        }
+        tr:nth-child(odd) td:nth-child(even) {
+            background-color: @bsp-table-background-color-1;
+        }
+        .checker {
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;            
+        }
+        .black-checker {
+            .checker();
+            background-color: @black;
+        }
+        .red-checker {
+            .checker();
+            background-color: @red;
+        }
+    }
+
+}

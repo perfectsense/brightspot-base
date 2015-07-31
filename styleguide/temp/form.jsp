@@ -5,11 +5,9 @@
 
 <div class="bsp-site-wrapper">
 
-	<div data-bsp-template data-bsp-template-options='{ "template": "components/bsp-site-header", "dataUrl": "/static/bsp-site-header/logo-extra-menu-social.json" }'></div>
+	<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/components/bsp-site-header/logo-extra-menu-social.json" }'></div>
 
 	<div class="bsp-site">
-
-		<div data-bsp-template data-bsp-template-options='{ "template": "components/page-title", "dataUrl": "/static/data/page-title.json" }'></div>
 
 		<div class="bsp-container">
 			<div class="bsp-row">
@@ -27,7 +25,7 @@
 
 	</div>
 
-	<div data-bsp-template data-bsp-template-options='{ "template": "components/bsp-site-footer", "dataUrl": "/static/bsp-site-footer/standard.json" }'></div>
+	<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/components/bsp-site-footer/standard.json" }'></div>
 
 </div>
 
