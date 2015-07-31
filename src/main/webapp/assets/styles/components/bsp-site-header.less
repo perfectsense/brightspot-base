@@ -47,7 +47,7 @@
     &:extend(.clearfix all);
     background: @header-background;
     height: @header-height;
-    padding: 0 @space-double;
+    padding: 0 @space 0 @space-double;
     width: 100%;
 
     .bsp-share-links {
@@ -72,8 +72,51 @@
 }
 
 
+.bsp-site-menu {
 
 
+
+}
+
+.bsp-site-menu-simple-list {
+
+    &.heading {
+        &:extend(.ts-2);
+        text-transform: uppercase;
+    }
+
+}
+
+.bsp-site-menu-content {
+    height: @header-menu-height;
+    position: absolute;
+    top: 0;
+
+    .transition(width .15s linear);
+    z-index: @z-index-menu;
+
+    &.toggle-in {
+        width: @header-menu-height;
+    }
+}
+
+.bsp-site-menu-trigger {
+    &:extend(.ts-2);
+
+    float: left;
+    margin: 0 @space 0 -@space-double;
+    padding: 0 @space-double;
+    position: relative;
+
+    a {
+        height: @header-height;
+        line-height: @header-height;
+    }
+
+    &.toggle-in {
+        background: @gray-light-2;
+    }
+}
 
 
 
@@ -89,10 +132,10 @@
     overflow: hidden;
     .transition(width .15s linear);
     width: 0;
-    z-index: 1;
+    z-index: 1; // doesn't need to be on top, just needs a z-index to work
 
     &.toggle-in {
-        width: 250px;
+        width: @header-search-width;
     }
 }
 
@@ -124,7 +167,7 @@
 }
 
 .bsp-site-search-trigger {
-    &:extend(.ts-2);
+    &:extend(.ts-3);
     float: right;
     position: relative;
 
@@ -160,7 +203,7 @@
 
     height: 100%;
     float: right;
-    padding-right: @space-triple;
+    padding-right: @space-quad;
 
     > li {
         position: relative;
@@ -296,6 +339,10 @@
 
     .bsp-extra-menu-wrapper {
         display: block;
+    }
+
+    .bsp-site-search-trigger {
+        padding-right: @space-quad;
     }
 
 }

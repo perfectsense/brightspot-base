@@ -27,6 +27,14 @@
 		}
 
 	},
+
+	"mainMenu" : {
+
+		"menuItems" : [
+
+		]
+
+	},
 	
 
 	"EXAMPLE tophat" : {
