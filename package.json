@@ -15,7 +15,7 @@
     "minimist": "^1.1.2",
     "phantomjs": "^1.9.17",
     "phantomjs-polyfill": "0.0.1",
-    "systemjs": "^0.18.3",
+    "systemjs": "0.18.4",
     "xml2json": "^0.7.1"
   }
 }
