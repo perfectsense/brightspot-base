@@ -1,0 +1,95 @@
+.bsp-bio {
+	&:extend(.clearfix all);
+}
+
+.bsp-bio-image {
+	float: left;
+	width: 25%;
+}
+
+.bsp-bio-content {
+	float: right;
+	padding-left: @space-double;
+	width: 75%;
+}
+
+.bsp-bio-title {
+	&:extend(.ts-header-3);
+	margin: 0 0 @space 0;
+	text-transform: uppercase;
+}
+
+.bsp-bio-subtitle {
+	&:extend(.clearfix all);
+}
+
+.bsp-bio-sub-text {
+	&:extend(.ts-0);
+
+	float: left;
+	margin: 0 @space @space 0; 
+	text-transform: uppercase;
+	padding-right: @space;
+	border-right: @border-style-1;
+
+	&:last-of-type {
+		margin-right: 0;
+		border-right: 0;
+	}
+}
+
+.bsp-bio-text {
+	margin: @space 0 @space-double;
+
+	p {
+		margin: 0 0 @space 0;
+	}
+}
+
+.bsp-bio-lists {
+	&:extend(.clearfix all);
+
+	margin: 0 0 @space 0;
+	text-transform: uppercase;
+
+	li span {
+		font-weight: @font-weight-bold;
+	}
+}
+
+// secondary is first in the HTML so we can use a sibling selector to make the first one
+// thinner if the secondary one is there
+.bsp-bio-secondary-list + .bsp-bio-primary-list {
+	float: left;
+	width: 50%;
+}
+
+.bsp-bio-secondary-list {
+	&:extend(.ts-neg-1);
+	
+	float: right;
+	width: 50%;
+}
+
+
+.bsp-bio-links {
+	margin: 0 0 @space 0;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+
+
+.bsp-bio-extra-images {
+	&:extend(.clearfix all);
+
+	> li {
+		float: left; 
+		margin-right: @space;
+		width: 12.5%;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+}
+

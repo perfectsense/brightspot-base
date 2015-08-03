@@ -1,0 +1,25 @@
+{
+	"_template" : "layouts/two-col-main-left-fixed-right",
+
+	"main" : {
+		"components" : [
+			{
+				"_dataUrl" : "/components/bsp-bio/actor.json"
+			},
+			{
+				"_dataUrl" : "/components/bsp-bio/show.json"
+			},
+			{
+				"_dataUrl" : "/components/bsp-bio/theater.json"
+			}
+		]
+	},
+		
+	"aside" : {
+		"components" : [
+			{
+				"_dataUrl" : "/components/bsp-list-promo/5-items.json"
+			}
+		]
+	}
+}
