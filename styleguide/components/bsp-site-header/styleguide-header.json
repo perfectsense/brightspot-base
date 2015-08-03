@@ -80,6 +80,15 @@
 					"_template" : "common/link",
 					
 					"attributes" : {
+						"href"  : "/components/bsp-tabber/",
+						"title" : "BSP Tabber"
+					},
+					"text"  : "BSP Tabber"
+				},
+				{
+					"_template" : "common/link",
+					
+					"attributes" : {
 						"href"  : "/components/bsp-table/",
 						"title" : "BSP Table"
 					},
