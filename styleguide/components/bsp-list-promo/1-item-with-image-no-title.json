@@ -1,0 +1,45 @@
+{
+	"_template" : "components/bsp-list-promo",
+
+	"listItems" : [
+		{ 
+			"imgAlign" : "top",
+
+			"image" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "link",
+					"title" : "Link Title"
+				},
+
+				"image" : {
+
+					"_template" : "common/image",
+
+					"attributes" : {
+						"alt" : "Image",
+						"src" : "/assets/images/800x450.png"
+					}
+				}
+				
+			},
+
+			"title" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "link",
+					"title" : "Link Title"
+				},
+
+				"text" : "This example has no title above it on purpose"
+
+			},
+
+			"description" : "<p>Shankle pork loin landjaeger pork chop t-bone. Shank capicola strip steak, salami prosciutto ham hock venison. Short ribs meatloaf doner hamburger frankfurter tri-tip.</p>"
+		}
+	]
+}

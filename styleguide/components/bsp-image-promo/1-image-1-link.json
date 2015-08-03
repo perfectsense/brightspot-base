@@ -1,0 +1,46 @@
+{
+	"_template" : "components/bsp-image-promo",
+
+	"heading" : "1 Image with 1 Link",
+
+	"images" : [
+		{ 
+			"image" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "imageLink",
+					"title" : "Link Title"
+				},
+
+				"image" : {
+
+					"_template" : "common/image",
+
+					"attributes" : {
+						"alt" : "Image",
+						"src" : "/assets/images/1200x400.png"
+					}
+				}
+				
+			},
+				
+			"promoLinks" : [
+				{
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href"  : "promoLink",
+						"title" : "Link"
+					},
+
+					"text" : "Promo Link Text"
+				}
+			]
+		}
+	],
+
+	"ctaText" : "Test CTA",
+	"ctaLink" : "#"
+}

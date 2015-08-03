@@ -1,0 +1,29 @@
+/**
+ * Vertical Centering from: https://css-tricks.com/centering-in-the-unknown/
+ *
+ * Ex: 
+ * <div class="wrapper"><div class="i-am-vertically-centered">haha!</div></div>
+ *
+ * .wrapper {
+ *		&:extend(.vertical-center-wrapper all);	
+ *		height: 200px; 
+ * }
+ * .i-am-vertically-centered {
+ *		&:extend(.vertical-center all);
+ * }
+ *
+ */
+
+.vertical-center-wrapper {
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -5px; // Adjusts for spacing
+    }
+}
+.vertical-center {
+    display: inline-block;
+ 	vertical-align: middle;
+}

@@ -1,0 +1,44 @@
+<div class="bsp-component">
+	{{#if galleryTitle}}
+		<h3 class="bsp-component-title">{{galleryTitle}}</h1>
+	{{/if}}
+
+	<div class="bsp-component-content">
+
+		<div class="gallery-module gallery-module-{{#if options.carouselDots}}carousel-dots{{/if}}{{#if options.horizontalSlides}}horizontal-slides{{/if}} bsp-carousel" data-bsp-carousel data-bsp-carousel-options='{ 
+
+		"theme" : "{{#if options.carouselDots}}carousel-dots{{/if}}", 
+
+		"themeConfig" : { 
+
+			"arrows" : false 
+
+			{{#if options.horizontalSlides}},
+			"slidesToShow" : 5, 
+			"responsive": [
+		    {
+		      "breakpoint": 768,
+		      "settings": {
+		        "slidesToShow": 2
+		      }
+		    }]
+		    {{/if}} 
+
+	    }
+	    
+	    }'>
+			{{#gallerySlides}}
+				<div class="bsp-carousel-slide">
+					{{> (lookup . '_template') }}
+				</div>
+			{{/gallerySlides}}
+		</div>
+
+	</div>
+
+	{{#if ctaText}}
+		<div class="bsp-component-cta">
+			<a href="{{ctaLink}}">{{ctaText}}</a>
+		</div>	
+	{{/if}}	
+</div>

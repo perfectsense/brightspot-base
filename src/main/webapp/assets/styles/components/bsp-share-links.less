@@ -1,0 +1,61 @@
+// Here we provide styles for the share bar
+// We also allow for some extending of icon fonts vs using the icon-xxxxx designation in the HTML
+
+
+.bsp-share-links-centering {
+    &:extend(.vertical-center-wrapper all);
+
+    display: none;
+    float: right;
+    height: 100%;
+}
+
+.bsp-share-links {
+	&:extend(.ts-1);
+	&:extend(.bsp-list-inline all);
+	&:extend(.vertical-center);
+
+	li {
+		padding: 0 @space-three-quarter;
+	}
+}	
+
+.bsp-share-link {
+	&:extend(.icon);
+
+	background: @brand-primary;
+	border-radius: 32px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	width: 32px;
+
+	&:before {
+		
+		.bsp-facebook-share & {
+			content: @fa-var-facebook;
+		}
+
+		.bsp-twitter-share & {
+			content: @fa-var-twitter;
+		}
+
+		.bsp-pinterest-share & {
+			content: @fa-var-pinterest;
+		}
+
+		.bsp-linkedin-share & {
+			content: @fa-var-linkedin;
+		}
+	}
+
+}
+
+
+@media @mq-sm {
+
+	.bsp-share-links-centering {
+		display: block;
+	}
+	
+}

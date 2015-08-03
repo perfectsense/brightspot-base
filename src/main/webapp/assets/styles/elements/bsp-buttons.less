@@ -1,0 +1,6 @@
+// We will only create one kind of button, which is the default button
+// This way we reference the bootstrap btn, but do not create all the extra CSS for buttons we will not use
+.bsp-btn {
+	.btn();
+    .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+}

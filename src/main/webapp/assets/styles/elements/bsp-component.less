@@ -1,0 +1,35 @@
+// padding vs margin allows for cleaner separation between components, especially if things inside of them use margins
+
+.bsp-component {
+	padding-bottom: @space-double;
+}
+
+.bsp-component-title {
+	&:extend(.ts-0);
+
+	background: @brand-dark;
+	color: @brand-primary;
+	padding: @space-quarter @space;
+	margin: 0 0 @space 0;
+}
+
+.bsp-component-content {
+	overflow: hidden; // making sure things do not go outside of components
+}
+
+.bsp-component-cta {
+
+	a {
+		background: @brand-primary;
+		display: block;
+		color: @brand-dark;
+		padding: @space-quarter 0;
+		text-align: center;
+	}
+	
+}
+
+// if the content has hard item heights, there is no margin on the cta, it will screw up the hardcoded item heights
+.bsp-component-content.hard-item-heights + .bsp-component-cta {
+	margin-top: 0;
+}

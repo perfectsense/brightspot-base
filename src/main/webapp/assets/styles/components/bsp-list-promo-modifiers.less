@@ -1,0 +1,50 @@
+/**
+ * Modifier classes for the bsp-list-promo. 
+ * This is how we are going to determine custom looks for different versions of the list promo module
+ * This file is here vs the mixins folder as it's very related to the bsp-list-promo so we wanted it to have easy access
+ *
+ * This file is separate from the main bsp-list-promo, because these are the default modifiers that come with BSP Base.
+ * On a project, you can choose to pull these in and compile, or you can pull these in via reference to use in your
+ * own, or you can choose to not use these and write your own. Really depends on your implementation
+ */
+
+// This creates a 50/50 image/text, you can change the percentage for your use case
+.image-50-width {
+	.bsp-list-promo-image-size(@size: 50%);
+}
+
+// This creates a 50/50 image/text, but a dark background and custom position for the text
+.image-50-width-background {
+	.list-promo-image-width-background(@width: 50%, @bg-color: @brand-dark, @promo-text-color: @white);
+}
+
+// This creates the concept of hardcoded heights
+.hard-item-heights {
+	.bsp-list-promo-hard-item-heights(@item-height: @hardcoded-item-height);
+}
+
+
+.bsp-infinite-load-status {
+
+	li {
+		border-left: 5px solid transparent;
+	}
+
+	.bsp-infinite-load-current {
+		border-left: 5px solid @brand-dark;
+	}
+
+	// only on xs and sm sizes, the article status gets a fancy header since it has to be popped up via user action
+	@media @mq-only-xs, @mq-only-sm {
+
+		.bsp-component-title {
+			height: 50px;
+			line-height: 50px;
+			padding: 0 @space;
+		}
+
+	}
+		
+
+}
+

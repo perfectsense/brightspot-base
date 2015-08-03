@@ -1,0 +1,396 @@
+{
+	"_template" : "components/bsp-site-header",
+
+	"siteName" : "Brightspot Base",
+
+	"siteLogo" : {
+
+		"link" : {
+
+			"_template" : "common/link",
+
+			"attributes" : {
+				"href"  : "/",
+				"title" : "Brightspot Base"
+			},
+
+			"image" : {
+
+				"_template" : "common/image",
+
+				"attributes" : {
+					"alt" : "Brightspot",
+					"src" : "/assets/images/logo-site-header.png"
+				}
+			}
+			
+		}
+
+	},
+
+	"mainMenu" : {
+
+		"menuItems" : [
+			{
+				"heading" : {
+					"_dataUrl" : "/common/link-test-text.json"
+				},
+
+				"items" : [
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					},
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					},
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					},
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					},
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					}
+				]
+			},
+
+			{
+				"heading" : {
+					"_dataUrl" : "/common/link-test-text.json"
+				},
+
+				"items" : [
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					},
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					},
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					},
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					},
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					}
+				]
+			},
+
+			{
+				"heading" : {
+					"_dataUrl" : "/common/link-test-text.json"
+				},
+
+				"items" : [
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					},
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					},
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					},
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					},
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					}
+				]
+			},
+
+			{
+				"heading" : {
+					"_dataUrl" : "/common/link-test-text.json"
+				},
+
+				"items" : [
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					},
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					},
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					},
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					},
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					}
+				]
+			},
+
+			{
+				"heading" : {
+					"_dataUrl" : "/common/link-test-text.json"
+				},
+
+				"items" : [
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					},
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					},
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					},
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					},
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					}
+				]
+			}
+		]
+
+	},
+	
+
+	"EXAMPLE tophat" : {
+
+		"links" : [
+			{
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "link1",
+					"title" : "Brightspot Base"
+				},
+				"text"  : "link 1"
+			},
+			{
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "link2",
+					"title" : "Brightspot Base"
+				},
+				"text"  : "link 2"
+			}
+		]
+
+	},
+
+	"extraMenu" : [
+		{
+			"link": {
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "news",
+					"title" : "News"
+				},
+				"text"  : "News"
+			},
+
+			"subMenu" : [
+				{
+					"_template" : "common/link",
+					
+					"attributes" : {
+						"href"  : "sublink1",
+						"title" : "Sublink 1"
+					},
+					"text"  : "Sublink 1"
+				},
+				{
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href"  : "sublink2",
+						"title" : "Sublink 2"
+					},
+					"text"  : "Sublink 2"
+				},
+				{
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href"  : "sublink3",
+						"title" : "Sublink 3"
+					},
+					"text"  : "Sublink 3 Sublink 3 Sublink 3"
+				}
+			]
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "shows",
+					"title" : "Shows"
+				},
+				"text"  : "Shows"
+			},
+
+			"subMenu" : [
+				{
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href" : "sublink1",
+						"title" : "Sublink 1"
+					},
+					"text"  : "Sublink 1"
+				},
+				{
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href" : "sublink2",
+						"title" : "Sublink 2"
+					},
+					"text"  : "Sublink 2"
+				},
+				{
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href" : "sublink3",
+						"title" : "Sublink 3"
+					},
+					"text"  : "Sublink 3 Sublink 3 Sublink 3"
+				}
+			]
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href" : "experience",
+					"title" : "Experience NYC"
+				},
+				"text"  : "Experience NYC"
+			}
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href" : "jobs",
+					"title" : "Jobs"
+				},
+				"text"  : "Jobs"
+			},
+
+			"subMenu" : [
+				{
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href" : "sublink1",
+						"title" : "Sublink 1"
+					},
+					"text"  : "Sublink 1"
+				},
+				{
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href" : "sublink2",
+						"title" : "Sublink 2"
+					},
+					"text"  : "Sublink 2"
+				},
+				{
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href" : "sublink3",
+						"title" : "Sublink 3"
+					},
+					"text"  : "Sublink 3 Sublink 3 Sublink 3"
+				}
+			]
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href" : "buy",
+					"title" : "Buy Tickets"
+				},
+				"text"  : "Buy Tickets"
+			}
+		}
+	],
+
+	"EXAMPLE extraLinks" : [
+		{
+			"_template" : "common/link",
+
+			"attributes" : {
+				"href"  : "link1",
+				"title" : "Brightspot Base"
+			},
+			"text"  : "link 1 haha!"
+		},
+		{
+			"_template" : "common/link",
+
+			"attributes" : {
+				"href" : "link2",
+				"title" : "Brightspot Base"
+			},
+			"text"  : "link 2"
+		}
+	],
+
+	"sharing" : {
+
+		"links" : [{
+			"_template" : "common/link",
+			"icon"  : "facebook",
+
+			"attributes" : {
+				"href"  : "http://www.facebook.com",
+				"title" : "Facebook",
+				"target" : "_blank"
+			}
+		},
+		{
+			"_template" : "common/link",
+			"icon"  : "twitter",
+
+			"attributes" : {
+				"href"  : "http://www.twitter.com",
+				"title" : "Twitter",
+				"target" : "_blank"
+			}
+		},
+		{
+			"_template" : "common/link",
+			"icon"  : "pinterest",
+
+			"attributes" : {
+				"href"  : "http://www.pinterest.com",
+				"title" : "Pinterest",
+				"target" : "_blank"
+			}
+		},
+		{
+			"_template" : "common/link",
+			"icon"  : "linkedin",
+
+			"attributes" : {
+				"href"  : "http://www.linkedin.com",
+				"title" : "LinkedIn",
+				"target" : "_blank"
+			}
+		}]
+
+	}
+}

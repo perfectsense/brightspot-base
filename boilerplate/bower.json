@@ -1,0 +1,26 @@
+{
+  "authors": [
+    {
+      "homepage": "http://www.perfectsensedigital.com/",
+      "name": "Perfect Sense Digital"
+    }
+  ],
+  "dependencies": {
+    "brightspot-base": "perfectsense/brightspot-base#1.0.1"
+  },
+  "devDependencies": {},
+  "homepage": "https://github.com/perfectsense/project-name",
+  "ignore": [
+    "demo",
+    "Gruntfile.js",
+    "package.json",
+    ".gitignore"
+  ],
+  "keywords": [
+    "brightspot",
+    "jquery"
+  ],
+  "license": "MIT",
+  "name": "project-name",
+  "version": "0.0.1"
+}

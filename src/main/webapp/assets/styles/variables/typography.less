@@ -1,0 +1,30 @@
+// Here we will call out the most frequently overriden variables for typography and create our own type scale
+// Bootstrap uses a type scale based on header tags, and instead we just use simple numbers vs tying it into h elements
+
+// Base font family which is set on the body
+@font-family-base:      @font-family-sans-serif;
+
+// Unit-less line-height used on the body and in components
+@line-height-base:      1.428571429; // 20/14
+
+// Headings get a smaller line height than the rest of the page
+@headings-line-height:  1.1;
+
+// Our base font size. This is the 0 of our type scale
+@font-size-base:        14px;
+
+// font weights to keep things standard
+@font-weight-base:      400;
+@font-weight-light:     400;
+@font-weight-bold:      700;
+
+// This is our type scale. These are the variables that are used in the type scale mixin, and we can use this directly in font-size directives
+// This scale can be used as is, the ratios can be changed, or if design insists, we can hardcode values, or add/change what each number means
+@ts-neg-2:              ceil((@font-size-base * 0.70)); // ~10px
+@ts-neg-1:              ceil((@font-size-base * 0.85)); // ~12px
+@ts-0:                  @font-size-base;
+@ts-1:                  ceil((@font-size-base * 1.25)); // ~18px
+@ts-2:                  ceil((@font-size-base * 1.7)); // ~24px
+@ts-3:                  floor((@font-size-base * 2.15)); // ~30px
+@ts-4:                  floor((@font-size-base * 2.6)); // ~36px
+

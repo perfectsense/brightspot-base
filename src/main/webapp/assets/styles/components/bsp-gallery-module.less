@@ -1,0 +1,85 @@
+// TODO: This should be renamed to bsp-gallery-module
+
+// these are styles for the hoziontal layout gallery which has 5 slides across
+.gallery-module-horizontal-slides {
+
+	.slick-list {
+		margin: 0 -@space;
+	}
+	.bsp-carousel-slide {
+		padding: 0 @space;
+		width: 50%;
+	}
+
+}
+
+
+// targeted to only take bsp-carousel-slides inside the nav portion of the gallery-nav module
+// this lets us reuse the renderer for thumbs for the text nav and just write css overrides
+.gallery-module-nav {
+	// we have a 40px bottom margin for the slide nav text to fit
+	.bsp-carousel-stage {
+		.slick-track {
+			margin-bottom: 40px;
+		}
+	}
+
+	.bsp-carousel-nav {
+		background-color: @brand-dark;
+
+		.bsp-carousel-slide {	
+			border-top: 5px solid @brand-dark; // custom border for this one element
+			color: @white;
+			cursor: pointer;
+			text-align: center;		
+
+			&.current {
+				border-color: @brand-primary;
+			}
+		}
+	}
+}
+
+// this is use for mobile instead of the thumb nav, as xs and sm resolutions, we get rid of the thumb nav
+// as it's too small to make sense
+.bsp-carousel-slide-nav-text {
+	background-color: @brand-dark;
+	color: @white;
+	height: 40px;
+	padding: @space;
+	position: absolute;
+	bottom: -40px;
+	width: 100%;
+}
+
+// for medium and up, we kill the margin and also hide the nav text, as by default the
+// thumbs gallery at that point drops in the thumbnav
+
+@media @mq-sm {
+
+	.gallery-module-horizontal-slides {
+
+		.bsp-carousel-slide {
+			width: 20%;
+		}
+
+	}
+
+}
+
+
+@media @mq-md {
+
+	.gallery-module-nav {
+		.bsp-carousel-stage {
+			.slick-track {
+				margin-bottom: 0px;
+			}
+		}
+	}
+
+	.bsp-carousel-slide-nav-text  {
+		display: none;
+	}
+
+}

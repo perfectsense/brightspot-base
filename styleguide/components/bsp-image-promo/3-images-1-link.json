@@ -1,0 +1,122 @@
+{
+	"_template" : "components/bsp-image-promo",
+
+	"options" : {
+
+		"horizontalSplit" : "third"
+
+	},
+
+	"heading" : "3 images with 1 link",
+
+	"images" : [
+		{ 
+			"image" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "imageLink",
+					"title" : "Link Title"
+				},
+
+				"image" : {
+
+					"_template" : "common/image",
+
+					"attributes" : {
+						"alt" : "Image",
+						"src" : "/assets/images/800x450.png"
+					}
+				}
+				
+			},
+				
+			"promoLinks" : [
+				{
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href"  : "promoLink",
+						"title" : "Link"
+					},
+
+					"text" : "Promo Link Text"
+				}
+			]
+		},
+		{ 
+			"image" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "imageLink",
+					"title" : "Link Title"
+				},
+
+				"image" : {
+
+					"_template" : "common/image",
+
+					"attributes" : {
+						"alt" : "Image",
+						"src" : "/assets/images/800x450.png"
+					}
+				}
+				
+			},
+				
+			"promoLinks" : [
+				{
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href"  : "promoLink",
+						"title" : "Link"
+					},
+
+					"text" : "Promo Link Text"
+				}
+			]
+		},
+		{ 
+			"image" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "imageLink",
+					"title" : "Link Title"
+				},
+
+				"image" : {
+
+					"_template" : "common/image",
+
+					"attributes" : {
+						"alt" : "Image",
+						"src" : "/assets/images/800x450.png"
+					}
+				}
+				
+			},
+				
+			"promoLinks" : [
+				{
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href"  : "promoLink",
+						"title" : "Link"
+					},
+
+					"text" : "Promo Link Text"
+				}
+			]
+		}
+	],
+
+	"ctaText" : "Test CTA",
+	"ctaLink" : "#"
+}

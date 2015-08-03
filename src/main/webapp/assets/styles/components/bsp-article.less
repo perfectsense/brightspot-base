@@ -1,0 +1,36 @@
+// It's possible that we will move bsp-article out of here to it's own bowerable compoment, so that we can try to 
+// standardize around it (as it should really be the same for a LOT of projects). That concept is still TBD, so until
+// then it will be included in this repo
+
+.bsp-article-wrapper {
+
+}
+
+.bsp-article {
+
+	border-top: @border-style-1;
+	padding: @space-triple 0 @space;
+
+	&:first-of-type {
+		border-top: none;
+		margin-top: -@space-triple;
+	}
+
+	.bsp-share-links {
+		margin: 0 0 @space 0;
+
+		a {
+			color: @white;
+		}
+	}
+	
+}
+
+.bsp-article-title {
+	&:extend(.bsp-page-title all);
+}
+
+.bsp-article-list {
+	&:extend(.bsp-list all);
+}
+

@@ -1,0 +1,51 @@
+<div class="bsp-table-wrapper">
+	<h2>{{title}}</h2>
+	<table class="bsp-table{{#with options}}{{> (lookup . '_template')}}{{/with}}">
+		{{#if headings}}
+			<thead>
+				{{#each headings}}
+					<th class="col-{{@key}}">
+						{{#if link.attributes}}
+						    {{#with link}}
+						        {{> (lookup . '_template') }}
+						    {{/with}}
+						{{/if}}
+						{{#if text}}
+						    {{{this.text}}}
+						{{/if}}
+					</th>
+				{{/each}}
+			</thead>
+		{{/if}}
+		<tbody>
+			{{#each rows}}
+				<tr class="row-{{@key}}">
+					{{#each row}}
+						<td class="col-{{@key}}">
+							{{#if link.attributes}}
+							    {{#with link}}
+							        {{> (lookup . '_template') }}
+							    {{/with}}
+							{{/if}}
+							{{#if image}}
+							    {{#with image}}
+							        {{> (lookup . '_template')}}
+							    {{/with}}
+							{{/if}}
+							{{#if text}}
+							    {{{this.text}}}
+							{{/if}}						
+						</td>
+					{{/each}}
+				</tr>
+			{{/each}}			
+		</tbody>
+			
+	</table>
+	{{#if ctaText}}
+		<div class="bsp-component-cta">
+			<a href="{{ctaLink}}">{{ctaText}}</a>
+		</div>	
+	{{/if}}
+</div>
+

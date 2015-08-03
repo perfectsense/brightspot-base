@@ -1,0 +1,101 @@
+<div data-bsp-carousel-gallery>
+	{{#if thumbnails}}
+		<div class="bsp-carousel-gallery-thumbnails">
+			
+			<a href="" class="bsp-carousel-gallery-thumbnails-close-link">
+				{{#if thumbnailsCloseText}}
+					{{thumbnailsCloseText}}
+				{{/if}}
+			</a>
+
+			{{#gallerySlides}}
+				{{#if thumbnailImage}}
+				<div class="bsp-carousel-gallery-thumbnail bsp-column-third" data-index="{{@index}}">
+					<img alt="" src="{{thumbnailImage}}" />
+				</div>
+				{{/if}}
+			{{/gallerySlides}}
+		</div>
+	{{/if}}
+
+	<div class="bsp-carousel-gallery-container">
+
+		{{#if galleryTitle}}
+			<h2 class="bsp-carousel-gallery-header">
+				{{#if galleryTitleType}}
+					<span>{{galleryTitleType}}:</span>
+				{{/if}}
+				{{galleryTitle}}
+			</h2>
+		{{/if}}
+		<div class="bsp-carousel-gallery bsp-column-full">
+			{{#gallerySlides}}
+				<div class="bsp-carousel-gallery-slide">
+					{{#slideImages}}
+					<picture>
+						<source media="(min-width: 1200px)" srcset="{{lg.src}}" />
+						<source media="(min-width: 992px)" srcset="{{md.src}}" />
+						<source media="(min-width: 768px)" srcset="{{sm.src}}" />
+						<img alt="" src="{{xs.src}}" />
+					</picture>
+					{{/slideImages}}
+					{{#if slideTitle}}
+						<h3 class="bsp-carousel-gallery-slide-title">{{slideTitle}}</h3>
+					{{/if}}
+					{{#if slideDescription}}
+						<div class="bsp-carousel-gallery-slide-description">{{slideDescription}}</div>
+					{{/if}}
+				</div>
+			{{/gallerySlides}}
+		</div>
+
+		<div class="bsp-carousel-gallery-footer">	
+
+
+			{{#if thumbnails}}
+			<div class="bsp-carousel-gallery-footer-item bsp-carousel-gallery-footer-thumbnails-link bsp-column-fourth">
+				<a class="icon icon-th-large bsp-share-link" href="">Thumbnails</a>
+			</div>
+			{{/if}}
+
+			
+			{{#if sharing}}
+			<div class="bsp-carousel-gallery-footer-item bsp-sharing bsp-column-third" data-bsp-share data-bsp-share-options='{"iconClass":"icon", "serviceProps": { {{#if sharing.facebook}} {{#if sharing.facebook.appId}} "facebook" : { "appId": {{sharing.facebook.appId}} } {{/if}} {{/if}}  }}'>
+				{{#if sharingTitle}}
+					<h4 class="bsp-carousel-gallery-footer-header">{{sharingTitle}}:</h4>
+				{{/if}}
+				{{#if sharing.facebook}}
+			    	<div class="bsp-sharing-item bsp-facebook-share"></div>
+			    {{/if}}
+			    {{#if sharing.twitter}}
+			    	<div class="bsp-sharing-item bsp-twitter-share"></div>
+			    {{/if}}
+			    {{#if sharing.google}}
+			    	<div class="bsp-sharing-item bsp-google-share"></div>
+			    {{/if}}
+			    {{#if sharing.pinterest}}
+			    	<div class="bsp-sharing-item bsp-pinterest-share"></div>
+			    {{/if}}
+			    {{#if sharing.linkedin}}
+			    	<div class="bsp-sharing-item bsp-linkedin-share"></div>   
+			    {{/if}}
+			</div>
+			{{/if}}
+
+			{{#if relatedLinks}}
+			<div class="bsp-carousel-gallery-footer-item bsp-carousel-gallery-footer-links bsp-column-third">
+				{{#if relatedLinksTitle}}
+					<h4 class="bsp-carousel-gallery-footer-header">{{relatedLinksTitle}}:</h4>
+				{{/if}}
+				<ul>
+					{{#relatedLinks}}
+						<li><a href="{{href}}">{{text}}</a></li>
+					{{/relatedLinks}}			
+				</ul>
+			</div>
+			{{/if}}
+
+		</div>
+
+	</div>
+</div>

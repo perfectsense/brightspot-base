@@ -1,0 +1,21 @@
+{
+  "name": "brightspot-base",
+  "version": "1.0.1",
+  "devDependencies": {
+    "babel-core": "^5.6.14",
+    "bsp-grunt": "perfectsense/brightspot-js-grunt#eb64d7faf5cd13cac58c6ad68cf6ab60a1f1bc63",
+    "es6-module-loader": "0.16.6",
+    "express": "^4.13.1",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.36",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "karma-systemjs": "^0.5.0",
+    "lodash": "^3.9.3",
+    "minimist": "^1.1.2",
+    "phantomjs": "^1.9.17",
+    "phantomjs-polyfill": "0.0.1",
+    "systemjs": "^0.18.3",
+    "xml2json": "^0.7.1"
+  }
+}

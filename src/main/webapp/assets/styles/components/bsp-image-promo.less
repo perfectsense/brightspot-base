@@ -1,0 +1,53 @@
+// This is a standard image promo. The image promo has an image with overlayed links
+
+.bsp-image-promo-image {
+	margin: @space 0;
+	position: relative;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	img {
+		height: auto;
+		width: 100%;
+	}
+}
+
+// table and table cell allows for pretty justified alignment
+.bsp-image-promo-links {
+	background: rgba(0,0,0,0.5);
+	display: table;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+
+	li {
+		border-left: @border-style-6;
+		display: none;
+		text-align: center;
+		text-transform: uppercase;
+		width: 33%; // for tables width is essentially min-width
+
+		&:first-child {
+			border-left: none;
+			display: table-cell;
+		}
+
+		a {	
+			color: @white;
+			display: block;
+			padding: @space-half; 
+		}
+	}
+}
+
+@media @mq-sm {
+
+	.bsp-image-promo-links {
+		li {
+			display: table-cell;
+		}
+	}
+	
+}

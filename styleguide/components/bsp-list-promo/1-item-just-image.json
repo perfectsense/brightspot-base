@@ -1,0 +1,33 @@
+{
+	"_template" : "components/bsp-list-promo",
+
+	"heading" : "Just Image",
+
+	"listItems" : [
+		{ 
+			"imgAlign" : "top",
+
+			"image" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "link",
+					"title" : "Link Title"
+				},
+
+				"image" : {
+
+					"_template" : "common/image",
+
+					"attributes" : {
+						"alt" : "Image",
+						"src" : "/assets/images/800x450.png"
+					}
+				}
+				
+			}
+			
+		}
+	]
+}

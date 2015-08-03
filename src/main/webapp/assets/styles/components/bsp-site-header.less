@@ -1,0 +1,391 @@
+// wrapper allows us to create the fixed position look/feel
+.bsp-site-header-wrapper {
+    left: 0;
+    position: @header-positioning;
+    top: 0;
+    width: 100%;
+    z-index: @z-index-header;
+}
+
+
+
+
+
+
+// The top hat styles are included in the header since they are small 
+.bsp-tophat {
+    &:extend(.clearfix all);
+
+    background: @gray-dark-3;
+    width: 100%;
+}
+
+.bsp-tophat-links {
+    &:extend(.bsp-list-inline all);
+    &:extend(.ts-neg-1);
+
+    float: right;
+    height: @header-tophat-height;
+    line-height: @header-tophat-height;
+
+    a {
+        color: @white;
+        padding: 0 @space-and-half;
+    }
+}
+
+
+
+
+
+
+
+
+// This is our standard header. There will be some options here in the CSS that we can just leave and pull out of the HTML if we do not
+// want them (such as the extra links)
+.bsp-site-header {
+    &:extend(.clearfix all);
+    background: @header-background;
+    height: @header-height;
+    padding: 0 @space 0 @space-double;
+    width: 100%;
+
+    .bsp-share-links {
+        a {
+            color: @white;
+        }
+    }
+}
+
+.bsp-site-logo-centering {
+    &:extend(.vertical-center-wrapper all);
+
+    float: left;
+    height: 100%;
+}
+
+.bsp-site-logo {
+    &:extend(.vertical-center);
+    
+    line-height: 0; // for perfect vertical centering of logo
+    margin: 0;
+}
+
+
+.bsp-site-menu {
+
+
+
+}
+
+.bsp-site-menu-simple-list {
+    float: left; 
+    height: @header-menu-height;
+    margin: @space-double 0 0 @space-quad;
+    width: auto;
+
+    &:last-of-type {
+
+    }
+
+    > li a {
+        color: @brand-dark;
+    }
+
+    .heading {
+        &:extend(.ts-1);
+
+        border-bottom: @border-style-2;
+        margin-bottom: @space-half;
+        text-transform: uppercase;
+    }
+
+}
+
+.bsp-site-menu-content {
+    &:extend(.clearfix);
+
+    background: @gray-light-2;
+    height: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: @header-height;
+    width: 100%;
+
+    .transition(height .15s linear);
+    z-index: @z-index-menu;
+
+    &.toggle-in {
+        height: @header-menu-height;
+    }
+}
+
+.bsp-site-menu-trigger {
+    &:extend(.ts-2);
+
+    float: left;
+    margin: 0 @space 0 -@space-double;
+    padding: 0 @space-double;
+    position: relative;
+
+    a {
+        height: @header-height;
+        line-height: @header-height;
+    }
+
+    &.toggle-in {
+        background: @gray-light-2;
+    }
+}
+
+
+
+
+.bsp-site-search {
+    &:extend(.vertical-center);
+
+    background: @header-background;
+    height: @header-height;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    overflow: hidden;
+    .transition(width .15s linear);
+    width: 0;
+    z-index: 1; // doesn't need to be on top, just needs a z-index to work
+
+    &.toggle-in {
+        width: @header-search-width;
+    }
+}
+
+.bsp-site-search-form {
+    height: @header-search-height;
+    margin: 0;
+    position: relative;
+    top: (@header-height - @header-search-height) / 2;
+}
+
+.bsp-site-search-input {
+    background: @brand-dark;
+    border: @brand-dark;
+    border-bottom: 1px solid @brand-primary;
+    color: @white;
+    height: @header-search-height;
+    width: 100%;
+}
+
+.bsp-site-search-submit {
+    &:extend(.ts-1);
+
+    background: none;
+    border: none;
+    color: @brand-primary;
+    right: 0;
+    position: absolute;
+    top: 0;
+}
+
+.bsp-site-search-trigger {
+    &:extend(.ts-3);
+    float: right;
+    position: relative;
+
+    a {
+        height: @header-height;
+        line-height: @header-height;
+    }
+
+    .toggle-trigger.toggle-in {
+        i {
+            // this icon is just a bit smaller, so making sure everything stays the same size
+            padding-left: 3px;
+
+            &:before {
+                content: @fa-var-close;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+.bsp-extra-menu-wrapper {
+    display: none;
+}
+
+.bsp-extra-menu {
+    &:extend(.bsp-list-inline all);
+    &:extend(.ts-0);
+
+    height: 100%;
+    float: right;
+    padding-right: @space-triple;
+
+    > li {
+        position: relative;
+
+        a {
+            display: block;
+            line-height: @header-height;
+            padding: 0 @space-and-half;
+
+            .icon {
+                padding-left: @space-half;
+
+                &:before {
+                    content: @fa-var-caret-down;
+                }
+            }
+        }
+
+        &:hover {
+
+            a {
+                background-color: @gray-light-2;
+                color: @black;
+
+                .icon {
+                    &:before {
+                        content: @fa-var-caret-up;
+                    }
+                }
+            }
+
+            .bsp-extra-menu-submenu {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+        }
+
+    }
+}
+
+.bsp-extra-menu-submenu {
+    background-color: @gray-light-2;
+    left: 0;
+    min-width: 175px;
+    opacity: 0;
+    padding-bottom: @space-half;
+    position: absolute;
+    top: @header-height;
+    .transition(opacity .25s linear);
+    visibility: hidden;
+    width: auto;
+
+    > li {
+
+        a {
+            color: @black;
+            line-height: @space-quad;
+            height: @space-quad;
+            overflow: hidden;
+            padding: 0 @space-and-half;
+        }
+
+    }
+}
+
+
+.bsp-header-extra-links-wrapper {
+    display: none;
+}
+
+.bsp-header-extra-links {
+    &:extend(.bsp-list-inline all);
+    &:extend(.ts-0);
+
+    height: 100%;
+    float: right;
+    padding-left: @space-double;
+
+    a {
+        background: @brand-dark;
+        border-left: @border-style-4;
+        display: block;
+        height: @header-height;
+        line-height: @header-height;
+        padding: 0 @space-double;
+        text-transform: uppercase;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media @mq-sm {
+
+    .bsp-site-search {
+
+        right: 60px;
+
+        &.toggle-in {
+            width: 260px;
+        }
+
+    }
+
+    .bsp-site-search-trigger {
+        padding-right: @space-triple;
+    }
+
+}
+
+@media @mq-md {
+
+    .bsp-site-search {
+
+        right: 70px;
+
+        &.toggle-in {
+            width: 500px;
+        }
+    }
+
+    .bsp-extra-menu-wrapper {
+        display: block;
+    }
+
+    .bsp-site-menu-simple-list {
+        width: 150px;
+    }
+
+}
+
+
+@media @mq-lg {
+
+    .bsp-site-search {
+
+        &.toggle-in {
+            width: 550px;
+        }
+    }
+
+    .bsp-header-extra-links-wrapper {
+        display: block;
+    }
+
+     .bsp-site-menu-simple-list {
+        width: 200px;
+    }
+
+}
+
+

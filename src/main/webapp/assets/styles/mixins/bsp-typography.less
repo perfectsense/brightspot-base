@@ -1,0 +1,24 @@
+// Type Scale mixin
+// This allows us to mixin the font size and custom line heights if we need it
+
+.type-scale(@scale; @weight: @font-weight-base; @lh: @line-height-base;) {
+
+  .font-size() when (@scale < 0) {
+    @font-size: "ts-neg@{scale}";
+
+    font-size: @@font-size;
+    font-weight: @weight;
+    line-height: @lh;
+  }
+
+  .font-size() when (@scale >= 0) {
+    @font-size: "ts-@{scale}";
+
+    font-size: @@font-size;
+    font-weight: @weight;
+    line-height: @lh;
+  }
+
+  // Kick it off
+  .font-size();
+}

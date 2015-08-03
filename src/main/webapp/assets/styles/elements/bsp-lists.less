@@ -1,0 +1,43 @@
+// List styles are lifted/pasted from Bootstrap and not pulled in via Bower as they are in the middle of a bunch of other code
+
+// Unordered and Ordered lists
+// We flip the default style of lists as most lists we have do not have a list style
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    ul, ol {
+        margin-bottom: 0;
+    }
+}
+
+// List options
+
+// Basic list has the list-style
+.bsp-list {
+    margin-left: @space-double;
+    padding-left: @space;
+}
+ul.bsp-list {
+    list-style: disc;
+}
+ol.bsp-list {
+    list-style: decimal;
+}
+
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+.bsp-unstyled-list {
+    margin-left: @space-double;
+    padding-left: @space;
+}
+
+// Inline turns list items into inline-block
+.bsp-list-inline {
+    margin-left: 5px;
+
+    > li {
+        display: inline-block;
+        margin-left: -5px; // removes extra spacing between inline block items
+    }
+}

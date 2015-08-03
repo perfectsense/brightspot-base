@@ -1,0 +1,21 @@
+{{#if attributes.id}}
+	<div data-bsp-form-message="#{{attributes.id}}"
+		{{#if errors}}
+		data-bsp-form-message-options='{
+			"messages": {
+			{{#each errors}}
+				{{#if @last}}
+					{{#each this}}
+					"{{@key}}": "{{this}}"
+					{{/each}}
+				{{else}}
+					{{#each this}}
+					"{{@key}}": "{{this}}",
+					{{/each}}
+				{{/if}}
+			{{/each}}
+			}
+		}'
+		{{/if}}
+	></div>
+{{/if}}

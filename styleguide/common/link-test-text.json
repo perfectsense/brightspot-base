@@ -1,0 +1,10 @@
+{
+	"_template" : "common/link",
+
+	"attributes" : {
+		"href"  : "link-me",
+		"title" : "I are a link"
+	},
+	
+	"text"  : "Link test text"
+}

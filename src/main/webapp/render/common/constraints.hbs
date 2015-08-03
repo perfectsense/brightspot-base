@@ -1,0 +1,34 @@
+{{!--
+Constraints are specific to bsp-forms. They provide additional
+field validation after native HTML5 field validation passes.
+
+For an example of a custom constraint,
+@see https://github.com/perfectsense/brightspot-js-form/blob/master/src/js/constraints/bsp-form-constraint-matches.js
+
+That custom constraint would be invoked by passing this data:
+inputs: {
+	myfield: {
+		attributes: {
+			id: "myfield"
+		}
+	},
+	myfieldrepeat: {
+		attributes: {
+			id: "myfieldrepeat"
+		},
+		constraints: [
+			{
+				arg: "#myfield",
+				name: "bsp-form-constraint-matches"
+			}
+		]
+	}
+}
+--}}
+{{#each this}}
+	{{#if arg}}
+		data-{{name}}="{{arg}}"
+	{{else}}
+		data-{{name}}
+	{{/if}}
+{{/each}}

@@ -1,0 +1,102 @@
+<div class="bsp-site-header-wrapper">
+
+	{{#if tophat}}
+		<div class="bsp-tophat">
+			<ul class="bsp-tophat-links">
+				{{#each tophat.links}}
+					<li>{{> common/link }}</li>
+				{{/each}}
+			</ul>
+		</div>
+	{{/if}}
+
+	<div class="bsp-site-header">
+
+		{{#with mainMenu}}
+			<div class="bsp-site-menu" data-bsp-toggle-item>
+				<div class="bsp-site-menu-content toggle-item">	
+					
+					{{#each menuItems}}
+						<ul class="bsp-site-menu-simple-list">
+							<li class="heading">{{> common/link heading}}</li>
+							{{#each items}}
+								<li>{{> common/link this}}</li>
+							{{/each}}
+						</ul>
+					{{/each}}
+					</li>
+				</div>
+
+				<div class="bsp-site-menu-trigger toggle-trigger">
+					<a href="#"><i class="icon icon-bars"><span class="sr-only">toggle menu</span></i></a>
+				</div>
+			</div>
+		{{/with}}
+		
+		<div class="bsp-site-logo-centering">
+			<h1 class="bsp-site-logo">
+				{{#with siteLogo.link}}
+					{{> common/link imgClass="bsp-site-logo-img"}}
+				{{/with}}
+			</h1>
+		</div>
+
+		{{#if extraLinks}}
+			<div class="bsp-header-extra-links-wrapper">
+				<ul class="bsp-header-extra-links">
+					{{#each extraLinks}}
+						<li>{{> common/link }}</li>
+					{{/each}}
+				</ul>
+			</div>
+		{{/if}}
+
+		{{#if sharing}}
+			<div class="bsp-share-links-centering">
+				<ul class="bsp-share-links">
+					{{#each sharing.links}}
+						<li class="bsp-{{icon}}-share">{{> common/link class="bsp-share-link"}}</li>
+					{{/each}}
+				</ul>
+			</div>
+		{{/if}}
+
+		<div class="bsp-site-search-trigger" data-bsp-toggle-item>
+			<div class="bsp-site-search toggle-item">
+				<form class="bsp-site-search-form">
+					<input class="bsp-site-search-input" type="text" />
+					<button class="bsp-site-search-submit" type="submit"><i class="icon icon-search"><span class="sr-only">Go</span></i></button>
+				</form>
+			</div>
+
+			<div class="toggle-trigger">
+				<a href="#"><i class="icon icon-search"><span class="sr-only">toggle search form</span></i></a>
+			</div>
+		</div>
+
+		{{#if extraMenu}}
+			<div class="bsp-extra-menu-wrapper">
+				<ul class="bsp-extra-menu">
+					{{#each extraMenu}}
+					<li>
+						{{!-- This one doesn't use the partial as we needed a custom icon inside --}}
+						{{#with link}}
+							<a href="{{href}}" {{#if title}}title="{{title}}"{{/if}} {{#if target}}target="{{target}}"{{/if}}>{{text}}{{#if ../subMenu}}<i class="icon"></i>{{/if}}</a>
+						{{/with}}
+
+						{{#if subMenu}}
+						<ul class="bsp-extra-menu-submenu">
+							{{#each subMenu}}
+								<li>{{> common/link }}</li>
+							{{/each}}
+						</ul>
+						{{/if}}
+					</li>
+					{{/each}}
+				</ul>
+			</div>
+		{{/if}}
+
+	</div>
+
+</div>

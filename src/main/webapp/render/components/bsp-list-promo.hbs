@@ -1,0 +1,44 @@
+<div class="bsp-component {{#if options.modifierClass}}{{options.modifierClass}}{{/if}}">
+	{{#if heading}}
+		<div class="bsp-component-title">{{heading}}</div>
+	{{/if}}
+
+	<div class="bsp-component-content">
+
+		<div class="bsp-list-promo">
+			<ul class="bsp-list-promo-list {{#if options.horizontalSplit}}bsp-row{{/if}}">
+				{{#each listItems}}
+					<li class="{{#if ../options.horizontalSplit}}bsp-column-{{/if}}{{../options.horizontalSplit}} {{#if imgAlign}}image-align-{{/if}}{{imgAlign}}">
+
+						{{#with image}}
+							<div class="bsp-list-promo-image">
+								{{> (lookup . '_template') }}
+							</div>
+						{{/with}}
+
+						<div class="bsp-list-promo-text">
+							{{#with title}}
+								<div class="bsp-list-promo-title">{{> (lookup . '_template') }}</div>
+							{{/with}}
+							
+							{{#if description}}
+								<div class="bsp-list-promo-desc">{{{description}}}</div>
+							{{/if}}
+
+							{{#with link}}
+								<div class="bsp-list-promo-link">{{> (lookup . '_template') }}</div>
+							{{/with}}
+						</div>
+					</li>
+				{{/each}}
+			</ul>
+		</div>
+
+	</div>
+
+	{{#if ctaText}}
+		<div class="bsp-component-cta">
+			<a href="{{ctaLink}}">{{ctaText}}</a>
+		</div>	
+	{{/if}}	
+</div>
