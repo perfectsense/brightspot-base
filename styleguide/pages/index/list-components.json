@@ -13,6 +13,17 @@
 				"text"  : "BSP Article"
 			}
 		},
+		{ 
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
+					"href"  : "/components/bsp-bio/",
+					"title" : "BSP Bio"
+				},
+				"text"  : "BSP Bio"
+			}
+		},
 		{
 			"link": {
 				"_template" : "common/link",

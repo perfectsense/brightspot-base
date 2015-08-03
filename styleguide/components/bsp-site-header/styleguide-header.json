@@ -53,6 +53,15 @@
 					"_template" : "common/link",
 					
 					"attributes" : {
+						"href"  : "/components/bsp-bio/",
+						"title" : "BSP Bio"
+					},
+					"text"  : "BSP Bio"
+				},
+				{
+					"_template" : "common/link",
+					
+					"attributes" : {
 						"href"  : "/components/bsp-gallery-module/",
 						"title" : "BSP Gallery Module"
 					},
