@@ -6,7 +6,7 @@
         http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
         version="2.5">
 
-    <display-name>inspire-confidence</display-name>
+    <display-name>com.brightspotbase: brightspot-base</display-name>
 
     <filter>
         <filter-name>ApplicationFilter</filter-name>
@@ -37,41 +37,5 @@
         <dispatcher>INCLUDE</dispatcher>
         <dispatcher>REQUEST</dispatcher>
     </filter-mapping>
-
-    <error-page>
-        <error-code>404</error-code>
-        <location>/404</location>
-    </error-page>
-    <error-page>
-        <error-code>500</error-code>
-        <location>/500</location>
-    </error-page>
-    
-  <servlet>
-        <servlet-name>jsp</servlet-name>
-        <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
-        <init-param>
-            <param-name>fork</param-name>
-            <param-value>false</param-value>
-        </init-param>
-        <init-param>
-            <param-name>development</param-name>
-            <!-- This value is injected during the maven build process -->
-            <param-value>${developmentMode}</param-value>
-        </init-param>
-        <init-param>
-            <param-name>compilerSourceVM</param-name>
-            <param-value>1.8</param-value>
-        </init-param>
-        <init-param>
-            <param-name>compilerTargetVM</param-name>
-            <param-value>1.8</param-value>
-        </init-param>
-        <load-on-startup>3</load-on-startup>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>jsp</servlet-name>
-        <url-pattern>*.jsp</url-pattern>
-        <url-pattern>*.jspx</url-pattern>
-    </servlet-mapping>
+  
 </web-app>
