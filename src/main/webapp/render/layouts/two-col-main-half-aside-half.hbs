@@ -8,7 +8,7 @@
 
 	<div class="bsp-row">
 
-		<div class="bsp-column-main">
+		<div class="bsp-column-half">
 			{{#with main}}
 				{{#each components}}
 					{{> (lookup . '_template') }}
@@ -16,7 +16,7 @@
 			{{/with}}
 		</div>
 
-		<div class="bsp-column-aside">
+		<div class="bsp-column-half">
 			{{#with aside}}
 				{{#each components}}
 					{{> (lookup . '_template') }}

@@ -1,4 +1,11 @@
 <div class="bsp-container">
+
+	{{#with aboveColumns}}
+		{{#each components}}
+			{{> (lookup . '_template') }}
+		{{/each}}
+	{{/with}}
+	
 	<div class="bsp-row">
 
 		<div class="bsp-column-scrolling">
