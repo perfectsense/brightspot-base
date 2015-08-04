@@ -1,5 +1,5 @@
 {
-	"_template" : "components/bsp-component-combo",
+	"_template" : "components/bsp-component-group",
 
 	"components" : [
 		{
