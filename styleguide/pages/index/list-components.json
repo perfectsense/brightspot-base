@@ -29,6 +29,17 @@
 				"_template" : "common/link",
 				
 				"attributes" : {
+					"href"  : "/components/bsp-form-input/",
+					"title" : "BSP Form Input"
+				},
+				"text"  : "BSP Form Input"
+			}
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
 					"href"  : "/components/bsp-gallery-module/",
 					"title" : "BSP Gallery Module"
 				},
