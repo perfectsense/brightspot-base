@@ -41,16 +41,16 @@
 		{{/with}}
 
 		<div class="bsp-article-content">
-			{{{articleContent}}}
+			{{#each body}}
+				{{> (lookup . '_template') }}
+			{{/each}}
 		</div>
 
 		<div class="bsp-tags">
 			<ul class="bsp-tag-list">
-
 				{{#each tags}}
 					<li>{{> (lookup . '_template') }}</li>
 				{{/each}}
-
 			</ul>
 		</div>
 
