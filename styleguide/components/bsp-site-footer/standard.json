@@ -63,26 +63,6 @@
 				}
 			}]
 		},
-		"inputs": {
-			"email1": {
-				"attributes": {
-					"id": "emailfield1",
-					"required": "required",
-					"type": "email"
-				},
-				"label": {
-					"attributes": {
-						"for": "emailfield1"
-					}
-				}
-			},
-			"submit": {
-				"attributes": {
-					"type": "submit",
-					"value": "Sign Up"
-				}
-			}
-		},
 		"inputs": [
 			{
 				"_template" : "components/bsp-form-input",
