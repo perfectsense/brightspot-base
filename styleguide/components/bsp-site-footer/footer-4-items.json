@@ -1,0 +1,62 @@
+{
+	"_template" : "components/bsp-list-promo",
+	"heading": "Contact Brightspot",
+	"listItems" : [
+		{ 
+			"link" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "link",
+					"title" : "Link Title"
+				},
+
+				"text" : "Newsletter"
+
+			}
+		},
+		{ 
+			"link" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "link",
+					"title" : "Link Title"
+				},
+
+				"text" : "Advertising"
+
+			}
+		},
+		{ 
+			"link" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "link",
+					"title" : "Link Title"
+				},
+
+				"text" : "Careers"
+
+			}
+		},
+		{ 
+			"link" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "link",
+					"title" : "Link Title"
+				},
+
+				"text" : "Sitemap"
+
+			}
+		}
+	]
+}

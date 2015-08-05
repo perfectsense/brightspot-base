@@ -1,6 +1,77 @@
 .bsp-site-footer {
     background: @brand-dark;
-    margin-top: @space-double;
+    padding: @space-quad 0;
     min-height: 25px;
+    color: @white;
     width: 100%;
+
+	.bsp-list-promo {
+		text-transform: none;
+
+    	a {
+    		color: @white;
+    	}
+
+    	.bsp-list-promo-text {
+    		padding: 0;
+    	}
+
+    	.bsp-list-promo-list {
+            margin: 0;
+
+    		li {
+    			border: 0;
+    		}
+    	}
+	}
+
+	.bsp-component-title {
+        margin-bottom: @space;
+        font-size: @ts-2;
+        padding: 0;
+	}
+
+    .bsp-component-content {
+        margin-bottom: @space;
+    }
+ 	
+ 	.bsp-share-links {
+        margin-bottom: @space;
+ 		margin-left: 0;
+ 		
+ 		a {
+ 			color: @white;
+ 		}
+ 	}
+
+    form {
+        .input-container {
+            background-color: @white;    
+            white-space: nowrap;
+            float: left;
+
+            .input-content {
+                display: inline-block;   
+            }
+
+            .bsp-form-input {
+                margin-bottom: 0;
+            }
+        }
+     
+        input[type=text] {
+            text-transform: uppercase;
+            padding: @space;
+            color: @black; 
+            border: none;       
+        }
+
+        input[type=submit] {
+            background-color: @brand-primary;
+            text-transform: uppercase;
+            padding: 0 @space-double;
+            height: @space-quad;
+            border: none;  
+        }
+    }    
 }

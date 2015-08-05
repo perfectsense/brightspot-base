@@ -1,5 +1,115 @@
 {
 	"_template" : "components/bsp-site-footer",
 
-	"pageTitle" : "Test Page"
+	"first-col" : {
+		"components" : [
+			{
+				"_dataUrl": "/components/bsp-site-footer/footer-5-items.json"
+			}
+		]
+	},
+		
+	"second-col" : {
+		"components" : [
+			{
+				"_dataUrl": "/components/bsp-site-footer/footer-4-items.json"
+			}
+		]
+	},
+
+	"third-col" : {
+		"social": "Follow Brightspot",
+		"newsletter": "Newsletter",
+		"newsletter-description": "Keep it up with the latest Brightspot.com" ,
+		"sharing" : {
+			"links" : [{
+				"_template" : "common/link",
+				"icon"  : "facebook",
+
+				"attributes" : {
+					"href"  : "http://www.facebook.com",
+					"title" : "Facebook",
+					"target" : "_blank"
+				}
+			},
+			{
+				"_template" : "common/link",
+				"icon"  : "twitter",
+
+				"attributes" : {
+					"href"  : "http://www.twitter.com",
+					"title" : "Twitter",
+					"target" : "_blank"
+				}
+			},
+			{
+				"_template" : "common/link",
+				"icon"  : "pinterest",
+
+				"attributes" : {
+					"href"  : "http://www.pinterest.com",
+					"title" : "Pinterest",
+					"target" : "_blank"
+				}
+			},
+			{
+				"_template" : "common/link",
+				"icon"  : "linkedin",
+
+				"attributes" : {
+					"href"  : "http://www.linkedin.com",
+					"title" : "LinkedIn",
+					"target" : "_blank"
+				}
+			}]
+		},
+		"inputs": {
+			"email1": {
+				"attributes": {
+					"id": "emailfield1",
+					"required": "required",
+					"type": "email"
+				},
+				"label": {
+					"attributes": {
+						"for": "emailfield1"
+					}
+				}
+			},
+			"submit": {
+				"attributes": {
+					"type": "submit",
+					"value": "Sign Up"
+				}
+			}
+		},
+		"inputs": [
+			{
+				"_template" : "components/bsp-form-input",
+				"showMessagesAbove": true,
+				"attributes": {
+					"autocomplete": "off",
+					"id": "textinput1",
+					"placeholder": "Placeholder",
+					"required": true,
+					"type": "text"
+				},
+				"errors": [
+					{ "valueMissing": "Please fill in the text input" }
+				]
+			},
+
+			{
+				"_template" : "components/bsp-form-input",
+				"attributes": {
+					"type": "submit",
+					"value": "Submit"
+				}
+			}
+		]
+
+
+	},
+
+	"disclaimer": "Copyright © Brightspot"
 }

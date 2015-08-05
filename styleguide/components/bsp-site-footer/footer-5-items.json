@@ -1,0 +1,77 @@
+
+{
+	"_template" : "components/bsp-list-promo",
+	"heading":"Brightspot Sites",
+	"listItems" : [
+		{ 
+			"link" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "link",
+					"title" : "Link Title"
+				},
+
+				"text" : "Brightspot Store"
+
+			}
+		},
+		{ 
+			"link" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "link",
+					"title" : "Link Title"
+				},
+
+				"text" : "Brightspot Arts"
+
+			}
+		},
+		{ 
+			"link" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "link",
+					"title" : "Link Title"
+				},
+
+				"text" : "Brightspot Link"
+
+			}
+		},
+		{ 
+			"link" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "link",
+					"title" : "Link Title"
+				},
+
+				"text" : "Brightspot News"
+
+			}
+		},
+		{ 
+			"link" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "link",
+					"title" : "Link Title"
+				},
+
+				"text" : "Brightspot Pro"
+
+			}
+		}
+	]
+}

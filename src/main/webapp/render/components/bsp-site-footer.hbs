@@ -1,1 +1,53 @@
-<div class="bsp-site-footer"></div>
+<div class="bsp-site-footer">
+	<div class="bsp-container">
+		<div class="bsp-row">
+			<div class="bsp-column-third">
+				{{#with first-col}}
+					{{#each components}}
+						{{> (lookup . '_template') }}
+					{{/each}}
+				{{/with}}
+			</div>
+			<div class="bsp-column-third">
+				{{#with second-col}}
+					{{#each components}}
+						{{> (lookup . '_template') }}
+					{{/each}}
+				{{/with}}
+			</div>
+			<div class="bsp-column-third">
+				{{#with third-col}}
+					<h1 class="bsp-component-title">{{social}}</h1>
+					{{#if sharing}}
+					<ul class="bsp-share-links">
+						{{#each sharing.links}}
+							<li class="bsp-{{icon}}-share">{{> common/link class="bsp-share-link"}}</li>
+						{{/each}}
+					</ul>
+					{{/if}}
+					<h1 class="bsp-component-title">{{newsletter}}</h1>
+					<div class="bsp-component-content">
+						{{newsletter-description}}
+					</div>
+
+					<form action="" class="data-bsp-form">
+						<div class="input-container">
+							{{#each inputs}}
+								<div class="input-content">{{> (lookup . '_template') }}</div>
+							{{/each}}
+						</div>
+					</form>
+					
+				{{/with}}
+				
+			</div>
+		</div>
+		<div class="bsp-row">
+			<div class="bsp-container">
+				<div class="bsp-column">
+					{{disclaimer}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
