@@ -1,5 +1,5 @@
 {
-	"_template" : "components/bsp-list-promo",
+	"_template" : "components/bsp-list-unstyled",
 	"heading": "Contact Brightspot",
 	"listItems" : [
 		{ 

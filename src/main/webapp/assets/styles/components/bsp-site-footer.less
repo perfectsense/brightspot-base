@@ -5,26 +5,6 @@
     color: @white;
     width: 100%;
 
-	.bsp-list-promo {
-		text-transform: none;
-
-    	a {
-    		color: @white;
-    	}
-
-    	.bsp-list-promo-text {
-    		padding: 0;
-    	}
-
-    	.bsp-list-promo-list {
-            margin: 0;
-
-    		li {
-    			border: 0;
-    		}
-    	}
-	}
-
 	.bsp-component-title {
         margin-bottom: @space;
         font-size: @ts-2;
@@ -43,6 +23,35 @@
  			color: @white;
  		}
  	}
+
+    .bsp-list {
+        margin-left: 0;
+        padding-left: 0;
+
+        li {
+            margin-top: @space-half;
+
+            a {
+                color: @white;
+                &:hover, &:active {
+                    color: @brand-primary;
+                }
+            }
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .bsp-unstyled-list {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .bsp-list-inline {
+        margin-left: 0;
+    }
 
     form {
         .input-container {

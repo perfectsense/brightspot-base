@@ -1,0 +1,19 @@
+<div class="bsp-component {{#if options.modifierClass}}{{options.modifierClass}}{{/if}}">
+	{{#if heading}}
+		<div class="bsp-component-title">{{heading}}</div>
+	{{/if}}
+
+	<div class="bsp-component-content">
+		<div class="bsp-list">
+			<ul class="bsp-unstyled-list">
+				{{#each listItems}}
+					<li class="bsp-list-inline">
+						{{#with link}}
+							{{> (lookup . '_template') }}
+						{{/with}}
+					</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+</div>
