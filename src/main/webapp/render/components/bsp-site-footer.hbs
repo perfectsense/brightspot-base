@@ -2,22 +2,44 @@
 	<div class="bsp-container">
 		<div class="bsp-row">
 			<div class="bsp-column-third">
+
 				{{#with first-col}}
-					{{#each components}}
-						{{> (lookup . '_template') }}
-					{{/each}}
+				    <section>
+				        <div class="bsp-list-heading"> {{heading}}</div>
+				        {{#each listItems}}
+				            <li>
+				            {{#with link}}
+				                 {{> (lookup . '_template') }}
+				            {{/with}}
+				            </li>
+				        {{/each}}
+				    </section>
 				{{/with}}
+
 			</div>
+
 			<div class="bsp-column-third">
+
 				{{#with second-col}}
-					{{#each components}}
-						{{> (lookup . '_template') }}
-					{{/each}}
+				    <section>
+				        <div class="bsp-list-heading"> {{heading}}</div>
+				        {{#each listItems}}
+				            <li>
+					            {{#with link}}
+					                 {{> (lookup . '_template') }}
+					            {{/with}}
+				            </li>
+				        {{/each}}
+				    </section>
 				{{/with}}
+
 			</div>
+
 			<div class="bsp-column-third">
+
 				{{#with third-col}}
-					<h1 class="bsp-component-title">{{social}}</h1>
+					<div class="bsp-component-title">{{social}}</div>
+
 					{{#if sharing}}
 					<ul class="bsp-share-links">
 						{{#each sharing.links}}
@@ -25,7 +47,9 @@
 						{{/each}}
 					</ul>
 					{{/if}}
-					<h1 class="bsp-component-title">{{newsletter}}</h1>
+
+					<div class="bsp-component-title">{{newsletter}}</div>
+
 					<div class="bsp-component-content">
 						{{newsletter-description}}
 					</div>
@@ -37,17 +61,17 @@
 							{{/each}}
 						</div>
 					</form>
-					
 				{{/with}}
-				
+
 			</div>
+			
 		</div>
 		<div class="bsp-row">
-			<div class="bsp-container">
-				<div class="bsp-column">
-					{{disclaimer}}
-				</div>
+			
+			<div class="bsp-column">
+				{{disclaimer}}
 			</div>
+	
 		</div>
 	</div>
 </div>

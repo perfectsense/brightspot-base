@@ -2,19 +2,138 @@
 	"_template" : "components/bsp-site-footer",
 
 	"first-col" : {
-		"components" : [
-			{
-				"_dataUrl": "/components/bsp-site-footer/footer-5-items.json"
-			}
-		]
-	},
-		
-	"second-col" : {
-		"components" : [
-			{
-				"_dataUrl": "/components/bsp-site-footer/footer-4-items.json"
-			}
-		]
+		"heading": "Contact Brightspot",
+		"listItems" : [{ 
+				"link" : {
+
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href"  : "link",
+						"title" : "Link Title"
+					},
+
+					"text" : "Brightspot Store"
+
+				}
+			},
+			{ 
+				"link" : {
+
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href"  : "link",
+						"title" : "Link Title"
+					},
+
+					"text" : "Brightspot Arts"
+
+				}
+			},
+			{ 
+				"link" : {
+
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href"  : "link",
+						"title" : "Link Title"
+					},
+
+					"text" : "Brightspot Link"
+
+				}
+			},
+			{ 
+				"link" : {
+
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href"  : "link",
+						"title" : "Link Title"
+					},
+
+					"text" : "Brightspot News"
+
+				}
+			},
+			{ 
+				"link" : {
+
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href"  : "link",
+						"title" : "Link Title"
+					},
+
+					"text" : "Brightspot Pro"
+
+				}
+			}]
+		},
+			
+		"second-col" : {
+			"heading": "Contact Brightspot",
+			"listItems" : 
+			[{ 
+				"link" : {
+
+						"_template" : "common/link",
+
+						"attributes" : {
+							"href"  : "link",
+							"title" : "Link Title"
+						},
+
+						"text" : "Newsletter"
+
+					}
+				},
+				{ 
+					"link" : {
+
+						"_template" : "common/link",
+
+						"attributes" : {
+							"href"  : "link",
+							"title" : "Link Title"
+						},
+
+						"text" : "Advertising"
+
+					}
+				},
+				{ 
+					"link" : {
+
+						"_template" : "common/link",
+
+						"attributes" : {
+							"href"  : "link",
+							"title" : "Link Title"
+						},
+
+						"text" : "Careers"
+
+					}
+				},
+				{ 
+					"link" : {
+
+						"_template" : "common/link",
+
+						"attributes" : {
+							"href"  : "link",
+							"title" : "Link Title"
+						},
+
+						"text" : "Sitemap"
+
+					}
+				}]
 	},
 
 	"third-col" : {
@@ -84,12 +203,10 @@
 				"_template" : "components/bsp-form-input",
 				"attributes": {
 					"type": "submit",
-					"value": "Submit"
+					"value": "Sign Up"
 				}
 			}
 		]
-
-
 	},
 
 	"disclaimer": "Copyright © Brightspot"
