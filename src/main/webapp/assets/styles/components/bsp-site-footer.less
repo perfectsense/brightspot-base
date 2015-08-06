@@ -32,7 +32,6 @@
     form {
         .input-container { 
             float: left;
-            white-space: nowrap;
 
             .input-content {
                 display: inline-block;   
@@ -40,6 +39,7 @@
 
             .bsp-form-message {
                 width: 0px;
+                white-space: nowrap;
             }
         }
      
@@ -51,8 +51,6 @@
         }
 
         input[type=submit] {
-            position: relative;
-            left: -4px;
             background-color: @brand-primary;
             text-transform: uppercase;
             padding: @space @space-double;
