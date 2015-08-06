@@ -1,0 +1,18 @@
+{
+	"_template" : "components/bsp-form-input",
+	"showMessagesAbove": true,
+	"attributes": {
+		"id": "color1",
+		"required": true,
+		"type": "color"
+	},
+	"errors": [
+		{ "valueMissing": "Please select a color" }
+	],
+	"label": {
+		"attributes": {
+			"for": "color1"
+		},
+		"text": "Color input"
+	}
+}
