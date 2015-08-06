@@ -2,17 +2,18 @@
 	"_template" : "components/bsp-form-input",
 	"showMessagesAbove": true,
 	"attributes": {
-		"id": "color1",
+		"id": "month1",
 		"required": true,
-		"type": "color"
+		"type": "month"
 	},
 	"errors": [
-		{ "valueMissing": "Please select a color" }
+		{ "typeMismatch": "Month is not valid" },
+		{ "valueMissing": "Please enter a month" }
 	],
 	"label": {
 		"attributes": {
-			"for": "color1"
+			"for": "month1"
 		},
-		"text": "Color *"
+		"text": "Month *"
 	}
 }

@@ -8,43 +8,37 @@
 
 	<div class="bsp-site-wrapper">
 
-		<div class="bsp-styleguide-header" data-bsp-template data-bsp-template-options='{ "dataUrl": "/components/bsp-site-header/styleguide-header.json" }'></div>
 
-		<div class="bsp-site">
+				<div class="bsp-styleguide-header" data-bsp-template data-bsp-template-options='{ "dataUrl": "/components/bsp-site-header/styleguide-header.json" }'></div>
 
-			<div class="bsp-container">
-				
-				<p>The bsp-form-input component is used inside a form element which must have the "data-bsp-form" attribute set. This enables the fields to interact with <a href="https://github.com/perfectsense/brightspot-js-form">the bsp-form library</a>.</p>
+				<div class="bsp-site">
 
-				<form action="" data-bsp-form>
+					<form action="" data-bsp-form>
 
-					<h2>An example form</h2>
+						<div class="bsp-container">
+							<div class="bsp-row">
+								<div class="bsp-column-full">
 
-					<!-- type: checkbox -->
-					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "input-checkbox.json" }'></div>
+										<p>The bsp-form-input component is used inside a form element which must have the "data-bsp-form" attribute set. This enables the fields to interact with <a href="https://github.com/perfectsense/brightspot-js-form">the bsp-form library</a>.</p>
 
-					<!-- type: color -->
-					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "input-color.json" }'></div>
-					<p><small>(needs some work in bsp-form)</small></p>
+										<h2>Example Form</h2>
+								</div>
+							</div>
+						</div>
 
-					<!-- type: date -->
-					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "input-date.json" }'></div>
+						<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/components/bsp-form-input/index.json" }'></div>
 
-					<!-- type: datetime local -->
-					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "input-datetime-local.json" }'></div>
+						<div class="bsp-container">
+							<div class="bsp-row">
+								<div class="bsp-column-full bsp-form-input-button-container">
+									<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/components/bsp-form-input/input-submit.json" }'></div>
+								</div>
+							</div>
+						</div>
 
-					<!-- type: email -->
-					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "input-email.json" }'></div>
+					</form>
 
-					<!-- type: text -->
-					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "input-text.json" }'></div>
-
-					<!-- type: submit -->
-					<div data-bsp-template data-bsp-template-options='{ "dataUrl": "input-submit.json" }'></div>
-
-				</form>
-
-				<p>Unsupported types: datetime (use date or datetime-local)</p>
+				</div>
 
 			</div>
 
@@ -52,7 +46,6 @@
 
 		<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/components/bsp-site-footer/standard.json" }'></div>
 
-	</div>
 
 	</body>
 </html>

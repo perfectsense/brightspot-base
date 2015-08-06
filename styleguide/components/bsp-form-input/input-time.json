@@ -2,17 +2,15 @@
 	"_template" : "components/bsp-form-input",
 	"showMessagesAbove": true,
 	"attributes": {
-		"id": "color1",
+		"autocomplete": "off",
+		"id": "time1",
 		"required": true,
-		"type": "color"
+		"type": "time"
 	},
 	"errors": [
-		{ "valueMissing": "Please select a color" }
+		{ "valueMissing": "Please fill in a time" }
 	],
 	"label": {
-		"attributes": {
-			"for": "color1"
-		},
-		"text": "Color *"
+		"text": "Time *"
 	}
 }

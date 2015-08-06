@@ -3,15 +3,15 @@
 	"showMessagesAbove": true,
 	"attributes": {
 		"autocomplete": "off",
-		"id": "textinput1",
-		"placeholder": "Text input placeholder",
+		"id": "tel1",
+		"placeholder": "Telephone input placeholder",
 		"required": true,
-		"type": "text"
+		"type": "tel"
 	},
 	"errors": [
-		{ "valueMissing": "Please fill in the text input" }
+		{ "valueMissing": "Please fill in the telephone number" }
 	],
 	"label": {
-		"text": "Text"
+		"text": "Telephone *"
 	}
 }

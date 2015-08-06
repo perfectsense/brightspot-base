@@ -2,17 +2,14 @@
 	"_template" : "components/bsp-form-input",
 	"showMessagesAbove": true,
 	"attributes": {
-		"id": "color1",
+		"id": "range1",
 		"required": true,
-		"type": "color"
+		"type": "range"
 	},
 	"errors": [
-		{ "valueMissing": "Please select a color" }
+		{ "valueMissing": "Please select a range" }
 	],
 	"label": {
-		"attributes": {
-			"for": "color1"
-		},
-		"text": "Color *"
+		"text": "Range *"
 	}
 }

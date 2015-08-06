@@ -2,17 +2,18 @@
 	"_template" : "components/bsp-form-input",
 	"showMessagesAbove": true,
 	"attributes": {
-		"id": "color1",
+		"id": "number1",
 		"required": true,
-		"type": "color"
+		"type": "number"
 	},
 	"errors": [
-		{ "valueMissing": "Please select a color" }
+		{ "typeMismatch": "Number is not valid" },
+		{ "valueMissing": "Please enter a number" }
 	],
 	"label": {
 		"attributes": {
-			"for": "color1"
+			"for": "number1"
 		},
-		"text": "Color *"
+		"text": "Number *"
 	}
 }
