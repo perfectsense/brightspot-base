@@ -189,7 +189,7 @@
 				"attributes": {
 					"autocomplete": "off",
 					"id": "footeremail",
-					"placeholder": "Please enter an email address",
+					"placeholder": "email address",
 					"required": true,
 					"type": "email"
 				},
