@@ -7,4 +7,5 @@ import bsp_infinite_content_plugin from 'bsp-infinite-content-plugin';
 import bsp_form_plugin from 'bsp-form-plugin';
 import bsp_form_message_plugin from 'bsp-form-message-plugin';
 import bsp_form_constraint_matches_plugin from 'bsp-form-constraint-matches-plugin';
+import bsp_form_field_date_plugin from 'bsp-form-field-date-plugin';
 import bsp_share from 'bsp-share';

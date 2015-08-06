@@ -75,6 +75,17 @@ module.exports = function(grunt) {
                     }
                 ],
 
+                'datetimepicker': [
+                    {
+                        src: 'jquery.datetimepicker.js',
+                        dest: 'jquery.datetimepicker.js'
+                    },
+                    {
+                        src: 'jquery.datetimepicker.css',
+                        dest: '../styles/bower/jquery.datetimepicker.css'
+                    }
+                ],
+
                 'fontawesome': [
                     {
                         src: 'less/*',
