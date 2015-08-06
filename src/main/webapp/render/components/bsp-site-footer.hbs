@@ -5,14 +5,16 @@
 
 				{{#with first-col}}
 				    <section>
-				        <div class="bsp-list-heading"> {{heading}}</div>
-				        {{#each listItems}}
-				            <li>
-				            {{#with link}}
-				                 {{> (lookup . '_template') }}
-				            {{/with}}
-				            </li>
-				        {{/each}}
+				        <h5 class="bsp-list-heading"> {{heading}}</h5>
+				        <ul class="bsp-list-unstyled">
+					        {{#each listItems}}
+					            <li>
+					            {{#with link}}
+					                 {{> (lookup . '_template') }}
+					            {{/with}}
+					            </li>
+					        {{/each}}
+				        </ul>
 				    </section>
 				{{/with}}
 
@@ -22,7 +24,8 @@
 
 				{{#with second-col}}
 				    <section>
-				        <div class="bsp-list-heading"> {{heading}}</div>
+				        <h5 class="bsp-list-heading"> {{heading}}</h5>
+				        <ul class="bsp-list-unstyled">
 				        {{#each listItems}}
 				            <li>
 					            {{#with link}}
@@ -30,6 +33,7 @@
 					            {{/with}}
 				            </li>
 				        {{/each}}
+				        </ul>
 				    </section>
 				{{/with}}
 
