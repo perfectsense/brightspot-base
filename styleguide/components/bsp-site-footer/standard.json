@@ -69,13 +69,14 @@
 				"showMessagesAbove": true,
 				"attributes": {
 					"autocomplete": "off",
-					"id": "textinput1",
-					"placeholder": "Placeholder",
+					"id": "footeremail",
+					"placeholder": "Please enter an email address",
 					"required": true,
-					"type": "text"
+					"type": "email"
 				},
 				"errors": [
-					{ "valueMissing": "Please fill in the text input" }
+					{ "typeMismatch": "Email address must follow pattern a@b.c" },
+					{ "valueMissing": "Please enter an email address" }
 				]
 			},
 
