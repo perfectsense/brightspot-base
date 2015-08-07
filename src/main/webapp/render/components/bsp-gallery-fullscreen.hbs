@@ -1,17 +1,17 @@
 <div data-bsp-carousel-gallery>
-	{{#if thumbnails}}
+	{{#if galleryThumbnails}}
 		<div class="bsp-carousel-gallery-thumbnails">
 			
 			<a href="" class="bsp-carousel-gallery-thumbnails-close-link">
-				{{#if thumbnailsCloseText}}
-					{{thumbnailsCloseText}}
+				{{#if galleryThumbnailsCloseText}}
+					{{galleryThumbnailsCloseText}}
 				{{/if}}
 			</a>
 
 			{{#gallerySlides}}
 				{{#if thumbnailImage}}
 				<div class="bsp-carousel-gallery-thumbnail bsp-column-third" data-index="{{@index}}">
-					<img alt="" src="{{thumbnailImage}}" />
+					{{> (lookup . '_template') }}
 				</div>
 				{{/if}}
 			{{/gallerySlides}}
@@ -26,19 +26,15 @@
 					<span>{{galleryTitleType}}:</span>
 				{{/if}}
 				{{galleryTitle}}
+				{{#if galleryTitleShowCount}}
+					<span class="bsp-carousel-gallery-count"></span>
+				{{/if}}
 			</h2>
 		{{/if}}
-		<div class="bsp-carousel-gallery bsp-column-full">
+		<div class="bsp-carousel-gallery">
 			{{#gallerySlides}}
 				<div class="bsp-carousel-gallery-slide">
-					{{#slideImages}}
-					<picture>
-						<source media="(min-width: 1200px)" srcset="{{lg.src}}" />
-						<source media="(min-width: 992px)" srcset="{{md.src}}" />
-						<source media="(min-width: 768px)" srcset="{{sm.src}}" />
-						<img alt="" src="{{xs.src}}" />
-					</picture>
-					{{/slideImages}}
+					{{> (lookup . '_template') }}
 					{{#if slideTitle}}
 						<h3 class="bsp-carousel-gallery-slide-title">{{slideTitle}}</h3>
 					{{/if}}
@@ -52,13 +48,12 @@
 		<div class="bsp-carousel-gallery-footer">	
 
 
-			{{#if thumbnails}}
+			{{#if galleryThumbnails}}
 			<div class="bsp-carousel-gallery-footer-item bsp-carousel-gallery-footer-thumbnails-link bsp-column-fourth">
 				<a class="icon icon-th-large bsp-share-link" href="">Thumbnails</a>
 			</div>
 			{{/if}}
 
-			
 			{{#if sharing}}
 			<div class="bsp-carousel-gallery-footer-item bsp-sharing bsp-column-third" data-bsp-share data-bsp-share-options='{"iconClass":"icon", "serviceProps": { {{#if sharing.facebook}} {{#if sharing.facebook.appId}} "facebook" : { "appId": {{sharing.facebook.appId}} } {{/if}} {{/if}}  }}'>
 				{{#if sharingTitle}}
@@ -89,7 +84,7 @@
 				{{/if}}
 				<ul>
 					{{#relatedLinks}}
-						<li><a href="{{href}}">{{text}}</a></li>
+						<li>{{> (lookup . '_template') }}</li>
 					{{/relatedLinks}}			
 				</ul>
 			</div>
