@@ -1,4 +1,5 @@
 @bsp-carousel-gallery-background: @brand-primary;
+@bsp-carousel-gallery-body: @white;
 @bsp-carousel-gallery-border-color: @brand-accent;
 @bsp-carousel-gallery-color: @brand-dark;
 @bsp-carousel-gallery-bold-font-weight: 700;
@@ -35,7 +36,7 @@ body.bsp-gallery-fullscreen {
 }
 
 .bsp-carousel-gallery-container {
-	color: @bsp-carousel-gallery-color;
+	color: @bsp-carousel-gallery-body;
 
 	.bsp-sharing {
 		margin-bottom: @bsp-carousel-gallery-space;
@@ -80,6 +81,12 @@ body.bsp-gallery-fullscreen {
 	z-index: @bsp-carousel-gallery-overlays-z-index;
 	span {
 		color: @bsp-carousel-gallery-color;
+
+		&.bsp-carousel-gallery-count {
+			color: @bsp-carousel-gallery-body;
+			font-size: @font-size-base;
+			font-weight: normal;
+		}
 	}
 	@media @bsp-carousel-gallery-mq-only-xs {
 		text-align: center;
@@ -147,7 +154,7 @@ body.bsp-gallery-fullscreen {
 .bsp-carousel-gallery-footer-thumbnails-link {
 	margin-bottom: @bsp-carousel-gallery-space;
 	a {
-		color: @bsp-carousel-gallery-color;
+		color: @bsp-carousel-gallery-body;
 		font-weight: @bsp-carousel-gallery-bold-font-weight;
 		text-transform: uppercase;
 
@@ -161,6 +168,7 @@ body.bsp-gallery-fullscreen {
 }
 .bsp-carousel-gallery-footer-header {
 	display: inline;
+	font-weight: normal;
 	text-transform: uppercase;
 }
 .bsp-carousel-gallery-footer-links {
