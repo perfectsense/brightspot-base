@@ -98,6 +98,15 @@
 					"_template" : "common/link",
 					
 					"attributes" : {
+						"href"  : "/components/bsp-gallery-fullscreen/",
+						"title" : "BSP Gallery Fullscreen"
+					},
+					"text"  : "BSP Gallery Fullscreen"
+				},
+				{
+					"_template" : "common/link",
+					
+					"attributes" : {
 						"href"  : "/components/bsp-image-promo/",
 						"title" : "BSP Image Promo"
 					},
