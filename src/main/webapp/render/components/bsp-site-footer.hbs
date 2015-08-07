@@ -6,7 +6,7 @@
 				{{#with first-col}}
 				    <section>
 				        <h5 class="bsp-list-heading"> {{heading}}</h5>
-				        <ul class="bsp-list-unstyled">
+				        <ul class="bsp-unstyled-list">
 					        {{#each listItems}}
 					            <li>
 					            {{#with link}}
@@ -25,7 +25,7 @@
 				{{#with second-col}}
 				    <section>
 				        <h5 class="bsp-list-heading"> {{heading}}</h5>
-				        <ul class="bsp-list-unstyled">
+				        <ul class="bsp-unstyled-list">
 				        {{#each listItems}}
 				            <li>
 					            {{#with link}}
@@ -42,7 +42,7 @@
 			<div class="bsp-column-third">
 
 				{{#with third-col}}
-					<div class="bsp-component-title">{{social}}</div>
+					<h2 class="bsp-component-title">{{social}}</h2>
 
 					{{#if sharing}}
 					<ul class="bsp-share-links">
@@ -52,7 +52,7 @@
 					</ul>
 					{{/if}}
 
-					<div class="bsp-component-title">{{newsletter}}</div>
+					<h2 class="bsp-component-title">{{newsletter}}</h2>
 
 					<div class="bsp-component-content">
 						{{newsletter-description}}

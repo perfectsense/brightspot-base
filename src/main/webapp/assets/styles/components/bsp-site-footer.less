@@ -1,13 +1,9 @@
 .bsp-site-footer {
     background: @brand-dark;
-    padding: @space-quad 0;
+    padding: @space-double;
     min-height: 25px;
     color: @white;
     width: 100%;
-
-    .bsp-container {
-       padding-left: @space-double;
-    }
 
 	.bsp-component-title, .bsp-list-heading {
         font-size: @ts-2;
@@ -23,7 +19,7 @@
  	.bsp-share-links {
         margin-bottom: @space;
  		margin-left: 0;
- 		
+
  		a {
  			color: @white;
  		}
@@ -31,7 +27,6 @@
 
     form {
         .input-container { 
-            float: left;
             white-space: nowrap;
 
             .input-content {
@@ -41,31 +36,22 @@
             .bsp-form-message {
                 width: 0px;
             }
-        }
-     
-        input[type=email] {
-            padding: @space;
-            background-color: @white;
-            color: @black; 
-            border: none;   
-        }
 
-        input[type=submit] {
-            position: relative;
-            left: -4px;
-            background-color: @brand-primary;
-            text-transform: uppercase;
-            padding: @space @space-double;
-            height: @space-quad;
-            border: none; 
+            input {
+                padding: @space;
+                border: none;
+            }
+         
+            input[type=email] {
+                color: @black;  
+            }
+
+            input[type=submit] {
+                background-color: @brand-primary;
+                text-transform: uppercase;
+                position: relative;
+                left: -4px;
+            }
         }
     }    
-}
-
-@media @mq-sm {
-    .bsp-site-footer {
-        .bsp-container {
-            padding-left: @space-half;
-        }
-    }
 }
