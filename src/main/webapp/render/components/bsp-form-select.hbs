@@ -1,8 +1,7 @@
-
+{{#if showMessagesAbove}}
+	{{> components/bsp-form-message this}}
+{{/if}}
 {{#if options}}
-	{{#if showMessagesAbove}}
-		{{> components/bsp-form-message this}}
-	{{/if}}
 	<div class="bsp-form-select">
 		{{#if label}}
 			<label {{> common/attributes label.attributes }}>
@@ -18,7 +17,7 @@
 			</label>
 		{{/if}}
 	</div>
-	{{#if showMessagesBelow}}
-		{{> components/bsp-form-message this}}
-	{{/if}}
+{{/if}}
+{{#if showMessagesBelow}}
+	{{> components/bsp-form-message this}}
 {{/if}}
