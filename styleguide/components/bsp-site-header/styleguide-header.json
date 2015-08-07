@@ -71,6 +71,24 @@
 					"_template" : "common/link",
 					
 					"attributes" : {
+						"href"  : "/components/bsp-form-select/",
+						"title" : "BSP Form Select"
+					},
+					"text"  : "BSP Form Select"
+				},
+				{
+					"_template" : "common/link",
+					
+					"attributes" : {
+						"href"  : "/components/bsp-form-textarea/",
+						"title" : "BSP Form Textarea"
+					},
+					"text"  : "BSP Form Textarea"
+				},
+				{
+					"_template" : "common/link",
+					
+					"attributes" : {
 						"href"  : "/components/bsp-gallery-module/",
 						"title" : "BSP Gallery Module"
 					},
