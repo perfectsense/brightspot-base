@@ -14,7 +14,7 @@
 				"_template" : "common/link",
 
 				"attributes" : {
-					"href"  : "/bsp-article/article-infinite-1.jsp",
+					"href"  : "/components/bsp-article/infinite.html",
 					"title" : "Link Title"
 				},
 
@@ -28,7 +28,7 @@
 				"_template" : "common/link",
 
 				"attributes" : {
-					"href"  : "/bsp-article/article-infinite-2.jsp",
+					"href"  : "/components/bsp-article/infinite-2.html",
 					"title" : "Link Title"
 				},
 
@@ -42,25 +42,11 @@
 				"_template" : "common/link",
 
 				"attributes" : {
-					"href"  : "/bsp-article/article-infinite-3.jsp",
+					"href"  : "/components/bsp-article/infinite-3.html",
 					"title" : "Link Title"
 				},
 
 				"text" : "3333 ipsum dolor amet turducken jowl shankle, cupim"
-
-			}
-		},
-		{ 
-			"link" : {
-
-				"_template" : "common/link",
-
-				"attributes" : {
-					"href"  : "/bsp-article/article-infinite-4.jsp",
-					"title" : "Link Title"
-				},
-
-				"text" : "4444 ipsum dolor amet turducken jowl shankle, cupim"
 
 			}
 		}
