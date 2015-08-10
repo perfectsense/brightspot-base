@@ -11,7 +11,14 @@
 // fixed positioning offset if applicable
 body {
 	& when (@header-positioning = fixed) {
-    	padding-top: @header-tophat-height + @header-height;
+    	padding-top: @header-tophat-height + (@header-height*2);
+    }
+}
+
+body.bsp-scrolling {
+	& when (@header-positioning = fixed) {
+		// adding extra 25px for smoother scrolling user experience
+    	padding-top: @header-tophat-height + @header-height + 25px;
     }
 }
 
@@ -146,8 +153,12 @@ body.bsp-column-fixed-toggle-in {
 		display: block;
 		left: auto;
 		margin-top: @header-below-padding;
-		top: @header-height + @header-tophat-height;
+		top: (@header-height * 2) + @header-tophat-height;
 		width: 240px; // custom width for our site grid
+
+		.bsp-scrolling & {
+			top: @header-height + @header-tophat-height;
+		}
 	}
 
 	// since column is on the screen, we no longer need the toggle
