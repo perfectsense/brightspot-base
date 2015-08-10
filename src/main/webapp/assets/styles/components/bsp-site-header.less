@@ -72,7 +72,10 @@
     line-height: 0;
     margin: 0;
     position: relative;
-    width: 50%;
+
+    img {
+        width: 50%;
+    }
 }
 
 
@@ -392,16 +395,24 @@
             position: absolute;
             top: @header-logo-height / 3;
             left: 50%;
-            width: 100%;
+
+            img {
+                width: 100%;
+            }
+            
 
             .transition(all .3s linear);
 
             .bsp-scrolling & {
                 //position: relative;
                 margin: 0;
-                top: (@header-height - @header-logo-height) / 2;
+                top: (@header-height - (@header-logo-height / 2)) / 2;
                 left: @header-logo-left-placement;
-                width: 50%;
+
+                img {
+                    width: 50%;
+                }
+                
             }
         }
 
