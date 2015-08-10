@@ -14,10 +14,11 @@ var bsp_scroll_checker = {
     	self.settings = $.extend({}, self.defaults, options);
 
     	self.$body = $('body');
+    	self.$window = $(window);
 
     	self._adjustClass();
 
-	    $(window).on('scroll', bsp_utils.throttle(100,function() {
+	    self.$window.on('scroll', bsp_utils.throttle(100,function() {
 
 	    	self._adjustClass();
 
@@ -27,11 +28,15 @@ var bsp_scroll_checker = {
     _adjustClass: function () {
     	var self = this;
 
-    	if(window.scrollY > 0) {
-    		self.$body.addClass('bsp-scrolling');
-    	} else {
-    		self.$body.removeClass('bsp-scrolling');
-    	}
+    	if(self.$body.height() > self.$window.height()) {
+
+	    	if(window.scrollY > 0) {
+	    		self.$body.addClass('bsp-scrolling');
+	    	} else {
+	    		self.$body.removeClass('bsp-scrolling');
+	    	}
+
+	    }
     }
 
 
