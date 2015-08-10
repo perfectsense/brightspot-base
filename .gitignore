@@ -36,3 +36,6 @@ npm-debug.log
 # Maven
 log/
 target/
+
+# Styleguide Server
+styleguide/server.manifest
