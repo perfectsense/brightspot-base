@@ -1,0 +1,28 @@
+{
+	"_template" : "components/bsp-image-promo",
+
+	"images" : [
+		{ 
+			"image" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "imageLink",
+					"title" : "Link Title"
+				},
+
+				"image" : {
+
+					"_template" : "common/image",
+
+					"attributes" : {
+						"alt" : "Image",
+						"src" : "/assets/images/200x300.png"
+					}
+				}
+				
+			}
+		}
+	]
+}

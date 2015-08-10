@@ -1,0 +1,73 @@
+{
+	"_template" : "components/bsp-table/bsp-table",
+
+	"title" : "People",
+
+	"options" : {
+		"_template" : "components/bsp-table/bsp-table-options",
+		"theme" : "theme-1"
+	},
+
+	"headings" : [
+		{"text" : ""},
+		{"text" : "Name"},
+		{"text" : "Profession"},
+		{"text" : "Production"}
+	],
+
+	"rows" : [
+		{
+			"row" : [
+				{
+					"image" : {
+						"_template" : "common/image",
+						"attributes" : {
+							"alt" : "Test Alt",
+							"src" : "/assets/images/60x60.png"
+						}	
+					}
+				},
+				{"text" : "Administrative"},
+				{"text" : "Atlantic Theater Company"},
+				{"text" : "NY"}
+			]
+		},
+		{
+			"row" : [
+				{
+					"image" : {
+						"_template" : "common/image",
+						"attributes" : {
+							"alt" : "Test Alt",
+							"src" : "/assets/images/60x60.png"
+						}				
+					}
+
+
+				},
+				{"text" : "Administrative"},
+				{"text" : "Westport Country Playhouse"},
+				{"text" : "FL"}
+			]
+		},
+		{
+			"row" : [
+				{
+					"image" : {
+						"_template" : "common/image",
+						"attributes" : {
+							"alt" : "Test Alt",
+							"src" : "/assets/images/60x60.png"
+						}	
+					}
+				},
+				{"text" : "Administrative"},
+				{"text" : "Westport Country Playhouse"},
+				{"text" : "FL"}
+			]	
+		}
+	],
+
+	"ctaText" : "View More People For \"Bacon\"",
+	"ctaLink" : "#"
+}

@@ -1,0 +1,85 @@
+
+.bsp-search-results-appearence (@value) {
+	appearence: @value;
+	-moz-appearence: @value;
+	-webkit-appearence: @value;
+}
+
+.bsp-search-results-border-radius (@value) {
+	border-radius: @value;
+	-moz-border-radius: @value;
+	-webkit-border-radius: @value;
+}
+
+.bsp-search-results {
+	ul {
+		li {
+			display: inline-block;
+		}
+	}
+
+	.bsp-form-input {
+		margin: 0;
+	}
+
+}
+
+.bsp-search-results-list {
+
+}
+
+.bsp-search-results-bar {
+	width: 100%;
+	white-space: nowrap;
+
+	.search-bar, .button, .select {
+		display: inline-block;
+	}
+
+	input {
+		border: none;
+	}
+
+	.search-bar {
+		width: calc(~"100% - 225px");
+		input[type='text'] {
+			width: 100%;
+			padding: @space;
+			background-color: #ddd;
+		}
+	}		
+
+	.button {
+		position: relative;
+		left : -8px;
+
+		input[type='submit'] {
+			width: 80px;
+			background-color: #ddd;
+			padding: @space 0;
+		}
+	}
+	
+	.select {
+		.bsp-form-select {
+			padding: @space;
+			left : -4px;
+			width: 145px;
+			background-color: @brand-primary;
+			position: relative;
+			
+		}
+		
+		select {
+			border: none;
+	 		background-color: @brand-primary;
+	 		.bsp-search-results-appearence(none);
+	 		.bsp-search-results-border-radius(0px);
+		}
+	}
+
+	.bsp-form-message {
+         width: 0px;
+         padding: 0;
+    }
+}

@@ -1,0 +1,30 @@
+{
+	"_template" : "layouts/two-col-main-left-fixed-right",
+
+	"main" : {
+		"components" : [
+			{
+				"_dataUrl" : "/components/bsp-search-results/standard.json"
+			},
+			{
+				"_dataUrl" : "/components/bsp-bio/show.json"
+			},
+			{
+				"_dataUrl" : "/components/bsp-search-results/result-images.json"
+			},
+			{
+				"_dataUrl" : "/components/bsp-search-results/result-people.json"
+			},
+			{
+				"_dataUrl" : "/components/bsp-search-results/result-theaters.json"
+			}
+		]
+	},
+	"aside" : {
+		"components" : [
+			{
+				"_dataUrl" : "/components/bsp-search-results/result-ad.json"
+			}
+		]
+	}
+}
