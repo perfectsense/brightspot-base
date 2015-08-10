@@ -57,7 +57,7 @@ body.bsp-gallery-fullscreen {
 
 .bsp-carousel-gallery-header {
 	text-transform: uppercase;
-	z-index: @bsp-carousel-gallery-fullscreen-overlays-z-index;
+	z-index: @z-index-header;
 	span {
 		color: @bsp-carousel-gallery-fullscreen-color;
 
@@ -99,7 +99,7 @@ body.bsp-gallery-fullscreen {
 	color: @bsp-carousel-gallery-fullscreen-color;
 	display: none;
 	padding: @space-double;
-	z-index: @bsp-carousel-gallery-fullscreen-overlays-z-index+1;
+	z-index: @z-index-overlay;
 	
 	&.visible {
 		display: block;
