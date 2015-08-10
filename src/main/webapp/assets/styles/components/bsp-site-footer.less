@@ -1,6 +1,57 @@
 .bsp-site-footer {
     background: @brand-dark;
-    margin-top: @space-double;
+    padding: @space-double;
     min-height: 25px;
+    color: @white;
     width: 100%;
+
+	.bsp-component-title, .bsp-list-heading {
+        font-size: @ts-2;
+        padding: 0;
+        color: @white;
+	}
+
+    .bsp-list-heading {
+        color: @brand-primary;
+        margin: 0 0 @space 0;
+    }
+
+ 	.bsp-share-links {
+        margin-bottom: @space;
+ 		margin-left: 0;
+
+ 		a {
+ 			color: @white;
+ 		}
+ 	}
+
+    form {
+        .input-container { 
+            white-space: nowrap;
+
+            .input-content {
+                display: inline-block;   
+            }
+
+            .bsp-form-message {
+                width: 0px;
+            }
+
+            input {
+                padding: @space;
+                border: none;
+            }
+         
+            input[type=email] {
+                color: @black;  
+            }
+
+            input[type=submit] {
+                background-color: @brand-primary;
+                text-transform: uppercase;
+                position: relative;
+                left: -4px;
+            }
+        }
+    }    
 }
