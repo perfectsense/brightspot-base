@@ -3,22 +3,22 @@
     padding: @space-double;
     min-height: 25px;
     color: @white;
-    width: 100%;
 
-	.bsp-component-title, .bsp-list-heading {
-        font-size: @ts-2;
-        padding: 0;
+	.bsp-component-title {
+        &:extend(.ts-header-2);
+
         color: @white;
+        padding: 0;
 	}
 
     .bsp-list-heading {
+        &:extend(.ts-header-2);
+
         color: @brand-primary;
-        margin: 0 0 @space 0;
     }
 
  	.bsp-share-links {
-        margin-bottom: @space;
- 		margin-left: 0;
+        margin: 0 0 @space 0;
 
  		a {
  			color: @white;
@@ -54,4 +54,8 @@
             }
         }
     }    
+}
+
+.bsp-site-copyright {
+    margin-top: @space-quad;
 }

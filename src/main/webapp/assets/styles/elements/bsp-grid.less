@@ -26,6 +26,10 @@ body {
 
 // With the below columns, we should be able to create most every layout necessary. 
 // We can always make more, but because we can make subgrids in columns, we can do a lot with just these
+//
+// If we need custom widths for a particular component, we can just use the mixin classes to create something
+// custom for that one component. But if they will be reused throughout a site, we should create reusable classes
+
 .bsp-column-full {
 	// no styles, this is full on every breakpoint
 	.make-xs-column(12);
@@ -45,6 +49,10 @@ body {
 	.make-sm-column(6);
 }
 
+.bsp-column-two-thirds {
+	.make-sm-column(8);
+}
+
 .bsp-column-third {
 	.make-sm-column(4);
 }
@@ -57,6 +65,7 @@ body {
 // The below styles create a fixed column to the left or to the right, depending on your markup. The column-fixed-wrap is there so that 
 // the fixed column knows where to place itself to the left and right. It has to get a hardcoded width, because that is how fixed
 // positioning works
+
 .bsp-column-scrolling {
 	.make-md-column(9);
 }

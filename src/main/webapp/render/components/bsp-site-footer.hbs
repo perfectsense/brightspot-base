@@ -1,81 +1,107 @@
 <div class="bsp-site-footer">
+
 	<div class="bsp-container">
 		<div class="bsp-row">
-			<div class="bsp-column-third">
 
-				{{#with first-col}}
-				    <section>
-				        <h5 class="bsp-list-heading"> {{heading}}</h5>
-				        <ul class="bsp-unstyled-list">
-					        {{#each listItems}}
-					            <li>
-					            {{#with link}}
-					                 {{> (lookup . '_template') }}
-					            {{/with}}
-					            </li>
-					        {{/each}}
-				        </ul>
-				    </section>
-				{{/with}}
+			<div class="bsp-column-two-thirds">
 
-			</div>
+				<div class="bsp-row">
 
-			<div class="bsp-column-third">
+					<div class="bsp-column-half">
 
-				{{#with second-col}}
-				    <section>
-				        <h5 class="bsp-list-heading"> {{heading}}</h5>
-				        <ul class="bsp-unstyled-list">
-				        {{#each listItems}}
-				            <li>
-					            {{#with link}}
-					                 {{> (lookup . '_template') }}
-					            {{/with}}
-				            </li>
-				        {{/each}}
-				        </ul>
-				    </section>
-				{{/with}}
+						{{#with first-col}}
+						    <section>
+					        	<h5 class="bsp-list-heading">{{heading}}</h5>
+					        	
+						        <ul class="bsp-unstyled-list">
+							        {{#each listItems}}
+							            <li>
+							            {{#with link}}
+							                 {{> (lookup . '_template') }}
+							            {{/with}}
+							            </li>
+							        {{/each}}
+						        </ul>
+						    </section>
+						{{/with}}
+
+					</div>
+
+					<div class="bsp-column-half">
+
+						{{#with second-col}}
+						    <section>
+					        	<h5 class="bsp-list-heading">{{heading}}</h5>
+					        	
+						        <ul class="bsp-unstyled-list">
+							        {{#each listItems}}
+							            <li>
+							            {{#with link}}
+							                 {{> (lookup . '_template') }}
+							            {{/with}}
+							            </li>
+							        {{/each}}
+						        </ul>
+						    </section>
+						{{/with}}
+
+					</div>
+
+				</div>
+
+				<div class="bsp-site-copyright">
+					{{disclaimer}}
+				</div>
 
 			</div>
 
 			<div class="bsp-column-third">
 
 				{{#with third-col}}
-					<h2 class="bsp-component-title">{{social}}</h2>
 
 					{{#if sharing}}
-					<ul class="bsp-share-links">
-						{{#each sharing.links}}
-							<li class="bsp-{{icon}}-share">{{> common/link class="bsp-share-link"}}</li>
-						{{/each}}
-					</ul>
+						<div class="bsp-component">
+
+							<h5 class="bsp-component-title">{{social}}</h5>
+
+							<div class="bsp-component-content">
+								
+								<ul class="bsp-share-links">
+									{{#each sharing.links}}
+										<li class="bsp-{{icon}}-share">{{> common/link class="bsp-share-link"}}</li>
+									{{/each}}
+								</ul>
+								
+							</div>
+
+						</div>
 					{{/if}}
 
-					<h2 class="bsp-component-title">{{newsletter}}</h2>
+					{{#if newsletter}}
+						<div class="bsp-component">
 
-					<div class="bsp-component-content">
-						{{newsletter-description}}
-					</div>
+							<h5 class="bsp-component-title">{{newsletter}}</h5>
 
-					<form action="" data-bsp-form>
-						<div class="input-container">
-							{{#each inputs}}
-								<div class="input-content">{{> (lookup . '_template') }}</div>
-							{{/each}}
+							<div class="bsp-component-content">
+								<span>{{newsletter-description}}</span>
+							
+								<form action="" data-bsp-form>
+									<div class="input-container">
+										{{#each inputs}}
+											<div class="input-content">{{> (lookup . '_template') }}</div>
+										{{/each}}
+									</div>
+								</form>
+
+							</div>
+
 						</div>
-					</form>
+					{{/if}}
 				{{/with}}
 
 			</div>
 			
 		</div>
-		<div class="bsp-row">
-			
-			<div class="bsp-column">
-				{{disclaimer}}
-			</div>
-	
-		</div>
+
 	</div>
 </div>
