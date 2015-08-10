@@ -1,5 +1,7 @@
 // wrapper allows us to create the fixed position look/feel
 .bsp-site-header-wrapper {
+    background: @header-background;
+    height: @header-height;
     left: 0;
     position: @header-positioning;
     top: 0;
@@ -67,8 +69,9 @@
 .bsp-site-logo {
     &:extend(.vertical-center);
     
-    line-height: 0; // for perfect vertical centering of logo
+    line-height: 0;
     margin: 0;
+    position: relative;
 }
 
 
@@ -119,6 +122,14 @@
     &.toggle-in {
         height: @header-menu-height;
     }
+
+    .bsp-scrolling & {
+        top: @header-height;
+    }
+
+    & when (@header-positioning = fixed) {
+        top: @header-height*2;
+    }
 }
 
 .bsp-site-menu-trigger {
@@ -161,10 +172,10 @@
 }
 
 .bsp-site-search-form {
-    height: @header-search-height;
+    height: @header-height / 2;
     margin: 0;
     position: relative;
-    top: (@header-height - @header-search-height) / 2;
+    top: (@header-height - (@header-height / 2)) / 2;
 }
 
 .bsp-site-search-input {
@@ -172,7 +183,7 @@
     border: @brand-dark;
     border-bottom: 1px solid @brand-primary;
     color: @white;
-    height: @header-search-height;
+    height: @header-height / 2;
     width: 100%;
 }
 
@@ -349,6 +360,63 @@
 
 @media @mq-md {
 
+
+    & when (@header-positioning = fixed) {
+        .bsp-site-header-wrapper {
+            background: @header-background;
+            height: @header-height*2;
+
+            .transition(all .3s linear);
+
+            .bsp-scrolling & {
+                height: @header-height;
+            }
+        }
+
+        .bsp-site-header {
+            margin-top: @header-height;
+
+            .transition(all .3s linear);
+
+            .bsp-scrolling & {
+                margin-top: 0;
+            }
+        }
+
+
+        .bsp-site-logo {
+            &:extend(.vertical-center);
+            
+            margin: 0 0 0 -(@header-logo-width / 2);
+            position: absolute;
+            top: @header-height / 2;
+            left: 50%;
+
+            .transition(all .3s linear);
+
+            .bsp-scrolling & {
+                //position: relative;
+                margin: 0;
+                top: (@header-height - @header-logo-height) / 2;
+                left: @header-logo-left-placement;
+            }
+        }
+
+        .bsp-extra-menu {
+
+            .transition(all .3s linear);
+            position: absolute;
+            margin-right: -(@header-extra-menu-width / 2);
+            right: 50%;
+
+            .bsp-scrolling & {
+                right: @header-extra-menu-right-placement;
+                margin: 0;
+            }
+        }
+
+    }
+
     .bsp-site-search {
 
         right: 70px;
@@ -357,6 +425,16 @@
             width: 500px;
         }
     }
+
+
+
+
+
+
+
+
+
+
 
     .bsp-extra-menu-wrapper {
         display: block;

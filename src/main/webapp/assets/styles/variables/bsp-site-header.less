@@ -1,0 +1,34 @@
+// These are options for the header. 
+
+// Since the header design has vertically centered elements, we need to hardcode a static height, 
+// which is defined here and can be overriden for custom look/feel
+@header-height: 60px;
+
+// variables that are used to create the fancy looking scroll menu animation
+// logo has to have the height hardcoded in the CSS in order to center it and allow for a smooth transition left
+@header-logo-width: 183px; 
+@header-logo-height: 25px;
+
+// the left placement is hardcoded, as we are animating the transition
+@header-logo-left-placement: 69px;
+
+// the extra menu has to be dynamically centered with absolute positioning in order to animate it
+@header-extra-menu-width: 500px;
+@header-extra-menu-right-placement: 250px;
+
+
+
+// header menu height has to be hardcoded to allow for a smooth animation down, no auto height possible with that
+@header-menu-height: 200px;
+
+// the search width will depend on the width of the client logo and other menu items, needs to be easy to change
+@header-search-width: 250px;
+
+// The tophat has to be set to 0 when it's hidden as it's used in the calculation for body offset
+@header-tophat-height: 0px;
+
+// this lets us make the header sticky or not
+@header-positioning: fixed;
+
+// this is the space at the top of the content
+@header-below-padding: @space-double;

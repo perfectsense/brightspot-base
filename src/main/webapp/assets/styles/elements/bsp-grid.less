@@ -11,6 +11,12 @@
 // fixed positioning offset if applicable
 body {
 	& when (@header-positioning = fixed) {
+    	padding-top: @header-tophat-height + (@header-height*2);
+    }
+}
+
+body.bsp-scrolling {
+	& when (@header-positioning = fixed) {
     	padding-top: @header-tophat-height + @header-height;
     }
 }
