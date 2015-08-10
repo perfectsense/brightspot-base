@@ -64,6 +64,7 @@
 
     float: left;
     height: 100%;
+    width: auto;
 }
 
 .bsp-site-logo {
@@ -74,8 +75,9 @@
     position: relative;
 
     img {
-        width: 50%;
-    }
+       max-width: @header-logo-width / 2;
+       width: 100%;
+    }    
 }
 
 
@@ -387,19 +389,17 @@
             }
         }
 
-
         .bsp-site-logo {
             &:extend(.vertical-center);
             
             margin: 0 0 0 -(@header-logo-width / 2);
             position: absolute;
             top: @header-logo-height / 3;
-            left: 50%;
+            left: 50%;  
 
             img {
-                width: 100%;
-            }
-            
+                max-width: @header-logo-width;
+            }         
 
             .transition(all .3s linear);
 
@@ -410,9 +410,8 @@
                 left: @header-logo-left-placement;
 
                 img {
-                    width: 50%;
+                    max-width: @header-logo-width / 2;
                 }
-                
             }
         }
 
