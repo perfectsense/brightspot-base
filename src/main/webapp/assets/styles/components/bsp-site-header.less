@@ -72,6 +72,7 @@
     line-height: 0;
     margin: 0;
     position: relative;
+    width: 50%;
 }
 
 
@@ -389,8 +390,9 @@
             
             margin: 0 0 0 -(@header-logo-width / 2);
             position: absolute;
-            top: @header-height / 2;
+            top: @header-logo-height / 3;
             left: 50%;
+            width: 100%;
 
             .transition(all .3s linear);
 
@@ -399,6 +401,7 @@
                 margin: 0;
                 top: (@header-height - @header-logo-height) / 2;
                 left: @header-logo-left-placement;
+                width: 50%;
             }
         }
 
