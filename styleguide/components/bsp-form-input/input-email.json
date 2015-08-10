@@ -1,0 +1,21 @@
+{
+	"_template" : "components/bsp-form-input",
+	"showMessagesAbove": true,
+	"attributes": {
+		"autocomplete": "off",
+		"id": "emailinput1",
+		"placeholder": "Email input placeholder",
+		"required": true,
+		"type": "email"
+	},
+	"errors": [
+		{ "typeMismatch": "Email address must follow format a@b.c" },
+		{ "valueMissing": "Please enter an email address" }
+	],
+	"label": {
+		"attributes": {
+			"for": "emailinput1"
+		},
+		"text": "Email input"
+	}
+}

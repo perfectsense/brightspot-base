@@ -1,0 +1,13 @@
+.bsp-form-input {
+	margin-bottom: @space;
+	input {
+		&:focus {
+			outline: 0;
+		}
+		&.dirty {
+			&:invalid {
+				border: 1px @bsp-form-message-color solid;
+			}
+		}
+	}
+}

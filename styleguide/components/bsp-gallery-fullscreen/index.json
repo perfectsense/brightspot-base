@@ -1,0 +1,20 @@
+{
+	"_template" : "layouts/two-col-main-left-aside-right",
+
+	"main" : {
+		"components" : [
+			{
+				"_dataUrl" : "/components/bsp-gallery-fullscreen/gallery.json"
+			}
+		]
+	},
+		
+	"aside" : {
+		"components" : [
+			{
+				"_template": "common/text",
+				"text": "<img alt='advertisement' src='/assets/images/300x250.png' />"
+			}
+		]
+	}
+}

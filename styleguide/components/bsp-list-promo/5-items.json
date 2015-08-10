@@ -78,8 +78,5 @@
 
 			}
 		}
-	],
-
-	"ctaText" : "Test CTA",
-	"ctaLink" : "#"
+	]
 }

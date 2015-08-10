@@ -7,7 +7,6 @@ SCRIPTS_DIR=$ASSETS_DIR/scripts
 SPEC_DIR=spec
 SPEC_PLUGINS_DIR=$SPEC_DIR/unit/plugins
 STYLES_DIR=$ASSETS_DIR/styles
-STYLES_VARIABLES_DIR=$STYLES_DIR/variables
 STYLEGUIDE_DIR=styleguide
 TEMPLATE_DIR=$SRC_DIR/render
 
@@ -42,9 +41,7 @@ dl $SCRIPTS_DIR/config.js
 dl $SCRIPTS_DIR/main.js
 
 # download less files
-mkdir -p $STYLES_VARIABLES_DIR
 dl $STYLES_DIR/main.less
-dl $STYLES_VARIABLES_DIR/variables.less
 
 # download styleguide files
 mkdir styleguide

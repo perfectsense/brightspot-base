@@ -1,0 +1,14 @@
+.bsp-form-textarea {
+	textarea {
+		display: block;
+		min-height: 150px;
+		outline: 0;
+		width: 100%;
+
+		&.dirty {
+			&:invalid {
+				border: 1px @bsp-form-message-color solid;
+			}
+		}
+	}
+}

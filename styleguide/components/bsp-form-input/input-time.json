@@ -1,0 +1,16 @@
+{
+	"_template" : "components/bsp-form-input",
+	"showMessagesAbove": true,
+	"attributes": {
+		"autocomplete": "off",
+		"id": "time1",
+		"required": true,
+		"type": "time"
+	},
+	"errors": [
+		{ "valueMissing": "Please fill in a time" }
+	],
+	"label": {
+		"text": "Time *"
+	}
+}

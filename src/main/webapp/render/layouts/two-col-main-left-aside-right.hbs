@@ -1,0 +1,28 @@
+<div class="bsp-container">
+
+	{{#with aboveColumns}}
+		{{#each components}}
+			{{> (lookup . '_template') }}
+		{{/each}}
+	{{/with}}
+
+	<div class="bsp-row">
+
+		<div class="bsp-column-main">
+			{{#with main}}
+				{{#each components}}
+					{{> (lookup . '_template') }}
+				{{/each}}
+			{{/with}}
+		</div>
+
+		<div class="bsp-column-aside">
+			{{#with aside}}
+				{{#each components}}
+					{{> (lookup . '_template') }}
+				{{/each}}
+			{{/with}}
+		</div>
+		
+	</div>
+</div>

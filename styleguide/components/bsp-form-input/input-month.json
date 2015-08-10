@@ -1,0 +1,19 @@
+{
+	"_template" : "components/bsp-form-input",
+	"showMessagesAbove": true,
+	"attributes": {
+		"id": "month1",
+		"required": true,
+		"type": "month"
+	},
+	"errors": [
+		{ "typeMismatch": "Month is not valid" },
+		{ "valueMissing": "Please enter a month" }
+	],
+	"label": {
+		"attributes": {
+			"for": "month1"
+		},
+		"text": "Month *"
+	}
+}

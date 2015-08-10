@@ -1,0 +1,19 @@
+{
+	"_template" : "components/bsp-form-input",
+	"showMessagesAbove": true,
+	"labelAfterInput": true,
+	"attributes": {
+		"id": "checkbox1",
+		"required": true,
+		"type": "checkbox"
+	},
+	"errors": [
+		{ "valueMissing": "Please check the checkbox" }
+	],
+	"label": {
+		"attributes": {
+			"for": "checkbox1"
+		},
+		"text": "Checkbox input"
+	}
+}

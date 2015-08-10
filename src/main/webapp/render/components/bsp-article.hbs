@@ -41,16 +41,16 @@
 		{{/with}}
 
 		<div class="bsp-article-content">
-			{{{articleContent}}}
+			{{#each body}}
+				{{render this}}
+			{{/each}}
 		</div>
 
 		<div class="bsp-tags">
 			<ul class="bsp-tag-list">
-
 				{{#each tags}}
-					<li>{{> (lookup . '_template') }}</li>
+					<li>{{render this}}</li>
 				{{/each}}
-
 			</ul>
 		</div>
 
@@ -60,6 +60,6 @@
 
 {{#with nextArticle}}
 	<div class="bsp-article-load-more">
-		{{> (lookup . '_template') class="bsp-infinite-load-trigger"}}
+		{{render this class="bsp-infinite-load-trigger"}}
 	</div>
 {{/with}}

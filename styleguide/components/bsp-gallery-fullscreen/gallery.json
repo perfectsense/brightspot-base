@@ -1,0 +1,114 @@
+{
+    "_template": "components/bsp-gallery-fullscreen",
+
+    "options": {
+        "carouselDots": false
+    },
+
+    "galleryTitle": "Full screen gallery",
+    "galleryTitleType": "Belly picanha",
+    "galleryTitleShowCount": true,
+
+    "gallerySlides": [{
+        "_template": "common/image",
+        "slideTitle": "Bacon sausage venison alcatra turkey",
+        "slideDescription": "Biltong pig landjaeger tail jowl sirloin drumstick rump pastrami. Filet mignon salami drumstick alcatra pork belly capicola chuck ham hock pork chop tri-tip sirloin. Filet mignon tri-tip capicola ground round swine pork fatback. Tail bresaola boudin meatball. Bacon kielbasa pork loin drumstick frankfurter pork chop.",
+        "thumbnailImage": {
+        	"_template": "common/image",
+        	"attributes": {
+        		"src": "/assets/images/200x100.png"
+        	}
+        },
+        "attributes": {
+            "src": "/assets/images/800x450.png"
+        }
+    }, {
+        "_template": "common/image",
+        "slideTitle": "Pork loin frankfurter picanha ground round",
+        "slideDescription": "Salami porchetta pig, drumstick hamburger prosciutto turducken meatloaf capicola ribeye jerky short loin biltong. Chuck kielbasa beef pig. Tail chuck boudin, capicola hamburger landjaeger doner.",
+        "thumbnailImage": {
+        	"_template": "common/image",
+        	"attributes": {
+        		"src": "/assets/images/200x100.png"
+        	}
+        },
+        "attributes": {
+            "src": "/assets/images/800x450.png"
+        }
+    }, {
+        "_template": "common/image",
+        "slideTitle": "Frankfurter flank turkey, spare ribs pork belly shankle ham hock",
+        "slideDescription": "Kielbasa beef ribs jerky, ham leberkas bacon tongue boudin sirloin jowl tail capicola. Capicola pork belly picanha shank pancetta shoulder chuck tongue.",
+        "thumbnailImage": {
+        	"_template": "common/image",
+        	"attributes": {
+        		"src": "/assets/images/200x100.png"
+        	}
+        },
+        "attributes": {
+            "src": "/assets/images/800x450.png"
+        }
+    }, {
+        "_template": "common/image",
+        "slideTitle": "Filet mignon tri-tip capicola ground round swine pork fatback",
+        "slideDescription": "Capicola pork belly picanha shank pancetta shoulder chuck tongue. Picanha filet mignon prosciutto shankle ham turducken chuck pork belly kielbasa sirloin capicola, ball tip pig.",
+        "thumbnailImage": {
+        	"_template": "common/image",
+        	"attributes": {
+        		"src": "/assets/images/200x100.png"
+        	}
+        },
+        "attributes": {
+            "src": "/assets/images/800x450.png"
+        }
+    }],
+
+    "galleryThumbnails": true,
+    "galleryThumbnailsCloseText": "Close",
+    "relatedLinksTitle": "Related",
+    "relatedLinks": [
+    	{
+    		"_template": "common/link",
+    		"attributes": {
+    			"href": "#"
+    		},
+    		"text": "Salami"
+    	},
+    	{
+    		"_template": "common/link",
+    		"attributes": {
+    			"href": "#"
+    		},
+    		"text": "Drumstick"
+    	},
+    	{
+    		"_template": "common/link",
+    		"attributes": {
+    			"href": "#"
+    		},
+    		"text": "Bacon"
+    	},
+    	{
+    		"_template": "common/link",
+    		"attributes": {
+    			"href": "#"
+    		},
+    		"text": "Swine"
+    	},
+    	{
+    		"_template": "common/link",
+    		"attributes": {
+    			"href": "#"
+    		},
+    		"text": "Capicola"
+    	}
+    ],
+    "sharingTitle": "Share",
+    "sharing": {
+    	"facebook": {
+    		"appId": 12345
+    	},
+    	"pinterest": true,
+    	"twitter": true
+    }
+}
