@@ -1,0 +1,65 @@
+// wrapper allows us to create the fixed position look/feel
+.bsp-site-header-wrapper {
+    background: @header-background;
+    height: @header-height;
+    left: 0;
+    position: @header-positioning;
+    top: 0;
+    width: 100%;
+    z-index: @z-index-header;
+}
+
+
+// This is our simple header. 
+// Contains a linked logo and a list of nav links
+.bsp-site-header-simple {
+    &:extend(.clearfix all);
+    background: @header-background;
+    display: table;
+    height: @header-height;
+    padding: 0 @space 0 @space-double;
+    width: 100%;
+
+    @media @mq-lg {
+        margin-left: auto;
+        margin-right: auto;
+        width: @screen-lg-min;
+    }
+}
+
+.bsp-site-logo-simple {
+    display: table-cell;
+    padding-right: 25px;
+    vertical-align: middle;
+    width: 215px;
+}
+
+.bsp-site-menu-simple {
+    display: none;
+}
+
+.bsp-site-menu-items-simple {
+    display: table;
+    width: 100%;
+}
+
+.nav-item-simple {
+    display: table-cell;
+    height: @header-height;
+    vertical-align: middle;
+}
+ 
+@media @mq-md {
+    .bsp-site-menu-trigger {
+        display: none;
+    }
+    .bsp-site-menu-simple {
+        display: table-cell;
+    }
+}
+
+
+
+
+
+

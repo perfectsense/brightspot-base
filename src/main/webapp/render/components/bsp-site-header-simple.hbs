@@ -1,20 +1,19 @@
 <header class="bsp-site-header-wrapper">
 
-	<div class="bsp-site-header">
-
-		<div class="bsp-site-logo-wrapper">
-			<h1 class="bsp-site-logo">
-				{{#with siteLogo.link}}
-					{{> common/link imgClass="bsp-site-logo-img"}}
-				{{/with}}
-			</h1>
-		</div>	
-
+	<div class="bsp-site-header-simple">
+		<div class="bsp-site-menu-trigger toggle-trigger">
+			<a href="#"><i class="icon icon-bars"><span class="sr-only">toggle menu</span></i></a>
+		</div>
+		<div class="bsp-site-logo-simple">
+			{{#with siteLogo.link}}
+				{{> common/link imgClass="bsp-site-logo-img"}}
+			{{/with}}
+		</div>
 		{{#with navLinks}}
- 			<nav class="bsp-site-menu" data-bsp-toggle-item>
-				<ul class="bsp-site-menu-simple-list">
+ 			<nav class="bsp-site-menu-simple" data-bsp-toggle-item>
+				<ul class="bsp-site-menu-items-simple">
 					{{#each this}}
-						<li class="nav-link">{{> common/link }}</li>
+						<li class="nav-item-simple">{{> common/link }}</li>
 					{{/each}}
 				</ul>
 			</nav>
