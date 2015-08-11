@@ -9,8 +9,10 @@ export default {
 		this.saveElements();
 		this.buildCarousel();
 		this.addThumbnailNav();
+		this.addEvents();
 	},
 	saveElements() {
+		this.$counter = this.$el.find('.bsp-carousel-gallery-count');
 		this.$carousel = this.$el.find('.bsp-carousel-gallery');
 		this.$thumbnails = this.$el.find('.bsp-carousel-gallery-thumbnails');
 		this.$openThumbnails = this.$el.find('.bsp-carousel-gallery-footer-thumbnails-link a');
@@ -34,6 +36,12 @@ export default {
 			var index = $(this).data('index');
 			self.gotoSlide(index);
 			e.preventDefault();
+		});
+	},
+	addEvents() {
+		var self = this;
+		this.$carousel.on('carousel:init carousel:afterChange', () => {
+			self.$counter.html((self.carousel.currentSlide()+1) + ' of ' + self.carousel.slideCount());
 		});
 	},
 	showThumbnails() {

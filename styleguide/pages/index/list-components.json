@@ -8,9 +8,64 @@
 				
 				"attributes" : {
 					"href"  : "/components/bsp-article/",
-					"title" : "BSP Article"
+					"title" : "BSP Article Standalone"
 				},
-				"text"  : "BSP Article"
+				"text"  : "BSP Article Standalone"
+			}
+		},
+		{ 
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
+					"href"  : "/components/bsp-article/infinite.html",
+					"title" : "BSP Article Infinite Load"
+				},
+				"text"  : "BSP Article Infinite Load"
+			}
+		},
+		{ 
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
+					"href"  : "/components/bsp-bio/",
+					"title" : "BSP Bio"
+				},
+				"text"  : "BSP Bio"
+			}
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
+					"href"  : "/components/bsp-form-input/",
+					"title" : "BSP Form Input"
+				},
+				"text"  : "BSP Form Input"
+			}
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
+					"href"  : "/components/bsp-form-select/",
+					"title" : "BSP Form Select"
+				},
+				"text"  : "BSP Form Select"
+			}
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
+					"href"  : "/components/bsp-form-textarea/",
+					"title" : "BSP Form Textarea"
+				},
+				"text"  : "BSP Form Textarea"
 			}
 		},
 		{ 
@@ -33,6 +88,17 @@
 					"title" : "BSP Gallery Module"
 				},
 				"text"  : "BSP Gallery Module"
+			}
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
+					"href"  : "/components/bsp-gallery-fullscreen/",
+					"title" : "BSP Gallery Fullscreen"
+				},
+				"text"  : "BSP Gallery Fullscreen"
 			}
 		},
 		{
@@ -77,6 +143,17 @@
 					"title" : "BSP Site Footer"
 				},
 				"text"  : "BSP Site Footer"
+			}
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
+					"href"  : "/components/bsp-tabber/",
+					"title" : "BSP Tabber"
+				},
+				"text"  : "BSP Tabber"
 			}
 		},
 		{

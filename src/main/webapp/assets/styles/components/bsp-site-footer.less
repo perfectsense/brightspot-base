@@ -1,6 +1,61 @@
 .bsp-site-footer {
-    background: @brand-dark;
-    margin-top: @space-double;
+    background: @brand-secondary;
+    padding: @space-double;
     min-height: 25px;
-    width: 100%;
+    color: @white;
+
+	.bsp-component-title {
+        &:extend(.ts-header-2);
+
+        color: @white;
+        padding: 0;
+	}
+
+    .bsp-list-heading {
+        &:extend(.ts-header-2);
+
+        color: @brand-primary;
+    }
+
+ 	.bsp-share-links {
+        margin: 0 0 @space 0;
+
+ 		a {
+ 			color: @white;
+ 		}
+ 	}
+
+    form {
+        .input-container { 
+            white-space: nowrap;
+
+            .input-content {
+                display: inline-block;   
+            }
+
+            .bsp-form-message {
+                width: 0px;
+            }
+
+            input {
+                padding: @space;
+                border: none;
+            }
+         
+            input[type=email] {
+                color: @black;  
+            }
+
+            input[type=submit] {
+                background-color: @brand-primary;
+                text-transform: uppercase;
+                position: relative;
+                left: -4px;
+            }
+        }
+    }    
+}
+
+.bsp-site-copyright {
+    margin-top: @space-quad;
 }

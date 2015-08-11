@@ -1,5 +1,213 @@
 {
 	"_template" : "components/bsp-site-footer",
 
-	"pageTitle" : "Test Page"
+	"first-col" : {
+		"heading": "Contact Brightspot",
+		"listItems" : [{ 
+				"link" : {
+
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href"  : "link",
+						"title" : "Link Title"
+					},
+
+					"text" : "Brightspot Store"
+
+				}
+			},
+			{ 
+				"link" : {
+
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href"  : "link",
+						"title" : "Link Title"
+					},
+
+					"text" : "Brightspot Arts"
+
+				}
+			},
+			{ 
+				"link" : {
+
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href"  : "link",
+						"title" : "Link Title"
+					},
+
+					"text" : "Brightspot Link"
+
+				}
+			},
+			{ 
+				"link" : {
+
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href"  : "link",
+						"title" : "Link Title"
+					},
+
+					"text" : "Brightspot News"
+
+				}
+			},
+			{ 
+				"link" : {
+
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href"  : "link",
+						"title" : "Link Title"
+					},
+
+					"text" : "Brightspot Pro"
+
+				}
+			}]
+		},
+			
+		"second-col" : {
+			"heading": "Contact Brightspot",
+			"listItems" : 
+			[{ 
+				"link" : {
+
+						"_template" : "common/link",
+
+						"attributes" : {
+							"href"  : "link",
+							"title" : "Link Title"
+						},
+
+						"text" : "Newsletter"
+
+					}
+				},
+				{ 
+					"link" : {
+
+						"_template" : "common/link",
+
+						"attributes" : {
+							"href"  : "link",
+							"title" : "Link Title"
+						},
+
+						"text" : "Advertising"
+
+					}
+				},
+				{ 
+					"link" : {
+
+						"_template" : "common/link",
+
+						"attributes" : {
+							"href"  : "link",
+							"title" : "Link Title"
+						},
+
+						"text" : "Careers"
+
+					}
+				},
+				{ 
+					"link" : {
+
+						"_template" : "common/link",
+
+						"attributes" : {
+							"href"  : "link",
+							"title" : "Link Title"
+						},
+
+						"text" : "Sitemap"
+
+					}
+				}]
+	},
+
+	"third-col" : {
+		"social": "Follow Brightspot",
+		"newsletter": "Newsletter",
+		"newsletter-description": "Keep it up with the latest Brightspot.com" ,
+		"sharing" : {
+			"links" : [{
+				"_template" : "common/link",
+				"icon"  : "facebook",
+
+				"attributes" : {
+					"href"  : "http://www.facebook.com",
+					"title" : "Facebook",
+					"target" : "_blank"
+				}
+			},
+			{
+				"_template" : "common/link",
+				"icon"  : "twitter",
+
+				"attributes" : {
+					"href"  : "http://www.twitter.com",
+					"title" : "Twitter",
+					"target" : "_blank"
+				}
+			},
+			{
+				"_template" : "common/link",
+				"icon"  : "pinterest",
+
+				"attributes" : {
+					"href"  : "http://www.pinterest.com",
+					"title" : "Pinterest",
+					"target" : "_blank"
+				}
+			},
+			{
+				"_template" : "common/link",
+				"icon"  : "linkedin",
+
+				"attributes" : {
+					"href"  : "http://www.linkedin.com",
+					"title" : "LinkedIn",
+					"target" : "_blank"
+				}
+			}]
+		},
+		"inputs": [
+			{
+				"_template" : "components/bsp-form-input",
+				"showMessagesAbove": true,
+				"attributes": {
+					"autocomplete": "off",
+					"id": "footeremail",
+					"placeholder": "email address",
+					"required": true,
+					"type": "email"
+				},
+				"errors": [
+					{ "typeMismatch": "Email address must follow pattern a@b.c" },
+					{ "valueMissing": "Please enter an email address" }
+				]
+			},
+
+			{
+				"_template" : "components/bsp-form-input",
+				"attributes": {
+					"type": "submit",
+					"value": "Sign Up"
+				}
+			}
+		]
+	},
+
+	"disclaimer": "Copyright © Brightspot"
 }

@@ -1,0 +1,35 @@
+<div class="bsp-component">
+
+	{{#if heading}}
+		<div class="bsp-component-title">{{heading}}</div>
+	{{/if}}
+
+	{{#if tabs}}
+		<div data-bsp-tabber{{#if options }} data-bsp-tabber-options='{{> common/options options }}'{{/if}}>
+		{{#each tabs}}
+			<div class="bsp-tab" data-nav-title="{{#if label}}{{label}}{{/if}}">
+			{{#if text}}
+				{{#if textHeading}}<div class="bsp-tabber-tab-heading">{{textHeading}}</div>{{/if}}
+				{{text}}
+				{{#if ctaText}}
+				<div class="bsp-component-cta">
+					<a href="{{ctaLink}}">{{ctaText}}</a>
+				</div>	
+				{{/if}}	
+			{{else}}
+				{{#with component}}
+					{{> (lookup . '_template') }}
+				{{/with}}
+			{{/if}}
+			</div>
+		{{/each}}
+		</div>
+	{{/if}}
+
+	{{#if ctaText}}
+		<div class="bsp-component-cta">
+			<a href="{{ctaLink}}">{{ctaText}}</a>
+		</div>	
+	{{/if}}	
+
+</div>

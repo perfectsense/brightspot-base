@@ -1,0 +1,17 @@
+{{#if showMessagesAbove}}
+	{{> components/bsp-form-message this}}
+{{/if}}
+<div class="bsp-form-input {{#if attributes.type}}bsp-form-input-{{attributes.type}}{{/if}}">
+{{#if label}}
+	<label {{> common/attributes label.attributes }}>
+	{{#if labelAfterInput}} {{else}}{{label.text}}{{/if}}
+{{/if}}
+	<input {{> common/attributes attributes }} />
+{{#if label}}
+	{{#if labelAfterInput}}{{label.text}}{{else}} {{/if}}
+	</label>
+{{/if}}
+</div>
+{{#if showMessagesBelow}}
+	{{> components/bsp-form-message this}}
+{{/if}}

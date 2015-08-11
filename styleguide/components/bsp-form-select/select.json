@@ -1,0 +1,37 @@
+{
+	"_template" : "components/bsp-form-select",
+	"showMessagesAbove": true,
+	"attributes": {
+		"id": "select1",
+		"required": true
+	},
+	"errors": [
+		{ "valueMissing": "Please select an option" }
+	],
+	"label": {
+		"attributes": {
+			"for": "select1"
+		},
+		"text": "Select"
+	},
+	"options": [
+		{
+			"attributes": {
+				"value": ""
+			},
+			"text": ""
+		},
+		{
+			"attributes": {
+				"value": 1
+			},
+			"text": "Option 1"
+		},
+		{
+			"attributes": {
+				"value": 2
+			},
+			"text": "Option 2"
+		}
+	]
+}
