@@ -64,6 +64,7 @@
 
     float: left;
     height: 100%;
+    width: auto;
 }
 
 .bsp-site-logo {
@@ -72,6 +73,11 @@
     line-height: 0;
     margin: 0;
     position: relative;
+
+    img {
+       max-width: @header-logo-width / 2;
+       width: 100%;
+    }    
 }
 
 
@@ -383,22 +389,29 @@
             }
         }
 
-
         .bsp-site-logo {
             &:extend(.vertical-center);
             
             margin: 0 0 0 -(@header-logo-width / 2);
             position: absolute;
-            top: @header-height / 2;
-            left: 50%;
+            top: @header-logo-height / 3;
+            left: 50%;  
+
+            img {
+                max-width: @header-logo-width;
+            }         
 
             .transition(all .3s linear);
 
             .bsp-scrolling & {
                 //position: relative;
                 margin: 0;
-                top: (@header-height - @header-logo-height) / 2;
+                top: (@header-height - (@header-logo-height / 2)) / 2;
                 left: @header-logo-left-placement;
+
+                img {
+                    max-width: @header-logo-width / 2;
+                }
             }
         }
 

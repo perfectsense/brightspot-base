@@ -48,6 +48,8 @@ mkdir styleguide
 dl $STYLEGUIDE_DIR/index.html
 dl $STYLEGUIDE_DIR/README.md
 dl $STYLEGUIDE_DIR/server.js
+dl $STYLEGUIDE_DIR/server-start.sh
+dl $STYLEGUIDE_DIR/server-stop.sh
 
 # create template directory structure
 mkdir -p $TEMPLATE_DIR/common
