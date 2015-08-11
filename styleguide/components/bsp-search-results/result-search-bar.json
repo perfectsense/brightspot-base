@@ -1,5 +1,5 @@
 {
-	"_template" : "components/bsp-search-results",
+	"_template" : "components/bsp-site-search-bar",
 	"heading" : "We found 128 results for \"Lion\"",
 
  	"search-bar" : {

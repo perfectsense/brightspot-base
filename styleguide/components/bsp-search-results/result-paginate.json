@@ -2,7 +2,9 @@
 	"_template" : "components/bsp-site-paginate",
 
 	"navigate" : {
+
 		"previous" : {
+
 			"_template" : "common/link",
 
 			"attributes" : {
@@ -12,7 +14,9 @@
 
 			"text" : "‹ Previous"
 		},
+
 		"next" : {
+
 			"_template" : "common/link",
 
 				"attributes" : {
@@ -22,10 +26,13 @@
 
 			"text" : "Next ›"
 		}
+
 	},
 
 	"listItems" : [{ 
+
 			"link" : {
+
 				"_template" : "common/link",
 
 				"attributes" : {
@@ -36,6 +43,7 @@
 				"text" : "1"
 			}
 		},
+
 		{ 
 			"link" : {
 
@@ -49,6 +57,7 @@
 				"text" : "2"
 			}
 		},
+		
 		{ 
 			"link" : {
 
