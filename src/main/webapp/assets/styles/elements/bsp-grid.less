@@ -11,14 +11,7 @@
 // fixed positioning offset if applicable
 body {
 	& when (@header-positioning = fixed) {
-    	padding-top: @header-tophat-height + (@header-height*2);
-    }
-}
-
-body.bsp-scrolling {
-	& when (@header-positioning = fixed) {
-		// adding extra 25px for smoother scrolling user experience
-    	padding-top: @header-tophat-height + @header-height + 25px;
+    	padding-top: @header-tophat-height + (@header-height);
     }
 }
 
@@ -145,6 +138,19 @@ body.bsp-column-fixed-toggle-in {
 }
 
 @media @mq-md {
+
+	body {
+		& when (@header-positioning = fixed) {
+	    	padding-top: @header-tophat-height + (@header-height * 2);
+	    }
+	}
+
+	body.bsp-scrolling {
+		& when (@header-positioning = fixed) {
+			// adding extra 25px for smoother scrolling user experience
+	    	padding-top: @header-tophat-height + @header-height + 25px;
+	    }
+	}
 
 	// styles to create a fixed column that will be stuck on the screen
 	.bsp-column-fixed {
