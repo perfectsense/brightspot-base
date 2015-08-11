@@ -27,27 +27,29 @@
 		}
 
 	},
-	"navLinks" : {
-		
-		"link": {
+	"navLinks" : [
+
+		{
 			"_template" : "common/link",
 
 			"attributes" : {
-				"href"  : "/#components",
-				"title" : "Components"
+				"href"  : "link-me",
+				"title" : "I are a link"
 			},
-			"text"  : "Components"
+			
+			"text"  : "Link test text"
 		},
 		
-		"link": {
+		{
 			"_template" : "common/link",
 
 			"attributes" : {
-				"href"  : "/#pages",
-				"title" : "Pages"
+				"href"  : "link-me",
+				"title" : "I are a link"
 			},
-			"text"  : "Pages"
+			
+			"text"  : "Link test text"
 		}		
-	}
+	]
 
 }
