@@ -20,6 +20,10 @@
 							{{#with title}}
 								<div class="bsp-list-promo-title">{{> (lookup . '_template') }}</div>
 							{{/with}}
+
+							{{#if subtitle}}
+								<div class="bsp-list-promo-subtitle">{{{subtitle}}}</div>
+							{{/if}}
 							
 							{{#if description}}
 								<div class="bsp-list-promo-desc">{{{description}}}</div>

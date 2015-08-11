@@ -1,0 +1,19 @@
+{
+	"_template" : "components/bsp-component-group",
+
+	"components" : [
+		{
+			"_dataUrl" : "/components/bsp-search-results/result-1-item-with-1-image-large.json"
+		},
+		{
+			"_dataUrl" : "/components/bsp-search-results/result-1-item-with-1-image.json"
+		},
+		{
+			"_dataUrl" : "/components/bsp-search-results/result-1-item-with-no-image.json"
+		},
+		{
+			"_dataUrl" : "/components/bsp-search-results/result-1-item-with-1-image.json"
+		}
+
+	]
+}

@@ -7,13 +7,13 @@
 				"_dataUrl" : "/components/bsp-search-results/result-search-toolbar.json"
 			},
 			{
-				"_dataUrl" : "/components/bsp-search-results/result-shows.json"
+				"_dataUrl" : "/components/bsp-search-results/group-show.json"
 			},
 			{
-				"_dataUrl" : "/components/bsp-search-results/result-images.json"
+				"_dataUrl" : "/components/bsp-search-results/group-image.json"
 			},
 			{
-				"_dataUrl" : "/components/bsp-search-results/result-people.json"
+				"_dataUrl" : "/components/bsp-search-results/group-people.json"
 			},
 			{
 				"_dataUrl" : "/components/bsp-search-results/result-theaters.json"

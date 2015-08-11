@@ -1,9 +1,13 @@
 {
 	"_template" : "components/bsp-search-results",
 	"heading" : "We found 128 results for \"Lion\"",
+
  	"search-bar" : {
+
 		"_template" : "components/bsp-form-input",
+
 		"showMessagesAbove": true,
+
 		"attributes": {
 			"autocomplete": "off",
 			"id": "textinput1",
@@ -11,26 +15,34 @@
 			"required": true,
 			"type": "text"
 		},
+
 		"errors": [
 			{ "valueMissing": "Please fill in the text input" }
 		]
+
 	},
+
 	"select" : {
+
 		"_template" : "components/bsp-form-select",
 		"showMessagesAbove": true,
+
 		"attributes": {
 			"id": "select1",
 			"required": true
 		},
+
 		"errors": [
 			{ "valueMissing": "Please select an option" }
 		],
+
 		"label": {
 			"attributes": {
 				"for": "select1"
 			},
 			"text": "Sort By: "
 		},
+
 		"options": [
 			{
 				"attributes": {
@@ -42,35 +54,44 @@
 				"attributes": {
 					"value": 1
 				},
-				"text": "Option 1"
+				"text": "Popularity"
 			},
 			{
 				"attributes": {
 					"value": 2
 				},
-				"text": "Option 2"
+				"text": "Rating"
 			}
 		]
 	},
+
 	"search-button" : {
+
 		"_template" : "components/bsp-form-input",
+
 		"attributes": {
 			"type": "submit",
 			"value": "Search"
 		}
+
 	},
+	
 	"checkbox": {
+
 		"listItems" : [
 		{ 
 			"link": {
+
 				"_template" : "components/bsp-form-input",
 				"showMessagesAbove": false,
 				"labelAfterInput": true,
+
 				"attributes": {
 					"id": "checkbox1",
 					"required": true,
 					"type": "checkbox"
 				},
+
 				"label": {
 					"attributes": {
 						"for": "checkbox1"
@@ -81,14 +102,17 @@
 		},
 		{ 
 			"link": {
+
 				"_template" : "components/bsp-form-input",
 				"showMessagesAbove": false,
 				"labelAfterInput": true,
+
 				"attributes": {
 					"id": "checkbox2",
 					"required": true,
 					"type": "checkbox"
 				},
+
 				"label": {
 					"attributes": {
 						"for": "checkbox2"
@@ -99,51 +123,64 @@
 		},
 		{ 
 			"link": {
+
 				"_template" : "components/bsp-form-input",
 				"showMessagesAbove": false,
 				"labelAfterInput": true,
+
 				"attributes": {
 					"id": "checkbox3",
 					"required": true,
 					"type": "checkbox"
 				},
+
 				"label": {
 					"attributes": {
 						"for": "checkbox3"
 					},
 					"text": "Videos"
 				}
+
 			}
 		},
 		{ 
 			"link": {
+
 				"_template" : "components/bsp-form-input",
 				"showMessagesAbove": false,
 				"labelAfterInput": true,
+
 				"attributes": {
 					"id": "checkbox4",
 					"required": true,
 					"type": "checkbox"
 				},
+
 				"label": {
+
 					"attributes": {
 						"for": "checkbox4"
 					},
 					"text": "Photo Galleries"
 				}
+
 			}
 		},
 		{ 
 			"link": {
+
 				"_template" : "components/bsp-form-input",
 				"showMessagesAbove": false,
 				"labelAfterInput": true,
+
 				"attributes": {
 					"id": "checkbox5",
 					"required": true,
 					"type": "checkbox"
 				},
+
 				"label": {
+
 					"attributes": {
 						"for": "checkbox5"
 					},
@@ -153,14 +190,17 @@
 		},
 		{ 
 			"link": {
+
 				"_template" : "components/bsp-form-input",
 				"showMessagesAbove": false,
 				"labelAfterInput": true,
+
 				"attributes": {
 					"id": "checkbox6",
 					"required": true,
 					"type": "checkbox"
 				},
+
 				"label": {
 					"attributes": {
 						"for": "checkbox6"
