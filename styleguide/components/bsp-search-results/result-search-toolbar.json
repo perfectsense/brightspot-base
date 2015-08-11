@@ -1,7 +1,7 @@
 {
 	"_template" : "components/bsp-search-results",
-
-	"search-bar" : {
+	"heading" : "We found 128 results for \"Lion\"",
+ 	"search-bar" : {
 		"_template" : "components/bsp-form-input",
 		"showMessagesAbove": true,
 		"attributes": {

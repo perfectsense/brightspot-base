@@ -1,21 +1,22 @@
 <div class="bsp-component">
 	<div class="bsp-search-results">
-	
+		<h1 class="bsp-search-results-heading">{{heading}}</h1>
+
 		<div class="bsp-search-results-bar">
 				{{#with search-bar}}
-				<div class="search-bar">
+				<div class="bsp-search-results-search-bar">
 					{{> (lookup . '_template') }}
 				</div>
 				{{/with}}
 					
 				{{#with select}}
-				<div class="select">
+				<div class="bsp-search-results-select">
 					{{> (lookup . '_template') }}
 				</div>
 				{{/with}}
 					
 				{{#with search-button}}
-				<div class="button">
+				<div class="bsp-search-results-button">
 					{{> (lookup . '_template') }}
 				</div>
 				

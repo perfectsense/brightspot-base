@@ -4,10 +4,10 @@
 	"main" : {
 		"components" : [
 			{
-				"_dataUrl" : "/components/bsp-search-results/standard.json"
+				"_dataUrl" : "/components/bsp-search-results/result-search-toolbar.json"
 			},
 			{
-				"_dataUrl" : "/components/bsp-bio/show.json"
+				"_dataUrl" : "/components/bsp-search-results/result-shows.json"
 			},
 			{
 				"_dataUrl" : "/components/bsp-search-results/result-images.json"
@@ -19,10 +19,11 @@
 				"_dataUrl" : "/components/bsp-search-results/result-theaters.json"
 			},
 			{
-				"_dataUrl" : "/components/bsp-site-paginate/index.json"
+				"_dataUrl" : "/components/bsp-search-results/result-paginate.json"
 			}
 		]
 	},
+		
 	"aside" : {
 		"components" : [
 			{
