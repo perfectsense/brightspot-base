@@ -17,6 +17,9 @@
 			},
 			{
 				"_dataUrl" : "/components/bsp-search-results/result-theaters.json"
+			},
+			{
+				"_dataUrl" : "/components/bsp-site-paginate/index.json"
 			}
 		]
 	},
