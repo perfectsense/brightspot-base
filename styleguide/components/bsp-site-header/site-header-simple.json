@@ -1,0 +1,53 @@
+{
+	"_template" : "components/bsp-site-header-simple",
+
+	"siteName" : "Brightspot Base Styleguide",
+
+	"siteLogo" : {
+
+		"link" : {
+
+			"_template" : "common/link",
+
+			"attributes" : {
+				"href"  : "/",
+				"title" : "Brightspot Base Styleguide"
+			},
+
+			"image" : {
+
+				"_template" : "common/image",
+
+				"attributes" : {
+					"alt" : "Brightspot",
+					"src" : "/assets/images/logo-site-header.png"
+				}
+			}
+			
+		}
+
+	},
+	"navLinks" : {
+		
+		"link": {
+			"_template" : "common/link",
+
+			"attributes" : {
+				"href"  : "/#components",
+				"title" : "Components"
+			},
+			"text"  : "Components"
+		},
+		
+		"link": {
+			"_template" : "common/link",
+
+			"attributes" : {
+				"href"  : "/#pages",
+				"title" : "Pages"
+			},
+			"text"  : "Pages"
+		}		
+	}
+
+}
