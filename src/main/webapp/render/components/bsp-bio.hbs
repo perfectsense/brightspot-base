@@ -1,7 +1,9 @@
 <div class="bsp-component">
 	<div class="bsp-bio">
 		<div class="bsp-bio-image">
-			{{> common/image image}}
+			{{#with image}}
+				{{> common/image }}
+			{{/with}}
 		</div>
 		<div class="bsp-bio-content">
 			<h1 class="bsp-bio-title">{{title}}</h1>
@@ -9,7 +11,7 @@
 			{{#if subtitles}}
 			<div class="bsp-bio-subtitle">
 				{{#each subtitles}}
-					<h5 class="bsp-bio-sub-text">{{> common/link this}}</h5>
+					<h5 class="bsp-bio-sub-text">{{> common/link }}</h5>
 				{{/each}}
 			</div>
 			{{/if}}
@@ -40,7 +42,7 @@
 			{{#if links}}
 			<ul class="bsp-bio-links">
 				{{#each links}}
-					<li>{{> common/link this}}</li>
+					<li>{{> common/link }}</li>
 				{{/each}}
 			</ul>
 			{{/if}}
@@ -48,7 +50,7 @@
 			{{#if extraImages}}
 			<ul class="bsp-bio-extra-images">
 				{{#each extraImages}}
-					<li>{{> common/image this}}</li>
+					<li>{{> common/image }}</li>
 				{{/each}}
 			</ul>
 			{{/if}}
