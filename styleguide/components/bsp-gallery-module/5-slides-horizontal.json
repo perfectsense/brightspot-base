@@ -10,39 +10,19 @@
 
 	"gallerySlides" : [
 		{ 
-			"_template" : "common/image",
-
-			"attributes" : {				
-				"src" : "/assets/images/800x450.png"
-			}
+			"_dataUrl" : "/common/image-800x450.json"
 		},
 		{ 
-			"_template" : "common/image",
-
-			"attributes" : {				
-				"src" : "/assets/images/800x450.png"
-			}
+			"_dataUrl" : "/common/image-800x450.json"
 		},
 		{ 
-			"_template" : "common/image",
-
-			"attributes" : {				
-				"src" : "/assets/images/800x450.png"
-			}
+			"_dataUrl" : "/common/image-800x450.json"
 		},
 		{ 
-			"_template" : "common/image",
-
-			"attributes" : {				
-				"src" : "/assets/images/800x450.png"
-			}
+			"_dataUrl" : "/common/image-800x450.json"
 		},
 		{ 
-			"_template" : "common/image",
-
-			"attributes" : {				
-				"src" : "/assets/images/800x450.png"
-			}
+			"_dataUrl" : "/common/image-800x450.json"
 		}
 	]
 }
