@@ -2,6 +2,7 @@
 	"_template" : "components/bsp-form-input",
 	"showMessagesAbove": true,
 	"attributes": {
+		"data-bsp-form-field-month": "data-bsp-form-field-month",
 		"id": "month1",
 		"required": true,
 		"type": "month"
@@ -14,6 +15,6 @@
 		"attributes": {
 			"for": "month1"
 		},
-		"text": "Month *"
+		"text": "Month"
 	}
 }

@@ -10,6 +10,7 @@ import bsp_form_message_plugin from 'bsp-form-message-plugin';
 import bsp_form_constraint_matches_plugin from 'bsp-form-constraint-matches-plugin';
 import bsp_form_field_date_plugin from 'bsp-form-field-date-plugin';
 import bsp_form_field_datetime_local_plugin from 'bsp-form-field-datetime-local-plugin';
+import bsp_form_field_month_plugin from 'bsp-form-field-month-plugin';
 
 import bsp_scroll_checker from './plugins/bsp-scroll-checker-plugin';
 import bsp_share from 'bsp-share';
