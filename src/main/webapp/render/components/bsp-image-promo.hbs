@@ -40,9 +40,9 @@
 
 	</div>
 
-	{{#if ctaText}}
-		<div class="bsp-component-cta">
-			<a href="{{ctaLink}}">{{ctaText}}</a>
+	{{#with cta}}
+		<div class="bsp-component-cta {{#if options.location}}cta-{{options.location}}{{/if}}">
+			{{render content}}
 		</div>	
-	{{/if}}	
+	{{/with}}
 </div>

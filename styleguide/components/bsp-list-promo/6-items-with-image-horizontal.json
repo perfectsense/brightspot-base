@@ -318,6 +318,13 @@
 		}
 	],
 
-	"ctaText" : "CTA goes here",
-	"ctaLink" : "#"
+	"cta" : {
+		"options" : {
+			"location" : "bottom"
+		},
+
+		"content" : {
+			"_dataUrl" : "/common/link-test-text.json"
+		}
+	}
 }
