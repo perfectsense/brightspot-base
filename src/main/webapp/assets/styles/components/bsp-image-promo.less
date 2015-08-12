@@ -1,9 +1,12 @@
 // This is a standard image promo. The image promo has an image with overlayed links
 
+// each image has a top and bottom margin
 .bsp-image-promo-image {
-	margin: @space 0 0;
+	margin: @space 0;
 	position: relative;
 
+	// which we remove for the first one, so it can snug up to the top of the component
+	// container. If there is no title, it sits at the top. With a title, the title provides the spacing from the top
 	&:first-child {
 		margin-top: 0;
 	}
