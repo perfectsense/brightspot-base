@@ -11,7 +11,7 @@
 			{{#gallerySlides}}
 				{{#if thumbnailImage}}
 				<div class="bsp-carousel-gallery-thumbnail bsp-column-third" data-index="{{@index}}">
-					{{> (lookup . '_template') }}
+					{{render this}}
 				</div>
 				{{/if}}
 			{{/gallerySlides}}
@@ -34,7 +34,7 @@
 		<div class="bsp-carousel-gallery">
 			{{#gallerySlides}}
 				<div class="bsp-carousel-gallery-slide">
-					{{> (lookup . '_template') }}
+					{{render this}}
 					{{#if slideTitle}}
 						<h3 class="bsp-carousel-gallery-slide-title">{{slideTitle}}</h3>
 					{{/if}}
@@ -84,7 +84,7 @@
 				{{/if}}
 				<ul>
 					{{#relatedLinks}}
-						<li>{{> (lookup . '_template') }}</li>
+						<li>{{render this}}</li>
 					{{/relatedLinks}}			
 				</ul>
 			</div>

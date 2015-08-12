@@ -12,13 +12,13 @@
 
 						{{#with image}}
 							<div class="bsp-list-promo-image">
-								{{> (lookup . '_template') }}
+								{{render this}}
 							</div>
 						{{/with}}
 
 						<div class="bsp-list-promo-text">
 							{{#with title}}
-								<div class="bsp-list-promo-title">{{> (lookup . '_template') }}</div>
+								<div class="bsp-list-promo-title">{{render this}}</div>
 							{{/with}}
 							
 							{{#if description}}
@@ -26,7 +26,7 @@
 							{{/if}}
 
 							{{#with link}}
-								<div class="bsp-list-promo-link">{{> (lookup . '_template') }}</div>
+								<div class="bsp-list-promo-link">{{render this}}</div>
 							{{/with}}
 						</div>
 					</li>

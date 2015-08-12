@@ -1,12 +1,27 @@
 .bsp-tabber {
 
 }
+
+// if you need IE8/9 support, you can use some of the tricks here 
+// http://stackoverflow.com/questions/6879467/how-do-i-justify-a-horizontal-list
+.bsp-tabber-nav-container {
+	display: flex;
+	ms-display: flex;
+
+	justify-content: space-between;
+	ms-justify-content: space-between;
+}
 .bsp-tabber-nav {
-	display: inline-block; 
-	padding: @space;
+	background: @brand-primary;
+	color: @white;
+	display: block; 
+	padding: @space-half 0;
+	text-align: center;
+	width: 100%;
 
 	&.active {
-		background: @header-background;
+		background: @brand-secondary;
+		color: @brand-primary;
 	}
 }
 

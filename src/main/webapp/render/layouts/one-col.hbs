@@ -4,7 +4,7 @@
 		<div class="bsp-column-full">
 			{{#with main}}
 				{{#each components}}
-					{{> (lookup . '_template') }}
+					{{render this}}
 				{{/each}}
 			{{/with}}
 		</div>
