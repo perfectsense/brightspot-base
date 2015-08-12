@@ -10,26 +10,11 @@
 			"imgAlign" : "left",
 
 			"image" : {
-
-				"_template" : "common/image",
-
-				"attributes" : {
-					"alt" : "Test Alt",
-					"src" : "/assets/images/800x450.png"
-				}
+				"_dataUrl" : "/common/image-800x450.json"
 			},
 
 			"title" : {
-
-				"_template" : "common/link",
-
-				"attributes" : {
-					"href"  : "link",
-					"title" : "Link Title"
-				},
-
-				"text" : "Pancetta t-bone beef ribs corned beef, ball tip hamburger fatback."
-
+				"_dataUrl" : "/common/link-text-title.json"
 			},
 
 			"subtitle" : "<b>By Alisha Templeton</b> | 06/07/2015",

@@ -1,0 +1,46 @@
+<div class="bsp-search-result">
+	<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/components/bsp-search-results/result-search-bar.json" }'></div>
+
+	{{#if show}}
+		<div class="bsp-component">
+			{{#with show}}
+				{{render this}}
+			{{/with}}
+			{{#each articles}}
+				{{render this}}
+			{{/each}}
+		</div>
+	{{/if}}
+
+	{{#if image}}
+		<div class="bsp-component">
+			{{#with image}}
+				{{render this}}
+			{{/with}}
+			{{#each articles}}
+				{{render this}}
+			{{/each}}
+		</div>
+	{{/if}}
+
+	{{#if people}}
+		<div class="bsp-component">
+			{{#with people}}
+				{{render this}}
+			{{/with}}
+			{{#each articles}}
+				{{render this}}
+			{{/each}}
+		</div>
+	{{/if}}
+
+	{{#if theater}}
+		<div class="bsp-component">
+			{{#with theater}}
+				{{render this}}
+			{{/with}}
+		</div>
+	{{/if}}
+
+	<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/components/bsp-search-results/result-paginate.json" }'></div>	
+</div>

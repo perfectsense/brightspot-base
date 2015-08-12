@@ -1,0 +1,34 @@
+{
+
+	"_template" : "components/bsp-search-result",
+
+    "show" : {
+        "_dataUrl" : "/components/bsp-search-results/1-item-1-image-large.json"
+    },
+
+    "image" : {
+        "_dataUrl" : "/components/bsp-search-results/result-image.json"
+    },
+
+    "people" : {
+        "_dataUrl" : "/components/bsp-search-results/result-people.json"
+    },
+
+    "theater" : {
+        "_dataUrl" : "/components/bsp-search-results/result-theater.json"
+    },
+
+
+    "articles" : [
+        {
+            "_dataUrl" : "/components/bsp-search-results/1-item-1-image.json"
+        },
+        {
+            "_dataUrl" : "/components/bsp-search-results/1-item-no-image.json"
+        },
+        {
+            "_dataUrl" : "/components/bsp-search-results/1-item-1-image.json"
+        }
+    ]
+    
+}

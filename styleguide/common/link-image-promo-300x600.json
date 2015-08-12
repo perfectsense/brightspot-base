@@ -18,11 +18,24 @@
 
 					"attributes" : {
 						"alt" : "Image",
-						"src" : "/assets/images/200x300.png"
+						"src" : "/assets/images/300x600.png"
 					}
 				}
 				
-			}
+			},
+				
+			"promoLinks" : [
+				{
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href"  : "promoLink",
+						"title" : "Link"
+					},
+
+					"text" : "Promo Link Text"
+				}
+			]
 		}
 	]
 }

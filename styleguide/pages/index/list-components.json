@@ -128,6 +128,17 @@
 				"_template" : "common/link",
 				
 				"attributes" : {
+					"href"  : "/components/bsp-search-results-lite/",
+					"title" : "BSP Table - Sample Themes"
+				},
+				"text"  : "BSP Search Results - Lite"
+			}
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
 					"href"  : "/components/bsp-site-header/",
 					"title" : "BSP Site Header"
 				},

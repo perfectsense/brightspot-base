@@ -4,22 +4,7 @@
 	"main" : {
 		"components" : [
 			{
-				"_dataUrl" : "/components/bsp-search-results/result-search-bar.json"
-			},
-			{
-				"_dataUrl" : "/components/bsp-search-results/group-show.json"
-			},
-			{
-				"_dataUrl" : "/components/bsp-search-results/group-image.json"
-			},
-			{
-				"_dataUrl" : "/components/bsp-search-results/group-people.json"
-			},
-			{
-				"_dataUrl" : "/components/bsp-search-results/result-theaters.json"
-			},
-			{
-				"_dataUrl" : "/components/bsp-search-results/result-paginate.json"
+				"_dataUrl" : "/components/bsp-search-results/standard.json"
 			}
 		]
 	},
@@ -27,7 +12,7 @@
 	"aside" : {
 		"components" : [
 			{
-				"_dataUrl" : "/components/bsp-search-results/result-ad.json"
+				"_dataUrl" : "/common/link-image-promo-300x600.json"
 			}
 		]
 	}

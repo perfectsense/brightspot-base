@@ -20,11 +20,7 @@
 			"row" : [
 				{
 					"image" : {
-						"_template" : "common/image",
-						"attributes" : {
-							"alt" : "Test Alt",
-							"src" : "/assets/images/60x60.png"
-						}	
+						"_dataUrl" : "/common/image-60x60.json"
 					}
 				},
 				{"text" : "Administrative"},
@@ -36,14 +32,8 @@
 			"row" : [
 				{
 					"image" : {
-						"_template" : "common/image",
-						"attributes" : {
-							"alt" : "Test Alt",
-							"src" : "/assets/images/60x60.png"
-						}				
+						"_dataUrl" : "/common/image-60x60.json"
 					}
-
-
 				},
 				{"text" : "Administrative"},
 				{"text" : "Westport Country Playhouse"},
@@ -54,11 +44,7 @@
 			"row" : [
 				{
 					"image" : {
-						"_template" : "common/image",
-						"attributes" : {
-							"alt" : "Test Alt",
-							"src" : "/assets/images/60x60.png"
-						}	
+						"_dataUrl" : "/common/image-60x60.json"
 					}
 				},
 				{"text" : "Administrative"},
