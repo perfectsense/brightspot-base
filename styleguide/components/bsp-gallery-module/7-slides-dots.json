@@ -29,5 +29,15 @@
 		{ 
 			"_dataUrl" : "/common/image-1200x400.json"
 		}
-	]
+	],
+
+	"cta" : {
+		"options" : {
+			"location" : "bottom"			
+		},
+
+		"content" : {
+			"_dataUrl" : "/common/link-test-text.json"
+		}
+	}
 }
