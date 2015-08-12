@@ -7,7 +7,6 @@
 }
 
 .bsp-article {
-
 	border-top: @border-style-1;
 	padding: @space-triple 0 @space;
 
@@ -29,6 +28,29 @@
 		padding: 0;
 	}
 	
+}
+
+.bsp-article-content {
+	&:extend(.clearfix all);
+}
+
+.bsp-article-enhancement {
+	margin: @space 0;
+
+	&.align-left {
+		float: left;
+		margin: 0 @space @space 0;
+	}
+
+	&.align-right {
+		float: right;
+		margin: 0 0 @space @space;
+	}
+
+	&.align-center {
+		margin: 0 auto;
+	}
+
 }
 
 .bsp-article-title {
