@@ -18,7 +18,7 @@
 				{{/if}}	
 			{{else}}
 				{{#with component}}
-					{{> (lookup . '_template') }}
+					{{render this}}
 				{{/with}}
 			{{/if}}
 			</div>

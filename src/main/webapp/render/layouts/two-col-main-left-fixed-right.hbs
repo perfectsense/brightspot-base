@@ -2,7 +2,7 @@
 
 	{{#with aboveColumns}}
 		{{#each components}}
-			{{> (lookup . '_template') }}
+			{{render this}}
 		{{/each}}
 	{{/with}}
 	
@@ -11,7 +11,7 @@
 		<div class="bsp-column-scrolling">
 			{{#with main}}
 				{{#each components}}
-					{{> (lookup . '_template') }}
+					{{render this}}
 				{{/each}}
 			{{/with}}
 		</div>
@@ -26,7 +26,7 @@
 
 				{{#with aside}}
 					{{#each components}}
-						{{> (lookup . '_template') }}
+						{{render this}}
 					{{/each}}
 				{{/with}}
 			</div>

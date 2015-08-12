@@ -2,7 +2,7 @@
 
 	{{#with aboveColumns}}
 		{{#each components}}
-			{{> (lookup . '_template') }}
+			{{render this}}
 		{{/each}}
 	{{/with}}
 
@@ -11,7 +11,7 @@
 		<div class="bsp-column-half">
 			{{#with main}}
 				{{#each components}}
-					{{> (lookup . '_template') }}
+					{{render this}}
 				{{/each}}
 			{{/with}}
 		</div>
@@ -19,7 +19,7 @@
 		<div class="bsp-column-half">
 			{{#with aside}}
 				{{#each components}}
-					{{> (lookup . '_template') }}
+					{{render this}}
 				{{/each}}
 			{{/with}}
 		</div>
