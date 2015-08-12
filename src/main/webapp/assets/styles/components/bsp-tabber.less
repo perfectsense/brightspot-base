@@ -1,7 +1,3 @@
-.bsp-tabber {
-
-}
-
 // if you need IE8/9 support, you can use some of the tricks here 
 // http://stackoverflow.com/questions/6879467/how-do-i-justify-a-horizontal-list
 .bsp-tabber-nav-container {
@@ -11,6 +7,7 @@
 	justify-content: space-between;
 	ms-justify-content: space-between;
 }
+
 .bsp-tabber-nav {
 	background: @brand-primary;
 	color: @white;
@@ -22,6 +19,13 @@
 	&.active {
 		background: @brand-secondary;
 		color: @brand-primary;
+	}
+}
+
+// components in a tab get no extra padding
+.bsp-tab {
+	.bsp-component {
+		margin: 0;
 	}
 }
 
