@@ -145,7 +145,7 @@ body.bsp-column-fixed-toggle-in {
 	    }
 	}
 
-	body.bsp-scrolling {
+	body.bsp-scrolling, body.bsp-fullscreen {
 		& when (@header-positioning = fixed) {
 			// adding extra 25px for smoother scrolling user experience
 	    	padding-top: @header-tophat-height + @header-height + 25px;
@@ -162,7 +162,7 @@ body.bsp-column-fixed-toggle-in {
 		top: (@header-height * 2) + @header-tophat-height;
 		width: 240px; // custom width for our site grid
 
-		.bsp-scrolling & {
+		.bsp-scrolling &, .bsp-fullscreen & {
 			top: @header-height + @header-tophat-height;
 		}
 	}
