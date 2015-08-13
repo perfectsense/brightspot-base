@@ -16,4 +16,7 @@ import bsp_form_field_time_plugin from 'bsp-form-field-time-plugin';
 import bsp_scroll_checker from './plugins/bsp-scroll-checker-plugin';
 import bsp_share from 'bsp-share';
 
+// need to find a neater method than compiling this in our production JS
+import bsp_template_plugin from 'bsp-template-plugin';
+
 export default {};
