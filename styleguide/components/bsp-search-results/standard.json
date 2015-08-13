@@ -1,5 +1,4 @@
 {
-
 	"_template" : "components/bsp-search-result",
 
     "show" : {
@@ -18,17 +17,37 @@
         "_dataUrl" : "/components/bsp-search-results/result-theater.json"
     },
 
+    "search-bar" : {
+        "_dataUrl" : "/common/bsp-site-search-bar.json"
+    },
 
-    "articles" : [
-        {
-            "_dataUrl" : "/components/bsp-search-results/1-item-1-image.json"
-        },
-        {
-            "_dataUrl" : "/components/bsp-search-results/1-item-no-image.json"
-        },
-        {
-            "_dataUrl" : "/components/bsp-search-results/1-item-1-image.json"
-        }
-    ]
-    
+    "paginate" : {
+        "_dataUrl" : "/common/bsp-site-paginate.json"
+    },
+
+    "articles" : {
+        "_template" : "components/bsp-list-promo",
+
+        "listItems" : 
+        [
+            { 
+                "link" : {
+                    "_dataUrl" : "/components/bsp-search-results/1-item-1-image.json"
+                }
+
+            },
+            { 
+                "link" : {
+                    "_dataUrl" : "/components/bsp-search-results/1-item-1-image.json"
+                }
+
+            },
+            { 
+                "link" : {
+                    "_dataUrl" : "/components/bsp-search-results/1-item-1-image.json"
+                }
+
+            }
+        ]
+    }
 }

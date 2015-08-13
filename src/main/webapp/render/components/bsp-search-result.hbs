@@ -1,46 +1,42 @@
 <div class="bsp-search-result">
-	<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/components/bsp-search-results/result-search-bar.json" }'></div>
+	{{#with search-bar}}
+		{{render this}}
+	{{/with}}
 
 	{{#if show}}
-		<div class="bsp-component">
-			{{#with show}}
-				{{render this}}
-			{{/with}}
-			{{#each articles}}
-				{{render this}}
-			{{/each}}
-		</div>
+		{{#with show}}
+			{{render this}}
+		{{/with}}
+		{{#with articles}}
+			{{render this}}
+		{{/with}}
 	{{/if}}
 
 	{{#if image}}
-		<div class="bsp-component">
-			{{#with image}}
-				{{render this}}
-			{{/with}}
-			{{#each articles}}
-				{{render this}}
-			{{/each}}
-		</div>
+		{{#with image}}
+			{{render this}}
+		{{/with}}
+		{{#with articles}}
+			{{render this}}
+		{{/with}}
 	{{/if}}
 
 	{{#if people}}
-		<div class="bsp-component">
-			{{#with people}}
-				{{render this}}
-			{{/with}}
-			{{#each articles}}
-				{{render this}}
-			{{/each}}
-		</div>
+		{{#with people}}
+			{{render this}}
+		{{/with}}
+		{{#with articles}}
+			{{render this}}
+		{{/with}}
 	{{/if}}
 
 	{{#if theater}}
-		<div class="bsp-component">
-			{{#with theater}}
-				{{render this}}
-			{{/with}}
-		</div>
+		{{#with theater}}
+			{{render this}}
+		{{/with}}
 	{{/if}}
 
-	<div data-bsp-template data-bsp-template-options='{ "dataUrl": "/components/bsp-search-results/result-paginate.json" }'></div>	
+	{{#with paginate}}
+		{{render this}}
+	{{/with}}
 </div>
