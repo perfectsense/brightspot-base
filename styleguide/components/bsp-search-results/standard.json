@@ -1,5 +1,5 @@
 {
-	"_template" : "components/bsp-search-result",
+    "_template" : "components/bsp-search-result",
 
     "show" : {
         "_dataUrl" : "/components/bsp-search-results/1-item-1-image-large.json"
@@ -22,7 +22,7 @@
     },
 
     "paginate" : {
-        "_dataUrl" : "/common/bsp-site-paginate.json"
+        "_dataUrl" : "/common/bsp-paginate.json"
     },
 
     "articles" : {

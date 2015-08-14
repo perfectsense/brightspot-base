@@ -1,5 +1,5 @@
 {
-	"_template" : "components/bsp-site-paginate",
+	"_template" : "components/bsp-paginate",
 
 	"navigate" : {
 

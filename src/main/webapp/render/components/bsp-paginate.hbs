@@ -1,22 +1,22 @@
 <div class="bsp-component">
-	<div class="bsp-site-paginate">
+	<div class="bsp-paginate">
 		<ul>
 			{{#with navigate}}
-				<li class="bsp-site-paginate-navigate">
+				<li class="bsp-paginate-navigate">
 					{{#with previous}}
 						{{> (lookup . '_template') }}
 					{{/with}}
 				</li>
 			{{/with}}
 			{{#each listItems}}
-				<li class="bsp-site-paginate-page">
+				<li class="bsp-paginate-page">
 				{{#with link}}
 					{{> (lookup . '_template') }}
 				{{/with}}
 				</li>
 			{{/each}}
 			{{#with navigate}}
-				<li class="bsp-site-paginate-navigate">
+				<li class="bsp-paginate-navigate">
 					{{#with next}}
 						{{> (lookup . '_template') }}
 					{{/with}}
