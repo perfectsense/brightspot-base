@@ -5,19 +5,19 @@
 		<div class="bsp-search-results-bar">
 				{{#with search-bar}}
 				<div class="bsp-search-results-search-bar">
-					{{> (lookup . '_template') }}
+					{{ render this }}
 				</div>
 				{{/with}}
 					
 				{{#with select}}
 				<div class="bsp-search-results-select">
-					{{> (lookup . '_template') }}
+					{{ render this }}
 				</div>
 				{{/with}}
 					
 				{{#with search-button}}
 				<div class="bsp-search-results-button">
-					{{> (lookup . '_template') }}
+					{{ render this }}
 				</div>
 				
 				{{/with}}
@@ -29,7 +29,7 @@
 			<ul>
 				{{#each listItems}}
 					{{#with link}}
-						<li>{{> (lookup . '_template') }}</li>
+						<li>{{ render this }}</li>
 					{{/with}}
 				{{/each}}
 			</ul>
