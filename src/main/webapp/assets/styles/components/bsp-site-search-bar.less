@@ -1,0 +1,80 @@
+
+.bsp-search-results-appearence (@value) {
+	appearence: @value;
+	-moz-appearence: @value;
+	-webkit-appearence: @value;
+}
+
+.bsp-search-results-border-radius (@value) {
+	border-radius: @value;
+	-moz-border-radius: @value;
+	-webkit-border-radius: @value;
+}
+
+.bsp-search-results {
+	ul > li {
+		display: inline-block;
+	}
+
+	.bsp-form-input {
+		margin: 0;
+	}
+}
+
+.bsp-search-results-heading {
+	&:extend(.ts-header-2);
+}
+
+.bsp-search-results-bar {
+	width: 100%;
+	white-space: nowrap;
+
+	.bsp-search-results-search-bar, .bsp-search-results-button, .bsp-search-results-select {
+		display: inline-block;
+	}
+
+	input {
+		border: none;
+	}
+
+	input[type='text'] {
+		width: 100%;
+		padding: @space;
+		background-color: #ddd;
+	}
+
+	input[type='submit'] {
+		width: 80px;
+		background-color: #ddd;
+		padding: @space 0;
+	}
+
+	select {
+		border: none;
+ 		background-color: @brand-primary;
+ 		.bsp-search-results-appearence(none);
+ 		.bsp-search-results-border-radius(0px);
+	}
+
+	.bsp-form-message {
+         width: 0px;
+         padding: 0;
+    }
+}
+
+.bsp-search-results-search-bar {
+	width: calc(~"100% - 225px");
+}		
+
+.bsp-search-results-button {
+	position: relative;
+	left : -8px;
+}
+
+.bsp-search-results-select > .bsp-form-select {
+	padding: @space;
+	left : -4px;
+	width: 145px;
+	background-color: @brand-primary;
+	position: relative;
+}

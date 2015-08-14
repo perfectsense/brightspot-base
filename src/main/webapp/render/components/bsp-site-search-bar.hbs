@@ -1,0 +1,39 @@
+<div class="bsp-component">
+	<div class="bsp-search-results">
+		<h1 class="bsp-search-results-heading">{{heading}}</h1>
+
+		<div class="bsp-search-results-bar">
+				{{#with search-bar}}
+				<div class="bsp-search-results-search-bar">
+					{{> (lookup . '_template') }}
+				</div>
+				{{/with}}
+					
+				{{#with select}}
+				<div class="bsp-search-results-select">
+					{{> (lookup . '_template') }}
+				</div>
+				{{/with}}
+					
+				{{#with search-button}}
+				<div class="bsp-search-results-button">
+					{{> (lookup . '_template') }}
+				</div>
+				
+				{{/with}}
+		</div>
+
+	
+		<div class="bsp-search-results-list">
+			{{#with checkbox}}
+			<ul>
+				{{#each listItems}}
+					{{#with link}}
+						<li>{{> (lookup . '_template') }}</li>
+					{{/with}}
+				{{/each}}
+			</ul>
+			{{/with}}
+		</div>
+	</div>
+</div>

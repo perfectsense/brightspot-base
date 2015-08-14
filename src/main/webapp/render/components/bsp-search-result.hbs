@@ -1,0 +1,42 @@
+<div class="bsp-search-result">
+	{{#with search-bar}}
+		{{render this}}
+	{{/with}}
+
+	{{#if show}}
+		{{#with show}}
+			{{render this}}
+		{{/with}}
+		{{#with articles}}
+			{{render this}}
+		{{/with}}
+	{{/if}}
+
+	{{#if image}}
+		{{#with image}}
+			{{render this}}
+		{{/with}}
+		{{#with articles}}
+			{{render this}}
+		{{/with}}
+	{{/if}}
+
+	{{#if people}}
+		{{#with people}}
+			{{render this}}
+		{{/with}}
+		{{#with articles}}
+			{{render this}}
+		{{/with}}
+	{{/if}}
+
+	{{#if theater}}
+		{{#with theater}}
+			{{render this}}
+		{{/with}}
+	{{/if}}
+
+	{{#with paginate}}
+		{{render this}}
+	{{/with}}
+</div>

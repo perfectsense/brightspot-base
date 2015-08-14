@@ -1,0 +1,63 @@
+{
+	"_template" : "components/bsp-list-promo",
+
+	"options" : {
+		"horizontalSplit" : "fourth"
+	},
+
+	"heading" : "Theatre",
+
+	"listItems" : [
+		{ 
+			"imgAlign" : "top",
+
+			"image" : {
+				"_dataUrl" : "/common/link-image-125x200.json"	
+			},
+
+			"title" : {
+				"_dataUrl" : "/common/link-text-title.json"
+			}
+
+		},
+		{ 
+			"imgAlign" : "top",
+
+			"image" : {
+				"_dataUrl" : "/common/link-image-125x200.json"	
+			},
+
+			"title" : {
+				"_dataUrl" : "/common/link-text-title.json"
+			}
+
+		},
+		{ 
+			"imgAlign" : "top",
+
+			"image" : {
+				"_dataUrl" : "/common/link-image-125x200.json"	
+			},
+
+			"title" : {
+				"_dataUrl" : "/common/link-text-title.json"
+			}
+
+		},
+		{ 
+			"imgAlign" : "top",
+
+			"image" : {
+				"_dataUrl" : "/common/link-image-125x200.json"	
+			},
+
+			"title" : {
+				"_dataUrl" : "/common/link-text-title.json"
+			}
+
+		}
+	],
+
+	"ctaText" : "View More",
+	"ctaLink" : "#"
+}

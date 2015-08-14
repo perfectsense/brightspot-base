@@ -1,0 +1,75 @@
+{
+	"_template" : "components/bsp-site-paginate",
+
+	"navigate" : {
+
+		"previous" : {
+
+			"_template" : "common/link",
+
+			"attributes" : {
+				"href"  : "link",
+				"title" : "Previous"
+			},
+
+			"text" : "‹ Previous"
+		},
+
+		"next" : {
+
+			"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "link",
+					"title" : "Next"
+			},
+
+			"text" : "Next ›"
+		}
+
+	},
+
+	"listItems" : [{ 
+
+			"link" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "link",
+					"title" : "1"
+				},
+
+				"text" : "1"
+			}
+		},
+
+		{ 
+			"link" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "link",
+					"title" : "Link Title"
+				},
+
+				"text" : "2"
+			}
+		},
+		
+		{ 
+			"link" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "link",
+					"title" : "Link Title"
+				},
+
+				"text" : "3"
+
+		}
+	}]	
+}
