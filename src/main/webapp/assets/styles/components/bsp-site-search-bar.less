@@ -5,12 +5,6 @@
 	-webkit-appearence: @value;
 }
 
-.bsp-search-results-border-radius (@value) {
-	border-radius: @value;
-	-moz-border-radius: @value;
-	-webkit-border-radius: @value;
-}
-
 .bsp-search-results {
 	ul > li {
 		display: inline-block;
@@ -53,7 +47,10 @@
 		border: none;
  		background-color: @brand-primary;
  		.bsp-search-results-appearence(none);
- 		.bsp-search-results-border-radius(0px);
+ 		.border-top-radius(0px);
+ 		.border-right-radius(0px);
+ 		.border-bottom-radius(0px);
+ 		.border-left-radius(0px);
 	}
 
 	.bsp-form-message {
