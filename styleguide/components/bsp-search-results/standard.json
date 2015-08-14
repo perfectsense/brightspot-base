@@ -22,7 +22,7 @@
     },
 
     "paginate" : {
-        "_dataUrl" : "/common/bsp-paginate.json"
+        "_dataUrl" : "/components/bsp-paginate/bsp-paginate.json"
     },
 
     "articles" : {

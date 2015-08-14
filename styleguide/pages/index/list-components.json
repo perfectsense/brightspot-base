@@ -117,6 +117,17 @@
 				"_template" : "common/link",
 				
 				"attributes" : {
+					"href"  : "/components/bsp-paginate/",
+					"title" : "BSP Paginate"
+				},
+				"text"  : "BSP Paginate"
+			}
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
 					"href"  : "/components/bsp-search-results/",
 					"title" : "BSP Search Results"
 				},
