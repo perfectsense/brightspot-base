@@ -1,5 +1,5 @@
 {
-	"_template" : "layouts/two-col-main-left-fixed-right",
+	"_template" : "layouts/one-col",
 
 	"main" : {
 		"components" : [
@@ -7,13 +7,6 @@
 				"_dataUrl" : "/components/bsp-search-results/standard.json"
 			}
 		]
-	},
-		
-	"aside" : {
-		"components" : [
-			{
-				"_dataUrl" : "/common/link-image-promo-300x600.json"
-			}
-		]
 	}
+
 }
