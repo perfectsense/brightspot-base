@@ -159,11 +159,10 @@ body.bsp-column-fixed-toggle-in {
 		display: block;
 		left: auto;
 		margin-top: @site-top-and-bottom-space;
-		top: (@header-height * 2) + @header-tophat-height;
-		width: 240px; // custom width for our site grid
+		top: @header-tophat-height + @header-height-before-scroll;
 
 		.bsp-scrolling &, .bsp-fullscreen & {
-			top: @header-height + @header-tophat-height;
+			top: @header-tophat-height + @header-height;
 		}
 	}
 
