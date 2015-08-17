@@ -4,7 +4,7 @@
 /// bsp-site is just around the site other than the header and footer
 .bsp-site {
 	background: @white;
-	padding-top: @site-top-and-bottom-space;
+	padding: @site-top-and-bottom-space 0;
 	position: relative;
 }
 
@@ -160,9 +160,11 @@ body.bsp-column-fixed-toggle-in {
 		left: auto;
 		margin-top: @site-top-and-bottom-space;
 		top: @header-tophat-height + @header-height-before-scroll;
+		// hardcoded width, as it needs to be as it's fixed positioning
+		width: 240px;
 
 		.bsp-scrolling &, .bsp-fullscreen & {
-			top: @header-tophat-height + @header-height;
+			top: @header-tophat-height + @header-height !important;
 		}
 	}
 
