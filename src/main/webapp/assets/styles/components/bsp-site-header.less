@@ -149,6 +149,10 @@
     a {
         height: @header-height;
         line-height: @header-height;
+
+        .icon {
+            line-height: @header-height;
+        }
     }
 
     &.toggle-in {
@@ -212,6 +216,10 @@
     a {
         height: @header-height;
         line-height: @header-height;
+
+        .icon {
+            line-height: @header-height;
+        }
     }
 
     .toggle-trigger.toggle-in {
@@ -399,6 +407,7 @@
             left: @header-logo-left-placement-before-scroll; 
 
             img {
+                .transition(all .3s linear);
                 max-width: @header-logo-width;
             }         
 
