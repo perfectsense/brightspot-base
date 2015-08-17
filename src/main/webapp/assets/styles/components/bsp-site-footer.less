@@ -1,5 +1,5 @@
 .bsp-site-footer {
-    background: @brand-secondary;
+    background: @footer-background;
     padding: @space-double 0;
     min-height: 25px;
     color: @white;
@@ -7,6 +7,7 @@
     .bsp-component-title {
         &:extend(.ts-header-2);
 
+        background: none;
         color: @white;
         padding: 0;
     }
@@ -14,12 +15,19 @@
     .bsp-list-heading {
         &:extend(.ts-header-2);
 
-        color: @brand-primary;
+        color: @brand-secondary;
     }
 
     .bsp-share-links {
         margin: 0 0 @space 0;
 
+        a {
+            background: @brand-secondary;
+            color: @white;
+        }
+    }
+
+    .bsp-unstyled-list {
         a {
             color: @white;
         }
@@ -47,7 +55,7 @@
             }
 
             input[type=submit] {
-                background-color: @brand-primary;
+                background-color: @brand-secondary;
                 text-transform: uppercase;
                 position: relative;
                 left: -4px;
