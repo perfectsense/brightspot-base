@@ -17,6 +17,14 @@
 						{{/with}}
 
 						<div class="bsp-list-promo-text">
+							{{#if tags}}
+								<ul class="bsp-list-promo-tags">
+									{{#each tags}}
+										<li>{{render this}}</li>
+									{{/each}}
+								</ul>
+							{{/if}}
+
 							{{#with title}}
 								<div class="bsp-list-promo-title">{{render this}}</div>
 							{{/with}}
