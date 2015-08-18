@@ -9,7 +9,7 @@
 	 			<nav class="bsp-site-menu-simple toggle-item">
 					<ul class="bsp-site-menu-items-simple">
 						{{#each this}}
-							<li class="site-item-simple">{{> common/link }}</li>
+							<li class="site-item-simple">{{render this }}</li>
 						{{/each}}
 					</ul>
 				</nav>
@@ -18,7 +18,7 @@
 
 		<div class="bsp-site-logo-simple">
 			{{#with siteLogo.link}}
-				{{> common/link imgClass="bsp-site-logo-img"}}
+				{{render this imgClass="bsp-site-logo-img"}}
 			{{/with}}
 		</div>
 
@@ -26,7 +26,7 @@
  			<nav class="bsp-nav-menu-simple">
 				<ul class="bsp-nav-menu-items-simple">
 					{{#each this}}
-						<li class="nav-item-simple">{{> common/link }}</li>
+						<li class="nav-item-simple">{{render this }}</li>
 					{{/each}}
 				</ul>
 			</nav>
