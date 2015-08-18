@@ -11,6 +11,12 @@
 
 					{{render this}}
 
+                    {{#with cta}}
+                        <div class="bsp-component-cta {{#if options.location}}cta-{{options.location}}{{/if}}">
+                            {{render content}}
+                        </div>  
+                    {{/with}}
+
 				</div>
 			{{/each}}
 		</div>
