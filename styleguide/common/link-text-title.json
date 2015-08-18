@@ -1,0 +1,10 @@
+{
+	"_template" : "common/link",
+
+	"attributes" : {
+		"href"  : "link",
+		"title" : "Link Title"
+	},
+
+	"text" : "Bresaola corned beef bacon"
+}

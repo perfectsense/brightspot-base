@@ -1,29 +1,37 @@
 .bsp-site-footer {
-    background: @brand-secondary;
-    padding: @space-double;
+    background: @footer-background;
+    padding: @space-double 0;
     min-height: 25px;
     color: @white;
 
-	.bsp-component-title {
+    .bsp-component-title {
         &:extend(.ts-header-2);
 
+        background: none;
         color: @white;
         padding: 0;
-	}
+    }
 
     .bsp-list-heading {
         &:extend(.ts-header-2);
 
-        color: @brand-primary;
+        color: @brand-secondary;
     }
 
- 	.bsp-share-links {
+    .bsp-share-links {
         margin: 0 0 @space 0;
 
- 		a {
- 			color: @white;
- 		}
- 	}
+        a {
+            background: @brand-secondary;
+            color: @brand-primary;
+        }
+    }
+
+    .bsp-unstyled-list {
+        a {
+            color: @white;
+        }
+    }
 
     form {
         .input-container { 
@@ -47,7 +55,8 @@
             }
 
             input[type=submit] {
-                background-color: @brand-primary;
+                background-color: @brand-secondary;
+                color: @brand-primary;
                 text-transform: uppercase;
                 position: relative;
                 left: -4px;

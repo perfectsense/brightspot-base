@@ -1,5 +1,6 @@
 {
-	"_template" : "layouts/two-col-main-left-aside-right",
+	"_templateEXAMPLE" : "layouts/two-col-main-left-aside-right",
+	"_template" : "layouts/one-col",
 
 	"main" : {
 		"components" : [
@@ -9,7 +10,7 @@
 		]
 	},
 		
-	"aside" : {
+	"asideEXAMPLE" : {
 		"components" : [
 			{
 				"_template": "common/text",

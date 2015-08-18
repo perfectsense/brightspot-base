@@ -1,0 +1,213 @@
+{
+	"_template" : "components/bsp-site-search-bar",
+	"heading" : "We found 128 results for \"Lion\"",
+
+ 	"search-bar" : {
+
+		"_template" : "components/bsp-form-input",
+
+		"showMessagesAbove": true,
+
+		"attributes": {
+			"autocomplete": "off",
+			"id": "textinput1",
+			"placeholder": "Text input placeholder",
+			"required": true,
+			"type": "text"
+		},
+
+		"errors": [
+			{ "valueMissing": "Please fill in the text input" }
+		]
+
+	},
+
+	"select" : {
+
+		"_template" : "components/bsp-form-select",
+		"showMessagesAbove": true,
+
+		"attributes": {
+			"id": "select1",
+			"required": true
+		},
+
+		"errors": [
+			{ "valueMissing": "Please select an option" }
+		],
+
+		"label": {
+			"attributes": {
+				"for": "select1"
+			},
+			"text": "Sort By: "
+		},
+
+		"options": [
+			{
+				"attributes": {
+					"value": "0"
+				},
+				"text": "Relevance"
+			},
+			{
+				"attributes": {
+					"value": 1
+				},
+				"text": "Popularity"
+			},
+			{
+				"attributes": {
+					"value": 2
+				},
+				"text": "Rating"
+			}
+		]
+	},
+
+	"search-button" : {
+
+		"_template" : "components/bsp-form-input",
+
+		"attributes": {
+			"type": "submit",
+			"value": "Search"
+		}
+
+	},
+	
+	"checkbox": {
+
+		"listItems" : [
+		{ 
+			"link": {
+
+				"_template" : "components/bsp-form-input",
+				"showMessagesAbove": false,
+				"labelAfterInput": true,
+
+				"attributes": {
+					"id": "checkbox1",
+					"required": true,
+					"type": "checkbox"
+				},
+
+				"label": {
+					"attributes": {
+						"for": "checkbox1"
+					},
+					"text": "All Types"
+				}
+			}
+		},
+		{ 
+			"link": {
+
+				"_template" : "components/bsp-form-input",
+				"showMessagesAbove": false,
+				"labelAfterInput": true,
+
+				"attributes": {
+					"id": "checkbox2",
+					"required": true,
+					"type": "checkbox"
+				},
+
+				"label": {
+					"attributes": {
+						"for": "checkbox2"
+					},
+					"text": "Articles"
+				}
+			}
+		},
+		{ 
+			"link": {
+
+				"_template" : "components/bsp-form-input",
+				"showMessagesAbove": false,
+				"labelAfterInput": true,
+
+				"attributes": {
+					"id": "checkbox3",
+					"required": true,
+					"type": "checkbox"
+				},
+
+				"label": {
+					"attributes": {
+						"for": "checkbox3"
+					},
+					"text": "Videos"
+				}
+
+			}
+		},
+		{ 
+			"link": {
+
+				"_template" : "components/bsp-form-input",
+				"showMessagesAbove": false,
+				"labelAfterInput": true,
+
+				"attributes": {
+					"id": "checkbox4",
+					"required": true,
+					"type": "checkbox"
+				},
+
+				"label": {
+
+					"attributes": {
+						"for": "checkbox4"
+					},
+					"text": "Photo Galleries"
+				}
+
+			}
+		},
+		{ 
+			"link": {
+
+				"_template" : "components/bsp-form-input",
+				"showMessagesAbove": false,
+				"labelAfterInput": true,
+
+				"attributes": {
+					"id": "checkbox5",
+					"required": true,
+					"type": "checkbox"
+				},
+
+				"label": {
+
+					"attributes": {
+						"for": "checkbox5"
+					},
+					"text": "Shows"
+				}
+			}
+		},
+		{ 
+			"link": {
+
+				"_template" : "components/bsp-form-input",
+				"showMessagesAbove": false,
+				"labelAfterInput": true,
+
+				"attributes": {
+					"id": "checkbox6",
+					"required": true,
+					"type": "checkbox"
+				},
+
+				"label": {
+					"attributes": {
+						"for": "checkbox6"
+					},
+					"text": "People"
+				}
+			}
+		}]
+	}
+}

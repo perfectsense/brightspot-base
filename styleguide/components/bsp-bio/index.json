@@ -1,5 +1,5 @@
 {
-	"_template" : "layouts/two-col-main-left-fixed-right",
+	"_template" : "layouts/one-col",
 
 	"main" : {
 		"components" : [
@@ -13,13 +13,6 @@
 				"_dataUrl" : "/components/bsp-bio/theater.json"
 			}
 		]
-	},
-		
-	"aside" : {
-		"components" : [
-			{
-				"_dataUrl" : "/components/bsp-list-promo/5-items.json"
-			}
-		]
 	}
+	
 }

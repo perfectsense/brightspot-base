@@ -5,11 +5,12 @@
 	margin-right: -125px;
 }
 
-.bsp-scrolling .bsp-styleguide-header .bsp-site-logo {
+.bsp-scrolling .bsp-styleguide-header .bsp-site-logo, .bsp-fullscreen .bsp-styleguide-header .bsp-site-logo {
 	left: 2rem;	
 }
 
-.bsp-scrolling .bsp-styleguide-header .bsp-extra-menu {
+.bsp-scrolling .bsp-styleguide-header .bsp-extra-menu, .bsp-fullscreen .bsp-styleguide-header .bsp-extra-menu {
+	margin: 0;
 	right: 2rem;	
 }
 

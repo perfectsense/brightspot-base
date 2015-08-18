@@ -12,7 +12,9 @@
 	"aside" : {
 		"components" : [
 			{
-				"_dataUrl" : "/components/bsp-list-promo/5-items.json"
+				"_template" : "common/text",
+
+            	"text": "<p>Right Rail Modules can go here</p>"
 			}
 		]
 	}

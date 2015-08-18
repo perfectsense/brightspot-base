@@ -128,6 +128,28 @@
 				"_template" : "common/link",
 				
 				"attributes" : {
+					"href"  : "/components/bsp-paginate/",
+					"title" : "BSP Paginate"
+				},
+				"text"  : "BSP Paginate"
+			}
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
+					"href"  : "/components/bsp-search-results/",
+					"title" : "BSP Search Results"
+				},
+				"text"  : "BSP Search Results"
+			}
+		},
+		{
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
 					"href"  : "/components/bsp-site-header/",
 					"title" : "BSP Site Header"
 				},

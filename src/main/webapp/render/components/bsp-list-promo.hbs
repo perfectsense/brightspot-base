@@ -1,4 +1,4 @@
-<div class="bsp-component {{#if options.modifierClass}}{{options.modifierClass}}{{/if}}">
+<div class="bsp-component bsp-list-promo-component{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
 	{{#if heading}}
 		<div class="bsp-component-title">{{heading}}</div>
 	{{/if}}
@@ -20,6 +20,10 @@
 							{{#with title}}
 								<div class="bsp-list-promo-title">{{render this}}</div>
 							{{/with}}
+
+							{{#if subtitle}}
+								<div class="bsp-list-promo-subtitle">{{{subtitle}}}</div>
+							{{/if}}
 							
 							{{#if description}}
 								<div class="bsp-list-promo-desc">{{{description}}}</div>

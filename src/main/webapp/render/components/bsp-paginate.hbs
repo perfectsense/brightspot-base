@@ -1,0 +1,27 @@
+<div class="bsp-component">
+	<div class="bsp-paginate">
+		<ul>
+			{{#with navigate}}
+				<li class="bsp-paginate-navigate">
+					{{#with previous}}
+						{{ render this }}
+					{{/with}}
+				</li>
+			{{/with}}
+			{{#each listItems}}
+				<li class="bsp-paginate-page">
+				{{#with link}}
+					{{ render this }}
+				{{/with}}
+				</li>
+			{{/each}}
+			{{#with navigate}}
+				<li class="bsp-paginate-navigate">
+					{{#with next}}
+						{{ render this }}
+					{{/with}}
+				</li>
+			{{/with}}
+		</ul>
+	</div>
+</div>
