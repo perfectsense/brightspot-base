@@ -2,7 +2,8 @@
 	"_template" : "components/bsp-list-promo",
 
 	"options" : {
-		"modifierClass" : "hard-item-heights"
+		"modifierClass" : "hard-item-heights",
+		"orderedList"	: true
 	},
 
 	"heading" : "5 items with hardcoded heights",
