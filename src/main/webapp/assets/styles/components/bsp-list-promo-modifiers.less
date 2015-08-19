@@ -18,8 +18,13 @@
 	.list-promo-image-width-background(@width: 50%, @bg-color: @brand-secondary, @promo-text-color: @white);
 }
 
+// also putting 25 and 33 image/text combos in base. This should be enough for most use cases
+// if you need further percentages, create them for your own project vs putting them into base for performance reasons
 .image-25-width {
 	.bsp-list-promo-image-size(@size: 25%);
+}
+.image-33-width {
+	.bsp-list-promo-image-size(@size: 33%);
 }
 
 // This creates the concept of hardcoded heights

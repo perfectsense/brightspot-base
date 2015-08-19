@@ -8,16 +8,16 @@
 
 	<div class="bsp-row">
 
-		<div class="bsp-column-main">
-			{{#with main}}
+		<div class="bsp-column-aside">
+			{{#with aside}}
 				{{#each components}}
 					{{render this}}
 				{{/each}}
 			{{/with}}
 		</div>
 
-		<div class="bsp-column-aside">
-			{{#with aside}}
+		<div class="bsp-column-main">
+			{{#with main}}
 				{{#each components}}
 					{{render this}}
 				{{/each}}

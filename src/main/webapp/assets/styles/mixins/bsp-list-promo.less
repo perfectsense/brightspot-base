@@ -29,7 +29,12 @@
 		width: @size;
 	}
 
+	.bsp-list-promo-list {
+		margin-top: 0 !important; // overriding parent specificity
+	}
+
 	.bsp-list-promo-text {
+		margin-top: -@space;
 		width: (100%-@size);
 	}
 }

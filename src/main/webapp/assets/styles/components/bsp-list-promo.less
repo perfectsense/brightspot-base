@@ -21,7 +21,7 @@
 		margin-top: -@space;
 	}
 
-	li {
+	> li {
 		&:extend(.clearfix all);
 
 		border-top: @border-style-5;
@@ -112,6 +112,27 @@
 
 }
 
+// not extending our "bsp-tag-list" class as these are just text links and not actual "tag" looking things
+.bsp-list-promo-tags {
+	&:extend(.bsp-list-inline all);
+
+	font-size: @ts-neg-2;
+	margin-bottom: -@space;
+	margin-top: @space;
+	text-transform: uppercase;
+
+	li {
+		margin-right: @space;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	a {
+		color: @text-color;
+	}
+}
 
 .bsp-list-promo-title {
 	&:extend(.ts-1);
@@ -128,6 +149,11 @@
 	}
 }
 
+.bsp-list-promo-subtitle {
+	&:extend(.ts-neg-1);
+
+	margin: @space 0;
+}
 
 
 .bsp-list-promo-link {

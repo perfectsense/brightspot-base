@@ -18,6 +18,14 @@ body {
 // This will be our grid. We start out by creating our site container, which will determine the overall centered site width
 .bsp-container {
     .container();
+
+    // when we reuse our layout renderers to create nested layouts, we end up with stacked
+    // bsp-containers. This removes any styles from these, so we don't get doubled up margins, padding, etc
+    .bsp-container {
+    	width: 100%;
+    	margin: 0;
+    	padding: 0;
+    }
 }
 
 .bsp-row {
