@@ -2,7 +2,8 @@
 	"_template" : "components/bsp-gallery-module",
 
 	"options" : {
-		"carouselDots" : false
+		"carouselDots" : false,
+		"modifierClass" : "modifier-class"
 	},
 
 	"galleryTitle" : "5 slides, no dots, no thumbs",
