@@ -45,6 +45,35 @@
 		}
 	],
 
+	"socialLinks" : [
+
+		{
+			"icon" : "twitter",
+			"link" : {
+				"_dataUrl" : "/common/link-test-text.json"
+			}
+		},
+		{
+			"icon" : "facebook",
+			"link" : {
+				"_dataUrl" : "/common/link-test-text.json"
+			}
+		},
+		{
+			"icon" : "instagram",
+			"link" : {
+				"_dataUrl" : "/common/link-test-text.json"
+			}
+		},
+		{
+			"icon" : "tumblr",
+			"link" : {
+				"_dataUrl" : "/common/link-test-text.json"
+			}
+		}
+
+	],
+
 	"extraImages" : [
 		{
 			"_template" : "common/image",

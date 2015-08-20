@@ -9,6 +9,7 @@
 
 .bsp-bio-content {
 	float: right;
+	margin-botom: @space;
 	padding-left: @space-double;
 	width: 75%;
 }
@@ -97,3 +98,37 @@
 	}
 }
 
+.bsp-bio-social-links {
+	
+	clear: both;
+	padding-top: @space-double;
+
+	ul {
+		&:extend(.bsp-list-inline all);
+
+		border-top: @border-style-5;
+		display: flex;
+    	justify-content: space-between;
+		padding: @space-and-half 0;
+
+		li {
+			padding-left: @space-double;
+
+			&:first-of-type {
+				padding: 0;
+			}
+		}
+	}
+}
+
+.bsp-bio-social-link {
+	color: @text-color;
+
+	i {
+		font-size: @ts-2;
+		margin-right: @space;
+		position: relative;
+		top: 3px; // perfect centering
+	}
+
+}
