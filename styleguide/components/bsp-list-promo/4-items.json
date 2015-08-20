@@ -1,5 +1,9 @@
 {
 	"_template" : "components/bsp-list-promo",
+
+	"options" : {
+		"orderedList"	: true
+	},
 	
 	"heading" : "4 items with dynamic heights",
 

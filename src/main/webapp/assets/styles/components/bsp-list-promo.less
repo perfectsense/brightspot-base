@@ -64,6 +64,29 @@
 	
 }
 
+// when the list is ordered, we want fancy stylable numbering added
+ol.bsp-list-promo-list {
+	counter-reset:li;
+
+	> li {
+		&:before {
+			content:counter(li); 
+    		counter-increment:li;   		
+    		position: absolute;
+    		padding-left: @space;
+    		top: @space;
+		}
+
+		&:first-of-type:before {
+			top: 0;
+		}
+
+		.bsp-list-promo-text {
+			padding-left: @space-triple;
+		}
+	}
+}
+
 
 
 .bsp-list-promo-image {

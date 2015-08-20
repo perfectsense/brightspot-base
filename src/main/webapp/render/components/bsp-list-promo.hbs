@@ -6,7 +6,7 @@
 	<div class="bsp-component-content">
 
 		<div class="bsp-list-promo">
-			<ul class="bsp-list-promo-list {{#if options.horizontalSplit}}bsp-row{{/if}}">
+			<{{#if options.orderedList}}ol{{else}}ul{{/if}} class="bsp-list-promo-list {{#if options.horizontalSplit}}bsp-row{{/if}}">
 				{{#each listItems}}
 					<li class="{{#if ../options.horizontalSplit}}bsp-column-{{/if}}{{../options.horizontalSplit}} {{#if imgAlign}}image-align-{{/if}}{{imgAlign}}">
 
@@ -43,7 +43,7 @@
 						</div>
 					</li>
 				{{/each}}
-			</ul>
+			</{{#if options.orderedList}}ol{{else}}ul{{/if}} >
 		</div>
 
 	</div>
