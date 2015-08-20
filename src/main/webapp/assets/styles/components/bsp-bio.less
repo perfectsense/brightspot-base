@@ -106,10 +106,12 @@
 	ul {
 		&:extend(.bsp-list-inline all);
 
+		border-bottom: @border-style-5;
 		border-top: @border-style-5;
 		display: flex;
     	justify-content: space-between;
-		padding: @space-and-half 0;
+    	margin: 0;
+		padding: @space-and-half @space @space-double;
 
 		li {
 			padding-left: @space-double;
