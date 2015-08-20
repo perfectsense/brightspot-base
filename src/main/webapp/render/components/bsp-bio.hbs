@@ -1,60 +1,77 @@
-<div class="bsp-component">
-	<div class="bsp-bio">
-		<div class="bsp-bio-image">
-			{{#with image}}
-				{{> common/image }}
-			{{/with}}
-		</div>
-		<div class="bsp-bio-content">
-			<h1 class="bsp-bio-title">{{title}}</h1>
+<div class="bsp-component bsp-bio-component">
 
-			{{#if subtitles}}
-			<div class="bsp-bio-subtitle">
-				{{#each subtitles}}
-					<h5 class="bsp-bio-sub-text">{{> common/link }}</h5>
-				{{/each}}
+	<div class="bsp-component-content">
+		<div class="bsp-bio">
+
+			<div class="bsp-bio-image">
+				{{#with image}}
+					{{> common/image }}
+				{{/with}}
 			</div>
-			{{/if}}
 
-			<div class="bsp-bio-text">
-				{{{text}}}
-			</div>	
+			<div class="bsp-bio-content">
+				<h1 class="bsp-bio-title">{{title}}</h1>
 
-			{{#if primaryList}}
-			<div class="bsp-bio-lists">
-				{{!-- This is backwards on purpose so we can create a large primary list when there is no secondary --}}
-				{{#if secondaryList}}
-					<ul class="bsp-bio-secondary-list">
-						{{#each secondaryList}}
+				{{#if subtitles}}
+				<div class="bsp-bio-subtitle">
+					{{#each subtitles}}
+						<h5 class="bsp-bio-sub-text">{{> common/link }}</h5>
+					{{/each}}
+				</div>
+				{{/if}}
+
+				<div class="bsp-bio-text">
+					{{{text}}}
+				</div>	
+
+				{{#if primaryList}}
+				<div class="bsp-bio-lists">
+					{{!-- This is backwards on purpose so we can create a large primary list when there is no secondary --}}
+					{{#if secondaryList}}
+						<ul class="bsp-bio-secondary-list">
+							{{#each secondaryList}}
+								<li><span>{{heading}}:</span> {{text}}</li>
+							{{/each}}
+						</ul>
+					{{/if}}
+
+					<ul class="bsp-bio-primary-list">
+						{{#each primaryList}}
 							<li><span>{{heading}}:</span> {{text}}</li>
 						{{/each}}
 					</ul>
+				</div>
 				{{/if}}
 
-				<ul class="bsp-bio-primary-list">
-					{{#each primaryList}}
-						<li><span>{{heading}}:</span> {{text}}</li>
+				{{#if links}}
+				<ul class="bsp-bio-links">
+					{{#each links}}
+						<li>{{> common/link }}</li>
+					{{/each}}
+				</ul>
+				{{/if}}
+
+				{{#if extraImages}}
+				<ul class="bsp-bio-extra-images">
+					{{#each extraImages}}
+						<li>{{> common/image }}</li>
+					{{/each}}
+				</ul>
+				{{/if}}
+			</div>
+
+			{{#with socialLinks}}
+			<div class="bsp-bio-social-links">
+				<ul>
+					{{#each this}}
+						{{!-- no partial helper, as this is custom --}}
+						<li><a class="bsp-bio-social-link" {{#with link.attributes}}{{> common/attributes }}{{/with}}><i class="icon icon-{{icon}}"></i>{{link.text}}</a></li>
 					{{/each}}
 				</ul>
 			</div>
-			{{/if}}
-
-			{{#if links}}
-			<ul class="bsp-bio-links">
-				{{#each links}}
-					<li>{{> common/link }}</li>
-				{{/each}}
-			</ul>
-			{{/if}}
-
-			{{#if extraImages}}
-			<ul class="bsp-bio-extra-images">
-				{{#each extraImages}}
-					<li>{{> common/image }}</li>
-				{{/each}}
-			</ul>
-			{{/if}}
+			{{/with}}
 
 		</div>
 	</div>
+
 </div>
