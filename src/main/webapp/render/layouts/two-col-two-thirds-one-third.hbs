@@ -1,0 +1,28 @@
+<div class="bsp-container{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
+
+	{{#with aboveColumns}}
+		{{#each components}}
+			{{render this}}
+		{{/each}}
+	{{/with}}
+
+	<div class="bsp-row">
+
+		<div class="bsp-column-two-thirds">
+			{{#with first}}
+				{{#each components}}
+					{{render this}}
+				{{/each}}
+			{{/with}}
+		</div>
+
+		<div class="bsp-column-third">
+			{{#with second}}
+				{{#each components}}
+					{{render this}}
+				{{/each}}
+			{{/with}}
+		</div>
+		
+	</div>
+</div>

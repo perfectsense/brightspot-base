@@ -1,4 +1,4 @@
-<div class="bsp-component {{#if options.modifierClass}}{{options.modifierClass}}{{/if}}">
+<div class="bsp-component bsp-list-promo-component{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
 	{{#if heading}}
 		<div class="bsp-component-title">{{heading}}</div>
 	{{/if}}
@@ -6,39 +6,51 @@
 	<div class="bsp-component-content">
 
 		<div class="bsp-list-promo">
-			<ul class="bsp-list-promo-list {{#if options.horizontalSplit}}bsp-row{{/if}}">
+			<{{#if options.orderedList}}ol{{else}}ul{{/if}} class="bsp-list-promo-list {{#if options.horizontalSplit}}bsp-row{{/if}}">
 				{{#each listItems}}
 					<li class="{{#if ../options.horizontalSplit}}bsp-column-{{/if}}{{../options.horizontalSplit}} {{#if imgAlign}}image-align-{{/if}}{{imgAlign}}">
 
 						{{#with image}}
 							<div class="bsp-list-promo-image">
-								{{> (lookup . '_template') }}
+								{{render this}}
 							</div>
 						{{/with}}
 
 						<div class="bsp-list-promo-text">
+							{{#if tags}}
+								<ul class="bsp-list-promo-tags">
+									{{#each tags}}
+										<li>{{render this}}</li>
+									{{/each}}
+								</ul>
+							{{/if}}
+
 							{{#with title}}
-								<div class="bsp-list-promo-title">{{> (lookup . '_template') }}</div>
+								<div class="bsp-list-promo-title">{{render this}}</div>
 							{{/with}}
+
+							{{#if subtitle}}
+								<div class="bsp-list-promo-subtitle">{{{subtitle}}}</div>
+							{{/if}}
 							
 							{{#if description}}
 								<div class="bsp-list-promo-desc">{{{description}}}</div>
 							{{/if}}
 
 							{{#with link}}
-								<div class="bsp-list-promo-link">{{> (lookup . '_template') }}</div>
+								<div class="bsp-list-promo-link">{{render this}}</div>
 							{{/with}}
 						</div>
 					</li>
 				{{/each}}
-			</ul>
+			</{{#if options.orderedList}}ol{{else}}ul{{/if}} >
 		</div>
 
 	</div>
 
-	{{#if ctaText}}
-		<div class="bsp-component-cta">
-			<a href="{{ctaLink}}">{{ctaText}}</a>
+	{{#with cta}}
+		<div class="bsp-component-cta {{#if options.location}}cta-{{options.location}}{{/if}}">
+			{{render content}}
 		</div>	
-	{{/if}}	
+	{{/with}}
 </div>

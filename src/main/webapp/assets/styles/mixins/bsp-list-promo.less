@@ -6,8 +6,7 @@
 // this is at the end of the less file so we can provide cascading overrides without important tags
 .bsp-list-promo-hard-item-heights(@item-height: @hardcoded-item-height) {
 
-	.bsp-list-promo-list{
-		margin-top: -@space;
+	.bsp-list-promo-list {
 
 		.bsp-list-promo-text {
 			height: @item-height;
@@ -21,6 +20,17 @@
 		}
 	}
 
+	ol.bsp-list-promo-list {
+
+		> li {
+			&:before {
+				line-height: @item-height;
+				top: 0;
+			}
+		}
+	}
+
+
 }
 
 
@@ -30,7 +40,12 @@
 		width: @size;
 	}
 
+	.bsp-list-promo-list {
+		margin-top: 0 !important; // overriding parent specificity
+	}
+
 	.bsp-list-promo-text {
+		margin-top: -@space;
 		width: (100%-@size);
 	}
 }
@@ -48,7 +63,7 @@
 	.bsp-list-promo-text {
 		background: @bg-color;
 		color: @promo-text-color;
-		margin-top: 0;
+		padding-top: @space;
 		position: absolute;
 		height: 100%;
 	}

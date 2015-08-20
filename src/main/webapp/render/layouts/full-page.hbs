@@ -1,0 +1,7 @@
+<div{{#if options.modifierClass}} class="{{options.modifierClass}}"{{/if}}>
+	{{#with main}}
+		{{#each components}}
+			{{render this}}
+		{{/each}}
+	{{/with}}
+</div>

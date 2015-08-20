@@ -1,4 +1,4 @@
-<div class="bsp-component">
+<div class="bsp-component bsp-image-promo-component{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
 	{{#if heading}}
 		<div class="bsp-component-title">{{heading}}</div>
 	{{/if}}
@@ -18,12 +18,12 @@
 					<div class="bsp-image-promo-image">
 
 						{{#with image}}
-							{{> (lookup . '_template') }}
+							{{render this}}
 						{{/with}}
 
 						<ul class="bsp-image-promo-links">
 							{{#each promoLinks}}
-								<li>{{> (lookup . '_template') }}</li>
+								<li>{{render this}}</li>
 							{{/each}}
 						</ul>
 					</div>
@@ -40,9 +40,9 @@
 
 	</div>
 
-	{{#if ctaText}}
-		<div class="bsp-component-cta">
-			<a href="{{ctaLink}}">{{ctaText}}</a>
+	{{#with cta}}
+		<div class="bsp-component-cta {{#if options.location}}cta-{{options.location}}{{/if}}">
+			{{render content}}
 		</div>	
-	{{/if}}	
+	{{/with}}
 </div>

@@ -6,14 +6,14 @@
 	<div class="bsp-component-content">
 
 		<div class="bsp-table-wrapper">
-			<table class="bsp-table{{#with options}}{{> (lookup . '_template')}}{{/with}}">
+			<table class="bsp-table{{#with options}}{{render this}}{{/with}}">
 				{{#if headings}}
 					<thead>
 						{{#each headings}}
 							<th class="col-{{@key}}">
 								{{#if link.attributes}}
 								    {{#with link}}
-								        {{> (lookup . '_template') }}
+								        {{render this}}
 								    {{/with}}
 								{{/if}}
 								{{#if text}}
@@ -30,7 +30,7 @@
 								<td class="col-{{@key}}">
 									{{#if link.attributes}}
 									    {{#with link}}
-									        {{> (lookup . '_template') }}
+									        {{render this}}
 									    {{/with}}
 									{{/if}}
 									{{#if image}}
@@ -52,11 +52,11 @@
 
 	</div>
 
-	{{#if ctaText}}
-		<div class="bsp-component-cta">
-			<a href="{{ctaLink}}">{{ctaText}}</a>
+	{{#with cta}}
+		<div class="bsp-component-cta {{#if options.location}}cta-{{options.location}}{{/if}}">
+			{{render content}}
 		</div>	
-	{{/if}}	
+	{{/with}}
 
 </div>
 

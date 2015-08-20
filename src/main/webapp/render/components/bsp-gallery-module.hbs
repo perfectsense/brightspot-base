@@ -1,4 +1,4 @@
-<div class="bsp-component">
+<div class="bsp-component bsp-gallery-module{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
 	{{#if galleryTitle}}
 		<h3 class="bsp-component-title">{{galleryTitle}}</h1>
 	{{/if}}
@@ -9,7 +9,7 @@
 			{{#each gallerySlides}}
 				<div class="bsp-carousel-slide">
 
-					{{> (lookup . '_template') }}
+					{{render this}}
 
 				</div>
 			{{/each}}
@@ -17,9 +17,9 @@
 
 	</div>
 
-	{{#if ctaText}}
-		<div class="bsp-component-cta">
-			<a href="{{ctaLink}}">{{ctaText}}</a>
+	{{#with cta}}
+		<div class="bsp-component-cta {{#if options.location}}cta-{{options.location}}{{/if}}">
+			{{render content}}
 		</div>	
-	{{/if}}	
+	{{/with}}
 </div>

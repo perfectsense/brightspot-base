@@ -2,6 +2,7 @@
 
 .bsp-component {
 	padding-bottom: @bsp-component-bottom-padding;
+	position: relative;
 }
 
 .bsp-component-title {
@@ -27,6 +28,17 @@
 		text-align: center;
 	}
 	
+	&.cta-top-right {
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		a {
+			background: none;
+			color: @bsp-component-title-color;
+			padding-right: @space;
+		}
+	}
 }
 
 // if the content has hard item heights, there is no margin on the cta, it will screw up the hardcoded item heights

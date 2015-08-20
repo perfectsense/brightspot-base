@@ -1,5 +1,9 @@
 {
 	"_template" : "components/bsp-list-promo",
+
+	"options" : {
+		"orderedList"	: true
+	},
 	
 	"heading" : "4 items with dynamic heights",
 
@@ -62,6 +66,13 @@
 		}
 	],
 
-	"ctaText" : "Test CTA",
-	"ctaLink" : "#"
+	"cta" : {
+		"options" : {
+			"location" : "top-right"
+		},
+
+		"content" : {
+			"_dataUrl" : "/common/link-test-text.json"
+		}
+	}
 }

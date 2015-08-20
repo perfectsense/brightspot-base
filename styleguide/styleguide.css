@@ -1,0 +1,25 @@
+/* This should be proper CSS so we don't have to worry about compiling it.  These should be overrides, so they can be old school CSS */
+
+
+.bsp-styleguide-header .bsp-extra-menu {
+	margin-right: -125px;
+}
+
+.bsp-scrolling .bsp-styleguide-header .bsp-site-logo, .bsp-fullscreen .bsp-styleguide-header .bsp-site-logo {
+	left: 2rem;	
+}
+
+.bsp-scrolling .bsp-styleguide-header .bsp-extra-menu, .bsp-fullscreen .bsp-styleguide-header .bsp-extra-menu {
+	margin: 0;
+	right: 2rem;	
+}
+
+/* hiding search in the styleguide for now until hbs is fixed */
+.bsp-styleguide-header .bsp-site-search-trigger {
+	display: none;
+}
+
+.bsp-form-input-button-container {
+	padding-top: 2em;
+	text-align: center;
+}

@@ -113,6 +113,13 @@
 		}
 	],
 
-	"ctaText" : "CTA goes here",
-	"ctaLink" : "#"
+	"cta" : {
+		"options" : {
+			"location" : "top-right"
+		},
+
+		"content" : {
+			"_dataUrl" : "/common/link-test-text.json"
+		}
+	}
 }

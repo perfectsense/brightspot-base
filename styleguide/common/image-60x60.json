@@ -1,0 +1,7 @@
+{ 
+	"_template" : "common/image",
+	
+	"attributes" : {
+		"src" : "/assets/images/60x60.png"
+	}		
+}

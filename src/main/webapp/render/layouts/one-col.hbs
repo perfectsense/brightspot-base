@@ -1,10 +1,10 @@
-<div class="bsp-container">
+<div class="bsp-container{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
 	<div class="bsp-row">
 
 		<div class="bsp-column-full">
 			{{#with main}}
 				{{#each components}}
-					{{> (lookup . '_template') }}
+					{{render this}}
 				{{/each}}
 			{{/with}}
 		</div>

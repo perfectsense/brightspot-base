@@ -1,7 +1,7 @@
 {
-	"_template" : "layouts/two-col-main-half-aside-half",
+	"_template" : "layouts/two-col-half-half",
 
-	"main" : {
+	"first" : {
 		"components" : [
 			{
 				"_dataUrl": "/components/bsp-form-input/input-checkbox.json"
@@ -36,7 +36,7 @@
 		]
 	},
 		
-	"aside" : {
+	"second" : {
 		"components" : [
 			{
 				"_dataUrl": "/components/bsp-form-input/input-text.json"

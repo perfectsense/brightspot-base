@@ -52,6 +52,13 @@
 		}
 	],
 
-	"ctaText" : "Test CTA",
-	"ctaLink" : "#"
+	"cta" : {
+		"options" : {
+			"location" : "bottom"
+		},
+
+		"content" : {
+			"_dataUrl" : "/common/link-test-text.json"
+		}
+	}
 }

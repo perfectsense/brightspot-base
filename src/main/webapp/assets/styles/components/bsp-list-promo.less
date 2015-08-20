@@ -10,20 +10,26 @@
 	
 }
 
+// .bsp-list-promo-list {
+// 	margin-top: -@space;
+// }
 
 .bsp-list-promo-list {
 
-	li {
+	// if there is a title before the content, we want to scoot the default list (text) up with negative margin
+	.bsp-component-title+.bsp-component-content & {
+		margin-top: -@space;
+	}
+
+	> li {
 		&:extend(.clearfix all);
 
 		border-top: @border-style-5;
 		position: relative;
 
-		// first item has no border or padding, and default has no image, so it's scooted up with negative margin to the title
+		// first item has no border
 		&:first-child {
 			border-top: none;
-			margin-top: -@space;
-			padding-top: 0;
 		}
 
 		// if there is an image vs text, there is a space to set it apart from the item before it
@@ -33,7 +39,6 @@
 
 		// except when it's the first item, no extra space
 		&.image-align-overlay:first-child, &.image-align-top:first-child, &.image-align-left:first-child, &.image-align-right:first-child {
-			margin-top: 0;
 			padding-top: 0;
 		}
 
@@ -57,6 +62,29 @@
 
 	}
 	
+}
+
+// when the list is ordered, we want fancy stylable numbering added
+ol.bsp-list-promo-list {
+	counter-reset:li;
+
+	> li {
+		&:before {
+			content:counter(li); 
+    		counter-increment:li;   		
+    		position: absolute;
+    		padding-left: @space;
+    		top: @space;
+		}
+
+		&:first-of-type:before {
+			top: 0;
+		}
+
+		.bsp-list-promo-text {
+			padding-left: @space-triple;
+		}
+	}
 }
 
 
@@ -98,17 +126,36 @@
 
 	// when the image is aligned left, we position the text to the right
 	.image-align-left & {
-		margin-top: -@space;
 		float: right;
 	}
 
 	.image-align-right & {
-		margin-top: -@space;
 		float: left;
 	}
 
 }
 
+// not extending our "bsp-tag-list" class as these are just text links and not actual "tag" looking things
+.bsp-list-promo-tags {
+	&:extend(.bsp-list-inline all);
+
+	font-size: @ts-neg-2;
+	margin-bottom: -@space;
+	margin-top: @space;
+	text-transform: uppercase;
+
+	li {
+		margin-right: @space;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	a {
+		color: @text-color;
+	}
+}
 
 .bsp-list-promo-title {
 	&:extend(.ts-1);
@@ -125,6 +172,11 @@
 	}
 }
 
+.bsp-list-promo-subtitle {
+	&:extend(.ts-neg-1);
+
+	margin: @space 0;
+}
 
 
 .bsp-list-promo-link {

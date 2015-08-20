@@ -1,8 +1,8 @@
-<div class="bsp-container">
+<div class="bsp-container{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
 
 	{{#with aboveColumns}}
 		{{#each components}}
-			{{> (lookup . '_template') }}
+			{{render this}}
 		{{/each}}
 	{{/with}}
 
@@ -11,7 +11,7 @@
 		<div class="bsp-column-main">
 			{{#with main}}
 				{{#each components}}
-					{{> (lookup . '_template') }}
+					{{render this}}
 				{{/each}}
 			{{/with}}
 		</div>
@@ -19,7 +19,7 @@
 		<div class="bsp-column-aside">
 			{{#with aside}}
 				{{#each components}}
-					{{> (lookup . '_template') }}
+					{{render this}}
 				{{/each}}
 			{{/with}}
 		</div>

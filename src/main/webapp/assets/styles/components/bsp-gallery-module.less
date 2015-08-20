@@ -1,5 +1,8 @@
 // TODO: This should be renamed to bsp-gallery-module
 
+.gallery-module.carousel-dots {
+	margin-bottom: 40px; // custom spacing to allow pretty spacing with dots
+}
 // these are styles for the hoziontal layout gallery which has 5 slides across
 .gallery-module-horizontal-slides {
 
@@ -25,16 +28,16 @@
 	}
 
 	.bsp-carousel-nav {
-		background-color: @brand-secondary;
+		background-color: @gallery-nav-background-color;
 
 		.bsp-carousel-slide {	
-			border-top: 5px solid @brand-secondary; // custom border for this one element
+			border-top: 5px solid @gallery-nav-background-color;
 			color: @white;
 			cursor: pointer;
 			text-align: center;		
 
 			&.current {
-				border-color: @brand-primary;
+				border-color: @gallery-current-slide-color;
 			}
 		}
 	}
@@ -43,7 +46,7 @@
 // this is use for mobile instead of the thumb nav, as xs and sm resolutions, we get rid of the thumb nav
 // as it's too small to make sense
 .bsp-carousel-slide-nav-text {
-	background-color: @brand-secondary;
+	background-color: @gallery-nav-background-color;
 	color: @white;
 	height: 40px;
 	padding: @space;

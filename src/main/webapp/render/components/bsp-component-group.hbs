@@ -1,3 +1,5 @@
-{{#each components}}
-	{{> (lookup . '_template') }}
-{{/each}}
+<div class="bsp-component-group">
+	{{#each components}}
+		{{render this}}
+	{{/each}}
+</div>

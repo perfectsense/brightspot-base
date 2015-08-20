@@ -17,7 +17,7 @@
 							        {{#each listItems}}
 							            <li>
 							            {{#with link}}
-							                 {{> (lookup . '_template') }}
+							                 {{render this}}
 							            {{/with}}
 							            </li>
 							        {{/each}}
@@ -37,7 +37,7 @@
 							        {{#each listItems}}
 							            <li>
 							            {{#with link}}
-							                 {{> (lookup . '_template') }}
+							                 {{render this}}
 							            {{/with}}
 							            </li>
 							        {{/each}}
@@ -68,7 +68,7 @@
 								
 								<ul class="bsp-share-links">
 									{{#each sharing.links}}
-										<li class="bsp-{{icon}}-share">{{> common/link class="bsp-share-link"}}</li>
+										<li class="bsp-{{icon}}-share">{{> common/link linkClass="bsp-share-link"}}</li>
 									{{/each}}
 								</ul>
 								
@@ -88,7 +88,7 @@
 								<form action="" data-bsp-form>
 									<div class="input-container">
 										{{#each inputs}}
-											<div class="input-content">{{> (lookup . '_template') }}</div>
+											<div class="input-content">{{render this}}</div>
 										{{/each}}
 									</div>
 								</form>

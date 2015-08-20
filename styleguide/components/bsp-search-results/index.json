@@ -1,0 +1,12 @@
+{
+	"_template" : "layouts/one-col",
+
+	"main" : {
+		"components" : [
+			{
+				"_dataUrl" : "/components/bsp-search-results/standard.json"
+			}
+		]
+	}
+
+}

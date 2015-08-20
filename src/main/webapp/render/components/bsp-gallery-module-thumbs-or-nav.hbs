@@ -5,13 +5,13 @@
 
 	<div class="bsp-component-content">
 
-		<div class="{{#if options.textNav}}gallery-module-nav{{else}}gallery-module-thumbs{{/if}} bsp-carousel" data-bsp-carousel-thumbnav data-bsp-carousel-thumbnav-options='{ "stage" : { "theme" : "carousel-dots" , "themeConfig" : { } }, "nav": { "themeConfig" : { "slidesToShow" : 4, "centerMode" : false } } }'>
+		<div class="gallery-module {{#if options.textNav}}gallery-module-nav{{else}}gallery-module-thumbs{{/if}}" data-bsp-carousel-thumbnav data-bsp-carousel-thumbnav-options='{ "stage" : { "theme" : "carousel-dots" , "themeConfig" : { } }, "nav": { "themeConfig" : { "slidesToShow" : 4, "centerMode" : false } } }'>
 			<div class="bsp-carousel-stage">
 
 				{{#gallerySlides}}
 					<div class="bsp-carousel-slide">
 						
-						{{> (lookup . '_template') }}
+						{{render this}}
 
 						{{#if navText}}
 							<div class="bsp-carousel-slide-nav-text">{{navText}}</div>
@@ -25,7 +25,7 @@
 				{{#galleryNavItems}}
 					<div class="bsp-carousel-slide">
 						{{#with navImage}}
-							{{> (lookup . '_template') }}
+							{{render this}}
 						{{/with}}
 						{{#if navText}}
 							<p>{{navText}}</p>
@@ -38,9 +38,9 @@
 
 	</div>
 
-	{{#if ctaText}}
-		<div class="bsp-component-cta">
-			<a href="{{ctaLink}}">{{ctaText}}</a>
+	{{#with cta}}
+		<div class="bsp-component-cta {{#if options.location}}bsp-component-cta-{{options.location}}{{/if}}">
+			{{render content}}
 		</div>	
-	{{/if}}	
+	{{/with}}	
 </div>

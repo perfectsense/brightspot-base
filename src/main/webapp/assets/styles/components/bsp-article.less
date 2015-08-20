@@ -7,7 +7,6 @@
 }
 
 .bsp-article {
-
 	border-top: @border-style-1;
 	padding: @space-triple 0 @space;
 
@@ -24,11 +23,35 @@
 		}
 	}
 
-	// when we have a component inside of an article, remove the padding. We let natural margins do the spacing instead
+	// when we have a component inside of an article, remove the margin.
+	// We let natural margins of p tags and others in the contentdo the spacing instead
 	.bsp-component {
-		padding: 0;
+		margin: 0;
 	}
 	
+}
+
+.bsp-article-content {
+	&:extend(.clearfix all);
+}
+
+.bsp-article-enhancement {
+	margin: @space 0;
+
+	&.align-left {
+		float: left;
+		margin: 0 @space @space 0;
+	}
+
+	&.align-right {
+		float: right;
+		margin: 0 0 @space @space;
+	}
+
+	&.align-center {
+		margin: 0 auto;
+	}
+
 }
 
 .bsp-article-title {
