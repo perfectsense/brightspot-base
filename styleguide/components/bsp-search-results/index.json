@@ -1,12 +1,21 @@
 {
-	"_template" : "layouts/one-col",
+	"_template" : "layouts/two-col-main-left-fixed-right",
 
 	"main" : {
 		"components" : [
 			{
-				"_dataUrl" : "/components/bsp-search-results/standard.json"
+				"_dataUrl" : "/components/bsp-search-results/search-results.json"
+			}
+		]
+	},
+		
+	"aside" : {
+		"components" : [
+			{
+				"_template" : "common/text",
+
+            	"text": "<p>Right Rail Modules can go here</p>"
 			}
 		]
 	}
-
 }

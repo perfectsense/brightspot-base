@@ -5,7 +5,7 @@
 		"horizontalSplit" : "fourth"
 	},
 
-	"heading" : "Theatre",
+	"heading" : "Theatres",
 
 	"listItems" : [
 		{ 
@@ -58,6 +58,13 @@
 		}
 	],
 
-	"ctaText" : "View More",
-	"ctaLink" : "#"
+	"cta" : {
+		"options" : {
+			"location" : "top-right"
+		},
+
+		"content" : {
+			"_dataUrl" : "/common/link-test-text.json"
+		}
+	}
 }
