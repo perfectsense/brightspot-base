@@ -2,7 +2,9 @@
 	"_template" : "components/bsp-list-promo",
 
 	"listItems" : [
-		{ 
+		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link": {
 				"_template" : "common/link",
 				
@@ -13,7 +15,9 @@
 				"text"  : "BSP Article Standalone"
 			}
 		},
-		{ 
+		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link": {
 				"_template" : "common/link",
 				
@@ -24,7 +28,9 @@
 				"text"  : "BSP Article Infinite Load"
 			}
 		},
-		{ 
+		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link": {
 				"_template" : "common/link",
 				
@@ -36,6 +42,8 @@
 			}
 		},
 		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link": {
 				"_template" : "common/link",
 				
@@ -47,6 +55,8 @@
 			}
 		},
 		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link": {
 				"_template" : "common/link",
 				
@@ -58,6 +68,8 @@
 			}
 		},
 		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link": {
 				"_template" : "common/link",
 				
@@ -68,7 +80,9 @@
 				"text"  : "BSP Form Textarea"
 			}
 		},
-		{ 
+		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link": {
 				"_template" : "common/link",
 				
@@ -80,6 +94,8 @@
 			}
 		},
 		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link": {
 				"_template" : "common/link",
 				
@@ -91,6 +107,8 @@
 			}
 		},
 		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link": {
 				"_template" : "common/link",
 				
@@ -102,6 +120,8 @@
 			}
 		},
 		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link": {
 				"_template" : "common/link",
 				
@@ -113,6 +133,8 @@
 			}
 		},
 		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link": {
 				"_template" : "common/link",
 				
@@ -124,6 +146,8 @@
 			}
 		},
 		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link": {
 				"_template" : "common/link",
 				
@@ -135,6 +159,8 @@
 			}
 		},
 		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link": {
 				"_template" : "common/link",
 				
@@ -146,6 +172,8 @@
 			}
 		},
 		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link": {
 				"_template" : "common/link",
 				
@@ -157,6 +185,8 @@
 			}
 		},
 		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link": {
 				"_template" : "common/link",
 				
@@ -168,6 +198,8 @@
 			}
 		},
 		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link": {
 				"_template" : "common/link",
 				
@@ -179,6 +211,8 @@
 			}
 		},
 		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link": {
 				"_template" : "common/link",
 				
@@ -190,6 +224,8 @@
 			}
 		},
 		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link": {
 				"_template" : "common/link",
 				
@@ -201,6 +237,8 @@
 			}
 		},
 		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link": {
 				"_template" : "common/link",
 				
@@ -210,116 +248,6 @@
 				},
 				"text"  : "BSP Table - Sample Themes"
 			}
-		},
-		
-		{
-			"_template" : "common/link",
-
-			"attributes" : {
-				"href"  : "link-me",
-				"title" : "I are a link"
-			},
-			
-			"text"  : "Link test text"
-		},
-		
-		{
-			"_template" : "common/link",
-
-			"attributes" : {
-				"href"  : "link-me",
-				"title" : "I are a link"
-			},
-			
-			"text"  : "Link test text"
-		},
-		
-		{
-			"_template" : "common/link",
-
-			"attributes" : {
-				"href"  : "link-me",
-				"title" : "I are a link"
-			},
-			
-			"text"  : "Link test text"
-		},
-		
-		{
-			"_template" : "common/link",
-
-			"attributes" : {
-				"href"  : "link-me",
-				"title" : "I are a link"
-			},
-			
-			"text"  : "Link test text"
-		},
-		
-		{
-			"_template" : "common/link",
-
-			"attributes" : {
-				"href"  : "link-me",
-				"title" : "I are a link"
-			},
-			
-			"text"  : "Link test text"
-		},
-		
-		{
-			"_template" : "common/link",
-
-			"attributes" : {
-				"href"  : "link-me",
-				"title" : "I are a link"
-			},
-			
-			"text"  : "Link test text"
-		},
-		
-		{
-			"_template" : "common/link",
-
-			"attributes" : {
-				"href"  : "link-me",
-				"title" : "I are a link"
-			},
-			
-			"text"  : "Link test text"
-		},
-		
-		{
-			"_template" : "common/link",
-
-			"attributes" : {
-				"href"  : "link-me",
-				"title" : "I are a link"
-			},
-			
-			"text"  : "Link test text"
-		},
-		
-		{
-			"_template" : "common/link",
-
-			"attributes" : {
-				"href"  : "link-me",
-				"title" : "I are a link"
-			},
-			
-			"text"  : "Link test text"
-		},
-		
-		{
-			"_template" : "common/link",
-
-			"attributes" : {
-				"href"  : "link-me",
-				"title" : "I are a link"
-			},
-			
-			"text"  : "Link test text"
 		}
 	]
 }

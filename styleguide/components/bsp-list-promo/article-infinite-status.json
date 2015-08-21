@@ -8,7 +8,9 @@
 	"heading" : "Top Articles",
 
 	"listItems" : [
-		{ 
+		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link" : {
 
 				"_template" : "common/link",
@@ -22,7 +24,9 @@
 
 			}
 		},
-		{ 
+		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link" : {
 
 				"_template" : "common/link",
@@ -36,7 +40,9 @@
 
 			}
 		},
-		{ 
+		{
+			"_template" : "components/bsp-list-promo-item-handler",
+			 
 			"link" : {
 
 				"_template" : "common/link",

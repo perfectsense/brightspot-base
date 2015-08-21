@@ -5,36 +5,58 @@
 		"modifierClass" : "hard-item-heights"
 	},
 
-	"heading" : "2 items with hardcoded heights",
+	"heading" : {
+        
+        "_template" : "common/text",
+
+        "text" : "2 items with hardcoded heights"
+
+    },
 
 	"listItems" : [
-		{ 
-			"link" : {
+		{
 
-				"_template" : "common/link",
+            "section1" : {
 
-				"attributes" : {
-					"href"  : "link",
-					"title" : "Link Title"
-				},
+                "_template" : "components/bsp-list-promo-item-handler",
 
-				"text" : "8 Burning Questions Link"
+                "name" : "text",
 
-			}
+                "link" : {
+
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href"  : "link",
+						"title" : "Link Title"
+					},
+
+					"text" : "8 Burning Questions Link"
+
+				}
+            }				
 		},
-		{ 
-			"link" : {
+		{
 
-				"_template" : "common/link",
+            "section1" : {
 
-				"attributes" : {
-					"href"  : "link",
-					"title" : "Link Title"
-				},
+                "_template" : "components/bsp-list-promo-item-handler",
 
-				"text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
+                "name" : "text",
 
-			}
+                "link" : {
+
+					"_template" : "common/link",
+
+					"attributes" : {
+						"href"  : "link",
+						"title" : "Link Title"
+					},
+
+					"text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
+
+				}
+            }				
 		}
 	],
 

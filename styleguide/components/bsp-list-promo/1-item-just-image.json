@@ -1,31 +1,41 @@
 {
 	"_template" : "components/bsp-list-promo",
 
-	"heading" : "Just Image",
+	"heading" : {
+		
+		"_template" : "common/text",
+
+		"text" : "Just Image"
+
+	},
 
 	"listItems" : [
-		{ 
-			"imgAlign" : "top",
+		{
 
-			"image" : {
+			"section1" : {
+				"_template" : "components/bsp-list-promo-item-handler",
 
-				"_template" : "common/link",
-
-				"attributes" : {
-					"href"  : "link",
-					"title" : "Link Title"
-				},
+				"imgAlign" : "top",
 
 				"image" : {
 
-					"_template" : "common/image",
+					"_template" : "common/link",
 
 					"attributes" : {
-						"alt" : "Image",
-						"src" : "/assets/images/800x450.png"
-					}
+						"href"  : "link",
+						"title" : "Link Title"
+					},
+
+					"image" : {
+
+						"_template" : "common/image",
+
+						"attributes" : {
+							"alt" : "Image",
+							"src" : "/assets/images/800x450.png"
+						}
+					}					
 				}
-				
 			}
 			
 		}

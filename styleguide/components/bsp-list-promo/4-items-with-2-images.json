@@ -4,7 +4,9 @@
 	"heading" : "4 items with two items with image",
 
 	"listItems" : [
-		{ 
+		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"imgAlign" : "top",
 
 			"image" : {
@@ -55,7 +57,9 @@
 			}
 
 		},
-		{ 
+		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"imgAlign" : "top",
 
 			"image" : {
@@ -106,7 +110,9 @@
 			}
 
 		},
-		{ 
+		{
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"link" : {
 
 				"_template" : "common/link",
@@ -120,7 +126,9 @@
 
 			}
 		},
-		{ 
+		{
+			"_template" : "components/bsp-list-promo-item-handler",
+			 
 			"link" : {
 
 				"_template" : "common/link",

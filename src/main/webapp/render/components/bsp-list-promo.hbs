@@ -1,56 +1,39 @@
 <div class="bsp-component bsp-list-promo-component{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
-	{{#if heading}}
-		<div class="bsp-component-title">{{heading}}</div>
-	{{/if}}
+    {{#if heading}}
+        <div class="bsp-component-title">{{#if heading._template}}{{#with heading}}{{render this}}{{/with}}{{else}}{{heading}}{{/if}}</div>
+    {{/if}}
 
-	<div class="bsp-component-content">
+    <div class="bsp-component-content">
 
-		<div class="bsp-list-promo">
-			<{{#if options.orderedList}}ol{{else}}ul{{/if}} class="bsp-list-promo-list {{#if options.horizontalSplit}}bsp-row{{/if}}">
-				{{#each listItems}}
-					<li class="{{#if ../options.horizontalSplit}}bsp-column-{{/if}}{{../options.horizontalSplit}} {{#if imgAlign}}image-align-{{/if}}{{imgAlign}}">
+        <div class="bsp-list-promo">
+            <ul class="bsp-list-promo-list {{#if options.horizontalSplit}}bsp-row{{/if}}">
+                {{#each listItems}}
+                    <li class="{{#if ../options.horizontalSplit}}bsp-column-{{/if}}{{../options.horizontalSplit}} {{#if imgAlign}}image-align-{{/if}}{{imgAlign}}">
+                        
+                        {{#with section1}}
+                            {{render this}}
+                        {{/with}}
+                        
+                        {{#with section2}}
+                            {{render this}}
+                        {{/with}}
 
-						{{#with image}}
-							<div class="bsp-list-promo-image">
-								{{render this}}
-							</div>
-						{{/with}}
+                        {{#with section3}}
+                            {{render this}}
+                        {{/with}}
 
-						<div class="bsp-list-promo-text">
-							{{#if tags}}
-								<ul class="bsp-list-promo-tags">
-									{{#each tags}}
-										<li>{{render this}}</li>
-									{{/each}}
-								</ul>
-							{{/if}}
+                        {{render this}}
+                        
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
 
-							{{#with title}}
-								<div class="bsp-list-promo-title">{{render this}}</div>
-							{{/with}}
+    </div>
 
-							{{#if subtitle}}
-								<div class="bsp-list-promo-subtitle">{{{subtitle}}}</div>
-							{{/if}}
-							
-							{{#if description}}
-								<div class="bsp-list-promo-desc">{{{description}}}</div>
-							{{/if}}
-
-							{{#with link}}
-								<div class="bsp-list-promo-link">{{render this}}</div>
-							{{/with}}
-						</div>
-					</li>
-				{{/each}}
-			</{{#if options.orderedList}}ol{{else}}ul{{/if}} >
-		</div>
-
-	</div>
-
-	{{#with cta}}
-		<div class="bsp-component-cta {{#if options.location}}cta-{{options.location}}{{/if}}">
-			{{render content}}
-		</div>	
-	{{/with}}
+    {{#with cta}}
+        <div class="bsp-component-cta {{#if options.location}}cta-{{options.location}}{{/if}}">
+            {{render content}}
+        </div>  
+    {{/with}}
 </div>

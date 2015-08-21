@@ -5,80 +5,122 @@
 		"modifierClass" : "image-33-width"
 	},
 
-	"heading" : "3 Items with Image, left Align",
+	"heading" : {
+        
+        "_template" : "common/text",
+
+        "text" : "3 Items with Image, left Align"
+
+    },
 
 	"listItems" : [
-		{ 
+		{
 			"imgAlign" : "left",
 
-			"image" : {
-				"_dataUrl" : "/common/image-800x450.json"
-			},
+			"section1" : {
 
-			"tags" : [
-				{
-					"_dataUrl" : "/common/link-test-text.json"
+                "_template" : "components/bsp-list-promo-item-handler",
+
+                "name" : "image",
+
+            	"image" : {
+					"_dataUrl" : "/common/image-800x450.json"
 				}
-			],
+            },
 
-			"title" : {
-				"_dataUrl" : "/common/link-text-title.json"
-			},
+            "section2" : {
 
-			"subtitle" : "<b>By Alisha Templeton</b> | 06/07/2015",
+                "_template" : "components/bsp-list-promo-item-handler",
 
-			"description" : "Strip steak tenderloin jerky. Chicken ham ball tip prosciutto sirloin ham hock pork sausage cow salami spare ribs flank pancetta landjaeger doner. Jerky leberkas prosciutto flank meatball sausage. Venison rump kielbasa short ribs spare ribs."
+                "name" : "text",
 
-		},
-		{ 
-			"imgAlign" : "left",
+                "tags" : [
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					}
+				],
 
-			"image" : {
-				"_dataUrl" : "/common/image-800x450.json"
-			},
-
-			"tags" : [
-				{
-					"_dataUrl" : "/common/link-test-text.json"
+				"title" : {
+					"_dataUrl" : "/common/link-text-title.json"
 				},
-				{
-					"_dataUrl" : "/common/link-test-text.json"
-				},
-				{
-					"_dataUrl" : "/common/link-test-text.json"
-				}
-			],
 
-			"title" : {
-				"_dataUrl" : "/common/link-text-title.json"
-			},
+				"subtitle" : "<b>By Alisha Templeton</b> | 06/07/2015",
 
-			"subtitle" : "<b>By Alisha Templeton</b> | 06/07/2015",
+				"description" : "Strip steak tenderloin jerky. Chicken ham ball tip prosciutto sirloin ham hock pork sausage cow salami spare ribs flank pancetta landjaeger doner. Jerky leberkas prosciutto flank meatball sausage. Venison rump kielbasa short ribs spare ribs."
 
-			"description" : "Strip steak tenderloin jerky. Chicken ham ball tip prosciutto sirloin ham hock pork sausage cow salami spare ribs flank pancetta landjaeger doner. Jerky leberkas prosciutto flank meatball sausage. Venison rump kielbasa short ribs spare ribs."
-
+            }				
 		},
-		{ 
+		{
 			"imgAlign" : "left",
 
-			"image" : {
-				"_dataUrl" : "/common/image-800x450.json"
-			},
+			"section1" : {
 
-			"tags" : [
-				{
-					"_dataUrl" : "/common/link-test-text.json"
+                "_template" : "components/bsp-list-promo-item-handler",
+
+                "name" : "image",
+
+            	"image" : {
+					"_dataUrl" : "/common/image-800x450.json"
 				}
-			],
+            },
 
-			"title" : {
-				"_dataUrl" : "/common/link-text-title.json"
-			},
+            "section2" : {
 
-			"subtitle" : "<b>By Alisha Templeton</b> | 06/07/2015",
+                "_template" : "components/bsp-list-promo-item-handler",
 
-			"description" : "Strip steak tenderloin jerky. Chicken ham ball tip prosciutto sirloin ham hock pork sausage cow salami spare ribs flank pancetta landjaeger doner. Jerky leberkas prosciutto flank meatball sausage. Venison rump kielbasa short ribs spare ribs."
+                "name" : "text",
 
+                "tags" : [
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					}
+				],
+
+				"title" : {
+					"_dataUrl" : "/common/link-text-title.json"
+				},
+
+				"subtitle" : "<b>By Alisha Templeton</b> | 06/07/2015",
+
+				"description" : "Strip steak tenderloin jerky. Chicken ham ball tip prosciutto sirloin ham hock pork sausage cow salami spare ribs flank pancetta landjaeger doner. Jerky leberkas prosciutto flank meatball sausage. Venison rump kielbasa short ribs spare ribs."
+
+            }				
+		},
+		{
+			"imgAlign" : "left",
+
+			"section1" : {
+
+                "_template" : "components/bsp-list-promo-item-handler",
+
+                "name" : "image",
+
+            	"image" : {
+					"_dataUrl" : "/common/image-800x450.json"
+				}
+            },
+
+            "section2" : {
+
+                "_template" : "components/bsp-list-promo-item-handler",
+
+                "name" : "text",
+
+                "tags" : [
+					{
+						"_dataUrl" : "/common/link-test-text.json"
+					}
+				],
+
+				"title" : {
+					"_dataUrl" : "/common/link-text-title.json"
+				},
+
+				"subtitle" : "<b>By Alisha Templeton</b> | 06/07/2015",
+
+				"description" : "Strip steak tenderloin jerky. Chicken ham ball tip prosciutto sirloin ham hock pork sausage cow salami spare ribs flank pancetta landjaeger doner. Jerky leberkas prosciutto flank meatball sausage. Venison rump kielbasa short ribs spare ribs."
+
+            }				
 		}
 	]
 }
