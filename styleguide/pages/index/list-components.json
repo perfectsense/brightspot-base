@@ -3,251 +3,327 @@
 
 	"listItems" : [
 		{
-			"_template" : "components/bsp-list-promo-item-handler",
+			"sections" : [
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
 
-			"link": {
-				"_template" : "common/link",
-				
-				"attributes" : {
-					"href"  : "/components/bsp-article/",
-					"title" : "BSP Article Standalone"
-				},
-				"text"  : "BSP Article Standalone"
-			}
+					"link": {
+						"_template" : "common/link",
+						
+						"attributes" : {
+							"href"  : "/components/bsp-article/",
+							"title" : "BSP Article Standalone"
+						},
+						"text"  : "BSP Article Standalone"
+					}
+				}
+			]
 		},
 		{
-			"_template" : "components/bsp-list-promo-item-handler",
+			"sections" : [
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
 
-			"link": {
-				"_template" : "common/link",
-				
-				"attributes" : {
-					"href"  : "/components/bsp-article/infinite.html",
-					"title" : "BSP Article Infinite Load"
-				},
-				"text"  : "BSP Article Infinite Load"
-			}
+					"link": {
+						"_template" : "common/link",
+						
+						"attributes" : {
+							"href"  : "/components/bsp-article/infinite.html",
+							"title" : "BSP Article Infinite Load"
+						},
+						"text"  : "BSP Article Infinite Load"
+					}
+				}
+			]
 		},
 		{
-			"_template" : "components/bsp-list-promo-item-handler",
+			"sections" : [
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
 
-			"link": {
-				"_template" : "common/link",
-				
-				"attributes" : {
-					"href"  : "/components/bsp-bio/",
-					"title" : "BSP Bio"
-				},
-				"text"  : "BSP Bio"
-			}
+					"link": {
+						"_template" : "common/link",
+						
+						"attributes" : {
+							"href"  : "/components/bsp-bio/",
+							"title" : "BSP Bio"
+						},
+						"text"  : "BSP Bio"
+					}
+				}
+			]
 		},
 		{
-			"_template" : "components/bsp-list-promo-item-handler",
+			"sections" : [
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
 
-			"link": {
-				"_template" : "common/link",
-				
-				"attributes" : {
-					"href"  : "/components/bsp-form-input/",
-					"title" : "BSP Form Input"
-				},
-				"text"  : "BSP Form Input"
-			}
+					"link": {
+						"_template" : "common/link",
+						
+						"attributes" : {
+							"href"  : "/components/bsp-form-input/",
+							"title" : "BSP Form Input"
+						},
+						"text"  : "BSP Form Input"
+					}
+				}
+			]
 		},
 		{
-			"_template" : "components/bsp-list-promo-item-handler",
+			"sections" : [
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
 
-			"link": {
-				"_template" : "common/link",
-				
-				"attributes" : {
-					"href"  : "/components/bsp-form-select/",
-					"title" : "BSP Form Select"
-				},
-				"text"  : "BSP Form Select"
-			}
+					"link": {
+						"_template" : "common/link",
+						
+						"attributes" : {
+							"href"  : "/components/bsp-form-select/",
+							"title" : "BSP Form Select"
+						},
+						"text"  : "BSP Form Select"
+					}
+				}
+			]
 		},
 		{
-			"_template" : "components/bsp-list-promo-item-handler",
+			"sections" : [
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
 
-			"link": {
-				"_template" : "common/link",
-				
-				"attributes" : {
-					"href"  : "/components/bsp-form-textarea/",
-					"title" : "BSP Form Textarea"
-				},
-				"text"  : "BSP Form Textarea"
-			}
+					"link": {
+						"_template" : "common/link",
+						
+						"attributes" : {
+							"href"  : "/components/bsp-form-textarea/",
+							"title" : "BSP Form Textarea"
+						},
+						"text"  : "BSP Form Textarea"
+					}
+				}
+			]
 		},
 		{
-			"_template" : "components/bsp-list-promo-item-handler",
+			"sections" : [
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
 
-			"link": {
-				"_template" : "common/link",
-				
-				"attributes" : {
-					"href"  : "/components/bsp-bio/",
-					"title" : "BSP Bio"
-				},
-				"text"  : "BSP Bio"
-			}
+					"link": {
+						"_template" : "common/link",
+						
+						"attributes" : {
+							"href"  : "/components/bsp-bio/",
+							"title" : "BSP Bio"
+						},
+						"text"  : "BSP Bio"
+					}
+				}
+			]
 		},
 		{
-			"_template" : "components/bsp-list-promo-item-handler",
+			"sections" : [
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
 
-			"link": {
-				"_template" : "common/link",
-				
-				"attributes" : {
-					"href"  : "/components/bsp-gallery-module/",
-					"title" : "BSP Gallery Module"
-				},
-				"text"  : "BSP Gallery Module"
-			}
+					"link": {
+						"_template" : "common/link",
+						
+						"attributes" : {
+							"href"  : "/components/bsp-gallery-module/",
+							"title" : "BSP Gallery Module"
+						},
+						"text"  : "BSP Gallery Module"
+					}
+				}
+			]
 		},
 		{
-			"_template" : "components/bsp-list-promo-item-handler",
+			"sections" : [
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
 
-			"link": {
-				"_template" : "common/link",
-				
-				"attributes" : {
-					"href"  : "/components/bsp-gallery-fullscreen/",
-					"title" : "BSP Gallery Fullscreen"
-				},
-				"text"  : "BSP Gallery Fullscreen"
-			}
+					"link": {
+						"_template" : "common/link",
+						
+						"attributes" : {
+							"href"  : "/components/bsp-gallery-fullscreen/",
+							"title" : "BSP Gallery Fullscreen"
+						},
+						"text"  : "BSP Gallery Fullscreen"
+					}
+				}
+			]
 		},
 		{
-			"_template" : "components/bsp-list-promo-item-handler",
+			"sections" : [
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
 
-			"link": {
-				"_template" : "common/link",
-				
-				"attributes" : {
-					"href"  : "/components/bsp-image-promo/",
-					"title" : "BSP Image Promo"
-				},
-				"text"  : "BSP Image Promo"
-			}
+					"link": {
+						"_template" : "common/link",
+						
+						"attributes" : {
+							"href"  : "/components/bsp-image-promo/",
+							"title" : "BSP Image Promo"
+						},
+						"text"  : "BSP Image Promo"
+					}
+				}
+			]
 		},
 		{
-			"_template" : "components/bsp-list-promo-item-handler",
+			"sections" : [
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
 
-			"link": {
-				"_template" : "common/link",
-				
-				"attributes" : {
-					"href"  : "/components/bsp-list-promo/",
-					"title" : "BSP List Promo"
-				},
-				"text"  : "BSP List Promo"
-			}
+					"link": {
+						"_template" : "common/link",
+						
+						"attributes" : {
+							"href"  : "/components/bsp-list-promo/",
+							"title" : "BSP List Promo"
+						},
+						"text"  : "BSP List Promo"
+					}
+				}
+			]
 		},
 		{
-			"_template" : "components/bsp-list-promo-item-handler",
+			"sections" : [
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
 
-			"link": {
-				"_template" : "common/link",
-				
-				"attributes" : {
-					"href"  : "/components/bsp-paginate/",
-					"title" : "BSP Paginate"
-				},
-				"text"  : "BSP Paginate"
-			}
+					"link": {
+						"_template" : "common/link",
+						
+						"attributes" : {
+							"href"  : "/components/bsp-paginate/",
+							"title" : "BSP Paginate"
+						},
+						"text"  : "BSP Paginate"
+					}
+				}
+			]
 		},
 		{
-			"_template" : "components/bsp-list-promo-item-handler",
+			"sections" : [
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
 
-			"link": {
-				"_template" : "common/link",
-				
-				"attributes" : {
-					"href"  : "/components/bsp-search-results/",
-					"title" : "BSP Search Results"
-				},
-				"text"  : "BSP Search Results"
-			}
+					"link": {
+						"_template" : "common/link",
+						
+						"attributes" : {
+							"href"  : "/components/bsp-search-results/",
+							"title" : "BSP Search Results"
+						},
+						"text"  : "BSP Search Results"
+					}
+				}
+			]
 		},
 		{
-			"_template" : "components/bsp-list-promo-item-handler",
+			"sections" : [
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
 
-			"link": {
-				"_template" : "common/link",
-				
-				"attributes" : {
-					"href"  : "/components/bsp-site-header/",
-					"title" : "BSP Site Header"
-				},
-				"text"  : "BSP Site Header"
-			}
+					"link": {
+						"_template" : "common/link",
+						
+						"attributes" : {
+							"href"  : "/components/bsp-site-header/",
+							"title" : "BSP Site Header"
+						},
+						"text"  : "BSP Site Header"
+					}
+				}
+			]
 		},
 		{
-			"_template" : "components/bsp-list-promo-item-handler",
+			"sections" : [
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
 
-			"link": {
-				"_template" : "common/link",
-				
-				"attributes" : {
-					"href"  : "/components/bsp-site-header-simple/",
-					"title" : "BSP Site Header Simple"
-				},
-				"text"  : "BSP Site Header Simple"
-			}
+					"link": {
+						"_template" : "common/link",
+						
+						"attributes" : {
+							"href"  : "/components/bsp-site-header-simple/",
+							"title" : "BSP Site Header Simple"
+						},
+						"text"  : "BSP Site Header Simple"
+					}
+				}
+			]
 		},
 		{
-			"_template" : "components/bsp-list-promo-item-handler",
+			"sections" : [
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
 
-			"link": {
-				"_template" : "common/link",
-				
-				"attributes" : {
-					"href"  : "/components/bsp-site-footer/",
-					"title" : "BSP Site Footer"
-				},
-				"text"  : "BSP Site Footer"
-			}
+					"link": {
+						"_template" : "common/link",
+						
+						"attributes" : {
+							"href"  : "/components/bsp-site-footer/",
+							"title" : "BSP Site Footer"
+						},
+						"text"  : "BSP Site Footer"
+					}
+				}
+			]
 		},
 		{
-			"_template" : "components/bsp-list-promo-item-handler",
+			"sections" : [
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
 
-			"link": {
-				"_template" : "common/link",
-				
-				"attributes" : {
-					"href"  : "/components/bsp-tabber/",
-					"title" : "BSP Tabber"
-				},
-				"text"  : "BSP Tabber"
-			}
+					"link": {
+						"_template" : "common/link",
+						
+						"attributes" : {
+							"href"  : "/components/bsp-tabber/",
+							"title" : "BSP Tabber"
+						},
+						"text"  : "BSP Tabber"
+					}
+				}
+			]
 		},
 		{
-			"_template" : "components/bsp-list-promo-item-handler",
+			"sections" : [
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
 
-			"link": {
-				"_template" : "common/link",
-				
-				"attributes" : {
-					"href"  : "/components/bsp-table/",
-					"title" : "BSP Table - Basic Configurations"
-				},
-				"text"  : "BSP Table - Basic Configurations"
-			}
+					"link": {
+						"_template" : "common/link",
+						
+						"attributes" : {
+							"href"  : "/components/bsp-table/",
+							"title" : "BSP Table - Basic Configurations"
+						},
+						"text"  : "BSP Table - Basic Configurations"
+					}
+				}
+			]
 		},
 		{
-			"_template" : "components/bsp-list-promo-item-handler",
+			"sections" : [
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
 
-			"link": {
-				"_template" : "common/link",
-				
-				"attributes" : {
-					"href"  : "/components/bsp-table/tables-themed.html",
-					"title" : "BSP Table - Sample Themes"
-				},
-				"text"  : "BSP Table - Sample Themes"
-			}
+					"link": {
+						"_template" : "common/link",
+						
+						"attributes" : {
+							"href"  : "/components/bsp-table/tables-themed.html",
+							"title" : "BSP Table - Sample Themes"
+						},
+						"text"  : "BSP Table - Sample Themes"
+					}
+				}
+			]
 		}
 	]
 }
