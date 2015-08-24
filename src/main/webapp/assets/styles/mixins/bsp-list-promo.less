@@ -44,9 +44,12 @@
 		margin-top: 0 !important; // overriding parent specificity
 	}
 
-	.bsp-list-promo-text {
-		margin-top: -@space;
-		width: (100%-@size);
+	// when you have text that has an image and is aligned, we space it appropriately
+	.image-align-left, .image-align-right {
+		.bsp-list-promo-text {
+			margin-top: -@space;
+			width: (100%-@size);
+		}
 	}
 }
 

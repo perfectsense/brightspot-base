@@ -1,5 +1,5 @@
 {
-	"_template" : "components/bsp-paginate",
+	"_template" : "components/bsp-pagination",
 
 	"navigate" : {
 
@@ -12,7 +12,7 @@
 				"title" : "Previous"
 			},
 
-			"text" : "‹ Previous"
+			"text" : "Previous"
 		},
 
 		"next" : {
@@ -24,7 +24,7 @@
 					"title" : "Next"
 			},
 
-			"text" : "Next ›"
+			"text" : "Next"
 		}
 
 	},

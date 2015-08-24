@@ -117,10 +117,10 @@
 				"_template" : "common/link",
 				
 				"attributes" : {
-					"href"  : "/components/bsp-paginate/",
-					"title" : "BSP Paginate"
+					"href"  : "/components/bsp-pagination/",
+					"title" : "BSP Pagination"
 				},
-				"text"  : "BSP Paginate"
+				"text"  : "BSP Pagination"
 			}
 		},
 		{
