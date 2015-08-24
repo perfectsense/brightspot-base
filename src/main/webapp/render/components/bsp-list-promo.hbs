@@ -10,9 +10,13 @@
                 {{#each listItems}}
                     <li class="{{#if ../options.horizontalSplit}}bsp-column-{{/if}}{{../options.horizontalSplit}} {{#if imgAlign}}image-align-{{/if}}{{imgAlign}}">
 
-                        {{#each sections}}
+                        {{#if sections}}
+                            {{#each sections}}
+                                {{render this}}
+                            {{/each}}
+                        {{else}}
                             {{render this}}
-                        {{/each}}
+                        {{/if}}
 
                     </li>
                 {{/each}}
