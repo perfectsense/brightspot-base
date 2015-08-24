@@ -1,89 +1,84 @@
 {
-	"_template" : "components/bsp-list-promo",
+    "_template" : "components/bsp-list-promo",
 
-	"options" : {
-		"modifierClass" : "image-50-width-background"
-	},
+    "options" : {
+        "modifierClass" : "image-50-width-background"
+    },
 
-	"heading" : {
+    "heading" : {
 
-		"_template" : "common/text",
+        "_template" : "common/text",
 
-		"text" : "1 Image left aligned with dark background for text"
+        "text" : "1 Image left aligned with dark background for text"
 
-	},
+    },
 
-	"listItems" : [
-		{
-			"imgAlign" : "left",
+    "listItems" : [
+        {
+            "imgAlign" : "left",
 
-            "section1" : {
+            "sections" : [
+                {
+                    "_template" : "components/bsp-list-promo-item-handler",
 
-                "_template" : "components/bsp-list-promo-item-handler",
+                    "name" : "image",
 
-                "name" : "image",
+                    "image" : {
 
-				"image" : {
+                        "_template" : "common/link",
 
-					"_template" : "common/link",
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
 
-					"attributes" : {
-						"href"  : "link",
-						"title" : "Link Title"
-					},
+                        "image" : {
 
-					"image" : {
+                            "_template" : "common/image",
 
-						"_template" : "common/image",
+                            "attributes" : {
+                                "alt" : "Test Alt",
+                                "src" : "/assets/images/800x450.png"
+                            }
+                        }
+                    }
+                },
+                {
 
-						"attributes" : {
-							"alt" : "Test Alt",
-							"src" : "/assets/images/800x450.png"
-						}
-					}
+                    "_template" : "components/bsp-list-promo-item-handler",
 
-				}
+                    "name" : "text",
 
-            },
+                    "link" : {
 
-            "section2" : {
+                        "_template" : "common/link",
 
-            	"_template" : "components/bsp-list-promo-item-handler",
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
 
-            	"name" : "text",
+                        "text" : "8 Burning Questions Link"
 
-   				"link" : {
+                    },
 
-					"_template" : "common/link",
+                    "title" : {
 
-					"attributes" : {
-						"href"  : "link",
-						"title" : "Link Title"
-					},
+                        "_template" : "common/link",
 
-					"text" : "8 Burning Questions Link"
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
 
-				},
+                        "text" : "8 Burning Questions Title"
 
-				"title" : {
+                    },
 
-					"_template" : "common/link",
+                    "description" : "Shankle pork loin landjaeger pork chop t-bone. Shank capicola strip steak, salami prosciutto ham hock venison. Short ribs meatloaf doner hamburger frankfurter tri-tip."
 
-					"attributes" : {
-						"href"  : "link",
-						"title" : "Link Title"
-					},
-
-					"text" : "8 Burning Questions Title"
-
-				},
-
-				"description" : "Shankle pork loin landjaeger pork chop t-bone. Shank capicola strip steak, salami prosciutto ham hock venison. Short ribs meatloaf doner hamburger frankfurter tri-tip."
-
-
-            }
-
-
-		}
-	]
+                }
+            ]
+        }
+    ]
 }

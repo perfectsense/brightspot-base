@@ -11,71 +11,66 @@
 
 	"listItems" : [
 		{
-			"_template" : "components/bsp-list-promo-item-handler",
+            "imgAlign" : "overlay",
 
-			"imgAlign" : "overlay",
+            "sections" : [
+                {
+                    "_template" : "components/bsp-list-promo-item-handler",
 
-			"image" : {
+                    "name" : "image",
 
-				"_template" : "common/link",
+                    "image" : {
 
-				"attributes" : {
-					"href"  : "link",
-					"title" : "Link Title"
-				},
+                        "_template" : "common/link",
 
-				"image" : {
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
 
-					"_template" : "common/image",
+                        "image" : {
 
-					"attributes" : {
-						"alt" : "Test Alt",
-						"src" : "/assets/images/800x450.png"
-					}
-				}
+                            "_template" : "common/image",
 
-			},
+                            "attributes" : {
+                                "alt" : "Test Alt",
+                                "src" : "/assets/images/800x450.png"
+                            }
+                        }
 
-			"section1" : {
+                    }
+                },
+                {
+                    "_template" : "components/bsp-list-promo-item-handler",
 
-                "_template" : "components/bsp-list-promo-item-handler",
+                    "name" : "text",
 
-                "name" : "image",
+                    "link" : {
 
-                "link" : {
+                        "_template" : "common/link",
 
-					"_template" : "common/link",
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
 
-					"attributes" : {
-						"href"  : "link",
-						"title" : "Link Title"
-					},
+                        "text" : "8 Burning Questions Link"
+                    },
 
-					"text" : "8 Burning Questions Link"
+                    "title" : {
 
-				}
+                        "_template" : "common/link",
 
-            },
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
 
-            "section2" : {
+                        "text" : "8 Burning Questions Title"
 
-                "_template" : "components/bsp-list-promo-item-handler",
-
-                "name" : "text",
-
-                "title" : {
-
-					"_template" : "common/link",
-
-					"attributes" : {
-						"href"  : "link",
-						"title" : "Link Title"
-					},
-
-					"text" : "8 Burning Questions Title"
-
-				}
-            }
+                    }
+                }
+             ]
 		}
 	],
 

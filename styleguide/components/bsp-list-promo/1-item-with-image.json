@@ -13,68 +13,66 @@
 		{
 			"imgAlign" : "top",
 
-			"section1" : {
+			"sections" : [
+                {
 
-                "_template" : "components/bsp-list-promo-item-handler",
+                    "_template" : "components/bsp-list-promo-item-handler",
 
-                "name" : "image",
+                    "name" : "image",
 
-                "image" : {
+                    "image" : {
 
-					"_template" : "common/link",
+    					"_template" : "common/link",
 
-					"attributes" : {
-						"href"  : "link",
-						"title" : "Link Title"
-					},
+    					"attributes" : {
+    						"href"  : "link",
+    						"title" : "Link Title"
+    					},
 
-					"image" : {
+    					"image" : {
 
-						"_template" : "common/image",
+    						"_template" : "common/image",
 
-						"attributes" : {
-							"alt" : "Test Alt",
-							"src" : "/assets/images/800x450.png"
-						}
-					}
+    						"attributes" : {
+    							"alt" : "Test Alt",
+    							"src" : "/assets/images/800x450.png"
+    						}
+    					}
+    				}
+                },
+                {
 
-				}
+                    "_template" : "components/bsp-list-promo-item-handler",
 
-            },
+                    "name" : "text",
 
-            "section2" : {
+                    "link" : {
 
-                "_template" : "components/bsp-list-promo-item-handler",
+    					"_template" : "common/link",
 
-                "name" : "text",
+    					"attributes" : {
+    						"href"  : "link",
+    						"title" : "Link Title"
+    					},
 
-                "link" : {
+    					"text" : "8 Burning Questions Link"
 
-					"_template" : "common/link",
+    				},
 
-					"attributes" : {
-						"href"  : "link",
-						"title" : "Link Title"
-					},
+    				"title" : {
 
-					"text" : "8 Burning Questions Link"
+    					"_template" : "common/link",
 
-				},
+    					"attributes" : {
+    						"href"  : "link",
+    						"title" : "Link Title"
+    					},
 
-				"title" : {
+    					"text" : "8 Burning Questions Title"
 
-					"_template" : "common/link",
-
-					"attributes" : {
-						"href"  : "link",
-						"title" : "Link Title"
-					},
-
-					"text" : "8 Burning Questions Title"
-
-				}
-
-            }
+    				}
+                }
+            ]
 		}
 	],
 

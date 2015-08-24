@@ -11,33 +11,33 @@
 
 	"listItems" : [
 		{
+			"sections" : [
+                {
+    				"_template" : "components/bsp-list-promo-item-handler",
 
-			"section1" : {
-				"_template" : "components/bsp-list-promo-item-handler",
+    				"imgAlign" : "top",
 
-				"imgAlign" : "top",
+    				"image" : {
 
-				"image" : {
+    					"_template" : "common/link",
 
-					"_template" : "common/link",
+    					"attributes" : {
+    						"href"  : "link",
+    						"title" : "Link Title"
+    					},
 
-					"attributes" : {
-						"href"  : "link",
-						"title" : "Link Title"
-					},
+    					"image" : {
 
-					"image" : {
+    						"_template" : "common/image",
 
-						"_template" : "common/image",
-
-						"attributes" : {
-							"alt" : "Image",
-							"src" : "/assets/images/800x450.png"
-						}
-					}
-				}
-			}
-
+    						"attributes" : {
+    							"alt" : "Image",
+    							"src" : "/assets/images/800x450.png"
+    						}
+    					}
+    				}
+    			}
+            ]
 		}
 	]
 }
