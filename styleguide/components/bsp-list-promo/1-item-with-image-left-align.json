@@ -6,7 +6,7 @@
 	},
 
     "heading" : {
-        
+
         "_template" : "common/text",
 
         "text" : "1 Image left aligned with no background for text"
@@ -15,7 +15,7 @@
 
 	"listItems" : [
 		{
-			 
+
 			"imgAlign" : "left",
 
             "section1" : {
@@ -42,7 +42,7 @@
 							"src" : "/assets/images/800x450.png"
 						}
 					}
-					
+
 				}
 
             },
@@ -84,7 +84,7 @@
 
             }
 
-	
+
 		}
 	]
 }

@@ -6,7 +6,7 @@
 	},
 
 	"heading" : {
-		
+
 		"_template" : "common/text",
 
 		"text" : "1 Image left aligned with dark background for text"
@@ -21,7 +21,7 @@
 
                 "_template" : "components/bsp-list-promo-item-handler",
 
-                "name" : "image",				
+                "name" : "image",
 
 				"image" : {
 
@@ -41,7 +41,7 @@
 							"src" : "/assets/images/800x450.png"
 						}
 					}
-					
+
 				}
 
             },

@@ -2,7 +2,7 @@
 	"_template" : "components/bsp-list-promo",
 
 	"heading" : {
-        
+
         "_template" : "common/text",
 
         "text" : "1 Image with title, text, and CTA"
@@ -37,7 +37,7 @@
 							"src" : "/assets/images/800x450.png"
 						}
 					}
-					
+
 				}
 
             },

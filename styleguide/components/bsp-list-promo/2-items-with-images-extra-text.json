@@ -2,7 +2,7 @@
 	"_template" : "components/bsp-list-promo",
 
 	"heading" : {
-        
+
         "_template" : "common/text",
 
         "text" : "2 items with image, title, link and description"
@@ -38,7 +38,7 @@
 							"src" : "/assets/images/800x450.png"
 						}
 					}
-					
+
 				}
 
             },
@@ -79,7 +79,7 @@
 
             }
 		},
-		
+
 		{
 
 			"imgAlign" : "top",
@@ -108,7 +108,7 @@
 							"src" : "/assets/images/800x450.png"
 						}
 					}
-					
+
 				}
 
             },

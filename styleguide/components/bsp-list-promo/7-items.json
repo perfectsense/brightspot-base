@@ -6,7 +6,7 @@
 	},
 
 	"heading" : {
-        
+
         "_template" : "common/text",
 
         "text" : "7 items with hardcoded heights"
@@ -33,7 +33,7 @@
 					"text" : "8 Burning Questions Link"
 
 				}
-            }				
+            }
 		},
 		{
 			"section1" : {
@@ -54,7 +54,7 @@
 					"text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
 
 				}
-            }				
+            }
 		},
 		{
 			"section1" : {
@@ -75,7 +75,7 @@
 					"text" : "8 Burning Questions Link"
 
 				}
-            }				
+            }
 		},
 		{
 			"section1" : {
@@ -96,7 +96,7 @@
 					"text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
 
 				}
-            }				
+            }
 		},
 		{
 			"section1" : {
@@ -117,7 +117,7 @@
 					"text" : "8 Burning Questions Link"
 
 				}
-            }				
+            }
 		},
 		{
 			"section1" : {
@@ -138,7 +138,7 @@
 					"text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
 
 				}
-            }				
+            }
 		},
 		{
 			"section1" : {
@@ -159,7 +159,7 @@
 					"text" : "8 Burning Questions Link"
 
 				}
-            }				
+            }
 		}
 	],
 

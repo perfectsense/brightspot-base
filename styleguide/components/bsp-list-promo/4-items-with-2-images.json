@@ -1,8 +1,8 @@
 {
 	"_template" : "components/bsp-list-promo",
-	
+
 	"heading" : {
-        
+
         "_template" : "common/text",
 
         "text" : "4 items with two items with image"
@@ -37,7 +37,7 @@
 							"src" : "/assets/images/800x450.png"
 						}
 					}
-					
+
 				}
 
             },
@@ -102,7 +102,7 @@
 							"src" : "/assets/images/800x450.png"
 						}
 					}
-					
+
 				}
 
             },
@@ -159,7 +159,7 @@
 					"text" : "8 Burning Questions Link"
 
 				}
-            }			
+            }
 		},
 		{
 			 "section1" : {
@@ -180,7 +180,7 @@
 					"text" : "8 Burning Questions Link"
 
 				}
-            }			
+            }
 		}
 	],
 

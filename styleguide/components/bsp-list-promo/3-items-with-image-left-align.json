@@ -6,7 +6,7 @@
 	},
 
 	"heading" : {
-        
+
         "_template" : "common/text",
 
         "text" : "3 Items with Image, left Align"
@@ -48,7 +48,7 @@
 
 				"description" : "Strip steak tenderloin jerky. Chicken ham ball tip prosciutto sirloin ham hock pork sausage cow salami spare ribs flank pancetta landjaeger doner. Jerky leberkas prosciutto flank meatball sausage. Venison rump kielbasa short ribs spare ribs."
 
-            }				
+            }
 		},
 		{
 			"imgAlign" : "left",
@@ -84,7 +84,7 @@
 
 				"description" : "Strip steak tenderloin jerky. Chicken ham ball tip prosciutto sirloin ham hock pork sausage cow salami spare ribs flank pancetta landjaeger doner. Jerky leberkas prosciutto flank meatball sausage. Venison rump kielbasa short ribs spare ribs."
 
-            }				
+            }
 		},
 		{
 			"imgAlign" : "left",
@@ -120,7 +120,7 @@
 
 				"description" : "Strip steak tenderloin jerky. Chicken ham ball tip prosciutto sirloin ham hock pork sausage cow salami spare ribs flank pancetta landjaeger doner. Jerky leberkas prosciutto flank meatball sausage. Venison rump kielbasa short ribs spare ribs."
 
-            }				
+            }
 		}
 	]
 }

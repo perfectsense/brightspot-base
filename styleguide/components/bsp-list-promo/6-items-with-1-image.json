@@ -2,7 +2,7 @@
 	"_template" : "components/bsp-list-promo",
 
 	"heading" : {
-        
+
         "_template" : "common/text",
 
         "text" : "6 items with one item with image"
@@ -177,7 +177,7 @@
 
 				}
             }
-		}		
+		}
 	],
 
 	"cta" : {

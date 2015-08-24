@@ -2,7 +2,7 @@
 	"_template" : "components/bsp-list-promo",
 
 	"listItems" : [
-		{			 
+		{
 			"imgAlign" : "top",
 
 			"section1" : {
@@ -29,7 +29,7 @@
 							"src" : "/assets/images/800x450.png"
 						}
 					}
-					
+
 				}
 
             },
@@ -55,7 +55,7 @@
 
 				"description" : "<p>Shankle pork loin landjaeger pork chop t-bone. Shank capicola strip steak, salami prosciutto ham hock venison. Short ribs meatloaf doner hamburger frankfurter tri-tip.</p>"
 
-            }				
+            }
 		}
 	]
 }

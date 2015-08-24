@@ -2,7 +2,7 @@
 	"_template" : "components/bsp-list-promo",
 
 	"heading" : {
-		
+
 		"_template" : "common/text",
 
 		"text" : "Just Image"
@@ -34,10 +34,10 @@
 							"alt" : "Image",
 							"src" : "/assets/images/800x450.png"
 						}
-					}					
+					}
 				}
 			}
-			
+
 		}
 	]
 }

@@ -4,11 +4,11 @@
 	"options" : {
 
 		"horizontalSplit" : "third"
-		
+
 	},
 
 	"heading" : {
-        
+
         "_template" : "common/text",
 
         "text" : "6 Images, horizontal align, with title, text, and CTA, 3 overlayed"

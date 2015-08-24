@@ -2,7 +2,7 @@
 	"_template" : "components/bsp-list-promo",
 
 	"heading" : {
-        
+
         "_template" : "common/text",
 
         "text" : "Image with Overlay"
@@ -12,7 +12,7 @@
 	"listItems" : [
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
-		 
+
 			"imgAlign" : "overlay",
 
 			"image" : {
@@ -33,7 +33,7 @@
 						"src" : "/assets/images/800x450.png"
 					}
 				}
-				
+
 			},
 
 			"section1" : {

@@ -3,7 +3,7 @@
 	"_template" : "components/bsp-list-promo",
 
 	"heading" : {
-        
+
         "_template" : "common/text",
 
         "text" : "3 items with one items with image and extra text"
@@ -38,7 +38,7 @@
 							"src" : "/assets/images/800x450.png"
 						}
 					}
-					
+
 				}
             },
 
@@ -96,7 +96,7 @@
 					"text" : "8 Burning Questions Link"
 
 				}
-            }				
+            }
 		},
 		{
 			"section1" : {
@@ -117,7 +117,7 @@
 					"text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
 
 				}
-            }				
+            }
 		}
 	],
 

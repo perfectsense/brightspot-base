@@ -6,13 +6,13 @@
 	},
 
 	"heading" : {
-        
+
         "_template" : "common/text",
 
         "text" : "4 items with dynamic heights"
 
     },
-	
+
 	"listItems" : [
 		{
 			"section1" : {
@@ -33,7 +33,7 @@
 					"text" : "8 Burning Questions Link"
 
 				}
-            }				
+            }
 		},
 		{
 			"section1" : {
@@ -54,7 +54,7 @@
 					"text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
 
 				}
-            }				
+            }
 		},
 		{
 			"section1" : {
@@ -75,7 +75,7 @@
 					"text" : "8 Burning Questions Link"
 
 				}
-            }				
+            }
 		},
 		{
 			"section1" : {
@@ -96,8 +96,8 @@
 					"text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
 
 				}
-            }				
-		}		
+            }
+		}
 	],
 
 	"cta" : {

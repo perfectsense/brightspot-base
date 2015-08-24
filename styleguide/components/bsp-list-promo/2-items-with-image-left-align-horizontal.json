@@ -7,7 +7,7 @@
 	},
 
 	"heading" : {
-        
+
         "_template" : "common/text",
 
         "text" : "2 Images left aligned, horizontal"
@@ -43,7 +43,7 @@
 							"src" : "/assets/images/800x450.png"
 						}
 					}
-					
+
 				}
             },
 
@@ -109,7 +109,7 @@
 							"src" : "/assets/images/800x450.png"
 						}
 					}
-					
+
 				}
             },
 

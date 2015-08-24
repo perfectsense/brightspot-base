@@ -6,7 +6,7 @@
 	},
 
 	"heading" : {
-        
+
         "_template" : "common/text",
 
         "text" : "Top Articles"
@@ -76,7 +76,7 @@
 
 				}
             }
-		}		
+		}
 	],
 
 	"cta" : {
