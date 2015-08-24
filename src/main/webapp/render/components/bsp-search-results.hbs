@@ -1,0 +1,47 @@
+<div class="bsp-search-results">
+
+	<h1 class="bsp-search-results-heading">
+		{{#each heading}}
+			{{#if className}}<span class="{{className}}">{{/if}}{{text}}{{#if className}}</span>{{/if}}
+		{{/each}}
+	</h1>
+
+	<form class="bsp-search-results-form">
+		{{#with search-form}}
+
+			{{#with search-input}}
+				{{render this}}
+			{{/with}}
+
+			<button class="bsp-search-results-submit" type="submit"><i class="icon icon-search"><span class="sr-only">Go</span></i></button>
+
+		{{/with}}
+	</form>
+
+	{{#with search-sort}}
+	<div class="bsp-search-results-sort">
+		{{render this}}
+	</div>
+	{{/with}}
+
+	{{#with search-filter}}
+	<div class="bsp-search-results-filter">
+		{{#with heading}}
+			{{render this}}
+		{{/with}}
+
+		<div class="bsp-search-results-filters">
+			{{#each checkboxes}}
+				{{render this}}
+			{{/each}}
+		</div>
+	</div>
+	{{/with}}
+
+	<div class="bsp-search-results-content">
+		{{#each search-results}}
+			{{render this}}
+		{{/each}}
+	</div>
+
+</div>

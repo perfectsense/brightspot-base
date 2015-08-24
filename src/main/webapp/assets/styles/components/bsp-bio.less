@@ -112,12 +112,18 @@
 
 		border-bottom: @border-style-5;
 		border-top: @border-style-5;
+
 		display: flex;
-    	justify-content: space-between;
+		ms-display: flex;
+
+		justify-content: space-between;
+		ms-justify-content: space-between;
+		
     	margin: 0;
 		padding: @space-and-half @space @space-double;
 
 		li {
+			display: inline-block;
 			padding-left: @space-double;
 
 			&:first-of-type {
