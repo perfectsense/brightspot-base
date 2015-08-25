@@ -55,14 +55,26 @@
 	},
 
 	"search-results" : [
-
+		{
+			"_dataUrl" : "results-show-lead.json"
+		},
+		{
+			"_dataUrl" : "results-show.json"
+		},
 		{
 			"_dataUrl" : "results-images.json"
 		},
 		{
 			"_dataUrl" : "results-theater.json"
+		},
+		{
+			"_dataUrl" : "results-show.json"
 		}
 
-	]
+	],
+
+	"pagination" : {
+		"_dataUrl" : "/components/bsp-pagination/3-pages.json"
+	}
 
 }

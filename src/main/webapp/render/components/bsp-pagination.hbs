@@ -2,23 +2,23 @@
 	<div class="bsp-pagination">
 		<ul>
 			{{#with navigate}}
-				<li class="bsp-paginate-navigate">
+				<li class="bsp-pagination-navigate-prev">
 					{{#with previous}}
-						{{ render this }}
+						<a {{#with attributes}}{{> common/attributes }}{{/with}}><i class="icon icon-angle-left"></i> {{text}}</a>
 					{{/with}}
 				</li>
 			{{/with}}
 			{{#each listItems}}
-				<li class="bsp-paginate-page">
+				<li class="bsp-pagination-page">
 				{{#with link}}
 					{{ render this }}
 				{{/with}}
 				</li>
 			{{/each}}
 			{{#with navigate}}
-				<li class="bsp-paginate-navigate">
+				<li class="bsp-pagination-navigate-next">
 					{{#with next}}
-						{{ render this }}
+						<a {{#with attributes}}{{> common/attributes }}{{/with}}>{{text}} <i class="icon icon-angle-right"></i></a>
 					{{/with}}
 				</li>
 			{{/with}}
