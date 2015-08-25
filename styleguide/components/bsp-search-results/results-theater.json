@@ -9,6 +9,8 @@
 
 	"listItems" : [
 		{ 
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"imgAlign" : "top",
 
 			"image" : {
@@ -16,11 +18,13 @@
 			},
 
 			"title" : {
-				"_dataUrl" : "/common/link-text-title.json"
+				"_dataUrl" : "/common/link-test-text-26-char.json"
 			}
 
 		},
 		{ 
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"imgAlign" : "top",
 
 			"image" : {
@@ -28,11 +32,13 @@
 			},
 
 			"title" : {
-				"_dataUrl" : "/common/link-text-title.json"
+				"_dataUrl" : "/common/link-test-text-26-char.json"
 			}
 
 		},
 		{ 
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"imgAlign" : "top",
 
 			"image" : {
@@ -40,11 +46,13 @@
 			},
 
 			"title" : {
-				"_dataUrl" : "/common/link-text-title.json"
+				"_dataUrl" : "/common/link-test-text-26-char.json"
 			}
 
 		},
 		{ 
+			"_template" : "components/bsp-list-promo-item-handler",
+
 			"imgAlign" : "top",
 
 			"image" : {
@@ -52,7 +60,7 @@
 			},
 
 			"title" : {
-				"_dataUrl" : "/common/link-text-title.json"
+				"_dataUrl" : "/common/link-test-text-26-char.json"
 			}
 
 		}
@@ -64,7 +72,7 @@
 		},
 
 		"content" : {
-			"_dataUrl" : "/common/link-test-text.json"
+			"_dataUrl" : "/common/link-test-text-14-char.json"
 		}
 	}
 }

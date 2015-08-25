@@ -11,38 +11,74 @@
 		{ 
 			"imgAlign" : "top",
 
-			"image" : {
-				"_dataUrl" : "/common/link-image-800x450.json"				
-			},
+			"sections" : [
+                {
+                	"_template" : "components/bsp-list-promo-item-handler",
 
-			"title" : {
-				"_dataUrl" : "/common/link-text-title.json"	
-			}
+                	"name" : "image",
 
+					"image" : {
+						"_dataUrl" : "/common/link-image-800x450.json"				
+					}
+				},
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
+
+					"name" : "text",
+
+					"title" : {
+						"_dataUrl" : "/common/link-test-text-26-char.json"	
+					}
+				}
+			]
 		},
 		{ 
 			"imgAlign" : "top",
 
-			"image" : {
-				"_dataUrl" : "/common/link-image-800x450.json"				
-			},
+			"sections" : [
+                {
+                	"_template" : "components/bsp-list-promo-item-handler",
 
-			"title" : {
-				"_dataUrl" : "/common/link-text-title.json"	
-			}
+                	"name" : "image",
 
+					"image" : {
+						"_dataUrl" : "/common/link-image-800x450.json"				
+					}
+				},
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
+
+					"name" : "text",
+
+					"title" : {
+						"_dataUrl" : "/common/link-test-text-26-char.json"	
+					}
+				}
+			]
 		},
 		{ 
 			"imgAlign" : "top",
 
-			"image" : {
-				"_dataUrl" : "/common/link-image-800x450.json"				
-			},
+			"sections" : [
+                {
+                	"_template" : "components/bsp-list-promo-item-handler",
 
-			"title" : {
-				"_dataUrl" : "/common/link-text-title.json"	
-			}
+                	"name" : "image",
 
+					"image" : {
+						"_dataUrl" : "/common/link-image-800x450.json"				
+					}
+				},
+				{
+					"_template" : "components/bsp-list-promo-item-handler",
+
+					"name" : "text",
+
+					"title" : {
+						"_dataUrl" : "/common/link-test-text-26-char.json"	
+					}
+				}
+			]
 		}
 	],
 
@@ -52,7 +88,7 @@
 		},
 
 		"content" : {
-			"_dataUrl" : "/common/link-test-text.json"
+			"_dataUrl" : "/common/link-test-text-14-char.json"
 		}
 	}
 }
