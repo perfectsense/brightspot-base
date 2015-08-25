@@ -18,7 +18,22 @@
                 	"name" : "image",
 
 					"image" : {
-						"_dataUrl" : "/common/link-image-800x450.json"				
+						"_template" : "common/link",
+
+						"attributes" : {
+							"href"  : "link",
+							"title" : "Link Title"
+						},
+
+						"image" : {
+
+							"_template" : "common/image",
+
+							"attributes" : {
+								"alt" : "Image",
+								"src" : "/assets/images/800x450.png"
+							}
+						}
 					}
 				},
 				{
@@ -27,7 +42,14 @@
 					"name" : "text",
 
 					"title" : {
-						"_dataUrl" : "/common/link-test-text-26-char.json"	
+						"_template" : "common/link",
+
+						"attributes" : {
+							"href"  : "link",
+							"title" : "Link Title"
+						},
+
+						"text" : "Bresaola corned beef bacon"
 					}
 				}
 			]
@@ -42,7 +64,22 @@
                 	"name" : "image",
 
 					"image" : {
-						"_dataUrl" : "/common/link-image-800x450.json"				
+						"_template" : "common/link",
+
+						"attributes" : {
+							"href"  : "link",
+							"title" : "Link Title"
+						},
+
+						"image" : {
+
+							"_template" : "common/image",
+
+							"attributes" : {
+								"alt" : "Image",
+								"src" : "/assets/images/800x450.png"
+							}
+						}
 					}
 				},
 				{
@@ -51,7 +88,14 @@
 					"name" : "text",
 
 					"title" : {
-						"_dataUrl" : "/common/link-test-text-26-char.json"	
+						"_template" : "common/link",
+
+						"attributes" : {
+							"href"  : "link",
+							"title" : "Link Title"
+						},
+
+						"text" : "Bresaola corned beef bacon"
 					}
 				}
 			]
@@ -66,7 +110,22 @@
                 	"name" : "image",
 
 					"image" : {
-						"_dataUrl" : "/common/link-image-800x450.json"				
+						"_template" : "common/link",
+
+						"attributes" : {
+							"href"  : "link",
+							"title" : "Link Title"
+						},
+
+						"image" : {
+
+							"_template" : "common/image",
+
+							"attributes" : {
+								"alt" : "Image",
+								"src" : "/assets/images/800x450.png"
+							}
+						}
 					}
 				},
 				{
@@ -75,7 +134,14 @@
 					"name" : "text",
 
 					"title" : {
-						"_dataUrl" : "/common/link-test-text-26-char.json"	
+						"_template" : "common/link",
+
+						"attributes" : {
+							"href"  : "link",
+							"title" : "Link Title"
+						},
+
+						"text" : "Bresaola corned beef bacon"
 					}
 				}
 			]
