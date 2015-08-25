@@ -36,12 +36,12 @@
 
                     "tags" : [
     					{
-    						"_dataUrl" : "/common/link-test-text.json"
+    						"_dataUrl" : "/common/link-test-text-14-char.json"
     					}
     				],
 
     				"title" : {
-    					"_dataUrl" : "/common/link-text-title.json"
+    					"_dataUrl" : "/common/link-test-text-26-char.json"
     				},
 
     				"subtitle" : "<b>By Alisha Templeton</b> | 06/07/2015",
@@ -73,12 +73,12 @@
 
                     "tags" : [
     					{
-    						"_dataUrl" : "/common/link-test-text.json"
+    						"_dataUrl" : "/common/link-test-text-14-char.json"
     					}
     				],
 
     				"title" : {
-    					"_dataUrl" : "/common/link-text-title.json"
+    					"_dataUrl" : "/common/link-test-text-26-char.json"
     				},
 
     				"subtitle" : "<b>By Alisha Templeton</b> | 06/07/2015",
@@ -111,12 +111,12 @@
 
                     "tags" : [
     					{
-    						"_dataUrl" : "/common/link-test-text.json"
+    						"_dataUrl" : "/common/link-test-text-14-char.json"
     					}
     				],
 
     				"title" : {
-    					"_dataUrl" : "/common/link-text-title.json"
+    					"_dataUrl" : "/common/link-test-text-26-char.json"
     				},
 
     				"subtitle" : "<b>By Alisha Templeton</b> | 06/07/2015",
