@@ -1,65 +1,84 @@
 {
-	"_template" : "components/bsp-list-promo",
+    "_template" : "components/bsp-list-promo",
 
-	"options" : {
-		"modifierClass" : "image-50-width-background"
-	},
+    "options" : {
+        "modifierClass" : "image-50-width-background"
+    },
 
-	"heading" : "1 Image left aligned with dark background for text",
+    "heading" : {
 
-	"listItems" : [
-		{ 
-			"imgAlign" : "left",
+        "_template" : "common/text",
 
-			"image" : {
+        "text" : "1 Image left aligned with dark background for text"
 
-				"_template" : "common/link",
+    },
 
-				"attributes" : {
-					"href"  : "link",
-					"title" : "Link Title"
-				},
+    "listItems" : [
+        {
+            "imgAlign" : "left",
 
-				"image" : {
+            "sections" : [
+                {
+                    "_template" : "components/bsp-list-promo-item-handler",
 
-					"_template" : "common/image",
+                    "name" : "image",
 
-					"attributes" : {
-						"alt" : "Test Alt",
-						"src" : "/assets/images/800x450.png"
-					}
-				}
-				
-			},
+                    "image" : {
 
-			"link" : {
+                        "_template" : "common/link",
 
-				"_template" : "common/link",
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
 
-				"attributes" : {
-					"href"  : "link",
-					"title" : "Link Title"
-				},
+                        "image" : {
 
-				"text" : "8 Burning Questions Link"
+                            "_template" : "common/image",
 
-			},
+                            "attributes" : {
+                                "alt" : "Test Alt",
+                                "src" : "/assets/images/800x450.png"
+                            }
+                        }
+                    }
+                },
+                {
 
-			"title" : {
+                    "_template" : "components/bsp-list-promo-item-handler",
 
-				"_template" : "common/link",
+                    "name" : "text",
 
-				"attributes" : {
-					"href"  : "link",
-					"title" : "Link Title"
-				},
+                    "link" : {
 
-				"text" : "8 Burning Questions Title"
+                        "_template" : "common/link",
 
-			},
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
 
-			"description" : "Shankle pork loin landjaeger pork chop t-bone. Shank capicola strip steak, salami prosciutto ham hock venison. Short ribs meatloaf doner hamburger frankfurter tri-tip."
+                        "text" : "8 Burning Questions Link"
 
-		}
-	]
+                    },
+
+                    "title" : {
+
+                        "_template" : "common/link",
+
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
+
+                        "text" : "8 Burning Questions Title"
+
+                    },
+
+                    "description" : "Shankle pork loin landjaeger pork chop t-bone. Shank capicola strip steak, salami prosciutto ham hock venison. Short ribs meatloaf doner hamburger frankfurter tri-tip."
+
+                }
+            ]
+        }
+    ]
 }

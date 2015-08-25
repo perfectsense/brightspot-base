@@ -5,6 +5,10 @@
 .bsp-bio-image {
 	float: left;
 	width: 25%;
+
+	img {
+		width: 100%;
+	}
 }
 
 .bsp-bio-content {
@@ -52,6 +56,10 @@
 
 	margin: 0 0 @space 0;
 	text-transform: uppercase;
+
+	li {
+		margin-bottom: @space;
+	}
 
 	li span {
 		font-weight: @font-weight-bold;
@@ -102,12 +110,20 @@
 	ul {
 		&:extend(.bsp-list-inline all);
 
+		border-bottom: @border-style-5;
 		border-top: @border-style-5;
+
 		display: flex;
-    	justify-content: space-between;
-		padding: @space-and-half 0;
+		ms-display: flex;
+
+		justify-content: space-between;
+		ms-justify-content: space-between;
+		
+    	margin: 0;
+		padding: @space-and-half @space @space-double;
 
 		li {
+			display: inline-block;
 			padding-left: @space-double;
 
 			&:first-of-type {

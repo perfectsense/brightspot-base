@@ -1,114 +1,152 @@
 {
 	"_template" : "components/bsp-list-promo",
 
-	"heading" : "2 items with image, title, link and description",
+	"heading" : {
+
+        "_template" : "common/text",
+
+        "text" : "2 items with image, title, link and description"
+
+    },
 
 	"listItems" : [
-		{ 
+		{
+
 			"imgAlign" : "top",
 
-			"image" : {
+			"sections" : [
+                {
 
-				"_template" : "common/link",
+                    "_template" : "components/bsp-list-promo-item-handler",
 
-				"attributes" : {
-					"href"  : "link",
-					"title" : "Link Title"
-				},
+                    "name" : "image",
 
-				"image" : {
+                    "image" : {
 
-					"_template" : "common/image",
+    					"_template" : "common/link",
 
-					"attributes" : {
-						"alt" : "Test Alt",
-						"src" : "/assets/images/800x450.png"
-					}
-				}
-				
-			},
+    					"attributes" : {
+    						"href"  : "link",
+    						"title" : "Link Title"
+    					},
 
-			"link" : {
+    					"image" : {
 
-				"_template" : "common/link",
+    						"_template" : "common/image",
 
-				"attributes" : {
-					"href"  : "link",
-					"title" : "Link Title"
-				},
+    						"attributes" : {
+    							"alt" : "Test Alt",
+    							"src" : "/assets/images/800x450.png"
+    						}
+    					}
 
-				"text" : "8 Burning Questions Link"
+    				}
 
-			},
+                },
+                {
 
-			"title" : {
+                    "_template" : "components/bsp-list-promo-item-handler",
 
-				"_template" : "common/link",
+                    "name" : "text",
 
-				"attributes" : {
-					"href"  : "link",
-					"title" : "Link Title"
-				},
+                    "link" : {
 
-				"text" : "8 Burning Questions Title"
+    					"_template" : "common/link",
 
-			},
+    					"attributes" : {
+    						"href"  : "link",
+    						"title" : "Link Title"
+    					},
 
-			"description" : "Shankle pork loin landjaeger pork chop t-bone. Shank capicola strip steak, salami prosciutto ham hock venison. Short ribs meatloaf doner hamburger frankfurter tri-tip."
+    					"text" : "8 Burning Questions Link"
 
+    				},
+
+    				"title" : {
+
+    					"_template" : "common/link",
+
+    					"attributes" : {
+    						"href"  : "link",
+    						"title" : "Link Title"
+    					},
+
+    					"text" : "8 Burning Questions Title"
+
+    				},
+
+    				"description" : "Shankle pork loin landjaeger pork chop t-bone. Shank capicola strip steak, salami prosciutto ham hock venison. Short ribs meatloaf doner hamburger frankfurter tri-tip."
+
+                }
+            ]
 		},
-		{ 
+		{
+
 			"imgAlign" : "top",
 
-			"image" : {
+			"sections" : [
+                {
 
-				"_template" : "common/link",
+                    "_template" : "components/bsp-list-promo-item-handler",
 
-				"attributes" : {
-					"href"  : "link",
-					"title" : "Link Title"
-				},
+                    "name" : "image",
 
-				"image" : {
+                    "image" : {
 
-					"_template" : "common/image",
+    					"_template" : "common/link",
 
-					"attributes" : {
-						"alt" : "Test Alt",
-						"src" : "/assets/images/800x450.png"
-					}
-				}
-				
-			},
+    					"attributes" : {
+    						"href"  : "link",
+    						"title" : "Link Title"
+    					},
 
-			"link" : {
+    					"image" : {
 
-				"_template" : "common/link",
+    						"_template" : "common/image",
 
-				"attributes" : {
-					"href"  : "link",
-					"title" : "Link Title"
-				},
+    						"attributes" : {
+    							"alt" : "Test Alt",
+    							"src" : "/assets/images/800x450.png"
+    						}
+    					}
+    				}
+                },
+                {
 
-				"text" : "8 Burning Questions Link"
+                    "_template" : "components/bsp-list-promo-item-handler",
 
-			},
+                    "name" : "text",
 
-			"title" : {
+                    "link" : {
 
-				"_template" : "common/link",
+    					"_template" : "common/link",
 
-				"attributes" : {
-					"href"  : "link",
-					"title" : "Link Title"
-				},
+    					"attributes" : {
+    						"href"  : "link",
+    						"title" : "Link Title"
+    					},
 
-				"text" : "8 Burning Questions Title"
+    					"text" : "8 Burning Questions Link"
 
-			},
+    				},
 
-			"description" : "Shankle pork loin landjaeger pork chop t-bone. Shank capicola strip steak, salami prosciutto ham hock venison. Short ribs meatloaf doner hamburger frankfurter tri-tip."
+    				"title" : {
 
+    					"_template" : "common/link",
+
+    					"attributes" : {
+    						"href"  : "link",
+    						"title" : "Link Title"
+    					},
+
+    					"text" : "8 Burning Questions Title"
+
+    				},
+
+    				"description" : "Shankle pork loin landjaeger pork chop t-bone. Shank capicola strip steak, salami prosciutto ham hock venison. Short ribs meatloaf doner hamburger frankfurter tri-tip."
+
+                }
+            ]
 		}
 	],
 

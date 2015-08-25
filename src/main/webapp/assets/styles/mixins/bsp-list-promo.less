@@ -8,7 +8,7 @@
 
 	.bsp-list-promo-list {
 
-		.bsp-list-promo-text {
+		.bsp-list-promo-section-text {
 			height: @item-height;
 
 			&:extend(.vertical-center-wrapper all);
@@ -36,7 +36,7 @@
 
 // this mixin allows us to create a modifier depending on how we want to arrange the image and text
 .bsp-list-promo-image-size(@size: 50%) {
-	.bsp-list-promo-image {
+	.bsp-list-promo-section-image {
 		width: @size;
 	}
 
@@ -44,7 +44,7 @@
 		margin-top: 0 !important; // overriding parent specificity
 	}
 
-	.bsp-list-promo-text {
+	.bsp-list-promo-section-text {
 		margin-top: -@space;
 		width: (100%-@size);
 	}
@@ -56,11 +56,11 @@
 // of the image with absolute positioning
 .list-promo-image-width-background(@width: 50%, @bg-color: @brand-secondary, @promo-text-color: @white) {
 
-	.bsp-list-promo-image {
+	.bsp-list-promo-section-image {
 		width: @width;
 	}
 
-	.bsp-list-promo-text {
+	.bsp-list-promo-section-text {
 		background: @bg-color;
 		color: @promo-text-color;
 		padding-top: @space;
@@ -69,13 +69,13 @@
 	}
 
 	.image-align-left {
-		.bsp-list-promo-text {
+		.bsp-list-promo-section-text {
 			left: @width;
 		}
 	}
 
 	.image-align-right {
-		.bsp-list-promo-text {
+		.bsp-list-promo-section-text {
 			right: @width;
 		}
 	}

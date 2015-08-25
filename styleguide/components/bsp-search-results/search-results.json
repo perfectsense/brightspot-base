@@ -1,0 +1,68 @@
+{
+	"_template" : "components/bsp-search-results",
+
+	"heading" : [
+
+		{
+			"text" : "We found"
+		},
+		{
+			"className" : "bsp-results",
+			"text" : "128"
+		},
+		{
+			"text" : "results for"
+		},
+		{
+			"className" : "bsp-search-query",
+			"text" : "\"Lion\""
+		}
+
+	],
+
+	"search-form" : {
+
+		"search-input" : {
+
+			"_template" : "components/bsp-form-input",
+
+			"showMessagesAbove": true,
+
+			"attributes": {
+				"autocomplete": "off",
+				"class" : "bsp-search-results-input",
+				"id" : "query",
+				"placeholder": "Lion",
+				"required": true,
+				"type": "text"
+			},
+
+			"errors": [
+				{ "valueMissing": "Please fill in the search query" }
+			]
+		}
+
+	},
+
+	"search-sort" : {
+
+		"_dataUrl" : "search-sort.json"
+	},
+
+	"search-filter" : {
+
+		"_dataUrl" : "search-filter.json"
+	},
+
+	"search-results" : [
+
+		{
+			"_dataUrl" : "results-images.json"
+		},
+		{
+			"_dataUrl" : "results-theater.json"
+		}
+
+	]
+
+}

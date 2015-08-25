@@ -1,0 +1,50 @@
+{
+    "_template" : "components/bsp-site-footer-simple",
+
+    "sharing" : {
+        "social": "Follow Jordan",
+
+        "links" : [{
+            "_template" : "common/link",
+            "icon"  : "facebook",
+
+            "attributes" : {
+                "href"  : "http://www.facebook.com",
+                "title" : "Facebook",
+                "target" : "_blank"
+            }
+        },
+        {
+            "_template" : "common/link",
+            "icon"  : "twitter",
+
+            "attributes" : {
+                "href"  : "http://www.twitter.com",
+                "title" : "Twitter",
+                "target" : "_blank"
+            }
+        },
+        {
+            "_template" : "common/link",
+            "icon"  : "pinterest",
+
+            "attributes" : {
+                "href"  : "http://www.pinterest.com",
+                "title" : "Pinterest",
+                "target" : "_blank"
+            }
+        },
+        {
+            "_template" : "common/link",
+            "icon"  : "linkedin",
+
+            "attributes" : {
+                "href"  : "http://www.linkedin.com",
+                "title" : "LinkedIn",
+                "target" : "_blank"
+            }
+        }]
+    },
+
+    "disclaimer": "Copyright © Brightspot"
+}

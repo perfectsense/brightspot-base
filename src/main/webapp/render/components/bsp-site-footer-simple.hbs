@@ -1,0 +1,31 @@
+<footer class="bsp-site-footer-simple">
+
+	<div class="bsp-container">
+		<div class="bsp-row">
+
+		{{#with sharing}}
+		<div class="bsp-component">
+
+			<h5 class="bsp-component-title">{{social}}</h5>
+
+			<div class="bsp-component-content">
+				
+				<ul class="bsp-share-links">
+					{{#each links}}
+						<li class="bsp-{{icon}}-share">{{render this linkClass="bsp-share-link"}}</li>
+					{{/each}}
+				</ul>
+				
+			</div>
+
+		</div>
+		{{/with}}
+
+		<div class="bsp-site-copyright">
+			{{{disclaimer}}}
+		</div>
+					
+		</div>
+
+	</div>
+</footer>

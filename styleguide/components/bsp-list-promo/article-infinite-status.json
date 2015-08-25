@@ -5,50 +5,83 @@
 		"modifierClass" : "bsp-infinite-load-status"
 	},
 
-	"heading" : "Top Articles",
+	"heading" : {
+
+        "_template" : "common/text",
+
+        "text" : "Top Articles"
+
+    },
 
 	"listItems" : [
-		{ 
-			"link" : {
+		{
+			"sections" : [
+                {
 
-				"_template" : "common/link",
+                    "_template" : "components/bsp-list-promo-item-handler",
 
-				"attributes" : {
-					"href"  : "/components/bsp-article/infinite.html",
-					"title" : "Link Title"
-				},
+                    "name" : "text",
 
-				"text" : "1111 ipsum dolor amet turducken jowl shankle, cupim"
+                    "link" : {
 
-			}
+    					"_template" : "common/link",
+
+    					"attributes" : {
+    						"href"  : "/components/bsp-article/infinite.html",
+    						"title" : "Link Title"
+    					},
+
+    					"text" : "1111 ipsum dolor amet turducken jowl shankle, cupim"
+
+    				}
+                }
+            ]
 		},
-		{ 
-			"link" : {
+		{
+			"sections" : [
+                {
 
-				"_template" : "common/link",
+                    "_template" : "components/bsp-list-promo-item-handler",
 
-				"attributes" : {
-					"href"  : "/components/bsp-article/infinite-2.html",
-					"title" : "Link Title"
-				},
+                    "name" : "text",
 
-				"text" : "2222 ipsum dolor amet turducken jowl shankle, cupim"
+                    "link" : {
 
-			}
+    					"_template" : "common/link",
+
+    					"attributes" : {
+    						"href"  : "/components/bsp-article/infinite.html",
+    						"title" : "Link Title"
+    					},
+
+    					"text" : "222 ipsum dolor amet turducken jowl shankle, cupim"
+
+    				}
+                }
+            ]
 		},
-		{ 
-			"link" : {
+		{
+			"sections" : [
+                {
 
-				"_template" : "common/link",
+                    "_template" : "components/bsp-list-promo-item-handler",
 
-				"attributes" : {
-					"href"  : "/components/bsp-article/infinite-3.html",
-					"title" : "Link Title"
-				},
+                    "name" : "text",
 
-				"text" : "3333 ipsum dolor amet turducken jowl shankle, cupim"
+                    "link" : {
 
-			}
+    					"_template" : "common/link",
+
+    					"attributes" : {
+    						"href"  : "/components/bsp-article/infinite.html",
+    						"title" : "Link Title"
+    					},
+
+    					"text" : "222 ipsum dolor amet turducken jowl shankle, cupim"
+
+    				}
+                }
+            ]
 		}
 	],
 

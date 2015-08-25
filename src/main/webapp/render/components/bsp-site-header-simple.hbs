@@ -1,0 +1,37 @@
+<header class="bsp-site-header-wrapper">
+
+	<div class="bsp-site-header-simple">
+		<div class="bsp-site-menu-toggle" data-bsp-toggle-item>
+			<div class="bsp-site-menu-trigger-simple toggle-trigger">
+				<a href="#"><i class="icon icon-bars"><span class="sr-only">toggle menu</span></i></a>			
+			</div>
+			{{#with navLinks}}
+	 			<nav class="bsp-site-menu-simple toggle-item">
+					<ul class="bsp-site-menu-items-simple">
+						{{#each this}}
+							<li class="site-item-simple">{{render this }}</li>
+						{{/each}}
+					</ul>
+				</nav>
+			{{/with}}
+		</div>	
+
+		<div class="bsp-site-logo-simple">
+			{{#with siteLogo.link}}
+				{{render this imgClass="bsp-site-logo-img"}}
+			{{/with}}
+		</div>
+
+		{{#with navLinks}}
+ 			<nav class="bsp-nav-menu-simple">
+				<ul class="bsp-nav-menu-items-simple">
+					{{#each this}}
+						<li class="nav-item-simple">{{render this }}</li>
+					{{/each}}
+				</ul>
+			</nav>
+		{{/with}}
+
+	</div>
+
+</header>

@@ -4,65 +4,107 @@
 	"options" : {
 		"orderedList"	: true
 	},
-	
-	"heading" : "4 items with dynamic heights",
+
+	"heading" : {
+
+        "_template" : "common/text",
+
+        "text" : "4 items with dynamic heights"
+
+    },
 
 	"listItems" : [
-		{ 
-			"link" : {
+		{
+			"sections" : [
+                {
 
-				"_template" : "common/link",
+                    "_template" : "components/bsp-list-promo-item-handler",
 
-				"attributes" : {
-					"href"  : "link",
-					"title" : "Link Title"
-				},
+                    "name" : "text",
 
-				"text" : "8 Burning Questions Link"
+                    "link" : {
 
-			}
+    					"_template" : "common/link",
+
+    					"attributes" : {
+    						"href"  : "link",
+    						"title" : "Link Title"
+    					},
+
+    					"text" : "8 Burning Questions Link"
+
+    				}
+                }
+            ]
 		},
-		{ 
-			"link" : {
+		{
+			"sections" : [
+                {
 
-				"_template" : "common/link",
+                    "_template" : "components/bsp-list-promo-item-handler",
 
-				"attributes" : {
-					"href"  : "link",
-					"title" : "Link Title"
-				},
+                    "name" : "text",
 
-				"text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
+                    "link" : {
 
-			}
+    					"_template" : "common/link",
+
+    					"attributes" : {
+    						"href"  : "link",
+    						"title" : "Link Title"
+    					},
+
+    					"text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
+
+    				}
+                }
+            ]
 		},
-		{ 
-			"link" : {
+		{
+			"sections" : [
+                {
 
-				"_template" : "common/link",
+                    "_template" : "components/bsp-list-promo-item-handler",
 
-				"attributes" : {
-					"href"  : "link",
-					"title" : "Link Title"
-				},
+                    "name" : "text",
 
-				"text" : "8 Burning Questions Link"
+                    "link" : {
 
-			}
+    					"_template" : "common/link",
+
+    					"attributes" : {
+    						"href"  : "link",
+    						"title" : "Link Title"
+    					},
+
+    					"text" : "8 Burning Questions Link"
+
+    				}
+                }
+            ]
 		},
-		{ 
-			"link" : {
+		{
+			"sections" : [
+                {
 
-				"_template" : "common/link",
+                    "_template" : "components/bsp-list-promo-item-handler",
 
-				"attributes" : {
-					"href"  : "link",
-					"title" : "Link Title"
-				},
+                    "name" : "text",
 
-				"text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
+                    "link" : {
 
-			}
+    					"_template" : "common/link",
+
+    					"attributes" : {
+    						"href"  : "link",
+    						"title" : "Link Title"
+    					},
+
+    					"text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
+
+    				}
+                }
+            ]
 		}
 	],
 

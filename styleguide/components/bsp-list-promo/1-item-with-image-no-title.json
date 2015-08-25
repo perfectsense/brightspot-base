@@ -2,44 +2,62 @@
 	"_template" : "components/bsp-list-promo",
 
 	"listItems" : [
-		{ 
+		{
 			"imgAlign" : "top",
 
-			"image" : {
+			"sections" : [
+                {
 
-				"_template" : "common/link",
+                    "_template" : "components/bsp-list-promo-item-handler",
 
-				"attributes" : {
-					"href"  : "link",
-					"title" : "Link Title"
-				},
+                    "name" : "image",
 
-				"image" : {
+                    "image" : {
 
-					"_template" : "common/image",
+    					"_template" : "common/link",
 
-					"attributes" : {
-						"alt" : "Image",
-						"src" : "/assets/images/800x450.png"
-					}
-				}
-				
-			},
+    					"attributes" : {
+    						"href"  : "link",
+    						"title" : "Link Title"
+    					},
 
-			"title" : {
+    					"image" : {
 
-				"_template" : "common/link",
+    						"_template" : "common/image",
 
-				"attributes" : {
-					"href"  : "link",
-					"title" : "Link Title"
-				},
+    						"attributes" : {
+    							"alt" : "Image",
+    							"src" : "/assets/images/800x450.png"
+    						}
+    					}
 
-				"text" : "This example has no title above it on purpose"
+    				}
 
-			},
+                },
 
-			"description" : "<p>Shankle pork loin landjaeger pork chop t-bone. Shank capicola strip steak, salami prosciutto ham hock venison. Short ribs meatloaf doner hamburger frankfurter tri-tip.</p>"
+                {
+
+                    "_template" : "components/bsp-list-promo-item-handler",
+
+                    "name" : "text",
+
+                    "title" : {
+
+    					"_template" : "common/link",
+
+    					"attributes" : {
+    						"href"  : "link",
+    						"title" : "Link Title"
+    					},
+
+    					"text" : "This example has no title above it on purpose"
+
+    				},
+
+    				"description" : "<p>Shankle pork loin landjaeger pork chop t-bone. Shank capicola strip steak, salami prosciutto ham hock venison. Short ribs meatloaf doner hamburger frankfurter tri-tip.</p>"
+
+                }
+            ]
 		}
 	]
 }

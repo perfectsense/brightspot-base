@@ -1,0 +1,40 @@
+{
+	"_template" : "components/bsp-form-select",
+
+	"attributes": {
+		"id"   : "bsp-search-results-sort-select",
+		"required": false
+	},
+
+	"errors": [
+		{ "valueMissing": "Please select an option" }
+	],
+
+	"label": {
+		"attributes": {
+			"for": "bsp-search-results-sort"
+		},
+		"text": "Sort By: "
+	},
+
+	"options": [
+		{
+			"attributes": {
+				"value": "Relevance"
+			},
+			"text": "Relevance"
+		},
+		{
+			"attributes": {
+				"value": "Popularity"
+			},
+			"text": "Popularity"
+		},
+		{
+			"attributes": {
+				"value": "Rating"
+			},
+			"text": "Rating"
+		}
+	]
+}

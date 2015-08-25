@@ -62,10 +62,46 @@
 					"_template" : "common/link",
 					
 					"attributes" : {
+						"href"  : "/components/bsp-form-input/",
+						"title" : "BSP Form Input"
+					},
+					"text"  : "BSP Form Input"
+				},
+				{
+					"_template" : "common/link",
+					
+					"attributes" : {
+						"href"  : "/components/bsp-form-select/",
+						"title" : "BSP Form Select"
+					},
+					"text"  : "BSP Form Select"
+				},
+				{
+					"_template" : "common/link",
+					
+					"attributes" : {
+						"href"  : "/components/bsp-form-textarea/",
+						"title" : "BSP Form Textarea"
+					},
+					"text"  : "BSP Form Textarea"
+				},
+				{
+					"_template" : "common/link",
+					
+					"attributes" : {
 						"href"  : "/components/bsp-gallery-module/",
 						"title" : "BSP Gallery Module"
 					},
 					"text"  : "BSP Gallery Module"
+				},
+				{
+					"_template" : "common/link",
+					
+					"attributes" : {
+						"href"  : "/components/bsp-gallery-fullscreen/",
+						"title" : "BSP Gallery Fullscreen"
+					},
+					"text"  : "BSP Gallery Fullscreen"
 				},
 				{
 					"_template" : "common/link",
@@ -84,6 +120,15 @@
 						"title" : "BSP List Promo"
 					},
 					"text"  : "BSP List Promo"
+				},
+				{
+					"_template" : "common/link",
+					
+					"attributes" : {
+						"href"  : "/components/bsp-tabber/",
+						"title" : "BSP Tabber"
+					},
+					"text"  : "BSP Tabber"
 				},
 				{
 					"_template" : "common/link",
