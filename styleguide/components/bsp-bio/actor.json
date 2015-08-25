@@ -46,7 +46,6 @@
 	],
 
 	"socialLinks" : [
-
 		{
 			"icon" : "twitter",
 			"link" : {
@@ -66,7 +65,7 @@
 			}
 		},
 		{
-			"icon" : "tumblr",
+			"icon" : "external-link",
 			"link" : {
 				"_dataUrl" : "/common/link-test-text-14-char.json"
 			}
