@@ -46,29 +46,29 @@
 
 	"search-sort" : {
 
-		"_dataUrl" : "search-sort.json"
+		"_dataUrl" : "/components/bsp-search-results/search-sort.json"
 	},
 
 	"search-filter" : {
 
-		"_dataUrl" : "search-filter.json"
+		"_dataUrl" : "/components/bsp-search-results/search-filter.json"
 	},
 
 	"search-results" : [
 		{
-			"_dataUrl" : "results-show-lead.json"
+			"_dataUrl" : "/components/bsp-search-results/results-show-lead.json"
 		},
 		{
-			"_dataUrl" : "results-show.json"
+			"_dataUrl" : "/components/bsp-search-results/results-show.json"
 		},
 		{
-			"_dataUrl" : "results-images.json"
+			"_dataUrl" : "/components/bsp-search-results/results-images.json"
 		},
 		{
-			"_dataUrl" : "results-theater.json"
+			"_dataUrl" : "/components/bsp-search-results/results-theater.json"
 		},
 		{
-			"_dataUrl" : "results-show.json"
+			"_dataUrl" : "/components/bsp-search-results/results-show.json"
 		}
 
 	],
