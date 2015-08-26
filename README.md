@@ -16,6 +16,13 @@ How to use it
 *	Override configuration, styles, scripts and templates to customize your project's appearance
 *	Test front end components using the [styleguide](styleguide/) prior to integrating them into Brightspot
 
+Writing Handlebar Templates
+---------------------------
+*   These notes should move into a "how to develop for Base" piece of documentation that we will get to soon. For now, please direct any questions at Tom Hoppe
+*   We are including the handlebar templates that should transform a specific piece of JSON in the root of the object with a `_template` key. This allows the front and and back end "parent" renderers to render any kinds of children inside of themselves without have that information be hardcoded as a partial in the parent renderer. Best example is the bsp-gallery-module, where you'll note, we can include via JSON any component we want into a gallery slide
+*   The above handlebar partial handling is done via the {{render this}} helper. This helper exists in our front end as well as back end handlebar code. It passes the JSON into the helper, which then picks out the `_template` value and uses it for rendering
+*   It's important to note that the JAVA implementation of handlebars uses the mustache spec for lookups (https://github.com/jknack/handlebars.java#differences-between-handlebarsjava-and-handlebarsjs). This means that if we want to support null or empty values, we need to be explicit in specifying the scope of an attribute with `this.`. If you do NOT specify a `this.`, the JAVA handlebar renderer will look up the context stack for an attribute with the same name and use it instead. 
+
 Building
 --------
 In most projects, you can run `mvn clean install` to generate a target directory. The target directory is needed by the styleguide server, as it combines files from [Bower](http://bower.io/), Brightspot Base and your project source.
