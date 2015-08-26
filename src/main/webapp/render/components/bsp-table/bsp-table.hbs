@@ -35,7 +35,7 @@
 									{{/if}}
 									{{#if image}}
 									    {{#with image}}
-									        {{> (lookup . '_template')}}
+									        {{render this}}
 									    {{/with}}
 									{{/if}}
 									{{#if text}}
