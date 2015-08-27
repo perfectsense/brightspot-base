@@ -132,7 +132,7 @@
 		},
 
 		"content" : {
-			"_dataUrl" : "/common/link-test-text.json"
+			"_dataUrl" : "/common/link-test-text-14-char.json"
 		}
 	}
 }

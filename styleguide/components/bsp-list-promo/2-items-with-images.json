@@ -16,7 +16,6 @@
 
 			"sections" : [
                 {
-
                     "_template" : "components/bsp-list-promo-item-handler",
 
                     "name" : "image",
@@ -42,7 +41,6 @@
     				}
                 },
                 {
-
                     "_template" : "components/bsp-list-promo-item-handler",
 
                     "name" : "text",
@@ -81,7 +79,6 @@
 
 			"sections" : [
                 {
-
                     "_template" : "components/bsp-list-promo-item-handler",
 
                     "name" : "image",
@@ -107,7 +104,6 @@
     				}
                 },
                 {
-
                     "_template" : "components/bsp-list-promo-item-handler",
 
                     "name" : "text",
@@ -148,7 +144,7 @@
 		},
 
 		"content" : {
-			"_dataUrl" : "/common/link-test-text.json"
+			"_dataUrl" : "/common/link-test-text-14-char.json"
 		}
 	}
 }

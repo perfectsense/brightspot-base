@@ -14,10 +14,10 @@
 
 	"subtitles" : [
 		{
-			"_dataUrl" : "/common/link-test-text.json"
+			"_dataUrl" : "/common/link-test-text-14-char.json"
 		},
 		{
-			"_dataUrl" : "/common/link-test-text.json"
+			"_dataUrl" : "/common/link-test-text-14-char.json"
 		}
 	],
 
@@ -46,29 +46,28 @@
 	],
 
 	"socialLinks" : [
-
 		{
 			"icon" : "twitter",
 			"link" : {
-				"_dataUrl" : "/common/link-test-text.json"
+				"_dataUrl" : "/common/link-test-text-14-char.json"
 			}
 		},
 		{
 			"icon" : "facebook",
 			"link" : {
-				"_dataUrl" : "/common/link-test-text.json"
+				"_dataUrl" : "/common/link-test-text-14-char.json"
 			}
 		},
 		{
 			"icon" : "instagram",
 			"link" : {
-				"_dataUrl" : "/common/link-test-text.json"
+				"_dataUrl" : "/common/link-test-text-14-char.json"
 			}
 		},
 		{
-			"icon" : "tumblr",
+			"icon" : "external-link",
 			"link" : {
-				"_dataUrl" : "/common/link-test-text.json"
+				"_dataUrl" : "/common/link-test-text-14-char.json"
 			}
 		}
 
