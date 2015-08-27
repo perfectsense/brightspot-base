@@ -5,7 +5,7 @@
 	{{/if}}
 
 	{{#if tabs}}
-		<div data-bsp-tabber{{#if options }} data-bsp-tabber-options='{{> common/options options }}'{{/if}}>
+		<div class="bsp-tabber-wrapper" data-bsp-tabber{{#if options }} data-bsp-tabber-options='{{> common/options options }}'{{/if}}>
 		{{#each tabs}}
 			<div class="bsp-tab" data-nav-title="{{#if label}}{{label}}{{/if}}">
 			{{#if text}}
