@@ -11,12 +11,12 @@
 
 						{{#with firstCol}}
 						    <section>
-					        	<h5 class="bsp-list-heading">{{heading}}</h5>
+					        	<h5 class="bsp-list-heading">{{this.heading}}</h5>
 					        	
 						        <ul class="bsp-unstyled-list">
-							        {{#each listItems}}
+							        {{#each this.listItems}}
 							            <li>
-							            {{#with link}}
+							            {{#with this.link}}
 							                 {{render this}}
 							            {{/with}}
 							            </li>
@@ -31,12 +31,12 @@
 
 						{{#with secondCol}}
 						    <section>
-					        	<h5 class="bsp-list-heading">{{heading}}</h5>
+					        	<h5 class="bsp-list-heading">{{this.heading}}</h5>
 					        	
 						        <ul class="bsp-unstyled-list">
-							        {{#each listItems}}
+							        {{#each this.listItems}}
 							            <li>
-							            {{#with link}}
+							            {{#with this.link}}
 							                 {{render this}}
 							            {{/with}}
 							            </li>
@@ -59,7 +59,7 @@
 
 				{{#with thirdCol}}
 
-					{{#if sharing}}
+					{{#if this.sharing}}
 						<div class="bsp-component">
 
 							<h5 class="bsp-component-title">{{social}}</h5>
