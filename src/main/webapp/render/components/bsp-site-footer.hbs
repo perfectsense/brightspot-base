@@ -9,14 +9,14 @@
 
 					<div class="bsp-column-half">
 
-						{{#with first-col}}
+						{{#with firstCol}}
 						    <section>
-					        	<h5 class="bsp-list-heading">{{heading}}</h5>
+					        	<h5 class="bsp-list-heading">{{this.heading}}</h5>
 					        	
 						        <ul class="bsp-unstyled-list">
-							        {{#each listItems}}
+							        {{#each this.listItems}}
 							            <li>
-							            {{#with link}}
+							            {{#with this.link}}
 							                 {{render this}}
 							            {{/with}}
 							            </li>
@@ -29,14 +29,14 @@
 
 					<div class="bsp-column-half">
 
-						{{#with second-col}}
+						{{#with secondCol}}
 						    <section>
-					        	<h5 class="bsp-list-heading">{{heading}}</h5>
+					        	<h5 class="bsp-list-heading">{{this.heading}}</h5>
 					        	
 						        <ul class="bsp-unstyled-list">
-							        {{#each listItems}}
+							        {{#each this.listItems}}
 							            <li>
-							            {{#with link}}
+							            {{#with this.link}}
 							                 {{render this}}
 							            {{/with}}
 							            </li>
@@ -57,9 +57,9 @@
 
 			<div class="bsp-column-third">
 
-				{{#with third-col}}
+				{{#with thirdCol}}
 
-					{{#if sharing}}
+					{{#if this.sharing}}
 						<div class="bsp-component">
 
 							<h5 class="bsp-component-title">{{social}}</h5>
@@ -83,7 +83,7 @@
 							<h5 class="bsp-component-title">{{newsletter}}</h5>
 
 							<div class="bsp-component-content">
-								<span>{{newsletter-description}}</span>
+								<span>{{newsletterDescription}}</span>
 							
 								<form action="" data-bsp-form>
 									<div class="input-container">
