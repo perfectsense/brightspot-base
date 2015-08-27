@@ -1,7 +1,7 @@
 {
 	"_template" : "components/bsp-site-footer",
 
-	"first-col" : {
+	"firstCol" : {
 		"heading": "Contact Brightspot",
 		"listItems" : [{ 
 				"link" : {
@@ -75,7 +75,7 @@
 			}]
 		},
 			
-		"second-col" : {
+		"secondCol" : {
 			"heading": "Contact Brightspot",
 			"listItems" : 
 			[{ 
@@ -136,10 +136,10 @@
 				}]
 	},
 
-	"third-col" : {
+	"thirdCol" : {
 		"social": "Follow Brightspot",
 		"newsletter": "Newsletter",
-		"newsletter-description": "Keep it up with the latest Brightspot.com" ,
+		"newsletterDescription": "Keep it up with the latest Brightspot.com" ,
 		"sharing" : {
 			"links" : [{
 				"_template" : "common/link",
