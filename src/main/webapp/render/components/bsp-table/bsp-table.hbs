@@ -10,7 +10,7 @@
 				{{#if headings}}
 					<thead>
 						{{#each headings}}
-							<th class="col-{{@key}}">
+							<th class="col-{{@index}}">
 								{{#if link.attributes}}
 								    {{#with link}}
 								        {{render this}}
@@ -25,9 +25,9 @@
 				{{/if}}
 				<tbody>
 					{{#each rows}}
-						<tr class="row-{{@key}}">
+						<tr class="row-{{@index}}">
 							{{#each row}}
-								<td class="col-{{@key}}">
+								<td class="col-{{@index}}">
 									{{#if link.attributes}}
 									    {{#with link}}
 									        {{render this}}
