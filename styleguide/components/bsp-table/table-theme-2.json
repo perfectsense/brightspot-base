@@ -4,7 +4,7 @@
 	"title" : "table - theme 2",
 
 	"options" : {
-		"_template" : "components/bsp-table/bsp-table-options",
+		
 		"theme" : "theme-2"
 	},
 
