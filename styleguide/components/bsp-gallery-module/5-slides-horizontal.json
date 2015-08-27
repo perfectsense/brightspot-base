@@ -3,7 +3,11 @@
 
 	"options" : {
 		"carouselDots" : false,
-		"horizontalSlides" : true
+		"horizontalSlides" : true,
+		"slidesToShow" : {
+			"medium" : 5,
+			"small" : 2
+		}
 	},
 
 	"galleryTitle" : "5 slides at a time, 2 on mobile",

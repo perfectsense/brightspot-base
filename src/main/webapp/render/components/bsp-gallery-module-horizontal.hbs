@@ -6,27 +6,35 @@
 	<div class="bsp-component-content">
 
 		<div class="gallery-module gallery-module-{{#if options.carouselDots}}carousel-dots{{/if}}{{#if options.horizontalSlides}}horizontal-slides{{/if}}" data-bsp-carousel data-bsp-carousel-options='{ 
+			"theme" : "{{#if options.carouselDots}}carousel-dots{{/if}}", 
 
-		"theme" : "{{#if options.carouselDots}}carousel-dots{{/if}}", 
+			"themeConfig" : { 
 
-		"themeConfig" : { 
+				"arrows" : false 
 
-			"arrows" : false 
-
-			{{#if options.horizontalSlides}},
-			"slidesToShow" : 5, 
-			"responsive": [
-		    {
-		      "breakpoint": 768,
-		      "settings": {
-		        "slidesToShow": 2
-		      }
-		    }]
-		    {{/if}} 
-
-	    }
-	    
-	    }'>
+				{{#if options.horizontalSlides}},
+					{{#if options.slidesToShow}}
+					"slidesToShow" : {{options.slidesToShow.medium}}, 
+					"responsive": [
+				    {
+				      "breakpoint": 768,
+				      "settings": {
+				        "slidesToShow": {{options.slidesToShow.small}}
+				      }
+				    }]
+				    {{else}}
+				    "slidesToShow" : 5, 
+					"responsive": [
+				    {
+				      "breakpoint": 768,
+				      "settings": {
+				        "slidesToShow": 2
+				      }
+				    }]
+				    {{/if}} 
+			    {{/if}} 
+			}
+		}'>
 			{{#gallerySlides}}
 				<div class="bsp-carousel-slide">
 					{{render this}}
