@@ -82,6 +82,9 @@
 
 .horizontal-stripes {
 	tbody {
+		tr:nth-child(even) {
+			background-color: @white;
+		}
 		tr:nth-child(odd) {
 			background-color: @bsp-table-background-color-1;
 		}
@@ -89,12 +92,18 @@
 }
 
 .vertical-stripes {
+	td:nth-child(even), th:nth-child(even) {
+		background-color: @white;
+	}
 	td:nth-child(odd), th:nth-child(odd) {
 		background-color: @bsp-table-background-color-1;
 	}
 }
 
 .vertical-stripes-body {
+	td:nth-child(even) {
+		background-color: @white;
+	}	
 	td:nth-child(odd) {
 		background-color: @bsp-table-background-color-1;
 	}	
