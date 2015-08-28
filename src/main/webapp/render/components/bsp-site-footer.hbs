@@ -55,7 +55,11 @@
 					</div>
 					<div class="bsp-row">
 						<span>{{prefix}}&nbsp;</span>
-						<span>{{logo}}</span>
+						<span>
+							{{#with logo}}
+								{{render this}}
+							{{/with}}
+						</span>
 					</div>
 				</div>
 
