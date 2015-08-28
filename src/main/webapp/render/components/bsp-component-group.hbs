@@ -1,4 +1,4 @@
-<div class="bsp-component-group">
+<div class="bsp-component-group{{#with options.modifierClass}} {{this}}{{/with}}">
 	{{#each components}}
 		{{render this}}
 	{{/each}}

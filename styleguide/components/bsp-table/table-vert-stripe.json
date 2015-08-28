@@ -2,7 +2,7 @@
 	"_template" : "components/bsp-table/bsp-table",
 
 	"options" : {
-		
+		"modifierClass" : "modifier-class-test",
 		"textAlignment" : "left-aligned",
 		"verticalAlignment" : "top-aligned",
 		"fullWidth" : true,

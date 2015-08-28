@@ -138,8 +138,6 @@
 
 	"thirdCol" : {
 		"social": "Follow Brightspot",
-		"newsletter": "Newsletter",
-		"newsletterDescription": "Keep it up with the latest Brightspot.com" ,
 		"sharing" : {
 			"links" : [{
 				"_template" : "common/link",
@@ -181,32 +179,7 @@
 					"target" : "_blank"
 				}
 			}]
-		},
-		"inputs": [
-			{
-				"_template" : "components/bsp-form-input",
-				"showMessagesAbove": true,
-				"attributes": {
-					"autocomplete": "off",
-					"id": "footeremail",
-					"placeholder": "email address",
-					"required": true,
-					"type": "email"
-				},
-				"errors": [
-					{ "typeMismatch": "Email address must follow pattern a@b.c" },
-					{ "valueMissing": "Please enter an email address" }
-				]
-			},
-
-			{
-				"_template" : "components/bsp-form-input",
-				"attributes": {
-					"type": "submit",
-					"value": "Sign Up"
-				}
-			}
-		]
+		}
 	},
 
 	"disclaimer": "Copyright © Brightspot",
