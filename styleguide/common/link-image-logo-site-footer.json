@@ -1,0 +1,20 @@
+{
+
+	"_template" : "common/link",
+
+	"attributes" : {
+		"href"  : "http://www.brightspot.com/",
+		"title" : "Brightspot Base Styleguide"
+	},
+
+	"image" : {
+
+		"_template" : "common/image",
+
+		"attributes" : {
+			"alt" : "Brightspot",
+			"src" : "/assets/images/logo-site-footer.png"
+		}
+	}
+	
+}
