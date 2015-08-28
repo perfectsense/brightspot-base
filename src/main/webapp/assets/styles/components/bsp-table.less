@@ -9,7 +9,7 @@
 @bsp-table-heading-font: @font-family-base;
 @bsp-table-body-font: @font-family-base;
 @bsp-table-background-color-1: @gray-light-1;
-@bsp-table-background-color-2: @light-blue;
+@bsp-table-background-color-2: @white;
 @bsp-cell-padding: @space;
 
 .bsp-table-wrapper {
@@ -83,7 +83,7 @@
 .horizontal-stripes {
 	tbody {
 		tr:nth-child(even) {
-			background-color: @white;
+			background-color: @bsp-table-background-color-2;
 		}
 		tr:nth-child(odd) {
 			background-color: @bsp-table-background-color-1;
@@ -93,7 +93,7 @@
 
 .vertical-stripes {
 	td:nth-child(even), th:nth-child(even) {
-		background-color: @white;
+		background-color: @bsp-table-background-color-2;
 	}
 	td:nth-child(odd), th:nth-child(odd) {
 		background-color: @bsp-table-background-color-1;
@@ -102,7 +102,7 @@
 
 .vertical-stripes-body {
 	td:nth-child(even) {
-		background-color: @white;
+		background-color: @bsp-table-background-color-2;
 	}	
 	td:nth-child(odd) {
 		background-color: @bsp-table-background-color-1;
