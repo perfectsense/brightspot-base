@@ -11,10 +11,10 @@
 
 						{{#with firstCol}}
 						    <section>
-					        	<h5 class="bsp-list-heading">{{this.heading}}</h5>
+					        	<h5 class="bsp-list-heading">{{heading}}</h5>
 					        	
 						        <ul class="bsp-unstyled-list">
-							        {{#each this.listItems}}
+							        {{#each listItems}}
 							            <li>
 							            {{#with this.link}}
 							                 {{render this}}
@@ -31,10 +31,10 @@
 
 						{{#with secondCol}}
 						    <section>
-					        	<h5 class="bsp-list-heading">{{this.heading}}</h5>
+					        	<h5 class="bsp-list-heading">{{heading}}</h5>
 					        	
 						        <ul class="bsp-unstyled-list">
-							        {{#each this.listItems}}
+							        {{#each listItems}}
 							            <li>
 							            {{#with this.link}}
 							                 {{render this}}
@@ -77,26 +77,9 @@
 						</div>
 					{{/if}}
 
-					{{#if newsletter}}
-						<div class="bsp-component">
-
-							<h5 class="bsp-component-title">{{newsletter}}</h5>
-
-							<div class="bsp-component-content">
-								<span>{{newsletterDescription}}</span>
-							
-								<form action="" data-bsp-form>
-									<div class="input-container">
-										{{#each inputs}}
-											<div class="input-content">{{render this}}</div>
-										{{/each}}
-									</div>
-								</form>
-
-							</div>
-
-						</div>
-					{{/if}}
+					{{#with newsletter}}
+						{{render this}}
+					{{/with}}
 				{{/with}}
 
 			</div>
