@@ -7,7 +7,7 @@
 	{{#if tabs}}
 		<div class="bsp-tabber-wrapper" data-bsp-tabber{{#with options.jsOptions }} data-bsp-tabber-options='{{> common/options this }}'{{/with}}>
 		{{#each tabs}}
-			<div class="bsp-tab" data-nav-title="{{#with this.label}}{{this}}{{/with}}{{#with this.labelSubText}} <span>{{this}}</span>{{/with}}">
+			<div class="bsp-tab" data-nav-title="{{this.label}}{{#with this.labelSubText}} <span>{{this}}</span>{{/with}}">
 			{{#if text}}
 				{{#if textHeading}}<div class="bsp-tabber-tab-heading">{{textHeading}}</div>{{/if}}
 				{{text}}
