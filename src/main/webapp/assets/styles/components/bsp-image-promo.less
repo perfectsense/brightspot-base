@@ -15,6 +15,42 @@
 		height: auto;
 		width: 100%;
 	}
+
+	// when we have a rollover, create that behavior
+	&.with-rollover {
+
+		.bsp-image-promo-rollover {
+			display: none;
+		}
+
+		.bsp-image-promo-rollover-text {
+			display: none;
+		}
+
+		&:hover {
+			> a {
+				display: none;
+			}
+
+			.bsp-image-promo-rollover {
+				display: block;
+			}
+
+			.bsp-image-promo-rollover-text {
+				display: block;
+				height: 100%;
+				text-align: center;
+				position: absolute;
+				top: 0;
+				width: 100%;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+
+	}
 }
 
 // table and table cell allows for pretty justified alignment

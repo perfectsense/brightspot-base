@@ -15,10 +15,18 @@
 
 				<div class="bsp-column-{{../options.horizontalSplit}}">
 
-					<div class="bsp-image-promo-image">
+					<div class="bsp-image-promo-image {{#if rolloverImage}}with-rollover{{/if}}">
 
 						{{#with image}}
 							{{render this}}
+						{{/with}}
+
+						{{#with rolloverImage}}
+							{{render this linkClass="bsp-image-promo-rollover"}}
+						{{/with}}
+
+						{{#with rolloverText}}
+							{{render this linkClass="bsp-image-promo-rollover-text"}}
 						{{/with}}
 
 						<ul class="bsp-image-promo-links">
