@@ -25,6 +25,40 @@
 				}
 				
 			},
+
+			"rolloverImage" : {
+
+				"_template" : "common/link",
+
+				"attributes" : {
+					"href"  : "promoLink",
+					"title" : "Link"
+				},
+
+				"image" : {
+
+					"_template" : "common/image",
+
+					"attributes" : {
+						"alt" : "Image",
+						"src" : "/assets/images/1200x400-inverse.png"
+					}
+				}
+
+			},
+
+			"rolloverText" : {
+
+				"_template" : "common/link",
+
+					"attributes" : {
+						"href"  : "promoLink",
+						"title" : "Link"
+					},
+
+					"text" : "Promo Link Text"
+
+			},
 				
 			"promoLinks" : [
 				{
