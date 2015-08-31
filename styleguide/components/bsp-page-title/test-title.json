@@ -1,5 +1,11 @@
 {
 	"_template" : "components/bsp-page-title",
 
-	"pageTitle" : "Test Page"
+	"pageTitle" : {
+
+		"_template" : "common/text",
+
+		"text" : "Test Page"
+		
+	}
 }
