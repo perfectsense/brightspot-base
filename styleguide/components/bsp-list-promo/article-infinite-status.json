@@ -50,7 +50,7 @@
     					"_template" : "common/link",
 
     					"attributes" : {
-    						"href"  : "/components/bsp-article/infinite.html",
+    						"href"  : "/components/bsp-article/infinite-2.html",
     						"title" : "Link Title"
     					},
 
@@ -73,11 +73,11 @@
     					"_template" : "common/link",
 
     					"attributes" : {
-    						"href"  : "/components/bsp-article/infinite.html",
+    						"href"  : "/components/bsp-article/infinite-3.html",
     						"title" : "Link Title"
     					},
 
-    					"text" : "222 ipsum dolor amet turducken jowl shankle, cupim"
+    					"text" : "333 ipsum dolor amet turducken jowl shankle, cupim"
 
     				}
                 }

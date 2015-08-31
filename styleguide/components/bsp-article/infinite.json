@@ -1,0 +1,19 @@
+{
+	"_template" : "layouts/two-col-main-left-fixed-right",
+
+	"main" : {
+		"components" : [
+			{
+				"_dataUrl" : "/components/bsp-article/article-infinite.json"
+			}
+		]
+	},
+		
+	"aside" : {
+		"components" : [
+			{
+				"_dataUrl" : "/components/bsp-list-promo/article-infinite-status.json"
+			}
+		]
+	}
+}
