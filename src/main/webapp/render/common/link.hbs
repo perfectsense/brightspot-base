@@ -1,1 +1,1 @@
-<a {{#with this.linkClass}}class="{{this}}"{{/with}} {{#with this.attributes}}{{> common/attributes this}}{{/with}}>{{#with this.image}}{{> common/image this}}{{/with}}{{this.text}}</a>
+<a {{#if this.linkClass}}class="{{this.linkClass}}" {{/if}} {{#with this.attributes}}{{> common/attributes this}}{{/with}}>{{#with this.image}}{{> common/image this}}{{/with}}{{this.text}}</a>
