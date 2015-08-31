@@ -11,14 +11,16 @@
 
 						{{#with firstCol}}
 						    <section>
-					        	<h5 class="bsp-list-heading">{{this.heading}}</h5>
+					        	<h5 class="bsp-list-heading">
+ 									{{#with this}}
+                                        {{heading}}
+                                    {{/with}}
+					        	</h5>
 					        	
 						        <ul class="bsp-unstyled-list">
 							        {{#each this.listItems}}
 							            <li>
-							            {{#with this.link}}
 							                 {{render this}}
-							            {{/with}}
 							            </li>
 							        {{/each}}
 						        </ul>
@@ -31,14 +33,16 @@
 
 						{{#with secondCol}}
 						    <section>
-					        	<h5 class="bsp-list-heading">{{this.heading}}</h5>
+					        	<h5 class="bsp-list-heading">
+									{{#with this}}
+                                        {{heading}}
+                                    {{/with}}
+					        	</h5>
 					        	
 						        <ul class="bsp-unstyled-list">
 							        {{#each this.listItems}}
 							            <li>
-							            {{#with this.link}}
 							                 {{render this}}
-							            {{/with}}
 							            </li>
 							        {{/each}}
 						        </ul>
@@ -50,7 +54,18 @@
 				</div>
 
 				<div class="bsp-site-copyright">
-					{{disclaimer}}
+					<div class="bsp-row">
+						{{disclaimer}}
+					</div>
+					<div class="bsp-row">
+						<span>
+						{{prefix}}&nbsp;
+						</span>
+						{{#with logo}}
+							{{render this}}
+						{{/with}}
+						
+					</div>
 				</div>
 
 			</div>

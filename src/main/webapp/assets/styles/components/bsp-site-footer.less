@@ -32,40 +32,26 @@
         a {
             color: @white;
         }
-    }
 
-    form {
-        .input-container { 
-            white-space: nowrap;
+        li{
 
-            .input-content {
-                display: inline-block;   
+            &:first-child {
+                margin-top: 0;
             }
 
-            .bsp-form-message {
-                width: 0px;
-            }
-
-            input {
-                padding: @space;
-                border: none;
-            }
-         
-            input[type=email] {
-                color: @black;  
-            }
-
-            input[type=submit] {
-                background-color: @brand-secondary;
-                color: @brand-primary;
-                text-transform: uppercase;
-                position: relative;
-                left: -4px;
-            }
+            margin-top: @space-half;
         }
-    }    
+
+      
+    }
 }
 
 .bsp-site-copyright {
     margin-top: @space-quad;
+    text-transform: uppercase;
+
+    span {
+        display: inline-block;
+        vertical-align: middle; 
+    }
 }
