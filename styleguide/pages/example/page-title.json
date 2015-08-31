@@ -1,5 +1,11 @@
 {
 	"_template" : "components/bsp-page-title",
 
-	"pageTitle" : "Example Page"
+	"pageTitle" : {
+
+		"_template" : "common/text",
+
+		"text" : "Example Page"
+		
+	}
 }

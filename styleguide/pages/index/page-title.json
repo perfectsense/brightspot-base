@@ -1,5 +1,11 @@
 {
 	"_template" : "components/bsp-page-title",
 
-	"pageTitle" : "Brightspot Base Styleguide"
+	"pageTitle" : {
+
+		"_template" : "common/text",
+
+		"text" : "Brightspot Base Styleguide"
+		
+	}
 }
