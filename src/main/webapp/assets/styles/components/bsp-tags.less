@@ -6,15 +6,12 @@
 
 .bsp-tag-list {
 	&:extend(.bsp-list-inline all);
+}
 
-	li {
-		text-transform: uppercase;
-	}
-
-	a {
-		background: @brand-secondary;
-		display: block;
-		padding: @space-quarter @space-half;
-		margin: 0 @space @space 0;
-	}
+.bsp-tag {
+	background: @brand-secondary;
+	display: block;
+	padding: @space-quarter @space-half;
+	margin: 0 @space @space 0;
+	text-transform: uppercase;
 }
