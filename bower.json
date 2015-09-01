@@ -1,6 +1,6 @@
 {
   "name": "brightspot-base",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/perfectsense/brightspot-base",
   "dependencies": {
     "bsp-form": "perfectsense/brightspot-js-form#datepicker",
