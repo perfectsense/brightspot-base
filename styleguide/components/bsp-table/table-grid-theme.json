@@ -1,7 +1,10 @@
 {
 	"_template" : "components/bsp-table/bsp-table",
 
-	"title" : "table - grid theme",
+	"title" : {
+		"_template" : "common/text", 
+		"text" : "table - grid theme"
+	},
 
 	"options" : {
 		
@@ -9,57 +12,57 @@
 	},
 
 	"headings" : [
-		{"text" : "B"},
-		{"text" : "I"},
-		{"text" : "N"},
-		{"text" : "G"},
-		{"text" : "O"}
+		[{"_template" : "common/text", "text" : "B"}],
+		[{"_template" : "common/text", "text" : "I"}],
+		[{"_template" : "common/text", "text" : "N"}],
+		[{"_template" : "common/text", "text" : "G"}],
+		[{"_template" : "common/text", "text" : "O"}]
 	],
 
 	"rows" : [
 		{
 			"row" : [
-				{"text" : "7"},
-				{"text" : "25"},
-				{"text" : "44"},
-				{"text" : "57"},
-				{"text" : "62"}
+				[{"_template" : "common/text", "text": "7"}],
+				[{"_template" : "common/text", "text": "25"}],
+				[{"_template" : "common/text", "text": "44"}],
+				[{"_template" : "common/text", "text": "57"}],
+				[{"_template" : "common/text", "text": "62"}]
 			]
 		},
 		{
 			"row" : [
-				{"text" : "15"},
-				{"text" : "22"},
-				{"text" : "40"},
-				{"text" : "50"},
-				{"text" : "70"}
+				[{"_template" : "common/text", "text": "15"}],
+				[{"_template" : "common/text", "text": "22"}],
+				[{"_template" : "common/text", "text": "40"}],
+				[{"_template" : "common/text", "text": "50"}],
+				[{"_template" : "common/text", "text": "70"}]
 			]
 		},
 		{
 			"row" : [
-				{"text" : "11"},
-				{"text" : "30"},
-				{"text" : "free"},
-				{"text" : "46"},
-				{"text" : "74"}
+				[{"_template" : "common/text", "text": "11"}],
+				[{"_template" : "common/text", "text": "30"}],
+				[{"_template" : "common/text", "text": "free"}],
+				[{"_template" : "common/text", "text": "46"}],
+				[{"_template" : "common/text", "text": "74"}]
 			]
 		},
 		{
 			"row" : [
-				{"text" : "2"},
-				{"text" : "28"},
-				{"text" : "37"},
-				{"text" : "55"},
-				{"text" : "68"}
+				[{"_template" : "common/text", "text": "2"}],
+				[{"_template" : "common/text", "text": "28"}],
+				[{"_template" : "common/text", "text": "37"}],
+				[{"_template" : "common/text", "text": "55"}],
+				[{"_template" : "common/text", "text": "68"}]
 			]
 		},
 		{
 			"row" : [
-				{"text" : "10"},
-				{"text" : "27"},
-				{"text" : "39"},
-				{"text" : "59"},
-				{"text" : "75"}
+				[{"_template" : "common/text", "text": "10"}],
+				[{"_template" : "common/text", "text": "27"}],
+				[{"_template" : "common/text", "text": "39"}],
+				[{"_template" : "common/text", "text": "59"}],
+				[{"_template" : "common/text", "text": "75"}]
 			]
 		}
 
