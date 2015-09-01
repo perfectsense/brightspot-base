@@ -1,6 +1,6 @@
 <div class="bsp-component bsp-table-component{{#with options.modifierClass}} {{this}}{{/with}}">
 	{{#if title}}
-		<h3 class="bsp-component-title">{{title}}</h1>
+		<h3 class="bsp-component-title">{{render this.title}}</h1>
 	{{/if}}
 
 	<div class="bsp-component-content">
@@ -11,14 +11,9 @@
 					<thead>
 						{{#each headings}}
 							<th class="col-{{@index}}">
-								{{#if link.attributes}}
-								    {{#with link}}
-								        {{render this}}
-								    {{/with}}
-								{{/if}}
-								{{#if text}}
-								    {{{this.text}}}
-								{{/if}}
+								{{#each this}}
+									{{render this}}
+								{{/each}}	
 							</th>
 						{{/each}}
 					</thead>
@@ -28,19 +23,9 @@
 						<tr class="row-{{@index}}">
 							{{#each row}}
 								<td class="col-{{@index}}">
-									{{#if link.attributes}}
-									    {{#with link}}
-									        {{render this}}
-									    {{/with}}
-									{{/if}}
-									{{#if image}}
-									    {{#with image}}
-									        {{render this}}
-									    {{/with}}
-									{{/if}}
-									{{#if text}}
-									    {{{this.text}}}
-									{{/if}}						
+									{{#each this}}
+										{{render this}}
+									{{/each}}						
 								</td>
 							{{/each}}
 						</tr>

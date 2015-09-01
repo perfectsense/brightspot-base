@@ -1,7 +1,10 @@
 {
 	"_template" : "components/bsp-table/bsp-table",
 
-	"title" : "table - checkerboard theme",
+	"title" : {
+		"_template" : "common/text", 
+		"text" : "table - checkerboard theme"
+	},
 
 	"options" : {
 		
@@ -11,97 +14,98 @@
 	"rows" : [
 		{
 			"row" : [
-				{"text" : "<div class=\"black-checker\"> </div>"},
-				{"text" : "<div class=\"black-checker\"> </div>"},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : "<div class=\"red-checker\"> </div>"},
-				{"text" : "<div class=\"red-checker\"> </div>"}
+				[{"_template" : "common/text", "text" : "<div class=\"black-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : "<div class=\"black-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : "<div class=\"red-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : "<div class=\"red-checker\"> </div>"}]
 			]
 		},
 		{
 			"row" : [
-				{"text" : "<div class=\"black-checker\"> </div>"},
-				{"text" : "<div class=\"black-checker\"> </div>"},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : "<div class=\"red-checker\"> </div>"},
-				{"text" : "<div class=\"red-checker\"> </div>"}
+				[{"_template" : "common/text", "text" : "<div class=\"black-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : "<div class=\"black-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : "<div class=\"red-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : "<div class=\"red-checker\"> </div>"}]
 			]
 		},
 		{
 			"row" : [
-				{"text" : "<div class=\"black-checker\"> </div>"},
-				{"text" : "<div class=\"black-checker\"> </div>"},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : "<div class=\"red-checker\"> </div>"},
-				{"text" : "<div class=\"red-checker\"> </div>"}
+				[{"_template" : "common/text", "text" : "<div class=\"black-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : "<div class=\"black-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : "<div class=\"red-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : "<div class=\"red-checker\"> </div>"}]
 			]
 		},
 		{
 			"row" : [
-				{"text" : "<div class=\"black-checker\"> </div>"},
-				{"text" : "<div class=\"black-checker\"> </div>"},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : "<div class=\"red-checker\"> </div>"},
-				{"text" : "<div class=\"red-checker\"> </div>"}			]
-		},
-		{
-			"row" : [
-				{"text" : "<div class=\"black-checker\"> </div>"},
-				{"text" : "<div class=\"black-checker\"> </div>"},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : "<div class=\"red-checker\"> </div>"},
-				{"text" : "<div class=\"red-checker\"> </div>"}	
+				[{"_template" : "common/text", "text" : "<div class=\"black-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : "<div class=\"black-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : "<div class=\"red-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : "<div class=\"red-checker\"> </div>"}]
 			]
 		},
 		{
 			"row" : [
-				{"text" : "<div class=\"black-checker\"> </div>"},
-				{"text" : "<div class=\"black-checker\"> </div>"},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : "<div class=\"red-checker\"> </div>"},
-				{"text" : "<div class=\"red-checker\"> </div>"}			
+				[{"_template" : "common/text", "text" : "<div class=\"black-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : "<div class=\"black-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : "<div class=\"red-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : "<div class=\"red-checker\"> </div>"}]
 			]
 		},
 		{
 			"row" : [
-				{"text" : "<div class=\"black-checker\"> </div>"},
-				{"text" : "<div class=\"black-checker\"> </div>"},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : "<div class=\"red-checker\"> </div>"},
-				{"text" : "<div class=\"red-checker\"> </div>"}			
+				[{"_template" : "common/text", "text" : "<div class=\"black-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : "<div class=\"black-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : "<div class=\"red-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : "<div class=\"red-checker\"> </div>"}]
 			]
 		},
 		{
 			"row" : [
-				{"text" : "<div class=\"black-checker\"> </div>"},
-				{"text" : "<div class=\"black-checker\"> </div>"},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : ""},
-				{"text" : "<div class=\"red-checker\"> </div>"},
-				{"text" : "<div class=\"red-checker\"> </div>"}
+				[{"_template" : "common/text", "text" : "<div class=\"black-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : "<div class=\"black-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : "<div class=\"red-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : "<div class=\"red-checker\"> </div>"}]
+			]
+		},
+		{
+			"row" : [
+				[{"_template" : "common/text", "text" : "<div class=\"black-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : "<div class=\"black-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : ""}],
+				[{"_template" : "common/text", "text" : "<div class=\"red-checker\"> </div>"}],
+				[{"_template" : "common/text", "text" : "<div class=\"red-checker\"> </div>"}]
 			]
 		}
 	]
