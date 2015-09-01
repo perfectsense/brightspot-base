@@ -23,6 +23,19 @@
 				}
 				
 			},
+
+			"rolloverText" : {
+
+				"_template" : "common/link",
+
+					"attributes" : {
+						"href"  : "promoLink",
+						"title" : "Link"
+					},
+
+					"text" : "Promo Link Text"
+
+			},
 				
 			"promoLinks" : [
 				{

@@ -16,13 +16,14 @@
 		width: 100%;
 	}
 
-	// when we have a rollover, create that behavior
+	// when we have a rollover image, create that behavior
 	&.with-rollover {
 		a {
 			.transition(all 0.3s);
 		}
 
-		.bsp-image-promo-rollover, .bsp-image-promo-rollover-text {
+		// the rollover image and text are both position absolute over the top and middle center aligned
+		.bsp-image-promo-rollover-image, .bsp-image-promo-rollover-text {
 			display: block;
 			height: 100%;
 			position: absolute;
@@ -32,18 +33,23 @@
 			opacity: 0;
 		}
 
+		// the text uses CSS3 to go perfect center
 		.bsp-image-promo-rollover-text {
 			display: flex;
 			align-items: center;
 			justify-content: center;
+
+			background: rgba(0, 0, 0, 0.5);
 		}
 
-		&:hover {
-			> a {
-				opacity: 0;
-			}
+		// if have a rollover image AND text, we do not want the opacity, since we are replacing the original image too
+		.bsp-image-promo-rollover-image+.bsp-image-promo-rollover-text {
+			background: none;
+		}
 
-			.bsp-image-promo-rollover, .bsp-image-promo-rollover-text {			
+		// upon hover show the rollover items
+		&:hover {
+			.bsp-image-promo-rollover-image, .bsp-image-promo-rollover-text {			
 				opacity: 1;
 			}
 		}
