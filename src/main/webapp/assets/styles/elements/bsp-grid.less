@@ -150,6 +150,26 @@ body.bsp-column-fixed-toggle-in {
 
 @media @mq-md {
 
+	// styles to create a fixed column that will be stuck on the screen
+	.bsp-column-fixed {
+		border-top: none;
+		bottom: auto;
+		display: block;
+		left: auto;
+		margin-top: @site-top-and-bottom-space;
+		top: @header-tophat-height + @header-height;
+		// hardcoded width, as it needs to be as it's fixed positioning
+		width: 240px;
+	}
+
+	// since column is on the screen, we no longer need the toggle
+	.bsp-trigger-fixed-column {
+		display: none;
+	}
+}
+
+@media @mq-lg {
+
 	body {
 		& when (@header-positioning = fixed) {
 	    	padding-top: @header-tophat-height + @header-height-before-scroll;
@@ -163,29 +183,13 @@ body.bsp-column-fixed-toggle-in {
 	    }
 	}
 
-	// styles to create a fixed column that will be stuck on the screen
 	.bsp-column-fixed {
-		border-top: none;
-		bottom: auto;
-		display: block;
-		left: auto;
-		margin-top: @site-top-and-bottom-space;
 		top: @header-tophat-height + @header-height-before-scroll;
-		// hardcoded width, as it needs to be as it's fixed positioning
-		width: 240px;
 
 		.bsp-scrolling &, .bsp-fullscreen & {
 			top: @header-tophat-height + @header-height !important;
 		}
 	}
-
-	// since column is on the screen, we no longer need the toggle
-	.bsp-trigger-fixed-column {
-		display: none;
-	}
-}
-
-@media @mq-lg {
 	
 	// up th width to match, has to stay hardcoded as it's fixed positioning
 	.bsp-column-fixed {
