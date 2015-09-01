@@ -5,7 +5,13 @@
 		"carouselDots" : true
 	},
 
-	"galleryTitle" : "7 slides, with dots, no thumbs",
+	"galleryTitle" : {
+
+		"_template" : "common/text",
+
+		"text" : "7 slides, with dots, no thumbs"
+
+	},
 
 	"gallerySlides" : [
 		{ 

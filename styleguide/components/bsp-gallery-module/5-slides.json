@@ -6,7 +6,13 @@
 		"modifierClass" : "modifier-class"
 	},
 
-	"galleryTitle" : "5 slides, no dots, no thumbs",
+	"galleryTitle" : {
+
+		"_template" : "common/text",
+
+		"text" : "5 slides, no dots, no thumbs"
+
+	},
 
 	"gallerySlides" : [
 		{ 
