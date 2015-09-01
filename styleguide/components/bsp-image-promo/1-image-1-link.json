@@ -1,7 +1,7 @@
 {
 	"_template" : "components/bsp-image-promo",
 
-	"heading" : "1 Image with 1 Link",
+	"heading" : "1 Image with 1 Link and rollover image",
 
 	"images" : [
 		{ 
@@ -73,15 +73,5 @@
 				}
 			]
 		}
-	],
-
-	"cta" : {
-		"options" : {
-			"location" : "top-right"
-		},
-
-		"content" : {
-			"_dataUrl" : "/common/link-test-text-14-char.json"
-		}
-	}
+	]
 }

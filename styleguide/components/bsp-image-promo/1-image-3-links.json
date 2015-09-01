@@ -56,7 +56,7 @@
 						"title" : "Link"
 					},
 
-					"text" : "But This"
+					"text" : "But Has 3 Links"
 				},
 				{
 					"_template" : "common/link",
@@ -66,19 +66,9 @@
 						"title" : "Link"
 					},
 
-					"text" : "Has 3 links"
+					"text" : "And rollover text"
 				}
 			]
 		}
-	],
-
-	"cta" : {
-		"options" : {
-			"location" : "top-right"
-		},
-
-		"content" : {
-			"_dataUrl" : "/common/link-test-text-14-char.json"
-		}
-	}
+	]
 }
