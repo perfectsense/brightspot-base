@@ -10,7 +10,7 @@
     "bsp-templates": "perfectsense/brightspot-js-templates#2.0.5",
     "bsp-infinite-content": "perfectsense/brightspot-js-infinite-content#0.0.2",
     "bsp-toggle-item": "perfectsense/brightspot-js-toggle-item#0.0.1",
-    "bsp-feature-detect": "rustytanton/brightspot-js-feature-detect#brightspot-base",
+    "bsp-feature-detect": "perfectsense/brightspot-js-feature-detect#1.0.0",
     "bootstrap": "3.3.4",
     "fontawesome": "4.3.0",
     "jquery": "2.1.4",
