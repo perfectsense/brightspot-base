@@ -1,7 +1,13 @@
 {
 	"_template" : "components/bsp-gallery-module-thumbs-or-nav",
 
-	"galleryTitle" : "5 slides with thumbs",
+	"galleryTitle" : {
+
+		"_template" : "common/text",
+
+		"text" : "5 slides with thumbs"
+
+	},
 
 	"gallerySlides" : [
 		{ 

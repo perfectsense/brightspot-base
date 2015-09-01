@@ -10,7 +10,13 @@
 		}
 	},
 
-	"galleryTitle" : "5 slides at a time, 2 on mobile",
+	"galleryTitle" : {
+
+		"_template" : "common/text",
+
+		"text" : "5 slides at a time, 2 on mobile"
+
+	},
 
 	"gallerySlides" : [
 		{ 
