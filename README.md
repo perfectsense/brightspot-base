@@ -15,6 +15,7 @@ How to use it
 *   TODO: Add here was needs to be added to git ignore
 *	[Bootstrap Brightspot Base](boilerplate/) into a new or existing Brightspot project (if the UI has not been built yet)
 *	Override configuration, styles, scripts and templates to customize your project's appearance
+*	Change the name in bower.json and package.json to your project name
 *	Test front end components using the [styleguide](styleguide/) prior to integrating them into Brightspot
 
 Writing Handlebar Templates
