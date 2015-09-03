@@ -1,21 +1,35 @@
 {
-	"_template" : "layouts/two-col-main-left-fixed-right",
+	"_template" : "common/body",
 
-	"main" : {
-		"components" : [
-			{
-				"_dataUrl" : "/components/bsp-article/article-standalone.json"
-			}
-		]
+	"headerView" : {
+		"_dataUrl" : "/components/bsp-site-header-simple/styleguide-header.json"
 	},
-		
-	"aside" : {
-		"components" : [
-			{
-				"_template" : "common/text",
 
-            	"text": "<p>Right Rail Modules can go here</p>"
-			}
-		]
+	"mainView" : {
+
+		"_template" : "layouts/two-col-main-left-fixed-right",
+
+		"main" : {
+			"components" : [
+				{
+					"_dataUrl" : "/components/bsp-article/article-standalone.json"
+				}
+			]
+		},
+			
+		"aside" : {
+			"components" : [
+				{
+					"_template" : "common/text",
+
+	            	"text": "<p>Right Rail Modules can go here</p>"
+				}
+			]
+		}
+
+	},
+
+	"footerView" : {
+		"_dataUrl" : "/components/bsp-site-footer-simple/styleguide-footer.json"
 	}
 }

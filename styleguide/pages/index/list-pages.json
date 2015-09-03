@@ -3,21 +3,17 @@
 
 	"listItems" : [
 		{
-			"sections" : [
-				{
-					"_template" : "components/bsp-list-promo-item-handler",
-		 
-					"link": {
-						"_template" : "common/link",
-						
-						"attributes" : {
-							"href"  : "/pages/example/",
-							"title" : "Example Page"
-						},
-						"text"  : "Example Page"
-					}
-				}
-			]
+			"_template" : "components/bsp-list-promo-item-handler",
+ 
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
+					"href"  : "/pages/example/",
+					"title" : "Example Page"
+				},
+				"text"  : "Example Page"
+			}
 		}
 	]
 }

@@ -1,19 +1,31 @@
 {
-	"_template" : "layouts/two-col-main-left-fixed-right",
+	"_template" : "common/body",
 
-	"main" : {
-		"components" : [
-			{
-				"_dataUrl" : "/components/bsp-article/article-infinite.json"
-			}
-		]
+	"headerView" : {
+		"_dataUrl" : "/components/bsp-site-header-simple/styleguide-header.json"
 	},
-		
-	"aside" : {
-		"components" : [
-			{
-				"_dataUrl" : "/components/bsp-list-promo/article-infinite-status.json"
-			}
-		]
+
+	"mainView" : {
+		"_template" : "layouts/two-col-main-left-fixed-right",
+
+		"main" : {
+			"components" : [
+				{
+					"_dataUrl" : "/components/bsp-article/article-infinite.json"
+				}
+			]
+		},
+			
+		"aside" : {
+			"components" : [
+				{
+					"_dataUrl" : "/components/bsp-list-promo/article-infinite-status.json"
+				}
+			]
+		}
+	},
+
+	"footerView" : {
+		"_dataUrl" : "/components/bsp-site-footer-simple/styleguide-footer.json"
 	}
 }

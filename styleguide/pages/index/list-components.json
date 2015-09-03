@@ -9,10 +9,9 @@
 				"_template" : "common/link",
 				
 				"attributes" : {
-					"href"  : "/components/bsp-article/",
-					"title" : "BSP Article Standalone"
+					"href"  : "/components/bsp-article/"
 				},
-				"text"  : "BSP Article Standalone"
+				"text"  : "BSP Article - Standalone"
 			}
 		},
 		{ 
@@ -22,10 +21,9 @@
 				"_template" : "common/link",
 				
 				"attributes" : {
-					"href"  : "/components/bsp-article/infinite.html",
-					"title" : "BSP Article Infinite Load"
+					"href"  : "/components/bsp-article/infinite.html"
 				},
-				"text"  : "BSP Article Infinite Load"
+				"text"  : "BSP Article - Infinite Load"
 			}
 		},
 		{ 
