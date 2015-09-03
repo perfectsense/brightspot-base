@@ -3,7 +3,7 @@
 
 	"options" : {
 
-		"horizontalSplit" : "half"
+		"horizontalSplit" : "fourth"
 
 	},
 
@@ -154,7 +154,7 @@
 
 	"cta" : {
 		"options" : {
-			"location" : "top-right"
+			"location" : "bottom"
 		},
 
 		"content" : {

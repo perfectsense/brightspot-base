@@ -17,7 +17,7 @@
 						"modifierClass" : "styleguide-page-description"
 					},
 
-					"text" : "<p>The BSP Gallery component will be described here</p>"
+					"text" : "<p>Need to finish documentation. Some notes: xsmall and small breakpoints always have dots for navigation. The thumbs/nav disappear for those too. Even though we have two column layout, gallery modules will grow and shrink with container.</p>"
 				}
 			]
 		},
