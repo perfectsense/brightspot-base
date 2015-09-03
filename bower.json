@@ -7,7 +7,7 @@
     "bsp-utils": "perfectsense/brightspot-js-utils#^3.0.0",
     "bsp-carousel": "perfectsense/brightspot-js-carousel#^1.0.0",
     "bsp-share": "perfectsense/brightspot-js-share#^3.0.0",
-    "bsp-templates": "perfectsense/brightspot-js-templates#^2.1.0",
+    "bsp-templates": "perfectsense/brightspot-js-templates#^2.1.1",
     "bsp-infinite-content": "perfectsense/brightspot-js-infinite-content#0.0.2",
     "bsp-toggle-item": "perfectsense/brightspot-js-toggle-item#0.0.1",
     "bsp-feature-detect": "perfectsense/brightspot-js-feature-detect#^1.0.0",
