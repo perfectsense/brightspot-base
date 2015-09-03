@@ -3,3 +3,14 @@
 .styleguide-page {
 	padding-top: 60px;
 }
+
+.styleguide-page-description {
+	border-bottom: 1px solid #666;
+	display: block;
+	margin-bottom: 2rem;
+	padding-bottom: 2rem;
+}
+
+.styleguide-page-description p {
+	margin: 1rem 0 0;
+}

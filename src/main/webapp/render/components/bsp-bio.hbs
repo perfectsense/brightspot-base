@@ -1,13 +1,13 @@
-<div class="bsp-component bsp-bio-component">
+<div class="bsp-component bsp-bio-component{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
 
 	<div class="bsp-component-content">
 		<div class="bsp-bio">
 
+			{{#with image}}
 			<div class="bsp-bio-image">
-				{{#with image}}
-					{{> common/image }}
-				{{/with}}
+				{{render this}}		
 			</div>
+			{{/with}}
 
 			<div class="bsp-bio-content">
 				<h1 class="bsp-bio-title">{{title}}</h1>
@@ -15,7 +15,7 @@
 				{{#if subtitles}}
 				<div class="bsp-bio-subtitle">
 					{{#each subtitles}}
-						<h5 class="bsp-bio-sub-text">{{> common/link }}</h5>
+						<h5 class="bsp-bio-sub-text">{{render this}}</h5>
 					{{/each}}
 				</div>
 				{{/if}}
@@ -46,7 +46,7 @@
 				{{#if links}}
 				<ul class="bsp-bio-links">
 					{{#each links}}
-						<li>{{> common/link }}</li>
+						<li>{{render this}}</li>
 					{{/each}}
 				</ul>
 				{{/if}}
@@ -54,7 +54,7 @@
 				{{#if extraImages}}
 				<ul class="bsp-bio-extra-images">
 					{{#each extraImages}}
-						<li>{{> common/image }}</li>
+						<li>{{render this}}</li>
 					{{/each}}
 				</ul>
 				{{/if}}

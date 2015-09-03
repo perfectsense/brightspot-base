@@ -2,12 +2,7 @@
 	"_template" : "components/bsp-bio",
 
 	"image" : {
-		"_template" : "common/image",
-
-		"attributes" : {
-			"alt" : "image",
-			"src" : "/assets/images/200x300.png"
-		}
+		"_dataUrl" : "/common/image-200x300.json"
 	},
 
 	"title" : "Actor",
