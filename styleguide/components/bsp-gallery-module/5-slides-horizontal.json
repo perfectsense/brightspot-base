@@ -2,8 +2,10 @@
 	"_template" : "components/bsp-gallery-module-horizontal",
 
 	"options" : {
-		"carouselDots" : false,
+		"dots" : false,
+		
 		"horizontalSlides" : true,
+		
 		"slidesToShow" : {
 			"medium" : 5,
 			"small" : 2

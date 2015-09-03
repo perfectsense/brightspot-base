@@ -1,23 +1,49 @@
 {
-	"_template" : "layouts/one-col",
+	"_template" : "common/body",
 
-	"main" : {
-		"components" : [
-			{
-				"_dataUrl": "/components/bsp-gallery-module/4-slides-text-nav.json"
-			},
-			{
-				"_dataUrl": "/components/bsp-gallery-module/5-slides-horizontal.json"
-			},
-			{
-				"_dataUrl": "/components/bsp-gallery-module/5-slides-with-thumbs.json"
-			},
-			{
-				"_dataUrl": "/components/bsp-gallery-module/5-slides.json"
-			},
-			{
-				"_dataUrl": "/components/bsp-gallery-module/7-slides-dots.json"
-			}
-		]
+	"headerView" : {
+		"_dataUrl" : "/components/bsp-site-header-simple/styleguide-header.json"
+	},
+
+	"mainView" : {
+		"_template" : "layouts/two-col-main-left-aside-right",
+
+		"aboveColumns" : {
+			"components" : [
+				{
+					"_template" : "common/text",
+
+					"options" : {
+						"modifierClass" : "styleguide-page-description"
+					},
+
+					"text" : "<p>The BSP Gallery component will be described here</p>"
+				}
+			]
+		},
+
+		"main" : {
+			"components" : [
+				{
+					"_dataUrl": "/components/bsp-gallery-module/4-slides-text-nav.json"
+				},
+				{
+					"_dataUrl": "/components/bsp-gallery-module/5-slides-horizontal.json"
+				},
+				{
+					"_dataUrl": "/components/bsp-gallery-module/5-slides-with-thumbs.json"
+				},
+				{
+					"_dataUrl": "/components/bsp-gallery-module/5-slides.json"
+				},
+				{
+					"_dataUrl": "/components/bsp-gallery-module/7-slides-dots.json"
+				}
+			]
+		}
+	},
+
+	"footerView" : {
+		"_dataUrl" : "/components/bsp-site-footer-simple/styleguide-footer.json"
 	}
 }

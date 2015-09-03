@@ -1,10 +1,18 @@
 // TODO: This should be renamed to bsp-gallery-module
 
-.gallery-module.carousel-dots {
+// this component needs the optional CTA to have its own margin
+.bsp-gallery-module-component {
+	.bsp-component-cta {
+		margin-top: @space;
+	}
+}
+
+.gallery-module {
 	margin-bottom: 40px; // custom spacing to allow pretty spacing with dots
 }
 // these are styles for the hoziontal layout gallery which has 5 slides across
 .gallery-module-horizontal-slides {
+	margin-bottom: 0;
 
 	.slick-list {
 		margin: 0 -@space;
@@ -72,6 +80,14 @@
 
 
 @media @mq-md {
+
+	.gallery-module {
+		margin-bottom: 0;
+
+		&.carousel-dots {
+			margin-bottom: 40px;
+		}
+	}
 
 	.gallery-module-nav {
 		.bsp-carousel-stage {

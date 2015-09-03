@@ -1,11 +1,6 @@
 {
 	"_template" : "components/bsp-gallery-module",
 
-	"options" : {
-		"carouselDots" : false,
-		"modifierClass" : "modifier-class"
-	},
-
 	"galleryTitle" : {
 
 		"_template" : "common/text",
@@ -19,7 +14,7 @@
 			"_dataUrl" : "/common/image-1200x400.json"
 		},
 		{ 
-			"_dataUrl" : "/components/bsp-list-promo/5-items-no-title-no-cta.json"
+			"_dataUrl" : "/common/image-1200x400.json"
 		},
 		{ 
 			"_dataUrl" : "/common/image-1200x400.json"
@@ -34,7 +29,7 @@
 
 	"cta" : {
 		"options" : {
-			"location" : "top-right"
+			"location" : "bottom"
 		},
 
 		"content" : {

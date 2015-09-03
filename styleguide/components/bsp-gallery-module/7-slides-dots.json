@@ -2,7 +2,8 @@
 	"_template" : "components/bsp-gallery-module",
 
 	"options" : {
-		"carouselDots" : true
+		"theme" : "carousel-dots",
+		"dots" : true
 	},
 
 	"galleryTitle" : {
