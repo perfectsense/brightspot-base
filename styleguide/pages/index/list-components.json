@@ -85,10 +85,10 @@
 				"_template" : "common/link",
 				
 				"attributes" : {
-					"href"  : "/components/bsp-gallery-module/",
-					"title" : "BSP Gallery Module"
+					"href"  : "/components/bsp-gallery-fullscreen/",
+					"title" : "BSP Gallery Fullscreen"
 				},
-				"text"  : "BSP Gallery Module"
+				"text"  : "BSP Gallery Fullscreen"
 			}
 		},
 		{
@@ -98,10 +98,10 @@
 				"_template" : "common/link",
 				
 				"attributes" : {
-					"href"  : "/components/bsp-gallery-fullscreen/",
-					"title" : "BSP Gallery Fullscreen"
+					"href"  : "/components/bsp-gallery-module/",
+					"title" : "BSP Gallery Module"
 				},
-				"text"  : "BSP Gallery Fullscreen"
+				"text"  : "BSP Gallery Module"
 			}
 		},
 		{
@@ -128,6 +128,18 @@
 					"title" : "BSP List Promo"
 				},
 				"text"  : "BSP List Promo"
+			}
+		},
+		{
+			"_template" : "components/bsp-list-promo-item-handler",
+			
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
+					"href"  : "/components/bsp-page-title/"
+				},
+				"text"  : "BSP Page Title"
 			}
 		},
 		{
