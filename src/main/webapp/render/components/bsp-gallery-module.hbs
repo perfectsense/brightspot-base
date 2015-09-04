@@ -10,7 +10,7 @@
 
 			"themeConfig" : {
 	            "arrows" : {{#if options.arrows}}{{options.arrows}}{{else}}true{{/if}},
-	            "dots" : true
+	            "dots" : {{#if options.horizontalSlides}}false{{else}}true{{/if}}
 
 	            {{#if options.horizontalSlides}},
 					{{#if options.slidesToShow}}
