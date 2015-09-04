@@ -29,7 +29,10 @@ body {
 }
 
 .bsp-row {
-	.make-row();
+	&:extend(.clearfix all);
+
+	margin-left:  (@grid-gutter-width / -2);
+	margin-right: (@grid-gutter-width / -2);
 }
 
 // With the below columns, we should be able to create most every layout necessary. 
