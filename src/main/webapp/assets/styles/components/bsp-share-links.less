@@ -23,12 +23,17 @@
 .bsp-share-link {
 	&:extend(.icon);
 
-	background: @brand-primary;
+	//background: @brand-primary;
+	color: @social-icons-monochrome-color;
 	border-radius: 32px;
 	height: 32px;
 	line-height: 32px;
 	text-align: center;
 	width: 32px;
+
+	.icons-monochrome & {
+		background-color: @social-icons-monochrome-background;
+	}
 
 	&:before {
 		
@@ -51,6 +56,10 @@
 		.bsp-tumblr-share & {
 			content: @fa-var-tumblr;
 		}
+	}
+
+	&:hover {
+		color: @social-icons-monochrome-color;
 	}
 
 }

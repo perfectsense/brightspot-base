@@ -7,11 +7,7 @@
 	},
 
 	"sharing" : {
-		"facebookId" : "645138725541385",
-		"services" : ["facebook","twitter","pinterest","linkedin"],
-		"title" : "Bacon meatball leberkas jerky strip steak beef ham ground round hamburger short loin",
-		"description" : "Bacon meatball leberkas jerky strip steak beef ham ground round hamburger short loin, Bacon meatball leberkas jerky strip steak beef ham ground round hamburger short loin",
-		"image" : "/assets/images/800x450.png"
+		"_dataUrl": "/components/bsp-social-share/share-notitle.json"
 	},
 
 	"permalink" : "/bsp-article/",

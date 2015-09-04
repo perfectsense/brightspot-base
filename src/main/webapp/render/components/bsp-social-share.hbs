@@ -1,0 +1,26 @@
+<span class="bsp-share-links-wrapper">
+
+	<span class="bsp-share-links-title">{{social}}</span>
+	
+	<ul class="bsp-share-links{{#if monochrome}} icons-monochrome{{/if}}"
+			data-bsp-share
+			data-bsp-share-options=
+			'
+				{
+					"description":"{{description}}",
+					"image":"{{image}}",
+					"title":"{{title}}",
+					"url":"{{url}}",
+					"redirectUrl":"{{redirectUrl}}",
+					"iconClass":"{{iconClass}}", 
+					"serviceProps":{
+						"facebook":{"appId":"{{facebookId}}"}
+					}
+				}
+			'
+	>
+		{{#each services}}
+				<li class="bsp-{{this}}-share"></li>
+		{{/each}}
+	</ul>
+</span>
