@@ -1,15 +1,15 @@
 {
-	"_template" : "components/bsp-gallery-module-horizontal",
+	"_template" : "components/bsp-gallery-module",
 
-	"options" : {
-		"dots" : false,
-		
+	"options" : {		
 		"horizontalSlides" : true,
-		
+
 		"slidesToShow" : {
 			"medium" : 5,
 			"small" : 2
-		}
+		},
+
+		"theme" : "horizontal"
 	},
 
 	"galleryTitle" : {

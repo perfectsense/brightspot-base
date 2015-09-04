@@ -1,5 +1,5 @@
 {
-	"_template" : "components/bsp-gallery-module-thumbs-or-nav",
+	"_template" : "components/bsp-gallery-module-with-nav",
 
 	"options" : {
 		"textNav" : true
