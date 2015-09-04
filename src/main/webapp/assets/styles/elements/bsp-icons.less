@@ -43,31 +43,45 @@
 
 // instead of importing fontawesome/icons.less which includes all the icons that can be used, we will manually
 // write out the ones we need here. We can just drop these classes into the DOM
-.@{fa-css-prefix}-twitter:before {
-    color: @twitter-color;
-    content: @fa-var-twitter;
+.@{fa-css-prefix}-twitter {
+    background-color: @twitter-color;
+    &:before {
+        content: @fa-var-twitter;
+    }
 }
-.@{fa-css-prefix}-facebook:before {
-    color: @facebook-color;
-    content: @fa-var-facebook;
+.@{fa-css-prefix}-facebook {
+    background-color: @facebook-color;
+    &:before {
+        content: @fa-var-facebook;
+    }
 }
-.@{fa-css-prefix}-linkedin:before {
-    content: @fa-var-linkedin;
+.@{fa-css-prefix}-linkedin {
+    background-color: @linkedin-color;
+    &:before {
+        content: @fa-var-linkedin;
+    }
 }
-.@{fa-css-prefix}-pinterest:before {
-    color: @pinterest-color;
-    content: @fa-var-pinterest;
+
+.@{fa-css-prefix}-pinterest {
+    background-color: @pinterest-color;
+    &:before {
+        content: @fa-var-pinterest;
+    }
 }
 .@{fa-css-prefix}-external-link:before {
     content: @fa-var-external-link;
 }
-.@{fa-css-prefix}-instagram:before {
-    color: @instagram-color;
-    content: @fa-var-instagram;
+.@{fa-css-prefix}-instagram {
+    background-color: @instagram-color;
+    &:before {
+        content: @fa-var-instagram;
+    }
 }
-.@{fa-css-prefix}-tumblr:before {
-    color: @tumblr-color;
-    content: @fa-var-tumblr;
+.@{fa-css-prefix}-tumblr {
+    background-color: @tumblr-color;
+    &:before {
+        content: @fa-var-tumblr;
+    }
 }
 .@{fa-css-prefix}-search:before {
     content: @fa-var-search;

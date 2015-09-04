@@ -19,12 +19,21 @@
     }
 
  	.bsp-share-links {
-        margin: 0 0 @space 0;
+        margin: 0 0 @space-double 0;
 
  		a {
- 			color: @white;
+            background: @social-icons-monochrome-color;
+            &:before {
+                color: @brand-secondary;
+            }
  		}
  	}
+
+    .bsp-share-links-title {
+        display: block;
+        font-size: @ts-2;
+        margin: 0 0 @space 0;
+    }
 
     form {
         .input-container { 

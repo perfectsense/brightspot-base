@@ -2,7 +2,7 @@
     "_template" : "components/bsp-site-footer-simple",
 
     "sharing" : {
-        "social": "Follow Jordan",
+        "social": "Follow",
 
         "links" : [{
             "_template" : "common/link",

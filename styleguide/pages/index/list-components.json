@@ -191,6 +191,19 @@
 				"_template" : "common/link",
 				
 				"attributes" : {
+					"href"  : "/components/bsp-social-share/",
+					"title" : "BSP Social Share"
+				},
+				"text"  : "BSP Social Share"
+			}
+		},
+		{
+			"_template" : "components/bsp-list-promo-item-handler",
+			
+			"link": {
+				"_template" : "common/link",
+				
+				"attributes" : {
 					"href"  : "/components/bsp-tabber/",
 					"title" : "BSP Tabber"
 				},
