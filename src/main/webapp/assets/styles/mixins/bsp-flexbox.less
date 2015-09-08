@@ -1,0 +1,26 @@
+/**
+ * Browser support data from: http://caniuse.com/#feat=flexbox
+ * Flexbox info from: https://css-tricks.com/using-flexbox/
+ * 
+ * The following class documents browsers that supports the latest flexible box layout module and syntax
+ */
+
+// Creates a flexbox container. All child elements within elements of .display-flex() becomes flex-items
+// Order of the prefix matters
+.display-flex(){
+
+	/* Android 2.1-4.3, Chrome 4-20, iOS 6-, Safari 3.1-6, Safari & Chrome for iOS 3.2-6.1 */
+	display: -webkit-box;      
+
+	/* Firefox 2-20 (buggy but mostly works) */
+	display: -moz-box;         
+
+	/* IE 10, IE Mobile 10 */
+	display: -ms-flexbox;      
+
+	/* Chrome 21-28, Opera 15-16, Safari 6.1-8  */
+	display: -webkit-flex;    
+
+	/* Chrome 29+, Edge 12+, Firefox 28+, IE 11+, Opera 17+, Safari 9, Safari & Chrome for iOS 9 */
+	display: flex;             
+}
