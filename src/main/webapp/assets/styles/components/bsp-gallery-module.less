@@ -39,13 +39,30 @@
 		background-color: @gallery-nav-background-color;
 
 		.bsp-carousel-slide {	
-			border-top: 5px solid @gallery-nav-background-color;
+			
 			color: @white;
 			cursor: pointer;
 			text-align: center;		
+		}
+	}
+}
 
-			&.current {
-				border-color: @gallery-current-slide-color;
+// all carousel module navs (thumbs, nav, etc) get a pretty border at the top
+.bsp-carousel-nav {
+
+	.bsp-carousel-slide {
+		position: relative;
+
+		&.current {
+
+			&:after {
+				content:'';
+				position: absolute;
+				bottom: 0;
+				top: 0;
+				left: 0;
+				right: 0;
+				border-top: 5px solid @gallery-current-slide-color;
 			}
 		}
 	}
