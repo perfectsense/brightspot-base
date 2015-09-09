@@ -9,7 +9,7 @@ module.exports = function(grunt) {
                 less: [
                     ' *.less'
                 ],
-                autoprefixer: false
+                autoprefixer: true
             },
 
             scripts: {
