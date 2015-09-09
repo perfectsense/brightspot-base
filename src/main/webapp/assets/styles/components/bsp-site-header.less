@@ -339,7 +339,6 @@
         height: @header-height;
         line-height: @header-height;
         padding: 0 @space-double;
-        text-transform: uppercase;
     }
 }
 
@@ -402,14 +401,15 @@
 
      & when (@header-positioning = fixed) {
 
+        // adding important as there seems to be some issues with media queries and specificity here
         .bsp-site-header-wrapper {
-            background: @header-background;
-            height: @header-height-before-scroll;
+            background: @header-background !important;
+            height: @header-height-before-scroll !important;
 
             .transition(all .3s linear);
 
             .bsp-scrolling &, .bsp-fullscreen & {
-                height: @header-height;
+                height: @header-height !important;
             }
         }
 
