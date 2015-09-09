@@ -1,6 +1,12 @@
 {
 	"_template" : "components/bsp-gallery-module-with-nav",
 
+	"options" : {
+
+		"thumbnailsToShow" : "4"
+
+	},
+
 	"galleryTitle" : {
 
 		"_template" : "common/text",
