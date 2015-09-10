@@ -1,10 +1,10 @@
-<div class="bsp-site-wrapper">
+<div class="bsp-site-wrapper{{#if wrapperClass}} {{siteWrapperClass}}{{/if}}">
 
     {{#with headerView}}
         {{render this}}
     {{/with}}
 
-    <div class="bsp-site">
+    <div class="bsp-site{{#if siteClass}} {{siteClass}}{{/if}}">
 
         {{render mainView}}
 
