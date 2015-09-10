@@ -401,15 +401,14 @@
 
      & when (@header-positioning = fixed) {
 
-        // adding important as there seems to be some issues with media queries and specificity here
         .bsp-site-header-wrapper {
-            background: @header-background !important;
-            height: @header-height-before-scroll !important;
+            background: @header-background;
+            height: @header-height-before-scroll;
 
             .transition(all .3s linear);
 
             .bsp-scrolling &, .bsp-fullscreen & {
-                height: @header-height !important;
+                height: @header-height;
             }
         }
 
