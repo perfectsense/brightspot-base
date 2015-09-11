@@ -14,11 +14,10 @@ body.bsp-gallery-fullscreen {
 .bsp-carousel-gallery-header {
     &:extend(.ts-header-2 all);
     margin: @space-double 0;
-    text-align: center;
 }
 
 .bsp-carousel-gallery {
-    margin-bottom: @space-double;
+    margin-bottom: @space;
     position: relative;
 
     // gives the overlay look to the 2nd carousel
@@ -115,11 +114,9 @@ body.bsp-gallery-fullscreen {
 
 // elements at the bottom of the footer
 .bsp-carousel-gallery-thumbs, .bsp-carousel-gallery-count-wrapper, .bsp-carousel-gallery-caption-trigger {
-    border: 1px solid @bsp-carousel-gallery-fullscreen-body;
-    border-radius: 10px;
     display: inline-block;
-    line-height: 40px;
-    margin: 0 @space-double @space 0;
+    float: left;
+    margin: @space-half @space-double @space-half 0;
     padding: 0 @space;
 }
 
@@ -132,11 +129,6 @@ body.bsp-gallery-fullscreen {
 
 .bsp-carousel-gallery-footer {
     &:extend(.clearfix all);
-
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
 }
 
 // Used to create show and hide text for the caption trigger.
@@ -149,7 +141,7 @@ body.bsp-gallery-fullscreen {
 
     .captions-visible & {
          span.captions-visible {
-            display: block;
+            display: inline-block;
         }
         span.captions-hidden {
             display: none;
@@ -158,6 +150,10 @@ body.bsp-gallery-fullscreen {
 }
 
 .bsp-carousel-gallery-sharing {
+    clear: both;
+    margin: @space-half 0;
+    padding: 0 @space;
+
     .bsp-share-link {
         background-color: @bsp-carousel-gallery-fullscreen-body;
         color: @bsp-carousel-gallery-fullscreen-background;
@@ -168,7 +164,11 @@ body.bsp-gallery-fullscreen {
     }
 }
 
-
+.bsp-carousel-gallery-tags {
+    clear: both;
+    margin: @space-half 0;
+    padding: 0 @space;
+}
 
 
 @media @mq-md {
@@ -179,7 +179,21 @@ body.bsp-gallery-fullscreen {
         .icon {
             color: @brand-accent;
             display: inline-block;
+            margin-right: @space-half;
         }
+    }
+
+    .bsp-carousel-gallery-caption-trigger {
+
+        .icon {
+            margin-right: @space-half;
+        }
+
+    }
+
+    .bsp-carousel-gallery-sharing {
+        clear: none;
+        float: right;
     }
 
 }

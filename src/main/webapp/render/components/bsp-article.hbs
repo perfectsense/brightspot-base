@@ -38,13 +38,16 @@
 			{{/each}}
 		</div>
 
+        {{#if tags}}
 		<div class="bsp-tags">
+            <div class="bsp-tag-list-title">{{render this.tagsTitle}}</div>
 			<ul class="bsp-tag-list">
 				{{#each tags}}
 					<li>{{render this linkClass="bsp-tag"}}</li>
 				{{/each}}
 			</ul>
 		</div>
+        {{/if}}
 
 	</div>
 

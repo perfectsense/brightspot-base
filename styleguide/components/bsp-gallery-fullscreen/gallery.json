@@ -281,7 +281,56 @@
         }
     ],
 
+    "tagsTitle" : {
+        "_template" : "common/text",
+
+        "text" : "Related"
+    },
+
+    "tags" : [
+        {
+            "_template" : "common/link",
+
+            "attributes" : {
+                "href" : "#"
+            },
+            "text" : "MTB"
+        },
+        {
+            "_template" : "common/link",
+
+            "attributes" : {
+                "href" : "#"
+            },
+            "text" : "Cycling"
+        },
+        {
+            "_template" : "common/link",
+
+            "attributes" : {
+                "href" : "#"
+            },
+            "text" : "Downhill"
+        },
+        {
+            "_template" : "common/link",
+
+            "attributes" : {
+                "href" : "#"
+            },
+            "text" : "Enduro"
+        },
+        {
+            "_template" : "common/link",
+
+            "attributes" : {
+                "href" : "#"
+            },
+            "text" : "Dirt Jumping"
+        }
+    ],
+
     "sharing" : {
-        "_dataUrl" : "/components/bsp-social-share/share-notitle.json"
+        "_dataUrl" : "/components/bsp-social-share/share.json"
     }
 }

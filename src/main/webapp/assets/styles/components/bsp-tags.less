@@ -4,8 +4,16 @@
 	padding: 0 0 @space;
 }
 
+.bsp-tag-list-title {
+    float: left;
+    line-height: 1;
+    margin: @space-half @space-half @space-half 0;
+    padding: @space-quarter @space-half @space-quarter 0;
+}
+
 .bsp-tag-list {
 	&:extend(.bsp-list-inline all);
+    display: inline;
 }
 
 .bsp-tag {
@@ -13,6 +21,6 @@
 	display: inline-block;
 	line-height: 1;
 	padding: @space-quarter @space-half;
-	margin: 0 @space @space 0;
+	margin: @space-half;
 	text-transform: uppercase;
 }

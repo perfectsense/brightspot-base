@@ -55,6 +55,7 @@
             {{/if}}
 
             <div class="bsp-carousel-gallery-caption-trigger">
+                <span class="icon icon-info-circle" href=""></span>
                 <span class="captions-visible">Hide Captions</span>
                 <span class="captions-hidden">Show Captions</span>
             </div>
@@ -62,6 +63,17 @@
             {{#if sharing}}
             <div class="bsp-carousel-gallery-sharing">
                 {{render this.sharing}}
+            </div>
+            {{/if}}
+
+            {{#if tags}}
+            <div class="bsp-carousel-gallery-tags">
+                <div class="bsp-tag-list-title">{{render this.tagsTitle}}</div>
+                <ul class="bsp-tag-list">
+                    {{#each this.tags}}
+                        <li>{{render this linkClass="bsp-tag"}}</li>
+                    {{/each}}
+                </ul>
             </div>
             {{/if}}
 
