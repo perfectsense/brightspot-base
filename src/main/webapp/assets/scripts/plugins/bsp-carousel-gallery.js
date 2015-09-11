@@ -1,57 +1,76 @@
 /** @todo move to bsp-carousel repo */
 import $ from 'jquery';
-import bsp_carousel from 'bsp-carousel';
+import bsp_carousel from 'bsp-carousel-thumbnav';
 
 export default {
-	init($el, options) {
-		this.$el = $el;
-		this.options = options;
-		this.saveElements();
-		this.buildCarousel();
-		this.addThumbnailNav();
-		this.addEvents();
-	},
-	saveElements() {
-		this.$counter = this.$el.find('.bsp-carousel-gallery-count');
-		this.$carousel = this.$el.find('.bsp-carousel-gallery');
-		this.$thumbnails = this.$el.find('.bsp-carousel-gallery-thumbnails');
-		this.$openThumbnails = this.$el.find('.bsp-carousel-gallery-footer-thumbnails-link a');
-		this.$closeThumbnails = this.$el.find('.bsp-carousel-gallery-thumbnails-close-link');
-	},
-	buildCarousel() {
-		this.carousel = Object.create(bsp_carousel);
-		this.carousel.init(this.$carousel, this.options);
-	},
-	addThumbnailNav() {
-		var self = this;
-		this.$openThumbnails.on('click', (e) => {
-			self.showThumbnails();
-			e.preventDefault();
-		});
-		this.$closeThumbnails.on('click', (e) => {
-			self.hideThumbnails();
-			e.preventDefault();
-		});
-		this.$thumbnails.find('.bsp-carousel-gallery-thumbnail').on('click', (e) => {
-			var index = $(this).data('index');
-			self.gotoSlide(index);
-			e.preventDefault();
-		});
-	},
-	addEvents() {
-		var self = this;
-		this.$carousel.on('carousel:init carousel:afterChange', () => {
-			self.$counter.html((self.carousel.currentSlide()+1) + ' of ' + self.carousel.slideCount());
-		});
-	},
-	showThumbnails() {
-		this.$thumbnails.addClass('visible');
-	},
-	hideThumbnails() {
-		this.$thumbnails.removeClass('visible');
-	},
-	gotoSlide(i) {
-		this.hideThumbnails();
-		this.carousel.goTo(i+1);
-	}
+
+    // defaults for full screen gallery. Options can be passed in through HTML
+    defaults : {
+
+        nav: {
+            themeConfig: {
+                centerMode: true,
+                centerPadding: '0px',
+                focusOnSelect: true,
+                slidesToShow: 8,
+                slidesToScroll: 1
+            }
+        },
+        stage: {
+            themeConfig: {
+                arrows: true
+            }
+        }
+
+    },
+
+    init($el, options) {
+        var self = this;
+
+        self.$el = $el;
+        self.options = $.extend(self.defaults, options);
+        self.saveElements();
+        self.buildCarousel();
+        self.addThumbCaptionClicks();
+        self.addEvents();
+    },
+
+    saveElements() {
+        var self = this;
+
+        self.$counter = this.$el.find('.bsp-carousel-gallery-count');
+        self.$carousel = this.$el.find('.bsp-carousel-gallery');
+    },
+
+    buildCarousel() {
+        var self = this;
+
+        self.carousel = Object.create(bsp_carousel);
+        self.carousel.init(this.$carousel, this.options);
+    },
+
+    addThumbCaptionClicks() {
+        var self = this;
+
+        self.$el.find('.bsp-carousel-gallery-thumbs').on('click', function() {
+            self.$el.removeClass('captions-visible');
+            self.$el.toggleClass('thumbs-visible');
+            return false;
+        });
+
+        self.$el.find('.bsp-carousel-gallery-caption-trigger').on('click', function() {
+            self.$el.removeClass('thumbs-visible');
+            self.$el.toggleClass('captions-visible');
+            return false;
+        });
+    },
+
+    addEvents() {
+        var self = this;
+
+        this.$carousel.on('carousel:init carousel:afterChange', () => {
+            self.$counter.html((self.carousel.stage.currentSlide()+1) + ' of ' + self.carousel.stage.slideCount());
+        });
+    }
+
 };

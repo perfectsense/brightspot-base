@@ -1,96 +1,71 @@
-<div data-bsp-carousel-gallery>
-	{{#if galleryThumbnails}}
-		<div class="bsp-carousel-gallery-thumbnails">
-			
-			<a href="" class="bsp-carousel-gallery-thumbnails-close-link">
-				{{#if galleryThumbnailsCloseText}}
-					{{galleryThumbnailsCloseText}}
-				{{/if}}
-			</a>
+<div data-bsp-carousel-gallery data-bsp-carousel-gallery-options='{{#if options.thumbnailsToShow}}{ "nav": { "themeConfig" : { "slidesToShow" : {{options.thumbnailsToShow}} } } }{{/if}}'>
 
-			{{#gallerySlides}}
-				{{#if thumbnailImage}}
-				<div class="bsp-carousel-gallery-thumbnail bsp-column-third" data-index="{{@index}}">
-					{{render this}}
-				</div>
-				{{/if}}
-			{{/gallerySlides}}
-		</div>
-	{{/if}}
+    <div class="bsp-carousel-gallery-container">
 
-	<div class="bsp-carousel-gallery-container">
+        {{#if galleryTitle}}
+            <h2 class="bsp-carousel-gallery-header">
+                {{galleryTitle}}
+            </h2>
+        {{/if}}
 
-		{{#if galleryTitle}}
-			<h2 class="bsp-carousel-gallery-header">
-				{{#if galleryTitleType}}
-					<span>{{galleryTitleType}}:</span>
-				{{/if}}
-				{{galleryTitle}}
-				{{#if galleryTitleShowCount}}
-					<span class="bsp-carousel-gallery-count"></span>
-				{{/if}}
-			</h2>
-		{{/if}}
-		<div class="bsp-carousel-gallery">
-			{{#gallerySlides}}
-				<div class="bsp-carousel-gallery-slide">
-					{{render this}}
-					{{#if slideTitle}}
-						<h3 class="bsp-carousel-gallery-slide-title">{{slideTitle}}</h3>
-					{{/if}}
-					{{#if slideDescription}}
-						<div class="bsp-carousel-gallery-slide-description">{{slideDescription}}</div>
-					{{/if}}
-				</div>
-			{{/gallerySlides}}
-		</div>
+        <div class="bsp-carousel-gallery">
+            <div class="bsp-carousel-stage">
+                {{#each gallerySlides}}
+                    <div class="bsp-carousel-gallery-slide">
+                        {{render this.image}}
 
-		<div class="bsp-carousel-gallery-footer">	
+                        {{#if caption}}
+                        <div class="bsp-carousel-gallery-slide-caption-wrapper">
+                            <div class="bsp-carousel-gallery-slide-caption">
+                                {{#each caption}}
+                                    {{render this}}
+                                {{/each}}
+                            </div>
+                        </div>
+                        {{/if}}
 
+                    </div>
+                {{/each}}
+            </div>
 
-			{{#if galleryThumbnails}}
-			<div class="bsp-carousel-gallery-footer-item bsp-carousel-gallery-footer-thumbnails-link bsp-column-fourth">
-				<a class="icon icon-th-large bsp-share-link" href="">Thumbnails</a>
-			</div>
-			{{/if}}
+            {{#if options.galleryThumbnails}}
+                <div class="bsp-carousel-nav">
 
-			{{#if sharing}}
-			<div class="bsp-carousel-gallery-footer-item bsp-sharing bsp-column-third" data-bsp-share data-bsp-share-options='{"iconClass":"icon", "serviceProps": { {{#if sharing.facebook}} {{#if sharing.facebook.appId}} "facebook" : { "appId": {{sharing.facebook.appId}} } {{/if}} {{/if}}  }}'>
-				{{#if sharingTitle}}
-					<h4 class="bsp-carousel-gallery-footer-header">{{sharingTitle}}:</h4>
-				{{/if}}
-				{{#if sharing.facebook}}
-			    	<div class="bsp-sharing-item bsp-facebook-share"></div>
-			    {{/if}}
-			    {{#if sharing.twitter}}
-			    	<div class="bsp-sharing-item bsp-twitter-share"></div>
-			    {{/if}}
-			    {{#if sharing.google}}
-			    	<div class="bsp-sharing-item bsp-google-share"></div>
-			    {{/if}}
-			    {{#if sharing.pinterest}}
-			    	<div class="bsp-sharing-item bsp-pinterest-share"></div>
-			    {{/if}}
-			    {{#if sharing.linkedin}}
-			    	<div class="bsp-sharing-item bsp-linkedin-share"></div>   
-			    {{/if}}
-			</div>
-			{{/if}}
+                    {{#each gallerySlides}}
+                        <div class="bsp-carousel-gallery-nav-slide">
+                            {{render this.thumbnail}}
+                        </div>
+                    {{/each}}
 
-			{{#if relatedLinks}}
-			<div class="bsp-carousel-gallery-footer-item bsp-carousel-gallery-footer-links bsp-column-third">
-				{{#if relatedLinksTitle}}
-					<h4 class="bsp-carousel-gallery-footer-header">{{relatedLinksTitle}}:</h4>
-				{{/if}}
-				<ul>
-					{{#relatedLinks}}
-						<li>{{render this}}</li>
-					{{/relatedLinks}}			
-				</ul>
-			</div>
-			{{/if}}
+                </div>
+            {{/if}}
+        </div>
 
-		</div>
+        <div class="bsp-carousel-gallery-footer">
 
-	</div>
+            {{#if options.galleryThumbnails}}
+            <div class="bsp-carousel-gallery-thumbs">
+                <span class="icon icon-th-large" href=""></span>
+                <span class="bsp-carousel-gallery-count"></span>
+            </div>
+            {{else}}
+            <div class="bsp-carousel-gallery-count-wrapper">
+                <span class="bsp-carousel-gallery-count"></span>
+            </div>
+            {{/if}}
+
+            <div class="bsp-carousel-gallery-caption-trigger">
+                <span class="captions-visible">Hide Captions</span>
+                <span class="captions-hidden">Show Captions</span>
+            </div>
+
+            {{#if sharing}}
+            <div class="bsp-carousel-gallery-sharing">
+                {{render this.sharing}}
+            </div>
+            {{/if}}
+
+        </div>
+
+    </div>
 </div>

@@ -1,171 +1,203 @@
 body.bsp-gallery-fullscreen {
-	background: @bsp-carousel-gallery-fullscreen-background;
-	.bsp-site {
-		background: inherit;
-	}
-}
 
-.bsp-carousel-overlay-dimensions {
-	bottom: 0;
-	left: 0;
-	overflow: scroll;
-	position: absolute;
-	right: 0;
-	top: 0;
+    background: @bsp-carousel-gallery-fullscreen-background;
+
+    .bsp-site {
+        background: inherit;
+    }
 }
 
 .bsp-carousel-gallery-container {
-	color: @bsp-carousel-gallery-fullscreen-body;
-
-	.bsp-sharing {
-		margin-bottom: @space;
-	}
-
-	.bsp-sharing-item {
-		display: inline;
-	}
-	.bsp-share-link {
-		background: @bsp-carousel-gallery-fullscreen-color;
-	}
-
-	.bsp-carousel .slick-prev,
-	.bsp-carousel .slick-next {
-		height: @bsp-carousel-gallery-fullscreen-nav-button-size;
-		width: @bsp-carousel-gallery-fullscreen-nav-button-size;
-		@media @mq-only-xs {
-			display: @bsp-carousel-gallery-fullscreen-nav-button-display-xs;
-			top: 25%;
-		}
-		@media @mq-only-sm {
-			display: @bsp-carousel-gallery-fullscreen-nav-button-display-sm;
-			top: 25%;
-		}
-		@media @mq-only-md {
-			display: @bsp-carousel-gallery-fullscreen-nav-button-display-md;
-			top: ~"calc(50% - (@{bsp-carousel-gallery-fullscreen-nav-button-size}/2))";
-		}
-		@media @mq-only-lg {
-			display: @bsp-carousel-gallery-fullscreen-nav-button-display-lg;
-			top: ~"calc(50% - (@{bsp-carousel-gallery-fullscreen-nav-button-size}/2))";
-		}
-		&:before {
-			color: @bsp-carousel-gallery-fullscreen-arrow-color;
-			font-size: @bsp-carousel-gallery-fullscreen-nav-button-size;
-		}
-	}
+    color: @bsp-carousel-gallery-fullscreen-body;
 }
 
 .bsp-carousel-gallery-header {
-	text-transform: uppercase;
-	z-index: @z-index-header;
-	span {
-		color: @bsp-carousel-gallery-fullscreen-color;
-
-		&.bsp-carousel-gallery-count {
-			color: @bsp-carousel-gallery-fullscreen-body;
-			font-size: @font-size-base;
-			font-weight: normal;
-		}
-	}
-	@media @mq-only-xs {
-		text-align: center;
-	}
-	@media @mq-only-sm {
-		text-align: center;
-	}
-	@media @mq-only-md {
-		background: @bsp-carousel-gallery-fullscreen-background;
-		left: @space-double;
-	}
-	@media @mq-only-lg {
-		background: @bsp-carousel-gallery-fullscreen-background;
-		left: @space-double;
-	}
-	@media @mq-only-lg, @mq-only-md {
-		padding: @space-double;
-		position: absolute;
-
-		span {
-			display: block;
-			font-size: 80%;
-		}
-	}
+    &:extend(.ts-header-2 all);
+    margin: @space-double 0;
+    text-align: center;
 }
 
-.bsp-carousel-gallery-thumbnails {
-	.bsp-carousel-overlay-dimensions;
-	
-	background: @bsp-carousel-gallery-fullscreen-background;
-	color: @bsp-carousel-gallery-fullscreen-color;
-	display: none;
-	padding: @space-double;
-	z-index: @z-index-overlay;
-	
-	&.visible {
-		display: block;
-	}
-}
-.bsp-carousel-gallery-thumbnail {
-	cursor: pointer;
-	float: left;
-	padding-bottom: @space-double;
-}
-.bsp-carousel-gallery-thumbnails-close-link {
-	color: @bsp-carousel-gallery-fullscreen-color;
-	position: absolute;
-	top: @space;
-	right: @space;
+.bsp-carousel-gallery {
+    margin-bottom: @space-double;
+    position: relative;
+
+    // gives the overlay look to the 2nd carousel
+    // it's hidden by default on xs and sm screens and comes into play md and up by default
+    // it has a max-height to give it a smooth look/feel when coming in
+    .bsp-carousel-nav {
+        background: rgba(0, 0, 0, 0.7);
+        bottom: 0;
+        max-height: 0;
+        height: auto;
+        position: absolute;
+        overflow: hidden;
+        .transition(max-height 0.5s);
+        width: 100%;
+
+        .thumbs-visible & {
+            max-height: 250px;
+        }
+
+        // TODO: Move these to bsp-carousel or at least to base a regular bsp-carousel-nav thing
+        // we have smaller arrows for the thumbs than default
+        .slick-prev,
+        .slick-next {
+
+            height: 20px;
+            width: 20px;
+            margin-top: -10px;
+
+            &:before {
+                font-size: 20px;
+            }
+        }
+
+        // current thumb gets a pretty accent border
+        .current {
+            &:after {
+                border-top: 4px solid @brand-accent;
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
 }
 
 .bsp-carousel-gallery-slide {
-	img {
-		height: auto;
-		width: 100%;
-	}
-}
-.bsp-carousel-gallery-slide-title {
-	padding-top: @space;
-	text-transform: uppercase;
-}
-.bsp-carousel-gallery-slide-description {
-	margin-bottom: @space-double;
-}
-.bsp-carousel-gallery-footer-thumbnails-link {
-	margin-bottom: @space;
-	a {
-		color: @bsp-carousel-gallery-fullscreen-body;
-		font-weight: @font-weight-bold;
-		text-transform: uppercase;
+    position: relative;
 
-		&:before {
-			color: @bsp-carousel-gallery-fullscreen-background;
-			// @todo this probably shouldn't be here or at least not hard-coded
-			padding-left: 10px;
-			padding-right: 15px;
-		}
-	}
+    // make sure that image fits the slide as much as possible
+    img {
+        height: auto;
+        margin: 0 auto;
+        width: 100%;
+    }
 }
-.bsp-carousel-gallery-footer-header {
-	display: inline;
-	font-weight: normal;
-	text-transform: uppercase;
+
+.bsp-carousel-gallery-nav-slide {
+    padding: @space-double;
+    position: relative;
+
+    // make sure that thumb fits the container as much as possible
+    img {
+        height: auto;
+        margin: 0 auto;
+        width: 100%;
+    }
 }
-.bsp-carousel-gallery-footer-links {
-	line-height: @space-double-and-half;
-	margin-bottom: @space;
-	ul {
-		display: inline;
-	}
-	li {
-		display: inline-block;
-	}
-	a {
-		background: @bsp-carousel-gallery-fullscreen-color;
-		color: @bsp-carousel-gallery-fullscreen-background;
-		padding: @space-quarter @space-half;
-		text-transform: uppercase;
-	}
+
+// the caption wrapper gets a bottom placement on the slide along with the same max-height transition as the nav carousel
+.bsp-carousel-gallery-slide-caption-wrapper {
+    bottom: 0;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+
+    .transition(max-height 0.5s);
+
+    .captions-visible & {
+        max-height: 150px;
+    }
 }
-.bsp-carousel-gallery-footer-item {
-	padding-right: @space-double;
+
+.bsp-carousel-gallery-slide-caption {
+    &:extend(.ts-neg-1);
+
+    background: rgba(0, 0, 0, 0.5);
+    height: auto;
+    padding: @space;
+}
+
+// elements at the bottom of the footer
+.bsp-carousel-gallery-thumbs, .bsp-carousel-gallery-count-wrapper, .bsp-carousel-gallery-caption-trigger {
+    border: 1px solid @bsp-carousel-gallery-fullscreen-body;
+    border-radius: 10px;
+    display: inline-block;
+    line-height: 40px;
+    margin: 0 @space-double @space 0;
+    padding: 0 @space;
+}
+
+// we don't want to show the thumbs icon until a bigger screen size
+.bsp-carousel-gallery-thumbs {
+    .icon {
+        display: none;
+    }
+}
+
+.bsp-carousel-gallery-footer {
+    &:extend(.clearfix all);
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+// Used to create show and hide text for the caption trigger.
+.bsp-carousel-gallery-caption-trigger {
+    cursor: pointer;
+
+    span.captions-visible {
+        display: none;
+    }
+
+    .captions-visible & {
+         span.captions-visible {
+            display: block;
+        }
+        span.captions-hidden {
+            display: none;
+        }
+    }
+}
+
+.bsp-carousel-gallery-sharing {
+    .bsp-share-link {
+        background-color: @bsp-carousel-gallery-fullscreen-body;
+        color: @bsp-carousel-gallery-fullscreen-background;
+
+        &:hover {
+            color: @bsp-carousel-gallery-fullscreen-background;
+        }
+    }
+}
+
+
+
+
+@media @mq-md {
+
+    .bsp-carousel-gallery-thumbs {
+        cursor: pointer;
+
+        .icon {
+            color: @brand-accent;
+            display: inline-block;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+// full screen gallery gets a custom media query
+@media only screen and (min-width: 1400px) {
+
+    body.bsp-gallery-fullscreen {
+        .bsp-container {
+            width: 80%;
+            max-width: 1600px;
+        }
+    }
+
 }
