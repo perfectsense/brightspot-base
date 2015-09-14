@@ -2,36 +2,36 @@
 	"_template" : "components/bsp-list-promo",
 
 	"listItems" : [
-		{ 
+		{
 			"_template" : "components/bsp-list-promo-item-handler",
 
 			"link": {
 				"_template" : "common/link",
-				
+
 				"attributes" : {
 					"href"  : "/components/bsp-article/"
 				},
 				"text"  : "BSP Article - Standalone"
 			}
 		},
-		{ 
+		{
 			"_template" : "components/bsp-list-promo-item-handler",
-			
+
 			"link": {
 				"_template" : "common/link",
-				
+
 				"attributes" : {
 					"href"  : "/components/bsp-article/infinite.html"
 				},
 				"text"  : "BSP Article - Infinite Load"
 			}
 		},
-		{ 
+		{
 			"_template" : "components/bsp-list-promo-item-handler",
-			
+
 			"link": {
 				"_template" : "common/link",
-				
+
 				"attributes" : {
 					"href"  : "/components/bsp-bio/",
 					"title" : "BSP Bio"
@@ -41,10 +41,10 @@
 		},
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
-			
+
 			"link": {
 				"_template" : "common/link",
-				
+
 				"attributes" : {
 					"href"  : "/components/bsp-form-input/",
 					"title" : "BSP Form Input"
@@ -54,10 +54,10 @@
 		},
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
-			
+
 			"link": {
 				"_template" : "common/link",
-				
+
 				"attributes" : {
 					"href"  : "/components/bsp-form-select/",
 					"title" : "BSP Form Select"
@@ -67,10 +67,10 @@
 		},
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
-			
+
 			"link": {
 				"_template" : "common/link",
-				
+
 				"attributes" : {
 					"href"  : "/components/bsp-form-textarea/",
 					"title" : "BSP Form Textarea"
@@ -80,10 +80,10 @@
 		},
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
-			
+
 			"link": {
 				"_template" : "common/link",
-				
+
 				"attributes" : {
 					"href"  : "/components/bsp-gallery-fullscreen/",
 					"title" : "BSP Gallery Fullscreen"
@@ -93,10 +93,10 @@
 		},
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
-			
+
 			"link": {
 				"_template" : "common/link",
-				
+
 				"attributes" : {
 					"href"  : "/components/bsp-gallery-module/",
 					"title" : "BSP Gallery Module"
@@ -106,10 +106,10 @@
 		},
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
-			
+
 			"link": {
 				"_template" : "common/link",
-				
+
 				"attributes" : {
 					"href"  : "/components/bsp-image-promo/",
 					"title" : "BSP Image Promo"
@@ -119,10 +119,10 @@
 		},
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
-			
+
 			"link": {
 				"_template" : "common/link",
-				
+
 				"attributes" : {
 					"href"  : "/components/bsp-list-promo/",
 					"title" : "BSP List Promo"
@@ -132,10 +132,10 @@
 		},
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
-			
+
 			"link": {
 				"_template" : "common/link",
-				
+
 				"attributes" : {
 					"href"  : "/components/bsp-page-title/"
 				},
@@ -144,10 +144,10 @@
 		},
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
-			
+
 			"link": {
 				"_template" : "common/link",
-				
+
 				"attributes" : {
 					"href"  : "/components/bsp-pagination/",
 					"title" : "BSP Pagination"
@@ -157,10 +157,10 @@
 		},
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
-			
+
 			"link": {
 				"_template" : "common/link",
-				
+
 				"attributes" : {
 					"href"  : "/components/bsp-search-results/",
 					"title" : "BSP Search Results"
@@ -170,10 +170,10 @@
 		},
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
-			
+
 			"link": {
 				"_template" : "common/link",
-				
+
 				"attributes" : {
 					"href"  : "/components/bsp-site-header/",
 					"title" : "BSP Site Header"
@@ -183,10 +183,10 @@
 		},
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
-			
+
 			"link": {
 				"_template" : "common/link",
-				
+
 				"attributes" : {
 					"href"  : "/components/bsp-site-footer/",
 					"title" : "BSP Site Footer"
@@ -196,10 +196,10 @@
 		},
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
-			
+
 			"link": {
 				"_template" : "common/link",
-				
+
 				"attributes" : {
 					"href"  : "/components/bsp-social-share/",
 					"title" : "BSP Social Share"
@@ -209,10 +209,10 @@
 		},
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
-			
+
 			"link": {
 				"_template" : "common/link",
-				
+
 				"attributes" : {
 					"href"  : "/components/bsp-tabber/",
 					"title" : "BSP Tabber"
@@ -222,10 +222,10 @@
 		},
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
-			
+
 			"link": {
 				"_template" : "common/link",
-				
+
 				"attributes" : {
 					"href"  : "/components/bsp-table/",
 					"title" : "BSP Table - Basic Configurations"
@@ -235,16 +235,28 @@
 		},
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
-			
+
 			"link": {
 				"_template" : "common/link",
-				
+
 				"attributes" : {
 					"href"  : "/components/bsp-table/tables-themed.html",
 					"title" : "BSP Table - Sample Themes"
 				},
 				"text"  : "BSP Table - Sample Themes"
 			}
-		}
+		},
+        {
+            "_template" : "components/bsp-list-promo-item-handler",
+
+            "link": {
+                "_template" : "common/link",
+
+                "attributes" : {
+                    "href"  : "/components/bsp-video-player"
+                },
+                "text"  : "BSP Video Player"
+            }
+        }
 	]
 }
