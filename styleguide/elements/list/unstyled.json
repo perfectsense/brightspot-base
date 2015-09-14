@@ -1,0 +1,26 @@
+{
+	"_template": "elements/list",
+	"unstyled": true,
+	"items": [
+		{
+			"_template": "common/text",
+			"text": "Item 1"
+		},
+		{
+			"_template": "common/text",
+			"text": "Item 2"
+		},
+		{
+			"_template": "common/text",
+			"text": "Item 3"
+		},
+		{
+			"_template": "common/text",
+			"text": "Item 4"
+		},
+		{
+			"_template": "common/text",
+			"text": "Item 5"
+		}
+	]
+}

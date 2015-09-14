@@ -1,0 +1,12 @@
+{{!--
+	The type attribute should only be used in ordered lists where 
+	the content of the list numbers matters. CSS should be used for 
+	styling at all other times.
+
+	More info: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol
+--}}
+<{{#if ordered}}ol{{else}}ul{{/if}} {{#if type}}type="{{type}}" {{/if}}class="bsp-{{#if unstyled}}unstyled-{{/if}}list{{#if inline}}-inline{{/if}}{{#if listClass}} {{listClass}}{{/if}}">
+	{{#each items}}
+		<li>{{render this}}</li>
+	{{/each}}
+</{{#if ordered}}ol{{else}}ul{{/if}}>

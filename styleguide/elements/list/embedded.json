@@ -1,0 +1,43 @@
+{
+	"_template": "elements/list",
+	"items": [
+		{
+			"_template": "common/text",
+			"text": "Item 1"
+		},
+		{
+			"_template": "components/bsp-component-group",
+			"components": [
+				{
+					"_template": "common/text",
+					"text": "Item 2"
+				},
+				{
+					"_template": "elements/list",
+					"items": [
+						{
+							"_template": "common/text",
+							"text": "Embedded Item 1"
+						},
+						{
+							"_template": "common/text",
+							"text": "Embedded Item 2"
+						},
+						{
+							"_template": "common/text",
+							"text": "Embedded Item 3"
+						},
+						{
+							"_template": "common/text",
+							"text": "Embedded Item 4"
+						},
+						{
+							"_template": "common/text",
+							"text": "Embedded Item 5"
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -27,9 +27,33 @@ ul, ol {
 }
 ul.bsp-list {
     list-style: disc;
+
+    &[type='circle'] {
+        list-style: circle;
+    }
+
+    &[type='square'] {
+        list-style: square;
+    }
 }
 ol.bsp-list {
     list-style: decimal;
+
+    &[type='A'] {
+        list-style: upper-alpha;
+    }
+
+    &[type='a'] {
+        list-style: lower-alpha;
+    }
+
+    &[type='I'] {
+        list-style: upper-roman;
+    }
+
+    &[type='i'] {
+        list-style: lower-roman;
+    }
 }
 
 // Unstyled keeps list items block level, just removes default browser padding and list-style
