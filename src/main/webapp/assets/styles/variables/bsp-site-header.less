@@ -1,14 +1,14 @@
-// These are options for the header. 
+// These are options for the header.
 @header-background: @brand-secondary;
 
-// Since the header design has vertically centered elements, we need to hardcode a static height, 
+// Since the header design has vertically centered elements, we need to hardcode a static height,
 // which is defined here and can be overriden for custom look/feel
 @header-height: 60px;
 @header-height-before-scroll: 60px;
 
 // variables that are used to create the fancy looking scroll menu animation
 // logo has to have the height hardcoded in the CSS in order to center it and allow for a smooth transition left
-@header-logo-width: 320px; 
+@header-logo-width: 320px;
 @header-logo-height: 44px;
 
 // the header logo has to be placed absolutely since we are animating it
@@ -37,3 +37,6 @@
 
 // this is the space at the top and bottom of the content
 @site-top-and-bottom-space: @space-double;
+
+// allows overide of mobile breakpoint for header
+@header-mobile-breakpoint: @mq-sm;
