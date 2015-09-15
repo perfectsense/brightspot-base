@@ -1,6 +1,8 @@
 {
 	"_template": "elements/list",
-	"inline": true,
+	"options": {
+		"inline": true
+	},
 	"items": [
 		{
 			"_template": "common/text",

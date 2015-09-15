@@ -5,8 +5,8 @@
 
 	More info: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol
 --}}
-<{{#if ordered}}ol{{else}}ul{{/if}} {{#if type}}type="{{type}}" {{/if}}class="bsp-{{#if unstyled}}unstyled-{{/if}}list{{#if inline}}-inline{{/if}}{{#if listClass}} {{listClass}}{{/if}}">
+<{{#if options.ordered}}ol{{else}}ul{{/if}} {{#if options.type}}type="{{options.type}}" {{/if}}class="bsp-{{#if options.unstyled}}unstyled-{{/if}}list{{#if options.inline}}-inline{{/if}}{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
 	{{#each items}}
 		<li>{{render this}}</li>
 	{{/each}}
-</{{#if ordered}}ol{{else}}ul{{/if}}>
+</{{#if options.ordered}}ol{{else}}ul{{/if}}>

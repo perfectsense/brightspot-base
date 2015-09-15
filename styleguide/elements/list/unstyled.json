@@ -1,6 +1,8 @@
 {
 	"_template": "elements/list",
-	"unstyled": true,
+	"options": {
+		"unstyled": true
+	},
 	"items": [
 		{
 			"_template": "common/text",
