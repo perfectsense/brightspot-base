@@ -1,4 +1,4 @@
-// temporarily putting this here 
+// temporarily putting this here
 // need to figure out best way to do this
 @header-menu-height: 260px;
 
@@ -14,7 +14,7 @@
 }
 
 
-// This is our simple header. 
+// This is our simple header.
 // Contains a linked logo and a list of nav/site links
 .bsp-site-header-simple {
     &:extend(.clearfix all);
@@ -47,7 +47,7 @@
 
     &.toggle-in {
         height: @header-menu-height;
-    }    
+    }
 }
 
 .site-item-simple {
@@ -65,7 +65,7 @@
     display: table-cell;
     text-align: center;
     vertical-align: middle;
-    
+
     img {
         width: 215px;
     }
@@ -78,18 +78,36 @@
 }
 
 .bsp-site-menu-trigger-simple {
-    &:extend(.bsp-site-menu-trigger all);    
+    &:extend(.ts-2);
+
+    float: left;
+    margin: 0 @space 0 -@space-double;
+    padding: 0 @space-double;
+    position: relative;
+
+    a {
+        height: @header-height;
+        line-height: @header-height;
+
+        .icon {
+            line-height: @header-height;
+        }
+    }
+
+    &.toggle-in {
+        background: @gray-light-2;
+    }
 }
- 
+
 // additional styles for non mobile view
 @media @mq-sm {
-    
+
     // hide mobile display trigger
     .bsp-site-menu-toggle {
         display: none;
     }
 
-    // nav menu: non-mobile only    
+    // nav menu: non-mobile only
     .bsp-nav-menu-simple {
         display: table-cell;
         padding: 0;
@@ -97,8 +115,8 @@
         width: auto;
     }
 
-    // table display for this so that 
-    // the nav-items within it are evenly 
+    // table display for this so that
+    // the nav-items within it are evenly
     // distributed
     .bsp-nav-menu-items-simple {
         display: table;
