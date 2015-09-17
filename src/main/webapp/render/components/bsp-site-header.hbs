@@ -14,7 +14,7 @@
 
 		{{#with mainMenu}}
 			<div class="bsp-site-menu" data-bsp-toggle-item>
-				<div class="bsp-site-menu-content toggle-item">	
+				<div class="bsp-site-menu-content toggle-item">
 					{{#each menuItems}}
 						<ul class="bsp-site-menu-simple-list">
 							<li class="heading">{{render this.heading}}</li>
@@ -31,7 +31,7 @@
 				</div>
 			</div>
 		{{/with}}
-		
+
 		<div class="bsp-site-logo-centering">
 			<h1 class="bsp-site-logo">
 				{{#with siteLogo.link}}
@@ -54,7 +54,7 @@
 			<div class="bsp-share-links-centering">
 				<ul class="bsp-share-links">
 					{{#each sharing.links}}
-						<li class="bsp-{{this.icon}}-share">{{render this linkClass="bsp-share-link"}}</li>
+						<li class="bsp-{{this.icon}}-share">{{render this cssClass="bsp-share-link"}}</li>
 					{{/each}}
 				</ul>
 			</div>

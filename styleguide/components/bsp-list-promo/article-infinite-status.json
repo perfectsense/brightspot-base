@@ -31,7 +31,10 @@
     						"title" : "Link Title"
     					},
 
-    					"text" : "1111 ipsum dolor amet turducken jowl shankle, cupim"
+    					"body" : {
+                            "_template" : "common/text",
+                            "text" : "1111 ipsum dolor amet turducken jowl shankle, cupim"
+                        }
 
     				}
                 }
@@ -54,7 +57,10 @@
     						"title" : "Link Title"
     					},
 
-    					"text" : "222 ipsum dolor amet turducken jowl shankle, cupim"
+    					"body" : {
+                            "_template" : "common/text",
+                            "text" : "222 ipsum dolor amet turducken jowl shankle, cupim"
+                        }
 
     				}
                 }
@@ -77,7 +83,10 @@
     						"title" : "Link Title"
     					},
 
-    					"text" : "333 ipsum dolor amet turducken jowl shankle, cupim"
+    					"body" : {
+                            "_template" : "common/text",
+                            "text" : "333 ipsum dolor amet turducken jowl shankle, cupim"
+                        }
 
     				}
                 }

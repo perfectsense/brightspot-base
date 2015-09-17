@@ -52,7 +52,12 @@
                             "attributes" : {
                                 "href" : "#"
                             },
-                            "text" : "MTB"
+
+                            "body" : {
+                                "_template" : "common/text",
+
+                                "text" : "MTB"
+                            }
                         },
                         {
                             "_template" : "common/link",
@@ -60,7 +65,12 @@
                             "attributes" : {
                                 "href" : "#"
                             },
-                            "text" : "Cycling"
+
+                            "body" : {
+                                "_template" : "common/text",
+
+                                "text" : "Cycling"
+                            }
                         },
                         {
                             "_template" : "common/link",
@@ -68,7 +78,12 @@
                             "attributes" : {
                                 "href" : "#"
                             },
-                            "text" : "Downhill"
+
+                            "body" : {
+                                "_template" : "common/text",
+
+                                "text" : "Downhill"
+                            }
                         },
                         {
                             "_template" : "common/link",
@@ -76,7 +91,12 @@
                             "attributes" : {
                                 "href" : "#"
                             },
-                            "text" : "Enduro"
+
+                            "body" : {
+                                "_template" : "common/text",
+
+                                "text" : "Enduro"
+                            }
                         },
                         {
                             "_template" : "common/link",
@@ -84,7 +104,12 @@
                             "attributes" : {
                                 "href" : "#"
                             },
-                            "text" : "Dirt Jumping"
+
+                            "body" : {
+                                "_template" : "common/text",
+
+                                "text" : "Dirt Jumping"
+                            }
                         }
                     ],
 

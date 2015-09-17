@@ -8,7 +8,7 @@
 	"heading" : "Theatres",
 
 	"listItems" : [
-		{ 
+		{
 			"_template" : "components/bsp-list-promo-item-handler",
 
 			"imgAlign" : "top",
@@ -21,14 +21,14 @@
 					"title" : "Link Title"
 				},
 
-				"image" : { 
-					
+				"body" : {
+
 					"_template" : "common/image",
-					
+
 					"attributes" : {
 						"alt" : "Image",
 						"src" : "/assets/images/125x200.png"
-					}		
+					}
 				}
 			},
 
@@ -40,11 +40,14 @@
 					"title" : "Link Title"
 				},
 
-				"text" : "Bresaola corned beef bacon"
+				"body" : {
+                    "_template" : "common/text",
+                    "text" : "Bresaola corned beef bacon"
+                }
 			}
 
 		},
-		{ 
+		{
 			"_template" : "components/bsp-list-promo-item-handler",
 
 			"imgAlign" : "top",
@@ -57,14 +60,14 @@
 					"title" : "Link Title"
 				},
 
-				"image" : { 
-					
+				"body" : {
+
 					"_template" : "common/image",
-					
+
 					"attributes" : {
 						"alt" : "Image",
 						"src" : "/assets/images/125x200.png"
-					}		
+					}
 				}
 			},
 
@@ -76,11 +79,14 @@
 					"title" : "Link Title"
 				},
 
-				"text" : "Bresaola corned beef bacon"
+				"body" : {
+                    "_template" : "common/text",
+                    "text" : "Bresaola corned beef bacon"
+                }
 			}
 
 		},
-		{ 
+		{
 			"_template" : "components/bsp-list-promo-item-handler",
 
 			"imgAlign" : "top",
@@ -93,14 +99,14 @@
 					"title" : "Link Title"
 				},
 
-				"image" : { 
-					
+				"body" : {
+
 					"_template" : "common/image",
-					
+
 					"attributes" : {
 						"alt" : "Image",
 						"src" : "/assets/images/125x200.png"
-					}		
+					}
 				}
 			},
 
@@ -112,11 +118,14 @@
 					"title" : "Link Title"
 				},
 
-				"text" : "Bresaola corned beef bacon"
+				"body" : {
+                    "_template" : "common/text",
+                    "text" : "Bresaola corned beef bacon"
+                }
 			}
 
 		},
-		{ 
+		{
 			"_template" : "components/bsp-list-promo-item-handler",
 
 			"imgAlign" : "top",
@@ -129,14 +138,14 @@
 					"title" : "Link Title"
 				},
 
-				"image" : { 
-					
+				"body" : {
+
 					"_template" : "common/image",
-					
+
 					"attributes" : {
 						"alt" : "Image",
 						"src" : "/assets/images/125x200.png"
-					}		
+					}
 				}
 			},
 
@@ -148,7 +157,10 @@
 					"title" : "Link Title"
 				},
 
-				"text" : "Bresaola corned beef bacon"
+				"body" : {
+                    "_template" : "common/text",
+                    "text" : "Bresaola corned beef bacon"
+                }
 			}
 
 		}

@@ -21,7 +21,7 @@
     						"title" : "Link Title"
     					},
 
-    					"image" : {
+    					"body" : {
 
     						"_template" : "common/image",
 
@@ -50,7 +50,10 @@
     						"title" : "Link Title"
     					},
 
-    					"text" : "This example has no title above it on purpose"
+    					"body" : {
+                            "_template" : "common/text",
+                            "text" : "This example has no title above it on purpose"
+                        }
 
     				},
 

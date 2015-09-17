@@ -32,7 +32,10 @@
     						"title" : "Link Title"
     					},
 
-    					"text" : "8 Burning Questions Link"
+    					"body" : {
+                            "_template" : "common/text",
+                            "text" : "8 Burning Questions Link"
+                        }
 
     				}
                 }
@@ -56,7 +59,10 @@
     						"title" : "Link Title"
     					},
 
-    					"text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
+    					"body" : {
+                            "_template" : "common/text",
+                            "text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
+                        }
 
     				}
                 }

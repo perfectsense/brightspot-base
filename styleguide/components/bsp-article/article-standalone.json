@@ -28,7 +28,11 @@
 					"href"  : "#",
 					"title" : "Robert Simonson"
 				},
-				"text" : "Robert Simonson"
+				"body" : {
+                    "_template" : "common/text",
+
+                    "text" : "Robert Simonson"
+                }
 			}
 		},
 		{
@@ -40,55 +44,85 @@
 					"href"  : "#",
 					"title" : "Robert Simonson 2"
 				},
-				"text" : "Robert Simonson 2"
+
+                "body" : {
+                    "_template" : "common/text",
+
+                    "text" : "Robert Simonson 2"
+                }
 			}
 		}
 	],
 
 	"tags" : [
-		{ 
+		{
 			"_template" : "common/link",
 
 			"attributes" : {
 				"href" : "#"
 			},
-			"text" : "MTB"
+
+            "body" : {
+                "_template" : "common/text",
+
+                "text" : "MTB"
+            }
 		},
-		{ 
+		{
 			"_template" : "common/link",
 
 			"attributes" : {
 				"href" : "#"
 			},
-			"text" : "Cycling" 
+
+            "body" : {
+                "_template" : "common/text",
+
+                "text" : "Cycling"
+            }
 		},
-		{ 
+		{
 			"_template" : "common/link",
 
 			"attributes" : {
 				"href" : "#"
 			},
-			"text" : "Downhill"
+
+            "body" : {
+                "_template" : "common/text",
+
+                "text" : "Downhill"
+            }
 		},
-		{ 
+		{
 			"_template" : "common/link",
 
 			"attributes" : {
 				"href" : "#"
 			},
-			"text" : "Enduro"
+
+            "body" : {
+                "_template" : "common/text",
+
+                "text" : "Enduro"
+            }
 		},
-		{ 
+		{
 			"_template" : "common/link",
 
 			"attributes" : {
 				"href" : "#"
 			},
-			"text" : "Dirt Jumping"
+
+            "body" : {
+                "_template" : "common/text",
+
+                "text" : "Dirt Jumping"
+            }
 		}
 	],
 
-	"lead" : { 
+	"lead" : {
 		"_dataUrl" : "/common/image-800x450.json"
 	},
 

@@ -2,16 +2,19 @@
 	"_template" : "components/bsp-list-promo",
 
 	"listItems" : [
-		{ 
+		{
 			"_template" : "components/bsp-list-promo-item-handler",
 
 			"link": {
 				"_template" : "common/link",
-				
+
 				"attributes" : {
 					"href"  : "/elements/list/"
 				},
-				"text"  : "List"
+				"body" : {
+                    "_template" : "common/text",
+                    "text"  : "List"
+                }
 			}
 		}
 	]

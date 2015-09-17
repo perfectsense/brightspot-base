@@ -28,7 +28,12 @@
 					"href"  : "#",
 					"title" : "Robert Simonson"
 				},
-				"text" : "Robert Simonson"
+
+                "body" : {
+                    "_template" : "common/text",
+
+                    "text" : "Robert Simonson"
+                }
 			}
 		},
 		{
@@ -40,55 +45,85 @@
 					"href"  : "#",
 					"title" : "Robert Simonson 2"
 				},
-				"text" : "Robert Simonson 2"
+
+                "body" : {
+                    "_template" : "common/text",
+
+                    "text" : "Robert Simonson 2"
+                }
 			}
 		}
 	],
 
 	"tags" : [
-		{ 
-			"_template" : "common/link",
+        {
+            "_template" : "common/link",
 
-			"attributes" : {
-				"href" : "#"
-			},
-			"text" : "MTB"
-		},
-		{ 
-			"_template" : "common/link",
+            "attributes" : {
+                "href" : "#"
+            },
 
-			"attributes" : {
-				"href" : "#"
-			},
-			"text" : "Cycling" 
-		},
-		{ 
-			"_template" : "common/link",
+            "body" : {
+                "_template" : "common/text",
 
-			"attributes" : {
-				"href" : "#"
-			},
-			"text" : "Downhill"
-		},
-		{ 
-			"_template" : "common/link",
+                "text" : "MTB"
+            }
+        },
+        {
+            "_template" : "common/link",
 
-			"attributes" : {
-				"href" : "#"
-			},
-			"text" : "Enduro"
-		},
-		{ 
-			"_template" : "common/link",
+            "attributes" : {
+                "href" : "#"
+            },
 
-			"attributes" : {
-				"href" : "#"
-			},
-			"text" : "Dirt Jumping"
-		}
-	],
+            "body" : {
+                "_template" : "common/text",
 
-	"leadImage" : { 
+                "text" : "Cycling"
+            }
+        },
+        {
+            "_template" : "common/link",
+
+            "attributes" : {
+                "href" : "#"
+            },
+
+            "body" : {
+                "_template" : "common/text",
+
+                "text" : "Downhill"
+            }
+        },
+        {
+            "_template" : "common/link",
+
+            "attributes" : {
+                "href" : "#"
+            },
+
+            "body" : {
+                "_template" : "common/text",
+
+                "text" : "Enduro"
+            }
+        },
+        {
+            "_template" : "common/link",
+
+            "attributes" : {
+                "href" : "#"
+            },
+
+            "body" : {
+                "_template" : "common/text",
+
+                "text" : "Dirt Jumping"
+            }
+        }
+    ],
+
+	"leadImage" : {
 		"attributes" : {
 			"alt" : "Bacon meatball",
 			"src" : "/assets/images/800x450.png"
@@ -210,8 +245,13 @@
 			"href"  : "/components/bsp-article/infinite-2.html",
 			"title" : "Next Article"
 		},
-		
-		"text"  : "Next Article"
+
+        "body" : {
+            "_template" : "common/test",
+
+            "text" : "Next Article"
+        }
+
 	}
 
 }

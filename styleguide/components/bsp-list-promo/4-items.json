@@ -24,16 +24,19 @@
 
                     "link" : {
 
-    					"_template" : "common/link",
+                        "_template" : "common/link",
 
-    					"attributes" : {
-    						"href"  : "link",
-    						"title" : "Link Title"
-    					},
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
 
-    					"text" : "8 Burning Questions Link"
+                        "body" : {
+                            "_template" : "common/text",
+                            "text" : "8 Burning Questions Link"
+                        }
 
-    				}
+                    }
                 }
             ]
 		},
@@ -47,16 +50,19 @@
 
                     "link" : {
 
-    					"_template" : "common/link",
+                        "_template" : "common/link",
 
-    					"attributes" : {
-    						"href"  : "link",
-    						"title" : "Link Title"
-    					},
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
 
-    					"text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
+                        "body" : {
+                            "_template" : "common/text",
+                            "text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
+                        }
 
-    				}
+                    }
                 }
             ]
 		},
@@ -70,16 +76,19 @@
 
                     "link" : {
 
-    					"_template" : "common/link",
+                        "_template" : "common/link",
 
-    					"attributes" : {
-    						"href"  : "link",
-    						"title" : "Link Title"
-    					},
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
 
-    					"text" : "8 Burning Questions Link"
+                        "body" : {
+                            "_template" : "common/text",
+                            "text" : "8 Burning Questions Link"
+                        }
 
-    				}
+                    }
                 }
             ]
 		},
@@ -93,16 +102,20 @@
 
                     "link" : {
 
-    					"_template" : "common/link",
+                        "_template" : "common/link",
 
-    					"attributes" : {
-    						"href"  : "link",
-    						"title" : "Link Title"
-    					},
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
 
-    					"text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
+                        "body" : {
+                            "_template" : "common/text",
+                            "text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
+                        }
 
-    				}
+                    }
+
                 }
             ]
 		}

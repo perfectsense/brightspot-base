@@ -2,7 +2,7 @@
 	"_template" : "components/bsp-table/bsp-table",
 
 	"title" : {
-		"_template" : "common/text", 
+		"_template" : "common/text",
 		"text" : "table - no options"
 	},
 
@@ -23,9 +23,12 @@
 						"_template" : "common/link",
 						"attributes" : {
 							"href" : "#",
-							"title" : "Get details on this job"							
+							"title" : "Get details on this job"
 						},
-						"text" : "School Coordinator"
+						"body" : {
+                            "_template" : "common/text",
+                            "text" : "School Coordinator"
+                        }
 					}
 				],
 				[{"_template" : "common/text", "text" : "Administrative"}],
@@ -44,7 +47,10 @@
 							"href" : "#",
 							"title" : "Get details on this job"
 						},
-						"text" : "Artistic and Management Assistant"						
+						"body" : {
+                            "_template" : "common/text",
+                            "text" : "Artistic and Management Assistant"
+                        }
 					}
 				],
 				[{"_template" : "common/text", "text" : "Administrative"}],
@@ -61,9 +67,12 @@
 						"_template" : "common/link",
 						"attributes" : {
 							"href" : "#",
-							"title" : "Get details on this job"							
+							"title" : "Get details on this job"
 						},
-						"text" : "American Music Machine - Open Call Singers"
+						"body" : {
+                            "_template" : "common/text",
+                            "text" : "American Music Machine - Open Call Singers"
+                        }
 					}
 				],
 				[{"_template" : "common/text", "text" : "Administrative"}],
@@ -71,7 +80,7 @@
 				[{"_template" : "common/text", "text" : "FL"}],
 				[{"_template" : "common/text", "text" : "Yes"}],
 				[{"_template" : "common/text", "text" : "07/07/2015"}]
-			]	
+			]
 		}
 	]
 }

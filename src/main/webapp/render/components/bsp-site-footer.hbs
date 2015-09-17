@@ -16,7 +16,7 @@
                                         {{heading}}
                                     {{/with}}
 					        	</h5>
-					        	
+
 						        <ul class="bsp-unstyled-list">
 							        {{#each this.listItems}}
 							            <li>
@@ -38,7 +38,7 @@
                                         {{heading}}
                                     {{/with}}
 					        	</h5>
-					        	
+
 						        <ul class="bsp-unstyled-list">
 							        {{#each this.listItems}}
 							            <li>
@@ -64,7 +64,7 @@
 						{{#with logo}}
 							{{render this}}
 						{{/with}}
-						
+
 					</div>
 				</div>
 
@@ -80,13 +80,13 @@
 							<h5 class="bsp-component-title">{{social}}</h5>
 
 							<div class="bsp-component-content">
-								
+
 								<ul class="bsp-share-links">
 									{{#each sharing.links}}
-										<li class="bsp-{{icon}}-share">{{> common/link linkClass="bsp-share-link"}}</li>
+										<li class="bsp-{{icon}}-share">{{render this cssClass="bsp-share-link"}}</li>
 									{{/each}}
 								</ul>
-								
+
 							</div>
 
 						</div>
@@ -98,7 +98,7 @@
 				{{/with}}
 
 			</div>
-			
+
 		</div>
 
 	</div>

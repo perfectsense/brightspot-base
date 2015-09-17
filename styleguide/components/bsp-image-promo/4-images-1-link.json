@@ -10,7 +10,7 @@
 	"heading" : "4 images with 1 link",
 
 	"images" : [
-		{ 
+		{
 			"image" : {
 
 				"_template" : "common/link",
@@ -20,7 +20,7 @@
 					"title" : "Link Title"
 				},
 
-				"image" : {
+				"body" : {
 
 					"_template" : "common/image",
 
@@ -29,9 +29,9 @@
 						"src" : "/assets/images/800x450.png"
 					}
 				}
-				
+
 			},
-				
+
 			"promoLinks" : [
 				{
 					"_template" : "common/link",
@@ -41,11 +41,14 @@
 						"title" : "Link"
 					},
 
-					"text" : "Promo Link Text"
+					"body" : {
+                        "_template" : "common/text",
+                        "text" : "Promo Link Text"
+                    }
 				}
 			]
 		},
-		{ 
+		{
 			"image" : {
 
 				"_template" : "common/link",
@@ -55,7 +58,7 @@
 					"title" : "Link Title"
 				},
 
-				"image" : {
+				"body" : {
 
 					"_template" : "common/image",
 
@@ -64,9 +67,9 @@
 						"src" : "/assets/images/800x450.png"
 					}
 				}
-				
+
 			},
-				
+
 			"promoLinks" : [
 				{
 					"_template" : "common/link",
@@ -76,11 +79,14 @@
 						"title" : "Link"
 					},
 
-					"text" : "Promo Link Text"
+					"body" : {
+                        "_template" : "common/text",
+                        "text" : "Promo Link Text"
+                    }
 				}
 			]
 		},
-		{ 
+		{
 			"image" : {
 
 				"_template" : "common/link",
@@ -90,7 +96,7 @@
 					"title" : "Link Title"
 				},
 
-				"image" : {
+				"body" : {
 
 					"_template" : "common/image",
 
@@ -99,9 +105,9 @@
 						"src" : "/assets/images/800x450.png"
 					}
 				}
-				
+
 			},
-				
+
 			"promoLinks" : [
 				{
 					"_template" : "common/link",
@@ -111,11 +117,14 @@
 						"title" : "Link"
 					},
 
-					"text" : "Promo Link Text"
+					"body" : {
+                        "_template" : "common/text",
+                        "text" : "Promo Link Text"
+                    }
 				}
 			]
 		},
-		{ 
+		{
 			"image" : {
 
 				"_template" : "common/link",
@@ -125,7 +134,7 @@
 					"title" : "Link Title"
 				},
 
-				"image" : {
+				"body" : {
 
 					"_template" : "common/image",
 
@@ -134,9 +143,9 @@
 						"src" : "/assets/images/800x450.png"
 					}
 				}
-				
+
 			},
-				
+
 			"promoLinks" : [
 				{
 					"_template" : "common/link",
@@ -146,7 +155,10 @@
 						"title" : "Link"
 					},
 
-					"text" : "Promo Link Text"
+					"body" : {
+                        "_template" : "common/text",
+                        "text" : "Promo Link Text"
+                    }
 				}
 			]
 		}

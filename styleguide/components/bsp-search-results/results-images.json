@@ -8,7 +8,7 @@
 	"heading" : "Images",
 
 	"listItems" : [
-		{ 
+		{
 			"imgAlign" : "top",
 
 			"sections" : [
@@ -25,7 +25,7 @@
 							"title" : "Link Title"
 						},
 
-						"image" : {
+						"body" : {
 
 							"_template" : "common/image",
 
@@ -49,12 +49,15 @@
 							"title" : "Link Title"
 						},
 
-						"text" : "Bresaola corned beef bacon"
+						"body" : {
+                            "_template" : "common/text",
+                            "text" : "Bresaola corned beef bacon"
+                        }
 					}
 				}
 			]
 		},
-		{ 
+		{
 			"imgAlign" : "top",
 
 			"sections" : [
@@ -71,7 +74,7 @@
 							"title" : "Link Title"
 						},
 
-						"image" : {
+						"body" : {
 
 							"_template" : "common/image",
 
@@ -95,12 +98,15 @@
 							"title" : "Link Title"
 						},
 
-						"text" : "Bresaola corned beef bacon"
+						"body" : {
+                            "_template" : "common/text",
+                            "text" : "Bresaola corned beef bacon"
+                        }
 					}
 				}
 			]
 		},
-		{ 
+		{
 			"imgAlign" : "top",
 
 			"sections" : [
@@ -117,7 +123,7 @@
 							"title" : "Link Title"
 						},
 
-						"image" : {
+						"body" : {
 
 							"_template" : "common/image",
 
@@ -141,7 +147,10 @@
 							"title" : "Link Title"
 						},
 
-						"text" : "Bresaola corned beef bacon"
+						"body" : {
+                            "_template" : "common/text",
+                            "text" : "Bresaola corned beef bacon"
+                        }
 					}
 				}
 			]

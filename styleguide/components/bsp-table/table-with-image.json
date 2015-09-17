@@ -2,7 +2,7 @@
 	"_template" : "components/bsp-table/bsp-table",
 
 	"options" : {
-		
+
 		"textAlignment" : "left-aligned",
 		"verticalAlignment" : "top-aligned",
 		"fullWidth" : true,
@@ -12,7 +12,7 @@
 	},
 
 	"title" : {
-		"_template" : "common/text", 
+		"_template" : "common/text",
 		"text" : "this is a full width left aligned table with an image in one of the cells"
 	},
 
@@ -33,9 +33,12 @@
 						"_template" : "common/link",
 						"attributes" : {
 							"href" : "#",
-							"title" : "Get details on this job"							
+							"title" : "Get details on this job"
 						},
-						"text" : "School Coordinator"
+						"body" : {
+                            "_template" : "common/text",
+                            "text" : "School Coordinator"
+                        }
 					}
 				],
 				[{"_template" : "common/text", "text" : "Administrative"}],
@@ -52,9 +55,12 @@
 						"_template" : "common/link",
 						"attributes" : {
 							"href" : "#",
-							"title" : "Get details on this job"							
+							"title" : "Get details on this job"
 						},
-						"text" : "School Coordinator"
+						"body" : {
+                            "_template" : "common/text",
+                            "text" : "School Coordinator"
+                        }
 					}
 				],
 				[{"_template" : "common/text", "text" : "Administrative"}],

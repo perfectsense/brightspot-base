@@ -7,7 +7,7 @@
 		"title" : "Brightspot Base Styleguide"
 	},
 
-	"image" : {
+	"body" : {
 
 		"_template" : "common/image",
 
@@ -16,5 +16,5 @@
 			"src" : "/assets/images/logo-site-footer.png"
 		}
 	}
-	
+
 }

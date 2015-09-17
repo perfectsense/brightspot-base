@@ -6,7 +6,7 @@
 	},
 
 	"listItems" : [
-		{ 
+		{
 			"imgAlign" : "left",
 
 			"sections" : [
@@ -24,7 +24,7 @@
 							"title" : "Link Title"
 						},
 
-						"image" : {
+						"body" : {
 
 							"_template" : "common/image",
 
@@ -33,7 +33,7 @@
 								"src" : "/assets/images/800x450.png"
 							}
 						}
-						
+
 					}
 				},
 
@@ -51,7 +51,10 @@
 							"title" : "Link Title"
 						},
 
-						"text" : "8 Burning Questions Link"
+						"body" : {
+                            "_template" : "common/text",
+                            "text" : "8 Burning Questions Link"
+                        }
 
 					},
 
@@ -64,7 +67,10 @@
 							"title" : "Link Title"
 						},
 
-						"text" : "8 Burning Questions Title"
+						"body" : {
+                            "_template" : "common/text",
+                            "text" : "8 Burning Questions Title"
+                        }
 
 					},
 
@@ -72,7 +78,7 @@
 				}
 			]
 		},
-		{ 
+		{
 			"sections" : [
 				{
 					"_template" : "components/bsp-list-promo-item-handler",
@@ -88,7 +94,10 @@
 							"title" : "Link Title"
 						},
 
-						"text" : "8 Burning Questions Link"
+						"body" : {
+                            "_template" : "common/text",
+                            "text" : "8 Burning Questions Link"
+                        }
 
 					},
 
@@ -101,7 +110,10 @@
 							"title" : "Link Title"
 						},
 
-						"text" : "8 Burning Questions Title"
+						"body" : {
+                            "_template" : "common/text",
+                            "text" : "8 Burning Questions Title"
+                        }
 
 					},
 
@@ -109,7 +121,7 @@
 				}
 			]
 		},
-		{ 
+		{
 			"imgAlign" : "left",
 
 			"sections" : [
@@ -127,7 +139,7 @@
 							"title" : "Link Title"
 						},
 
-						"image" : {
+						"body" : {
 
 							"_template" : "common/image",
 
@@ -136,7 +148,7 @@
 								"src" : "/assets/images/800x450.png"
 							}
 						}
-						
+
 					}
 				},
 
@@ -154,7 +166,10 @@
 							"title" : "Link Title"
 						},
 
-						"text" : "8 Burning Questions Link"
+						"body" : {
+                            "_template" : "common/text",
+                            "text" : "8 Burning Questions Link"
+                        }
 
 					},
 
@@ -167,7 +182,10 @@
 							"title" : "Link Title"
 						},
 
-						"text" : "8 Burning Questions Title"
+						"body" : {
+                            "_template" : "common/text",
+                            "text" : "8 Burning Questions Title"
+                        }
 
 					},
 

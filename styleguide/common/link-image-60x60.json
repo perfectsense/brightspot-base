@@ -6,7 +6,7 @@
 		"title" : "Link Title"
 	},
 
-	"image" : {
+	"body" : {
 
 		"_template" : "common/image",
 

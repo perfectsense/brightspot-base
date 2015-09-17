@@ -43,7 +43,7 @@
             <div class="bsp-tag-list-title">{{render this.tagsTitle}}</div>
 			<ul class="bsp-tag-list">
 				{{#each tags}}
-					<li>{{render this linkClass="bsp-tag"}}</li>
+					<li>{{render this cssClass="bsp-tag"}}</li>
 				{{/each}}
 			</ul>
 		</div>
@@ -55,6 +55,6 @@
 
 {{#with nextArticle}}
 	<div class="bsp-article-load-more">
-		{{render this linkClass="bsp-infinite-load-trigger"}}
+		{{render this cssClass="bsp-infinite-load-trigger"}}
 	</div>
 {{/with}}

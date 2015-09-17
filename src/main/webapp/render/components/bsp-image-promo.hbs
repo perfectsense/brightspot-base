@@ -22,11 +22,11 @@
 						{{/with}}
 
 						{{#with rolloverImage}}
-							{{render this linkClass="bsp-image-promo-rollover-image"}}
+							{{render this cssClass="bsp-image-promo-rollover-image"}}
 						{{/with}}
 
 						{{#with rolloverText}}
-							{{render this linkClass="bsp-image-promo-rollover-text"}}
+							{{render this cssClass="bsp-image-promo-rollover-text"}}
 						{{/with}}
 
 						<ul class="bsp-image-promo-links">
@@ -51,6 +51,6 @@
 	{{#with cta}}
 		<div class="bsp-component-cta {{#if options.location}}cta-{{options.location}}{{/if}}">
 			{{render content}}
-		</div>	
+		</div>
 	{{/with}}
 </div>

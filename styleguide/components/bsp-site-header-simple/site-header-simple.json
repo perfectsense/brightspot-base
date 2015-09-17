@@ -14,7 +14,7 @@
 				"title" : "Brightspot Base Styleguide"
 			},
 
-			"image" : {
+			"body" : {
 
 				"_template" : "common/image",
 
@@ -23,7 +23,7 @@
 					"src" : "/assets/images/logo-site-header.png"
 				}
 			}
-			
+
 		}
 
 	},
@@ -36,10 +36,13 @@
 				"href"  : "link-me",
 				"title" : "I are a link"
 			},
-			
-			"text"  : "Link test text"
+
+			"body" : {
+                "_template" : "common/text",
+                "text"  : "Link test text"
+            }
 		},
-		
+
 		{
 			"_template" : "common/link",
 
@@ -47,10 +50,13 @@
 				"href"  : "link-me",
 				"title" : "I are a link"
 			},
-			
-			"text"  : "Link test text"
+
+			"body" : {
+                "_template" : "common/text",
+                "text"  : "Link test text"
+            }
 		},
-		
+
 		{
 			"_template" : "common/link",
 
@@ -58,10 +64,13 @@
 				"href"  : "link-me",
 				"title" : "I are a link"
 			},
-			
-			"text"  : "Link test text"
+
+			"body" : {
+                "_template" : "common/text",
+                "text"  : "Link test text"
+            }
 		},
-		
+
 		{
 			"_template" : "common/link",
 
@@ -69,10 +78,13 @@
 				"href"  : "link-me",
 				"title" : "I are a link"
 			},
-			
-			"text"  : "Link test text"
+
+			"body" : {
+                "_template" : "common/text",
+                "text"  : "Link test text"
+            }
 		},
-		
+
 		{
 			"_template" : "common/link",
 
@@ -80,10 +92,13 @@
 				"href"  : "link-me",
 				"title" : "I are a link"
 			},
-			
-			"text"  : "Link test text"
+
+			"body" : {
+                "_template" : "common/text",
+                "text"  : "Link test text"
+            }
 		},
-		
+
 		{
 			"_template" : "common/link",
 
@@ -91,9 +106,12 @@
 				"href"  : "link-me",
 				"title" : "I are a link"
 			},
-			
-			"text"  : "Link test text"
-		}		
+
+			"body" : {
+                "_template" : "common/text",
+                "text"  : "Link test text"
+            }
+		}
 	]
 
 }

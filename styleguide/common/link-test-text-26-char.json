@@ -6,5 +6,9 @@
 		"title" : "Link Title"
 	},
 
-	"text" : "Bresaola corned beef bacon"
+    "body" : {
+        "_template" : "common/text",
+
+        "text"  : "Bresaola corned beef bacon"
+    }
 }

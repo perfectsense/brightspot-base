@@ -34,7 +34,7 @@
     						"title" : "Link Title"
     					},
 
-    					"image" : {
+    					"body" : {
 
     						"_template" : "common/image",
 
@@ -56,29 +56,35 @@
 
     				"link" : {
 
-    					"_template" : "common/link",
+                        "_template" : "common/link",
 
-    					"attributes" : {
-    						"href"  : "link",
-    						"title" : "Link Title"
-    					},
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
 
-    					"text" : "8 Burning Questions Link"
+                        "body" : {
+                            "_template" : "common/text",
+                            "text" : "8 Burning Questions Link"
+                        }
 
-    				},
+                    },
 
-    				"title" : {
+                    "title" : {
 
-    					"_template" : "common/link",
+                        "_template" : "common/link",
 
-    					"attributes" : {
-    						"href"  : "link",
-    						"title" : "Link Title"
-    					},
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
 
-    					"text" : "8 Burning Questions Title"
+                        "body" : {
+                            "_template" : "common/text",
+                            "text" : "8 Burning Questions Title"
+                        }
 
-    				},
+                    },
 
     				"description" : "Shankle pork loin landjaeger pork chop t-bone. Shank capicola strip steak, salami prosciutto ham hock venison. Short ribs meatloaf doner hamburger frankfurter tri-tip."
 

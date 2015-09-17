@@ -2,7 +2,7 @@
 	"_template" : "components/bsp-image-promo",
 
 	"images" : [
-		{ 
+		{
 			"image" : {
 
 				"_template" : "common/link",
@@ -12,7 +12,7 @@
 					"title" : "Link Title"
 				},
 
-				"image" : {
+				"body" : {
 
 					"_template" : "common/image",
 
@@ -21,7 +21,7 @@
 						"src" : "/assets/images/800x450.png"
 					}
 				}
-				
+
 			},
 
 			"rolloverText" : {
@@ -33,10 +33,13 @@
 						"title" : "Link"
 					},
 
-					"text" : "Promo Link Text"
+                    "body" : {
+                        "_template" : "common/text",
+                        "text" : "Promo Link Text"
+                    }
 
 			},
-				
+
 			"promoLinks" : [
 				{
 					"_template" : "common/link",
@@ -46,7 +49,10 @@
 						"title" : "Link"
 					},
 
-					"text" : "No Title"
+					"body" : {
+                        "_template" : "common/text",
+                        "text" : "No Title"
+                    }
 				},
 				{
 					"_template" : "common/link",
@@ -56,7 +62,10 @@
 						"title" : "Link"
 					},
 
-					"text" : "But Has 3 Links"
+					"body" : {
+                        "_template" : "common/text",
+                        "text" : "But Has 3 Links"
+                    }
 				},
 				{
 					"_template" : "common/link",
@@ -66,7 +75,10 @@
 						"title" : "Link"
 					},
 
-					"text" : "And rollover text"
+					"body" : {
+                        "_template" : "common/text",
+                        "text" : "And rollover text"
+                    }
 				}
 			]
 		}

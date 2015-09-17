@@ -6,13 +6,13 @@
 		"title" : "Link Title"
 	},
 
-	"image" : { 
-		
+	"body" : {
+
 		"_template" : "common/image",
-		
+
 		"attributes" : {
 			"alt" : "Image",
 			"src" : "/assets/images/1200x400.png"
-		}		
+		}
 	}
 }

@@ -7,7 +7,7 @@
 			"labelSubText": "Tab 1 Sub Text",
 
 			"component": {
-					
+
 				"_dataUrl" : "/components/bsp-list-promo/5-items-no-title-no-cta.json"
 
 			}
@@ -23,7 +23,7 @@
 					"title" : "Link Title"
 				},
 
-				"image" : {
+				"body" : {
 
 					"_template" : "common/image",
 
@@ -32,7 +32,7 @@
 						"src" : "/assets/images/1200x400.png"
 					}
 				}
-				
+
 			}
 		},
 		{
@@ -56,9 +56,12 @@
 											"_template" : "common/link",
 											"attributes" : {
 												"href" : "#",
-												"title" : "Get details on this job"							
+												"title" : "Get details on this job"
 											},
-											"text" : "School Coordinator"
+											"body" : {
+                                                "_template" : "common/text",
+                                                "text" : "School Coordinator"
+                                            }
 										}
 									},
 									{"text" : "Administrative"},
@@ -74,7 +77,10 @@
 												"href" : "#",
 												"title" : "Get details on this job"
 											},
-											"text" : "Artistic and Management Assistant"						
+											"body" : {
+                                                "_template" : "common/text",
+                                                "text" : "Artistic and Management Assistant"
+                                            }
 										}
 
 									},
@@ -89,20 +95,23 @@
 											"_template" : "common/link",
 											"attributes" : {
 												"href" : "#",
-												"title" : "Get details on this job"							
+												"title" : "Get details on this job"
 											},
-											"text" : "American Music Machine - Open Call Singers"
+											"body" : {
+                                                "_template" : "common/text",
+                                                "text" : "American Music Machine - Open Call Singers"
+                                            }
 										}
 									},
 									{"text" : "Administrative"},
 									{"text" : "Westport Country Playhouse"}
-								]	
+								]
 							}
 						]
 					}
 		}
 	],
-	
+
 	"cta" : {
 		"options" : {
 			"location" : "top-right"
@@ -112,5 +121,5 @@
 			"_dataUrl" : "/common/link-test-text-14-char.json"
 		}
 	}
-	
+
 }

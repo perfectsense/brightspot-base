@@ -14,7 +14,7 @@
 				"title" : "Brightspot Base"
 			},
 
-			"image" : {
+			"body" : {
 
 				"_template" : "common/image",
 
@@ -23,7 +23,7 @@
 					"src" : "/assets/images/logo-site-header.png"
 				}
 			}
-			
+
 		}
 
 	},
@@ -153,7 +153,7 @@
 		]
 
 	},
-	
+
 
 	"EXAMPLE tophat" : {
 
@@ -165,7 +165,10 @@
 					"href"  : "link1",
 					"title" : "Brightspot Base"
 				},
-				"text"  : "link 1"
+				"body" : {
+                    "_template" : "common/text",
+                    "text"  : "link 1"
+                }
 			},
 			{
 				"_template" : "common/link",
@@ -174,7 +177,10 @@
 					"href"  : "link2",
 					"title" : "Brightspot Base"
 				},
-				"text"  : "link 2"
+				"body" : {
+                    "_template" : "common/text",
+                    "text"  : "link 2"
+                }
 			}
 		]
 
@@ -189,18 +195,24 @@
 					"href"  : "news",
 					"title" : "News"
 				},
-				"text"  : "News"
+				"body" : {
+                    "_template" : "common/text",
+                    "text"  : "News"
+                }
 			},
 
 			"subMenu" : [
 				{
 					"_template" : "common/link",
-					
+
 					"attributes" : {
 						"href"  : "sublink1",
 						"title" : "Sublink 1"
 					},
-					"text"  : "Sublink 1"
+					"body" : {
+                        "_template" : "common/text",
+                        "text"  : "Sublink 1"
+                    }
 				},
 				{
 					"_template" : "common/link",
@@ -209,7 +221,10 @@
 						"href"  : "sublink2",
 						"title" : "Sublink 2"
 					},
-					"text"  : "Sublink 2"
+					"body" : {
+                        "_template" : "common/text",
+                        "text"  : "Sublink 2"
+                    }
 				},
 				{
 					"_template" : "common/link",
@@ -218,7 +233,10 @@
 						"href"  : "sublink3",
 						"title" : "Sublink 3"
 					},
-					"text"  : "Sublink 3 Sublink 3 Sublink 3"
+					"body" : {
+                        "_template" : "common/text",
+                        "text"  : "Sublink 3 Sublink 3 Sublink 3"
+                    }
 				}
 			]
 		},
@@ -230,7 +248,10 @@
 					"href"  : "shows",
 					"title" : "Shows"
 				},
-				"text"  : "Shows"
+				"body" : {
+                    "_template" : "common/text",
+                    "text"  : "Shows"
+                }
 			},
 
 			"subMenu" : [
@@ -241,7 +262,10 @@
 						"href" : "sublink1",
 						"title" : "Sublink 1"
 					},
-					"text"  : "Sublink 1"
+					"body" : {
+                        "_template" : "common/text",
+                        "text"  : "Sublink 1"
+                    }
 				},
 				{
 					"_template" : "common/link",
@@ -250,7 +274,10 @@
 						"href" : "sublink2",
 						"title" : "Sublink 2"
 					},
-					"text"  : "Sublink 2"
+					"body" : {
+                        "_template" : "common/text",
+                        "text"  : "Sublink 2"
+                    }
 				},
 				{
 					"_template" : "common/link",
@@ -259,7 +286,10 @@
 						"href" : "sublink3",
 						"title" : "Sublink 3"
 					},
-					"text"  : "Sublink 3 Sublink 3 Sublink 3"
+					"body" : {
+                        "_template" : "common/text",
+                        "text"  : "Sublink 3 Sublink 3 Sublink 3"
+                    }
 				}
 			]
 		},
@@ -271,7 +301,10 @@
 					"href" : "experience",
 					"title" : "Experience NYC"
 				},
-				"text"  : "Experience NYC"
+				"body" : {
+                    "_template" : "common/text",
+                    "text"  : "Experience NYC"
+                }
 			}
 		},
 		{
@@ -282,7 +315,10 @@
 					"href" : "jobs",
 					"title" : "Jobs"
 				},
-				"text"  : "Jobs"
+				"body" : {
+                    "_template" : "common/text",
+                    "text"  : "Jobs"
+                }
 			},
 
 			"subMenu" : [
@@ -293,7 +329,10 @@
 						"href" : "sublink1",
 						"title" : "Sublink 1"
 					},
-					"text"  : "Sublink 1"
+					"body" : {
+                        "_template" : "common/text",
+                        "text"  : "Sublink 1"
+                    }
 				},
 				{
 					"_template" : "common/link",
@@ -302,7 +341,10 @@
 						"href" : "sublink2",
 						"title" : "Sublink 2"
 					},
-					"text"  : "Sublink 2"
+					"body" : {
+                        "_template" : "common/text",
+                        "text"  : "Sublink 2"
+                    }
 				},
 				{
 					"_template" : "common/link",
@@ -311,7 +353,10 @@
 						"href" : "sublink3",
 						"title" : "Sublink 3"
 					},
-					"text"  : "Sublink 3 Sublink 3 Sublink 3"
+					"body" : {
+                        "_template" : "common/text",
+                        "text"  : "Sublink 3 Sublink 3 Sublink 3"
+                    }
 				}
 			]
 		},
@@ -323,7 +368,10 @@
 					"href" : "buy",
 					"title" : "Buy Tickets"
 				},
-				"text"  : "Buy Tickets"
+				"body" : {
+                    "_template" : "common/text",
+                    "text"  : "Buy Tickets"
+                }
 			}
 		}
 	],
@@ -336,7 +384,10 @@
 				"href"  : "link1",
 				"title" : "Brightspot Base"
 			},
-			"text"  : "link 1 haha!"
+			"body" : {
+                "_template" : "common/text",
+                "text"  : "link 1 haha!"
+            }
 		},
 		{
 			"_template" : "common/link",
@@ -345,7 +396,10 @@
 				"href" : "link2",
 				"title" : "Brightspot Base"
 			},
-			"text"  : "link 2"
+			"body" : {
+                "_template" : "common/text",
+                "text"  : "link 2"
+            }
 		}
 	],
 

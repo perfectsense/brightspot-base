@@ -12,7 +12,10 @@
 				"title" : "Previous"
 			},
 
-			"text" : "Previous"
+            "body" : {
+                "_template" : "common/text",
+                "text" : "Previous"
+            }
 		},
 
 		"next" : {
@@ -24,12 +27,15 @@
 					"title" : "Next"
 			},
 
-			"text" : "Next"
+			"body" : {
+                "_template" : "common/text",
+                "text" : "Next"
+            }
 		}
 
 	},
 
-	"listItems" : [{ 
+	"listItems" : [{
 
 			"link" : {
 
@@ -40,11 +46,14 @@
 					"title" : "1"
 				},
 
-				"text" : "1"
+				"body" : {
+                    "_template" : "common/text",
+                    "text" : "1"
+                }
 			}
 		},
 
-		{ 
+		{
 			"link" : {
 
 				"_template" : "common/link",
@@ -54,11 +63,14 @@
 					"title" : "Link Title"
 				},
 
-				"text" : "2"
+				"body" : {
+                    "_template" : "common/text",
+                    "text" : "2"
+                }
 			}
 		},
-		
-		{ 
+
+		{
 			"link" : {
 
 				"_template" : "common/link",
@@ -68,8 +80,11 @@
 					"title" : "Link Title"
 				},
 
-				"text" : "3"
+				"body" : {
+                    "_template" : "common/text",
+                    "text" : "3"
+                }
 
 		}
-	}]	
+	}]
 }

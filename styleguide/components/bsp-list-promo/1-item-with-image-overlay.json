@@ -28,7 +28,7 @@
                             "title" : "Link Title"
                         },
 
-                        "image" : {
+                        "body" : {
 
                             "_template" : "common/image",
 
@@ -54,7 +54,11 @@
                             "title" : "Link Title"
                         },
 
-                        "text" : "8 Burning Questions Link"
+                        "body" : {
+                            "_template" : "common/text",
+                            "text" : "8 Burning Questions Link"
+                        }
+
                     },
 
                     "title" : {
@@ -66,7 +70,10 @@
                             "title" : "Link Title"
                         },
 
-                        "text" : "8 Burning Questions Title"
+                        "body" : {
+                            "_template" : "common/text",
+                            "text" : "8 Burning Questions Title"
+                        }
 
                     }
                 }
