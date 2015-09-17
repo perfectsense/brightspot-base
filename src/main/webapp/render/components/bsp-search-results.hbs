@@ -1,53 +1,58 @@
-<div class="bsp-search-results">
+<div id="bsp-search-results-wrapper">
 
-	<h1 class="bsp-search-results-heading">
-		{{#each heading}}
-			{{#if className}}<span class="{{className}}">{{/if}}{{text}}{{#if className}}</span>{{/if}}
-		{{/each}}
-	</h1>
+    <div class="bsp-search-results" data-bsp-ajax-links>
 
-	<form class="bsp-search-results-form">
-		{{#with search-form}}
+    	<h1 class="bsp-search-results-heading">
+    		{{#each heading}}
+    			{{#if className}}<span class="{{className}}">{{/if}}{{text}}{{#if className}}</span>{{/if}}
+    		{{/each}}
+    	</h1>
 
-			{{#with search-input}}
-				{{render this}}
-			{{/with}}
+    	<form class="bsp-search-results-form" action="search-results-ajax-1.html" data-ajax-link-target="#bsp-search-results-wrapper">
+    		{{#with search-form}}
 
-			<button class="bsp-search-results-submit" type="submit"><i class="icon icon-search"><span class="sr-only">Go</span></i></button>
+    			{{#with search-input}}
+    				{{render this}}
+    			{{/with}}
 
-		{{/with}}
-	</form>
+    			<button class="bsp-search-results-submit" type="submit"><i class="icon icon-search"><span class="sr-only">Go</span></i></button>
 
-	{{#with search-sort}}
-	<div class="bsp-search-results-sort">
-		{{render this}}
-	</div>
-	{{/with}}
+    		{{/with}}
 
-	{{#with search-filter}}
-	<div class="bsp-search-results-filter">
-		{{#with heading}}
-			{{render this}}
-		{{/with}}
 
-		<div class="bsp-search-results-filters">
-			{{#each checkboxes}}
-				{{render this}}
-			{{/each}}
-		</div>
-	</div>
-	{{/with}}
+        	{{#with search-sort}}
+        	<div class="bsp-search-results-sort">
+        		{{render this}}
+        	</div>
+        	{{/with}}
 
-	<div class="bsp-search-results-content">
-		{{#each search-results}}
-			{{render this}}
-		{{/each}}
-	</div>
+        	{{#with search-filter}}
+        	<div class="bsp-search-results-filter">
+        		{{#with heading}}
+        			{{render this}}
+        		{{/with}}
 
-	<div class="bsp-search-pagination">
-		{{#with pagination}}
-			{{render this}}
-		{{/with}}
-	</div>
+        		<div class="bsp-search-results-filters">
+        			{{#each checkboxes}}
+        				{{render this}}
+        			{{/each}}
+        		</div>
+        	</div>
+        	{{/with}}
+        </form>
+
+    	<div class="bsp-search-results-content">
+    		{{#each search-results}}
+    			{{render this}}
+    		{{/each}}
+    	</div>
+
+    	<div class="bsp-search-pagination">
+    		{{#with pagination}}
+    			{{render this}}
+    		{{/with}}
+    	</div>
+
+    </div>
 
 </div>

@@ -5,7 +5,8 @@
 
 import base from 'base';
 
-// import bsp_tabber_plugin from 'bsp-tabber-plugin';
+import bsp_search_results_plugin from './plugins/bsp-ajax-links-plugin';
+
 // import bsp_toggle_plugin from 'bsp-toggle-item-plugin';
 // import bsp_carousel_plugin from 'bsp-carousel-plugin';
 // import bsp_carousel_thumbnav_plugin from 'bsp-carousel-thumbnav-plugin';
