@@ -137,6 +137,7 @@
                         "brightcove" : true,
                         "id" : "4483896054001",
                         "playerId" : "82993908001",
+                        "bgHex" : "000000",
                         "playerKey" : "AQ~~%2CAAAAEX25ttk~%2CqVVep19cvaUd_MvoBnuGVanJsQIaFNkH"
                     }
                 }
