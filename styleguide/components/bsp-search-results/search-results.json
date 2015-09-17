@@ -20,9 +20,9 @@
 
 	],
 
-	"search-form" : {
+	"searchForm" : {
 
-		"search-input" : {
+		"searchInput" : {
 
 			"_template" : "components/bsp-form-input",
 
@@ -45,17 +45,17 @@
 
 	},
 
-	"search-sort" : {
+	"searchSort" : {
 
 		"_dataUrl" : "/components/bsp-search-results/search-sort.json"
 	},
 
-	"search-filter" : {
+	"searchFilter" : {
 
 		"_dataUrl" : "/components/bsp-search-results/search-filter.json"
 	},
 
-	"search-results" : [
+	"searchResults" : [
 		{
 			"_dataUrl" : "/components/bsp-search-results/results-show-lead.json"
 		},

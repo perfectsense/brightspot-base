@@ -9,9 +9,9 @@
     	</h1>
 
     	<form class="bsp-search-results-form" action="search-results-ajax-1.html" data-ajax-link-target="#bsp-search-results-wrapper">
-    		{{#with search-form}}
+    		{{#with searchForm}}
 
-    			{{#with search-input}}
+    			{{#with searchInput}}
     				{{render this}}
     			{{/with}}
 
@@ -20,13 +20,13 @@
     		{{/with}}
 
 
-        	{{#with search-sort}}
+        	{{#with searchSort}}
         	<div class="bsp-search-results-sort">
         		{{render this}}
         	</div>
         	{{/with}}
 
-        	{{#with search-filter}}
+        	{{#with searchFilter}}
         	<div class="bsp-search-results-filter">
         		{{#with heading}}
         			{{render this}}
@@ -42,7 +42,7 @@
         </form>
 
     	<div class="bsp-search-results-content">
-    		{{#each search-results}}
+    		{{#each searchResults}}
     			{{render this}}
     		{{/each}}
     	</div>
