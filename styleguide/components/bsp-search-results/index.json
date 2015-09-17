@@ -19,7 +19,7 @@
         "aside" : {
             "components" : [
                 {
-                    "_template" : "common/text",
+                    "_template" : "common/html",
 
                     "text": "<p>Right Rail Modules can go here</p>"
                 }

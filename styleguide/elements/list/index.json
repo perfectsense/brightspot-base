@@ -12,42 +12,42 @@
 		"main" : {
 			"components" : [
 				{
-					"_template": "common/text",
+					"_template": "common/html",
 					"text": "<div class=\"bsp-component-title\">unordered/styled:</div>"
 				},
 				{
 					"_dataUrl" : "/elements/list/styled.json"
 				},
 				{
-					"_template": "common/text",
+					"_template": "common/html",
 					"text": "<div class=\"bsp-component-title\">unordered/unstyled:</div>"
 				},
 				{
 					"_dataUrl" : "/elements/list/unstyled.json"
 				},
 				{
-					"_template": "common/text",
+					"_template": "common/html",
 					"text": "<div class=\"bsp-component-title\">unordered/inline:</div>"
 				},
 				{
 					"_dataUrl" : "/elements/list/inline.json"
 				},
 				{
-					"_template": "common/text",
+					"_template": "common/html",
 					"text": "<div class=\"bsp-component-title\">ordered:</div>"
 				},
 				{
 					"_dataUrl" : "/elements/list/ordered.json"
 				},
 				{
-					"_template": "common/text",
+					"_template": "common/html",
 					"text": "<div class=\"bsp-component-title\">ordered with type (supported values: A, a, I, i):</div>"
 				},
 				{
 					"_dataUrl" : "/elements/list/ordered-with-type.json"
 				},
 				{
-					"_template": "common/text",
+					"_template": "common/html",
 					"text": "<div class=\"bsp-component-title\">list embedded in another list:</div>"
 				},
 				{
@@ -55,11 +55,11 @@
 				}
 			]
 		},
-			
+
 		"aside" : {
 			"components" : [
 				{
-					"_template" : "common/text",
+					"_template" : "common/html",
 
 	            	"text": "<p>Right Rail Modules can go here</p>"
 				}

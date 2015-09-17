@@ -35,7 +35,7 @@
 			}
 		]
 	},
-		
+
 	"second" : {
 		"components" : [
 			{
@@ -57,7 +57,8 @@
 				"_dataUrl": "/components/bsp-form-input/input-url.json"
 			},
 			{
-				"_template": "common/text",
+				"_template": "common/html",
+
 				"text": "<p>Unsupported types:</p><ul><li>datetime (use date or datetime-local instead)</li><li>week (support is poor in mobile browsers)</li></ul><p>* - still needs some work in bsp-form</p>"
 			}
 		]
