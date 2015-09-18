@@ -1,7 +1,7 @@
 <div class="bsp-component bsp-list-promo-component{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
-    {{#if heading}}
-        <div class="bsp-component-title">{{#if heading._template}}{{#with heading}}{{render this}}{{/with}}{{else}}{{heading}}{{/if}}</div>
-    {{/if}}
+    {{#with heading}}
+        <div class="bsp-component-title">{{render this}}</div>
+    {{/with}}
 
     <div class="bsp-component-content">
 
