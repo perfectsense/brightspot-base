@@ -80,7 +80,7 @@
 					<li>
 						{{!-- This one doesn't use the partial as we needed a custom icon inside --}}
 						{{#with link}}
-							<a href="{{href}}" {{#if title}}title="{{title}}"{{/if}} {{#if target}}target="{{target}}"{{/if}}>{{text}}{{#if ../subMenu}}<i class="icon"></i>{{/if}}</a>
+							<a {{#with this.attributes}}{{> common/attributes this}}{{/with}}>{{body.text}}{{#if ../subMenu}}<i class="icon"></i>{{/if}}</a>
 						{{/with}}
 
 						{{#if subMenu}}
