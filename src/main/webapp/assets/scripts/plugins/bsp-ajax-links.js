@@ -114,7 +114,6 @@ var bsp_search_results = {
 
                 // if we are a form, we will act on our submit event
                 $this.on('submit', function(e) {
-                    console.log('submitty!!');
                     e.preventDefault();
 
                     // serialize our data, we will need to pass it along with our original action
@@ -159,7 +158,6 @@ var bsp_search_results = {
 
                 // for links, we act on the click itself
                 $this.on('click', function(e) {
-                    console.log('clicky!');
                     e.preventDefault();
 
                     // if we are set to replace the history, we won't ajax. Instead we will pushState the new
