@@ -31,6 +31,7 @@
 import $ from 'jquery';
 import bsp_utils from 'bsp-utils';
 import historyAPI from 'native.history';
+import bsp_autosubmit from 'bsp-autosubmit';
 
 var bsp_search_results = {
 

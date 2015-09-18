@@ -19,6 +19,6 @@ import bsp_share from 'bsp-share';
 // need to find a neater method than compiling this in our production JS
 import bsp_template_plugin from 'bsp-template-plugin';
 
-import bsp_autosubmit from 'bsp-autosubmit';
+import bsp_search_results_plugin from './plugins/bsp-ajax-links-plugin';
 
 export default {};
