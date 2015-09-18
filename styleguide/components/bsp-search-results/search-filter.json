@@ -6,13 +6,18 @@
 	},
 
 	"checkboxes":  [
-		{ 
+		{
 			"_template" : "components/bsp-form-input",
+
+            "options" : {
+                "autoSubmit" : true
+            },
 
 			"labelAfterInput": true,
 
 			"attributes": {
 				"id": "bsp-search-filter-all",
+                "name" : "all",
 				"type": "checkbox"
 			},
 
@@ -23,13 +28,19 @@
 				"text": "All Types"
 			}
 		},
-		{ 
+		{
 			"_template" : "components/bsp-form-input",
-			
+
+            "options" : {
+                "autoSubmit" : true
+            },
+
+
 			"labelAfterInput": true,
 
 			"attributes": {
 				"id": "bsp-search-filter-articles",
+                "name" : "articles",
 				"type": "checkbox"
 			},
 
@@ -40,13 +51,19 @@
 				"text": "Articles <span>(118)</span>"
 			}
 		},
-		{ 
+		{
 			"_template" : "components/bsp-form-input",
-			
+
+            "options" : {
+                "autoSubmit" : true
+            },
+
+
 			"labelAfterInput": true,
 
 			"attributes": {
 				"id": "bsp-search-filter-videos",
+                "name" : "videos",
 				"type": "checkbox"
 			},
 
@@ -57,13 +74,19 @@
 				"text": "Videos <span>(7)</span>"
 			}
 		},
-		{ 
+		{
 			"_template" : "components/bsp-form-input",
-			
+
+            "options" : {
+                "autoSubmit" : true
+            },
+
+
 			"labelAfterInput": true,
 
 			"attributes": {
 				"id": "bsp-search-filter-photo-galleries",
+                "name" : "galleries",
 				"type": "checkbox"
 			},
 
@@ -74,13 +97,19 @@
 				"text": "Photo Galleries <span>(15)</span>"
 			}
 		},
-		{ 
+		{
 			"_template" : "components/bsp-form-input",
-			
+
+            "options" : {
+                "autoSubmit" : true
+            },
+
+
 			"labelAfterInput": true,
 
 			"attributes": {
 				"id": "bsp-search-filter-shows",
+                "name" : "shows",
 				"type": "checkbox"
 			},
 
@@ -91,13 +120,19 @@
 				"text": "Shows <span>(7)</span>"
 			}
 		},
-		{ 
+		{
 			"_template" : "components/bsp-form-input",
-			
+
+            "options" : {
+                "autoSubmit" : true
+            },
+
+
 			"labelAfterInput": true,
 
 			"attributes": {
 				"id": "bsp-search-filter-people",
+                "name" : "people",
 				"type": "checkbox"
 			},
 

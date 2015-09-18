@@ -33,9 +33,9 @@
 				"class" : "bsp-search-results-input",
 				"id" : "query",
                 "name" : "query",
-				"placeholder": "Lion",
 				"required": true,
-				"type": "text"
+				"type": "text",
+                "value": "Lion"
 			},
 
 			"errors": [

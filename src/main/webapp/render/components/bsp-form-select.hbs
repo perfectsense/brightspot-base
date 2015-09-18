@@ -7,7 +7,7 @@
 			<label {{> common/attributes label.attributes }}>
 			{{#if labelAfterInput}} {{else}}{{label.text}}{{/if}}
 		{{/if}}
-			<select {{> common/attributes attributes }}>
+			<select {{> common/attributes attributes }} {{#if autoSubmit}}data-bsp-autosubmit{{/if}}>
 				{{#each options}}
 					<option {{> common/attributes attributes }}>{{text}}</option>
 				{{/each}}

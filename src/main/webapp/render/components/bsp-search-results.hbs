@@ -1,6 +1,6 @@
-<div id="bsp-search-results-wrapper">
+<div id="bsp-search-results-wrapper" data-bsp-ajax-links data-bsp-ajax-links-options='{"historyReplace":true}'>
 
-    <div class="bsp-search-results" data-bsp-ajax-links>
+    <div class="bsp-search-results">
 
     	<h1 class="bsp-search-results-heading">
     		{{#each heading}}
@@ -8,7 +8,7 @@
     		{{/each}}
     	</h1>
 
-    	<form class="bsp-search-results-form" action="search-results-ajax-1.html" data-ajax-link-target="#bsp-search-results-wrapper">
+    	<form class="bsp-search-results-form" action="search-results-ajax-1.html" data-ajax-link-target=".bsp-search-results">
     		{{#with searchForm}}
 
     			{{#with searchInput}}

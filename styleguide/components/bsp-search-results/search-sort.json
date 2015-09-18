@@ -1,8 +1,11 @@
 {
 	"_template" : "components/bsp-form-select",
 
+    "autoSubmit" : true,
+
 	"attributes": {
 		"id"   : "bsp-search-results-sort-select",
+        "name" : "sort",
 		"required": false
 	},
 
