@@ -247,7 +247,7 @@
 		},
 
         "body" : {
-            "_template" : "common/test",
+            "_template" : "common/text",
 
             "text" : "Next Article"
         }
