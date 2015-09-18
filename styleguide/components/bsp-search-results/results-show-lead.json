@@ -5,7 +5,13 @@
 		"modifierClass" : "image-50-width"
 	},
 
-	"heading" : "Shows",
+	"heading" : {
+
+        "_template" : "common/text",
+
+        "text" : "Shows"
+
+    },
 
 	"listItems" : [
 		{

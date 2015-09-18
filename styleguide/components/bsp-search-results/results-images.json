@@ -5,7 +5,13 @@
 		"horizontalSplit" : "third"
 	},
 
-	"heading" : "Images",
+	"heading" : {
+
+        "_template" : "common/text",
+
+        "text" : "Images"
+
+    },
 
 	"listItems" : [
 		{
