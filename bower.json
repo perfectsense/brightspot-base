@@ -4,7 +4,7 @@
   "homepage": "https://github.com/perfectsense/brightspot-base",
   "dependencies": {
     "bsp-autosubmit" : "perfectsense/brightspot-js-autosubmit#^2.0.0",
-    "bsp-form": "perfectsense/brightspot-js-form#datepicker",
+    "bsp-form": "perfectsense/brightspot-js-form#^0.0.4",
     "bsp-utils": "perfectsense/brightspot-js-utils#^3.0.0",
     "bsp-carousel": "perfectsense/brightspot-js-carousel#^1.0.0",
     "bsp-share": "perfectsense/brightspot-js-share#^3.0.0",

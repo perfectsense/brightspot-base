@@ -22,6 +22,10 @@
 
 	"searchForm" : {
 
+        "attributes" : {
+            "action" : "/components/search-results/search-results-ajax-1.html"
+        },
+
 		"searchInput" : {
 
 			"_template" : "components/bsp-form-input",
