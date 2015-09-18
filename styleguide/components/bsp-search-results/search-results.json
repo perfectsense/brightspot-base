@@ -23,7 +23,7 @@
 	"searchForm" : {
 
         "attributes" : {
-            "action" : "/components/search-results/search-results-ajax-1.html"
+            "action" : "/components/bsp-search-results/search-results-ajax-1.html"
         },
 
 		"searchInput" : {
