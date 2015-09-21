@@ -20,7 +20,7 @@
 
 					"attributes" : {
 						"alt" : "Image",
-						"src" : "/assets/images/1200x400.png"
+						"data-lazy" : "/assets/images/1200x400.png"
 					}
 				}
 
@@ -41,7 +41,7 @@
 
 					"attributes" : {
 						"alt" : "Image",
-						"src" : "/assets/images/1200x400-inverse.png"
+						"data-lazy" : "/assets/images/1200x400-inverse.png"
 					}
 				}
 

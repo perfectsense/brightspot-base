@@ -88,7 +88,36 @@
             ]
 		},
 		{
+            "imgAlign" : "top",
+
             "sections" : [
+                {
+
+                    "_template" : "components/bsp-list-promo-item-handler",
+
+                    "name" : "image",
+
+                    "image" : {
+
+                        "_template" : "common/link",
+
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
+
+                        "body" : {
+
+                            "_template" : "common/image",
+
+                            "attributes" : {
+                                "alt" : "Test Alt",
+                                "src" : "/assets/images/800x450.png"
+                            }
+                        }
+                    }
+                },
+
                 {
 
                     "_template" : "components/bsp-list-promo-item-handler",
@@ -109,19 +138,9 @@
                             "text" : "8 Burning Questions Link"
                         }
 
-                    }
-                }
-            ]
-        },
-        {
-            "sections" : [
-                {
+                    },
 
-                    "_template" : "components/bsp-list-promo-item-handler",
-
-                    "name" : "text",
-
-                    "link" : {
+                    "title" : {
 
                         "_template" : "common/link",
 
@@ -132,7 +151,7 @@
 
                         "body" : {
                             "_template" : "common/text",
-                            "text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
+                            "text" : "8 Burning Questions Title"
                         }
 
                     }
@@ -140,7 +159,36 @@
             ]
         },
         {
+            "imgAlign" : "top",
+
             "sections" : [
+                {
+
+                    "_template" : "components/bsp-list-promo-item-handler",
+
+                    "name" : "image",
+
+                    "image" : {
+
+                        "_template" : "common/link",
+
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
+
+                        "body" : {
+
+                            "_template" : "common/image",
+
+                            "attributes" : {
+                                "alt" : "Test Alt",
+                                "src" : "/assets/images/800x450.png"
+                            }
+                        }
+                    }
+                },
+
                 {
 
                     "_template" : "components/bsp-list-promo-item-handler",
@@ -161,19 +209,9 @@
                             "text" : "8 Burning Questions Link"
                         }
 
-                    }
-                }
-            ]
-        },
-        {
-            "sections" : [
-                {
+                    },
 
-                    "_template" : "components/bsp-list-promo-item-handler",
-
-                    "name" : "text",
-
-                    "link" : {
+                    "title" : {
 
                         "_template" : "common/link",
 
@@ -184,16 +222,44 @@
 
                         "body" : {
                             "_template" : "common/text",
-                            "text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
+                            "text" : "8 Burning Questions Title"
                         }
 
                     }
-
                 }
             ]
         },
         {
+            "imgAlign" : "overlay",
+
             "sections" : [
+                {
+
+                    "_template" : "components/bsp-list-promo-item-handler",
+
+                    "name" : "image",
+
+                    "image" : {
+
+                        "_template" : "common/link",
+
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
+
+                        "body" : {
+
+                            "_template" : "common/image",
+
+                            "attributes" : {
+                                "alt" : "Test Alt",
+                                "src" : "/assets/images/800x450.png"
+                            }
+                        }
+                    }
+                },
+
                 {
 
                     "_template" : "components/bsp-list-promo-item-handler",
@@ -212,6 +278,164 @@
                         "body" : {
                             "_template" : "common/text",
                             "text" : "8 Burning Questions Link"
+                        }
+
+                    },
+
+                    "title" : {
+
+                        "_template" : "common/link",
+
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
+
+                        "body" : {
+                            "_template" : "common/text",
+                            "text" : "8 Burning Questions Title"
+                        }
+
+                    }
+                }
+            ]
+        },
+        {
+            "imgAlign" : "overlay",
+
+            "sections" : [
+                {
+
+                    "_template" : "components/bsp-list-promo-item-handler",
+
+                    "name" : "image",
+
+                    "image" : {
+
+                        "_template" : "common/link",
+
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
+
+                        "body" : {
+
+                            "_template" : "common/image",
+
+                            "attributes" : {
+                                "alt" : "Test Alt",
+                                "src" : "/assets/images/800x450.png"
+                            }
+                        }
+                    }
+                },
+
+                {
+
+                    "_template" : "components/bsp-list-promo-item-handler",
+
+                    "name" : "text",
+
+                    "link" : {
+
+                        "_template" : "common/link",
+
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
+
+                        "body" : {
+                            "_template" : "common/text",
+                            "text" : "8 Burning Questions Link"
+                        }
+
+                    },
+
+                    "title" : {
+
+                        "_template" : "common/link",
+
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
+
+                        "body" : {
+                            "_template" : "common/text",
+                            "text" : "8 Burning Questions Title"
+                        }
+
+                    }
+                }
+            ]
+        },
+        {
+            "imgAlign" : "overlay",
+
+            "sections" : [
+                {
+
+                    "_template" : "components/bsp-list-promo-item-handler",
+
+                    "name" : "image",
+
+                    "image" : {
+
+                        "_template" : "common/link",
+
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
+
+                        "body" : {
+
+                            "_template" : "common/image",
+
+                            "attributes" : {
+                                "alt" : "Test Alt",
+                                "src" : "/assets/images/800x450.png"
+                            }
+                        }
+                    }
+                },
+
+                {
+
+                    "_template" : "components/bsp-list-promo-item-handler",
+
+                    "name" : "text",
+
+                    "link" : {
+
+                        "_template" : "common/link",
+
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
+
+                        "body" : {
+                            "_template" : "common/text",
+                            "text" : "8 Burning Questions Link"
+                        }
+
+                    },
+
+                    "title" : {
+
+                        "_template" : "common/link",
+
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
+
+                        "body" : {
+                            "_template" : "common/text",
+                            "text" : "8 Burning Questions Title"
                         }
 
                     }

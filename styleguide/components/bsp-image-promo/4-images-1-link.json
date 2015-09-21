@@ -26,7 +26,7 @@
 
 					"attributes" : {
 						"alt" : "Image",
-						"src" : "/assets/images/800x450.png"
+						"data-lazy" : "https://c1.staticflickr.com/1/289/19363391608_31af4481cf_k.jpg"
 					}
 				}
 
@@ -64,7 +64,7 @@
 
 					"attributes" : {
 						"alt" : "Image",
-						"src" : "/assets/images/800x450.png"
+						"data-lazy" : "https://c2.staticflickr.com/4/3825/19544522122_7e57517ca1_k.jpg"
 					}
 				}
 
@@ -102,7 +102,7 @@
 
 					"attributes" : {
 						"alt" : "Image",
-						"src" : "/assets/images/800x450.png"
+						"data-lazy" : "https://c1.staticflickr.com/1/267/18761324546_2dc12b595a_k.jpg"
 					}
 				}
 
@@ -140,7 +140,7 @@
 
 					"attributes" : {
 						"alt" : "Image",
-						"src" : "/assets/images/800x450.png"
+						"data-lazy" : "https://c1.staticflickr.com/1/262/18761386426_f56b2466df_k.jpg"
 					}
 				}
 

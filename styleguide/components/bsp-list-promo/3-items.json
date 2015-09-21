@@ -5,7 +5,10 @@
 		"modifierClass" : "hard-item-heights"
 	},
 
-	"heading" : "3 items with hardcoded heights",
+	"heading" : {
+        "_template" : "common/text",
+        "text" : "3 items with hardcoded heights"
+    },
 
 	"listItems" : [
 		{

@@ -26,7 +26,7 @@
 
 					"attributes" : {
 						"alt" : "Image",
-						"src" : "/assets/images/800x450.png"
+						"data-lazy" : "/assets/images/800x450.png"
 					}
 				}
 
@@ -64,7 +64,7 @@
 
 					"attributes" : {
 						"alt" : "Image",
-						"src" : "/assets/images/800x450.png"
+						"data-lazy" : "/assets/images/800x450.png"
 					}
 				}
 
