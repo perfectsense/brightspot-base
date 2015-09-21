@@ -1,6 +1,6 @@
-<div class="bsp-article-wrapper{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}{{#if nextArticle}} bsp-infinite-load-wrapper{{/if}}"{{#if nextArticle}} data-bsp-infinite-content{{/if}}>
+<div class="bsp-article-wrapper bsp-infinite-load-wrapper{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}" data-bsp-infinite-content>
 
-	<div class="bsp-article{{#if nextArticle}} bsp-infinite-load-item{{/if}}"{{#if nextArticle}} data-bsp-infinite-load-item-url="{{permalink}}"{{/if}}>
+	<div class="bsp-article bsp-infinite-load-item" data-bsp-infinite-load-item-url="{{permalink}}">
 
 		{{#if sharing}}{{render sharing }}{{/if}}
 
