@@ -1,4 +1,6 @@
-/** @todo move to bsp-carousel repo */
+/**
+ * TODO: Move to brighspot-js-carousel
+ */
 import $ from 'jquery';
 import bsp_utils from 'bsp-utils';
 import bsp_carousel_gallery from './bsp-carousel-gallery';

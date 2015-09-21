@@ -1,4 +1,6 @@
 /**
+ * TODO: Create brightspot-js-ajax-links repo and move this code there
+ *
  * This module/plugin will allow for convertion of plain links or forms to ajaxable content.
  * This can be used for use cases such as search results filtering, or where we might want to make an aside module a little more "dynamic"
  *

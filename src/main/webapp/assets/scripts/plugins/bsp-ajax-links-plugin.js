@@ -1,4 +1,6 @@
-/** @todo move to bsp-scroll-checker repo */
+/**
+ * TODO: Create brightspot-js-ajax-links repo and move this code there
+ */
 import $ from 'jquery';
 import bsp_utils from 'bsp-utils';
 import bsp_ajax_links from './bsp-ajax-links';
