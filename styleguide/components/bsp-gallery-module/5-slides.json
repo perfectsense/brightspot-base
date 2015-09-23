@@ -1,30 +1,29 @@
 {
 	"_template" : "components/bsp-gallery-module",
 
+    "options" : {
+         "dynamicSlideLoad" : true
+    },
+
 	"galleryTitle" : {
 
 		"_template" : "common/text",
 
-		"text" : "5 slides, no dots, no thumbs"
+		"text" : "Dynamic slides, no dots, no thumbs"
 
 	},
 
 	"gallerySlides" : [
-		{ 
-			"_dataUrl" : "/common/image-1200x400.json"
-		},
-		{ 
-			"_dataUrl" : "/common/image-1200x400.json"
-		},
-		{ 
-			"_dataUrl" : "/common/image-1200x400.json"
-		},
-		{ 
-			"_dataUrl" : "/common/image-1200x400.json"
-		},
-		{ 
-			"_dataUrl" : "/common/image-1200x400.json"
-		}
+		{
+            "_template" : "common/image",
+
+            "attributes" : {
+                "src" : "/assets/images/1200x400.png",
+                "title" : "slide-0",
+                "data-next-url" : "/components/bsp-gallery-module/slide-for-dynamic-load-1.html",
+                "data-prev-url" : "/components/bsp-gallery-module/slide-for-dynamic-load-neg-1.html"
+            }
+        }
 	],
 
 	"cta" : {

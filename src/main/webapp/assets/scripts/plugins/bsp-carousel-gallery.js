@@ -31,6 +31,9 @@ export default {
 
         self.$el = $el;
         self.options = $.extend(self.defaults, options);
+
+        console.log(self.options);
+
         self.saveElements();
         self.buildCarousel();
         self.addThumbCaptionClicks();
