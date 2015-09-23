@@ -122,11 +122,20 @@ var bsp_search_results = {
                     // serialize our data, we will need to pass it along with our original action
                     var formData = $this.serialize();
 
-                    if(formData.indexOf('?') === -1) {
-                        linkHref += '?' + formData;
-                    } else {
-                        linkHref += '&' + formData;
-                    }
+                    // we need to extend the url params we might have already had with the
+                    // form params we picked up
+                    var urlParams = self._getParams(linkHref);
+                    var formParams = self._getParams(formData);
+                    formParams = $.extend({},urlParams,formParams);
+
+                    // once we have that use jquery native to turn them into a URL string
+                    formData = $.param(formParams);
+
+                    // grab the original URL and kill the ? since we already pulled that and extended it
+                    linkHref = linkHref.split('?')[0] || linkHref.split('?')[1];
+
+                    // create the plain link along with the new combined form data
+                    linkHref += '?' + formData;
 
                     // if we are set to replace the history, we won't ajax. Instead we will pushState the new
                     // target, load type, and link.
@@ -200,6 +209,22 @@ var bsp_search_results = {
             }
 
         });
+
+    },
+
+    _getParams(prmstr) {
+
+        // shamelessly stole this off of stackoverflow to get this moving.
+        // TODO: We need to add string get params to bsp-utils, or create a string utility JS repo for things like this
+        prmstr = prmstr.split('?')[0] || prmstr.split('?')[1];
+
+        var params = {};
+        var prmarr = prmstr.split("&");
+        for ( var i = 0; i < prmarr.length; i++) {
+            var tmparr = prmarr[i].split("=");
+            params[tmparr[0]] = tmparr[1];
+        }
+        return params;
 
     },
 

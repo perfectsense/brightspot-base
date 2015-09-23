@@ -23,7 +23,7 @@
 	"searchForm" : {
 
         "attributes" : {
-            "action" : "/components/bsp-search-results/search-results-ajax-1.html"
+            "action" : "/components/bsp-search-results/search-results-ajax-1.html?q=test"
         },
 
 		"searchInput" : {
@@ -35,8 +35,8 @@
 			"attributes": {
 				"autocomplete": "off",
 				"class" : "bsp-search-results-input",
-				"id" : "query",
-                "name" : "query",
+				"id" : "q",
+                "name" : "q",
 				"required": true,
 				"type": "text",
                 "value": "Lion"
