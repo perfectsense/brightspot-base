@@ -12,6 +12,8 @@
 
         {
 
+            "_template" : "components/bsp-gallery-fullscreen-slide",
+
             "image" : {
                 "_template": "common/image",
 

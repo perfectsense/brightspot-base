@@ -1,0 +1,11 @@
+{{render this.image}}
+
+{{#if caption}}
+<div class="bsp-carousel-gallery-slide-caption-wrapper">
+    <div class="bsp-carousel-gallery-slide-caption">
+        {{#each caption}}
+            {{render this}}
+        {{/each}}
+    </div>
+</div>
+{{/if}}

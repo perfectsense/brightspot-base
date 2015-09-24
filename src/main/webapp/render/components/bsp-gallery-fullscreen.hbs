@@ -12,18 +12,7 @@
             <div class="bsp-carousel-stage">
                 {{#each gallerySlides}}
                     <div class="bsp-carousel-slide">
-                        {{render this.image}}
-
-                        {{#if caption}}
-                        <div class="bsp-carousel-gallery-slide-caption-wrapper">
-                            <div class="bsp-carousel-gallery-slide-caption">
-                                {{#each caption}}
-                                    {{render this}}
-                                {{/each}}
-                            </div>
-                        </div>
-                        {{/if}}
-
+                        {{render this}}
                     </div>
                 {{/each}}
             </div>
