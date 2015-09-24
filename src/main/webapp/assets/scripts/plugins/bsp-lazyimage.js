@@ -53,7 +53,7 @@ var bsp_lazyimage = {
         'loadedClass'       : 'lazy-loaded',
         'nativeImageLoading': true,
         'offset'            : 250,
-        'preloaderIconClass': 'uvn-picture_spinner',
+        'preloaderIconClass': 'bsp-spinner',
         'throttleInterval'  : 250
     },
 

@@ -23,11 +23,15 @@ var bsp_carousel = {};
         this._createSlickMethodsAvailablePromise();
         this.addEvents();
 
+        // if we are a dynamic slide load, we go ahead and create all the event bindings up front
+        // and also make sure that we remove infinite status. Dynamic and infinite do not go together
         if(options.dynamicSlideLoad) {
             this._createDynamicSlideLoad();
+            options.themeConfig.infinite = false;
         }
 
         options = this.mergeOptions(options);
+
         $el.slick(options);
         $el.data('bsp_carousel', this);
 
@@ -147,14 +151,6 @@ var bsp_carousel = {};
     bsp_carousel._createDynamicSlideLoad = function() {
         var self = this;
 
-        function getSlide(url) {
-            var slideFetch;
-
-            slideFetch = $.get(url);
-
-            return slideFetch;
-        }
-
         self.bind('init', (event, slick, currentSlide) => {
 
             var $currentSlide = $(slick.$slides[0]);
@@ -173,12 +169,10 @@ var bsp_carousel = {};
             var getPrev = $.get(prevSlideUrl);
 
             $.when(getNext, getPrev).done(function(dataNext, dataPrev) {
-                //console.log(dataNext);
-                //console.log(dataPrev);
 
                 slick.slickAdd($('<div class="bsp-carousel-slide">').html(dataNext[0]));
                 slick.slickAdd($('<div class="bsp-carousel-slide">').html(dataPrev[0]), 0, true);
-                slick.goTo(1);
+                slick.goTo(1, true);
 
                 var direction;
 

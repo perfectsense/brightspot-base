@@ -66,26 +66,30 @@ body.bsp-gallery-fullscreen {
     }
 }
 
-.bsp-carousel-gallery-slide {
-    position: relative;
+.bsp-carousel-stage {
+    .bsp-carousel-slide {
+        position: relative;
 
-    // make sure that image fits the slide as much as possible
-    img {
-        height: auto;
-        margin: 0 auto;
-        width: 100%;
+        // make sure that image fits the slide as much as possible
+        img {
+            height: auto;
+            margin: 0 auto;
+            width: 100%;
+        }
     }
 }
 
-.bsp-carousel-gallery-nav-slide {
-    padding: @space-double;
-    position: relative;
+.bsp-carousel-nav {
+    .bsp-carousel-slide {
+        padding: @space-double;
+        position: relative;
 
-    // make sure that thumb fits the container as much as possible
-    img {
-        height: auto;
-        margin: 0 auto;
-        width: 100%;
+        // make sure that thumb fits the container as much as possible
+        img {
+            height: auto;
+            margin: 0 auto;
+            width: 100%;
+        }
     }
 }
 
@@ -197,12 +201,6 @@ body.bsp-gallery-fullscreen {
     }
 
 }
-
-
-
-
-
-
 
 // full screen gallery gets a custom media query
 @media only screen and (min-width: 1400px) {

@@ -18,6 +18,7 @@ export default {
                 slidesToScroll: 1
             }
         },
+
         stage: {
             themeConfig: {
                 arrows: true
@@ -32,12 +33,14 @@ export default {
         self.$el = $el;
         self.options = $.extend(self.defaults, options);
 
-        console.log(self.options);
-
         self.saveElements();
         self.buildCarousel();
         self.addThumbCaptionClicks();
-        self.addEvents();
+
+        // we do not want the counter on dynamic slide load
+        if(!self.options.dynamicSlideLoad) {
+            self.createCounter();
+        }
     },
 
     saveElements() {
@@ -51,7 +54,8 @@ export default {
         var self = this;
 
         self.carousel = Object.create(bsp_carousel);
-        self.carousel.init(this.$carousel, this.options);
+
+        self.carousel.init(self.$carousel, self.options);
     },
 
     addThumbCaptionClicks() {
@@ -70,7 +74,7 @@ export default {
         });
     },
 
-    addEvents() {
+    createCounter() {
         var self = this;
 
         this.$carousel.on('carousel:init carousel:afterChange', () => {
