@@ -37,8 +37,10 @@ export default {
         self.buildCarousel();
         self.addThumbCaptionClicks();
 
-        // we do not want the counter on dynamic slide load
-        if(!self.options.dynamicSlideLoad) {
+        // if we are dynamic we want to remove the thumbs, which includes the counter inside
+        if(self.options.dynamicSlideLoad) {
+            self.$el.find('.bsp-carousel-gallery-thumbs').remove();
+        } else {
             self.createCounter();
         }
     },
