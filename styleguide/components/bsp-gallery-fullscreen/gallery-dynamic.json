@@ -11,35 +11,7 @@
     "gallerySlides": [
 
         {
-
-            "_template" : "components/bsp-gallery-fullscreen-slide",
-
-            "image" : {
-                "_template": "common/image",
-
-                "attributes": {
-                    "src": "/assets/images/800x450.png",
-                    "data-next-url" : "/components/bsp-gallery-fullscreen/slide-for-dynamic-load-1.html",
-                    "data-prev-url" : "/components/bsp-gallery-fullscreen/slide-for-dynamic-load-neg-1.html"
-                }
-            },
-
-            "caption" : [
-                {
-                    "_template" : "common/text",
-
-                    "text" : "Slide 0 - Biltong pig landjaeger tail jowl sirloin drumstick rump pastrami. Filet mignon salami drumstick alcatra pork belly capicola chuck ham hock pork chop tri-tip sirloin."
-                }
-            ],
-
-            "thumbnail": {
-                "_template": "common/image",
-
-                "attributes": {
-                    "src": "/assets/images/60x60.png"
-                }
-            }
-
+            "_dataUrl" : "/components/bsp-gallery-fullscreen/slide-for-dynamic-load-0.json"
         }
     ],
 
