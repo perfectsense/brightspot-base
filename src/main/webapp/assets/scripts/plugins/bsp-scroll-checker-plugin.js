@@ -1,4 +1,6 @@
-/** @todo move to bsp-scroll-checker repo */
+/**
+ *  TODO: Create a bsp-scroll-checker repo and move this
+ */
 import $ from 'jquery';
 import bsp_utils from 'bsp-utils';
 import bsp_scroll_checker from './bsp-scroll-checker';

@@ -20,6 +20,19 @@ body.bsp-gallery-fullscreen {
     margin-bottom: @space;
     position: relative;
 
+    .bsp-carousel-stage {
+        .bsp-carousel-slide {
+            position: relative;
+
+            // make sure that image fits the slide as much as possible
+            img {
+                height: auto;
+                margin: 0 auto;
+                width: 100%;
+            }
+        }
+    }
+
     // gives the overlay look to the 2nd carousel
     // it's hidden by default on xs and sm screens and comes into play md and up by default
     // it has a max-height to give it a smooth look/feel when coming in
@@ -63,32 +76,17 @@ body.bsp-gallery-fullscreen {
                 right: 0;
             }
         }
-    }
-}
 
-.bsp-carousel-stage {
-    .bsp-carousel-slide {
-        position: relative;
+        .bsp-carousel-slide {
+            padding: @space-double;
+            position: relative;
 
-        // make sure that image fits the slide as much as possible
-        img {
-            height: auto;
-            margin: 0 auto;
-            width: 100%;
-        }
-    }
-}
-
-.bsp-carousel-nav {
-    .bsp-carousel-slide {
-        padding: @space-double;
-        position: relative;
-
-        // make sure that thumb fits the container as much as possible
-        img {
-            height: auto;
-            margin: 0 auto;
-            width: 100%;
+            // make sure that thumb fits the container as much as possible
+            img {
+                height: auto;
+                margin: 0 auto;
+                width: 100%;
+            }
         }
     }
 }

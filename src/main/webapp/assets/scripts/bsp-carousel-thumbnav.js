@@ -1,3 +1,6 @@
+// TODO: This is in this repo until we create pretty enough code around the dynamic loading to move it out back to it's own repo
+
+
 import bsp_carousel from 'bsp-carousel';
 
 export default {
