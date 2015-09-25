@@ -3,6 +3,7 @@
  */
 import $ from 'jquery';
 import bsp_carousel from 'bsp-carousel-thumbnav';
+import historyAPI from 'native.history';
 
 export default {
 
@@ -40,9 +41,23 @@ export default {
         // if we are dynamic we want to remove the thumbs, which includes the counter inside
         if(self.options.dynamicSlideLoad) {
             self.$el.find('.bsp-carousel-gallery-thumbs').remove();
+            self._manageHistory();
         } else {
             self.createCounter();
         }
+    },
+
+    _manageHistory() {
+        var self = this;
+
+        self.$carousel.on('carousel:init carousel:afterChange', () => {
+            var currentSlide = self.carousel.stage.$el[0].slick.$slides[self.carousel.stage.currentSlide()];
+            var url = $(currentSlide).find('[data-url]').attr('data-url');
+
+            if(url) {
+                History.replaceState({},'',url);
+            }
+        });
     },
 
     saveElements() {

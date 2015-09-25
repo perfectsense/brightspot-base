@@ -6,10 +6,21 @@
 
         "attributes": {
             "src": "/assets/images/800x450.png",
+            "data-url" : "/i-am-the-real-image-url-slide-1",
             "data-next-url" : "/components/bsp-gallery-fullscreen/slide-for-dynamic-load-2.html",
             "data-prev-url" : "/components/bsp-gallery-fullscreen/slide-for-dynamic-load-0.html"
         }
     },
+
+    "seoLink" : {
+        "_template": "common/link",
+
+        "attributes": {
+            "href": "/i-am-the-seo-link-href",
+            "aria-hidden": "true"
+        }
+    },
+
 
     "caption" : [
         {

@@ -1,5 +1,10 @@
 {{render this.image}}
 
+{{#if this.seoLink}}
+    {{render this.seoLink cssClass="seo-link"}}
+{{/if}}
+
+
 {{#if caption}}
 <div class="bsp-carousel-gallery-slide-caption-wrapper">
     <div class="bsp-carousel-gallery-slide-caption">
