@@ -9,11 +9,12 @@
     	</h1>
 
     	<form class="bsp-search-results-form" {{#with searchForm.attributes}}{{> common/attributes this}}{{/with}} data-ajax-link-target=".bsp-search-results">
-			{{#with searchForm.searchInput}}
-				{{render this}}
-			{{/with}}
-
-			<button class="bsp-search-results-submit" type="submit"><i class="icon icon-search"><span class="sr-only">Go</span></i></button>
+            <div class="bsp-search-results-text">
+    			{{#with searchForm.searchInput}}
+    				{{render this}}
+    			{{/with}}
+    			<button class="bsp-search-results-submit" type="submit"><i class="icon icon-search"><span class="sr-only">Go</span></i></button>
+            </div>
 
         	{{#with searchSort}}
         	<div class="bsp-search-results-sort">

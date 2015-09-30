@@ -1,5 +1,5 @@
 .bsp-search-results {
-	
+
 }
 
 .bsp-search-results-heading {
@@ -9,10 +9,16 @@
 
 
 .bsp-search-results-form {
-	display: inline-block;
+    &:extend(.clearfix all);
 	position: relative;
-	width: 65%;
-	white-space: nowrap;
+}
+
+.bsp-search-results-text {
+    position: relative;
+
+    .bsp-form-message {
+        padding: 0;
+    }
 }
 
 .bsp-search-results-input {
@@ -20,7 +26,7 @@
 	border: none;
 	padding: @space;
 	width: 100%;
-}		
+}
 
 .bsp-search-results-submit {
 	background: none;
@@ -34,6 +40,7 @@
 
 .bsp-search-results-sort {
 	display: inline-block;
+    margin: 0 0 @space 0;
 	width: 100%;
 
 	select {
@@ -42,6 +49,10 @@
 		border-radius: 0px;
 		margin-left: @space;
 	}
+}
+
+.bsp-search-results-filter {
+    clear: both;
 }
 
 .bsp-search-results-filters {
@@ -62,11 +73,14 @@
 
 @media @mq-sm {
 
-	.bsp-search-results-form {
-		width: 72%;
-	}
+    .bsp-search-results-text {
+        float: left;
+        position: relative;
+        width: 72%;
+    }
 
 	.bsp-search-results-sort {
+        margin: @space 0 0 0;
 		text-align: right;
 		width: 27%;
 	}
@@ -74,12 +88,11 @@
 
 @media @mq-lg {
 
-	.bsp-search-results-form {
-		width: 77%;
-	}
+    .bsp-search-results-text {
+        width: 77%;
+    }
 
 	.bsp-search-results-sort {
-		text-align: right;
 		width: 22%;
 	}
 }
