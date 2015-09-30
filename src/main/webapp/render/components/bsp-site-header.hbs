@@ -62,8 +62,11 @@
 
 		<div class="bsp-site-search-trigger" data-bsp-toggle-item>
 			<div class="bsp-site-search toggle-item">
-				<form class="bsp-site-search-form">
-					<input class="bsp-site-search-input" type="text" />
+				<form class="bsp-site-search-form" {{#with searchForm.attributes}}{{> common/attributes this}}{{/with}}>
+					{{#with searchForm.searchInput}}
+                        {{render this}}
+                    {{/with}}
+
 					<button class="bsp-site-search-submit" type="submit"><i class="icon icon-search"><span class="sr-only">Go</span></i></button>
 				</form>
 			</div>
