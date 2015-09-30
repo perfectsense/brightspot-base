@@ -30,20 +30,12 @@
 
 	"searchForm" : {
 
-        "attributes" : {
-            "action" : "/components/bsp-search-results/search-results-ajax-1.html?q=test"
-        },
-
 		"searchInput" : {
 
 			"_template" : "components/bsp-form-input",
 
 			"attributes": {
-				"autocomplete": "off",
 				"class" : "bsp-site-search-input",
-				"id" : "q",
-                "name" : "q",
-				"required": true,
 				"type": "text"
 			},
 
