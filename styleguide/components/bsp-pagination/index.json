@@ -11,7 +11,7 @@
 		"main" : {
 			"components" : [
 				{
-					"_template" : "common/text",
+					"_template" : "common/html",
 
 					"options" : {
 						"modifierClass" : "styleguide-page-description"

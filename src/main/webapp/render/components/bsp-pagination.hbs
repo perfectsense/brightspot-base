@@ -9,7 +9,7 @@
 				</li>
 			{{/with}}
 			{{#each listItems}}
-				<li class="bsp-pagination-page">
+				<li class="bsp-pagination-page{{#if this.options.modifierClass}} {{this.options.modifierClass}}{{/if}}">
 				{{#with link}}
 					{{ render this }}
 				{{/with}}
