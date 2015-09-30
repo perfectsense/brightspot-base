@@ -30,7 +30,7 @@
 
 			"_template" : "components/bsp-form-input",
 
-			"showMessagesAbove": false,
+			"showMessagesAbove": true,
 
 			"attributes": {
 				"autocomplete": "off",
