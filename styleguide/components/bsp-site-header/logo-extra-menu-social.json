@@ -28,6 +28,24 @@
 
 	},
 
+	"searchForm" : {
+
+		"searchInput" : {
+
+			"_template" : "components/bsp-form-input",
+
+			"attributes": {
+				"class" : "bsp-site-search-input",
+				"type": "text"
+			},
+
+			"errors": [
+				{ "valueMissing": "Please fill in the search query" }
+			]
+		}
+
+	},
+
 	"mainMenu" : {
 
 		"menuItems" : [
