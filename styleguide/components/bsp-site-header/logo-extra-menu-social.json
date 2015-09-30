@@ -38,8 +38,6 @@
 
 			"_template" : "components/bsp-form-input",
 
-			"showMessagesAbove": true,
-
 			"attributes": {
 				"autocomplete": "off",
 				"class" : "bsp-site-search-input",
