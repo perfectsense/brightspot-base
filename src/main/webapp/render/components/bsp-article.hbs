@@ -49,12 +49,12 @@
 		</div>
         {{/if}}
 
+        {{#with nextArticle}}
+            <div class="bsp-article-load-more">
+                {{render this cssClass="bsp-infinite-load-trigger"}}
+            </div>
+        {{/with}}
+
 	</div>
 
 </div>
-
-{{#with nextArticle}}
-	<div class="bsp-article-load-more">
-		{{render this cssClass="bsp-infinite-load-trigger"}}
-	</div>
-{{/with}}
