@@ -65,6 +65,12 @@
                 <div class="bsp-video-player-sharing">{{render this.sharing}}</div>
             {{/if}}
 
+            {{#if cta}}
+                <div class="bsp-component-cta {{#if this.cta.options.location}}bsp-component-cta-{{this.cta.options.location}}{{/if}}">
+                    {{render this.cta.content}}
+                </div>  
+            {{/if}}   
+
         </div>
     </div>
 
