@@ -15,22 +15,41 @@
 	            "dots" : {{#if options.horizontalSlides}}false{{else}}true{{/if}}
 
 	            {{#if options.horizontalSlides}},
+
+                    {{#if options.slidesToScroll}}
+                        "slidesToScroll" : {{options.slidesToScroll.medium}},
+                    {{else}}
+                        "slidesToScroll" : 5,
+                    {{/if}}
+
 					{{#if options.slidesToShow}}
 					"slidesToShow" : {{options.slidesToShow.medium}},
+
 					"responsive": [
 				    {
 				      "breakpoint": 768,
 				      "settings": {
-				        "slidesToShow": {{options.slidesToShow.small}}
+				        "slidesToShow": {{options.slidesToShow.small}},
+                        {{#if options.slidesToScroll}}
+                            "slidesToScroll" : {{options.slidesToScroll.small}}
+                        {{else}}
+                            "slidesToScroll" : 2
+                        {{/if}}
 				      }
 				    }]
 				    {{else}}
-				    "slidesToShow" : 5,
+
+                    "slidesToShow" : 5,
 					"responsive": [
 				    {
 				      "breakpoint": 768,
 				      "settings": {
-				        "slidesToShow": 2
+				        "slidesToShow": 2,
+                        {{#if options.slidesToScroll}}
+                            "slidesToScroll" : {{options.slidesToScroll.small}}
+                        {{else}}
+                            "slidesToScroll" : 2
+                        {{/if}}
 				      }
 				    }]
 				    {{/if}}
