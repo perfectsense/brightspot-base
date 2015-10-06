@@ -14,7 +14,7 @@
 
 
 
-// The top hat styles are included in the header since they are small 
+// The top hat styles are included in the header since they are small
 .bsp-tophat {
     &:extend(.clearfix all);
 
@@ -72,7 +72,7 @@
 
 .bsp-site-logo {
     &:extend(.vertical-center);
-    
+
     line-height: 0;
     margin: 0;
     position: relative;
@@ -80,37 +80,13 @@
     img {
        max-width: @header-logo-width * @header-logo-size-multiplier;
        width: 100%;
-    }    
+    }
 }
 
 
 .bsp-site-menu {
 
 
-
-}
-
-.bsp-site-menu-simple-list {
-    float: left; 
-    height: @header-menu-height;
-    margin: @space-double 0 0 @space-quad;
-    width: auto;
-
-    &:last-of-type {
-
-    }
-
-    > li a {
-        color: @brand-secondary;
-    }
-
-    .heading {
-        &:extend(.ts-1);
-
-        border-bottom: @border-style-2;
-        margin-bottom: @space-half;
-        text-transform: uppercase;
-    }
 
 }
 
@@ -129,16 +105,38 @@
     z-index: @z-index-menu;
 
     &.toggle-in {
-        height: @header-menu-height;
+        height: @header-menu-height * 2;
+        overflow-y: scroll;
+    }
+}
+
+body.bsp-site-menu-content-toggle-in {
+    overflow: hidden;
+}
+
+.bsp-site-menu-simple-list {
+    height: @header-menu-height;
+    float: left;
+    padding: @space-double @space 0 @space;
+    max-width: 200px;
+    width: 50%;
+
+    &:last-of-type {
+
     }
 
-    .bsp-scrolling &, .bsp-fullscreen & {
-        top: @header-height;
+    > li a {
+        color: @brand-secondary;
     }
 
-    & when (@header-positioning = fixed) {
-        top: @header-height-before-scroll;
+    .heading {
+        &:extend(.ts-1);
+
+        border-bottom: @border-style-2;
+        margin-bottom: @space-half;
+        text-transform: uppercase;
     }
+
 }
 
 .bsp-site-menu-trigger {
@@ -288,7 +286,7 @@
                 opacity: 1;
                 visibility: visible;
             }
-            
+
         }
 
     }
@@ -358,6 +356,18 @@
 
 @media @mq-sm {
 
+    .bsp-site-menu-content {
+        &.toggle-in {
+            height: @header-menu-height * 2;
+            overflow: hidden;
+        }
+    }
+
+    .bsp-site-menu-simple-list {
+        padding: @space-double 0 0 @space-quad;
+        width: 190px;
+    }
+
     .bsp-site-search {
 
         right: 60px;
@@ -376,6 +386,12 @@
 
 @media @mq-md {
 
+    .bsp-site-menu-content {
+        &.toggle-in {
+            height: @header-menu-height;
+        }
+    }
+
     .bsp-site-search {
 
         right: 70px;
@@ -385,13 +401,8 @@
         }
     }
 
-
     .bsp-extra-menu-wrapper {
         display: block;
-    }
-
-    .bsp-site-menu-simple-list {
-        width: 150px;
     }
 
 }
@@ -424,16 +435,16 @@
 
         .bsp-site-logo {
             &:extend(.vertical-center);
-            
+
             margin: 0 0 0 @header-logo-margin-left-before-scroll;
             position: absolute;
             top: @header-logo-top-placement-before-scroll;
-            left: @header-logo-left-placement-before-scroll; 
+            left: @header-logo-left-placement-before-scroll;
 
             img {
                 .transition(all .3s linear);
                 max-width: @header-logo-width;
-            }         
+            }
 
             .transition(all .3s linear);
 
@@ -464,6 +475,26 @@
 
     }
 
+    .bsp-site-menu-simple-list {
+        width: 220px;
+    }
+
+    .bsp-site-menu-content {
+        top: @header-height;
+
+        &.toggle-in {
+            height: @header-menu-height;
+        }
+
+        .bsp-scrolling &, .bsp-fullscreen & {
+            top: @header-height;
+        }
+
+        & when (@header-positioning = fixed) {
+            top: @header-height-before-scroll;
+        }
+    }
+
     .bsp-site-search {
 
         &.toggle-in {
@@ -473,10 +504,6 @@
 
     .bsp-header-extra-links-wrapper {
         display: block;
-    }
-
-     .bsp-site-menu-simple-list {
-        width: 200px;
     }
 
 }
