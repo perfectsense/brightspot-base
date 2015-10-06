@@ -13,7 +13,7 @@ import bsp_form_field_month_plugin from 'bsp-form-field-month-plugin';
 import bsp_form_field_time_plugin from 'bsp-form-field-time-plugin';
 
 import bsp_infinite_content_plugin from 'bsp-infinite-content-plugin';
-import bsp_lazyimage_plugin from './plugins/bsp-lazyimage-plugin';
+import bsp_lazyimage_plugin from 'bsp-lazyimage-plugin';
 import bsp_scroll_checker from './plugins/bsp-scroll-checker-plugin';
 import bsp_share from 'bsp-share';
 import bsp_tabber_plugin from 'bsp-tabber-plugin';
