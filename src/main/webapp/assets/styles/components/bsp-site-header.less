@@ -193,8 +193,11 @@ body.bsp-site-menu-content-toggle-in {
     background: @brand-secondary;
     border: @brand-secondary;
     border-bottom: 1px solid @brand-primary;
+    border-radius: 0;
     color: @white;
     height: @header-height / 2;
+    outline-width: 0px; // fixing iOS styles
+    padding: 0;
     width: 100%;
 }
 
@@ -232,6 +235,12 @@ body.bsp-site-menu-content-toggle-in {
                 content: @fa-var-close;
             }
         }
+    }
+}
+
+body.bsp-site-search-toggle-in {
+    .bsp-site-logo {
+        display: none;
     }
 }
 
@@ -380,6 +389,12 @@ body.bsp-site-menu-content-toggle-in {
 
     .bsp-site-search-trigger {
         padding-right: @space-triple;
+    }
+
+    body.bsp-site-search-toggle-in {
+        .bsp-site-logo {
+            display: inline-block;
+        }
     }
 
 }
