@@ -18,6 +18,7 @@ import bsp_scroll_checker from './plugins/bsp-scroll-checker-plugin';
 import bsp_share from 'bsp-share';
 import bsp_tabber_plugin from 'bsp-tabber-plugin';
 import bsp_toggle_plugin from 'bsp-toggle-item-plugin';
+import bsp_modal_plugin from './plugins/bsp-modal-plugin';
 
 // need to find a neater method than compiling this in our production JS
 import bsp_template_plugin from 'bsp-template-plugin';

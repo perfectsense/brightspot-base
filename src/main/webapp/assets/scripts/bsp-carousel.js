@@ -18,6 +18,7 @@ var bsp_carousel = {};
     };
 
     bsp_carousel.init = function($el, options) {
+        var self = this;
         this.$el = $el;
         this.addClasses(options);
         this._createSlickMethodsAvailablePromise();
@@ -30,10 +31,18 @@ var bsp_carousel = {};
             options.themeConfig.infinite = false;
         }
 
-        options = this.mergeOptions(options);
+        this.options = this.mergeOptions(options);
 
-        $el.slick(options);
+        $el.slick(this.options);
         $el.data('bsp_carousel', this);
+
+        // feels a little dirty, if someone has a better suggestion, please do a Pull Request
+        // we are binding ourselves to the modal opening to reinit
+        $('body').bind('bsp-modal:open', function() {
+            self.reInit();
+            // once we init, we trigger a resize, to make sure modal stays centered
+            $(window).trigger('resize');
+        })
 
         return this;
     };
@@ -116,6 +125,14 @@ var bsp_carousel = {};
     };
     bsp_carousel.play = function() {
         this._slickMethod('slickPlay');
+    };
+    bsp_carousel.reInit = function() {
+
+        if (this._slickMethodsAvailable()) {
+            this.$el.slick('unslick');
+            this.$el.slick(this.options);
+        }
+
     };
     bsp_carousel.add = function(ele, index, addBefore) {
         this._slickMethod('slickAdd', ele, index, addBefore);

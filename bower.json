@@ -15,7 +15,8 @@
     "bootstrap": "^3.3.4",
     "fontawesome": "^4.3.0",
     "jquery": "^2.1.4",
-    "bsp-tabber": "perfectsense/brightspot-js-tabber#^2.0.1"
+    "bsp-tabber": "perfectsense/brightspot-js-tabber#^2.0.1",
+    "vex" : "2.3.2"
   },
   "ignore": [
     "**/.*",

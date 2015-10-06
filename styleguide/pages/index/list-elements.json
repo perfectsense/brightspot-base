@@ -11,11 +11,28 @@
 				"attributes" : {
 					"href"  : "/elements/list/"
 				},
+
 				"body" : {
                     "_template" : "common/text",
                     "text"  : "List"
                 }
 			}
-		}
+		},
+        {
+            "_template" : "components/bsp-list-promo-item-handler",
+
+            "link": {
+                "_template" : "common/link",
+
+                "attributes" : {
+                    "href"  : "/elements/modal/"
+                },
+
+                "body" : {
+                    "_template" : "common/text",
+                    "text"  : "Modal"
+                }
+            }
+        }
 	]
 }

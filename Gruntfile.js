@@ -35,6 +35,16 @@ module.exports = function(grunt) {
                     }
                 ],
 
+                'vex': [
+                    {
+                        cwd: 'js/',
+                        src: '**/*.js',
+                        dest: 'bower/vex',
+                        expand: true,
+                        flatten: false
+                    }
+                ],
+
                 'bsp-carousel': [
                     {
                         cwd: 'dist/bsp-carousel/',
