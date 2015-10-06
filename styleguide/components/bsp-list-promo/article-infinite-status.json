@@ -96,7 +96,7 @@
 
 	"cta" : {
 		"options" : {
-			"location" : "top-right"
+			"location" : "bottom"
 		},
 
 		"content" : {
