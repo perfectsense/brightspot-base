@@ -1,5 +1,5 @@
 # variables
-BASE_URL=https://raw.githubusercontent.com/perfectsense/brightspot-base/1.0.1
+BASE_URL=https://raw.githubusercontent.com/perfectsense/brightspot-base
 BOILERPLATE_DIR=boilerplate
 SRC_DIR=src/main/webapp
 ASSETS_DIR=$SRC_DIR/assets
@@ -31,6 +31,7 @@ done
 dl .jshintrc
 dl .gitignore
 dl .editorconfig
+dl browserslist
 
 # download spec runner files
 mkdir -p $SPEC_PLUGINS_DIR
