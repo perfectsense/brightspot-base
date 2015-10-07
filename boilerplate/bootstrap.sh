@@ -14,7 +14,7 @@ TEMPLATE_DIR=$SRC_DIR/render
 # if one arg provided, will download src to same local relative path
 # passing a second arg will override the relative destination
 dl() {
-	if [ ! -z "$2" ] 
+	if [ ! -z "$2" ]
 		then
 			curl $BASE_URL/$1 > ./$2
 		else
@@ -27,8 +27,10 @@ CONFIG_FILES=( bower.json Gruntfile.js package.json )
 for i in "${CONFIG_FILES[@]}"
 do
 	dl $BOILERPLATE_DIR/$i $i
-done 
+done
 dl .jshintrc
+dl .gitignore
+dl .editorconfig
 
 # download spec runner files
 mkdir -p $SPEC_PLUGINS_DIR
