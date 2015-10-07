@@ -12,18 +12,14 @@ What's included
 
 How to use it
 -------------
-*   TODO: Add here was needs to be added to git ignore
-*	[Bootstrap Brightspot Base](boilerplate/) into a new or existing Brightspot project (if the UI has not been built yet)
-*	Override configuration, styles, scripts and templates to customize your project's appearance
-*	Change the name in bower.json and package.json to your project name
-*	Test front end components using the [styleguide](styleguide/) prior to integrating them into Brightspot
+*   Read the documentation under /boilerplate on how to get started
 
 Writing Handlebar Templates
 ---------------------------
 *   These notes should move into a "how to develop for Base" piece of documentation that we will get to soon. For now, please direct any questions at Tom Hoppe
 *   We are including the handlebar templates that should transform a specific piece of JSON in the root of the object with a `_template` key. This allows the front and and back end "parent" renderers to render any kinds of children inside of themselves without have that information be hardcoded as a partial in the parent renderer. Best example is the bsp-gallery-module, where you'll note, we can include via JSON any component we want into a gallery slide
 *   The above handlebar partial handling is done via the {{render this}} helper. This helper exists in our front end as well as back end handlebar code. It passes the JSON into the helper, which then picks out the `_template` value and uses it for rendering
-*   It's important to note that the JAVA implementation of handlebars uses the mustache spec for lookups (https://github.com/jknack/handlebars.java#differences-between-handlebarsjava-and-handlebarsjs). This means that if we want to support null or empty values, we need to be explicit in specifying the scope of an attribute with `this.`. If you do NOT specify a `this.`, the JAVA handlebar renderer will look up the context stack for an attribute with the same name and use it instead. 
+*   It's important to note that the JAVA implementation of handlebars uses the mustache spec for lookups (https://github.com/jknack/handlebars.java#differences-between-handlebarsjava-and-handlebarsjs). This means that if we want to support null or empty values, we need to be explicit in specifying the scope of an attribute with `this.`. If you do NOT specify a `this.`, the JAVA handlebar renderer will look up the context stack for an attribute with the same name and use it instead.
 
 Building
 --------

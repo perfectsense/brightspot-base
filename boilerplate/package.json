@@ -2,7 +2,7 @@
   "name": "project-name",
   "version": "0.0.1",
   "devDependencies": {
-    "brightspot-base": "perfectsense/brightspot-base",
+    "brightspot-base": "perfectsense/brightspot-base#master",
     "bsp-grunt": "perfectsense/brightspot-js-grunt#2.0.5",
     "es6-module-loader": "^0.17.3",
     "express": "^4.13.1",
