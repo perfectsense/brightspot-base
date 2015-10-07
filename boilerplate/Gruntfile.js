@@ -43,6 +43,16 @@ module.exports = function(grunt) {
                         src: 'jquery.datetimepicker.css',
                         dest: '../styles/bower/jquery.datetimepicker.css'
                     }
+                ],
+
+                'vex': [
+                    {
+                        cwd: 'js/',
+                        src: '**/*.js',
+                        dest: 'bower/vex',
+                        expand: true,
+                        flatten: false
+                    }
                 ]
 
                 // Here you can specify extra bower packages that dont come as part of base if you need them
@@ -56,7 +66,7 @@ module.exports = function(grunt) {
                 //    expand: true,
                 //    flatten: true
                 //}
-                
+
             }
         }
 

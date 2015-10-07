@@ -1,5 +1,5 @@
 # variables
-BASE_URL=https://raw.githubusercontent.com/perfectsense/brightspot-base
+BASE_URL=https://raw.githubusercontent.com/perfectsense/brightspot-base/master/
 BOILERPLATE_DIR=boilerplate
 SRC_DIR=src/main/webapp
 ASSETS_DIR=$SRC_DIR/assets
@@ -28,6 +28,8 @@ for i in "${CONFIG_FILES[@]}"
 do
 	dl $BOILERPLATE_DIR/$i $i
 done
+
+# download ignore, jshint, editorconfig and browser list for the prefixer
 dl .jshintrc
 dl .gitignore
 dl .editorconfig
@@ -44,6 +46,7 @@ dl $SCRIPTS_DIR/config.js
 dl $SCRIPTS_DIR/main.js
 
 # download less files
+mkdir -p $STYLES_DIR
 dl $STYLES_DIR/main.less
 
 # download styleguide files
