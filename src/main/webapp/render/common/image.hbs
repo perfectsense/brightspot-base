@@ -1,1 +1,5 @@
-<img {{#if attributes.data-lazy}}data-bsp-lazyimage src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="{{/if}} {{#if imgClass}} class="{{imgClass}}"{{/if}} {{> common/attributes attributes}} />
+{{#if this.meta}}<figure class="bsp-img-with-meta">{{/if}}
+    <img {{#if attributes.data-lazy}}data-bsp-lazyimage src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="{{/if}} {{#if imgClass}} class="{{imgClass}}"{{/if}} {{> common/attributes attributes}} />
+    {{#if this.meta.credit}}<figcaption><span class="bsp-img-credit">{{this.meta.credit}}</span></figcaption>{{/if}}
+    {{#if this.meta.caption}}<figcaption><span class="bsp-img-caption">{{this.meta.caption}}</span></figcaption>{{/if}}
+{{#if this.meta}}</figure>{{/if}}

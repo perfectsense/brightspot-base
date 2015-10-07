@@ -3,3 +3,34 @@
 img {
 	max-width: 100%;
 }
+
+// the css below is a hack that doesn't allow the caption and credit to extend past the image dimensions
+.bsp-img-with-meta {
+    display: table;
+    width: 100%;
+
+    img {
+        display: table-row;
+    }
+
+    figcaption {
+        color: @gray;
+        display: table-row;
+        font-size: @ts-neg-1;
+
+        span {
+            display: block;
+        }
+    }
+
+    .bsp-img-credit {
+        color: @gray-light-2;
+        font-size: @ts-neg-2;
+        margin: 0;
+        text-align: right;
+    }
+
+    .bsp-img-caption {
+        margin-top: @space-half;
+    }
+}

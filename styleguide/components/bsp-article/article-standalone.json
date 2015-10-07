@@ -16,7 +16,7 @@
 
 	"title" : "Read the article for the description of the BSP Article",
 
-	"EXAMPLE subTitle" : "Ground round hamburger short loin",
+	"subTitle" : "Ground round hamburger short loin",
 
 	"authors" : [
 		{
@@ -123,7 +123,16 @@
 	],
 
 	"lead" : {
-		"_dataUrl" : "/common/image-800x450.json"
+		"_template" : "common/image",
+
+        "meta" : {
+            "credit" : "Photo Credit",
+            "caption" : "Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra"
+        },
+
+        "attributes" : {
+            "src" : "/assets/images/800x450.png"
+        }
 	},
 
 	"body" : [
@@ -170,8 +179,17 @@
         	},
 
 			"content" : {
-				"_dataUrl" : "/common/image-200x300.json"
-			}
+                "_template" : "common/image",
+
+                "meta" : {
+                    "credit" : "Photo Credit",
+                    "caption" : "Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra"
+                },
+
+                "attributes" : {
+                    "src" : "/assets/images/200x300.png"
+                }
+            }
         },
         {
             "content" : {
