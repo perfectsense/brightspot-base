@@ -1,3 +1,17 @@
+// Standard page title that lives outside of the grid (as the border below stretches the full width of the browser)
+
+.bsp-page-title-wrapper {
+    border-bottom: @border-style-2;
+    margin-bottom: @space-double;
+}
+
+.bsp-page-title {
+    &:extend(.ts-header-1);
+
+    margin: 0;
+    padding: 0 0 @space 0;
+}
+
 .bsp-section-title {
 	&:extend(.ts-header-3);
 
