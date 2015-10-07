@@ -1,4 +1,4 @@
-// It's possible that we will move bsp-article out of here to it's own bowerable compoment, so that we can try to 
+// It's possible that we will move bsp-article out of here to it's own bowerable compoment, so that we can try to
 // standardize around it (as it should really be the same for a LOT of projects). That concept is still TBD, so until
 // then it will be included in this repo
 
@@ -7,58 +7,54 @@
 }
 
 .bsp-article {
-	border-top: @border-style-1;
-	padding: @space-triple 0 @space;
+    border-top: @border-style-1;
+    padding: @space-triple 0 @space;
 
-	&:first-of-type {
-		border-top: none;
-		margin-top: -@space-triple;
-	}
+    &:first-of-type {
+        border-top: none;
+        margin-top: -@space-triple;
+    }
 
-	.bsp-share-links {
-		margin: 0 0 @space 0;
+    .bsp-share-links {
+        margin-bottom: @space;
+    }
 
-		a {
-			color: @white;
-		}
-	}
+    // when we have a component inside of an article, remove the margin.
+    // We let natural margins of p tags and others in the contentdo the spacing instead
+    .bsp-component {
+        margin: 0;
+    }
 
-	// when we have a component inside of an article, remove the margin.
-	// We let natural margins of p tags and others in the contentdo the spacing instead
-	.bsp-component {
-		margin: 0;
-	}
-	
 }
 
 .bsp-article-content {
-	&:extend(.clearfix all);
+    &:extend(.clearfix all);
 }
 
 .bsp-article-enhancement {
-	margin: @space 0;
+    margin: @space 0;
 
-	&.align-left {
-		float: left;
-		margin: 0 @space @space 0;
-	}
+    &.align-left {
+        float: left;
+        margin: 0 @space @space 0;
+    }
 
-	&.align-right {
-		float: right;
-		margin: 0 0 @space @space;
-	}
+    &.align-right {
+        float: right;
+        margin: 0 0 @space @space;
+    }
 
-	&.align-center {
-		margin: 0 auto;
-	}
+    &.align-center {
+        margin: 0 auto;
+    }
 
 }
 
 .bsp-article-title {
-	&:extend(.bsp-page-title all);
+    &:extend(.bsp-page-title all);
 }
 
 .bsp-article-list {
-	&:extend(.bsp-list all);
+    &:extend(.bsp-list all);
 }
 
