@@ -138,9 +138,30 @@
 	"body" : [
         {
             "content" : {
+                "_template" : "common/html",
+
+                "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
+            }
+        },
+        {
+            "content" : {
             	"_template" : "common/html",
 
             	"text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
+            }
+        },
+        {
+            "content" : {
+                "_template" : "components/bsp-blockquote",
+                "author": "Jordan Spieth",
+                "content": "My Dad told me growing up, \"You've got to start setting goals.\" That's been my philosophy, set goals and work hard, stay focused, and reach them as soon as possible. At each level, I always re-evaluate my goals and establish new ones. I never want to become complacent, but always push myself further."
+            }
+        },
+        {
+            "content" : {
+                "_template" : "common/html",
+
+                "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
             }
         },
         {
