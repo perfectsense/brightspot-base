@@ -1,5 +1,5 @@
 /**
- * Modifier classes for the bsp-list-promo. 
+ * Modifier classes for the bsp-list-promo.
  * This is how we are going to determine custom looks for different versions of the list promo module
  * This file is here vs the mixins folder as it's very related to the bsp-list-promo so we wanted it to have easy access
  *
@@ -32,6 +32,11 @@
 	.bsp-list-promo-hard-item-heights(@item-height: @hardcoded-item-height);
 }
 
+.bsp-no-grid-padding {
+    .bsp-column-half, .bsp-column-third, .bsp-column-fourth {
+        padding: 0;
+    }
+}
 
 .bsp-infinite-load-status {
 
@@ -53,7 +58,7 @@
 		}
 
 	}
-		
+
 
 }
 
