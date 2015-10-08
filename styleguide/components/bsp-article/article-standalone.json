@@ -145,12 +145,44 @@
         },
         {
             "content" : {
+                "_template" : "common/html",
+
+                "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
+            }
+        },
+        {
+            "options" : {
+                "enhancement" : true
+            },
+
+            "content" : {
+                "_template" : "common/link",
+
+                "cssClass" : "related-link",
+
+                "attributes" : {
+                    "href" : "#"
+                },
+
+                "body": {
+                    "_template" : "common/text",
+
+                    "text" : "I am a related link as a separate paragraph (via CSS) inside the body of an article as an enhancement"
+                }
+            }
+        },
+        {
+            "content" : {
             	"_template" : "common/html",
 
             	"text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
             }
         },
         {
+            "options" : {
+                "enhancement" : true
+            },
+
             "content" : {
                 "_template" : "components/bsp-blockquote",
                 "author": "Jordan Spieth",
@@ -166,7 +198,8 @@
         },
         {
 			"options" : {
-        		"enhancement" : true        	},
+        		"enhancement" : true
+            },
 
         	"content" : {
 				"_dataUrl" : "/components/bsp-gallery-module/7-slides-dots.json"
