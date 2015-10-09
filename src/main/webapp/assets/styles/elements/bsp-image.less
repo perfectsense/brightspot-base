@@ -18,6 +18,11 @@ img {
         display: table-row;
         font-size: @ts-neg-1;
 
+        // if we have two within each other, display the 2nd inline
+        figcaption {
+            display: inline;
+        }
+
         span {
             display: block;
         }
@@ -26,11 +31,17 @@ img {
     .bsp-img-credit {
         color: @gray-light-2;
         font-size: @ts-neg-2;
-        margin: 0;
+        margin: @space-quarter 0 0 0;
         text-align: right;
     }
 
     .bsp-img-caption {
         margin-top: @space-half;
+
+        // since the credit goes inside the caption if it exists, it gets inline treatment
+        .bsp-img-credit {
+            display: inline;
+            margin: 0;
+        }
     }
 }
