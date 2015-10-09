@@ -261,13 +261,21 @@
         },
         {
         	"options" : {
-        		"enhancement" : true,
-        		"align" : "right"
-        	},
+                "enhancement" : true,
+                "align" : "right"
+            },
 
-			"content" : {
-				"_dataUrl" : "/common/image-200x300.json"
-			}
+            "content" : {
+                "_template" : "common/image",
+
+                "meta" : {
+                    "credit" : "Photo Credit"
+                },
+
+                "attributes" : {
+                    "src" : "/assets/images/200x300.png"
+                }
+            }
         },
         {
             "content" : {
