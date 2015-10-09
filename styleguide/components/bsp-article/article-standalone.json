@@ -2,10 +2,6 @@
 
 	"_template" : "components/bsp-article",
 
-	"options" : {
-		"infinite" : false
-	},
-
 	"sharing" : {
 		"_dataUrl": "/components/bsp-social-share/share-notitle.json"
 	},
