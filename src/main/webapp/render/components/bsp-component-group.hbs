@@ -1,5 +1,7 @@
-<div class="bsp-component-group{{#with options.modifierClass}} {{this}}{{/with}}">
-	{{#each components}}
-		{{render this}}
-	{{/each}}
+<div class="bsp-component-group{{#if options.modifierClass}} {{this.options.modifierClass}}{{/if}}{{#if options.infiniteLoad}} bsp-infinite-load-wrapper{{/if}}" {{#if options.infiniteLoad}}data-bsp-infinite-content{{/if}}>
+    {{#if options.infiniteLoad}}<div class="bsp-infinite-load-item" data-bsp-infinite-load-item-url="{{permalink}}">{{/if}}
+    	{{#each components}}
+    		{{render this}}
+    	{{/each}}
+    {{#if options.infiniteLoad}}</div>{{/if}}
 </div>

@@ -9,13 +9,28 @@
 		"_template" : "layouts/two-col-main-left-fixed-right",
 
 		"main" : {
-			"components" : [
-				{
-					"_dataUrl" : "/components/bsp-article/article-infinite.json"
-				}
-			]
-		},
-			
+            "components" : [
+                {
+                    "_template" : "/components/bsp-component-group",
+
+                    "permalink" : "/components/bsp-article/infinite.html",
+
+                    "options" : {
+                        "infiniteLoad" : true
+                    },
+
+                    "components" : [
+                        {
+                            "_dataUrl" : "/components/bsp-article/article-infinite.json"
+                        },
+                        {
+                            "_dataUrl" : "/components/bsp-list-promo/3-items-with-image-horizontal.json"
+                        }
+                    ]
+                }
+            ]
+        },
+
 		"aside" : {
 			"components" : [
 				{

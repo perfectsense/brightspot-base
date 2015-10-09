@@ -84,10 +84,10 @@
                 }
             ]
 		},
-		{
-			"imgAlign" : "top",
+        {
+            "imgAlign" : "top",
 
-			"sections" : [
+            "sections" : [
                 {
 
                     "_template" : "components/bsp-list-promo-item-handler",
@@ -95,32 +95,6 @@
                     "name" : "image",
 
                     "image" : {
-
-    					"_template" : "common/link",
-
-    					"attributes" : {
-    						"href"  : "link",
-    						"title" : "Link Title"
-    					},
-
-    					"body" : {
-
-    						"_template" : "common/image",
-
-    						"attributes" : {
-    							"alt" : "Test Alt",
-    							"src" : "/assets/images/800x450.png"
-    						}
-    					}
-    				}
-                },
-                {
-
-                    "_template" : "components/bsp-list-promo-item-handler",
-
-                    "name" : "text",
-
-                    "link" : {
 
                         "_template" : "common/link",
 
@@ -130,61 +104,16 @@
                         },
 
                         "body" : {
-                            "_template" : "common/text",
-                            "text" : "8 Burning Questions Link"
+
+                            "_template" : "common/image",
+
+                            "attributes" : {
+                                "alt" : "Test Alt",
+                                "src" : "/assets/images/800x450.png"
+                            }
                         }
-
-                    },
-
-                    "title" : {
-
-                        "_template" : "common/link",
-
-                        "attributes" : {
-                            "href"  : "link",
-                            "title" : "Link Title"
-                        },
-
-                        "body" : {
-                            "_template" : "common/text",
-                            "text" : "8 Burning Questions Title"
-                        }
-
-                    },
-                }
-            ]
-		},
-		{
-			"imgAlign" : "top",
-
-			"sections" : [
-                {
-
-                    "_template" : "components/bsp-list-promo-item-handler",
-
-                    "name" : "image",
-
-                    "image" : {
-
-    					"_template" : "common/link",
-
-    					"attributes" : {
-    						"href"  : "link",
-    						"title" : "Link Title"
-    					},
-
-    					"body" : {
-
-    						"_template" : "common/image",
-
-    						"attributes" : {
-    							"alt" : "Test Alt",
-    							"src" : "/assets/images/800x450.png"
-    						}
-    					}
-    				}
+                    }
                 },
-
                 {
 
                     "_template" : "components/bsp-list-promo-item-handler",
@@ -224,7 +153,77 @@
                     }
                 }
             ]
-		}
+        },
+        {
+            "imgAlign" : "top",
+
+            "sections" : [
+                {
+
+                    "_template" : "components/bsp-list-promo-item-handler",
+
+                    "name" : "image",
+
+                    "image" : {
+
+                        "_template" : "common/link",
+
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
+
+                        "body" : {
+
+                            "_template" : "common/image",
+
+                            "attributes" : {
+                                "alt" : "Test Alt",
+                                "src" : "/assets/images/800x450.png"
+                            }
+                        }
+                    }
+                },
+                {
+
+                    "_template" : "components/bsp-list-promo-item-handler",
+
+                    "name" : "text",
+
+                    "link" : {
+
+                        "_template" : "common/link",
+
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
+
+                        "body" : {
+                            "_template" : "common/text",
+                            "text" : "8 Burning Questions Link"
+                        }
+
+                    },
+
+                    "title" : {
+
+                        "_template" : "common/link",
+
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
+
+                        "body" : {
+                            "_template" : "common/text",
+                            "text" : "8 Burning Questions Title"
+                        }
+
+                    }
+                }
+            ]
+        }
 	],
 
 	"cta" : {
