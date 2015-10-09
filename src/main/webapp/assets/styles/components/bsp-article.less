@@ -38,21 +38,14 @@
 .bsp-article-enhancement {
     margin: @space 0;
 
-    &.align-left {
-        float: left;
-        margin: 0 @space @space 0;
-    }
-
-    &.align-right {
-        float: right;
-        margin: 0 0 @space @space;
-    }
-
-    &.align-center {
-        margin: 0 auto;
+    // on xsmall, there is only center alignment
+    &.align-left, &.align-right, &.align-center {
+        margin: @space auto;
+        text-align: center;
     }
 
     .bsp-img-with-meta {
+        margin: 0 auto;
         width: 1px;
 
         img {
@@ -90,3 +83,22 @@
     &:extend(.bsp-list all);
 }
 
+@media @mq-sm {
+    .bsp-article-enhancement {
+
+        &.align-left {
+            float: left;
+            margin: 0 @space @space 0;
+        }
+
+        &.align-right {
+            float: right;
+            margin: 0 0 @space @space;
+        }
+
+        &.align-center {
+            margin: 0 auto;
+        }
+
+    }
+}

@@ -224,11 +224,6 @@
 			"content" : {
                 "_template" : "common/image",
 
-                "meta" : {
-                    "credit" : "Photo Credit",
-                    "caption" : "Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra"
-                },
-
                 "attributes" : {
                     "src" : "/assets/images/200x300.png"
                 }
