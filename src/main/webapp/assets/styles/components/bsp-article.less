@@ -46,11 +46,6 @@
 
     .bsp-img-with-meta {
         margin: 0 auto;
-        width: 1px;
-
-        img {
-            max-width: none;
-        }
     }
 
     .related-link {
@@ -64,7 +59,6 @@
 
 .bsp-article-lead {
     img {
-        max-width: none;
         width: 100%;
     }
 
@@ -89,15 +83,21 @@
         &.align-left {
             float: left;
             margin: 0 @space-double @space 0;
+            max-width: 50%;
         }
 
         &.align-right {
             float: right;
             margin: 0 0 @space @space-double;
+            max-width: 50%;
         }
 
         &.align-center {
             margin: 0 auto;
+        }
+
+        &.align-full {
+            width: 100%;
         }
 
     }
