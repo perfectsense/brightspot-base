@@ -39,6 +39,21 @@
             }
         },
         {
+            "_template" : "components/bsp-gallery-fullscreen-interstitial",
+            "options" : {
+                "modifierClass" : "interstitial",
+                "interstitial" : {
+                    "contentUrl" : "/components/bsp-gallery-fullscreen/interstitial1.html",
+                    "countDisable" : false,
+                    "countMessage" : "Advertisement: You may skip in {n} seconds",
+                    "countDuration" : 5,
+                    "countPosition" : "topRight",
+                    "navEnabled" : false,
+                    "navVisible" : true
+                }
+            }
+        },
+        {
 
             "_template" : "components/bsp-gallery-fullscreen-slide",
 

@@ -21,6 +21,8 @@ export default {
         },
 
         stage: {
+            interstitials: true,
+            interstitialClass: 'interstitial',
             themeConfig: {
                 arrows: true
             }
@@ -37,6 +39,7 @@ export default {
         self.saveElements();
         self.buildCarousel();
         self.addThumbCaptionClicks();
+        self.addInterstitials();
 
         // if we are dynamic we want to remove the thumbs, which includes the counter inside
         if(self.options.dynamicSlideLoad) {
@@ -91,11 +94,86 @@ export default {
         });
     },
 
+    addInterstitials() {
+        var self = this;
+        var stage = self.carousel.stage;
+        stage.bind('carousel:beforeChange', (e, carousel, currentSlide, nextSlide) => {
+            if (stage.slideIsInterstitial(nextSlide)) {
+                self.$el.addClass('interstitial-showing');
+            } else {
+                self.$el.removeClass('interstitial-showing');
+            }
+        });
+        stage.bind('carousel:afterChange', (e, carousel, currentSlide) => {
+            var currentAdjusted = self.carousel.stage.currentSlideAdjustedForInterstitials();
+            var $current;
+            var $interstitial;
+            self.$el.find('.bsp-gallery-fullscreen-interstitial').each((key, interstitial) => {
+                var destroy = $(interstitial).data('destroy');
+                if (typeof destroy === 'function') {
+                    destroy();
+                }
+            });
+            if (currentAdjusted == 'interstitial') {
+                $current = $(self.carousel.stage.$el[0].slick.$slides[currentSlide]);
+                $interstitial = $current.find('.bsp-gallery-fullscreen-interstitial');
+                var options = $interstitial.data().options;
+                self.createInterstitial($interstitial, JSON.parse(options));
+            }
+        });
+    },
+
+    createInterstitial($el, options) {
+        var $counter = $el.find('.bsp-gallery-fullscreen-interstitial-counter');
+        var $content = $el.find('.bsp-gallery-fullscreen-interstitial-content');
+        var stage = this.carousel.stage;
+        var counterInterval;
+        $.get(options.contentUrl).then((response) => {
+            var duration = options.countDuration;
+            if (options.countPosition) {
+                $counter.addClass(options.countPosition);
+                $counter.addClass('counting');
+            }
+            if (!options.navEnabled) {
+                stage.disableNav();
+            }
+            if (!options.navVisible) {
+                stage.hideNav();
+            }
+            if (!options.countDisable && typeof options.countDuration === 'number') {
+                $counter.html(options.countMessage.replace('{n}', duration));
+                duration--;
+                counterInterval = setInterval(() => {
+                    if (duration > 0) {
+                        $counter.html(options.countMessage.replace('{n}', duration));
+                        duration--;
+                    } else {
+                        $counter.empty().removeClass('counting');
+                        stage.enableNav();
+                        stage.showNav();
+                    }
+                }, 1000);
+            }
+            $content.html(response);
+        });
+        $el.data('destroy', () => {
+            clearInterval(counterInterval);
+            $content.empty();
+            $counter.removeClass('topLeft topMiddle topRight bottomLeft bottomMiddle bottomLeft counting');
+            $el.data('destroy', null);
+        });
+    },
+
     createCounter() {
         var self = this;
 
         this.$carousel.on('carousel:init carousel:afterChange', () => {
-            self.$counter.html((self.carousel.stage.currentSlide()+1) + ' of ' + self.carousel.stage.slideCount());
+            var count = self.carousel.stage.currentSlideAdjustedForInterstitials();
+            if (typeof count === 'number') {
+                self.$counter.html((count+1) + ' of ' + self.carousel.stage.slideCountMinusInterstitials());
+            } else {
+                self.$counter.html('');
+            }
         });
     }
 
