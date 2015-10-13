@@ -55,16 +55,9 @@
             </div>
             {{/if}}
 
-            {{#if tags}}
-            <div class="bsp-carousel-gallery-tags">
-                <div class="bsp-tag-list-title">{{render this.tagsTitle}}</div>
-                <ul class="bsp-tag-list">
-                    {{#each this.tags}}
-                        <li>{{render this cssClass="bsp-tag"}}</li>
-                    {{/each}}
-                </ul>
-            </div>
-            {{/if}}
+            {{#with tags}}
+                {{render this}}
+            {{/with}}
 
         </div>
 

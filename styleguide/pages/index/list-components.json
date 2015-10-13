@@ -272,6 +272,22 @@
                 }
 			}
 		},
+        {
+            "_template" : "components/bsp-list-promo-item-handler",
+
+            "link": {
+                "_template" : "common/link",
+
+                "attributes" : {
+                    "href"  : "/components/bsp-tags/",
+                    "title" : "BSP Tags"
+                },
+                "body" : {
+                    "_template" : "common/text",
+                    "text"  : "BSP Tags"
+                }
+            }
+        },
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
 

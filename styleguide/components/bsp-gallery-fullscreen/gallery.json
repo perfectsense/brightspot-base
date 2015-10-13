@@ -294,79 +294,9 @@
         }
     ],
 
-    "tagsTitle" : {
-        "_template" : "common/text",
-
-        "text" : "Related"
+    "tags" : {
+        "_dataUrl" : "/components/bsp-tags/tag-list.json"
     },
-
-    "tags" : [
-        {
-            "_template" : "common/link",
-
-            "attributes" : {
-                "href" : "#"
-            },
-
-            "body" : {
-                "_template" : "common/text",
-
-                "text" : "MTB"
-            }
-        },
-        {
-            "_template" : "common/link",
-
-            "attributes" : {
-                "href" : "#"
-            },
-
-            "body" : {
-                "_template" : "common/text",
-
-                "text" : "Cycling"
-            }
-        },
-        {
-            "_template" : "common/link",
-
-            "attributes" : {
-                "href" : "#"
-            },
-
-            "body" : {
-                "_template" : "common/text",
-
-                "text" : "Downhill"
-            }
-        },
-        {
-            "_template" : "common/link",
-
-            "attributes" : {
-                "href" : "#"
-            },
-
-            "body" : {
-                "_template" : "common/text",
-
-                "text" : "Enduro"
-            }
-        },
-        {
-            "_template" : "common/link",
-
-            "attributes" : {
-                "href" : "#"
-            },
-
-            "body" : {
-                "_template" : "common/text",
-
-                "text" : "Dirt Jumping"
-            }
-        }
-    ],
 
     "sharing" : {
         "_dataUrl" : "/components/bsp-social-share/share.json"

@@ -1,0 +1,71 @@
+{
+    "_template" : "components/bsp-tags",
+
+    "tagList" : [
+        {
+            "_template" : "common/link",
+
+            "attributes" : {
+                "href" : "#"
+            },
+
+            "body" : {
+                "_template" : "common/text",
+
+                "text" : "MTB"
+            }
+        },
+        {
+            "_template" : "common/link",
+
+            "attributes" : {
+                "href" : "#"
+            },
+
+            "body" : {
+                "_template" : "common/text",
+
+                "text" : "Cycling"
+            }
+        },
+        {
+            "_template" : "common/link",
+
+            "attributes" : {
+                "href" : "#"
+            },
+
+            "body" : {
+                "_template" : "common/text",
+
+                "text" : "Downhill"
+            }
+        },
+        {
+            "_template" : "common/link",
+
+            "attributes" : {
+                "href" : "#"
+            },
+
+            "body" : {
+                "_template" : "common/text",
+
+                "text" : "Enduro"
+            }
+        },
+        {
+            "_template" : "common/link",
+
+            "attributes" : {
+                "href" : "#"
+            },
+
+            "body" : {
+                "_template" : "common/text",
+
+                "text" : "Dirt Jumping"
+            }
+        }
+    ]
+}
