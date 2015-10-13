@@ -219,7 +219,9 @@ body.bsp-gallery-fullscreen {
     }
 }
 .bsp-gallery-fullscreen-interstitial-content {
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media @mq-md {
@@ -260,21 +262,3 @@ body.bsp-gallery-fullscreen {
     }
 
 }
-
-// @todo move to bsp-carousel
-.bsp-carousel {
-    &.nav-hide {
-        .slick-prev, .slick-next {
-            display: none !important;
-        }
-    }
-    .slick-disabled {
-        &.slick-prev, &.slick-next {
-            opacity: 0.4;
-            &:before {
-                opacity: 0.4;
-            }
-        }
-    }
-}
-

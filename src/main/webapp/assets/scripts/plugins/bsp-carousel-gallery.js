@@ -128,6 +128,11 @@ export default {
         var $content = $el.find('.bsp-gallery-fullscreen-interstitial-content');
         var stage = this.carousel.stage;
         var counterInterval;
+        var resizeHandler = () => {
+            $content.css({
+                height: stage.$el.height()
+            });
+        };
         $.get(options.contentUrl).then((response) => {
             var duration = options.countDuration;
             if (options.countPosition) {
@@ -148,6 +153,7 @@ export default {
                         $counter.html(options.countMessage.replace('{n}', duration));
                         duration--;
                     } else {
+                        clearInterval(counterInterval);
                         $counter.empty().removeClass('counting');
                         stage.enableNav();
                         stage.showNav();
@@ -161,7 +167,10 @@ export default {
             $content.empty();
             $counter.removeClass('topLeft topMiddle topRight bottomLeft bottomMiddle bottomLeft counting');
             $el.data('destroy', null);
+            $(window).off('resize', resizeHandler);
         });
+        $(window).on('resize', resizeHandler);
+        resizeHandler();
     },
 
     createCounter() {

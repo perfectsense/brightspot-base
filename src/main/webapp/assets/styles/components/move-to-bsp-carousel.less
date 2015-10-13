@@ -12,10 +12,17 @@
 }
 
 .bsp-carousel {
-
+	&.nav-hide {
+        .slick-prev, .slick-next {
+            display: none !important;
+        }
+    }
     .slick-prev, .slick-next {
         &.slick-disabled {
-            display: none;
+            opacity: 0.4;
+            &:before {
+                opacity: 0.4;
+            }
         }
     }
 
