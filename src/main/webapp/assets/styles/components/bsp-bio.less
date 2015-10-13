@@ -32,7 +32,7 @@
 	&:extend(.ts-0);
 
 	float: left;
-	margin: 0 @space @space 0; 
+	margin: 0 @space @space 0;
 	text-transform: uppercase;
 	padding-right: @space;
 	border-right: @border-style-1;
@@ -75,7 +75,7 @@
 
 .bsp-bio-secondary-list {
 	&:extend(.ts-neg-1);
-	
+
 	float: right;
 	width: 50%;
 }
@@ -92,7 +92,7 @@
 	&:extend(.clearfix all);
 
 	> li {
-		float: left; 
+		float: left;
 		margin-right: @space;
 		width: 12.5%;
 
@@ -103,7 +103,7 @@
 }
 
 .bsp-bio-social-links {
-	
+
 	clear: both;
 	padding-top: @space-double;
 
@@ -118,7 +118,7 @@
 
 		justify-content: space-between;
 		ms-justify-content: space-between;
-		
+
     	margin: 0;
 		padding: @space-and-half @space @space-double;
 
@@ -141,6 +141,27 @@
 		margin-right: @space;
 		position: relative;
 		top: 3px; // perfect centering
+        background: none;
 	}
+
+    // custom colors here for the icons, default base is custom background colors in elements/icons
+    .@{fa-css-prefix}-twitter {
+        color: @twitter-color;
+    }
+    .@{fa-css-prefix}-facebook {
+        color: @facebook-color;
+    }
+    .@{fa-css-prefix}-linkedin {
+        color: @linkedin-color;
+    }
+    .@{fa-css-prefix}-pinterest {
+        color: @pinterest-color;
+    }
+    .@{fa-css-prefix}-instagram {
+        color: @instagram-color;
+    }
+    .@{fa-css-prefix}-tumblr {
+        color: @tumblr-color;
+    }
 
 }

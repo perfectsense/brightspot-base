@@ -5,7 +5,7 @@
 
 			{{#with image}}
 			<div class="bsp-bio-image">
-				{{render this}}		
+				{{render this}}
 			</div>
 			{{/with}}
 
@@ -22,7 +22,7 @@
 
 				<div class="bsp-bio-text">
 					{{{text}}}
-				</div>	
+				</div>
 
 				{{#if primaryList}}
 				<div class="bsp-bio-lists">
@@ -65,7 +65,7 @@
 				<ul>
 					{{#each this}}
 						{{!-- no partial helper, as this is custom --}}
-						<li><a class="bsp-bio-social-link" {{#with link.attributes}}{{> common/attributes }}{{/with}}><i class="icon icon-{{icon}}"></i>{{link.text}}</a></li>
+						<li><a class="bsp-bio-social-link" {{#with link.attributes}}{{> common/attributes }}{{/with}}><i class="icon icon-{{icon}}"></i>{{link.body.text}}</a></li>
 					{{/each}}
 				</ul>
 			</div>
