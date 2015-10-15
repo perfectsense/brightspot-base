@@ -94,13 +94,14 @@ body {
 	background: @white;
 	border-top: @border-style-2;
 	height: 50px;
+    padding-top: 50px;
 	position: fixed;
 	left: 0;
 	bottom: 0;
 	width: 100%;
 
 	&.toggle-in {
-		height: 50%;
+		height: 75%;
 		overflow-y: auto;
 
 		@media @mq-only-sm {
@@ -122,19 +123,41 @@ body.bsp-column-fixed-toggle-in {
 .bsp-trigger-fixed-column {
 
 	a {
-		&:extend(.bsp-btn);
+        .icon();
+
+        background: @brand-primary;
+        color: @white;
+        display: block;
+        left: 0;
+        line-height: 50px;
+        padding-left: @space;
 		position: absolute;
-		top: @space-three-quarter;
-		right: @space-three-quarter;
+        right: 0;
+        text-transform: uppercase;
+		top: 0;
         z-index: @z-index-base;
+
+        &:after {
+            font-size: @ts-1;
+            position: absolute;
+            right: @space;
+        }
 	}
 
 	.toggle-trigger-link-out {
 		display: block;
+
+        &:after {
+            content: @fa-var-angle-up;
+        }
 	}
 
 	.toggle-trigger-link-in {
 		display: none;
+
+        &:after {
+            content: @fa-var-angle-down;
+        }
 	}
 
 	&.toggle-in {
@@ -149,6 +172,16 @@ body.bsp-column-fixed-toggle-in {
 
 	}
 
+
+}
+
+@media @mq-sm {
+
+    .bsp-column-fixed {
+        &.toggle-in {
+            height: 50%;
+        }
+    }
 
 }
 

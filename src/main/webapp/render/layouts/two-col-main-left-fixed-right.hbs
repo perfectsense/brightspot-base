@@ -5,7 +5,7 @@
 			{{render this}}
 		{{/each}}
 	{{/with}}
-	
+
 	<div class="bsp-row">
 
 		<div class="bsp-column-scrolling">
@@ -20,8 +20,8 @@
 			<div class="bsp-column-fixed toggle-item">
 
 				<div class="bsp-trigger-fixed-column toggle-trigger">
-					<a class="toggle-trigger-link-out" href="#">Open</a>
-					<a class="toggle-trigger-link-in" href="#">Close</a>
+					<a class="toggle-trigger-link-out icon icon-angle-up" href="#">{{#if aside.options.openText}}{{this}}{{else}}Open{{/if}}</a>
+					<a class="toggle-trigger-link-in  icon icon-angle-down" href="#">{{#if aside.options.closeText}}{{this}}{{else}}Close{{/if}}</a>
 				</div>
 
 				{{#with aside}}
@@ -31,6 +31,6 @@
 				{{/with}}
 			</div>
 		</div>
-		
+
 	</div>
 </div>
