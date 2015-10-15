@@ -1,5 +1,5 @@
-/** 
- * Mixins helpers for the bsp-list-promo-modifiers go here 
+/**
+ * Mixins helpers for the bsp-list-promo-modifiers go here
  */
 
 // when we hardcode items heights, we will hardcode the height here and vertically center the links
@@ -50,7 +50,7 @@
 			margin-top: -@space;
 			width: (100%-@size);
 		}
-		
+
 	}
 }
 
@@ -75,12 +75,14 @@
 	.image-align-left {
 		.bsp-list-promo-section-text {
 			left: @width;
+            width: 100-@width;
 		}
 	}
 
 	.image-align-right {
 		.bsp-list-promo-section-text {
 			right: @width;
+            width: 100-@width;
 		}
 	}
 
@@ -91,7 +93,7 @@
 	}
 
 	.bsp-list-promo-link {
-		
+
 		a {
 			background: @brand-primary;
 			bottom: 0;
