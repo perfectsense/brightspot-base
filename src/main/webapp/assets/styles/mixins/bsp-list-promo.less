@@ -36,22 +36,25 @@
 
 // this mixin allows us to create a modifier depending on how we want to arrange the image and text
 .bsp-list-promo-image-size(@size: 50%) {
-	.bsp-list-promo-section-image {
-		width: @size;
-	}
 
-	.bsp-list-promo-list {
-		margin-top: 0 !important; // overriding parent specificity
-	}
+    @media @mq-sm {
+    	.bsp-list-promo-section-image {
+    		width: @size;
+    	}
 
-	.image-align-left, .image-align-right {
+    	.bsp-list-promo-list {
+    		margin-top: 0 !important; // overriding parent specificity
+    	}
 
-		.bsp-list-promo-section-text {
-			margin-top: -@space;
-			width: (100%-@size);
-		}
+    	.image-align-left, .image-align-right {
 
-	}
+    		.bsp-list-promo-section-text {
+    			margin-top: -@space;
+    			width: (100%-@size);
+    		}
+
+    	}
+    }
 }
 
 
@@ -60,30 +63,11 @@
 // of the image with absolute positioning
 .list-promo-image-width-background(@width: 50%, @bg-color: @brand-secondary, @promo-text-color: @white) {
 
-	.bsp-list-promo-section-image {
-		width: @width;
-	}
-
 	.bsp-list-promo-section-text {
 		background: @bg-color;
 		color: @promo-text-color;
 		padding-top: @space;
-		position: absolute;
 		height: 100%;
-	}
-
-	.image-align-left {
-		.bsp-list-promo-section-text {
-			left: @width;
-            width: 100-@width;
-		}
-	}
-
-	.image-align-right {
-		.bsp-list-promo-section-text {
-			right: @width;
-            width: 100-@width;
-		}
 	}
 
 	.bsp-list-promo-title {
@@ -99,12 +83,45 @@
 			bottom: 0;
 			color: @brand-secondary;
 			left: 0;
-			position: absolute;
 			right: 0;
 			text-align: center;
 			padding: @space-quarter 0;
 		}
 
 	}
+
+    @media @mq-sm {
+
+        .bsp-list-promo-section-image {
+            width: @width;
+        }
+
+        .bsp-list-promo-section-text {
+            position: absolute;
+        }
+
+        .image-align-left {
+            .bsp-list-promo-section-text {
+                left: @width;
+                width: 100-@width;
+            }
+        }
+
+        .image-align-right {
+            .bsp-list-promo-section-text {
+                right: @width;
+                width: 100-@width;
+            }
+        }
+
+        .bsp-list-promo-link {
+
+            a {
+                position: absolute;
+            }
+
+        }
+
+    }
 
 }
