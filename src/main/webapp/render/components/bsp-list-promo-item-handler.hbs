@@ -6,13 +6,9 @@
         </div>
     {{/with}}
 
-    {{#if tags}}
-        <ul class="bsp-list-promo-tags">
-            {{#each tagList}}
-                <li>{{render this}}</li>
-            {{/each}}
-        </ul>
-    {{/if}}
+    {{#with tags}}
+        {{render this}}
+    {{/with}}
 
     {{#with title}}
         <div class="bsp-list-promo-title">{{render this}}</div>
