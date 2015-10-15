@@ -3,19 +3,15 @@
 }
 
 .bsp-bio-image {
-	float: left;
-	width: 25%;
+    img {
+        width: 100%;
+    }
 
-	img {
-		width: 100%;
-	}
+    margin-bottom: @space;
 }
 
 .bsp-bio-content {
-	float: right;
-	margin-botom: @space;
-	padding-left: @space-double;
-	width: 75%;
+    margin-bottom: @space;
 }
 
 .bsp-bio-title {
@@ -105,7 +101,6 @@
 .bsp-bio-social-links {
 
 	clear: both;
-	padding-top: @space-double;
 
 	ul {
 		&:extend(.bsp-list-inline all);
@@ -113,20 +108,14 @@
 		border-bottom: @border-style-5;
 		border-top: @border-style-5;
 
-		display: flex;
-		ms-display: flex;
-
-		justify-content: space-between;
-		ms-justify-content: space-between;
-
     	margin: 0;
 		padding: @space-and-half @space @space-double;
 
 		li {
 			display: inline-block;
-			padding-left: @space-double;
+            padding: 0 @space-double @space 0;
 
-			&:first-of-type {
+			&:last-of-type {
 				padding: 0;
 			}
 		}
@@ -162,6 +151,36 @@
     }
     .@{fa-css-prefix}-tumblr {
         color: @tumblr-color;
+    }
+
+}
+
+@media @mq-sm {
+
+    .bsp-bio-image {
+        float: left;
+        width: 25%;
+    }
+
+    .bsp-bio-content {
+        float: right;
+        padding-left: @space-double;
+        width: 75%;
+    }
+
+    .bsp-bio-social-links {
+
+        clear: both;
+        padding-top: @space;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                padding-bottom: 0;
+            }
+        }
     }
 
 }
