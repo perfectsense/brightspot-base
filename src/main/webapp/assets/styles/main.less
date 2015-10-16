@@ -42,10 +42,6 @@
 // And using Bootstrap scaffolding. This has a couple of extra helpers in it that aren't true "scaffolding" like img thumbnails, but that's ok
 @import "bower/bootstrap/scaffolding.less";
 
-// When bringing in Bootstrap styles, we can do it one of two ways. Referencing it as above, only compiles when its used as a mixin
-// For items such as utilities, or other lightweight choices, we can go ahead and pre-compile, so we can use the classes straight in our DOM
-@import "bower/bootstrap/utilities.less";
-
 // importing base bsp-carousel styles
 @import (inline) "bower/bsp-carousel/bsp-carousel.css";
 // this should really be moved into bsp-carousel.css above, but I'm leaving it here for now for fast development
@@ -56,6 +52,11 @@
 
 // importing base bsp-tabber styles
 @import (inline) "bower/bsp-tabber.css";
+
+// Our utilities
+// We compile our main basic utility file. The others are available as mixins to use throughout our components
+@import "utilities/basic.less";
+@import (reference) "utilities/responsive.less";
 
 // These are elements. Some of these correspond to DOM elements, others are small building blocks that components or parts of components can extend
 @import "elements/bsp-buttons.less";

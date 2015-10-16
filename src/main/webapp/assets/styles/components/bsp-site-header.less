@@ -85,9 +85,10 @@
 
 
 .bsp-site-menu {
-
-
-
+    .bsp-share-links-mobile-only {
+        &:extend(.visible-xs-block all);
+        margin-left: @space;
+    }
 }
 
 .bsp-site-menu-content {
@@ -105,7 +106,7 @@
     z-index: @z-index-menu;
 
     &.toggle-in {
-        height: @header-menu-height * 2;
+        height: (@header-menu-height * 2) + 50; // accounts for 2 lines of items and sharing
         overflow-y: scroll;
     }
 }
@@ -121,8 +122,9 @@ body.bsp-site-menu-content-toggle-in {
     max-width: 200px;
     width: 50%;
 
-    &:last-of-type {
-
+    // on mobile we only show 4 of these. Any more and it's a mess visually
+    &:nth-child(n+5) {
+        display: none;
     }
 
     > li a {
@@ -375,6 +377,7 @@ body.bsp-site-search-toggle-in {
     .bsp-site-menu-simple-list {
         padding: @space-double 0 0 @space-quad;
         width: 190px;
+        display: block !important;
     }
 
     .bsp-site-search {
