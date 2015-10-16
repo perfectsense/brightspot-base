@@ -1,5 +1,12 @@
 <div class="bsp-container{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
-	<div class="bsp-row">
+
+    {{#with aboveColumns}}
+        {{#each components}}
+            {{render this}}
+        {{/each}}
+    {{/with}}
+
+    <div class="bsp-row">
 
 		<div class="bsp-column-full">
 			{{#with main}}
@@ -8,6 +15,6 @@
 				{{/each}}
 			{{/with}}
 		</div>
-		
+
 	</div>
 </div>

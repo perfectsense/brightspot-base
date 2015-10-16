@@ -1,66 +1,88 @@
 {
-	"_template" : "layouts/two-col-half-half",
-
-	"first" : {
-		"components" : [
-			{
-				"_dataUrl": "/components/bsp-form-input/input-checkbox.json"
-			},
-			{
-				"_dataUrl": "/components/bsp-form-input/input-color.json"
-			},
-			{
-				"_dataUrl": "/components/bsp-form-input/input-date.json"
-			},
-			{
-				"_dataUrl": "/components/bsp-form-input/input-datetime-local.json"
-			},
-			{
-				"_dataUrl": "/components/bsp-form-input/input-email.json"
-			},
-			{
-				"_dataUrl": "/components/bsp-form-input/input-month.json"
-			},
-			{
-				"_dataUrl": "/components/bsp-form-input/input-number.json"
-			},
-			{
-				"_dataUrl": "/components/bsp-form-input/input-password.json"
-			},
-			{
-				"_dataUrl": "/components/bsp-form-input/input-password-repeat.json"
-			},
-			{
-				"_dataUrl": "/components/bsp-form-input/input-radio.json"
-			}
-		]
-	},
-
-	"second" : {
-		"components" : [
-			{
-				"_dataUrl": "/components/bsp-form-input/input-text.json"
-			},
-			{
-				"_dataUrl": "/components/bsp-form-input/input-range.json"
-			},
-			{
-				"_dataUrl": "/components/bsp-form-input/input-search.json"
-			},
-			{
-				"_dataUrl": "/components/bsp-form-input/input-tel.json"
-			},
-			{
-				"_dataUrl": "/components/bsp-form-input/input-time.json"
-			},
-			{
-				"_dataUrl": "/components/bsp-form-input/input-url.json"
-			},
-			{
-				"_template": "common/html",
-
-				"text": "<p>Unsupported types:</p><ul><li>datetime (use date or datetime-local instead)</li><li>week (support is poor in mobile browsers)</li></ul><p>* - still needs some work in bsp-form</p>"
-			}
-		]
-	}
+  "_template": "common/body",
+  "headView": {
+    "_template": "common/head",
+    "metadataView": {
+      "_template": "common/metadata",
+      "_dataUrl": "/pages/index/metadata.json",
+      "title": "Brightspot Base Form Input"
+    }
+  },
+  "headerView": {
+    "_dataUrl": "/components/bsp-site-header-simple/styleguide-header.json"
+  },
+  "mainView": {
+    "_template": "layouts/two-col-half-half",
+    "aboveColumns": {
+      "components": [
+        {
+          "_template": "common/html",
+          "text": "<p>The bsp-form-input component is used inside a form element which must have the \"data-bsp-form\" attribute set. This enables the fields to interact with <a href=\"https://github.com/perfectsense/brightspot-js-form\">the bsp-form library</a>.</p><h2>Example Form</h2>"
+        }
+      ]
+    },
+    "first": {
+      "components": [
+        {
+          "_dataUrl": "/components/bsp-form-input/input-checkbox.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-form-input/input-color.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-form-input/input-date.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-form-input/input-datetime-local.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-form-input/input-email.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-form-input/input-month.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-form-input/input-number.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-form-input/input-password.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-form-input/input-password-repeat.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-form-input/input-radio.json"
+        }
+      ]
+    },
+    "second": {
+      "components": [
+        {
+          "_dataUrl": "/components/bsp-form-input/input-text.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-form-input/input-range.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-form-input/input-search.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-form-input/input-tel.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-form-input/input-time.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-form-input/input-url.json"
+        },
+        {
+          "_template": "common/html",
+          "text": "<p>Unsupported types:</p><ul><li>datetime (use date or datetime-local instead)</li><li>week (support is poor in mobile browsers)</li></ul><p>* - still needs some work in bsp-form</p>"
+        }
+      ]
+    }
+  },
+  "footerView": {
+    "_dataUrl": "/components/bsp-site-footer-simple/styleguide-footer.json"
+  }
 }

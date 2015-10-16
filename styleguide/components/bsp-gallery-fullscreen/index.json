@@ -1,23 +1,28 @@
 {
-	"_template" : "common/body",
-
-	"headerView" : {
-		"_dataUrl" : "/components/bsp-site-header-simple/styleguide-header.json"
-	},
-
-	"mainView" : {
-		"_template" : "layouts/one-col",
-
-		"main" : {
-			"components" : [
-				{
-					"_dataUrl" : "/components/bsp-gallery-fullscreen/gallery.json"
-				}
-			]
-		}
-	},
-
-    "footerView" : {
-        "_dataUrl" : "/components/bsp-site-footer-simple/styleguide-footer.json"
+  "siteWrapperClass": "bsp-fullscreen bsp-gallery-fullscreen",
+  "_template": "common/body",
+  "headView": {
+    "_template": "common/head",
+    "metadataView": {
+      "_template": "common/metadata",
+      "_dataUrl": "/pages/index/metadata.json",
+      "title": "Brightspot Base Full Screen Gallery"
     }
+  },
+  "headerView": {
+    "_dataUrl": "/components/bsp-site-header-simple/styleguide-header.json"
+  },
+  "mainView": {
+    "_template": "layouts/one-col",
+    "main": {
+      "components": [
+        {
+          "_dataUrl": "/components/bsp-gallery-fullscreen/gallery.json"
+        }
+      ]
+    }
+  },
+  "footerView": {
+    "_dataUrl": "/components/bsp-site-footer-simple/styleguide-footer.json"
+  }
 }

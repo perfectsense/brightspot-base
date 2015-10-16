@@ -5,7 +5,7 @@
     "metadataView": {
       "_template": "common/metadata",
       "_dataUrl": "/pages/index/metadata.json",
-      "title": "Brightspot Base Pagination"
+      "title": "Brightspot Base Table with Theme"
     }
   },
   "headerView": {
@@ -16,14 +16,16 @@
     "main": {
       "components": [
         {
-          "_template": "common/html",
-          "options": {
-            "modifierClass": "styleguide-page-description"
-          },
-          "text": "<p>Pagination Documentation to go here</p>"
+          "_dataUrl": "/components/bsp-table/table-theme-1.json"
         },
         {
-          "_dataUrl": "/components/bsp-pagination/3-pages.json"
+          "_dataUrl": "/components/bsp-table/table-theme-2.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-table/table-grid-theme.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-table/table-checkerboard.json"
         }
       ]
     }

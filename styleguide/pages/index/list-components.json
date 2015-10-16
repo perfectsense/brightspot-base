@@ -25,7 +25,7 @@
 				"_template" : "common/link",
 
 				"attributes" : {
-					"href"  : "/components/bsp-article/infinite.html"
+					"href"  : "/components/bsp-article/infinite"
 				},
 				"body" : {
                     "_template" : "common/text",
@@ -295,7 +295,7 @@
 				"_template" : "common/link",
 
 				"attributes" : {
-					"href"  : "/components/bsp-table/tables-themed.html",
+					"href"  : "/components/bsp-table/tables-themed",
 					"title" : "BSP Table - Sample Themes"
 				},
 				"body" : {

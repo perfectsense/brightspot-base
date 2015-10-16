@@ -5,7 +5,7 @@
     "metadataView": {
       "_template": "common/metadata",
       "_dataUrl": "/pages/index/metadata.json",
-      "title": "Brightspot Base Pagination"
+      "title": "Brightspot Base Section Title"
     }
   },
   "headerView": {
@@ -16,14 +16,7 @@
     "main": {
       "components": [
         {
-          "_template": "common/html",
-          "options": {
-            "modifierClass": "styleguide-page-description"
-          },
-          "text": "<p>Pagination Documentation to go here</p>"
-        },
-        {
-          "_dataUrl": "/components/bsp-pagination/3-pages.json"
+          "_dataUrl": "/components/bsp-section-title/test-title.json"
         }
       ]
     }

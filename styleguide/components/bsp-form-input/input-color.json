@@ -4,7 +4,8 @@
 	"attributes": {
 		"id": "color1",
 		"required": true,
-		"type": "color"
+		"type": "color",
+        "value": "{{color('hex')}}"
 	},
 	"errors": [
 		{ "valueMissing": "Please select a color" }

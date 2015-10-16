@@ -1,0 +1,193 @@
+{
+  "_template": "common/body",
+  "headView": {
+    "_template": "common/head",
+    "metadataView": {
+      "_template": "common/metadata",
+      "_dataUrl": "/pages/index/metadata.json",
+      "title": "Brightspot Base List Promo"
+    }
+  },
+  "headerView": {
+    "_dataUrl": "/components/bsp-site-header-simple/styleguide-header.json"
+  },
+  "mainView": {
+    "_template": "layouts/one-col",
+    "main": {
+      "components": [
+        {
+          "_template": "layouts/two-col-half-half",
+          "first": {
+            "components": [
+              {
+                "_dataUrl": "/components/bsp-list-promo/1-item-just-image.json"
+              }
+            ]
+          },
+          "second": {
+            "components": [
+              {
+                "_dataUrl": "/components/bsp-list-promo/1-item-with-image-no-title.json"
+              }
+            ]
+          }
+        },
+        {
+          "_template": "layouts/one-col",
+          "main": {
+            "components": [
+              {
+                "_dataUrl": "/components/bsp-list-promo/3-items-with-image-horizontal.json"
+              },
+              {
+                "_dataUrl": "/components/bsp-list-promo/6-items-with-image-horizontal.json"
+              },
+              {
+                "_dataUrl": "/components/bsp-list-promo/2-items-with-image-left-align-horizontal.json"
+              },
+              {
+                "_dataUrl": "/components/bsp-list-promo/2-items-with-image-right-align-horizontal.json"
+              }
+            ]
+          }
+        },
+        {
+          "_template": "layouts/two-col-half-half",
+          "first": {
+            "components": [
+              {
+                "_dataUrl": "/components/bsp-list-promo/1-item-with-image-left-align-dark.json"
+              }
+            ]
+          },
+          "second": {
+            "components": [
+              {
+                "_dataUrl": "/components/bsp-list-promo/1-item-with-image-left-align.json"
+              }
+            ]
+          }
+        },
+        {
+          "_template": "layouts/two-col-half-half",
+          "first": {
+            "components": [
+              {
+                "_dataUrl": "/components/bsp-list-promo/1-item-with-image-overlay.json"
+              }
+            ]
+          },
+          "second": {
+            "components": [
+              {
+                "_dataUrl": "/components/bsp-list-promo/1-item-with-image.json"
+              }
+            ]
+          }
+        },
+        {
+          "_template": "layouts/two-col-half-half",
+          "first": {
+            "components": [
+              {
+                "_dataUrl": "/components/bsp-list-promo/2-items-with-images-extra-text.json"
+              }
+            ]
+          },
+          "second": {
+            "components": [
+              {
+                "_dataUrl": "/components/bsp-list-promo/2-items-with-images.json"
+              }
+            ]
+          }
+        },
+        {
+          "_template": "layouts/three-col-thirds",
+          "first": {
+            "components": [
+              {
+                "_dataUrl": "/components/bsp-list-promo/2-items.json"
+              }
+            ]
+          },
+          "second": {
+            "components": [
+              {
+                "_dataUrl": "/components/bsp-list-promo/3-items.json"
+              }
+            ]
+          },
+          "third": {
+            "components": [
+              {
+                "_dataUrl": "/components/bsp-list-promo/4-items.json"
+              }
+            ]
+          }
+        },
+        {
+          "_template": "layouts/three-col-thirds",
+          "first": {
+            "components": [
+              {
+                "_dataUrl": "/components/bsp-list-promo/5-items.json"
+              }
+            ]
+          },
+          "second": {
+            "components": [
+              {
+                "_dataUrl": "/components/bsp-list-promo/6-items.json"
+              }
+            ]
+          },
+          "third": {
+            "components": [
+              {
+                "_dataUrl": "/components/bsp-list-promo/7-items.json"
+              }
+            ]
+          }
+        },
+        {
+          "_template": "layouts/three-col-thirds",
+          "first": {
+            "components": [
+              {
+                "_dataUrl": "/components/bsp-list-promo/6-items-with-1-image.json"
+              }
+            ]
+          },
+          "second": {
+            "components": [
+              {
+                "_dataUrl": "/components/bsp-list-promo/4-items-with-2-images.json"
+              }
+            ]
+          },
+          "third": {
+            "components": [
+              {
+                "_dataUrl": "/components/bsp-list-promo/3-items-with-1-image-extra-text.json"
+              }
+            ]
+          }
+        },
+        {
+          "_template": "layouts/two-col-two-thirds-one-third",
+          "first": {
+            "components": [
+              {
+                "_dataUrl": "/components/bsp-list-promo/3-items-with-image-left-align.json"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "footerView": {
+    "_dataUrl": "/components/bsp-site-footer-simple/styleguide-footer.json"
+  }
+}

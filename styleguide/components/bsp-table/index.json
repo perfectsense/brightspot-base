@@ -1,0 +1,62 @@
+{
+  "_template": "common/body",
+  "headView": {
+    "_template": "common/head",
+    "metadataView": {
+      "_template": "common/metadata",
+      "_dataUrl": "/pages/index/metadata.json",
+      "title": "Brightspot Base Table"
+    }
+  },
+  "headerView": {
+    "_dataUrl": "/components/bsp-site-header-simple/styleguide-header.json"
+  },
+  "mainView": {
+    "_template": "layouts/one-col",
+    "main": {
+      "components": [
+        {
+          "_dataUrl": "/components/bsp-table/basic-table.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-table/table-standard.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-table/table-fixed-width.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-table/table-horiz-stripe.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-table/table-vert-stripe.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-table/table-with-image.json"
+        },
+        {
+          "_dataUrl": "/components/bsp-table/table-theme-1.json"
+        },
+        {
+          "_template": "layouts/two-col-half-half",
+          "first": {
+            "components": [
+              {
+                "_dataUrl": "/components/bsp-table/basic-table.json"
+              }
+            ]
+          },
+          "second": {
+            "components": [
+              {
+                "_dataUrl": "/components/bsp-table/table-full-right-bottom.json"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "footerView": {
+    "_dataUrl": "/components/bsp-site-footer-simple/styleguide-footer.json"
+  }
+}

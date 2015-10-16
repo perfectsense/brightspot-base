@@ -1,26 +1,27 @@
 {
-    "_template" : "common/body",
-
-    "headerView" : {
-        "_dataUrl" : "/components/bsp-site-header/logo-extra-menu-social.json"
-    },
-
-    "mainView" : {
-
-        "_template" : "layouts/one-col",
-
-        "main" : {
-            "components" : [
-                {
-                    "_dataUrl" : "/pages/example/page-title.json"
-                }
-            ]
-        }
-
-    },
-
-    "footerView" : {
-        "_dataUrl" : "/components/bsp-site-footer/standard.json"
+  "_template": "common/body",
+  "headView": {
+    "_template": "common/head",
+    "metadataView": {
+      "_template": "common/metadata",
+      "_dataUrl": "/pages/index/metadata.json",
+      "title": "Brightspot Base Example Page"
     }
-
+  },
+  "headerView": {
+    "_dataUrl": "/components/bsp-site-header-simple/styleguide-header.json"
+  },
+  "mainView": {
+    "_template": "layouts/one-col",
+    "main": {
+      "components": [
+        {
+          "_dataUrl": "/pages/example/page-title.json"
+        }
+      ]
+    }
+  },
+  "footerView": {
+    "_dataUrl": "/components/bsp-site-footer/index.json"
+  }
 }

@@ -1,31 +1,34 @@
 {
-	"_template" : "common/body",
-
-	"headerView" : {
-		"_dataUrl" : "/components/bsp-site-header-simple/styleguide-header.json"
-	},
-
-	"mainView" : {
-		"_template" : "layouts/two-col-main-left-fixed-right",
-
-		"main" : {
-			"components" : [
-				{
-					"_dataUrl" : "/components/bsp-article/article-infinite.json"
-				}
-			]
-		},
-			
-		"aside" : {
-			"components" : [
-				{
-					"_dataUrl" : "/components/bsp-list-promo/article-infinite-status.json"
-				}
-			]
-		}
-	},
-
-	"footerView" : {
-		"_dataUrl" : "/components/bsp-site-footer-simple/styleguide-footer.json"
-	}
+  "_template": "common/body",
+  "headView": {
+    "_template": "common/head",
+    "metadataView": {
+      "_template": "common/metadata",
+      "_dataUrl": "/pages/index/metadata.json",
+      "title": "Brightspot Regular Infinite Article"
+    }
+  },
+  "headerView": {
+    "_dataUrl": "/components/bsp-site-header-simple/styleguide-header.json"
+  },
+  "mainView": {
+    "_template": "layouts/two-col-main-left-fixed-right",
+    "main": {
+      "components": [
+        {
+          "_dataUrl": "/components/bsp-article/article-infinite.json"
+        }
+      ]
+    },
+    "aside": {
+      "components": [
+        {
+          "_dataUrl": "/components/bsp-list-promo/article-infinite-status.json"
+        }
+      ]
+    }
+  },
+  "footerView": {
+    "_dataUrl": "/components/bsp-site-footer-simple/styleguide-footer.json"
+  }
 }

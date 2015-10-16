@@ -1,0 +1,35 @@
+{
+  "_template": "common/body",
+  "headView": {
+    "_template": "common/head",
+    "metadataView": {
+      "_template": "common/metadata",
+      "_dataUrl": "/pages/index/metadata.json",
+      "title": "Brightspot Base Component Group"
+    }
+  },
+  "headerView": {
+    "_dataUrl": "/components/bsp-site-header-simple/styleguide-header.json"
+  },
+  "mainView": {
+    "_template": "layouts/one-col",
+    "aboveColumns": {
+      "components": [
+        {
+          "_template": "common/html",
+          "text": "<p>The bsp-component-group component is used when we need to have a site specific group of components that acts as a single component. What that means is that they will all be related to the same data source. </p><p>As an example, you might want a group of image promos. You want the first one to be a large single image, and then you want 2 image promos next to each. Rather than trying to create an image promo \"option\" for that group/combination, you would use this component and then use your JSON to specify what components you want in what order</p>"
+        }
+      ]
+    },
+    "main": {
+      "components": [
+        {
+          "_dataUrl": "/components/bsp-component-group/3-image-promos.json"
+        }
+      ]
+    }
+  },
+  "footerView": {
+    "_dataUrl": "/components/bsp-site-footer-simple/styleguide-footer.json"
+  }
+}

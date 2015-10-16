@@ -5,7 +5,7 @@
     "metadataView": {
       "_template": "common/metadata",
       "_dataUrl": "/pages/index/metadata.json",
-      "title": "Brightspot Base Pagination"
+      "title": "Brightspot Base Form Select"
     }
   },
   "headerView": {
@@ -13,17 +13,21 @@
   },
   "mainView": {
     "_template": "layouts/one-col",
-    "main": {
+    "aboveColumns": {
       "components": [
         {
           "_template": "common/html",
-          "options": {
-            "modifierClass": "styleguide-page-description"
-          },
-          "text": "<p>Pagination Documentation to go here</p>"
+          "text": "<p>The bsp-form-select component is used inside a form element which must have the \"data-bsp-form\" attribute set. This enables the fields to interact with <a href=\"https://github.com/perfectsense/brightspot-js-form\">the bsp-form library</a>.</p><h2>Example Form</h2>"
+        }
+      ]
+    },
+    "main": {
+      "components": [
+        {
+          "_dataUrl": "/components/bsp-form-select/select.json"
         },
         {
-          "_dataUrl": "/components/bsp-pagination/3-pages.json"
+          "_dataUrl": "/components/bsp-form-input/input-submit.json"
         }
       ]
     }

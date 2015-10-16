@@ -5,7 +5,7 @@
     "metadataView": {
       "_template": "common/metadata",
       "_dataUrl": "/pages/index/metadata.json",
-      "title": "Brightspot Base Pagination"
+      "title": "Brightspot Base Social Share"
     }
   },
   "headerView": {
@@ -16,14 +16,18 @@
     "main": {
       "components": [
         {
-          "_template": "common/html",
-          "options": {
-            "modifierClass": "styleguide-page-description"
-          },
-          "text": "<p>Pagination Documentation to go here</p>"
+          "_dataUrl": "/components/bsp-social-share/share.json"
         },
         {
-          "_dataUrl": "/components/bsp-pagination/3-pages.json"
+          "_dataUrl": "/components/bsp-social-share/share-monochrome.json"
+        }
+      ]
+    },
+    "aside": {
+      "components": [
+        {
+          "_template": "common/html",
+          "text": "<p>Right Rail Modules can go here</p>"
         }
       ]
     }

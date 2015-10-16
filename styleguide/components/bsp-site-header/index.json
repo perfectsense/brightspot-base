@@ -1,0 +1,14 @@
+{
+  "_template": "common/body",
+  "headView": {
+    "_template": "common/head",
+    "metadataView": {
+      "_template": "common/metadata",
+      "_dataUrl": "/pages/index/metadata.json",
+      "title": "Brightspot Base Site Header"
+    }
+  },
+  "headerView": {
+    "_dataUrl": "/components/bsp-site-header/logo-extra-menu-social.json"
+  }
+}

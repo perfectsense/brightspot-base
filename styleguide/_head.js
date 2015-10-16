@@ -1,9 +1,5 @@
 /* jshint ignore:start */
 
-// These will be done by PageStage in the real site
-document.write('<meta http-equiv="X-UA-Compatible" content="IE=edge">');
-document.write('<meta name="viewport" content="width=device-width, initial-scale=1">');
-
 // we use compiled CSS by default. If you'd like to switch to using browser compiled .less
 // run localStorage.setItem('useLESS',true); in your console
 if(localStorage.getItem('useLESS')) {
