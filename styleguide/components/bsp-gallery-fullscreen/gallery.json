@@ -7,6 +7,13 @@
 
     "galleryTitle": "Full screen gallery Title",
 
+    "galleryDescription" : {
+
+        "_template" : "common/text",
+
+        "text" : "Biltong pig landjaeger tail jowl sirloin drumstick rump pastrami. Filet mignon salami drumstick alcatra pork belly capicola chuck ham hock pork chop tri-tip sirloin."
+    },
+
     "gallerySlides": [
 
         {

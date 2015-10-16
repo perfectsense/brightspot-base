@@ -3,9 +3,16 @@
     <div class="bsp-carousel-gallery-container">
 
         {{#if galleryTitle}}
-            <h2 class="bsp-carousel-gallery-header">
+        <div class="bsp-carousel-gallery-header">
+            <h2 class="bsp-carousel-gallery-title">
                 {{galleryTitle}}
             </h2>
+            {{#if galleryDescription}}
+                <div class="bsp-carousel-gallery-desc">
+                    {{render this.galleryDescription}}
+                </div>
+            {{/if}}
+        </div>
         {{/if}}
 
         <div class="bsp-carousel-gallery">
