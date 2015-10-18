@@ -6,7 +6,7 @@
 	<div class="bsp-component-content">
 
 		<div class="bsp-table-wrapper">
-			<table class="bsp-table{{#with options}}{{#if this.textAlignment}} {{this.textAlignment}}{{/if}}{{#if this.fullWidth}} full-width{{/if}}{{#if this.fixedColWidth}} fixed-col-width{{/if}}{{#if this.verticalAlignment}} {{this.verticalAlignment}}{{/if}}{{#if this.verticalStripes}} vertical-stripes{{/if}}{{#if this.horizontalStripes}} horizontal-stripes{{/if}}{{#if this.theme}} {{this.theme}}{{/if}}{{/with}}">
+			<table class="bsp-table{{#with options}}{{#if this.textAlignment}} {{this.textAlignment}}{{/if}}{{#if this.fullWidth}} full-width{{/if}}{{#if this.fixedColWidth}} fixed-col-width{{/if}}{{#if this.verticalAlignment}} {{this.verticalAlignment}}{{/if}}{{#if this.verticalStripes}} vertical-stripes{{/if}}{{#if this.horizontalStripes}} horizontal-stripes{{/if}}{{#if this.theme}} {{this.theme}}{{/if}}{{/with}}"{{#if options.sort}} data-bsp-table-sort{{/if}}>
 				{{#if headings}}
 					<thead>
 						{{#each headings}}

@@ -19,6 +19,7 @@ import bsp_share from 'bsp-share';
 import bsp_tabber_plugin from 'bsp-tabber-plugin';
 import bsp_toggle_plugin from 'bsp-toggle-item-plugin';
 import bsp_modal_plugin from './plugins/bsp-modal-plugin';
+import bsp_table_sort_plugin from './plugins/bsp-table-sort-plugin';
 
 // need to find a neater method than compiling this in our production JS
 // TODO: we are moving to bsp-template for Node, so this will not be needed anymore

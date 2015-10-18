@@ -30,6 +30,31 @@
 		font-family: @bsp-table-body-font;
 	}
 
+	.asc, .desc {
+    	&:after {
+    		.icon();
+			color: @brand-primary;
+		    display: inline-block;
+		    height: 15px;
+		    line-height: 14px;
+		    width: 15px;
+		    vertical-align: top;
+    	}
+    }
+
+    .asc {
+    	&:after {
+    		content: @fa-var-sort-asc;
+    		padding-top: 5px;
+    	}
+    }
+
+    .desc {
+    	&:after {
+    		content: @fa-var-sort-desc;
+    	}
+    }
+
 	// added additional theming here for styleguide purposes only 
 	&:extend(.bsp-table-themes all);
 }
