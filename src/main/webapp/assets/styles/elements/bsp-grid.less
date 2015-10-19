@@ -207,24 +207,18 @@ body.bsp-column-fixed-toggle-in {
 
 @media @mq-lg {
 
-	body {
+	body.full-size-header {
 		& when (@header-positioning = fixed) {
 	    	padding-top: @header-tophat-height + @header-height-before-scroll;
 	    }
 	}
 
-	body.bsp-scrolling {
+	body.full-size-header.bsp-scrolling {
 		& when (@header-positioning = fixed) {
 			// adding extra 10px for smoother scrolling user experience
 	    	padding-top: @header-tophat-height + @header-height + 10px;
 	    }
 	}
-
-    body.bsp-fullscreen {
-        & when (@header-positioning = fixed) {
-            padding-top: @header-tophat-height + @header-height;
-        }
-    }
 
 	.bsp-column-fixed {
 		top: @header-tophat-height + @header-height-before-scroll;
