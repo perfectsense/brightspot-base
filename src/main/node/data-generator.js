@@ -8,8 +8,8 @@ function DataGenerator(){
     var moment = require('moment');
 
     /*
-    * Each macro function should implement Promises because so that they support async by default.
-    * --------------------------------------------------------------------------------------------
+    * Each macro function should implement Promises so that they support async by default.
+    * ------------------------------------------------------------------------------------
     */
 
     /* Returns a random RGB value excluding lighter colors
