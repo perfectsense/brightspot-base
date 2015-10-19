@@ -31,6 +31,9 @@ var bsp_carousel = {};
             options.themeConfig.infinite = false;
         }
 
+        this._interstitialsEnabled = true;
+        this._interstitialClass = 'interstitial'; // wtf, don't know why this doesn't save when passed as an option
+
         this.options = this.mergeOptions(options);
 
         $el.slick(this.options);
@@ -42,7 +45,7 @@ var bsp_carousel = {};
             self.reInit();
             // once we init, we trigger a resize, to make sure modal stays centered
             $(window).trigger('resize');
-        })
+        });
 
         return this;
     };
@@ -105,6 +108,12 @@ var bsp_carousel = {};
         self._slickMethodsAvailablePromise.done(function() {
             self.trigger('carousel:init');
         });
+        this.bind('carousel:swipe', function(e) {
+            if (!self.getOption('swipe')) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        });
     };
 
     /** slick method abstractions */
@@ -159,6 +168,48 @@ var bsp_carousel = {};
     /** extra helper methods */
     bsp_carousel.slideCount = function() {
         return this._slickMethod('getSlick').slideCount;
+    };
+    bsp_carousel.slideCountMinusInterstitials = function() {        
+        return this.slideCount() - this.$el.find('.slick-slide.'+this._interstitialClass+':not(.slick-cloned)').length;
+    };
+    bsp_carousel.currentSlideAdjustedForInterstitials = function() {
+        var self = this;
+        var current = this.currentSlide();
+        var interstitialsBeforeCount = 0;
+        if (self.slideIsInterstitial(current)) {
+            return 'interstitial';
+        } else {
+            self.$el.find('.slick-slide:not(.slick-cloned)').each((key, slide) => {
+                if (key <= current && self.slideIsInterstitial(key)) {
+                    interstitialsBeforeCount++;
+                }
+            });
+            return current - interstitialsBeforeCount;
+        }
+    };
+    bsp_carousel.slideIsInterstitial = function(index) {
+        var $slide = this.$el.find('[data-slick-index="'+index+'"]');
+        return $slide.hasClass(this._interstitialClass);
+    };
+    bsp_carousel.disableNav = function() {
+        this.setOption('swipe', false);
+        this.$el.find('.slick-prev, .slick-next')
+            .addClass('slick-disabled')
+            .attr('disabled', 'disabled');
+    };
+    bsp_carousel.enableNav = function() {
+        this.setOption('swipe', true);
+        this.$el.find('.slick-prev, .slick-next')
+            .removeClass('slick-disabled')
+            .removeAttr('disabled');
+    };
+    bsp_carousel.hideNav = function() {
+        this.setOption('swipe', false);
+        this.$el.addClass('nav-hide');
+    };
+    bsp_carousel.showNav = function() {
+        this.setOption('swipe', true);
+        this.$el.removeClass('nav-hide');
     };
 
     /** private methods */

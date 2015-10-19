@@ -5,6 +5,14 @@ body.bsp-gallery-fullscreen {
     .bsp-site {
         background: inherit;
     }
+
+    .interstitial-showing {
+        .bsp-carousel-gallery-slide-caption-wrapper,
+        .bsp-carousel-gallery-caption-trigger,
+        .bsp-carousel-gallery-thumbs {
+            display: none !important;
+        }
+    }
 }
 
 .bsp-carousel-gallery-container {
@@ -186,6 +194,43 @@ body.bsp-gallery-fullscreen {
     padding: 0 @space;
 }
 
+.bsp-gallery-fullscreen-interstitial-counter {
+    background: @bsp-carousel-gallery-fullscreen-body;
+    color: @bsp-carousel-gallery-fullscreen-background;
+    display: none;
+    padding: @space;
+    position: absolute;
+    &.counting {
+        display: block;
+    }
+    &.topMiddle {
+        width: 100%;
+        text-align: center;
+    }
+    &.topRight {
+        top: 0;
+        right: 0;
+    }
+    &.bottomLeft {
+        bottom: 0;
+        left: 0;
+    }
+    &.bottomMiddle {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    &.bottomRight {
+        bottom: 0;
+        right: 0;
+    }
+}
+.bsp-gallery-fullscreen-interstitial-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 @media @mq-md {
 

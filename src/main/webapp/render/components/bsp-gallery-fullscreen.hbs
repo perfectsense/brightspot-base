@@ -18,7 +18,7 @@
         <div class="bsp-carousel-gallery">
             <div class="bsp-carousel-stage">
                 {{#each gallerySlides}}
-                    <div class="bsp-carousel-slide">
+                    <div class="bsp-carousel-slide{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
                         {{render this}}
                     </div>
                 {{/each}}
@@ -28,7 +28,7 @@
                 <div class="bsp-carousel-nav">
 
                     {{#each gallerySlides}}
-                        <div class="bsp-carousel-slide">
+                        <div class="bsp-carousel-slide{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
                             {{render this.thumbnail}}
                         </div>
                     {{/each}}
