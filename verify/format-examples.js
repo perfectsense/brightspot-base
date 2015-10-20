@@ -1,8 +1,13 @@
 var FS = require('fs');
 
 function addTemplateToAttributes(json) {
-  switch (typeof json) {
-    case 'object' :
+  if (typeof json === 'object') {
+    if (Array.isArray(json)) {
+      json.forEach(function (item) {
+        addTemplateToAttributes(item);
+      });
+
+    } else {
       Object.keys(json).forEach(function (key) {
         if (key === 'attributes'
             && !json[key]._template) {
@@ -12,15 +17,7 @@ function addTemplateToAttributes(json) {
 
         addTemplateToAttributes(json[key]);
       });
-
-      break;
-
-    case 'array' :
-      json.forEach(function (item) {
-        addTemplateToAttributes(item);
-      });
-
-      break;
+    }
   }
 }
 
