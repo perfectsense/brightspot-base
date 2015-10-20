@@ -231,26 +231,24 @@ body.bsp-column-fixed-toggle-in {
 
 @media @mq-lg {
 
-	body.full-size-header {
-		& when (@header-positioning = fixed) {
-	    	padding-top: @header-tophat-height + @header-height-before-scroll;
-	    }
-	}
+    & when (@header-positioning = fixed) {
+    	body.full-size-header {
+    	    padding-top: @header-tophat-height + @header-height-before-scroll;
 
-	body.full-size-header.bsp-scrolling {
-		& when (@header-positioning = fixed) {
-			// adding extra 10px for smoother scrolling user experience
-	    	padding-top: @header-tophat-height + @header-height + 10px;
-	    }
-	}
+            .bsp-column-fixed {
+                top: @header-tophat-height + @header-height-before-scroll;
+            }
+    	}
 
-	.bsp-column-fixed {
-		top: @header-tophat-height + @header-height-before-scroll;
+    	body.full-size-header.bsp-scrolling {
+    		// adding extra 10px for smoother scrolling user experience
+        	padding-top: @header-tophat-height + @header-height + 10px;
 
-		.bsp-scrolling &, .bsp-fullscreen & {
-			top: @header-tophat-height + @header-height !important;
-		}
-	}
+            .bsp-column-fixed {
+                top: @header-tophat-height + @header-height !important;
+            }
+    	}
+    }
 
 	// up th width to match, has to stay hardcoded as it's fixed positioning
 	.bsp-column-fixed {
