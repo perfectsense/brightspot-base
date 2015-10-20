@@ -11,6 +11,10 @@
 	}
 }
 
+.slick-dots {
+    bottom: -30px;
+}
+
 .bsp-carousel {
 	&.nav-hide {
         .slick-prev, .slick-next {
@@ -18,18 +22,18 @@
         }
     }
     .slick-prev, .slick-next {
+        // on mobile we will hide the arrows (design deemed this so)
+        display: none !important;
+
         &.slick-disabled {
             opacity: 0.4;
             &:before {
                 opacity: 0.4;
             }
         }
+
     }
 
-}
-
-.slick-dots {
-	bottom: -30px;
 }
 
 .bsp-carousel-slide {
@@ -58,7 +62,6 @@
 }
 
 
-// for anything past medium, we want the thumbs, anything before, no thumbs
 @media @mq-md {
 
     // when we are in a gallery, we definitely want to show the prev and next
@@ -72,6 +75,15 @@
         }
     }
 
+    .bsp-carousel {
+        .slick-prev, .slick-next {
+            // on medium and up, we will show previous and next
+            display: inline-block !important;
+        }
+
+    }
+
+    // on a stage carousel, we want to make sure there are never dots, even if enabled
 	.bsp-carousel-stage.carousel-dots {
 		margin-bottom: 0;
 
@@ -80,6 +92,7 @@
 		}
 	}
 
+    // for anything past medium, we want the thumbs, anything before, no thumbs
 	.bsp-carousel-nav {
 
 		&.slick-initialized {
