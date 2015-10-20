@@ -21,12 +21,6 @@
 // This lets us use the bootstrap mixins if we would like to
 @import (reference) "bower/bootstrap/mixins";
 
-// We will "reference" the bootstrap grid. This lets us use these classes in our own CSS to mixin the bootstrap grid classes
-// As a best practice, as long as we do not have a complicated grid that we need to use, we don't want the full Bootstrap grid LESS
-// but instead create some semantic grid classes for ourselves using bootstrap mixins.
-// Of course, if we will have lot of complicated grids in our site, we can just compile this in and use in the DOM or extend
-@import (reference) "bower/bootstrap/grid.less";
-
 // For buttons, since we do not need all the kinds Bootstrap has, we can make our own, but leverage their .btn mixins
 @import (reference) "bower/bootstrap/buttons.less";
 

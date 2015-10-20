@@ -18,6 +18,8 @@ body {
 // This will be our grid. We start out by creating our site container, which will determine the overall centered site width
 .bsp-container {
     .container();
+    padding-left: @grid-gutter-width-xs / 2;
+    padding-right: @grid-gutter-width-xs / 2;
 
     // when we reuse our layout renderers to create nested layouts, we end up with stacked
     // bsp-containers. This removes any styles from these, so we don't get doubled up margins, padding, etc
@@ -31,8 +33,8 @@ body {
 .bsp-row {
 	&:extend(.clearfix all);
 
-	margin-left:  (@grid-gutter-width / -2);
-	margin-right: (@grid-gutter-width / -2);
+	margin-left:  (@grid-gutter-width-xs / -2);
+	margin-right: (@grid-gutter-width-xs / -2);
 }
 
 // With the below columns, we should be able to create most every layout necessary.
@@ -187,6 +189,17 @@ body.bsp-column-fixed-toggle-in {
 }
 
 @media @mq-sm {
+
+    .bsp-container {
+        .container();
+        padding-left: @grid-gutter-width / 2;
+        padding-right: @grid-gutter-width / 2;
+    }
+
+    .bsp-row {
+        margin-left:  (@grid-gutter-width / -2);
+        margin-right: (@grid-gutter-width / -2);
+    }
 
     .bsp-column-fixed {
         &.toggle-in {
