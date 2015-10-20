@@ -1,5 +1,5 @@
-/** 
- * The standard list promo is a list of items. It scales up to the size of it's container and accepts any number of items. 
+/**
+ * The standard list promo is a list of items. It scales up to the size of it's container and accepts any number of items.
  *
  * These items can have images, titles, links, and descriptions with 3 options for image alignment: top, left, or overlayed
  * There is the option of having hard coded item heights if design chooses to, to allow for vertical centering of items
@@ -7,7 +7,7 @@
 
 
 .bsp-list-promo {
-	
+
 }
 
 // .bsp-list-promo-list {
@@ -42,12 +42,12 @@
 			padding-top: 0;
 		}
 
-		// when we have an overlay, or left image alignment, it cannot use the natural margins of the text items underneath 
+		// when we have an overlay, or left image alignment, it cannot use the natural margins of the text items underneath
 		// to space themselves away from the next element so we need to add a bottom margin for that spacing
 		&.image-align-overlay, &.image-align-left, &.image-align-right {
 			margin-bottom: @space;
 		}
-		
+
 	}
 
 	// if we are a horizontal list, we are in a list AND row at the same time
@@ -61,7 +61,7 @@
 		}
 
 	}
-	
+
 }
 
 // when the list is ordered, we want fancy stylable numbering added
@@ -70,8 +70,8 @@ ol.bsp-list-promo-list {
 
 	> li {
 		&:before {
-			content:counter(li); 
-    		counter-increment:li;   		
+			content:counter(li);
+    		counter-increment:li;
     		position: absolute;
     		padding-left: @space;
     		top: @space;
@@ -164,6 +164,10 @@ ol.bsp-list-promo-list {
 
 	a {
 		color: @text-color;
+
+        &:hover {
+            color: @link-hover-color;
+        }
 
 		// since the image overlay is dark, this needs to be white not text-color
 		.image-align-overlay & {
