@@ -218,6 +218,7 @@ body.bsp-column-fixed-toggle-in {
 		display: block;
 		left: auto;
 		margin-top: @site-top-and-bottom-space;
+        padding: 0;
 		top: @header-tophat-height + @header-height;
 		// hardcoded width, as it needs to be as it's fixed positioning
 		width: 240px;
@@ -232,6 +233,7 @@ body.bsp-column-fixed-toggle-in {
 @media @mq-lg {
 
     & when (@header-positioning = fixed) {
+
     	body.full-size-header {
     	    padding-top: @header-tophat-height + @header-height-before-scroll;
 
