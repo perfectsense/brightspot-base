@@ -139,7 +139,6 @@ body.bsp-gallery-fullscreen {
 // elements at the bottom of the footer
 .bsp-carousel-gallery-thumbs, .bsp-carousel-gallery-count-wrapper, .bsp-carousel-gallery-caption-trigger {
     display: inline-block;
-    float: left;
     margin: @space-half @space-double @space-half 0;
     padding: 0 @space;
 }
@@ -175,7 +174,7 @@ body.bsp-gallery-fullscreen {
 
 .bsp-carousel-gallery-sharing {
     clear: both;
-    margin: @space-half 0;
+    margin: @space 0;
     padding: 0 @space;
 
     .bsp-share-link {
@@ -188,10 +187,12 @@ body.bsp-gallery-fullscreen {
     }
 }
 
-.bsp-carousel-gallery-tags {
-    clear: both;
-    margin: @space-half 0;
-    padding: 0 @space;
+.bsp-carousel-gallery-footer {
+    .bsp-tags {
+        clear: both;
+        margin: @space-half 0;
+        padding: 0 @space;
+    }
 }
 
 .bsp-gallery-fullscreen-interstitial-counter {
@@ -234,6 +235,10 @@ body.bsp-gallery-fullscreen {
 
 @media @mq-md {
 
+    .bsp-carousel-gallery-thumbs, .bsp-carousel-gallery-count-wrapper, .bsp-carousel-gallery-caption-trigger {
+        float: left;
+    }
+
     .bsp-carousel-gallery-thumbs {
         cursor: pointer;
 
@@ -255,6 +260,7 @@ body.bsp-gallery-fullscreen {
     .bsp-carousel-gallery-sharing {
         clear: none;
         float: right;
+        margin: @space-half 0;
     }
 
 }
