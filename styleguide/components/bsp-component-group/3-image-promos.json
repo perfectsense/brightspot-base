@@ -1,13 +1,11 @@
 {
-	"_template" : "components/bsp-component-group",
-
-	"components" : [
-		{
-			"_dataUrl" : "/components/bsp-image-promo/1-image-1-link.json"
-		},
-		{
-			"_dataUrl" : "/components/bsp-image-promo/2-images-1-link.json"
-		}
-	]
-
+  "_template": "components/bsp-component-group",
+  "components": [
+    {
+      "_dataUrl": "/components/bsp-image-promo/1-image-1-link.json"
+    },
+    {
+      "_dataUrl": "/components/bsp-image-promo/2-images-1-link.json"
+    }
+  ]
 }

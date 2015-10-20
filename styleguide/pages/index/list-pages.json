@@ -1,22 +1,20 @@
 {
-	"_template" : "components/bsp-list-promo",
-
-	"listItems" : [
-		{
-			"_template" : "components/bsp-list-promo-item-handler",
-
-			"link": {
-				"_template" : "common/link",
-
-				"attributes" : {
-					"href"  : "/pages/example/",
-					"title" : "Example Page"
-				},
-				"body" : {
-                    "_template" : "common/text",
-                    "text"  : "Example Page"
-                }
-			}
-		}
-	]
+  "_template": "components/bsp-list-promo",
+  "listItems": [
+    {
+      "_template": "components/bsp-list-promo-item-handler",
+      "link": {
+        "_template": "common/link",
+        "attributes": {
+          "href": "/pages/example/",
+          "title": "Example Page",
+          "_template": "common/attributes"
+        },
+        "body": {
+          "_template": "common/text",
+          "text": "Example Page"
+        }
+      }
+    }
+  ]
 }

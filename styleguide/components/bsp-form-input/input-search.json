@@ -1,17 +1,20 @@
 {
-	"_template" : "components/bsp-form-input",
-	"showMessagesAbove": true,
-	"attributes": {
-		"autocomplete": "off",
-		"id": "search1",
-		"placeholder": "Search placeholder",
-		"required": true,
-		"type": "search"
-	},
-	"errors": [
-		{ "valueMissing": "Please fill in the search field" }
-	],
-	"label": {
-		"text": "Search"
-	}
+  "_template": "components/bsp-form-input",
+  "showMessagesAbove": true,
+  "attributes": {
+    "autocomplete": "off",
+    "id": "search1",
+    "placeholder": "Search placeholder",
+    "required": true,
+    "type": "search",
+    "_template": "common/attributes"
+  },
+  "errors": [
+    {
+      "valueMissing": "Please fill in the search field"
+    }
+  ],
+  "label": {
+    "text": "Search"
+  }
 }

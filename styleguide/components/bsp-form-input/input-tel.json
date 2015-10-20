@@ -1,17 +1,20 @@
 {
-	"_template" : "components/bsp-form-input",
-	"showMessagesAbove": true,
-	"attributes": {
-		"autocomplete": "off",
-		"id": "tel1",
-		"placeholder": "Telephone input placeholder",
-		"required": true,
-		"type": "tel"
-	},
-	"errors": [
-		{ "valueMissing": "Please fill in the telephone number" }
-	],
-	"label": {
-		"text": "Telephone *"
-	}
+  "_template": "components/bsp-form-input",
+  "showMessagesAbove": true,
+  "attributes": {
+    "autocomplete": "off",
+    "id": "tel1",
+    "placeholder": "Telephone input placeholder",
+    "required": true,
+    "type": "tel",
+    "_template": "common/attributes"
+  },
+  "errors": [
+    {
+      "valueMissing": "Please fill in the telephone number"
+    }
+  ],
+  "label": {
+    "text": "Telephone *"
+  }
 }

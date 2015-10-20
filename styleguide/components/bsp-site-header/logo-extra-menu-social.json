@@ -1,468 +1,435 @@
 {
-	"_template" : "components/bsp-site-header",
-
-	"siteName" : "Brightspot Base",
-
-	"siteLogo" : {
-
-		"link" : {
-
-			"_template" : "common/link",
-
-			"attributes" : {
-				"href"  : "/",
-				"title" : "Brightspot Base"
-			},
-
-			"body" : {
-
-				"_template" : "common/image",
-
-				"attributes" : {
-					"alt" : "Brightspot",
-					"src" : "/assets/images/logo-site-header.png"
-				}
-			}
-
-		}
-
-	},
-
-	"searchForm" : {
-
-		"searchInput" : {
-
-			"_template" : "components/bsp-form-input",
-
-			"attributes": {
-				"class" : "bsp-site-search-input",
-				"type": "text"
-			},
-
-			"errors": [
-				{ "valueMissing": "Please fill in the search query" }
-			]
-		}
-
-	},
-
-	"mainMenu" : {
-
-		"menuItems" : [
-			{
-				"heading" : {
-					"_dataUrl" : "/common/link-test-text-14-char.json"
-				},
-
-				"items" : [
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					},
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					},
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					},
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					},
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					}
-				]
-			},
-
-			{
-				"heading" : {
-					"_dataUrl" : "/common/link-test-text-14-char.json"
-				},
-
-				"items" : [
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					},
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					},
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					},
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					},
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					}
-				]
-			},
-
-			{
-				"heading" : {
-					"_dataUrl" : "/common/link-test-text-14-char.json"
-				},
-
-				"items" : [
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					},
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					},
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					},
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					},
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					}
-				]
-			},
-
-			{
-				"heading" : {
-					"_dataUrl" : "/common/link-test-text-14-char.json"
-				},
-
-				"items" : [
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					},
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					},
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					},
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					},
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					}
-				]
-			},
-
-			{
-				"heading" : {
-					"_dataUrl" : "/common/link-test-text-14-char.json"
-				},
-
-				"items" : [
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					},
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					},
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					},
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					},
-					{
-						"_dataUrl" : "/common/link-test-text-14-char.json"
-					}
-				]
-			}
-		]
-
-	},
-
-
-	"EXAMPLE tophat" : {
-
-		"links" : [
-			{
-				"_template" : "common/link",
-
-				"attributes" : {
-					"href"  : "link1",
-					"title" : "Brightspot Base"
-				},
-				"body" : {
-                    "_template" : "common/text",
-                    "text"  : "link 1"
-                }
-			},
-			{
-				"_template" : "common/link",
-
-				"attributes" : {
-					"href"  : "link2",
-					"title" : "Brightspot Base"
-				},
-				"body" : {
-                    "_template" : "common/text",
-                    "text"  : "link 2"
-                }
-			}
-		]
-
-	},
-
-	"extraMenu" : [
-		{
-			"link": {
-				"_template" : "common/link",
-
-				"attributes" : {
-					"href"  : "news",
-					"title" : "News"
-				},
-				"body" : {
-                    "_template" : "common/text",
-                    "text"  : "News"
-                }
-			},
-
-			"subMenu" : [
-				{
-					"_template" : "common/link",
-
-					"attributes" : {
-						"href"  : "sublink1",
-						"title" : "Sublink 1"
-					},
-					"body" : {
-                        "_template" : "common/text",
-                        "text"  : "Sublink 1"
-                    }
-				},
-				{
-					"_template" : "common/link",
-
-					"attributes" : {
-						"href"  : "sublink2",
-						"title" : "Sublink 2"
-					},
-					"body" : {
-                        "_template" : "common/text",
-                        "text"  : "Sublink 2"
-                    }
-				},
-				{
-					"_template" : "common/link",
-
-					"attributes" : {
-						"href"  : "sublink3",
-						"title" : "Sublink 3"
-					},
-					"body" : {
-                        "_template" : "common/text",
-                        "text"  : "Sublink 3 Sublink 3 Sublink 3"
-                    }
-				}
-			]
-		},
-		{
-			"link": {
-				"_template" : "common/link",
-
-				"attributes" : {
-					"href"  : "shows",
-					"title" : "Shows"
-				},
-				"body" : {
-                    "_template" : "common/text",
-                    "text"  : "Shows"
-                }
-			},
-
-			"subMenu" : [
-				{
-					"_template" : "common/link",
-
-					"attributes" : {
-						"href" : "sublink1",
-						"title" : "Sublink 1"
-					},
-					"body" : {
-                        "_template" : "common/text",
-                        "text"  : "Sublink 1"
-                    }
-				},
-				{
-					"_template" : "common/link",
-
-					"attributes" : {
-						"href" : "sublink2",
-						"title" : "Sublink 2"
-					},
-					"body" : {
-                        "_template" : "common/text",
-                        "text"  : "Sublink 2"
-                    }
-				},
-				{
-					"_template" : "common/link",
-
-					"attributes" : {
-						"href" : "sublink3",
-						"title" : "Sublink 3"
-					},
-					"body" : {
-                        "_template" : "common/text",
-                        "text"  : "Sublink 3 Sublink 3 Sublink 3"
-                    }
-				}
-			]
-		},
-		{
-			"link": {
-				"_template" : "common/link",
-
-				"attributes" : {
-					"href" : "experience",
-					"title" : "Experience NYC"
-				},
-				"body" : {
-                    "_template" : "common/text",
-                    "text"  : "Experience NYC"
-                }
-			}
-		},
-		{
-			"link": {
-				"_template" : "common/link",
-
-				"attributes" : {
-					"href" : "jobs",
-					"title" : "Jobs"
-				},
-				"body" : {
-                    "_template" : "common/text",
-                    "text"  : "Jobs"
-                }
-			},
-
-			"subMenu" : [
-				{
-					"_template" : "common/link",
-
-					"attributes" : {
-						"href" : "sublink1",
-						"title" : "Sublink 1"
-					},
-					"body" : {
-                        "_template" : "common/text",
-                        "text"  : "Sublink 1"
-                    }
-				},
-				{
-					"_template" : "common/link",
-
-					"attributes" : {
-						"href" : "sublink2",
-						"title" : "Sublink 2"
-					},
-					"body" : {
-                        "_template" : "common/text",
-                        "text"  : "Sublink 2"
-                    }
-				},
-				{
-					"_template" : "common/link",
-
-					"attributes" : {
-						"href" : "sublink3",
-						"title" : "Sublink 3"
-					},
-					"body" : {
-                        "_template" : "common/text",
-                        "text"  : "Sublink 3 Sublink 3 Sublink 3"
-                    }
-				}
-			]
-		},
-		{
-			"link": {
-				"_template" : "common/link",
-
-				"attributes" : {
-					"href" : "buy",
-					"title" : "Buy Tickets"
-				},
-				"body" : {
-                    "_template" : "common/text",
-                    "text"  : "Buy Tickets"
-                }
-			}
-		}
-	],
-
-	"EXAMPLE extraLinks" : [
-		{
-			"_template" : "common/link",
-
-			"attributes" : {
-				"href"  : "link1",
-				"title" : "Brightspot Base"
-			},
-			"body" : {
-                "_template" : "common/text",
-                "text"  : "link 1 haha!"
-            }
-		},
-		{
-			"_template" : "common/link",
-
-			"attributes" : {
-				"href" : "link2",
-				"title" : "Brightspot Base"
-			},
-			"body" : {
-                "_template" : "common/text",
-                "text"  : "link 2"
-            }
-		}
-	],
-
-	"sharing" : {
-
-		"links" : [{
-			"_template" : "common/link",
-			"icon"  : "facebook",
-
-			"attributes" : {
-				"href"  : "http://www.facebook.com",
-				"title" : "Facebook",
-				"target" : "_blank"
-			}
-		},
-		{
-			"_template" : "common/link",
-			"icon"  : "twitter",
-
-			"attributes" : {
-				"href"  : "http://www.twitter.com",
-				"title" : "Twitter",
-				"target" : "_blank"
-			}
-		},
-		{
-			"_template" : "common/link",
-			"icon"  : "pinterest",
-
-			"attributes" : {
-				"href"  : "http://www.pinterest.com",
-				"title" : "Pinterest",
-				"target" : "_blank"
-			}
-		},
-		{
-			"_template" : "common/link",
-			"icon"  : "linkedin",
-
-			"attributes" : {
-				"href"  : "http://www.linkedin.com",
-				"title" : "LinkedIn",
-				"target" : "_blank"
-			}
-		}]
-
-	}
+  "_template": "components/bsp-site-header",
+  "siteName": "Brightspot Base",
+  "siteLogo": {
+    "link": {
+      "_template": "common/link",
+      "attributes": {
+        "href": "/",
+        "title": "Brightspot Base",
+        "_template": "common/attributes"
+      },
+      "body": {
+        "_template": "common/image",
+        "attributes": {
+          "alt": "Brightspot",
+          "src": "/assets/images/logo-site-header.png",
+          "_template": "common/attributes"
+        }
+      }
+    }
+  },
+  "searchForm": {
+    "searchInput": {
+      "_template": "components/bsp-form-input",
+      "attributes": {
+        "class": "bsp-site-search-input",
+        "type": "text",
+        "_template": "common/attributes"
+      },
+      "errors": [
+        {
+          "valueMissing": "Please fill in the search query"
+        }
+      ]
+    }
+  },
+  "mainMenu": {
+    "menuItems": [
+      {
+        "heading": {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        },
+        "items": [
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          },
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          },
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          },
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          },
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          }
+        ]
+      },
+      {
+        "heading": {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        },
+        "items": [
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          },
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          },
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          },
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          },
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          }
+        ]
+      },
+      {
+        "heading": {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        },
+        "items": [
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          },
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          },
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          },
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          },
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          }
+        ]
+      },
+      {
+        "heading": {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        },
+        "items": [
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          },
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          },
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          },
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          },
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          }
+        ]
+      },
+      {
+        "heading": {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        },
+        "items": [
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          },
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          },
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          },
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          },
+          {
+            "_dataUrl": "/common/link-test-text-14-char.json"
+          }
+        ]
+      }
+    ]
+  },
+  "EXAMPLE tophat": {
+    "links": [
+      {
+        "_template": "common/link",
+        "attributes": {
+          "href": "link1",
+          "title": "Brightspot Base",
+          "_template": "common/attributes"
+        },
+        "body": {
+          "_template": "common/text",
+          "text": "link 1"
+        }
+      },
+      {
+        "_template": "common/link",
+        "attributes": {
+          "href": "link2",
+          "title": "Brightspot Base",
+          "_template": "common/attributes"
+        },
+        "body": {
+          "_template": "common/text",
+          "text": "link 2"
+        }
+      }
+    ]
+  },
+  "extraMenu": [
+    {
+      "link": {
+        "_template": "common/link",
+        "attributes": {
+          "href": "news",
+          "title": "News",
+          "_template": "common/attributes"
+        },
+        "body": {
+          "_template": "common/text",
+          "text": "News"
+        }
+      },
+      "subMenu": [
+        {
+          "_template": "common/link",
+          "attributes": {
+            "href": "sublink1",
+            "title": "Sublink 1",
+            "_template": "common/attributes"
+          },
+          "body": {
+            "_template": "common/text",
+            "text": "Sublink 1"
+          }
+        },
+        {
+          "_template": "common/link",
+          "attributes": {
+            "href": "sublink2",
+            "title": "Sublink 2",
+            "_template": "common/attributes"
+          },
+          "body": {
+            "_template": "common/text",
+            "text": "Sublink 2"
+          }
+        },
+        {
+          "_template": "common/link",
+          "attributes": {
+            "href": "sublink3",
+            "title": "Sublink 3",
+            "_template": "common/attributes"
+          },
+          "body": {
+            "_template": "common/text",
+            "text": "Sublink 3 Sublink 3 Sublink 3"
+          }
+        }
+      ]
+    },
+    {
+      "link": {
+        "_template": "common/link",
+        "attributes": {
+          "href": "shows",
+          "title": "Shows",
+          "_template": "common/attributes"
+        },
+        "body": {
+          "_template": "common/text",
+          "text": "Shows"
+        }
+      },
+      "subMenu": [
+        {
+          "_template": "common/link",
+          "attributes": {
+            "href": "sublink1",
+            "title": "Sublink 1",
+            "_template": "common/attributes"
+          },
+          "body": {
+            "_template": "common/text",
+            "text": "Sublink 1"
+          }
+        },
+        {
+          "_template": "common/link",
+          "attributes": {
+            "href": "sublink2",
+            "title": "Sublink 2",
+            "_template": "common/attributes"
+          },
+          "body": {
+            "_template": "common/text",
+            "text": "Sublink 2"
+          }
+        },
+        {
+          "_template": "common/link",
+          "attributes": {
+            "href": "sublink3",
+            "title": "Sublink 3",
+            "_template": "common/attributes"
+          },
+          "body": {
+            "_template": "common/text",
+            "text": "Sublink 3 Sublink 3 Sublink 3"
+          }
+        }
+      ]
+    },
+    {
+      "link": {
+        "_template": "common/link",
+        "attributes": {
+          "href": "experience",
+          "title": "Experience NYC",
+          "_template": "common/attributes"
+        },
+        "body": {
+          "_template": "common/text",
+          "text": "Experience NYC"
+        }
+      }
+    },
+    {
+      "link": {
+        "_template": "common/link",
+        "attributes": {
+          "href": "jobs",
+          "title": "Jobs",
+          "_template": "common/attributes"
+        },
+        "body": {
+          "_template": "common/text",
+          "text": "Jobs"
+        }
+      },
+      "subMenu": [
+        {
+          "_template": "common/link",
+          "attributes": {
+            "href": "sublink1",
+            "title": "Sublink 1",
+            "_template": "common/attributes"
+          },
+          "body": {
+            "_template": "common/text",
+            "text": "Sublink 1"
+          }
+        },
+        {
+          "_template": "common/link",
+          "attributes": {
+            "href": "sublink2",
+            "title": "Sublink 2",
+            "_template": "common/attributes"
+          },
+          "body": {
+            "_template": "common/text",
+            "text": "Sublink 2"
+          }
+        },
+        {
+          "_template": "common/link",
+          "attributes": {
+            "href": "sublink3",
+            "title": "Sublink 3",
+            "_template": "common/attributes"
+          },
+          "body": {
+            "_template": "common/text",
+            "text": "Sublink 3 Sublink 3 Sublink 3"
+          }
+        }
+      ]
+    },
+    {
+      "link": {
+        "_template": "common/link",
+        "attributes": {
+          "href": "buy",
+          "title": "Buy Tickets",
+          "_template": "common/attributes"
+        },
+        "body": {
+          "_template": "common/text",
+          "text": "Buy Tickets"
+        }
+      }
+    }
+  ],
+  "EXAMPLE extraLinks": [
+    {
+      "_template": "common/link",
+      "attributes": {
+        "href": "link1",
+        "title": "Brightspot Base",
+        "_template": "common/attributes"
+      },
+      "body": {
+        "_template": "common/text",
+        "text": "link 1 haha!"
+      }
+    },
+    {
+      "_template": "common/link",
+      "attributes": {
+        "href": "link2",
+        "title": "Brightspot Base",
+        "_template": "common/attributes"
+      },
+      "body": {
+        "_template": "common/text",
+        "text": "link 2"
+      }
+    }
+  ],
+  "sharing": {
+    "links": [
+      {
+        "_template": "common/link",
+        "icon": "facebook",
+        "attributes": {
+          "href": "http://www.facebook.com",
+          "title": "Facebook",
+          "target": "_blank",
+          "_template": "common/attributes"
+        }
+      },
+      {
+        "_template": "common/link",
+        "icon": "twitter",
+        "attributes": {
+          "href": "http://www.twitter.com",
+          "title": "Twitter",
+          "target": "_blank",
+          "_template": "common/attributes"
+        }
+      },
+      {
+        "_template": "common/link",
+        "icon": "pinterest",
+        "attributes": {
+          "href": "http://www.pinterest.com",
+          "title": "Pinterest",
+          "target": "_blank",
+          "_template": "common/attributes"
+        }
+      },
+      {
+        "_template": "common/link",
+        "icon": "linkedin",
+        "attributes": {
+          "href": "http://www.linkedin.com",
+          "title": "LinkedIn",
+          "target": "_blank",
+          "_template": "common/attributes"
+        }
+      }
+    ]
+  }
 }

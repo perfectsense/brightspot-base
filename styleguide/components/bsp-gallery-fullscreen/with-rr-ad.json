@@ -1,29 +1,23 @@
 {
-	"_template" : "common/body",
-
-	"headerView" : {
-		"_dataUrl" : "/components/bsp-site-header-simple/styleguide-header.json"
-	},
-
-	"mainView" : {
-		"_template" : "layouts/two-col-main-left-aside-right",
-
-		"main" : {
-			"components" : [
-				{
-					"_dataUrl" : "/components/bsp-gallery-fullscreen/gallery.json"
-				}
-			]
-		},
-
-		"aside" : {
-
-			"components" : [
-				{
-					"_dataUrl" : "/common/link-image-300x250.json"
-				}
-			]
-
-		}
-	}
+  "_template": "common/body",
+  "headerView": {
+    "_dataUrl": "/components/bsp-site-header-simple/styleguide-header.json"
+  },
+  "mainView": {
+    "_template": "layouts/two-col-main-left-aside-right",
+    "main": {
+      "components": [
+        {
+          "_dataUrl": "/components/bsp-gallery-fullscreen/gallery.json"
+        }
+      ]
+    },
+    "aside": {
+      "components": [
+        {
+          "_dataUrl": "/common/link-image-300x250.json"
+        }
+      ]
+    }
+  }
 }

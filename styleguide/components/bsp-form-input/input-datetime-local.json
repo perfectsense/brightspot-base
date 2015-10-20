@@ -1,20 +1,26 @@
 {
-	"_template" : "components/bsp-form-input",
-	"showMessagesAbove": true,
-	"attributes": {
-		"data-bsp-form-field-datetime-local": true,
-		"id": "datetimelocalinput1",
-		"required": true,
-		"type": "datetime-local"
-	},
-	"errors": [
-		{ "typeMismatch": "Date must follow format mm/dd/yyyy" },
-		{ "valueMissing": "Please enter a date" }
-	],
-	"label": {
-		"attributes": {
-			"for": "datetimelocalinput1"
-		},
-		"text": "Datetime local"
-	}
+  "_template": "components/bsp-form-input",
+  "showMessagesAbove": true,
+  "attributes": {
+    "data-bsp-form-field-datetime-local": true,
+    "id": "datetimelocalinput1",
+    "required": true,
+    "type": "datetime-local",
+    "_template": "common/attributes"
+  },
+  "errors": [
+    {
+      "typeMismatch": "Date must follow format mm/dd/yyyy"
+    },
+    {
+      "valueMissing": "Please enter a date"
+    }
+  ],
+  "label": {
+    "attributes": {
+      "for": "datetimelocalinput1",
+      "_template": "common/attributes"
+    },
+    "text": "Datetime local"
+  }
 }

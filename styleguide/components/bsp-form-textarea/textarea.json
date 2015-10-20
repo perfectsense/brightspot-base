@@ -1,17 +1,21 @@
 {
-	"_template" : "components/bsp-form-textarea",
-	"showMessagesAbove": true,
-	"attributes": {
-		"id": "textarea1",
-		"required": true
-	},
-	"errors": [
-		{ "valueMissing": "Please enter some text" }
-	],
-	"label": {
-		"attributes": {
-			"for": "textarea1"
-		},
-		"text": "Textarea"
-	}
+  "_template": "components/bsp-form-textarea",
+  "showMessagesAbove": true,
+  "attributes": {
+    "id": "textarea1",
+    "required": true,
+    "_template": "common/attributes"
+  },
+  "errors": [
+    {
+      "valueMissing": "Please enter some text"
+    }
+  ],
+  "label": {
+    "attributes": {
+      "for": "textarea1",
+      "_template": "common/attributes"
+    },
+    "text": "Textarea"
+  }
 }

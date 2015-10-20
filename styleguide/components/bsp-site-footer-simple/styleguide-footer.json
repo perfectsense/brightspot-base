@@ -1,5 +1,4 @@
 {
-    "_template" : "components/bsp-site-footer-simple",
-
-    "disclaimer": "Copyright © Brightspot"
+  "_template": "components/bsp-site-footer-simple",
+  "disclaimer": "Copyright © Brightspot"
 }

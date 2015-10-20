@@ -1,19 +1,25 @@
 {
-	"_template" : "components/bsp-form-input",
-	"showMessagesAbove": true,
-	"attributes": {
-		"id": "number1",
-		"required": true,
-		"type": "number"
-	},
-	"errors": [
-		{ "typeMismatch": "Number is not valid" },
-		{ "valueMissing": "Please enter a number" }
-	],
-	"label": {
-		"attributes": {
-			"for": "number1"
-		},
-		"text": "Number *"
-	}
+  "_template": "components/bsp-form-input",
+  "showMessagesAbove": true,
+  "attributes": {
+    "id": "number1",
+    "required": true,
+    "type": "number",
+    "_template": "common/attributes"
+  },
+  "errors": [
+    {
+      "typeMismatch": "Number is not valid"
+    },
+    {
+      "valueMissing": "Please enter a number"
+    }
+  ],
+  "label": {
+    "attributes": {
+      "for": "number1",
+      "_template": "common/attributes"
+    },
+    "text": "Number *"
+  }
 }

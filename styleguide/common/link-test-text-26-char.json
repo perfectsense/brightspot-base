@@ -1,14 +1,12 @@
 {
-	"_template" : "common/link",
-
-	"attributes" : {
-		"href"  : "link",
-		"title" : "Link Title"
-	},
-
-    "body" : {
-        "_template" : "common/text",
-
-        "text"  : "Bresaola corned beef bacon"
-    }
+  "_template": "common/link",
+  "attributes": {
+    "href": "link",
+    "title": "Link Title",
+    "_template": "common/attributes"
+  },
+  "body": {
+    "_template": "common/text",
+    "text": "Bresaola corned beef bacon"
+  }
 }

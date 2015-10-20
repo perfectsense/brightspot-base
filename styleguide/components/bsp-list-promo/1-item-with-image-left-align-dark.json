@@ -1,90 +1,66 @@
 {
-    "_template" : "components/bsp-list-promo",
-
-    "options" : {
-        "modifierClass" : "image-50-width-background"
-    },
-
-    "heading" : {
-
-        "_template" : "common/text",
-
-        "text" : "1 Image left aligned with dark background for text"
-
-    },
-
-    "listItems" : [
+  "_template": "components/bsp-list-promo",
+  "options": {
+    "modifierClass": "image-50-width-background"
+  },
+  "heading": {
+    "_template": "common/text",
+    "text": "1 Image left aligned with dark background for text"
+  },
+  "listItems": [
+    {
+      "imgAlign": "left",
+      "sections": [
         {
-            "imgAlign" : "left",
-
-            "sections" : [
-                {
-                    "_template" : "components/bsp-list-promo-item-handler",
-
-                    "name" : "image",
-
-                    "image" : {
-
-                        "_template" : "common/link",
-
-                        "attributes" : {
-                            "href"  : "link",
-                            "title" : "Link Title"
-                        },
-
-                        "body" : {
-
-                            "_template" : "common/image",
-
-                            "attributes" : {
-                                "alt" : "Test Alt",
-                                "src" : "/assets/images/800x450.png"
-                            }
-                        }
-                    }
-                },
-                {
-
-                    "_template" : "components/bsp-list-promo-item-handler",
-
-                    "name" : "text",
-
-                    "link" : {
-
-                        "_template" : "common/link",
-
-                        "attributes" : {
-                            "href"  : "link",
-                            "title" : "Link Title"
-                        },
-
-                        "body" : {
-                            "_template" : "common/text",
-                            "text" : "8 Burning Questions Link"
-                        }
-
-                    },
-
-                    "title" : {
-
-                        "_template" : "common/link",
-
-                        "attributes" : {
-                            "href"  : "link",
-                            "title" : "Link Title"
-                        },
-
-                        "body" : {
-                            "_template" : "common/text",
-                            "text" : "8 Burning Questions Title"
-                        }
-
-                    },
-
-                    "description" : "Shankle pork loin landjaeger pork chop t-bone. Shank capicola strip steak, salami prosciutto ham hock venison. Short ribs meatloaf doner hamburger frankfurter tri-tip."
-
-                }
-            ]
+          "_template": "components/bsp-list-promo-item-handler",
+          "name": "image",
+          "image": {
+            "_template": "common/link",
+            "attributes": {
+              "href": "link",
+              "title": "Link Title",
+              "_template": "common/attributes"
+            },
+            "body": {
+              "_template": "common/image",
+              "attributes": {
+                "alt": "Test Alt",
+                "src": "/assets/images/800x450.png",
+                "_template": "common/attributes"
+              }
+            }
+          }
+        },
+        {
+          "_template": "components/bsp-list-promo-item-handler",
+          "name": "text",
+          "link": {
+            "_template": "common/link",
+            "attributes": {
+              "href": "link",
+              "title": "Link Title",
+              "_template": "common/attributes"
+            },
+            "body": {
+              "_template": "common/text",
+              "text": "8 Burning Questions Link"
+            }
+          },
+          "title": {
+            "_template": "common/link",
+            "attributes": {
+              "href": "link",
+              "title": "Link Title",
+              "_template": "common/attributes"
+            },
+            "body": {
+              "_template": "common/text",
+              "text": "8 Burning Questions Title"
+            }
+          },
+          "description": "Shankle pork loin landjaeger pork chop t-bone. Shank capicola strip steak, salami prosciutto ham hock venison. Short ribs meatloaf doner hamburger frankfurter tri-tip."
         }
-    ]
+      ]
+    }
+  ]
 }

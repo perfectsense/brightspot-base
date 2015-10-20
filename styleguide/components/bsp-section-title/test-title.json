@@ -1,5 +1,4 @@
 {
-	"_template" : "components/section-title",
-
-	"sectionTitle" : "Test Section"
+  "_template": "components/section-title",
+  "sectionTitle": "Test Section"
 }

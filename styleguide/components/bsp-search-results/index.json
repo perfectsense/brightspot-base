@@ -1,34 +1,27 @@
 {
-    "_template" : "common/body",
-
-    "headerView" : {
-        "_dataUrl" : "/components/bsp-site-header-simple/styleguide-header.json"
-    },
-
-    "mainView" : {
-        "_template" : "layouts/two-col-main-left-fixed-right",
-
-        "main" : {
-            "components" : [
-                {
-                    "_dataUrl" : "/components/bsp-search-results/search-results.json"
-                }
-            ]
-        },
-
-        "aside" : {
-            "components" : [
-                {
-                    "_template" : "common/html",
-
-                    "text": "<p>Right Rail Modules can go here</p>"
-                }
-            ]
+  "_template": "common/body",
+  "headerView": {
+    "_dataUrl": "/components/bsp-site-header-simple/styleguide-header.json"
+  },
+  "mainView": {
+    "_template": "layouts/two-col-main-left-fixed-right",
+    "main": {
+      "components": [
+        {
+          "_dataUrl": "/components/bsp-search-results/search-results.json"
         }
+      ]
     },
-
-    "footerView" : {
-        "_dataUrl" : "/components/bsp-site-footer-simple/styleguide-footer.json"
+    "aside": {
+      "components": [
+        {
+          "_template": "common/html",
+          "text": "<p>Right Rail Modules can go here</p>"
+        }
+      ]
     }
-
+  },
+  "footerView": {
+    "_dataUrl": "/components/bsp-site-footer-simple/styleguide-footer.json"
+  }
 }

@@ -1,41 +1,42 @@
 {
-	"_template" : "common/metadata",
-
-	"title" : "Styleguide Title",
-
-	"canonicalURL" : "",
-
-	"metadata" : [
-		{
-			"attributes" : {
-				"name"  : "description",
-				"content" : "Styleguide Description"
-			}
-		},
-		{
-			"attributes" : {
-				"name"  : "keywords",
-				"content" : "styleguide, key, words"
-			}
-		},
-		{
-			"attributes" : {
-				"property"  : "og:title",
-				"content" : "Styleguide Title"
-			}
-		},
-		{
-			"attributes" : {
-				"property"  : "og:description",
-				"content" : "Styleguide Description"
-			}
-		},
-		{
-			"attributes" : {
-				"property"  : "og:keywords",
-				"content" : "styleguide, key, words"
-			}
-		}
-	]
-	
+  "_template": "common/metadata",
+  "title": "Styleguide Title",
+  "canonicalURL": "",
+  "metadata": [
+    {
+      "attributes": {
+        "name": "description",
+        "content": "Styleguide Description",
+        "_template": "common/attributes"
+      }
+    },
+    {
+      "attributes": {
+        "name": "keywords",
+        "content": "styleguide, key, words",
+        "_template": "common/attributes"
+      }
+    },
+    {
+      "attributes": {
+        "property": "og:title",
+        "content": "Styleguide Title",
+        "_template": "common/attributes"
+      }
+    },
+    {
+      "attributes": {
+        "property": "og:description",
+        "content": "Styleguide Description",
+        "_template": "common/attributes"
+      }
+    },
+    {
+      "attributes": {
+        "property": "og:keywords",
+        "content": "styleguide, key, words",
+        "_template": "common/attributes"
+      }
+    }
+  ]
 }

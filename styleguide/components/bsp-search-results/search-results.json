@@ -1,85 +1,70 @@
 {
-	"_template" : "components/bsp-search-results",
-
-	"heading" : [
-
-		{
-			"text" : "We found"
-		},
-		{
-			"className" : "bsp-results",
-			"text" : "128"
-		},
-		{
-			"text" : "results for"
-		},
-		{
-			"className" : "bsp-search-query",
-			"text" : "\"Lion\""
-		}
-
-	],
-
-	"searchForm" : {
-
-        "attributes" : {
-            "action" : "/components/bsp-search-results/search-results-ajax-1.html?q=test"
-        },
-
-		"searchInput" : {
-
-			"_template" : "components/bsp-form-input",
-
-			"showMessagesAbove": true,
-
-			"attributes": {
-				"autocomplete": "off",
-				"class" : "bsp-search-results-input",
-				"id" : "q",
-                "name" : "q",
-				"required": true,
-				"type": "text",
-                "value": "Lion"
-			},
-
-			"errors": [
-				{ "valueMissing": "Please fill in the search query" }
-			]
-		}
-
-	},
-
-	"searchSort" : {
-
-		"_dataUrl" : "/components/bsp-search-results/search-sort.json"
-	},
-
-	"searchFilter" : {
-
-		"_dataUrl" : "/components/bsp-search-results/search-filter.json"
-	},
-
-	"searchResults" : [
-		{
-			"_dataUrl" : "/components/bsp-search-results/results-show-lead.json"
-		},
-		{
-			"_dataUrl" : "/components/bsp-search-results/results-show.json"
-		},
-		{
-			"_dataUrl" : "/components/bsp-search-results/results-images.json"
-		},
-		{
-			"_dataUrl" : "/components/bsp-search-results/results-theater.json"
-		},
-		{
-			"_dataUrl" : "/components/bsp-search-results/results-show.json"
-		}
-
-	],
-
-	"pagination" : {
-		"_dataUrl" : "/components/bsp-pagination/3-pages.json"
-	}
-
+  "_template": "components/bsp-search-results",
+  "heading": [
+    {
+      "text": "We found"
+    },
+    {
+      "className": "bsp-results",
+      "text": "128"
+    },
+    {
+      "text": "results for"
+    },
+    {
+      "className": "bsp-search-query",
+      "text": "\"Lion\""
+    }
+  ],
+  "searchForm": {
+    "attributes": {
+      "action": "/components/bsp-search-results/search-results-ajax-1.html?q=test",
+      "_template": "common/attributes"
+    },
+    "searchInput": {
+      "_template": "components/bsp-form-input",
+      "showMessagesAbove": true,
+      "attributes": {
+        "autocomplete": "off",
+        "class": "bsp-search-results-input",
+        "id": "q",
+        "name": "q",
+        "required": true,
+        "type": "text",
+        "value": "Lion",
+        "_template": "common/attributes"
+      },
+      "errors": [
+        {
+          "valueMissing": "Please fill in the search query"
+        }
+      ]
+    }
+  },
+  "searchSort": {
+    "_dataUrl": "/components/bsp-search-results/search-sort.json"
+  },
+  "searchFilter": {
+    "_dataUrl": "/components/bsp-search-results/search-filter.json"
+  },
+  "searchResults": [
+    {
+      "_dataUrl": "/components/bsp-search-results/results-show-lead.json"
+    },
+    {
+      "_dataUrl": "/components/bsp-search-results/results-show.json"
+    },
+    {
+      "_dataUrl": "/components/bsp-search-results/results-images.json"
+    },
+    {
+      "_dataUrl": "/components/bsp-search-results/results-theater.json"
+    },
+    {
+      "_dataUrl": "/components/bsp-search-results/results-show.json"
+    }
+  ],
+  "pagination": {
+    "_dataUrl": "/components/bsp-pagination/3-pages.json"
+  }
 }

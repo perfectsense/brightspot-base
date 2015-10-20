@@ -1,28 +1,28 @@
 {
-	"_template": "elements/list",
-	"options": {
-		"unstyled": true
-	},
-	"items": [
-		{
-			"_template": "common/text",
-			"text": "Item 1"
-		},
-		{
-			"_template": "common/text",
-			"text": "Item 2"
-		},
-		{
-			"_template": "common/text",
-			"text": "Item 3"
-		},
-		{
-			"_template": "common/text",
-			"text": "Item 4"
-		},
-		{
-			"_template": "common/text",
-			"text": "Item 5"
-		}
-	]
+  "_template": "elements/list",
+  "options": {
+    "unstyled": true
+  },
+  "items": [
+    {
+      "_template": "common/text",
+      "text": "Item 1"
+    },
+    {
+      "_template": "common/text",
+      "text": "Item 2"
+    },
+    {
+      "_template": "common/text",
+      "text": "Item 3"
+    },
+    {
+      "_template": "common/text",
+      "text": "Item 4"
+    },
+    {
+      "_template": "common/text",
+      "text": "Item 5"
+    }
+  ]
 }

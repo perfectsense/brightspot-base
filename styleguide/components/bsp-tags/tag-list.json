@@ -1,76 +1,64 @@
 {
-    "_template" : "components/bsp-tags",
-
-    "title" : {
-        "_template" : "common/text",
-        "text"      : "Related Tags:"
+  "_template": "components/bsp-tags",
+  "title": {
+    "_template": "common/text",
+    "text": "Related Tags:"
+  },
+  "tagList": [
+    {
+      "_template": "common/link",
+      "attributes": {
+        "href": "#",
+        "_template": "common/attributes"
+      },
+      "body": {
+        "_template": "common/text",
+        "text": "MTB"
+      }
     },
-
-    "tagList" : [
-        {
-            "_template" : "common/link",
-
-            "attributes" : {
-                "href" : "#"
-            },
-
-            "body" : {
-                "_template" : "common/text",
-
-                "text" : "MTB"
-            }
-        },
-        {
-            "_template" : "common/link",
-
-            "attributes" : {
-                "href" : "#"
-            },
-
-            "body" : {
-                "_template" : "common/text",
-
-                "text" : "Cycling"
-            }
-        },
-        {
-            "_template" : "common/link",
-
-            "attributes" : {
-                "href" : "#"
-            },
-
-            "body" : {
-                "_template" : "common/text",
-
-                "text" : "Downhill"
-            }
-        },
-        {
-            "_template" : "common/link",
-
-            "attributes" : {
-                "href" : "#"
-            },
-
-            "body" : {
-                "_template" : "common/text",
-
-                "text" : "Enduro"
-            }
-        },
-        {
-            "_template" : "common/link",
-
-            "attributes" : {
-                "href" : "#"
-            },
-
-            "body" : {
-                "_template" : "common/text",
-
-                "text" : "Dirt Jumping"
-            }
-        }
-    ]
+    {
+      "_template": "common/link",
+      "attributes": {
+        "href": "#",
+        "_template": "common/attributes"
+      },
+      "body": {
+        "_template": "common/text",
+        "text": "Cycling"
+      }
+    },
+    {
+      "_template": "common/link",
+      "attributes": {
+        "href": "#",
+        "_template": "common/attributes"
+      },
+      "body": {
+        "_template": "common/text",
+        "text": "Downhill"
+      }
+    },
+    {
+      "_template": "common/link",
+      "attributes": {
+        "href": "#",
+        "_template": "common/attributes"
+      },
+      "body": {
+        "_template": "common/text",
+        "text": "Enduro"
+      }
+    },
+    {
+      "_template": "common/link",
+      "attributes": {
+        "href": "#",
+        "_template": "common/attributes"
+      },
+      "body": {
+        "_template": "common/text",
+        "text": "Dirt Jumping"
+      }
+    }
+  ]
 }

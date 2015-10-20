@@ -1,20 +1,26 @@
 {
-	"_template" : "components/bsp-form-input",
-	"showMessagesAbove": true,
-	"attributes": {
-		"data-bsp-form-field-date": true,
-		"id": "dateinput1",
-		"required": true,
-		"type": "date"
-	},
-	"errors": [
-		{ "typeMismatch": "Date must follow format mm/dd/yyyy" },
-		{ "valueMissing": "Please enter a date" }
-	],
-	"label": {
-		"attributes": {
-			"for": "dateinput1"
-		},
-		"text": "Date"
-	}
+  "_template": "components/bsp-form-input",
+  "showMessagesAbove": true,
+  "attributes": {
+    "data-bsp-form-field-date": true,
+    "id": "dateinput1",
+    "required": true,
+    "type": "date",
+    "_template": "common/attributes"
+  },
+  "errors": [
+    {
+      "typeMismatch": "Date must follow format mm/dd/yyyy"
+    },
+    {
+      "valueMissing": "Please enter a date"
+    }
+  ],
+  "label": {
+    "attributes": {
+      "for": "dateinput1",
+      "_template": "common/attributes"
+    },
+    "text": "Date"
+  }
 }

@@ -1,20 +1,26 @@
 {
-	"_template" : "components/bsp-form-input",
-	"showMessagesAbove": true,
-	"attributes": {
-		"data-bsp-form-field-month": "data-bsp-form-field-month",
-		"id": "month1",
-		"required": true,
-		"type": "month"
-	},
-	"errors": [
-		{ "typeMismatch": "Month is not valid" },
-		{ "valueMissing": "Please enter a month" }
-	],
-	"label": {
-		"attributes": {
-			"for": "month1"
-		},
-		"text": "Month"
-	}
+  "_template": "components/bsp-form-input",
+  "showMessagesAbove": true,
+  "attributes": {
+    "data-bsp-form-field-month": "data-bsp-form-field-month",
+    "id": "month1",
+    "required": true,
+    "type": "month",
+    "_template": "common/attributes"
+  },
+  "errors": [
+    {
+      "typeMismatch": "Month is not valid"
+    },
+    {
+      "valueMissing": "Please enter a month"
+    }
+  ],
+  "label": {
+    "attributes": {
+      "for": "month1",
+      "_template": "common/attributes"
+    },
+    "text": "Month"
+  }
 }

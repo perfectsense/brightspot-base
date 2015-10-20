@@ -1,15 +1,18 @@
 {
-	"_template" : "components/bsp-form-input",
-	"showMessagesAbove": true,
-	"attributes": {
-		"id": "range1",
-		"required": true,
-		"type": "range"
-	},
-	"errors": [
-		{ "valueMissing": "Please select a range" }
-	],
-	"label": {
-		"text": "Range *"
-	}
+  "_template": "components/bsp-form-input",
+  "showMessagesAbove": true,
+  "attributes": {
+    "id": "range1",
+    "required": true,
+    "type": "range",
+    "_template": "common/attributes"
+  },
+  "errors": [
+    {
+      "valueMissing": "Please select a range"
+    }
+  ],
+  "label": {
+    "text": "Range *"
+  }
 }

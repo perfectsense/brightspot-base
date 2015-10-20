@@ -1,37 +1,44 @@
 {
-	"_template" : "components/bsp-form-select",
-	"showMessagesAbove": true,
-	"attributes": {
-		"id": "select1",
-		"required": true
-	},
-	"errors": [
-		{ "valueMissing": "Please select an option" }
-	],
-	"label": {
-		"attributes": {
-			"for": "select1"
-		},
-		"text": "Select"
-	},
-	"options": [
-		{
-			"attributes": {
-				"value": ""
-			},
-			"text": ""
-		},
-		{
-			"attributes": {
-				"value": 1
-			},
-			"text": "Option 1"
-		},
-		{
-			"attributes": {
-				"value": 2
-			},
-			"text": "Option 2"
-		}
-	]
+  "_template": "components/bsp-form-select",
+  "showMessagesAbove": true,
+  "attributes": {
+    "id": "select1",
+    "required": true,
+    "_template": "common/attributes"
+  },
+  "errors": [
+    {
+      "valueMissing": "Please select an option"
+    }
+  ],
+  "label": {
+    "attributes": {
+      "for": "select1",
+      "_template": "common/attributes"
+    },
+    "text": "Select"
+  },
+  "options": [
+    {
+      "attributes": {
+        "value": "",
+        "_template": "common/attributes"
+      },
+      "text": ""
+    },
+    {
+      "attributes": {
+        "value": 1,
+        "_template": "common/attributes"
+      },
+      "text": "Option 1"
+    },
+    {
+      "attributes": {
+        "value": 2,
+        "_template": "common/attributes"
+      },
+      "text": "Option 2"
+    }
+  ]
 }

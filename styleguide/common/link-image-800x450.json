@@ -1,18 +1,16 @@
 {
-	"_template" : "common/link",
-
-	"attributes" : {
-		"href"  : "link",
-		"title" : "Link Title"
-	},
-
-	"body" : {
-
-		"_template" : "common/image",
-
-		"attributes" : {
-			"alt" : "Image",
-			"src" : "/assets/images/800x450.png"
-		}
-	}
+  "_template": "common/link",
+  "attributes": {
+    "href": "link",
+    "title": "Link Title",
+    "_template": "common/attributes"
+  },
+  "body": {
+    "_template": "common/image",
+    "attributes": {
+      "alt": "Image",
+      "src": "/assets/images/800x450.png",
+      "_template": "common/attributes"
+    }
+  }
 }

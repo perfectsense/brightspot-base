@@ -1,18 +1,22 @@
 {
-	"_template" : "components/bsp-form-input",
-	"showMessagesAbove": true,
-	"attributes": {
-		"id": "color1",
-		"required": true,
-		"type": "color"
-	},
-	"errors": [
-		{ "valueMissing": "Please select a color" }
-	],
-	"label": {
-		"attributes": {
-			"for": "color1"
-		},
-		"text": "Color *"
-	}
+  "_template": "components/bsp-form-input",
+  "showMessagesAbove": true,
+  "attributes": {
+    "id": "color1",
+    "required": true,
+    "type": "color",
+    "_template": "common/attributes"
+  },
+  "errors": [
+    {
+      "valueMissing": "Please select a color"
+    }
+  ],
+  "label": {
+    "attributes": {
+      "for": "color1",
+      "_template": "common/attributes"
+    },
+    "text": "Color *"
+  }
 }

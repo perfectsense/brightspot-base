@@ -1,26 +1,19 @@
 {
-    "_template" : "common/body",
-
-    "headerView" : {
-        "_dataUrl" : "/components/bsp-site-header/logo-extra-menu-social.json"
-    },
-
-    "mainView" : {
-
-        "_template" : "layouts/one-col",
-
-        "main" : {
-            "components" : [
-                {
-                    "_dataUrl" : "/pages/example/page-title.json"
-                }
-            ]
+  "_template": "common/body",
+  "headerView": {
+    "_dataUrl": "/components/bsp-site-header/logo-extra-menu-social.json"
+  },
+  "mainView": {
+    "_template": "layouts/one-col",
+    "main": {
+      "components": [
+        {
+          "_dataUrl": "/pages/example/page-title.json"
         }
-
-    },
-
-    "footerView" : {
-        "_dataUrl" : "/components/bsp-site-footer/standard.json"
+      ]
     }
-
+  },
+  "footerView": {
+    "_dataUrl": "/components/bsp-site-footer/standard.json"
+  }
 }

@@ -1,20 +1,16 @@
 {
-
-	"_template" : "common/link",
-
-	"attributes" : {
-		"href"  : "http://www.brightspot.com/",
-		"title" : "Brightspot Base Styleguide"
-	},
-
-	"body" : {
-
-		"_template" : "common/image",
-
-		"attributes" : {
-			"alt" : "Brightspot",
-			"src" : "/assets/images/logo-site-footer.png"
-		}
-	}
-
+  "_template": "common/link",
+  "attributes": {
+    "href": "http://www.brightspot.com/",
+    "title": "Brightspot Base Styleguide",
+    "_template": "common/attributes"
+  },
+  "body": {
+    "_template": "common/image",
+    "attributes": {
+      "alt": "Brightspot",
+      "src": "/assets/images/logo-site-footer.png",
+      "_template": "common/attributes"
+    }
+  }
 }

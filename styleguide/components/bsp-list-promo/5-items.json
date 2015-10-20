@@ -1,150 +1,113 @@
 {
-	"_template" : "components/bsp-list-promo",
-
-	"options" : {
-		"modifierClass" : "hard-item-heights",
-		"orderedList"	: true
-	},
-
-	"heading" : {
-
-        "_template" : "common/text",
-
-        "text" : "5 items with hardcoded heights"
-
-    },
-
-	"listItems" : [
+  "_template": "components/bsp-list-promo",
+  "options": {
+    "modifierClass": "hard-item-heights",
+    "orderedList": true
+  },
+  "heading": {
+    "_template": "common/text",
+    "text": "5 items with hardcoded heights"
+  },
+  "listItems": [
+    {
+      "sections": [
         {
-            "sections" : [
-                {
-
-                    "_template" : "components/bsp-list-promo-item-handler",
-
-                    "name" : "text",
-
-                    "link" : {
-
-                        "_template" : "common/link",
-
-                        "attributes" : {
-                            "href"  : "link",
-                            "title" : "Link Title"
-                        },
-
-                        "body" : {
-                            "_template" : "common/text",
-                            "text" : "8 Burning Questions Link"
-                        }
-
-                    }
-                }
-            ]
-        },
-        {
-            "sections" : [
-                {
-
-                    "_template" : "components/bsp-list-promo-item-handler",
-
-                    "name" : "text",
-
-                    "link" : {
-
-                        "_template" : "common/link",
-
-                        "attributes" : {
-                            "href"  : "link",
-                            "title" : "Link Title"
-                        },
-
-                        "body" : {
-                            "_template" : "common/text",
-                            "text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
-                        }
-
-                    }
-                }
-            ]
-        },
-        {
-            "sections" : [
-                {
-
-                    "_template" : "components/bsp-list-promo-item-handler",
-
-                    "name" : "text",
-
-                    "link" : {
-
-                        "_template" : "common/link",
-
-                        "attributes" : {
-                            "href"  : "link",
-                            "title" : "Link Title"
-                        },
-
-                        "body" : {
-                            "_template" : "common/text",
-                            "text" : "8 Burning Questions Link"
-                        }
-
-                    }
-                }
-            ]
-        },
-        {
-            "sections" : [
-                {
-
-                    "_template" : "components/bsp-list-promo-item-handler",
-
-                    "name" : "text",
-
-                    "link" : {
-
-                        "_template" : "common/link",
-
-                        "attributes" : {
-                            "href"  : "link",
-                            "title" : "Link Title"
-                        },
-
-                        "body" : {
-                            "_template" : "common/text",
-                            "text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
-                        }
-
-                    }
-
-                }
-            ]
-        },
-        {
-            "sections" : [
-                {
-
-                    "_template" : "components/bsp-list-promo-item-handler",
-
-                    "name" : "text",
-
-                    "link" : {
-
-                        "_template" : "common/link",
-
-                        "attributes" : {
-                            "href"  : "link",
-                            "title" : "Link Title"
-                        },
-
-                        "body" : {
-                            "_template" : "common/text",
-                            "text" : "8 Burning Questions Link"
-                        }
-
-                    }
-                }
-            ]
+          "_template": "components/bsp-list-promo-item-handler",
+          "name": "text",
+          "link": {
+            "_template": "common/link",
+            "attributes": {
+              "href": "link",
+              "title": "Link Title",
+              "_template": "common/attributes"
+            },
+            "body": {
+              "_template": "common/text",
+              "text": "8 Burning Questions Link"
+            }
+          }
         }
-    ]
+      ]
+    },
+    {
+      "sections": [
+        {
+          "_template": "components/bsp-list-promo-item-handler",
+          "name": "text",
+          "link": {
+            "_template": "common/link",
+            "attributes": {
+              "href": "link",
+              "title": "Link Title",
+              "_template": "common/attributes"
+            },
+            "body": {
+              "_template": "common/text",
+              "text": "Bacon ipsum dolor amet turducken jowl shankle, cupim"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sections": [
+        {
+          "_template": "components/bsp-list-promo-item-handler",
+          "name": "text",
+          "link": {
+            "_template": "common/link",
+            "attributes": {
+              "href": "link",
+              "title": "Link Title",
+              "_template": "common/attributes"
+            },
+            "body": {
+              "_template": "common/text",
+              "text": "8 Burning Questions Link"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sections": [
+        {
+          "_template": "components/bsp-list-promo-item-handler",
+          "name": "text",
+          "link": {
+            "_template": "common/link",
+            "attributes": {
+              "href": "link",
+              "title": "Link Title",
+              "_template": "common/attributes"
+            },
+            "body": {
+              "_template": "common/text",
+              "text": "Bacon ipsum dolor amet turducken jowl shankle, cupim"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sections": [
+        {
+          "_template": "components/bsp-list-promo-item-handler",
+          "name": "text",
+          "link": {
+            "_template": "common/link",
+            "attributes": {
+              "href": "link",
+              "title": "Link Title",
+              "_template": "common/attributes"
+            },
+            "body": {
+              "_template": "common/text",
+              "text": "8 Burning Questions Link"
+            }
+          }
+        }
+      ]
+    }
+  ]
 }

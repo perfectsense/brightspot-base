@@ -1,200 +1,173 @@
 {
-    "_template":"components/bsp-site-footer",
-    "firstCol":{
-
-        "heading":"Contact Brightspot",
-        "listItems":[
-            {
-                "_template":"common/link",
-                "attributes":{
-
-                    "href":"link",
-                    "title":"Link Title"
-                },
-
-                "body" : {
-                    "_template" : "common/text",
-                    "text":"Brightspot Store"
-                }
-            },
-
-            {
-                "_template":"common/link",
-                "attributes":{
-
-                    "href":"link",
-                    "title":"Link Title"
-                },
-
-                "body" : {
-                    "_template" : "common/text",
-                    "text":"Brightspot Arts"
-                }
-            },
-
-            {
-                "_template":"common/link",
-                "attributes":{
-
-                    "href":"link",
-                    "title":"Link Title"
-                },
-
-                "body" : {
-                    "_template" : "common/text",
-                    "text":"Brightspot Link"
-                }
-            },
-
-            {
-                "_template":"common/link",
-                "attributes":{
-
-                    "href":"link",
-                    "title":"Link Title"
-                },
-
-                "body" : {
-                    "_template" : "common/text",
-                    "text":"Brightspot News"
-                }
-            },
-
-            {
-                "_template":"common/link",
-                "attributes":{
-
-                    "href":"link",
-                    "title":"Link Title"
-                },
-
-                "body" : {
-                    "_template" : "common/text",
-                    "text":"Brightspot Pro"
-                }
-            }
-        ]
-    },
-
-    "secondCol":{
-
-        "heading":"Contact Brightspot",
-        "listItems":[
-            {
-                "_template":"common/link",
-                "attributes":{
-
-                    "href":"link",
-                    "title":"Link Title"
-                },
-
-                "body" : {
-                    "_template" : "common/text",
-                    "text":"Newsletter"
-                }
-            },
-
-            {
-                "_template":"common/link",
-                "attributes":{
-
-                    "href":"link",
-                    "title":"Link Title"
-                },
-
-                "body" : {
-                    "_template" : "common/text",
-                    "text":"Advertising"
-                }
-            },
-
-            {
-                "_template":"common/link",
-                "attributes":{
-
-                    "href":"link",
-                    "title":"Link Title"
-                },
-
-                "body" : {
-                    "_template" : "common/text",
-                    "text":"Careers"
-                }
-            },
-
-            {
-                "_template":"common/link",
-                "attributes":{
-
-                    "href":"link",
-                    "title":"Link Title"
-                },
-
-                "body" : {
-                    "_template" : "common/text",
-                    "text":"Sitemap"
-                }
-            }
-        ]
-    },
-
-    "thirdCol":{
-
-        "social":"Follow Brightspot",
-        "sharing":{
-
-            "links":[
-                {
-                    "_template":"common/link",
-                    "icon":"facebook",
-                    "attributes":{
-
-                        "href":"http://www.facebook.com",
-                        "title":"Facebook",
-                        "target":"_blank"
-                    }
-                },
-
-                {
-                    "_template":"common/link",
-                    "icon":"twitter",
-                    "attributes":{
-
-                        "href":"http://www.twitter.com",
-                        "title":"Twitter",
-                        "target":"_blank"
-                    }
-                },
-
-                {
-                    "_template":"common/link",
-                    "icon":"pinterest",
-                    "attributes":{
-
-                        "href":"http://www.pinterest.com",
-                        "title":"Pinterest",
-                        "target":"_blank"
-                    }
-                },
-
-                {
-                    "_template":"common/link",
-                    "icon":"linkedin",
-                    "attributes":{
-
-                        "href":"http://www.linkedin.com",
-                        "title":"LinkedIn",
-                        "target":"_blank"
-                    }
-                }
-            ]
+  "_template": "components/bsp-site-footer",
+  "firstCol": {
+    "heading": "Contact Brightspot",
+    "listItems": [
+      {
+        "_template": "common/link",
+        "attributes": {
+          "href": "link",
+          "title": "Link Title",
+          "_template": "common/attributes"
+        },
+        "body": {
+          "_template": "common/text",
+          "text": "Brightspot Store"
         }
-    },
-
-    "disclaimer":"Copyright © Brightspot",
-    "prefix":"Powered by",
-    "logo":{
-
-        "_dataUrl":"/common/link-image-logo-site-footer.json"
+      },
+      {
+        "_template": "common/link",
+        "attributes": {
+          "href": "link",
+          "title": "Link Title",
+          "_template": "common/attributes"
+        },
+        "body": {
+          "_template": "common/text",
+          "text": "Brightspot Arts"
+        }
+      },
+      {
+        "_template": "common/link",
+        "attributes": {
+          "href": "link",
+          "title": "Link Title",
+          "_template": "common/attributes"
+        },
+        "body": {
+          "_template": "common/text",
+          "text": "Brightspot Link"
+        }
+      },
+      {
+        "_template": "common/link",
+        "attributes": {
+          "href": "link",
+          "title": "Link Title",
+          "_template": "common/attributes"
+        },
+        "body": {
+          "_template": "common/text",
+          "text": "Brightspot News"
+        }
+      },
+      {
+        "_template": "common/link",
+        "attributes": {
+          "href": "link",
+          "title": "Link Title",
+          "_template": "common/attributes"
+        },
+        "body": {
+          "_template": "common/text",
+          "text": "Brightspot Pro"
+        }
+      }
+    ]
+  },
+  "secondCol": {
+    "heading": "Contact Brightspot",
+    "listItems": [
+      {
+        "_template": "common/link",
+        "attributes": {
+          "href": "link",
+          "title": "Link Title",
+          "_template": "common/attributes"
+        },
+        "body": {
+          "_template": "common/text",
+          "text": "Newsletter"
+        }
+      },
+      {
+        "_template": "common/link",
+        "attributes": {
+          "href": "link",
+          "title": "Link Title",
+          "_template": "common/attributes"
+        },
+        "body": {
+          "_template": "common/text",
+          "text": "Advertising"
+        }
+      },
+      {
+        "_template": "common/link",
+        "attributes": {
+          "href": "link",
+          "title": "Link Title",
+          "_template": "common/attributes"
+        },
+        "body": {
+          "_template": "common/text",
+          "text": "Careers"
+        }
+      },
+      {
+        "_template": "common/link",
+        "attributes": {
+          "href": "link",
+          "title": "Link Title",
+          "_template": "common/attributes"
+        },
+        "body": {
+          "_template": "common/text",
+          "text": "Sitemap"
+        }
+      }
+    ]
+  },
+  "thirdCol": {
+    "social": "Follow Brightspot",
+    "sharing": {
+      "links": [
+        {
+          "_template": "common/link",
+          "icon": "facebook",
+          "attributes": {
+            "href": "http://www.facebook.com",
+            "title": "Facebook",
+            "target": "_blank",
+            "_template": "common/attributes"
+          }
+        },
+        {
+          "_template": "common/link",
+          "icon": "twitter",
+          "attributes": {
+            "href": "http://www.twitter.com",
+            "title": "Twitter",
+            "target": "_blank",
+            "_template": "common/attributes"
+          }
+        },
+        {
+          "_template": "common/link",
+          "icon": "pinterest",
+          "attributes": {
+            "href": "http://www.pinterest.com",
+            "title": "Pinterest",
+            "target": "_blank",
+            "_template": "common/attributes"
+          }
+        },
+        {
+          "_template": "common/link",
+          "icon": "linkedin",
+          "attributes": {
+            "href": "http://www.linkedin.com",
+            "title": "LinkedIn",
+            "target": "_blank",
+            "_template": "common/attributes"
+          }
+        }
+      ]
     }
+  },
+  "disclaimer": "Copyright © Brightspot",
+  "prefix": "Powered by",
+  "logo": {
+    "_dataUrl": "/common/link-image-logo-site-footer.json"
+  }
 }

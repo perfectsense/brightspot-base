@@ -1,82 +1,60 @@
 {
-	"_template" : "components/bsp-list-promo",
-
-	"options" : {
-		"modifierClass" : "hard-item-heights"
-	},
-
-	"heading" : {
-
-        "_template" : "common/text",
-
-        "text" : "2 items with hardcoded heights"
-
+  "_template": "components/bsp-list-promo",
+  "options": {
+    "modifierClass": "hard-item-heights"
+  },
+  "heading": {
+    "_template": "common/text",
+    "text": "2 items with hardcoded heights"
+  },
+  "listItems": [
+    {
+      "sections": [
+        {
+          "_template": "components/bsp-list-promo-item-handler",
+          "name": "text",
+          "link": {
+            "_template": "common/link",
+            "attributes": {
+              "href": "link",
+              "title": "Link Title",
+              "_template": "common/attributes"
+            },
+            "body": {
+              "_template": "common/text",
+              "text": "8 Burning Questions Link"
+            }
+          }
+        }
+      ]
     },
-
-	"listItems" : [
-		{
-
-            "sections" : [
-                {
-
-                    "_template" : "components/bsp-list-promo-item-handler",
-
-                    "name" : "text",
-
-                    "link" : {
-
-    					"_template" : "common/link",
-
-    					"attributes" : {
-    						"href"  : "link",
-    						"title" : "Link Title"
-    					},
-
-    					"body" : {
-                            "_template" : "common/text",
-                            "text" : "8 Burning Questions Link"
-                        }
-
-    				}
-                }
-            ]
-		},
-		{
-
-            "sections" : [
-                {
-
-                    "_template" : "components/bsp-list-promo-item-handler",
-
-                    "name" : "text",
-
-                    "link" : {
-
-    					"_template" : "common/link",
-
-    					"attributes" : {
-    						"href"  : "link",
-    						"title" : "Link Title"
-    					},
-
-    					"body" : {
-                            "_template" : "common/text",
-                            "text" : "Bacon ipsum dolor amet turducken jowl shankle, cupim"
-                        }
-
-    				}
-                }
-            ]
-		}
-	],
-
-	"cta" : {
-		"options" : {
-			"location" : "bottom"
-		},
-
-		"content" : {
-			"_dataUrl" : "/common/link-test-text-14-char.json"
-		}
-	}
+    {
+      "sections": [
+        {
+          "_template": "components/bsp-list-promo-item-handler",
+          "name": "text",
+          "link": {
+            "_template": "common/link",
+            "attributes": {
+              "href": "link",
+              "title": "Link Title",
+              "_template": "common/attributes"
+            },
+            "body": {
+              "_template": "common/text",
+              "text": "Bacon ipsum dolor amet turducken jowl shankle, cupim"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "cta": {
+    "options": {
+      "location": "bottom"
+    },
+    "content": {
+      "_dataUrl": "/common/link-test-text-14-char.json"
+    }
+  }
 }

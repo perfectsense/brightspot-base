@@ -1,18 +1,23 @@
 {
-	"_template" : "components/bsp-form-input",
-	"showMessagesAbove": true,
-	"attributes": {
-		"autocomplete": "off",
-		"id": "url1",
-		"placeholder": "URL placeholder",
-		"required": true,
-		"type": "url"
-	},
-	"errors": [
-		{ "valueMissing": "Please fill in a URL" },
-		{ "typeMismatch": "URL must follow format http://a.b.c" }
-	],
-	"label": {
-		"text": "URL"
-	}
+  "_template": "components/bsp-form-input",
+  "showMessagesAbove": true,
+  "attributes": {
+    "autocomplete": "off",
+    "id": "url1",
+    "placeholder": "URL placeholder",
+    "required": true,
+    "type": "url",
+    "_template": "common/attributes"
+  },
+  "errors": [
+    {
+      "valueMissing": "Please fill in a URL"
+    },
+    {
+      "typeMismatch": "URL must follow format http://a.b.c"
+    }
+  ],
+  "label": {
+    "text": "URL"
+  }
 }

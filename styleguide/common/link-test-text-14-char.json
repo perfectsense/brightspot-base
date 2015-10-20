@@ -1,15 +1,12 @@
 {
-	"_template" : "common/link",
-
-	"attributes" : {
-		"href"  : "link-me",
-		"title" : "I are a link"
-	},
-
-    "body" : {
-        "_template" : "common/text",
-
-        "text"  : "Link test text"
-    }
-
+  "_template": "common/link",
+  "attributes": {
+    "href": "link-me",
+    "title": "I are a link",
+    "_template": "common/attributes"
+  },
+  "body": {
+    "_template": "common/text",
+    "text": "Link test text"
+  }
 }

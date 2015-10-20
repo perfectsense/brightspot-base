@@ -1,17 +1,20 @@
 {
-	"_template" : "components/bsp-form-input",
-	"showMessagesAbove": true,
-	"attributes": {
-		"autocomplete": "off",
-		"id": "textinput1",
-		"placeholder": "Text input placeholder",
-		"required": true,
-		"type": "text"
-	},
-	"errors": [
-		{ "valueMissing": "Please fill in the text input" }
-	],
-	"label": {
-		"text": "Text"
-	}
+  "_template": "components/bsp-form-input",
+  "showMessagesAbove": true,
+  "attributes": {
+    "autocomplete": "off",
+    "id": "textinput1",
+    "placeholder": "Text input placeholder",
+    "required": true,
+    "type": "text",
+    "_template": "common/attributes"
+  },
+  "errors": [
+    {
+      "valueMissing": "Please fill in the text input"
+    }
+  ],
+  "label": {
+    "text": "Text"
+  }
 }
