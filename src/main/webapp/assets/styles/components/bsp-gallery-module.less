@@ -12,7 +12,7 @@
 }
 
 // set this up to support portrait and landscape images. The portrait ones will center themselves horizontally
-.bsp-carousel-slide {	
+.bsp-carousel-slide {
 	img {
 		height: auto;
 		margin: 0 auto;
@@ -34,6 +34,30 @@
 
 }
 
+// all carousel module navs (thumbs, nav, etc) get a pretty border at the top
+.bsp-carousel-nav {
+
+    .bsp-carousel-slide {
+        position: relative;
+
+        &.current {
+
+            &:after {
+                content:'';
+                position: absolute;
+                bottom: 0;
+                top: 0;
+                left: 0;
+                right: 0;
+                border-top: 5px solid @gallery-current-slide-color;
+            }
+        }
+    }
+
+    .slick-prev, .slick-next {
+        display: none !important;
+    }
+}
 
 // targeted to only take bsp-carousel-slides inside the nav portion of the gallery-nav module
 // this lets us reuse the renderer for thumbs for the text nav and just write css overrides
@@ -48,32 +72,23 @@
 	.bsp-carousel-nav {
 		background-color: @gallery-nav-background-color;
 
-		.bsp-carousel-slide {	
-			
+		.bsp-carousel-slide {
 			color: @white;
 			cursor: pointer;
-			text-align: center;		
-		}
-	}
-}
+            height: 100px;
+            padding: @space;
+			text-align: center;
+            display: flex;
+            align-items: center;
 
-// all carousel module navs (thumbs, nav, etc) get a pretty border at the top
-.bsp-carousel-nav {
+            &.current {
+                background: @brand-primary;
+                color: @black;
+            }
 
-	.bsp-carousel-slide {
-		position: relative;
-
-		&.current {
-
-			&:after {
-				content:'';
-				position: absolute;
-				bottom: 0;
-				top: 0;
-				left: 0;
-				right: 0;
-				border-top: 5px solid @gallery-current-slide-color;
-			}
+            &:after {
+                display: none;
+            }
 		}
 	}
 }
