@@ -61,6 +61,17 @@
 // for anything past medium, we want the thumbs, anything before, no thumbs
 @media @mq-md {
 
+    // when we are in a gallery, we definitely want to show the prev and next
+    // this is an ovveride to the base carousel styles, which hide the arrows
+    // on a stage+nav carousel
+    .bsp-carousel-gallery {
+        .bsp-carousel-stage {
+            .slick-prev, .slick-next {
+                display: inline-block !important;
+            }
+        }
+    }
+
 	.bsp-carousel-stage.carousel-dots {
 		margin-bottom: 0;
 
