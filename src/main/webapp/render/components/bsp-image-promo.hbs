@@ -13,30 +13,7 @@
 
 			{{#each images}}
 
-				<div class="bsp-column-{{../horizontalSplit}}">
-
-					<div class="bsp-image-promo-image {{#if rolloverImage}}with-rollover{{else}}{{#if rolloverText}}with-rollover{{/if}}{{/if}}">
-
-						{{#with image}}
-							{{render this}}
-						{{/with}}
-
-						{{#with rolloverImage}}
-							{{render this cssClass="bsp-image-promo-rollover-image"}}
-						{{/with}}
-
-						{{#with rolloverText}}
-							{{render this cssClass="bsp-image-promo-rollover-text"}}
-						{{/with}}
-
-						<ul class="bsp-image-promo-links">
-							{{#each promoLinks}}
-								<li>{{render this}}</li>
-							{{/each}}
-						</ul>
-					</div>
-
-				</div>
+				<div class="bsp-column-{{../horizontalSplit}}">{{this}}</div>
 
 			{{/each}}
 

@@ -2,6 +2,7 @@
   "_template": "components/bsp-image-promo",
   "images": [
     {
+      "_template": "components/bsp-image-promo-image",
       "image": {
         "_template": "common/link",
         "attributes": {

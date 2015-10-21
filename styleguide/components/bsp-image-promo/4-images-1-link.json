@@ -4,6 +4,7 @@
   "heading": "4 images with 1 link and lazy load",
   "images": [
     {
+      "_template": "components/bsp-image-promo-image",
       "image": {
         "_template": "common/link",
         "attributes": {
@@ -36,6 +37,7 @@
       ]
     },
     {
+      "_template": "components/bsp-image-promo-image",
       "image": {
         "_template": "common/link",
         "attributes": {
@@ -68,6 +70,7 @@
       ]
     },
     {
+      "_template": "components/bsp-image-promo-image",
       "image": {
         "_template": "common/link",
         "attributes": {
@@ -100,6 +103,7 @@
       ]
     },
     {
+      "_template": "components/bsp-image-promo-image",
       "image": {
         "_template": "common/link",
         "attributes": {

@@ -3,6 +3,7 @@
   "heading": "1 Image with 1 Link and rollover image",
   "images": [
     {
+      "_template": "components/bsp-image-promo-image",
       "image": {
         "_template": "common/link",
         "attributes": {

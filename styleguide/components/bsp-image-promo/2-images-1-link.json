@@ -4,6 +4,7 @@
   "heading": "2 images with 1 link",
   "images": [
     {
+      "_template": "components/bsp-image-promo-image",
       "image": {
         "_template": "common/link",
         "attributes": {
@@ -36,6 +37,7 @@
       ]
     },
     {
+      "_template": "components/bsp-image-promo-image",
       "image": {
         "_template": "common/link",
         "attributes": {
