@@ -21,10 +21,11 @@ You would create the following file path in your project:
 ```
 And then the styleguide would load your viewmodel when this URL is resolved:
 
-http://localhost:3000/components/bsp-article/
+[http://localhost:3000/components/bsp-article/]()
 
 ### Resource Precedence
 
 To provide developers a way to easily override, Base looks to resolve resources within your project's styleguide in the following order:
+
 1. `/styleguide/`
 2. `/node_modules/brightspot-base/styleguide/`

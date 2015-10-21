@@ -99,6 +99,7 @@ As a result, that template would be used instead of the Base template. This is t
 ### Resource Precedence
 
 To provide developers a way to easily override, Base looks to resolve resources within your Brightspot project in the following order:
+
 1. `/src/main/webapp/render/`
 2. `/target/.../src/main/webapp/render/`
 3. `/node_modules/brightspot-base/src/main/webapp/render/`
