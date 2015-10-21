@@ -8,9 +8,7 @@
 			{{#if labelAfterInput}} {{else}}{{label.text}}{{/if}}
 		{{/if}}
 			<select {{attributes}} {{#if autoSubmit}}data-bsp-autosubmit{{/if}}>
-				{{#each options}}
-					<option {{attributes}}>{{text}}</option>
-				{{/each}}
+				{{#each options}}{{this}}{{/each}}
 			</select>
 		{{#if label}}
 			{{#if labelAfterInput}}{{label.text}}{{else}} {{/if}}

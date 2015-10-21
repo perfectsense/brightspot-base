@@ -21,6 +21,7 @@
   },
   "options": [
     {
+      "_template": "components/bsp-form-option",
       "attributes": {
         "value": "Relevance",
         "_template": "common/attributes"
@@ -28,6 +29,7 @@
       "text": "Relevance"
     },
     {
+      "_template": "components/bsp-form-option",
       "attributes": {
         "value": "Popularity",
         "_template": "common/attributes"
@@ -35,6 +37,7 @@
       "text": "Popularity"
     },
     {
+      "_template": "components/bsp-form-option",
       "attributes": {
         "value": "Rating",
         "_template": "common/attributes"

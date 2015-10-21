@@ -20,6 +20,7 @@
   },
   "options": [
     {
+      "_template": "components/bsp-form-option",
       "attributes": {
         "value": "",
         "_template": "common/attributes"
@@ -27,6 +28,7 @@
       "text": ""
     },
     {
+      "_template": "components/bsp-form-option",
       "attributes": {
         "value": 1,
         "_template": "common/attributes"
@@ -34,6 +36,7 @@
       "text": "Option 1"
     },
     {
+      "_template": "components/bsp-form-option",
       "attributes": {
         "value": 2,
         "_template": "common/attributes"
