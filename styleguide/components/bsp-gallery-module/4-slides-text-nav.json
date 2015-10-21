@@ -41,15 +41,19 @@
   ],
   "galleryNavItems": [
     {
+      "_template": "components/bsp-gallery-module-with-nav-item",
       "navText": "Shankle pork loin landjaeger pork chop"
     },
     {
+      "_template": "components/bsp-gallery-module-with-nav-item",
       "navText": "Salami prosciutto ham hock venison"
     },
     {
+      "_template": "components/bsp-gallery-module-with-nav-item",
       "navText": "Ribs meatloaf doner hamburger frankfurter tri-tip"
     },
     {
+      "_template": "components/bsp-gallery-module-with-nav-item",
       "navText": "Shank capicola strip steak"
     }
   ]

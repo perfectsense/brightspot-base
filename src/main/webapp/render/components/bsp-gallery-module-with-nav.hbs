@@ -24,12 +24,7 @@
 
 				{{#each galleryNavItems}}
 					<div class="bsp-carousel-slide">
-						{{#with navImage}}
-							{{render this}}
-						{{/with}}
-						{{#if navText}}
-							<p>{{navText}}</p>
-						{{/if}}
+                        {{this}}
 					</div>
 				{{/each}}
 

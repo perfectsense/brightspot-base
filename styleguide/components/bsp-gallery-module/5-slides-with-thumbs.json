@@ -65,6 +65,7 @@
   ],
   "galleryNavItems": [
     {
+      "_template": "components/bsp-gallery-module-with-nav-item",
       "navImage": {
         "_template": "common/image",
         "attributes": {
@@ -74,6 +75,7 @@
       }
     },
     {
+      "_template": "components/bsp-gallery-module-with-nav-item",
       "navImage": {
         "_template": "common/image",
         "attributes": {
@@ -83,6 +85,7 @@
       }
     },
     {
+      "_template": "components/bsp-gallery-module-with-nav-item",
       "navImage": {
         "_template": "common/image",
         "attributes": {
@@ -92,6 +95,7 @@
       }
     },
     {
+      "_template": "components/bsp-gallery-module-with-nav-item",
       "navImage": {
         "_template": "common/image",
         "attributes": {
@@ -101,6 +105,7 @@
       }
     },
     {
+      "_template": "components/bsp-gallery-module-with-nav-item",
       "navImage": {
         "_template": "common/image",
         "attributes": {
@@ -110,6 +115,7 @@
       }
     },
     {
+      "_template": "components/bsp-gallery-module-with-nav-item",
       "navImage": {
         "_template": "common/image",
         "attributes": {
@@ -119,6 +125,7 @@
       }
     },
     {
+      "_template": "components/bsp-gallery-module-with-nav-item",
       "navImage": {
         "_template": "common/image",
         "attributes": {
@@ -128,6 +135,7 @@
       }
     },
     {
+      "_template": "components/bsp-gallery-module-with-nav-item",
       "navImage": {
         "_template": "common/image",
         "attributes": {
