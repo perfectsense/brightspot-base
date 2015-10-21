@@ -135,9 +135,8 @@
     }
   ],
   "cta": {
-    "options": {
-      "location": "bottom"
-    },
+    "_template": "components/bsp-cta",
+    "location": "bottom",
     "content": {
       "_dataUrl": "/common/link-test-text-14-char.json"
     }
