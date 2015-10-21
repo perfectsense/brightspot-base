@@ -9,6 +9,10 @@
  * The plugin will kill the click on that a element (or submit on the form), ajax in it's href (or action + serialized data)
  * and find the "selectorHere" div on the subsequent page.
  *
+ * IMPORTANT: Your Ajaxed page HAS to have the "selectorHere" on it. That's how this code knows what to replace and where.
+ * It does NOT assume that it's returning the entire Ajax result into the target. It finds the "selectorHere" on the ajax
+ * result and gets it's contents
+ *
  * It will then by default, replace the "selectorHere" on the current page with the newly ajaxed div.
  *
  * You have the option to set data-bsp-ajax-links=-options to enable loadType (default: replace, optional: append, loadMore).
@@ -275,9 +279,12 @@ var bsp_search_results = {
             var $newContent;
 
             // something went wrong and we do not have data at this point, we ajaxed something weird or
-            // something else bad happened. Refresh the page to make sure we have a clean slate for user
+            // we couldn't find out selector in the AJAX results, or something else bad happened.
+            // We will instead of replacing/appending the data, just head over to the page we were supposed to ajax
+            // This should be either the form action with serialized data or the link we were supposed to ajax in
+            // Should be a good result for the user either way, as the BE should load the page they want
             if(!cleanData.length) {
-                window.location.reload();
+                window.location.href = options.href;
             }
 
             // we are no longer loading, the content is about to hit the DOM

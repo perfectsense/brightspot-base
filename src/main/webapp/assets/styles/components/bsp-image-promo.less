@@ -50,7 +50,7 @@
 
 		// upon hover show the rollover items
 		&:hover {
-			.bsp-image-promo-rollover-image, .bsp-image-promo-rollover-text {			
+			.bsp-image-promo-rollover-image, .bsp-image-promo-rollover-text {
 				opacity: 1;
 			}
 		}
@@ -78,10 +78,14 @@
 			display: table-cell;
 		}
 
-		a {	
+		a {
 			color: @white;
 			display: block;
-			padding: @space-half; 
+			padding: @space-half;
+
+            &:hover {
+                color: @link-hover-color;
+            }
 		}
 	}
 }
@@ -93,5 +97,5 @@
 			display: table-cell;
 		}
 	}
-	
+
 }
