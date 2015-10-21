@@ -16,11 +16,12 @@
       "valueMissing": "Please enter a date"
     }
   ],
+  "labelAttributes": {
+    "for": "datetimelocalinput1",
+    "_template": "common/attributes"
+  },
   "label": {
-    "attributes": {
-      "for": "datetimelocalinput1",
-      "_template": "common/attributes"
-    },
+    "_template": "common/text",
     "text": "Datetime local"
   }
 }

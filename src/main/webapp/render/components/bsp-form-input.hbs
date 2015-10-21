@@ -3,12 +3,12 @@
 {{/if}}
 <div class="bsp-form-input {{#if attributes.type}}bsp-form-input-{{attributes.type}}{{/if}}">
 {{#if label}}
-	<label {{label.attributes}}>
-	{{#if labelAfterInput}} {{else}}{{label.text}}{{/if}}
+	<label {{labelAttributes}}>
+	{{#if labelAfterInput}} {{else}}{{label}}{{/if}}
 {{/if}}
 	<input {{attributes}} {{#if autoSubmit}}data-bsp-autosubmit{{/if}} />
 {{#if label}}
-	{{#if labelAfterInput}}{{label.text}}{{else}} {{/if}}
+	{{#if labelAfterInput}}{{label}}{{else}} {{/if}}
 	</label>
 {{/if}}
 </div>

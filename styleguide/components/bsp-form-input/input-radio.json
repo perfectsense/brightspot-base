@@ -19,6 +19,7 @@
         }
       ],
       "label": {
+        "_template": "common/text",
         "text": "Radio Button 1"
       }
     },
@@ -34,6 +35,7 @@
         "_template": "common/attributes"
       },
       "label": {
+        "_template": "common/text",
         "text": "Radio Button 2"
       }
     },
@@ -49,6 +51,7 @@
         "_template": "common/attributes"
       },
       "label": {
+        "_template": "common/text",
         "text": "Radio Button 3"
       }
     }

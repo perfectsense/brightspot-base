@@ -11,11 +11,12 @@
       "valueMissing": "Please enter some text"
     }
   ],
+  "attributes": {
+    "for": "textarea1",
+    "_template": "common/attributes"
+  },
   "label": {
-    "attributes": {
-      "for": "textarea1",
-      "_template": "common/attributes"
-    },
+    "_template": "common/text",
     "text": "Textarea"
   }
 }

@@ -13,11 +13,12 @@
       "valueMissing": "Please check the checkbox"
     }
   ],
+  "labelAttributes": {
+    "for": "checkbox1",
+    "_template": "common/attributes"
+  },
   "label": {
-    "attributes": {
-      "for": "checkbox1",
-      "_template": "common/attributes"
-    },
+    "_template": "common/text",
     "text": "Checkbox input"
   }
 }

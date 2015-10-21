@@ -15,6 +15,7 @@
     }
   ],
   "label": {
+    "_template": "common/text",
     "text": "Telephone *"
   }
 }

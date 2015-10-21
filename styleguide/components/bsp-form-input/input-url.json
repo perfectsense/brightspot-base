@@ -18,6 +18,7 @@
     }
   ],
   "label": {
+    "_template": "common/text",
     "text": "URL"
   }
 }
