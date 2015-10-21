@@ -4,6 +4,7 @@
   "canonicalURL": "",
   "metadata": [
     {
+      "_template": "common/metadata-item",
       "attributes": {
         "name": "description",
         "content": "Styleguide Description",
@@ -11,6 +12,7 @@
       }
     },
     {
+      "_template": "common/metadata-item",
       "attributes": {
         "name": "keywords",
         "content": "styleguide, key, words",
@@ -18,6 +20,7 @@
       }
     },
     {
+      "_template": "common/metadata-item",
       "attributes": {
         "property": "og:title",
         "content": "Styleguide Title",
@@ -25,6 +28,7 @@
       }
     },
     {
+      "_template": "common/metadata-item",
       "attributes": {
         "property": "og:description",
         "content": "Styleguide Description",
@@ -32,6 +36,7 @@
       }
     },
     {
+      "_template": "common/metadata-item",
       "attributes": {
         "property": "og:keywords",
         "content": "styleguide, key, words",
