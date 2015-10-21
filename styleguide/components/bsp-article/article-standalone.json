@@ -37,17 +37,18 @@
     "_dataUrl": "/components/bsp-tags/tag-list.json"
   },
   "lead": {
-    "_template": "common/image",
-    "meta": {
-      "credit": "Photo Credit",
-      "caption": {
-        "_template": "common/text",
-        "text": "Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra"
-      }
+    "_template": "common/figure",
+    "credit": "Photo Credit",
+    "caption": {
+      "_template": "common/text",
+      "text": "Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra"
     },
-    "attributes": {
-      "src": "/assets/images/800x450.png",
-      "_template": "common/attributes"
+    "image": {
+      "_template": "common/image",
+      "attributes": {
+        "src": "/assets/images/800x450.png",
+        "_template": "common/attributes"
+      }
     }
   },
   "body": [
@@ -131,13 +132,14 @@
       "_template": "components/bsp-enhancement",
       "align": "right",
       "content": {
-        "_template": "common/image",
-        "meta": {
-          "credit": "Photo Credit"
-        },
-        "attributes": {
-          "src": "/assets/images/200x300.png",
-          "_template": "common/attributes"
+        "_template": "common/figure",
+        "credit": "Photo Credit",
+        "image": {
+          "_template": "common/image",
+          "attributes": {
+            "src": "/assets/images/200x300.png",
+            "_template": "common/attributes"
+          }
         }
       }
     },
