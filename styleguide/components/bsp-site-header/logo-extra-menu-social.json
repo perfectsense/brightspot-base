@@ -178,6 +178,7 @@
   },
   "extraMenu": [
     {
+      "_template": "components/bsp-site-header-extra-menu-item",
       "link": {
         "_template": "common/link",
         "attributes": {
@@ -230,6 +231,7 @@
       ]
     },
     {
+      "_template": "components/bsp-site-header-extra-menu-item",
       "link": {
         "_template": "common/link",
         "attributes": {
@@ -282,6 +284,7 @@
       ]
     },
     {
+      "_template": "components/bsp-site-header-extra-menu-item",
       "link": {
         "_template": "common/link",
         "attributes": {
@@ -296,6 +299,7 @@
       }
     },
     {
+      "_template": "components/bsp-site-header-extra-menu-item",
       "link": {
         "_template": "common/link",
         "attributes": {
@@ -348,6 +352,7 @@
       ]
     },
     {
+      "_template": "components/bsp-site-header-extra-menu-item",
       "link": {
         "_template": "common/link",
         "attributes": {

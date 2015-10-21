@@ -89,20 +89,7 @@
 			<div class="bsp-extra-menu-wrapper">
 				<ul class="bsp-extra-menu">
 					{{#each extraMenu}}
-					<li>
-						{{!-- This one doesn't use the partial as we needed a custom icon inside --}}
-						{{#with link}}
-							<a {{#with this.attributes}}{{this}}{{/with}}>{{body.text}}{{#if ../subMenu}}<i class="icon"></i>{{/if}}</a>
-						{{/with}}
-
-						{{#if subMenu}}
-						<ul class="bsp-extra-menu-submenu">
-							{{#each subMenu}}
-								<li>{{render this}}</li>
-							{{/each}}
-						</ul>
-						{{/if}}
-					</li>
+                        <li>{{this}}</li>
 					{{/each}}
 				</ul>
 			</div>
