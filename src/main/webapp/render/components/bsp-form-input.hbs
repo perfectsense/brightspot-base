@@ -4,11 +4,11 @@
 <div class="bsp-form-input {{#if attributes.type}}bsp-form-input-{{attributes.type}}{{/if}}">
 {{#if label}}
 	<label {{label.attributes}}>
-	{{#if labelAfterInput}} {{else}}{{{label.text}}}{{/if}}
+	{{#if labelAfterInput}} {{else}}{{label.text}}{{/if}}
 {{/if}}
 	<input {{attributes}} {{#if options.autoSubmit}}data-bsp-autosubmit{{/if}} />
 {{#if label}}
-	{{#if labelAfterInput}}{{{label.text}}}{{else}} {{/if}}
+	{{#if labelAfterInput}}{{label.text}}{{else}} {{/if}}
 	</label>
 {{/if}}
 </div>
