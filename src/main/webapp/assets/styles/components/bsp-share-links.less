@@ -3,17 +3,15 @@
 
 
 .bsp-share-links-centering {
-    &:extend(.vertical-center-wrapper all);
-
     display: none;
     float: right;
     height: 100%;
+    align-items: center;
 }
 
 .bsp-share-links {
 	&:extend(.ts-1);
 	&:extend(.bsp-list-inline all);
-	&:extend(.vertical-center);
 
     margin: 0;
 
@@ -70,7 +68,7 @@
 @media @mq-sm {
 
 	.bsp-share-links-centering {
-		display: block;
+		display: flex;
 	}
 
 }
