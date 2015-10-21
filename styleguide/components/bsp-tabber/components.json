@@ -3,6 +3,7 @@
   "heading": "A tabber with embedded components",
   "tabs": [
     {
+      "_template": "components/bsp-tabber-tab",
       "label": "Tab 1",
       "labelSubText": "Tab 1 Sub Text",
       "component": {
@@ -10,6 +11,7 @@
       }
     },
     {
+      "_template": "components/bsp-tabber-tab",
       "label": "Tab 2",
       "component": {
         "_template": "common/link",
@@ -29,6 +31,7 @@
       }
     },
     {
+      "_template": "components/bsp-tabber-tab",
       "label": "Tab 3",
       "component": {
         "_template": "components/bsp-table",

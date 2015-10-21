@@ -3,16 +3,19 @@
   "heading": "A basic text tabber (headings and CTA optional)",
   "tabs": [
     {
+      "_template": "components/bsp-tabber-tab",
       "label": "Tab 1",
       "textHeading": "Tab 1 heading",
       "text": "Tab 1 text"
     },
     {
+      "_template": "components/bsp-tabber-tab",
       "label": "Tab 2",
       "textHeading": "Tab 2 heading",
       "text": "Tab 2 text"
     },
     {
+      "_template": "components/bsp-tabber-tab",
       "label": "Tab 3",
       "textHeading": "Tab 3 heading",
       "text": "Tab 3 text"
