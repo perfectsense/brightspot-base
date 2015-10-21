@@ -26,16 +26,7 @@
 		{{/with}}
 
 		<div class="bsp-article-content">
-			{{#each body}}
-				{{#if options.enhancement}}
-					<div class="bsp-article-enhancement{{#if options.align}} align-{{options.align}}{{/if}}">
-						{{render content}}
-					</div>
-				{{else}}
-					{{render content}}
-				{{/if}}
-
-			{{/each}}
+			{{#each body}}{{this}}{{/each}}
 		</div>
 
         {{#with tags}}

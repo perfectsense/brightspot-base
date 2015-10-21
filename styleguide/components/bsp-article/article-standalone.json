@@ -52,21 +52,15 @@
   },
   "body": [
     {
-      "content": {
-        "_template": "common/html",
-        "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
-      }
+      "_template": "common/html",
+      "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
     },
     {
-      "content": {
-        "_template": "common/html",
-        "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
-      }
+      "_template": "common/html",
+      "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
     },
     {
-      "options": {
-        "enhancement": true
-      },
+      "_template": "components/bsp-enhancement",
       "content": {
         "_template": "common/link",
         "cssClass": "related-link",
@@ -81,15 +75,11 @@
       }
     },
     {
-      "content": {
-        "_template": "common/html",
-        "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
-      }
+      "_template": "common/html",
+      "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
     },
     {
-      "options": {
-        "enhancement": true
-      },
+      "_template": "components/bsp-enhancement",
       "content": {
         "_template": "components/bsp-blockquote",
         "author": "Jordan Spieth",
@@ -97,36 +87,26 @@
       }
     },
     {
-      "content": {
-        "_template": "common/html",
-        "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
-      }
+      "_template": "common/html",
+      "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
     },
     {
-      "options": {
-        "enhancement": true
-      },
+      "_template": "components/bsp-enhancement",
       "content": {
         "_dataUrl": "/components/bsp-gallery-module/7-slides-dots.json"
       }
     },
     {
-      "content": {
-        "_template": "common/html",
-        "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
-      }
+      "_template": "common/html",
+      "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
     },
     {
-      "content": {
-        "_template": "common/html",
-        "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
-      }
+      "_template": "common/html",
+      "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
     },
     {
-      "options": {
-        "enhancement": true,
-        "align": "left"
-      },
+      "_template": "components/bsp-enhancement",
+      "align": "left",
       "content": {
         "_template": "common/image",
         "attributes": {
@@ -136,28 +116,20 @@
       }
     },
     {
-      "content": {
-        "_template": "common/html",
-        "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
-      }
+      "_template": "common/html",
+      "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
     },
     {
-      "content": {
-        "_template": "common/html",
-        "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
-      }
+      "_template": "common/html",
+      "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
     },
     {
-      "content": {
-        "_template": "common/html",
-        "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
-      }
+      "_template": "common/html",
+      "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
     },
     {
-      "options": {
-        "enhancement": true,
-        "align": "right"
-      },
+      "_template": "components/bsp-enhancement",
+      "align": "right",
       "content": {
         "_template": "common/image",
         "meta": {
@@ -170,34 +142,24 @@
       }
     },
     {
-      "content": {
-        "_template": "common/html",
-        "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
-      }
+      "_template": "common/html",
+      "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
     },
     {
-      "content": {
-        "_template": "common/html",
-        "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
-      }
+      "_template": "common/html",
+      "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
     },
     {
-      "content": {
-        "_template": "common/html",
-        "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
-      }
+      "_template": "common/html",
+      "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
     },
     {
-      "content": {
-        "_template": "common/html",
-        "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
-      }
+      "_template": "common/html",
+      "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
     },
     {
-      "content": {
-        "_template": "common/html",
-        "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
-      }
+      "_template": "common/html",
+      "text": "<p>Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison. Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf. Tenderloin cow pastrami shank.</p>"
     }
   ]
 }
