@@ -42,24 +42,28 @@
   ],
   "socialLinks": [
     {
+      "_template": "components/bsp-bio-social-link",
       "icon": "twitter",
       "link": {
         "_dataUrl": "/common/link-test-text-14-char.json"
       }
     },
     {
+      "_template": "components/bsp-bio-social-link",
       "icon": "facebook",
       "link": {
         "_dataUrl": "/common/link-test-text-14-char.json"
       }
     },
     {
+      "_template": "components/bsp-bio-social-link",
       "icon": "instagram",
       "link": {
         "_dataUrl": "/common/link-test-text-14-char.json"
       }
     },
     {
+      "_template": "components/bsp-bio-social-link",
       "icon": "external-link",
       "link": {
         "_dataUrl": "/common/link-test-text-14-char.json"
