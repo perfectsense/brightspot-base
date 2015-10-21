@@ -1,4 +1,5 @@
 {
+  "_template": "components/bsp-search-results-filters",
   "heading": {
     "_template": "components/bsp-section-title",
     "sectionTitle": "Content Type"
