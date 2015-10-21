@@ -7,11 +7,10 @@
     "required": false,
     "_template": "common/attributes"
   },
-  "errors": [
-    {
-      "valueMissing": "Please select an option"
-    }
-  ],
+  "errorMessages": {
+    "_template": "common/json-object",
+    "valueMissing": "Please select an option"
+  },
   "label": {
     "attributes": {
       "for": "bsp-search-results-sort",

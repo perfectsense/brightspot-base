@@ -9,11 +9,10 @@
     "type": "tel",
     "_template": "common/attributes"
   },
-  "errors": [
-    {
-      "valueMissing": "Please fill in the telephone number"
-    }
-  ],
+  "errorMessages": {
+    "_template": "common/json-object",
+    "valueMissing": "Please fill in the telephone number"
+  },
   "label": {
     "_template": "common/text",
     "text": "Telephone *"

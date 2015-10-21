@@ -8,14 +8,11 @@
     "type": "month",
     "_template": "common/attributes"
   },
-  "errors": [
-    {
-      "typeMismatch": "Month is not valid"
-    },
-    {
-      "valueMissing": "Please enter a month"
-    }
-  ],
+  "errorMessages": {
+    "_template": "common/json-object",
+    "typeMismatch": "Month is not valid",
+    "valueMissing": "Please enter a month"
+  },
   "labelAttributes": {
     "for": "month1",
     "_template": "common/attributes"

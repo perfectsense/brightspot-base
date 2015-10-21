@@ -9,11 +9,10 @@
     "type": "time",
     "_template": "common/attributes"
   },
-  "errors": [
-    {
-      "valueMissing": "Please fill in a time"
-    }
-  ],
+  "errorMessages": {
+    "_template": "common/json-object",
+    "valueMissing": "Please fill in a time"
+  },
   "label": {
     "_template": "common/text",
     "text": "Time"

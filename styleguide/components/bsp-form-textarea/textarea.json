@@ -6,11 +6,10 @@
     "required": true,
     "_template": "common/attributes"
   },
-  "errors": [
-    {
-      "valueMissing": "Please enter some text"
-    }
-  ],
+  "errorMessages": {
+    "_template": "common/json-object",
+    "valueMissing": "Please enter some text"
+  },
   "attributes": {
     "for": "textarea1",
     "_template": "common/attributes"

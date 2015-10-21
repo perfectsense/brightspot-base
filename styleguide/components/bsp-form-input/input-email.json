@@ -9,14 +9,11 @@
     "type": "email",
     "_template": "common/attributes"
   },
-  "errors": [
-    {
-      "typeMismatch": "Email address must follow format a@b.c"
-    },
-    {
-      "valueMissing": "Please enter an email address"
-    }
-  ],
+  "errorMessages": {
+    "_template": "common/json-object",
+    "typeMismatch": "Email address must follow format a@b.c",
+    "valueMissing": "Please enter an email address"
+  },
   "labelAttributes": {
     "for": "emailinput1",
     "_template": "common/attributes"

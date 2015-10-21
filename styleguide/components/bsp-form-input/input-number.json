@@ -7,14 +7,11 @@
     "type": "number",
     "_template": "common/attributes"
   },
-  "errors": [
-    {
-      "typeMismatch": "Number is not valid"
-    },
-    {
-      "valueMissing": "Please enter a number"
-    }
-  ],
+  "errorMessages": {
+    "_template": "common/json-object",
+    "typeMismatch": "Number is not valid",
+    "valueMissing": "Please enter a number"
+  },
   "labelAttributes": {
     "for": "number1",
     "_template": "common/attributes"

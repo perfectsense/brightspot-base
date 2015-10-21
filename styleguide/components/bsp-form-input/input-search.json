@@ -9,11 +9,10 @@
     "type": "search",
     "_template": "common/attributes"
   },
-  "errors": [
-    {
-      "valueMissing": "Please fill in the search field"
-    }
-  ],
+  "errorMessages": {
+    "_template": "common/json-object",
+    "valueMissing": "Please fill in the search field"
+  },
   "label": {
     "_template": "common/text",
     "text": "Search"

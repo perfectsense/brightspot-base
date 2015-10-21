@@ -13,11 +13,10 @@
         "value": 1,
         "_template": "common/attributes"
       },
-      "errors": [
-        {
-          "valueMissing": "Please select one of the radio buttons"
-        }
-      ],
+      "errorMessages": {
+        "_template": "common/json-object",
+        "valueMissing": "Please select one of the radio buttons"
+      },
       "label": {
         "_template": "common/text",
         "text": "Radio Button 1"

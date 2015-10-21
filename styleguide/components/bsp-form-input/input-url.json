@@ -9,14 +9,11 @@
     "type": "url",
     "_template": "common/attributes"
   },
-  "errors": [
-    {
-      "valueMissing": "Please fill in a URL"
-    },
-    {
-      "typeMismatch": "URL must follow format http://a.b.c"
-    }
-  ],
+  "errorMessages": {
+    "_template": "common/json-object",
+    "valueMissing": "Please fill in a URL",
+    "typeMismatch": "URL must follow format http://a.b.c"
+  },
   "label": {
     "_template": "common/text",
     "text": "URL"

@@ -7,11 +7,10 @@
     "type": "color",
     "_template": "common/attributes"
   },
-  "errors": [
-    {
-      "valueMissing": "Please select a color"
-    }
-  ],
+  "errorMessages": {
+    "_template": "common/json-object",
+    "valueMissing": "Please select a color"
+  },
   "labelAttributes": {
     "for": "color1",
     "_template": "common/attributes"

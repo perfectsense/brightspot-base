@@ -25,11 +25,10 @@
         "type": "text",
         "_template": "common/attributes"
       },
-      "errors": [
-        {
-          "valueMissing": "Please fill in the search query"
-        }
-      ]
+      "errorMessages": {
+        "_template": "common/json-object",
+        "valueMissing": "Please fill in the search query"
+      }
     }
   },
   "mainMenu": {

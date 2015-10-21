@@ -7,11 +7,10 @@
     "type": "range",
     "_template": "common/attributes"
   },
-  "errors": [
-    {
-      "valueMissing": "Please select a range"
-    }
-  ],
+  "errorMessages": {
+    "_template": "common/json-object",
+    "valueMissing": "Please select a range"
+  },
   "label": {
     "_template": "common/text",
     "text": "Range *"

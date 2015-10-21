@@ -8,14 +8,11 @@
     "type": "date",
     "_template": "common/attributes"
   },
-  "errors": [
-    {
-      "typeMismatch": "Date must follow format mm/dd/yyyy"
-    },
-    {
-      "valueMissing": "Please enter a date"
-    }
-  ],
+  "errorMessages": {
+    "_template": "common/json-object",
+    "typeMismatch": "Date must follow format mm/dd/yyyy",
+    "valueMissing": "Please enter a date"
+  },
   "labelAttributes": {
     "for": "dateinput1",
     "_template": "common/attributes"
