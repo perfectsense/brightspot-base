@@ -1,0 +1,9 @@
+<tr class="row-{{@index}}">
+    {{#each columns}}
+        <td class="col-{{@index}}">
+            {{#each this}}
+                {{render this}}
+            {{/each}}
+        </td>
+    {{/each}}
+</tr>

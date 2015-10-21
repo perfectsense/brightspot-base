@@ -9,7 +9,8 @@
   },
   "rows": [
     {
-      "row": [
+      "_template": "components/bsp-table-row",
+      "columns": [
         [
           {
             "_template": "common/html",
@@ -61,7 +62,8 @@
       ]
     },
     {
-      "row": [
+      "_template": "components/bsp-table-row",
+      "columns": [
         [
           {
             "_template": "common/html",
@@ -113,7 +115,8 @@
       ]
     },
     {
-      "row": [
+      "_template": "components/bsp-table-row",
+      "columns": [
         [
           {
             "_template": "common/html",
@@ -165,7 +168,8 @@
       ]
     },
     {
-      "row": [
+      "_template": "components/bsp-table-row",
+      "columns": [
         [
           {
             "_template": "common/html",
@@ -217,7 +221,8 @@
       ]
     },
     {
-      "row": [
+      "_template": "components/bsp-table-row",
+      "columns": [
         [
           {
             "_template": "common/html",
@@ -269,7 +274,8 @@
       ]
     },
     {
-      "row": [
+      "_template": "components/bsp-table-row",
+      "columns": [
         [
           {
             "_template": "common/html",
@@ -321,7 +327,8 @@
       ]
     },
     {
-      "row": [
+      "_template": "components/bsp-table-row",
+      "columns": [
         [
           {
             "_template": "common/html",
@@ -373,7 +380,8 @@
       ]
     },
     {
-      "row": [
+      "_template": "components/bsp-table-row",
+      "columns": [
         [
           {
             "_template": "common/html",

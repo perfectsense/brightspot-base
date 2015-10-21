@@ -13,25 +13,15 @@
 							<th class="col-{{@index}}">
 								{{#each this}}
 									{{render this}}
-								{{/each}}	
+								{{/each}}
 							</th>
 						{{/each}}
 					</thead>
 				{{/if}}
 				<tbody>
-					{{#each rows}}
-						<tr class="row-{{@index}}">
-							{{#each row}}
-								<td class="col-{{@index}}">
-									{{#each this}}
-										{{render this}}
-									{{/each}}						
-								</td>
-							{{/each}}
-						</tr>
-					{{/each}}			
+					{{#each rows}}{{this}}{{/each}}
 				</tbody>
-					
+
 			</table>
 		</div>
 

@@ -52,7 +52,8 @@
   ],
   "rows": [
     {
-      "row": [
+      "_template": "components/bsp-table-row",
+      "columns": [
         [
           {
             "_template": "common/link",
@@ -100,7 +101,8 @@
       ]
     },
     {
-      "row": [
+      "_template": "components/bsp-table-row",
+      "columns": [
         [
           {
             "_template": "common/link",
@@ -148,7 +150,8 @@
       ]
     },
     {
-      "row": [
+      "_template": "components/bsp-table-row",
+      "columns": [
         [
           {
             "_template": "common/link",
