@@ -1,5 +1,5 @@
 {{#if this.meta}}<figure class="bsp-img-with-meta">{{/if}}
-    <img {{#if attributes.data-lazy}}data-bsp-lazyimage src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="{{/if}} {{#if imgClass}} class="{{imgClass}}"{{/if}} {{> common/attributes attributes}} />
+    <img {{#if attributes.data-lazy}}data-bsp-lazyimage src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="{{/if}} {{#if imgClass}} class="{{imgClass}}"{{/if}} {{attributes}} />
     {{#if this.meta.caption}}
         <figcaption><span class="bsp-img-caption">{{render this.meta.caption}}{{#if this.meta.credit}}<figcaption><span class="bsp-img-credit"> ({{this.meta.credit}})</span></figcaption>{{/if}}</span></figcaption>
     {{else}}

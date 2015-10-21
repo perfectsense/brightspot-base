@@ -3,10 +3,10 @@
 {{/if}}
 <div class="bsp-form-textarea">
 	{{#if label}}
-		<label {{> common/attributes label.attributes }}>
+		<label {{label.attributes}}>
 		{{#if labelAfterInput}} {{else}}{{label.text}}{{/if}}
 	{{/if}}
-		<textarea {{> common/attributes attributes }}>{{#if text}}{{text}}{{/if}}</textarea>
+		<textarea {{attributes}}>{{#if text}}{{text}}{{/if}}</textarea>
 	{{#if label}}
 		{{#if labelAfterInput}}{{label.text}}{{else}} {{/if}}
 		</label>

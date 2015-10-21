@@ -57,7 +57,7 @@
 				<ul>
 					{{#each this}}
 						{{!-- no partial helper, as this is custom --}}
-						<li><a class="bsp-bio-social-link" {{#with link.attributes}}{{> common/attributes }}{{/with}}><i class="icon icon-{{icon}}"></i>{{link.body.text}}</a></li>
+						<li><a class="bsp-bio-social-link" {{#with link.attributes}}{{this}}{{/with}}><i class="icon icon-{{icon}}"></i>{{link.body.text}}</a></li>
 					{{/each}}
 				</ul>
 			</div>

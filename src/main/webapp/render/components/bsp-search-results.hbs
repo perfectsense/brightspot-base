@@ -8,7 +8,7 @@
     		{{/each}}
     	</h1>
 
-    	<form class="bsp-search-results-form" {{#with searchForm.attributes}}{{> common/attributes this}}{{/with}} data-ajax-link-target=".bsp-search-results">
+    	<form class="bsp-search-results-form" {{#with searchForm.attributes}}{{this}}{{/with}} data-ajax-link-target=".bsp-search-results">
             <div class="bsp-search-results-text">
     			{{#with searchForm.searchInput}}
     				{{render this}}

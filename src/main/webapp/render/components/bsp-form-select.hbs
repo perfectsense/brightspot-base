@@ -4,12 +4,12 @@
 {{#if options}}
 	<div class="bsp-form-select">
 		{{#if label}}
-			<label {{> common/attributes label.attributes }}>
+			<label {{label.attributes}}>
 			{{#if labelAfterInput}} {{else}}{{label.text}}{{/if}}
 		{{/if}}
-			<select {{> common/attributes attributes }} {{#if autoSubmit}}data-bsp-autosubmit{{/if}}>
+			<select {{attributes}} {{#if autoSubmit}}data-bsp-autosubmit{{/if}}>
 				{{#each options}}
-					<option {{> common/attributes attributes }}>{{text}}</option>
+					<option {{attributes}}>{{text}}</option>
 				{{/each}}
 			</select>
 		{{#if label}}

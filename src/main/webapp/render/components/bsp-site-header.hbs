@@ -71,7 +71,7 @@
 
 		<div class="bsp-site-search-trigger" data-bsp-toggle-item>
 			<div class="bsp-site-search toggle-item">
-				<form class="bsp-site-search-form" {{#with searchForm.attributes}}{{> common/attributes this}}{{/with}}>
+				<form class="bsp-site-search-form" {{#with searchForm.attributes}}{{this}}{{/with}}>
 					{{#with searchForm.searchInput}}
                         {{render this}}
                     {{/with}}
@@ -92,7 +92,7 @@
 					<li>
 						{{!-- This one doesn't use the partial as we needed a custom icon inside --}}
 						{{#with link}}
-							<a {{#with this.attributes}}{{> common/attributes this}}{{/with}}>{{body.text}}{{#if ../subMenu}}<i class="icon"></i>{{/if}}</a>
+							<a {{#with this.attributes}}{{this}}{{/with}}>{{body.text}}{{#if ../subMenu}}<i class="icon"></i>{{/if}}</a>
 						{{/with}}
 
 						{{#if subMenu}}

@@ -4,7 +4,7 @@
 			{{#with navigate}}
 				<li class="bsp-pagination-navigate-prev">
 					{{#with previous}}
-						<a {{#with attributes}}{{> common/attributes }}{{/with}}><i class="icon icon-angle-left"></i> {{text}}</a>
+						<a {{#with attributes}}{{this}}{{/with}}><i class="icon icon-angle-left"></i> {{text}}</a>
 					{{/with}}
 				</li>
 			{{/with}}
@@ -18,7 +18,7 @@
 			{{#with navigate}}
 				<li class="bsp-pagination-navigate-next">
 					{{#with next}}
-						<a {{#with attributes}}{{> common/attributes }}{{/with}}>{{text}} <i class="icon icon-angle-right"></i></a>
+						<a {{#with attributes}}{{this}}{{/with}}>{{text}} <i class="icon icon-angle-right"></i></a>
 					{{/with}}
 				</li>
 			{{/with}}
