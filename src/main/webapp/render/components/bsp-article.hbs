@@ -12,7 +12,7 @@
 
 		<div class="bsp-meta-data">
 			{{#if authors}}
-		  		<div class="bsp-meta-author">By {{#each authors}}{{#unless @first}}, {{/unless}}{{> common/link link}}{{/each}}</div>
+		  		<div class="bsp-meta-author">By {{#each authors}}{{#unless @first}}, {{/unless}}{{this}}{{/each}}</div>
 			{{/if}}
 			{{#if publishDate}}
 				<div class="bsp-meta-date">{{publishDate}}</div>

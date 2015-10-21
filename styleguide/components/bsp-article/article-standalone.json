@@ -9,33 +9,27 @@
   "subTitle": "Ground round hamburger short loin",
   "authors": [
     {
-      "name": "Robert Simonson",
-      "link": {
-        "_template": "common/link",
-        "attributes": {
-          "href": "#",
-          "title": "Robert Simonson",
-          "_template": "common/attributes"
-        },
-        "body": {
-          "_template": "common/text",
-          "text": "Robert Simonson"
-        }
+      "_template": "common/link",
+      "attributes": {
+        "href": "#",
+        "title": "Robert Simonson",
+        "_template": "common/attributes"
+      },
+      "body": {
+        "_template": "common/text",
+        "text": "Robert Simonson"
       }
     },
     {
-      "name": "Robert Simonson 2",
-      "link": {
-        "_template": "common/link",
-        "attributes": {
-          "href": "#",
-          "title": "Robert Simonson 2",
-          "_template": "common/attributes"
-        },
-        "body": {
-          "_template": "common/text",
-          "text": "Robert Simonson 2"
-        }
+      "_template": "common/link",
+      "attributes": {
+        "href": "#",
+        "title": "Robert Simonson 2",
+        "_template": "common/attributes"
+      },
+      "body": {
+        "_template": "common/text",
+        "text": "Robert Simonson 2"
       }
     }
   ],
