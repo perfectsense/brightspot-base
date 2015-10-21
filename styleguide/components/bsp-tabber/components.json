@@ -31,7 +31,7 @@
     {
       "label": "Tab 3",
       "component": {
-        "_template": "components/bsp-table/bsp-table",
+        "_template": "components/bsp-table",
         "title": "table - no options",
         "headings": [
           {

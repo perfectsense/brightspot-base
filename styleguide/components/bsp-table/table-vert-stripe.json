@@ -1,5 +1,5 @@
 {
-  "_template": "components/bsp-table/bsp-table",
+  "_template": "components/bsp-table",
   "options": {
     "modifierClass": "modifier-class-test",
     "textAlignment": "left-aligned",

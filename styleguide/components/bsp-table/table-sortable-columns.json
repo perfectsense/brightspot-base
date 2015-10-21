@@ -1,5 +1,5 @@
 {
-  "_template": "components/bsp-table/bsp-table",
+  "_template": "components/bsp-table",
   "options": {
     "textAlignment": "left-aligned",
     "verticalAlignment": "top-aligned",
