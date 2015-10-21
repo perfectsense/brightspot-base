@@ -9,6 +9,10 @@
  * The plugin will kill the click on that a element (or submit on the form), ajax in it's href (or action + serialized data)
  * and find the "selectorHere" div on the subsequent page.
  *
+ * IMPORTANT: Your Ajaxed page HAS to have the "selectorHere" on it. That's how this code knows what to replace and where.
+ * It does NOT assume that it's returning the entire Ajax result into the target. It finds the "selectorHere" on the ajax
+ * result and gets it's contents
+ *
  * It will then by default, replace the "selectorHere" on the current page with the newly ajaxed div.
  *
  * You have the option to set data-bsp-ajax-links=-options to enable loadType (default: replace, optional: append, loadMore).
