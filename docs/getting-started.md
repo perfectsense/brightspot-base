@@ -35,6 +35,7 @@ Here's an example of what a Brightspot project directory looks like initially...
  ...and after bootstrapping Base (step #2)
 
  ![Pre-Base](/docs/images/bsp-dir-post-base.png)
+
 3.	Update the `bower.json` and `package.json` files to reflect your project name
 4.	Run `mvn clean install` which will run the bsp-grunt task for the first time and copy all the necessary files into your target directory.
 5. From here, you'll probably want to start [exploring the styleguide](/docs/styleguide.md) included with Base.
