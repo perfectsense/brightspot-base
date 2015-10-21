@@ -224,6 +224,38 @@
                 }
 			}
 		},
+        {
+            "_template" : "components/bsp-list-promo-item-handler",
+
+            "link": {
+                "_template" : "common/link",
+
+                "attributes" : {
+                    "href"  : "/components/bsp-site-header-simple/",
+                    "title" : "BSP Site Header Simple"
+                },
+                "body" : {
+                    "_template" : "common/text",
+                    "text"  : "BSP Site Header Simple"
+                }
+            }
+        },
+        {
+            "_template" : "components/bsp-list-promo-item-handler",
+
+            "link": {
+                "_template" : "common/link",
+
+                "attributes" : {
+                    "href"  : "/components/bsp-site-header-simple-search/",
+                    "title" : "BSP Site Header Simple with Search"
+                },
+                "body" : {
+                    "_template" : "common/text",
+                    "text"  : "BSP Site Header Simple with Search"
+                }
+            }
+        },
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
 

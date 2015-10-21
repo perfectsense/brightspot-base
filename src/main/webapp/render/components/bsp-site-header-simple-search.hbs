@@ -1,0 +1,50 @@
+<header class="bsp-site-header-simple-search-wrapper">
+
+	<div class="bsp-site-header-simple-search">
+		<div class="bsp-site-logo-simple-search">
+			{{#with siteLogo.link}}
+				{{render this imgClass="bsp-site-logo-img"}}
+			{{/with}}
+		</div>
+
+		{{#with navLinks}}
+ 			<nav class="bsp-nav-menu-simple-search">
+				<ul class="bsp-nav-menu-items-simple-search">
+					{{#each this}}
+						<li class="nav-item-simple-search">{{render this }}</li>
+					{{/each}}
+				</ul>
+			</nav>
+		{{/with}}
+
+        <div class="bsp-site-menu-toggle" data-bsp-toggle-item>
+            <div class="bsp-site-menu-trigger-simple-search toggle-trigger">
+                <a href="#"><i class="icon icon-bars"><span class="sr-only">toggle menu</span></i></a>
+            </div>
+            {{#with navLinks}}
+                <nav class="bsp-site-menu-simple-search toggle-item">
+                    <ul class="bsp-site-menu-items-simple-search">
+                        {{#each this}}
+                            <li class="site-item-simple-search">{{render this }}</li>
+                        {{/each}}
+                    </ul>
+                </nav>
+            {{/with}}
+
+            <div class="bsp-site-search-simple-search-wrapper toggle-item">
+                <div class="bsp-site-search-simple-search">
+                    <form class="bsp-site-search-simple-search-form" {{#with searchForm.attributes}}{{> common/attributes this}}{{/with}}>
+                        {{#with searchForm.searchInput}}
+                            {{render this}}
+                        {{/with}}
+
+                        <button class="bsp-site-search-submit" type="submit"><i class="icon icon-search"><span class="sr-only">Go</span></i></button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+	</div>
+
+</header>

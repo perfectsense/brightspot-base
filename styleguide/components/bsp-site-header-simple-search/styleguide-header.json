@@ -1,0 +1,30 @@
+{
+	"_template" : "components/bsp-site-header-simple",
+
+	"siteName" : "Brightspot Base Styleguide",
+
+	"siteLogo" : {
+
+		"link" : {
+
+			"_template" : "common/link",
+
+			"attributes" : {
+				"href"  : "/",
+				"title" : "Brightspot Base Styleguide"
+			},
+
+			"body" : {
+
+				"_template" : "common/image",
+
+				"attributes" : {
+					"alt" : "Brightspot",
+					"src" : "/assets/images/logo-site-header.png"
+				}
+			}
+
+		}
+
+	}
+}

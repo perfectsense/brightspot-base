@@ -1,0 +1,220 @@
+
+
+// wrapper allows us to create the fixed position look/feel
+.bsp-site-header-simple-search-wrapper {
+    background: @header-simple-search-background;
+    height: @header-simple-search-height;
+    left: 0;
+    position: @header-simple-search-positioning;
+    top: 0;
+    width: 100%;
+    z-index: @z-index-header;
+}
+
+// This is our simple header.
+// Contains a linked logo, a list of nav/site links, and a search bar
+.bsp-site-header-simple-search {
+    &:extend(.clearfix all);
+    background: @header-simple-search-background;
+    display: flex;
+    align-items: center;
+    height: @header-simple-search-height;
+    padding: 0 @space;
+    width: 100%;
+
+    @media @mq-lg {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+        width: @screen-lg-min;
+    }
+}
+
+// mobile menu
+.bsp-site-menu-simple-search, .bsp-site-search-simple-search-wrapper {
+    position: absolute;
+    left: 0;
+    background-color: @header-simple-search-background;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+
+    .transition(height .15s linear);
+    z-index: @z-index-menu;
+}
+
+.bsp-site-menu-simple-search {
+    background: @header-simple-search-mobile-menu-background;
+    top: @header-simple-search-height;
+    &.toggle-in {
+        height: @header-simple-search-menu-height;
+    }
+}
+
+.bsp-site-search-simple-search-wrapper {
+    top: @header-simple-search-height + @header-simple-search-menu-height;
+    &.toggle-in {
+        height: @header-simple-search-mobile-search-height;
+    }
+}
+
+.bsp-site-search-simple-search-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%
+}
+
+.bsp-site-search-simple-search {
+    width: 95%;
+}
+
+.bsp-site-search-simple-search-form {
+    position: relative;
+
+    .bsp-form-message {
+        padding: 0;
+    }
+
+    .bsp-form-input {
+        margin: 0;
+    }
+
+    .bsp-site-search-submit {
+        height: 100%;
+    }
+
+    .icon-search {
+        color: @header-simple-search-box-icon-color;
+    }
+}
+
+.site-item-simple-search {
+    font-size: @ts-2;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: @space-and-half;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid @white;
+    }
+}
+
+// hide the nav menu by default
+// it should only show on non-mobile
+.bsp-nav-menu-simple-search {
+    display: none;
+
+    a {
+        color: @header-simple-search-link-color;
+    }
+}
+
+.nav-item-simple-search {
+    font-weight: @font-weight-light;
+    font-size: @ts-2;
+}
+
+// mobile logo layout
+.bsp-site-logo-simple-search {
+    width: 80%;
+    img {
+        width: 215px;
+    }
+}
+
+// mobile display trigger
+.bsp-site-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 20%
+}
+
+.bsp-site-menu-trigger-simple-search {
+    &:extend(.ts-2);
+
+    margin: 0;
+    padding: 0 @space-double;
+    position: relative;
+
+    a {
+        height: @header-simple-search-height;
+        line-height: @header-simple-search-height;
+
+        .icon {
+            line-height: @header-simple-search-height;
+        }
+    }
+
+    &.toggle-in {
+        i {
+            &::before {
+                content: "X";
+            }
+        }
+    }
+}
+
+
+
+// additional styles for non mobile view
+@media @header-mobile-breakpoint {
+
+    // hide mobile display trigger
+    .bsp-site-menu-trigger-simple-search {
+        display: none;
+    }
+
+    // nav menu: non-mobile only
+    .bsp-nav-menu-simple-search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: @header-simple-search-menu-width;
+    }
+
+    .nav-item-simple-search {
+        display: inline-block;
+        padding: 0 @space;
+        text-transform: uppercase;
+    }
+
+    // logo
+    .bsp-site-logo-simple-search {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        width: 20%;
+        padding-left: @space-triple;
+
+        img {
+            widtth: @header-simple-search-logo-width;
+        }
+
+    }
+
+    .bsp-site-menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 20%
+    }
+
+    .bsp-site-search-simple-search-wrapper{
+        position: relative;
+        justify-content: flex-start;
+        height: @header-simple-search-height;
+        top: 0;
+    }
+
+    .bsp-site-search-simple-search {
+        width: 100%;
+    }
+    .bsp-search-results-input {
+        background: @header-simple-search-box-background;
+        height: @header-simple-search-area-height;
+    }
+}
+
