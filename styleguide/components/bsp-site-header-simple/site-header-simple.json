@@ -2,20 +2,18 @@
   "_template": "components/bsp-site-header-simple",
   "siteName": "Brightspot Base Styleguide",
   "siteLogo": {
-    "link": {
-      "_template": "common/link",
+    "_template": "common/link",
+    "attributes": {
+      "href": "/",
+      "title": "Brightspot Base Styleguide",
+      "_template": "common/attributes"
+    },
+    "body": {
+      "_template": "common/image",
       "attributes": {
-        "href": "/",
-        "title": "Brightspot Base Styleguide",
+        "alt": "Brightspot",
+        "src": "/assets/images/logo-site-header.png",
         "_template": "common/attributes"
-      },
-      "body": {
-        "_template": "common/image",
-        "attributes": {
-          "alt": "Brightspot",
-          "src": "/assets/images/logo-site-header.png",
-          "_template": "common/attributes"
-        }
       }
     }
   },

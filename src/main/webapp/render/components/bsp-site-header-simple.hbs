@@ -3,7 +3,7 @@
 	<div class="bsp-site-header-simple">
 		<div class="bsp-site-menu-toggle" data-bsp-toggle-item>
 			<div class="bsp-site-menu-trigger-simple toggle-trigger">
-				<a href="#"><i class="icon icon-bars"><span class="sr-only">toggle menu</span></i></a>			
+				<a href="#"><i class="icon icon-bars"><span class="sr-only">toggle menu</span></i></a>
 			</div>
 			{{#with navLinks}}
 	 			<nav class="bsp-site-menu-simple toggle-item">
@@ -14,11 +14,11 @@
 					</ul>
 				</nav>
 			{{/with}}
-		</div>	
+		</div>
 
 		<div class="bsp-site-logo-simple">
-			{{#with siteLogo.link}}
-				{{render this imgClass="bsp-site-logo-img"}}
+			{{#with siteLogo}}
+				{{this}}
 			{{/with}}
 		</div>
 
