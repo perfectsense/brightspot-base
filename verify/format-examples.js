@@ -21,8 +21,18 @@ function addTemplateToAttributes(json) {
   }
 }
 
+var TRAILING_SPACE_RE = /\s+$/g;
+
 require('./lib/find-examples.js')().forEach(function (example) {
   var oldText = FS.readFileSync(example, 'utf8');
+  var space = '';
+
+  oldText = oldText.replace(TRAILING_SPACE_RE, function (s) {
+    space = s;
+
+    return '';
+  });
+
   var json = JSON.parse(oldText);
 
   addTemplateToAttributes(json);
@@ -30,7 +40,7 @@ require('./lib/find-examples.js')().forEach(function (example) {
   var newText = JSON.stringify(json, null, '  ');
 
   if (oldText !== newText) {
-    FS.writeFileSync(example, newText, 'utf8');
+    FS.writeFileSync(example, newText + space, 'utf8');
     console.log('Changed', example);
   }
 });
