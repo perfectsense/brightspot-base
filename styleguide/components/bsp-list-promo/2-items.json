@@ -1,8 +1,6 @@
 {
   "_template": "components/bsp-list-promo",
-  "options": {
-    "modifierClass": "hard-item-heights"
-  },
+  "modifierClass": "hard-item-heights",
   "heading": {
     "_template": "common/text",
     "text": "2 items with hardcoded heights"

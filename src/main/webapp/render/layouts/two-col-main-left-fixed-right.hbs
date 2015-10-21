@@ -1,4 +1,4 @@
-<div class="bsp-container{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
+<div class="bsp-container{{#if modifierClass}} {{modifierClass}}{{/if}}">
 
     {{#each aboveColumns}}
         {{render this}}
@@ -16,8 +16,8 @@
 			<div class="bsp-column-fixed toggle-item">
 
 				<div class="bsp-trigger-fixed-column toggle-trigger">
-					<a class="toggle-trigger-link-out icon icon-angle-up" href="#">{{#if aside.options.openText}}{{this}}{{else}}Open{{/if}}</a>
-					<a class="toggle-trigger-link-in  icon icon-angle-down" href="#">{{#if aside.options.closeText}}{{this}}{{else}}Close{{/if}}</a>
+					<a class="toggle-trigger-link-out icon icon-angle-up" href="#">{{#if aside.openText}}{{this}}{{else}}Open{{/if}}</a>
+					<a class="toggle-trigger-link-in  icon icon-angle-down" href="#">{{#if aside.closeText}}{{this}}{{else}}Close{{/if}}</a>
 				</div>
 
                 {{#each aside}}

@@ -6,9 +6,7 @@
   "checkboxes": [
     {
       "_template": "components/bsp-form-input",
-      "options": {
-        "autoSubmit": true
-      },
+      "autoSubmit": true,
       "labelAfterInput": true,
       "attributes": {
         "id": "bsp-search-filter-all",
@@ -26,9 +24,7 @@
     },
     {
       "_template": "components/bsp-form-input",
-      "options": {
-        "autoSubmit": true
-      },
+      "autoSubmit": true,
       "labelAfterInput": true,
       "attributes": {
         "id": "bsp-search-filter-articles",
@@ -46,9 +42,7 @@
     },
     {
       "_template": "components/bsp-form-input",
-      "options": {
-        "autoSubmit": true
-      },
+      "autoSubmit": true,
       "labelAfterInput": true,
       "attributes": {
         "id": "bsp-search-filter-videos",
@@ -66,9 +60,7 @@
     },
     {
       "_template": "components/bsp-form-input",
-      "options": {
-        "autoSubmit": true
-      },
+      "autoSubmit": true,
       "labelAfterInput": true,
       "attributes": {
         "id": "bsp-search-filter-photo-galleries",
@@ -86,9 +78,7 @@
     },
     {
       "_template": "components/bsp-form-input",
-      "options": {
-        "autoSubmit": true
-      },
+      "autoSubmit": true,
       "labelAfterInput": true,
       "attributes": {
         "id": "bsp-search-filter-shows",
@@ -106,9 +96,7 @@
     },
     {
       "_template": "components/bsp-form-input",
-      "options": {
-        "autoSubmit": true
-      },
+      "autoSubmit": true,
       "labelAfterInput": true,
       "attributes": {
         "id": "bsp-search-filter-people",

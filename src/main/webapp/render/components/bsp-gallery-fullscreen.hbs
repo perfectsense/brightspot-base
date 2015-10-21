@@ -1,4 +1,4 @@
-<div data-bsp-carousel-gallery data-bsp-carousel-gallery-options='{ "dynamicSlideLoad" : "{{options.dynamicSlideLoad}}" {{#if options.thumbnailsToShow}},"nav": { "themeConfig" : { "slidesToShow" : {{options.thumbnailsToShow}} } } {{/if}} }'>
+<div data-bsp-carousel-gallery data-bsp-carousel-gallery-options='{ "dynamicSlideLoad" : "{{dynamicSlideLoad}}" {{#if thumbnailsToShow}},"nav": { "themeConfig" : { "slidesToShow" : {{thumbnailsToShow}} } } {{/if}} }'>
 
     <div class="bsp-carousel-gallery-container">
 
@@ -18,17 +18,17 @@
         <div class="bsp-carousel-gallery">
             <div class="bsp-carousel-stage">
                 {{#each gallerySlides}}
-                    <div class="bsp-carousel-slide{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
+                    <div class="bsp-carousel-slide{{#if modifierClass}} {{modifierClass}}{{/if}}">
                         {{render this}}
                     </div>
                 {{/each}}
             </div>
 
-            {{#if options.galleryThumbnails}}
+            {{#if galleryThumbnails}}
                 <div class="bsp-carousel-nav">
 
                     {{#each gallerySlides}}
-                        <div class="bsp-carousel-slide{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
+                        <div class="bsp-carousel-slide{{#if modifierClass}} {{modifierClass}}{{/if}}">
                             {{render this.thumbnail}}
                         </div>
                     {{/each}}
@@ -39,7 +39,7 @@
 
         <div class="bsp-carousel-gallery-footer">
 
-            {{#if options.galleryThumbnails}}
+            {{#if galleryThumbnails}}
             <div class="bsp-carousel-gallery-thumbs">
                 <span class="icon icon-th-large" href=""></span>
                 <span class="bsp-carousel-gallery-count"></span>

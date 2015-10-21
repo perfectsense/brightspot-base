@@ -1,8 +1,6 @@
 {
   "_template": "components/bsp-image-promo",
-  "options": {
-    "horizontalSplit": "third"
-  },
+  "horizontalSplit": "third",
   "heading": "3 images with 1 link",
   "images": [
     {

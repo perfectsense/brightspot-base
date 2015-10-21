@@ -1,4 +1,4 @@
-<div class="bsp-component bsp-video-player-component{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
+<div class="bsp-component bsp-video-player-component{{#if modifierClass}} {{modifierClass}}{{/if}}">
 
     <div class="bsp-component-content">
         <div class="bsp-video-player">
@@ -65,11 +65,9 @@
                 <div class="bsp-video-player-sharing">{{render this.sharing}}</div>
             {{/if}}
 
-            {{#if cta}}
-                <div class="bsp-component-cta {{#if this.cta.options.location}}cta-{{this.cta.options.location}}{{/if}}">
-                    {{render this.cta.content}}
-                </div>  
-            {{/if}}   
+            {{#with cta}}
+                {{render this}}
+            {{/with}}   
 
         </div>
     </div>

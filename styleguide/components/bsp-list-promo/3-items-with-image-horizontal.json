@@ -1,8 +1,6 @@
 {
   "_template": "components/bsp-list-promo",
-  "options": {
-    "horizontalSplit": "third"
-  },
+  "horizontalSplit": "third",
   "heading": {
     "_template": "common/text",
     "text": "3 Images, horizontal align, with title, text, and CTA"

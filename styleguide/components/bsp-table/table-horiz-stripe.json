@@ -1,13 +1,11 @@
 {
   "_template": "components/bsp-table",
-  "options": {
-    "textAlignment": "left-aligned",
-    "verticalAlignment": "top-aligned",
-    "fullWidth": true,
-    "fixedColWidth": false,
-    "verticalStripes": false,
-    "horizontalStripes": true
-  },
+  "textAlignment": "left-aligned",
+  "verticalAlignment": "top-aligned",
+  "fullWidth": true,
+  "fixedColWidth": false,
+  "verticalStripes": false,
+  "horizontalStripes": true,
   "title": {
     "_template": "common/text",
     "text": "it can has horizontal stripes"

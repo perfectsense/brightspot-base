@@ -9,9 +9,7 @@
       {
         "_template": "/components/bsp-component-group",
         "permalink": "/components/bsp-article/infinite.html",
-        "options": {
-          "infiniteLoad": true
-        },
+        "infiniteLoad": true,
         "components": [
           {
             "_dataUrl": "/components/bsp-article/article-infinite.json"

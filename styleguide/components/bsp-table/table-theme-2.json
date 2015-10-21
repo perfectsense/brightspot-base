@@ -4,9 +4,7 @@
     "_template": "common/text",
     "text": "table - theme 2"
   },
-  "options": {
-    "theme": "theme-2"
-  },
+  "theme": "theme-2",
   "headings": [
     [
       {

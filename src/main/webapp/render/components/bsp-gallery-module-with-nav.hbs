@@ -1,16 +1,16 @@
-<div class="bsp-component bsp-gallery-module-component{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
+<div class="bsp-component bsp-gallery-module-component{{#if modifierClass}} {{modifierClass}}{{/if}}">
 	{{#if galleryTitle}}
 		<h3 class="bsp-component-title">{{render galleryTitle}}</h3>
 	{{/if}}
 
 	<div class="bsp-component-content">
 
-		<div class="gallery-module {{#if options.textNav}}gallery-module-nav{{else}}gallery-module-thumbs{{/if}}" data-bsp-carousel-thumbnav data-bsp-carousel-thumbnav-options='{ "stage" : { "theme" : "carousel-dots" , "themeConfig" : { } }, "nav": { "themeConfig" : { "slidesToShow" : {{#if options.thumbnailsToShow}}{{options.thumbnailsToShow}}{{else}}4{{/if}}, "centerMode" : false } } }'>
+		<div class="gallery-module {{#if textNav}}gallery-module-nav{{else}}gallery-module-thumbs{{/if}}" data-bsp-carousel-thumbnav data-bsp-carousel-thumbnav-options='{ "stage" : { "theme" : "carousel-dots" , "themeConfig" : { } }, "nav": { "themeConfig" : { "slidesToShow" : {{#if thumbnailsToShow}}{{thumbnailsToShow}}{{else}}4{{/if}}, "centerMode" : false } } }'>
 			<div class="bsp-carousel-stage">
 
 				{{#each gallerySlides}}
 					<div class="bsp-carousel-slide">
-						
+
 						{{render this}}
 
 						{{#if navText}}
@@ -32,7 +32,7 @@
 						{{/if}}
 					</div>
 				{{/each}}
-				
+
 			</div>
 		</div>
 
@@ -40,5 +40,5 @@
 
 	{{#with cta}}
         {{render this}}
-	{{/with}}	
+	{{/with}}
 </div>

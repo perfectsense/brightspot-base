@@ -1,8 +1,6 @@
 {
   "_template": "components/bsp-list-promo",
-  "options": {
-    "modifierClass": "bsp-infinite-load-status"
-  },
+  "modifierClass": "bsp-infinite-load-status",
   "heading": {
     "_template": "common/text",
     "text": "Top Articles"

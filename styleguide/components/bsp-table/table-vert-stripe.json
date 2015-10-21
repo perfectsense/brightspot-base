@@ -1,14 +1,12 @@
 {
   "_template": "components/bsp-table",
-  "options": {
-    "modifierClass": "modifier-class-test",
-    "textAlignment": "left-aligned",
-    "verticalAlignment": "top-aligned",
-    "fullWidth": true,
-    "fixedColWidth": false,
-    "verticalStripes": true,
-    "horizontalStripes": false
-  },
+  "modifierClass": "modifier-class-test",
+  "textAlignment": "left-aligned",
+  "verticalAlignment": "top-aligned",
+  "fullWidth": true,
+  "fixedColWidth": false,
+  "verticalStripes": true,
+  "horizontalStripes": false,
   "title": {
     "_template": "common/text",
     "text": "it can has vertical stripes"

@@ -4,9 +4,7 @@
     "_template": "common/text",
     "text": "table - grid theme"
   },
-  "options": {
-    "theme": "theme-grid"
-  },
+  "theme": "theme-grid",
   "headings": [
     [
       {

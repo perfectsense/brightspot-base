@@ -1,8 +1,6 @@
 {
   "_template": "components/bsp-list-promo",
-  "options": {
-    "modifierClass": "image-25-width"
-  },
+  "modifierClass": "image-25-width",
   "listItems": [
     {
       "imgAlign": "left",

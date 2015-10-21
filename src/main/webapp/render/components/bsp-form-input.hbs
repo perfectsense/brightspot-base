@@ -6,7 +6,7 @@
 	<label {{label.attributes}}>
 	{{#if labelAfterInput}} {{else}}{{label.text}}{{/if}}
 {{/if}}
-	<input {{attributes}} {{#if options.autoSubmit}}data-bsp-autosubmit{{/if}} />
+	<input {{attributes}} {{#if autoSubmit}}data-bsp-autosubmit{{/if}} />
 {{#if label}}
 	{{#if labelAfterInput}}{{label.text}}{{else}} {{/if}}
 	</label>

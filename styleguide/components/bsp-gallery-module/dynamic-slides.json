@@ -1,8 +1,6 @@
 {
   "_template": "components/bsp-gallery-module",
-  "options": {
-    "dynamicSlideLoad": true
-  },
+  "dynamicSlideLoad": true,
   "galleryTitle": {
     "_template": "common/text",
     "text": "Dynamic slides, no dots, no thumbs"

@@ -8,9 +8,7 @@
     "main": [
       {
         "_template": "common/html",
-        "options": {
-          "modifierClass": "styleguide-page-description"
-        },
+        "modifierClass": "styleguide-page-description",
         "text": "<p>Need to finish documentation. Some notes: rollover allows for image or just text. One or multiple links at the bottom. By default images fill up container and stack. There is an optional horizontal split in half, third or fourth. </p>"
       },
       {

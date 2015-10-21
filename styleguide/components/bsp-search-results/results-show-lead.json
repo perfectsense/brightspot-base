@@ -1,8 +1,6 @@
 {
   "_template": "components/bsp-list-promo",
-  "options": {
-    "modifierClass": "image-50-width"
-  },
+  "modifierClass": "image-50-width",
   "heading": {
     "_template": "common/text",
     "text": "Shows"

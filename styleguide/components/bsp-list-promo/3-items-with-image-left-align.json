@@ -1,8 +1,6 @@
 {
   "_template": "components/bsp-list-promo",
-  "options": {
-    "modifierClass": "image-33-width"
-  },
+  "modifierClass": "image-33-width",
   "heading": {
     "_template": "common/text",
     "text": "3 Items with Image, left Align"

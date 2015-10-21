@@ -1,9 +1,7 @@
 {
   "_template": "components/bsp-gallery-module",
-  "options": {
-    "theme": "carousel-dots",
-    "dots": true
-  },
+  "theme": "carousel-dots",
+  "dots": true,
   "galleryTitle": {
     "_template": "common/text",
     "text": "7 slides, with dots, no thumbs"

@@ -8,14 +8,11 @@
     "main": [
       {
         "_template": "common/text",
-        "options": {
-          "modifierClass": "styleguide-page-description"
-        },
+        "modifierClass": "styleguide-page-description",
         "text": "<p>The video player documentation needs to go here. Need to get more insight from BE teams how we will integrate with a video player. This might end up being a very custom component per client/site/implementation</p><p>For now, we will support basic native, youtube, video, and brightcove integration. Need to figure out how we will do metrics.</p>"
       },
       {
         "_template": "components/bsp-video-player",
-        "options": {},
         "title": {
           "_template": "common/text",
           "text": "Youtube Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. "
@@ -95,7 +92,6 @@
       },
       {
         "_template": "components/bsp-video-player",
-        "options": {},
         "title": {
           "_template": "common/text",
           "text": "Vimeo Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf."
@@ -107,7 +103,6 @@
       },
       {
         "_template": "components/bsp-video-player",
-        "options": {},
         "title": {
           "_template": "common/text",
           "text": "Native HTML5 (Mp4) Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round."
@@ -119,7 +114,6 @@
       },
       {
         "_template": "components/bsp-video-player",
-        "options": {},
         "title": {
           "_template": "common/text",
           "text": "Brightcove Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. "

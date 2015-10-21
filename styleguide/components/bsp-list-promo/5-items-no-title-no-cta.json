@@ -1,8 +1,6 @@
 {
   "_template": "components/bsp-list-promo",
-  "options": {
-    "modifierClass": "hard-item-heights"
-  },
+  "modifierClass": "hard-item-heights",
   "listItems": [
     {
       "_template": "components/bsp-list-promo-item",

@@ -4,9 +4,7 @@
     "_template": "common/text",
     "text": "table - checkerboard theme"
   },
-  "options": {
-    "theme": "theme-checkerboard"
-  },
+  "theme": "theme-checkerboard",
   "rows": [
     {
       "_template": "components/bsp-table-row",

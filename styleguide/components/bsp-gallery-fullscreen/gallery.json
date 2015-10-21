@@ -1,8 +1,6 @@
 {
   "_template": "components/bsp-gallery-fullscreen",
-  "options": {
-    "galleryThumbnails": true
-  },
+  "galleryThumbnails": true,
   "galleryTitle": "Full screen gallery Title",
   "galleryDescription": {
     "_template": "common/text",

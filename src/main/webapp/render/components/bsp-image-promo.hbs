@@ -1,4 +1,4 @@
-<div class="bsp-component bsp-image-promo-component{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
+<div class="bsp-component bsp-image-promo-component{{#if modifierClass}} {{modifierClass}}{{/if}}">
 	{{#if heading}}
 		<div class="bsp-component-title">{{heading}}</div>
 	{{/if}}
@@ -7,13 +7,13 @@
 
 		<div class="bsp-image-promo">
 
-		{{#if options.horizontalSplit}}
+		{{#if horizontalSplit}}
 			<div class="bsp-row">
 		{{/if}}
 
 			{{#each images}}
 
-				<div class="bsp-column-{{../options.horizontalSplit}}">
+				<div class="bsp-column-{{../horizontalSplit}}">
 
 					<div class="bsp-image-promo-image {{#if rolloverImage}}with-rollover{{else}}{{#if rolloverText}}with-rollover{{/if}}{{/if}}">
 
@@ -40,7 +40,7 @@
 
 			{{/each}}
 
-		{{#if options.horizontalSplit}}
+		{{#if horizontalSplit}}
 			</div>
 		{{/if}}
 

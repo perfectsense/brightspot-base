@@ -1,9 +1,7 @@
 {
   "_template": "components/bsp-gallery-fullscreen",
-  "options": {
-    "galleryThumbnails": true,
-    "dynamicSlideLoad": true
-  },
+  "galleryThumbnails": true,
+  "dynamicSlideLoad": true,
   "galleryTitle": "Full screen gallery Title",
   "gallerySlides": [
     {

@@ -8,9 +8,7 @@
     "main": [
       {
         "_template": "common/html",
-        "options": {
-          "modifierClass": "styleguide-page-description"
-        },
+        "modifierClass": "styleguide-page-description",
         "text": "<p>Pagination Documentation to go here</p>"
       },
       {

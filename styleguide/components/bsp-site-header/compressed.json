@@ -8,9 +8,7 @@
     "aboveColumns": [
       {
         "_template": "common/html",
-        "options": {
-          "modifierClass": "styleguide-page-description"
-        },
+        "modifierClass": "styleguide-page-description",
         "text": "<p style=\"height: 2000px;\">This is the header on a normal page. It's the \"compressed\" view.</p>"
       }
     ]

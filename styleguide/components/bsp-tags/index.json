@@ -8,9 +8,7 @@
     "main": [
       {
         "_template": "common/html",
-        "options": {
-          "modifierClass": "styleguide-page-description"
-        },
+        "modifierClass": "styleguide-page-description",
         "text": "<p>Tags are a list of links with a special class name that visually turns them into a tag. They can be rendered with and without a title</p>"
       },
       {
@@ -18,9 +16,7 @@
       },
       {
         "_template": "common/html",
-        "options": {
-          "modifierClass": "styleguide-page-description"
-        },
+        "modifierClass": "styleguide-page-description",
         "text": "<p>For now title, the 'title' JSON blob is just left out</p>"
       },
       {

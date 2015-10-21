@@ -1,9 +1,7 @@
 {
   "_template": "elements/list",
-  "options": {
-    "ordered": true,
-    "type": "I"
-  },
+  "ordered": true,
+  "type": "I",
   "items": [
     {
       "_template": "common/text",

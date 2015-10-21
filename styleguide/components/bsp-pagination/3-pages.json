@@ -28,9 +28,7 @@
   },
   "listItems": [
     {
-      "options": {
-        "modifierClass": "current"
-      },
+      "modifierClass": "current",
       "link": {
         "_template": "common/link",
         "attributes": {

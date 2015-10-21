@@ -1,8 +1,6 @@
 {
   "_template": "components/bsp-image-promo",
-  "options": {
-    "horizontalSplit": "fourth"
-  },
+  "horizontalSplit": "fourth",
   "heading": "4 images with 1 link and lazy load",
   "images": [
     {

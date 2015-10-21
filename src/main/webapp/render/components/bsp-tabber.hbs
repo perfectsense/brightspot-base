@@ -1,11 +1,11 @@
-<div class="bsp-component bsp-tabber-promo-component{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
+<div class="bsp-component bsp-tabber-promo-component{{#if modifierClass}} {{modifierClass}}{{/if}}">
 
 	{{#if heading}}
 		<div class="bsp-component-title">{{heading}}</div>
 	{{/if}}
 
 	{{#if tabs}}
-		<div class="bsp-tabber-wrapper" data-bsp-tabber{{#with options.jsOptions }} data-bsp-tabber-options='{{> common/options this }}'{{/with}}>
+		<div class="bsp-tabber-wrapper" data-bsp-tabber{{#with jsOptions }} data-bsp-tabber-options='{{> common/options this }}'{{/with}}>
 		{{#each tabs}}
 			<div class="bsp-tab" data-nav-title="{{this.label}}{{#if this.labelSubText}} <span>{{this.labelSubText}}</span>{{/if}}">
 			{{#if text}}

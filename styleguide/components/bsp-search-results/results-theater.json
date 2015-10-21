@@ -1,8 +1,6 @@
 {
   "_template": "components/bsp-list-promo",
-  "options": {
-    "horizontalSplit": "fourth"
-  },
+  "horizontalSplit": "fourth",
   "heading": {
     "_template": "common/text",
     "text": "Theatres"

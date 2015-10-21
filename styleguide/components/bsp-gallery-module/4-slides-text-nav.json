@@ -1,8 +1,6 @@
 {
   "_template": "components/bsp-gallery-module-with-nav",
-  "options": {
-    "textNav": true
-  },
+  "textNav": true,
   "galleryTitle": {
     "_template": "common/text",
     "text": "4 Slide with text nav instead of thumbs"

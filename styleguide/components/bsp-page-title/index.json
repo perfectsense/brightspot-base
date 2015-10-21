@@ -8,9 +8,7 @@
     "main": [
       {
         "_template": "common/text",
-        "options": {
-          "modifierClass": "styleguide-page-description"
-        },
+        "modifierClass": "styleguide-page-description",
         "text": "<p>Page Title Documentation to go here</p>"
       },
       {

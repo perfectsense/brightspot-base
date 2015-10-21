@@ -1,8 +1,6 @@
 {
   "_template": "components/bsp-image-promo",
-  "options": {
-    "horizontalSplit": "half"
-  },
+  "horizontalSplit": "half",
   "heading": "2 images with 1 link",
   "images": [
     {

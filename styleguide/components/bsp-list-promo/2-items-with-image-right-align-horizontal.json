@@ -1,9 +1,7 @@
 {
   "_template": "components/bsp-list-promo",
-  "options": {
-    "modifierClass": "image-50-width",
-    "horizontalSplit": "half"
-  },
+  "modifierClass": "image-50-width",
+  "horizontalSplit": "half",
   "heading": {
     "_template": "common/text",
     "text": "2 Images right aligned, horizontal"
