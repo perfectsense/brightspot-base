@@ -23,20 +23,24 @@
   },
   "primaryList": [
     {
+      "_template": "components/bsp-bio-list-item",
       "heading": "Built",
       "text": "1964"
     },
     {
+      "_template": "components/bsp-bio-list-item",
       "heading": "Number of seats",
       "text": "1761"
     }
   ],
   "secondaryList": [
     {
+      "_template": "components/bsp-bio-list-item",
       "heading": "Built",
       "text": "1964"
     },
     {
+      "_template": "components/bsp-bio-list-item",
       "heading": "Number of seats",
       "text": "1761"
     }
