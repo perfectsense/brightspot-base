@@ -75,11 +75,13 @@
 		.bsp-carousel-slide {
 			color: @white;
 			cursor: pointer;
+            border-right: 1px solid @gray-light-2;
             height: 100px;
             padding: @space;
 			text-align: center;
             display: flex;
             align-items: center;
+            justify-content: center;
 
             &.current {
                 background: @brand-primary;
@@ -88,6 +90,10 @@
 
             &:after {
                 display: none;
+            }
+
+            &:last-of-type {
+                border: none;
             }
 		}
 	}

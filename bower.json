@@ -19,6 +19,7 @@
     "bsp-tabber": "perfectsense/brightspot-js-tabber#^2.0.1",
     "vex" : "2.3.2"
   },
+  "main" : "",
   "ignore": [
     "**/.*",
     "node_modules",
