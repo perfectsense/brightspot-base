@@ -37,19 +37,29 @@
         "_template": "components/bsp-table",
         "title": "table - no options",
         "headings": [
-          {
-            "text": "Title"
-          },
-          {
-            "text": "Category"
-          },
-          {
-            "text": "Organization"
-          }
+          [
+            {
+              "_template": "common/text",
+              "text": "Title"
+            }
+          ],
+          [
+            {
+              "_template": "common/text",
+              "text": "Category"
+            }
+          ],
+          [
+            {
+              "_template": "common/text",
+              "text": "Organization"
+            }
+          ]
         ],
         "rows": [
           {
-            "row": [
+            "_template": "components/bsp-table-row",
+            "columns": [
               {
                 "link": {
                   "_template": "common/link",
@@ -73,7 +83,8 @@
             ]
           },
           {
-            "row": [
+            "_template": "components/bsp-table-row",
+            "columns": [
               {
                 "link": {
                   "_template": "common/link",
@@ -97,7 +108,8 @@
             ]
           },
           {
-            "row": [
+            "_template": "components/bsp-table-row",
+            "columns": [
               {
                 "link": {
                   "_template": "common/link",
