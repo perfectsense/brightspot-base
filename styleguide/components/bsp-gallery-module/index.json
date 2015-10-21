@@ -5,43 +5,39 @@
   },
   "mainView": {
     "_template": "layouts/two-col-main-left-aside-right",
-    "aboveColumns": {
-      "components": [
-        {
-          "_template": "common/html",
-          "options": {
-            "modifierClass": "styleguide-page-description"
-          },
-          "text": "<p>Need to finish documentation. Some notes: xsmall and small breakpoints always have dots for navigation. The thumbs/nav disappear for those too. Even though we have two column layout, gallery modules will grow and shrink with container.</p>"
-        }
-      ]
-    },
-    "main": {
-      "components": [
-        {
-          "_dataUrl": "/components/bsp-gallery-module/4-slides-text-nav.json"
+    "aboveColumns": [
+      {
+        "_template": "common/html",
+        "options": {
+          "modifierClass": "styleguide-page-description"
         },
-        {
-          "_dataUrl": "/components/bsp-gallery-module/5-slides-horizontal.json"
+        "text": "<p>Need to finish documentation. Some notes: xsmall and small breakpoints always have dots for navigation. The thumbs/nav disappear for those too. Even though we have two column layout, gallery modules will grow and shrink with container.</p>"
+      }
+    ],
+    "main": [
+      {
+        "_dataUrl": "/components/bsp-gallery-module/4-slides-text-nav.json"
+      },
+      {
+        "_dataUrl": "/components/bsp-gallery-module/5-slides-horizontal.json"
+      },
+      {
+        "_dataUrl": "/components/bsp-gallery-module/5-slides-with-thumbs.json"
+      },
+      {
+        "_template": "common/html",
+        "options": {
+          "modifierClass": "styleguide-page-description"
         },
-        {
-          "_dataUrl": "/components/bsp-gallery-module/5-slides-with-thumbs.json"
-        },
-        {
-          "_template": "common/html",
-          "options": {
-            "modifierClass": "styleguide-page-description"
-          },
-          "text": "<p>For the dynamic gallery each slide has an element that has \"data-next-url\" and \"data-prev-url\" which are URLs that will render the content of the next and previous slide content only. At page load, the JS will go into the slide and using those URLs create the previous and next slides. After that, there are bound events that determine which direction the user is going, and load either the next or previous slide via ajax.</p>"
-        },
-        {
-          "_dataUrl": "/components/bsp-gallery-module/dynamic-slides.json"
-        },
-        {
-          "_dataUrl": "/components/bsp-gallery-module/7-slides-dots.json"
-        }
-      ]
-    }
+        "text": "<p>For the dynamic gallery each slide has an element that has \"data-next-url\" and \"data-prev-url\" which are URLs that will render the content of the next and previous slide content only. At page load, the JS will go into the slide and using those URLs create the previous and next slides. After that, there are bound events that determine which direction the user is going, and load either the next or previous slide via ajax.</p>"
+      },
+      {
+        "_dataUrl": "/components/bsp-gallery-module/dynamic-slides.json"
+      },
+      {
+        "_dataUrl": "/components/bsp-gallery-module/7-slides-dots.json"
+      }
+    ]
   },
   "footerView": {
     "_dataUrl": "/components/bsp-site-footer-simple/styleguide-footer.json"

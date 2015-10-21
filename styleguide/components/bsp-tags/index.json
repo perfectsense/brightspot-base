@@ -5,38 +5,34 @@
   },
   "mainView": {
     "_template": "layouts/two-col-main-left-fixed-right",
-    "main": {
-      "components": [
-        {
-          "_template": "common/html",
-          "options": {
-            "modifierClass": "styleguide-page-description"
-          },
-          "text": "<p>Tags are a list of links with a special class name that visually turns them into a tag. They can be rendered with and without a title</p>"
+    "main": [
+      {
+        "_template": "common/html",
+        "options": {
+          "modifierClass": "styleguide-page-description"
         },
-        {
-          "_dataUrl": "/components/bsp-tags/tag-list.json"
+        "text": "<p>Tags are a list of links with a special class name that visually turns them into a tag. They can be rendered with and without a title</p>"
+      },
+      {
+        "_dataUrl": "/components/bsp-tags/tag-list.json"
+      },
+      {
+        "_template": "common/html",
+        "options": {
+          "modifierClass": "styleguide-page-description"
         },
-        {
-          "_template": "common/html",
-          "options": {
-            "modifierClass": "styleguide-page-description"
-          },
-          "text": "<p>For now title, the 'title' JSON blob is just left out</p>"
-        },
-        {
-          "_dataUrl": "/components/bsp-tags/tag-list-no-title.json"
-        }
-      ]
-    },
-    "aside": {
-      "components": [
-        {
-          "_template": "common/html",
-          "text": "<p>Right Rail Modules can go here</p>"
-        }
-      ]
-    }
+        "text": "<p>For now title, the 'title' JSON blob is just left out</p>"
+      },
+      {
+        "_dataUrl": "/components/bsp-tags/tag-list-no-title.json"
+      }
+    ],
+    "aside": [
+      {
+        "_template": "common/html",
+        "text": "<p>Right Rail Modules can go here</p>"
+      }
+    ]
   },
   "footerView": {
     "_dataUrl": "/components/bsp-site-footer-simple/styleguide-footer.json"

@@ -1,19 +1,15 @@
 <div class="bsp-container{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
 
-	{{#with aboveColumns}}
-		{{#each components}}
-			{{render this}}
-		{{/each}}
-	{{/with}}
+    {{#each aboveColumns}}
+        {{render this}}
+    {{/each}}
 
 	<div class="bsp-row">
 
 		<div class="bsp-column-scrolling">
-			{{#with main}}
-				{{#each components}}
-					{{render this}}
-				{{/each}}
-			{{/with}}
+            {{#each main}}
+                {{render this}}
+            {{/each}}
 		</div>
 
 		<div class="bsp-column-fixed-wrap" data-bsp-toggle-item>
@@ -24,11 +20,9 @@
 					<a class="toggle-trigger-link-in  icon icon-angle-down" href="#">{{#if aside.options.closeText}}{{this}}{{else}}Close{{/if}}</a>
 				</div>
 
-				{{#with aside}}
-					{{#each components}}
-						{{render this}}
-					{{/each}}
-				{{/with}}
+                {{#each aside}}
+                    {{render this}}
+                {{/each}}
 			</div>
 		</div>
 

@@ -1,27 +1,21 @@
 <div class="bsp-container{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
 
-	{{#with aboveColumns}}
-		{{#each components}}
-			{{render this}}
-		{{/each}}
-	{{/with}}
+    {{#each aboveColumns}}
+        {{render this}}
+    {{/each}}
 
 	<div class="bsp-row">
 
 		<div class="bsp-column-aside">
-			{{#with aside}}
-				{{#each components}}
-					{{render this}}
-				{{/each}}
-			{{/with}}
+            {{#each aside}}
+                {{render this}}
+            {{/each}}
 		</div>
 
 		<div class="bsp-column-main">
-			{{#with main}}
-				{{#each components}}
-					{{render this}}
-				{{/each}}
-			{{/with}}
+            {{#each main}}
+                {{render this}}
+            {{/each}}
 		</div>
 
 	</div>

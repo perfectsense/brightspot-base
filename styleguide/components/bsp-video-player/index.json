@@ -5,136 +5,134 @@
   },
   "mainView": {
     "_template": "layouts/one-col",
-    "main": {
-      "components": [
-        {
+    "main": [
+      {
+        "_template": "common/text",
+        "options": {
+          "modifierClass": "styleguide-page-description"
+        },
+        "text": "<p>The video player documentation needs to go here. Need to get more insight from BE teams how we will integrate with a video player. This might end up being a very custom component per client/site/implementation</p><p>For now, we will support basic native, youtube, video, and brightcove integration. Need to figure out how we will do metrics.</p>"
+      },
+      {
+        "_template": "components/bsp-video-player",
+        "options": {},
+        "title": {
           "_template": "common/text",
-          "options": {
-            "modifierClass": "styleguide-page-description"
-          },
-          "text": "<p>The video player documentation needs to go here. Need to get more insight from BE teams how we will integrate with a video player. This might end up being a very custom component per client/site/implementation</p><p>For now, we will support basic native, youtube, video, and brightcove integration. Need to figure out how we will do metrics.</p>"
+          "text": "Youtube Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. "
         },
-        {
-          "_template": "components/bsp-video-player",
-          "options": {},
-          "title": {
-            "_template": "common/text",
-            "text": "Youtube Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. "
-          },
-          "description": {
-            "_template": "common/text",
-            "text": "Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison."
-          },
-          "video": {
-            "youtube": true,
-            "src": "https://www.youtube.com/embed/dQw4w9WgXcQ"
-          },
-          "tagsTitle": {
-            "_template": "common/text",
-            "text": "Related:"
-          },
-          "tags": [
-            {
-              "_template": "common/link",
-              "attributes": {
-                "href": "#",
-                "_template": "common/attributes"
-              },
-              "body": {
-                "_template": "common/text",
-                "text": "MTB"
-              }
+        "description": {
+          "_template": "common/text",
+          "text": "Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison."
+        },
+        "video": {
+          "youtube": true,
+          "src": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        },
+        "tagsTitle": {
+          "_template": "common/text",
+          "text": "Related:"
+        },
+        "tags": [
+          {
+            "_template": "common/link",
+            "attributes": {
+              "href": "#",
+              "_template": "common/attributes"
             },
-            {
-              "_template": "common/link",
-              "attributes": {
-                "href": "#",
-                "_template": "common/attributes"
-              },
-              "body": {
-                "_template": "common/text",
-                "text": "Cycling"
-              }
-            },
-            {
-              "_template": "common/link",
-              "attributes": {
-                "href": "#",
-                "_template": "common/attributes"
-              },
-              "body": {
-                "_template": "common/text",
-                "text": "Downhill"
-              }
-            },
-            {
-              "_template": "common/link",
-              "attributes": {
-                "href": "#",
-                "_template": "common/attributes"
-              },
-              "body": {
-                "_template": "common/text",
-                "text": "Enduro"
-              }
-            },
-            {
-              "_template": "common/link",
-              "attributes": {
-                "href": "#",
-                "_template": "common/attributes"
-              },
-              "body": {
-                "_template": "common/text",
-                "text": "Dirt Jumping"
-              }
+            "body": {
+              "_template": "common/text",
+              "text": "MTB"
             }
-          ],
-          "sharing": {
-            "_dataUrl": "/components/bsp-social-share/share.json"
-          }
-        },
-        {
-          "_template": "components/bsp-video-player",
-          "options": {},
-          "title": {
-            "_template": "common/text",
-            "text": "Vimeo Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf."
           },
-          "video": {
-            "vimeo": true,
-            "src": "https://player.vimeo.com/video/87031388"
-          }
-        },
-        {
-          "_template": "components/bsp-video-player",
-          "options": {},
-          "title": {
-            "_template": "common/text",
-            "text": "Native HTML5 (Mp4) Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round."
+          {
+            "_template": "common/link",
+            "attributes": {
+              "href": "#",
+              "_template": "common/attributes"
+            },
+            "body": {
+              "_template": "common/text",
+              "text": "Cycling"
+            }
           },
-          "video": {
-            "native": true,
-            "src": "http://vid297.photobucket.com/albums/mm238/daystar170/RickRoll"
-          }
-        },
-        {
-          "_template": "components/bsp-video-player",
-          "options": {},
-          "title": {
-            "_template": "common/text",
-            "text": "Brightcove Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. "
+          {
+            "_template": "common/link",
+            "attributes": {
+              "href": "#",
+              "_template": "common/attributes"
+            },
+            "body": {
+              "_template": "common/text",
+              "text": "Downhill"
+            }
           },
-          "video": {
-            "brightcove": true,
-            "id": "4483896054001",
-            "playerId": "82993908001",
-            "bgHex": "#000000",
-            "playerKey": "AQ~~%2CAAAAEX25ttk~%2CqVVep19cvaUd_MvoBnuGVanJsQIaFNkH"
+          {
+            "_template": "common/link",
+            "attributes": {
+              "href": "#",
+              "_template": "common/attributes"
+            },
+            "body": {
+              "_template": "common/text",
+              "text": "Enduro"
+            }
+          },
+          {
+            "_template": "common/link",
+            "attributes": {
+              "href": "#",
+              "_template": "common/attributes"
+            },
+            "body": {
+              "_template": "common/text",
+              "text": "Dirt Jumping"
+            }
           }
+        ],
+        "sharing": {
+          "_dataUrl": "/components/bsp-social-share/share.json"
         }
-      ]
-    }
+      },
+      {
+        "_template": "components/bsp-video-player",
+        "options": {},
+        "title": {
+          "_template": "common/text",
+          "text": "Vimeo Tri-tip boudin prosciutto venison short ribs pork loin capicola meatloaf."
+        },
+        "video": {
+          "vimeo": true,
+          "src": "https://player.vimeo.com/video/87031388"
+        }
+      },
+      {
+        "_template": "components/bsp-video-player",
+        "options": {},
+        "title": {
+          "_template": "common/text",
+          "text": "Native HTML5 (Mp4) Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round."
+        },
+        "video": {
+          "native": true,
+          "src": "http://vid297.photobucket.com/albums/mm238/daystar170/RickRoll"
+        }
+      },
+      {
+        "_template": "components/bsp-video-player",
+        "options": {},
+        "title": {
+          "_template": "common/text",
+          "text": "Brightcove Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. "
+        },
+        "video": {
+          "brightcove": true,
+          "id": "4483896054001",
+          "playerId": "82993908001",
+          "bgHex": "#000000",
+          "playerKey": "AQ~~%2CAAAAEX25ttk~%2CqVVep19cvaUd_MvoBnuGVanJsQIaFNkH"
+        }
+      }
+    ]
   },
   "footerView": {
     "_dataUrl": "/components/bsp-site-footer-simple/styleguide-footer.json"

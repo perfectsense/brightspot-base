@@ -5,19 +5,15 @@
   },
   "mainView": {
     "_template": "layouts/two-col-main-left-aside-right",
-    "main": {
-      "components": [
-        {
-          "_dataUrl": "/components/bsp-gallery-fullscreen/gallery.json"
-        }
-      ]
-    },
-    "aside": {
-      "components": [
-        {
-          "_dataUrl": "/common/link-image-300x250.json"
-        }
-      ]
-    }
+    "main": [
+      {
+        "_dataUrl": "/components/bsp-gallery-fullscreen/gallery.json"
+      }
+    ],
+    "aside": [
+      {
+        "_dataUrl": "/common/link-image-300x250.json"
+      }
+    ]
   }
 }

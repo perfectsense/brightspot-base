@@ -5,30 +5,26 @@
   },
   "mainView": {
     "_template": "layouts/two-col-main-left-aside-right",
-    "aboveColumns": {
-      "components": [
-        {
-          "_template": "common/html",
-          "options": {
-            "modifierClass": "styleguide-page-description"
-          },
-          "text": "<p>The Bio is a component that can be used to describe an author, publisher, person, or object. It contains an optional image at the top of the HTML aligned to the left of the content. Next is a title, optional subtitles (which can be links or images), and description text. Next up are two lists, a primary and secondary. These are a list of components, so they can be text, links, images, or other components. After that is a plain list of optional links. The last item in the bio content is the extra pictures. These are currently just a list of images. By default, there is a max of 6 images, after which they would drop to the 2nd row. After the bio content comes an optional list of social links in a justified layout.</p><p>We show the Bio component below in a two column layout, but with the default styles, it will stretch to fit any container. In the xs breakpoint, it stays with the same design, but shows 3 images at a time instead of 6.</p>"
-        }
-      ]
-    },
-    "main": {
-      "components": [
-        {
-          "_dataUrl": "/components/bsp-bio/actor.json"
+    "aboveColumns": [
+      {
+        "_template": "common/html",
+        "options": {
+          "modifierClass": "styleguide-page-description"
         },
-        {
-          "_dataUrl": "/components/bsp-bio/show.json"
-        },
-        {
-          "_dataUrl": "/components/bsp-bio/theater.json"
-        }
-      ]
-    }
+        "text": "<p>The Bio is a component that can be used to describe an author, publisher, person, or object. It contains an optional image at the top of the HTML aligned to the left of the content. Next is a title, optional subtitles (which can be links or images), and description text. Next up are two lists, a primary and secondary. These are a list of components, so they can be text, links, images, or other components. After that is a plain list of optional links. The last item in the bio content is the extra pictures. These are currently just a list of images. By default, there is a max of 6 images, after which they would drop to the 2nd row. After the bio content comes an optional list of social links in a justified layout.</p><p>We show the Bio component below in a two column layout, but with the default styles, it will stretch to fit any container. In the xs breakpoint, it stays with the same design, but shows 3 images at a time instead of 6.</p>"
+      }
+    ],
+    "main": [
+      {
+        "_dataUrl": "/components/bsp-bio/actor.json"
+      },
+      {
+        "_dataUrl": "/components/bsp-bio/show.json"
+      },
+      {
+        "_dataUrl": "/components/bsp-bio/theater.json"
+      }
+    ]
   },
   "footerView": {
     "_dataUrl": "/components/bsp-site-footer-simple/styleguide-footer.json"

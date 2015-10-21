@@ -5,13 +5,11 @@
   },
   "mainView": {
     "_template": "layouts/one-col",
-    "main": {
-      "components": [
-        {
-          "_dataUrl": "/components/bsp-gallery-fullscreen/gallery.json"
-        }
-      ]
-    }
+    "main": [
+      {
+        "_dataUrl": "/components/bsp-gallery-fullscreen/gallery.json"
+      }
+    ]
   },
   "footerView": {
     "_dataUrl": "/components/bsp-site-footer-simple/styleguide-footer.json"
