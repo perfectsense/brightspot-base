@@ -10,6 +10,7 @@
   },
   "listItems": [
     {
+      "_template": "components/bsp-list-promo-item",
       "imgAlign": "right",
       "sections": [
         {
@@ -63,6 +64,7 @@
       ]
     },
     {
+      "_template": "components/bsp-list-promo-item",
       "imgAlign": "right",
       "sections": [
         {

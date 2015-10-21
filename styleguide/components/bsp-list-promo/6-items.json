@@ -6,6 +6,7 @@
   },
   "listItems": [
     {
+      "_template": "components/bsp-list-promo-item",
       "sections": [
         {
           "_template": "components/bsp-list-promo-item-handler",
@@ -26,6 +27,7 @@
       ]
     },
     {
+      "_template": "components/bsp-list-promo-item",
       "sections": [
         {
           "_template": "components/bsp-list-promo-item-handler",
@@ -46,6 +48,7 @@
       ]
     },
     {
+      "_template": "components/bsp-list-promo-item",
       "sections": [
         {
           "_template": "components/bsp-list-promo-item-handler",
@@ -66,6 +69,7 @@
       ]
     },
     {
+      "_template": "components/bsp-list-promo-item",
       "sections": [
         {
           "_template": "components/bsp-list-promo-item-handler",
@@ -86,6 +90,7 @@
       ]
     },
     {
+      "_template": "components/bsp-list-promo-item",
       "sections": [
         {
           "_template": "components/bsp-list-promo-item-handler",
@@ -106,6 +111,7 @@
       ]
     },
     {
+      "_template": "components/bsp-list-promo-item",
       "sections": [
         {
           "_template": "components/bsp-list-promo-item-handler",

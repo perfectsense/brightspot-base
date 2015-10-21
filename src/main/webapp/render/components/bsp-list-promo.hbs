@@ -9,15 +9,7 @@
             <ul class="bsp-list-promo-list {{#if options.horizontalSplit}}bsp-row{{/if}}">
                 {{#each listItems}}
                     <li class="{{#if ../options.horizontalSplit}}bsp-column-{{/if}}{{../options.horizontalSplit}} {{#if imgAlign}}image-align-{{/if}}{{imgAlign}}">
-
-                        {{#if sections}}
-                            {{#each sections}}
-                                {{render this}}
-                            {{/each}}
-                        {{else}}
-                            {{render this}}
-                        {{/if}}
-
+                        {{this}}
                     </li>
                 {{/each}}
             </ul>

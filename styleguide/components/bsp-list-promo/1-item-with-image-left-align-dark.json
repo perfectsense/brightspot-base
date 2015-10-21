@@ -9,6 +9,7 @@
   },
   "listItems": [
     {
+      "_template": "components/bsp-list-promo-item",
       "imgAlign": "left",
       "sections": [
         {
