@@ -3,6 +3,7 @@
   "modifierClass": "image-25-width",
   "listItems": [
     {
+      "_template": "components/bsp-list-promo-item",
       "imgAlign": "left",
       "sections": [
         {
@@ -57,6 +58,7 @@
       ]
     },
     {
+      "_template": "components/bsp-list-promo-item",
       "sections": [
         {
           "_template": "components/bsp-list-promo-item-handler",
@@ -90,6 +92,7 @@
       ]
     },
     {
+      "_template": "components/bsp-list-promo-item",
       "imgAlign": "left",
       "sections": [
         {
