@@ -16,22 +16,22 @@
 
 	            {{#if horizontalSlides}},
 
-                    {{#if slidesToScroll}}
-                        "slidesToScroll" : {{slidesToScroll.medium}},
+                    {{#if slidesToScrollMedium}}
+                        "slidesToScroll" : {{slidesToScrollMedium}},
                     {{else}}
                         "slidesToScroll" : 5,
                     {{/if}}
 
-					{{#if slidesToShow}}
-					"slidesToShow" : {{slidesToShow.medium}},
+					{{#if slidesToShowMedium}}
+					"slidesToShow" : {{slidesToShowMedium}},
 
 					"responsive": [
 				    {
 				      "breakpoint": 768,
 				      "settings": {
-				        "slidesToShow": {{slidesToShow.small}},
-                        {{#if slidesToScroll}}
-                            "slidesToScroll" : {{slidesToScroll.small}}
+				        "slidesToShow": {{slidesToShowSmall}},
+                        {{#if slidesToScrollSmall}}
+                            "slidesToScroll" : {{slidesToScrollSmall}}
                         {{else}}
                             "slidesToScroll" : 2
                         {{/if}}
@@ -45,8 +45,8 @@
 				      "breakpoint": 768,
 				      "settings": {
 				        "slidesToShow": 2,
-                        {{#if slidesToScroll}}
-                            "slidesToScroll" : {{slidesToScroll.small}}
+                        {{#if slidesToScrollSmall}}
+                            "slidesToScroll" : {{slidesToScrollSmall}}
                         {{else}}
                             "slidesToScroll" : 2
                         {{/if}}
