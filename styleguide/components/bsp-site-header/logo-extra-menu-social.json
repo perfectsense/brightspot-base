@@ -388,48 +388,46 @@
       }
     }
   ],
-  "sharing": {
-    "links": [
-      {
-        "_template": "common/link",
-        "icon": "facebook",
-        "attributes": {
-          "href": "http://www.facebook.com",
-          "title": "Facebook",
-          "target": "_blank",
-          "_template": "common/attributes"
-        }
-      },
-      {
-        "_template": "common/link",
-        "icon": "twitter",
-        "attributes": {
-          "href": "http://www.twitter.com",
-          "title": "Twitter",
-          "target": "_blank",
-          "_template": "common/attributes"
-        }
-      },
-      {
-        "_template": "common/link",
-        "icon": "pinterest",
-        "attributes": {
-          "href": "http://www.pinterest.com",
-          "title": "Pinterest",
-          "target": "_blank",
-          "_template": "common/attributes"
-        }
-      },
-      {
-        "_template": "common/link",
-        "icon": "linkedin",
-        "attributes": {
-          "href": "http://www.linkedin.com",
-          "title": "LinkedIn",
-          "target": "_blank",
-          "_template": "common/attributes"
-        }
+  "sharing": [
+    {
+      "_template": "common/link",
+      "icon": "facebook",
+      "attributes": {
+        "href": "http://www.facebook.com",
+        "title": "Facebook",
+        "target": "_blank",
+        "_template": "common/attributes"
       }
-    ]
-  }
+    },
+    {
+      "_template": "common/link",
+      "icon": "twitter",
+      "attributes": {
+        "href": "http://www.twitter.com",
+        "title": "Twitter",
+        "target": "_blank",
+        "_template": "common/attributes"
+      }
+    },
+    {
+      "_template": "common/link",
+      "icon": "pinterest",
+      "attributes": {
+        "href": "http://www.pinterest.com",
+        "title": "Pinterest",
+        "target": "_blank",
+        "_template": "common/attributes"
+      }
+    },
+    {
+      "_template": "common/link",
+      "icon": "linkedin",
+      "attributes": {
+        "href": "http://www.linkedin.com",
+        "title": "LinkedIn",
+        "target": "_blank",
+        "_template": "common/attributes"
+      }
+    }
+  ]
 }
