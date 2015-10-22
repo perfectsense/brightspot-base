@@ -2,7 +2,6 @@
     "_template" : "components/bsp-site-footer-simple",
 
     "sharing" : {
-        "social": "Follow",
 
         "links" : [{
             "_template" : "common/link",
@@ -44,6 +43,32 @@
                 "target" : "_blank"
             }
         }]
+    },
+
+    "links" :    {
+        "_template": "elements/list",
+        "items": [
+            {
+                "_template": "common/text",
+                "text": "Item 1"
+            },
+            {
+                "_template": "common/text",
+                "text": "Item 2"
+            },
+            {
+                "_template": "common/text",
+                "text": "Item 3"
+            },
+            {
+                "_template": "common/text",
+                "text": "Item 4"
+            },
+            {
+                "_template": "common/text",
+                "text": "Item 5"
+            }
+        ]
     },
 
     "disclaimer": "Copyright © Brightspot"

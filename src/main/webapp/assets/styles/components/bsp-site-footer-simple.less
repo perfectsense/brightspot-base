@@ -1,6 +1,6 @@
 .bsp-site-footer-simple {
-    background: @footer-background;
-    padding: @space-double;
+    background: @footer-simple-background;
+    padding: @footer-simple-padding-top @footer-simple-padding-sides @footer-simple-padding-bottom @footer-simple-padding-sides;
     min-height: 25px;
     color: @white;
     text-align: center;
@@ -12,15 +12,36 @@
         padding: 0;
 	}
 
+    //remove extra padding on components inside the footer
+    .bsp-component {
+        padding: 0;
+    }
+
     .bsp-list-heading {
         &:extend(.ts-header-2);
 
         color: @brand-primary;
     }
 
- 	.bsp-share-links {
-        margin: 0 0 @space-double 0;
+    .bsp-list {
+        .bsp-list-inline;
+        padding-bottom: @space-double;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
+        li {
+            font-size: @ts-0;
+            font-weight: @font-weight-bold;
+            padding: 0 @space-triple;
+            text-transform: uppercase;
+        }
+
+    }
+
+ 	.bsp-share-links {
+        padding-bottom: @space-double;
  		a {
             background: @social-icons-monochrome-color;
             &:before {
