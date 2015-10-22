@@ -1,21 +1,9 @@
 {
   "_template": "components/bsp-search-results",
-  "heading": [
-    {
-      "text": "We found"
-    },
-    {
-      "className": "bsp-results",
-      "text": "128"
-    },
-    {
-      "text": "results for"
-    },
-    {
-      "className": "bsp-search-query",
-      "text": "\"Lion\""
-    }
-  ],
+  "heading": {
+    "_template": "common/html",
+    "text": "We found <span class='bsp-results'>128</span> results for <span class='bsp-search-query'>\"Lion\"</span>"
+  },
   "searchForm": {
     "attributes": {
       "action": "/components/bsp-search-results/search-results-ajax-1.html?q=test",

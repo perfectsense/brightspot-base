@@ -2,11 +2,9 @@
 
     <div class="bsp-search-results">
 
-    	<h1 class="bsp-search-results-heading">
-    		{{#each heading}}
-    			{{#if className}}<span class="{{className}}">{{/if}}{{text}}{{#if className}}</span>{{/if}}
-    		{{/each}}
-    	</h1>
+        {{#with heading}}
+            <h1 class="bsp-search-results-heading">{{this}}</h1>
+        {{/with}}
 
     	<form class="bsp-search-results-form" {{#with searchForm.attributes}}{{this}}{{/with}} data-ajax-link-target=".bsp-search-results">
             <div class="bsp-search-results-text">
