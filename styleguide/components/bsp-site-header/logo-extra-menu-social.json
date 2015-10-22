@@ -31,120 +31,123 @@
       }
     }
   },
-  "mainMenu": {
-    "menuItems": [
-      {
-        "heading": {
-          "_dataUrl": "/common/link-test-text-14-char.json"
-        },
-        "items": [
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          },
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          },
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          },
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          },
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          }
-        ]
+  "mainMenu": [
+    {
+      "_template": "components/bsp-site-header-menu",
+      "heading": {
+        "_dataUrl": "/common/link-test-text-14-char.json"
       },
-      {
-        "heading": {
+      "items": [
+        {
           "_dataUrl": "/common/link-test-text-14-char.json"
         },
-        "items": [
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          },
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          },
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          },
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          },
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          }
-        ]
+        {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        },
+        {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        },
+        {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        },
+        {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        }
+      ]
+    },
+    {
+      "_template": "components/bsp-site-header-menu",
+      "heading": {
+        "_dataUrl": "/common/link-test-text-14-char.json"
       },
-      {
-        "heading": {
+      "items": [
+        {
           "_dataUrl": "/common/link-test-text-14-char.json"
         },
-        "items": [
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          },
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          },
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          },
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          },
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          }
-        ]
+        {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        },
+        {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        },
+        {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        },
+        {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        }
+      ]
+    },
+    {
+      "_template": "components/bsp-site-header-menu",
+      "heading": {
+        "_dataUrl": "/common/link-test-text-14-char.json"
       },
-      {
-        "heading": {
+      "items": [
+        {
           "_dataUrl": "/common/link-test-text-14-char.json"
         },
-        "items": [
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          },
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          },
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          },
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          },
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          }
-        ]
+        {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        },
+        {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        },
+        {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        },
+        {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        }
+      ]
+    },
+    {
+      "_template": "components/bsp-site-header-menu",
+      "heading": {
+        "_dataUrl": "/common/link-test-text-14-char.json"
       },
-      {
-        "heading": {
+      "items": [
+        {
           "_dataUrl": "/common/link-test-text-14-char.json"
         },
-        "items": [
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          },
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          },
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          },
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          },
-          {
-            "_dataUrl": "/common/link-test-text-14-char.json"
-          }
-        ]
-      }
-    ]
-  },
+        {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        },
+        {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        },
+        {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        },
+        {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        }
+      ]
+    },
+    {
+      "_template": "components/bsp-site-header-menu",
+      "heading": {
+        "_dataUrl": "/common/link-test-text-14-char.json"
+      },
+      "items": [
+        {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        },
+        {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        },
+        {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        },
+        {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        },
+        {
+          "_dataUrl": "/common/link-test-text-14-char.json"
+        }
+      ]
+    }
+  ],
   "tophat": [
     {
       "_template": "common/link",
