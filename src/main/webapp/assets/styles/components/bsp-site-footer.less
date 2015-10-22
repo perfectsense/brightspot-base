@@ -1,6 +1,6 @@
 .bsp-site-footer {
     background: @footer-background;
-    padding: @space-double 0;
+    padding: @space-double 0 50px 0; //50px to account for affixed right rail on mobile
     min-height: 25px;
     color: @white;
     position: relative;
@@ -53,10 +53,13 @@
 
 
     }
+
+    .bsp-logo {
+        margin-top: @space-half;
+    }
 }
 
 .bsp-site-copyright {
-    margin: 0 0 @space-double 0;
     text-transform: uppercase;
 
     span {
@@ -66,7 +69,7 @@
 }
 
 @media @mq-sm {
-    .bsp-site-copyright {
-        margin-top: @space-quad;
+    .bsp-site-footer {
+        padding: @space-double 0;
     }
 }

@@ -192,9 +192,10 @@
     },
 
     "disclaimer":"Copyright © Brightspot",
-    "prefix":"Powered by",
-    "logo":{
 
+    "prefix":"Powered by",
+
+    "logo":{
         "_dataUrl":"/common/link-image-logo-site-footer.json"
     }
 }
