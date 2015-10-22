@@ -1,33 +1,32 @@
 {
   "_template": "components/bsp-pagination",
-  "navigate": {
-    "previous": {
-      "_template": "common/link",
-      "attributes": {
-        "href": "link",
-        "title": "Previous",
-        "_template": "common/attributes"
-      },
-      "body": {
-        "_template": "common/text",
-        "text": "Previous"
-      }
+  "previous": {
+    "_template": "common/link",
+    "attributes": {
+      "href": "link",
+      "title": "Previous",
+      "_template": "common/attributes"
     },
-    "next": {
-      "_template": "common/link",
-      "attributes": {
-        "href": "link",
-        "title": "Next",
-        "_template": "common/attributes"
-      },
-      "body": {
-        "_template": "common/text",
-        "text": "Next"
-      }
+    "body": {
+      "_template": "common/text",
+      "text": "Previous"
+    }
+  },
+  "next": {
+    "_template": "common/link",
+    "attributes": {
+      "href": "link",
+      "title": "Next",
+      "_template": "common/attributes"
+    },
+    "body": {
+      "_template": "common/text",
+      "text": "Next"
     }
   },
   "listItems": [
     {
+      "_template": "components/bsp-pagination-item",
       "modifierClass": "current",
       "link": {
         "_template": "common/link",
@@ -43,6 +42,7 @@
       }
     },
     {
+      "_template": "components/bsp-pagination-item",
       "link": {
         "_template": "common/link",
         "attributes": {
@@ -57,6 +57,7 @@
       }
     },
     {
+      "_template": "components/bsp-pagination-item",
       "link": {
         "_template": "common/link",
         "attributes": {
