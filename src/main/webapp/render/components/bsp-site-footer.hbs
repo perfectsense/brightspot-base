@@ -1,16 +1,13 @@
 <div class="bsp-site-footer">
 
 	<div class="bsp-container">
-		<div class="bsp-row">
-
-			<div class="bsp-column-two-thirds">
 
 				<div class="bsp-row">
 
-					<div class="bsp-column-half">
+					<div class="bsp-column-third">
 
 						{{#with firstCol}}
-						    <section>
+						    <section class="bsp-footer-list">
 					        	<h5 class="bsp-list-heading">
  									{{#with this}}
                                         {{heading}}
@@ -29,10 +26,10 @@
 
 					</div>
 
-					<div class="bsp-column-half">
+					<div class="bsp-column-third">
 
 						{{#with secondCol}}
-						    <section>
+						    <section class="bsp-footer-list">
 					        	<h5 class="bsp-list-heading">
 									{{#with this}}
                                         {{heading}}
@@ -51,13 +48,42 @@
 
 					</div>
 
+                    <div class="bsp-column-third">
+
+                        {{#with thirdCol}}
+
+                            {{#if this.sharing}}
+                                <div class="bsp-component">
+
+                                    <h5 class="bsp-component-title">{{social}}</h5>
+
+                                    <div class="bsp-component-content">
+
+                                        <ul class="bsp-share-links">
+                                            {{#each sharing.links}}
+                                                <li class="bsp-{{icon}}-share">{{render this cssClass="bsp-share-link"}}</li>
+                                            {{/each}}
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+                            {{/if}}
+
+                            {{#with newsletter}}
+                                {{render this}}
+                            {{/with}}
+                        {{/with}}
+
+                    </div>
+
 				</div>
 
 				<div class="bsp-site-copyright">
-					<div class="bsp-row">
+					<div class="bsp-disclaimer">
 						{{disclaimer}}
 					</div>
-					<div class="bsp-row">
+					<div class="bsp-logo">
 						<span>
 						{{prefix}}&nbsp;
 						</span>
@@ -67,39 +93,6 @@
 
 					</div>
 				</div>
-
-			</div>
-
-			<div class="bsp-column-third">
-
-				{{#with thirdCol}}
-
-					{{#if this.sharing}}
-						<div class="bsp-component">
-
-							<h5 class="bsp-component-title">{{social}}</h5>
-
-							<div class="bsp-component-content">
-
-								<ul class="bsp-share-links">
-									{{#each sharing.links}}
-										<li class="bsp-{{icon}}-share">{{render this cssClass="bsp-share-link"}}</li>
-									{{/each}}
-								</ul>
-
-							</div>
-
-						</div>
-					{{/if}}
-
-					{{#with newsletter}}
-						{{render this}}
-					{{/with}}
-				{{/with}}
-
-			</div>
-
-		</div>
 
 	</div>
 </div>

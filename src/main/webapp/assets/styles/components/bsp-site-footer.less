@@ -7,7 +7,7 @@
     z-index: @z-index-base;
 
     .bsp-component-title {
-        &:extend(.ts-header-2);
+        &:extend(.ts-header-3);
 
         background: none;
         color: @white;
@@ -15,9 +15,9 @@
     }
 
     .bsp-list-heading {
-        &:extend(.ts-header-2);
+        &:extend(.ts-header-3);
 
-        color: @brand-secondary;
+        color: white;
     }
 
     .bsp-share-links {
@@ -27,6 +27,10 @@
             background: @brand-secondary;
             color: @brand-primary;
         }
+    }
+
+    .bsp-footer-list {
+        margin-bottom: @space-double;
     }
 
     .bsp-unstyled-list {
@@ -52,11 +56,17 @@
 }
 
 .bsp-site-copyright {
-    margin-top: @space-quad;
+    margin: 0 0 @space-double 0;
     text-transform: uppercase;
 
     span {
         display: inline-block;
         vertical-align: middle;
+    }
+}
+
+@media @mq-sm {
+    .bsp-site-copyright {
+        margin-top: @space-quad;
     }
 }
