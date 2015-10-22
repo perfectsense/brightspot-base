@@ -2,13 +2,13 @@
     background: @footer-simple-background;
     padding: @footer-simple-padding-top @footer-simple-padding-sides @footer-simple-padding-bottom @footer-simple-padding-sides;
     min-height: 25px;
-    color: @white;
+    color: @footer-simple-text-color;
     text-align: center;
 
 	.bsp-component-title {
         &:extend(.ts-header-1);
 
-        color: @white;
+        color: @footer-simple-text-color;
         padding: 0;
 	}
 
@@ -36,8 +36,11 @@
             font-weight: @font-weight-bold;
             padding: 0 @space-triple;
             text-transform: uppercase;
-        }
 
+            a {
+                color: @footer-simple-text-color;
+            }
+        }
     }
 
  	.bsp-share-links {

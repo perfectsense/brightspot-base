@@ -49,24 +49,79 @@
         "_template": "elements/list",
         "items": [
             {
-                "_template": "common/text",
-                "text": "Item 1"
+                "_template": "common/link",
+
+                "attributes" : {
+                    "href"  : "http://www.linkedin.com",
+                    "title" : "LinkedIn",
+                    "target" : "_blank"
+                },
+
+                "body" : {
+                    "_template" : "common/text",
+                    "text": "Item 1"
+                }
+
             },
             {
-                "_template": "common/text",
-                "text": "Item 2"
+                "_template": "common/link",
+
+                "attributes" : {
+                    "href"  : "http://www.linkedin.com",
+                    "title" : "LinkedIn",
+                    "target" : "_blank"
+                },
+
+                "body" : {
+                    "_template" : "common/text",
+                    "text": "Item 2"
+                }
+
             },
             {
-                "_template": "common/text",
-                "text": "Item 3"
+                "_template": "common/link",
+
+                "attributes" : {
+                    "href"  : "http://www.linkedin.com",
+                    "title" : "LinkedIn",
+                    "target" : "_blank"
+                },
+
+                "body" : {
+                    "_template" : "common/text",
+                    "text": "Item 3"
+                }
+
             },
             {
-                "_template": "common/text",
-                "text": "Item 4"
+                "_template": "common/link",
+
+                "attributes" : {
+                    "href"  : "http://www.linkedin.com",
+                    "title" : "LinkedIn",
+                    "target" : "_blank"
+                },
+
+                "body" : {
+                    "_template" : "common/text",
+                    "text": "Item 4"
+                }
+
             },
             {
-                "_template": "common/text",
-                "text": "Item 5"
+                "_template": "common/link",
+
+                "attributes" : {
+                    "href"  : "http://www.linkedin.com",
+                    "title" : "LinkedIn",
+                    "target" : "_blank"
+                },
+
+                "body" : {
+                    "_template" : "common/text",
+                    "text": "Item 5"
+                }
+
             }
         ]
     },
