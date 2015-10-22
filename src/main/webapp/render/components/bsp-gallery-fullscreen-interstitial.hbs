@@ -9,19 +9,8 @@
 	navVisible - if true, show navigation while the countdown is happening
 --}}
 <div
-	class="bsp-gallery-fullscreen-interstitial{{#if options.interstitial.modifierClass}} {{options.interstitial.modifierClass}}{{/if}}"
-	data-options=
-	'
-		{
-			"contentUrl" : "{{options.interstitial.contentUrl}}",
-			"countDisable" : {{options.interstitial.countDisable}},
-			"countMessage" : "{{options.interstitial.countMessage}}",
-			"countDuration" : {{options.interstitial.countDuration}},
-			"countPosition" : "{{options.interstitial.countPosition}}",
-			"navEnabled" : {{options.interstitial.navEnabled}},
-			"navVisible" : {{options.interstitial.navVisible}}
-		}
-	'
+	class="bsp-gallery-fullscreen-interstitial{{#if modifierClass}} {{modifierClass}}{{/if}}"
+	data-options="{{options}}"
 >
 	<div class="bsp-gallery-fullscreen-interstitial-counter"></div>
 	<div class="bsp-gallery-fullscreen-interstitial-content"></div>
