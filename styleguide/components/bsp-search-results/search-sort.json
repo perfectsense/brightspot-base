@@ -11,11 +11,12 @@
     "_template": "common/json-object",
     "valueMissing": "Please select an option"
   },
+  "labelAttributes": {
+    "for": "bsp-search-results-sort",
+    "_template": "common/attributes"
+  },
   "label": {
-    "attributes": {
-      "for": "bsp-search-results-sort",
-      "_template": "common/attributes"
-    },
+    "_template": "common/text",
     "text": "Sort By: "
   },
   "options": [

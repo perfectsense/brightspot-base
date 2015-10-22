@@ -10,11 +10,12 @@
     "_template": "common/json-object",
     "valueMissing": "Please select an option"
   },
+  "labelAttributes": {
+    "for": "select1",
+    "_template": "common/attributes"
+  },
   "label": {
-    "attributes": {
-      "for": "select1",
-      "_template": "common/attributes"
-    },
+    "_template": "common/text",
     "text": "Select"
   },
   "options": [
