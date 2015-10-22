@@ -55,17 +55,15 @@
             "_template": "components/bsp-table-row",
             "columns": [
               {
-                "link": {
-                  "_template": "common/link",
-                  "attributes": {
-                    "href": "#",
-                    "title": "Get details on this job",
-                    "_template": "common/attributes"
-                  },
-                  "body": {
-                    "_template": "common/text",
-                    "text": "School Coordinator"
-                  }
+                "_template": "common/link",
+                "attributes": {
+                  "href": "#",
+                  "title": "Get details on this job",
+                  "_template": "common/attributes"
+                },
+                "body": {
+                  "_template": "common/text",
+                  "text": "School Coordinator"
                 }
               },
               {
@@ -82,17 +80,15 @@
             "_template": "components/bsp-table-row",
             "columns": [
               {
-                "link": {
-                  "_template": "common/link",
-                  "attributes": {
-                    "href": "#",
-                    "title": "Get details on this job",
-                    "_template": "common/attributes"
-                  },
-                  "body": {
-                    "_template": "common/text",
-                    "text": "Artistic and Management Assistant"
-                  }
+                "_template": "common/link",
+                "attributes": {
+                  "href": "#",
+                  "title": "Get details on this job",
+                  "_template": "common/attributes"
+                },
+                "body": {
+                  "_template": "common/text",
+                  "text": "Artistic and Management Assistant"
                 }
               },
               {
@@ -109,17 +105,15 @@
             "_template": "components/bsp-table-row",
             "columns": [
               {
-                "link": {
-                  "_template": "common/link",
-                  "attributes": {
-                    "href": "#",
-                    "title": "Get details on this job",
-                    "_template": "common/attributes"
-                  },
-                  "body": {
-                    "_template": "common/text",
-                    "text": "American Music Machine - Open Call Singers"
-                  }
+                "_template": "common/link",
+                "attributes": {
+                  "href": "#",
+                  "title": "Get details on this job",
+                  "_template": "common/attributes"
+                },
+                "body": {
+                  "_template": "common/text",
+                  "text": "American Music Machine - Open Call Singers"
                 }
               },
               {
