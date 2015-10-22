@@ -1,117 +1,115 @@
 {
-	"_template" : "components/bsp-site-header-simple",
+    "_template" : "components/bsp-site-header-simple",
 
-	"siteName" : "Brightspot Base Styleguide",
+    "siteName" : "Brightspot Base Styleguide",
 
-	"siteLogo" : {
+    "siteLogo" : {
 
-		"link" : {
+        "link" : {
 
-			"_template" : "common/link",
+            "_template" : "common/link",
 
-			"attributes" : {
-				"href"  : "/",
-				"title" : "Brightspot Base Styleguide"
-			},
+            "attributes" : {
+                "href"  : "/",
+                "title" : "Brightspot Base Styleguide"
+            },
 
-			"body" : {
+            "body" : {
 
-				"_template" : "common/image",
+                "_template" : "common/image",
 
-				"attributes" : {
-					"alt" : "Brightspot",
-					"src" : "/assets/images/logo-site-header.png"
-				}
-			}
-
-		}
-
-	},
-	"navLinks" : [
-
-		{
-			"_template" : "common/link",
-
-			"attributes" : {
-				"href"  : "link-me",
-				"title" : "I are a link"
-			},
-
-			"body" : {
-                "_template" : "common/text",
-                "text"  : "Link test text"
+                "attributes" : {
+                    "alt" : "Brightspot",
+                    "src" : "/assets/images/logo-site-header.png"
+                }
             }
-		},
 
-		{
-			"_template" : "common/link",
+        }
 
-			"attributes" : {
-				"href"  : "link-me",
-				"title" : "I are a link"
-			},
+    },
+    "navLinks" : [
 
-			"body" : {
+        {
+            "_template" : "common/link",
+
+            "attributes" : {
+                "href"  : "link-me",
+                "title" : "Link 1"
+            },
+
+            "body" : {
                 "_template" : "common/text",
-                "text"  : "Link test text"
+                "text"  : "Link 1"
             }
-		},
+        },
 
-		{
-			"_template" : "common/link",
+        {
+            "_template" : "common/link",
 
-			"attributes" : {
-				"href"  : "link-me",
-				"title" : "I are a link"
-			},
+            "attributes" : {
+                "href"  : "link-me",
+                "title" : "Link 2"
+            },
 
-			"body" : {
+            "body" : {
                 "_template" : "common/text",
-                "text"  : "Link test text"
+                "text"  : "Link 2"
             }
-		},
+        },
 
-		{
-			"_template" : "common/link",
+        {
+            "_template" : "common/link",
 
-			"attributes" : {
-				"href"  : "link-me",
-				"title" : "I are a link"
-			},
+            "attributes" : {
+                "href"  : "link-me",
+                "title" : "Link 3"
+            },
 
-			"body" : {
+            "body" : {
                 "_template" : "common/text",
-                "text"  : "Link test text"
+                "text"  : "Link 3"
             }
-		},
+        },
 
-		{
-			"_template" : "common/link",
+        {
+            "_template" : "common/link",
 
-			"attributes" : {
-				"href"  : "link-me",
-				"title" : "I are a link"
-			},
+            "attributes" : {
+                "href"  : "link-me",
+                "title" : "Link 4"
+            },
 
-			"body" : {
+            "body" : {
                 "_template" : "common/text",
-                "text"  : "Link test text"
+                "text"  : "Link 4"
             }
-		},
+        }
+    ],
+    "searchForm" : {
 
-		{
-			"_template" : "common/link",
+        "attributes" : {
+            "action" : "/components/bsp-search-results/search-results-ajax-1.html?q=test"
+        },
 
-			"attributes" : {
-				"href"  : "link-me",
-				"title" : "I are a link"
-			},
+        "searchInput" : {
 
-			"body" : {
-                "_template" : "common/text",
-                "text"  : "Link test text"
-            }
-		}
-	]
+            "_template" : "components/bsp-form-input",
 
+            "showMessagesAbove": true,
+
+            "attributes": {
+                "autocomplete": "off",
+                "class" : "bsp-search-results-input",
+                "id" : "q",
+                "name" : "q",
+                "required": true,
+                "type": "text"
+            },
+
+            "errors": [
+                { "valueMissing": "Please fill in the search query" }
+            ]
+        }
+
+    }
 }
