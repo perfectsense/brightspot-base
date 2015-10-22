@@ -145,34 +145,32 @@
       }
     ]
   },
-  "EXAMPLE tophat": {
-    "links": [
-      {
-        "_template": "common/link",
-        "attributes": {
-          "href": "link1",
-          "title": "Brightspot Base",
-          "_template": "common/attributes"
-        },
-        "body": {
-          "_template": "common/text",
-          "text": "link 1"
-        }
+  "tophat": [
+    {
+      "_template": "common/link",
+      "attributes": {
+        "href": "link1",
+        "title": "Brightspot Base",
+        "_template": "common/attributes"
       },
-      {
-        "_template": "common/link",
-        "attributes": {
-          "href": "link2",
-          "title": "Brightspot Base",
-          "_template": "common/attributes"
-        },
-        "body": {
-          "_template": "common/text",
-          "text": "link 2"
-        }
+      "body": {
+        "_template": "common/text",
+        "text": "link 1"
       }
-    ]
-  },
+    },
+    {
+      "_template": "common/link",
+      "attributes": {
+        "href": "link2",
+        "title": "Brightspot Base",
+        "_template": "common/attributes"
+      },
+      "body": {
+        "_template": "common/text",
+        "text": "link 2"
+      }
+    }
+  ],
   "extraMenu": [
     {
       "_template": "components/bsp-site-header-extra-menu-item",
