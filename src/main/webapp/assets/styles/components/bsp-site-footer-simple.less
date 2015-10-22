@@ -24,23 +24,7 @@
     }
 
     .bsp-list {
-        .bsp-list-inline;
-        padding-bottom: @space-double;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        li {
-            font-size: @ts-0;
-            font-weight: @font-weight-bold;
-            padding: 0 @space-triple;
-            text-transform: uppercase;
-
-            a {
-                color: @footer-simple-text-color;
-            }
-        }
+        display: none;
     }
 
  	.bsp-share-links {
@@ -91,5 +75,30 @@
     .bsp-site-copyright {
         margin-top: 0;
     }
+
+    @media @mq-sm {
+
+        .bsp-list {
+            display: block;
+            .bsp-list-inline;
+            padding-bottom: @space-double;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            li {
+                font-size: @ts-0;
+                font-weight: @font-weight-bold;
+                padding: 0 @space-triple;
+                text-transform: uppercase;
+
+                a {
+                    color: @footer-simple-text-color;
+                }
+            }
+        }
+    }
+
 }
 
