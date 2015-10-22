@@ -37,24 +37,18 @@
         "_template": "components/bsp-table",
         "title": "table - no options",
         "headings": [
-          [
-            {
-              "_template": "common/text",
-              "text": "Title"
-            }
-          ],
-          [
-            {
-              "_template": "common/text",
-              "text": "Category"
-            }
-          ],
-          [
-            {
-              "_template": "common/text",
-              "text": "Organization"
-            }
-          ]
+          {
+            "_template": "common/text",
+            "text": "Title"
+          },
+          {
+            "_template": "common/text",
+            "text": "Category"
+          },
+          {
+            "_template": "common/text",
+            "text": "Organization"
+          }
         ],
         "rows": [
           {
@@ -75,9 +69,11 @@
                 }
               },
               {
+                "_template": "common/text",
                 "text": "Administrative"
               },
               {
+                "_template": "common/text",
                 "text": "Atlantic Theater Company"
               }
             ]
@@ -100,9 +96,11 @@
                 }
               },
               {
+                "_template": "common/text",
                 "text": "Administrative"
               },
               {
+                "_template": "common/text",
                 "text": "Westport Country Playhouse"
               }
             ]
@@ -125,9 +123,11 @@
                 }
               },
               {
+                "_template": "common/text",
                 "text": "Administrative"
               },
               {
+                "_template": "common/text",
                 "text": "Westport Country Playhouse"
               }
             ]

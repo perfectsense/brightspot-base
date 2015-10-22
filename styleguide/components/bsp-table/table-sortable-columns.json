@@ -12,130 +12,106 @@
     "text": "table with sortable columns"
   },
   "headings": [
-    [
-      {
-        "_template": "common/link",
-        "cssClass": "asc",
-        "attributes": {
-          "href": ".",
-          "data-sort-by": "alpha",
-          "data-column-index": "0",
-          "_template": "common/attributes"
-        },
-        "body": {
-          "_template": "common/text",
-          "text": "String"
-        }
+    {
+      "_template": "common/link",
+      "cssClass": "asc",
+      "attributes": {
+        "href": ".",
+        "data-sort-by": "alpha",
+        "data-column-index": "0",
+        "_template": "common/attributes"
+      },
+      "body": {
+        "_template": "common/text",
+        "text": "String"
       }
-    ],
-    [
-      {
-        "_template": "common/link",
-        "attributes": {
-          "href": ".",
-          "data-sort-by": "numeric",
-          "data-column-index": "1",
-          "_template": "common/attributes"
-        },
-        "body": {
-          "_template": "common/text",
-          "text": "Number"
-        }
+    },
+    {
+      "_template": "common/link",
+      "attributes": {
+        "href": ".",
+        "data-sort-by": "numeric",
+        "data-column-index": "1",
+        "_template": "common/attributes"
+      },
+      "body": {
+        "_template": "common/text",
+        "text": "Number"
       }
-    ],
-    [
-      {
-        "_template": "common/link",
-        "attributes": {
-          "href": ".",
-          "data-sort-by": "date",
-          "data-column-index": "2",
-          "_template": "common/attributes"
-        },
-        "body": {
-          "_template": "common/text",
-          "text": "Date"
-        }
+    },
+    {
+      "_template": "common/link",
+      "attributes": {
+        "href": ".",
+        "data-sort-by": "date",
+        "data-column-index": "2",
+        "_template": "common/attributes"
+      },
+      "body": {
+        "_template": "common/text",
+        "text": "Date"
       }
-    ]
+    }
   ],
   "rows": [
     {
       "_template": "components/bsp-table-row",
       "columns": [
-        [
-          {
-            "_template": "common/text",
-            "text": "Aardvark",
-            "modifierClass": "data-value"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": "3",
-            "modifierClass": "data-value"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": "1/1/1999",
-            "modifierClass": "data-value"
-          }
-        ]
+        {
+          "_template": "common/text",
+          "text": "Aardvark",
+          "modifierClass": "data-value"
+        },
+        {
+          "_template": "common/text",
+          "text": "3",
+          "modifierClass": "data-value"
+        },
+        {
+          "_template": "common/text",
+          "text": "1/1/1999",
+          "modifierClass": "data-value"
+        }
       ]
     },
     {
       "_template": "components/bsp-table-row",
       "columns": [
-        [
-          {
-            "_template": "common/text",
-            "text": "Bear",
-            "modifierClass": "data-value"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": "2",
-            "modifierClass": "data-value"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": "1/3/1999",
-            "modifierClass": "data-value"
-          }
-        ]
+        {
+          "_template": "common/text",
+          "text": "Bear",
+          "modifierClass": "data-value"
+        },
+        {
+          "_template": "common/text",
+          "text": "2",
+          "modifierClass": "data-value"
+        },
+        {
+          "_template": "common/text",
+          "text": "1/3/1999",
+          "modifierClass": "data-value"
+        }
       ]
     },
     {
       "_template": "components/bsp-table-row",
       "columns": [
-        [
-          {
-            "_template": "common/text",
-            "text": "Cat",
-            "modifierClass": "data-value"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": "1",
-            "modifierClass": "data-value"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": "1/2/1999",
-            "modifierClass": "data-value"
-          }
-        ]
+        {
+          "_template": "common/text",
+          "text": "Cat",
+          "modifierClass": "data-value"
+        },
+        {
+          "_template": "common/text",
+          "text": "1",
+          "modifierClass": "data-value"
+        },
+        {
+          "_template": "common/text",
+          "text": "1/2/1999",
+          "modifierClass": "data-value"
+        }
       ]
     }
   ]

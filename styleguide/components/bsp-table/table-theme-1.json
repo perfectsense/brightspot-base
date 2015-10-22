@@ -6,189 +6,141 @@
   },
   "theme": "theme-1",
   "headings": [
-    [
-      {
-        "_template": "common/text",
-        "text": "Title"
-      }
-    ],
-    [
-      {
-        "_template": "common/text",
-        "text": "Category"
-      }
-    ],
-    [
-      {
-        "_template": "common/text",
-        "text": "Organization"
-      }
-    ],
-    [
-      {
-        "_template": "common/text",
-        "text": "State"
-      }
-    ],
-    [
-      {
-        "_template": "common/text",
-        "text": "Paid?"
-      }
-    ],
-    [
-      {
-        "_template": "common/text",
-        "text": "Date Posted"
-      }
-    ]
+    {
+      "_template": "common/text",
+      "text": "Title"
+    },
+    {
+      "_template": "common/text",
+      "text": "Category"
+    },
+    {
+      "_template": "common/text",
+      "text": "Organization"
+    },
+    {
+      "_template": "common/text",
+      "text": "State"
+    },
+    {
+      "_template": "common/text",
+      "text": "Paid?"
+    },
+    {
+      "_template": "common/text",
+      "text": "Date Posted"
+    }
   ],
   "rows": [
     {
       "_template": "components/bsp-table-row",
       "columns": [
-        [
-          {
-            "_template": "common/link",
-            "attributes": {
-              "href": "#",
-              "title": "Get details on this job",
-              "_template": "common/attributes"
-            },
-            "body": {
-              "_template": "common/text",
-              "text": "School Coordinator"
-            }
-          }
-        ],
-        [
-          {
+        {
+          "_template": "common/link",
+          "attributes": {
+            "href": "#",
+            "title": "Get details on this job",
+            "_template": "common/attributes"
+          },
+          "body": {
             "_template": "common/text",
-            "text": "Administrative"
+            "text": "School Coordinator"
           }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": "Atlantic Theater Company"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": "NY"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": "Yes"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": "07/07/2015"
-          }
-        ]
+        },
+        {
+          "_template": "common/text",
+          "text": "Administrative"
+        },
+        {
+          "_template": "common/text",
+          "text": "Atlantic Theater Company"
+        },
+        {
+          "_template": "common/text",
+          "text": "NY"
+        },
+        {
+          "_template": "common/text",
+          "text": "Yes"
+        },
+        {
+          "_template": "common/text",
+          "text": "07/07/2015"
+        }
       ]
     },
     {
       "_template": "components/bsp-table-row",
       "columns": [
-        [
-          {
-            "_template": "common/link",
-            "attributes": {
-              "href": "#",
-              "title": "Get details on this job",
-              "_template": "common/attributes"
-            },
-            "body": {
-              "_template": "common/text",
-              "text": "School Coordinator"
-            }
-          }
-        ],
-        [
-          {
+        {
+          "_template": "common/link",
+          "attributes": {
+            "href": "#",
+            "title": "Get details on this job",
+            "_template": "common/attributes"
+          },
+          "body": {
             "_template": "common/text",
-            "text": "Administrative"
+            "text": "School Coordinator"
           }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": "Atlantic Theater Company"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": "NY"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": "Yes"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": "07/07/2015"
-          }
-        ]
+        },
+        {
+          "_template": "common/text",
+          "text": "Administrative"
+        },
+        {
+          "_template": "common/text",
+          "text": "Atlantic Theater Company"
+        },
+        {
+          "_template": "common/text",
+          "text": "NY"
+        },
+        {
+          "_template": "common/text",
+          "text": "Yes"
+        },
+        {
+          "_template": "common/text",
+          "text": "07/07/2015"
+        }
       ]
     },
     {
       "_template": "components/bsp-table-row",
       "columns": [
-        [
-          {
-            "_template": "common/link",
-            "attributes": {
-              "href": "#",
-              "title": "Get details on this job",
-              "_template": "common/attributes"
-            },
-            "body": {
-              "_template": "common/text",
-              "text": "School Coordinator"
-            }
-          }
-        ],
-        [
-          {
+        {
+          "_template": "common/link",
+          "attributes": {
+            "href": "#",
+            "title": "Get details on this job",
+            "_template": "common/attributes"
+          },
+          "body": {
             "_template": "common/text",
-            "text": "Administrative"
+            "text": "School Coordinator"
           }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": "Atlantic Theater Company"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": "NY"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": "Yes"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": "07/07/2015"
-          }
-        ]
+        },
+        {
+          "_template": "common/text",
+          "text": "Administrative"
+        },
+        {
+          "_template": "common/text",
+          "text": "Atlantic Theater Company"
+        },
+        {
+          "_template": "common/text",
+          "text": "NY"
+        },
+        {
+          "_template": "common/text",
+          "text": "Yes"
+        },
+        {
+          "_template": "common/text",
+          "text": "07/07/2015"
+        }
       ]
     }
   ]

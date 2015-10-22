@@ -9,425 +9,297 @@
     {
       "_template": "components/bsp-table-row",
       "columns": [
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"black-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"black-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"red-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"red-checker\"> </div>"
-          }
-        ]
+        {
+          "_template": "common/html",
+          "text": "<div class=\"black-checker\"> </div>"
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"black-checker\"> </div>"
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"red-checker\"> </div>"
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"red-checker\"> </div>"
+        }
       ]
     },
     {
       "_template": "components/bsp-table-row",
       "columns": [
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"black-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"black-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"red-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"red-checker\"> </div>"
-          }
-        ]
+        {
+          "_template": "common/html",
+          "text": "<div class=\"black-checker\"> </div>"
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"black-checker\"> </div>"
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"red-checker\"> </div>"
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"red-checker\"> </div>"
+        }
       ]
     },
     {
       "_template": "components/bsp-table-row",
       "columns": [
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"black-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"black-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"red-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"red-checker\"> </div>"
-          }
-        ]
+        {
+          "_template": "common/html",
+          "text": "<div class=\"black-checker\"> </div>"
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"black-checker\"> </div>"
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"red-checker\"> </div>"
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"red-checker\"> </div>"
+        }
       ]
     },
     {
       "_template": "components/bsp-table-row",
       "columns": [
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"black-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"black-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"red-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"red-checker\"> </div>"
-          }
-        ]
+        {
+          "_template": "common/html",
+          "text": "<div class=\"black-checker\"> </div>"
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"black-checker\"> </div>"
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"red-checker\"> </div>"
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"red-checker\"> </div>"
+        }
       ]
     },
     {
       "_template": "components/bsp-table-row",
       "columns": [
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"black-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"black-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"red-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"red-checker\"> </div>"
-          }
-        ]
+        {
+          "_template": "common/html",
+          "text": "<div class=\"black-checker\"> </div>"
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"black-checker\"> </div>"
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"red-checker\"> </div>"
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"red-checker\"> </div>"
+        }
       ]
     },
     {
       "_template": "components/bsp-table-row",
       "columns": [
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"black-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"black-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"red-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"red-checker\"> </div>"
-          }
-        ]
+        {
+          "_template": "common/html",
+          "text": "<div class=\"black-checker\"> </div>"
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"black-checker\"> </div>"
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"red-checker\"> </div>"
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"red-checker\"> </div>"
+        }
       ]
     },
     {
       "_template": "components/bsp-table-row",
       "columns": [
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"black-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"black-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"red-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"red-checker\"> </div>"
-          }
-        ]
+        {
+          "_template": "common/html",
+          "text": "<div class=\"black-checker\"> </div>"
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"black-checker\"> </div>"
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"red-checker\"> </div>"
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"red-checker\"> </div>"
+        }
       ]
     },
     {
       "_template": "components/bsp-table-row",
       "columns": [
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"black-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"black-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/text",
-            "text": ""
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"red-checker\"> </div>"
-          }
-        ],
-        [
-          {
-            "_template": "common/html",
-            "text": "<div class=\"red-checker\"> </div>"
-          }
-        ]
+        {
+          "_template": "common/html",
+          "text": "<div class=\"black-checker\"> </div>"
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"black-checker\"> </div>"
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/text",
+          "text": ""
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"red-checker\"> </div>"
+        },
+        {
+          "_template": "common/html",
+          "text": "<div class=\"red-checker\"> </div>"
+        }
       ]
     }
   ]
