@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" dir="{{#if HeadView.textDirection}}{{HeadView.textDirection}}{{else}}ltr{{/if}}">
+    {{#with headView}}
+        {{ render this }}
+    {{/with}}
+
+    <body class="styleguide-page bsp-site {{siteWrapperClass}}">
+
+        {{ render this }}
+
+    </body>
+</html>
