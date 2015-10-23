@@ -9,9 +9,13 @@ public interface GalleryModuleView {
 
     Boolean isHorizontalSlides();
 
-    // TYPE ERROR: slidesToShow
+    Long getSlidesToShowMedium();
 
-    // TYPE ERROR: slidesToScroll
+    Long getSlidesToShowSmall();
+
+    Long getSlidesToScrollMedium();
+
+    Long getSlidesToScrollSmall();
 
     String getTheme();
 

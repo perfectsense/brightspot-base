@@ -13,13 +13,13 @@ public interface SiteHeaderView {
 
     // TYPE ERROR: searchForm
 
-    // TYPE ERROR: mainMenu
+    List<Object> getMainMenu();
 
-    // TYPE ERROR: EXAMPLE tophat
+    List<Object> getTophat();
 
     List<Object> getExtraMenu();
 
     // NAME ERROR: EXAMPLE extraLinks - List
 
-    // TYPE ERROR: sharing
+    List<Object> getSharing();
 }

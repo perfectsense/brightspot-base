@@ -2,7 +2,6 @@ package com.psddev.base.view;
 
 import com.psddev.handlebars.HandlebarsTemplate;
 
-import java.util.List;
 import java.util.Map;
 
 @HandlebarsTemplate("components/bsp-form-input")
@@ -14,11 +13,11 @@ public interface FormInputView {
 
     Map<String, String> getAttributes();
 
-    List<Object> getErrors();
+    Map<String, String> getErrorMessages();
 
     Map<String, String> getLabelAttributes();
 
-    // TYPE ERROR: label
+    Object getLabel();
 
     Boolean isAutoSubmit();
 }

@@ -7,7 +7,7 @@ import java.util.List;
 @HandlebarsTemplate("components/bsp-search-results")
 public interface SearchResultsView {
 
-    List<Object> getHeading();
+    Object getHeading();
 
     // TYPE ERROR: searchForm
 

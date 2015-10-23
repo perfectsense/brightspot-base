@@ -2,7 +2,6 @@ package com.psddev.base.view;
 
 import com.psddev.handlebars.HandlebarsTemplate;
 
-import java.util.List;
 import java.util.Map;
 
 @HandlebarsTemplate("components/bsp-form-textarea")
@@ -12,7 +11,7 @@ public interface FormTextareaView {
 
     Map<String, String> getAttributes();
 
-    List<Object> getErrors();
+    Map<String, String> getErrorMessages();
 
     Object getLabel();
 }

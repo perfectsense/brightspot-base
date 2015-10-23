@@ -12,9 +12,11 @@ public interface FormSelectView {
 
     Map<String, String> getAttributes();
 
-    List<Object> getErrors();
+    Map<String, String> getErrorMessages();
 
-    // TYPE ERROR: label
+    Map<String, String> getLabelAttributes();
+
+    Object getLabel();
 
     List<Object> getOptions();
 

@@ -7,7 +7,9 @@ import java.util.List;
 @HandlebarsTemplate("components/bsp-pagination")
 public interface PaginationView {
 
-    // TYPE ERROR: navigate
+    Object getPrevious();
+
+    Object getNext();
 
     List<Object> getListItems();
 }
