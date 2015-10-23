@@ -10,6 +10,7 @@
     "es6-module-loader": "0.16.6",
     "express": "^4.13.1",
     "extend": "^3.0.0",
+    "faker": "^3.0.1",
     "handlebars": "^4.0.3",
     "jasmine-core": "^2.3.4",
     "karma": "^0.12.36",

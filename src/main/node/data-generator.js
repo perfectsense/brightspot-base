@@ -5,6 +5,7 @@ function DataGenerator(){
     var traverse = require('traverse-async').traverse;
     var Chance = require('chance');
     var chance = new Chance();
+    var faker = require('faker');
     var moment = require('moment');
 
     /*
@@ -130,7 +131,9 @@ function DataGenerator(){
                   funcString = matches[n].slice(2, -2);
 
                   // executes the macro string as a function in the context of this node
-                  this.node = eval('self.'+funcString);
+                  this.node = new Promise(function (resolve) {
+                    resolve(eval('faker.'+funcString));
+                  });
 
                   // remember the unresolved Promises.
                   // Then, start removing them as they resolve...
