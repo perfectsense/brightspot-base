@@ -44,6 +44,7 @@ var _prepareResponse = function(req, res, next) {
     }
 
     // First, get the entrypoint template as a string
+    hbsRenderer.registerPartials();
     hbsRenderer.getTemplateAsString('main.hbs')
         .then(function(templateString){
             // Then, get the entrypoint data as JSON
