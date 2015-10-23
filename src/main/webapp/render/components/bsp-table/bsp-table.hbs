@@ -1,4 +1,4 @@
-<div class="bsp-component bsp-table-component{{#with options.modifierClass}} {{this}}{{/with}}">
+<div class="bsp-component bsp-table-component{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
 	{{#if title}}
 		<h3 class="bsp-component-title">{{render this.title}}</h3>
 	{{/if}}
