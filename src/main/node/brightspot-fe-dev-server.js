@@ -21,6 +21,16 @@ var defaults = {
     port: 3000
 };
 
+function Template() {
+}
+
+Template.prototype.toHTML = function () {
+  var partial = hbs.partials[this._template];
+  var template = hbs.compile(partial);
+
+  return template(this);
+};
+
 var targetNameFromPomXml = function(file) {
   var xml = parser.toJson( fs.readFileSync(file), { object: true } );
   return xml.project.artifactId + '-' + xml.project.version;
@@ -58,7 +68,28 @@ var _prepareResponse = function(req, res, next) {
                     dataGenerator.process(vm)
                         // then, hydrate the template and return to client
                         .then(function(value){
-                            return res.send(template(value));
+                            function convert(data) {
+                              if (typeof data === 'object') {
+                                if (Array.isArray(data)) {
+                                  return data.map(function (item) {
+                                    return convert(item);
+                                  });
+
+                                } else {
+                                  var copy = data._template ? new Template() : { };
+
+                                  Object.keys(data).forEach(function (key) {
+                                    copy[key] = convert(data[key]);
+                                  });
+
+                                  return copy;
+                                }
+                              }
+
+                              return data;
+                            }
+
+                            return res.send(template(convert(value)));
                         });
                 });
         });
