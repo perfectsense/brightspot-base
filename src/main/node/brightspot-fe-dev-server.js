@@ -53,7 +53,7 @@ var _prepareResponse = function(req, res, next) {
                     // create a viewmodel out of the JSON
                     var vm = hbsRenderer.createViewModel(jsonData);
                     // compile the template
-                    var template = hbs.compile(templateString, {noEscape: true});
+                    var template = hbs.compile(templateString);
                     // postprocess the viewmodel data
                     dataGenerator.process(vm)
                         // then, hydrate the template and return to client

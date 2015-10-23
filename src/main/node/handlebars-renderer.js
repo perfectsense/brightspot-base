@@ -160,7 +160,7 @@ function HandlebarsRenderer() {
     hbs.registerHelper('render', function(context, fullScope) {
       context = extend(true, context, fullScope.hash);
       var partial = hbs.partials[context['_template']];
-      var template = hbs.compile(partial, {noEscape: true});
+      var template = hbs.compile(partial);
       var hydrated = template(context);
       return new hbs.SafeString(hydrated);
     });
