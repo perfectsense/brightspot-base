@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="{{#if HeadView.textDirection}}{{HeadView.textDirection}}{{else}}ltr{{/if}}">
-    {{#with headView}}
-        {{ render this }}
-    {{/with}}
-
-    <body class="styleguide-page bsp-site {{siteWrapperClass}}">
-
-        {{ render this }}
-
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/styleguide.css">
+    </head>
+    <body>
+        <div class="sg-menu">
+            <ul>
+                {{#each paths}}
+                    <li><a href="{{this}}">{{this}}</a></li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="sg-content">
+            <iframe src="?iframe=true"></iframe>
+        </div>
     </body>
 </html>

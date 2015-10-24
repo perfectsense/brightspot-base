@@ -36,7 +36,7 @@ var targetNameFromPomXml = function(file) {
   return xml.project.artifactId + '-' + xml.project.version;
 };
 
-var _prepareResponse = function(req, res, next) {
+var _prepareResponse = function(config, req, res, next) {
     var dataFileUri;
 
     // if the originalUrl ends with a "/" then default to loading the "index.json" file.
@@ -55,44 +55,70 @@ var _prepareResponse = function(req, res, next) {
 
     // First, get the entrypoint template as a string
     hbsRenderer.registerPartials();
-    hbsRenderer.getTemplateAsString('main.hbs')
-        .then(function(templateString){
-            // Then, get the entrypoint data as JSON
-            return hbsRenderer.getJSONData(dataFileUri)
-                .then(function(jsonData){
-                    // create a viewmodel out of the JSON
-                    var vm = hbsRenderer.createViewModel(jsonData);
-                    // compile the template
-                    var template = hbs.compile(templateString);
-                    // postprocess the viewmodel data
-                    dataGenerator.process(vm)
-                        // then, hydrate the template and return to client
-                        .then(function(value){
-                            function convert(data) {
-                              if (typeof data === 'object') {
-                                if (Array.isArray(data)) {
-                                  return data.map(function (item) {
-                                    return convert(item);
-                                  });
+    if (req.query.iframe === 'true') {
+        hbsRenderer.getTemplateAsString('iframe.hbs')
+            .then(function (templateString) {
+                // Then, get the entrypoint data as JSON
+                return hbsRenderer.getJSONData(dataFileUri)
+                    .then(function (jsonData) {
+                        // create a viewmodel out of the JSON
+                        var vm = hbsRenderer.createViewModel(jsonData);
+                        // compile the template
+                        var template = hbs.compile(templateString);
+                        // postprocess the viewmodel data
+                        dataGenerator.process(vm)
+                            // then, hydrate the template and return to client
+                            .then(function (value) {
+                                function convert(data) {
+                                    if (typeof data === 'object') {
+                                        if (Array.isArray(data)) {
+                                            return data.map(function (item) {
+                                                return convert(item);
+                                            });
 
-                                } else {
-                                  var copy = data._template ? new Template() : { };
+                                        } else {
+                                            var copy = data._template ? new Template() : {};
 
-                                  Object.keys(data).forEach(function (key) {
-                                    copy[key] = convert(data[key]);
-                                  });
+                                            Object.keys(data).forEach(function (key) {
+                                                copy[key] = convert(data[key]);
+                                            });
 
-                                  return copy;
+                                            return copy;
+                                        }
+                                    }
+
+                                    return data;
                                 }
-                              }
 
-                              return data;
-                            }
+                                return res.send(template(convert(value)));
+                            });
+                    });
+            });
 
-                            return res.send(template(convert(value)));
-                        });
+    } else {
+        hbsRenderer.getTemplateAsString('main.hbs').then(function (templateString) {
+            var template = hbs.compile(templateString);
+            var paths = [ ];
+
+            function addPaths(prefix) {
+                fs.readdirSync(prefix).forEach(function (file) {
+                    var p = path.join(prefix, file);
+                    var stat = fs.lstatSync(p);
+
+                    if (stat.isDirectory()) {
+                        addPaths(p);
+
+                    } else if (p.slice(-5) === '.json') {
+                        paths.push(p.slice(config.wwwroot.length, -5));
+                    }
                 });
-        });
+            }
+
+            addPaths(config.wwwroot);
+
+            return res.send(template({ 'paths': paths }));
+        })
+    }
 };
 
 module.exports = {
@@ -201,7 +227,7 @@ module.exports = {
         // After app.use() is configured above for the static asset paths from the filesystem,
         // we can handle all other requests and pass them through our custom middleware which renders the HBS templates.
         app.use('*', function(req, res, next) {
-            _prepareResponse(req, res, next);
+            _prepareResponse(config, req, res, next);
         });
 
     // start the server

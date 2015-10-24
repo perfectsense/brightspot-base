@@ -1,16 +1,31 @@
-/* This should be proper CSS so we don't have to worry about compiling it.  These should be overrides, so they can be old school CSS */
-
-.styleguide-page {
-	padding-top: 60px;
+body {
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
-.styleguide-page-description {
-	border-bottom: 1px solid #666;
-	display: block;
-	margin-bottom: 2rem;
-	padding-bottom: 2rem;
+.sg-menu {
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    width: 280px;
+    word-break: break-all;
 }
 
-.styleguide-page-description p {
-	margin: 1rem 0 0;
+.sg-menu li {
+    margin-bottom: 10px;
+}
+
+.sg-content {
+    bottom: 0;
+    position: absolute;
+    left: 300px;
+    right: 0;
+    top: 0;
+}
+
+.sg-content iframe {
+    border: none;
+    height: 100%;
+    width: 100%;
 }
