@@ -224,6 +224,8 @@ module.exports = {
     // serves the Favicon
     //app.use(favicon(config.projectDir + '/' + config.srcRelPath + '/assets/images/favicon.ico'));
 
+    app.use(require('./placeholder-image')());
+
     // After app.use() is configured above for the static asset paths from the filesystem,
     // we can handle all other requests and pass them through our custom middleware which renders the HBS templates.
     app.use('*', function(req, res, next) {
