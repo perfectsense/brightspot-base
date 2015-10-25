@@ -21,20 +21,20 @@ function HandlebarsRenderer() {
     var self = this;
 
     return new Promise(function(resolve, reject) {
-        var rootPath;
-        var len = self.config.dataPaths.length;
+      var rootPath;
+      var len = self.config.dataPaths.length;
 
-        // If the first path in the template paths isn't found,
-        // then fallback on the next and so on.
-        for (var n=0; n<len; n++){
-            rootPath = self.config.dataPaths[n];
-            try {
-                resolve(JSON.parse(fs.readFileSync(path.join(rootPath, uri), "utf8")));
-                break;
-            } catch (ex) {
-                //log.error("Couldn't find because ("+ex+"), for ["+rootPath+uri+"]. Falling back on next file...");
-            }
-        };
+      // If the first path in the template paths isn't found,
+      // then fallback on the next and so on.
+      for (var n=0; n<len; n++){
+        rootPath = self.config.dataPaths[n];
+        try {
+          resolve(JSON.parse(fs.readFileSync(path.join(rootPath, uri), "utf8")));
+          break;
+        } catch (ex) {
+          //log.error("Couldn't find because ("+ex+"), for ["+rootPath+uri+"]. Falling back on next file...");
+        }
+      };
     });
   }
 
@@ -43,20 +43,20 @@ function HandlebarsRenderer() {
     var self = this;
 
     return new Promise(function(resolve, reject) {
-        var rootPath;
-        var len = self.config.templatePaths.length;
+      var rootPath;
+      var len = self.config.templatePaths.length;
 
-        // If the first path in the template paths isn't found,
-        // then fallback on the next and so on.
-        for (var n=0; n<len; n++){
-            rootPath = self.config.templatePaths[n];
-            try {
-                resolve(fs.readFileSync(path.join(rootPath, uri), "utf8"));
-                break;
-            } catch (ex) {
-                //log.error("Couldn't find because ("+ex+"), for ["+rootPath+uri+"]. Falling back on next file...");
-            }
-        };
+      // If the first path in the template paths isn't found,
+      // then fallback on the next and so on.
+      for (var n=0; n<len; n++){
+        rootPath = self.config.templatePaths[n];
+        try {
+          resolve(fs.readFileSync(path.join(rootPath, uri), "utf8"));
+          break;
+        } catch (ex) {
+          //log.error("Couldn't find because ("+ex+"), for ["+rootPath+uri+"]. Falling back on next file...");
+        }
+      };
     });
   }
 
@@ -77,15 +77,15 @@ function HandlebarsRenderer() {
             console.log('assembling view-model with: ', theObject[theKey]);
             // read the data file from disk
             self.getJSONData(theObject[theKey])
-                .then(function(partialJSON){
-                    // remove the leaf since we don't want to shoot ourselves in the foot and process it in the future
-                    delete theObject[theKey];
-                    // merge the data using 'add', which allows us to prevent predefined leaf nodes
-                    // from being overwritten by the merged data.
-                    _.add(theObject, partialJSON);
-                    // continue on
-                    recursiveSearch(theObject, parent);
-                });
+              .then(function(partialJSON){
+                // remove the leaf since we don't want to shoot ourselves in the foot and process it in the future
+                delete theObject[theKey];
+                // merge the data using 'add', which allows us to prevent predefined leaf nodes
+                // from being overwritten by the merged data.
+                _.add(theObject, partialJSON);
+                // continue on
+                recursiveSearch(theObject, parent);
+              });
           }
           // if the special key wasn't found, check for a "_repeat" key
           else if (theObject['_repeat']) {
@@ -115,37 +115,37 @@ function HandlebarsRenderer() {
   }
 
   /*
-  * This convenience method registers all the partials into Handlebars found under the provided paths.
-  * It does so by recursively reading each file from disk and then processing it's filepath to normalize
-  * it for the Handlebars registry.
+   * This convenience method registers all the partials into Handlebars found under the provided paths.
+   * It does so by recursively reading each file from disk and then processing it's filepath to normalize
+   * it for the Handlebars registry.
    */
   this.registerPartials = function() {
     var filepaths, partialCount = 0;
     var len = this.config.templatePaths.length;
 
     /*
-    * Looping backwards through the template filepaths is important
-    * because it allows us to ask HBS to register overtop existing partials
-    * which preserves the file precedence for overrides.
+     * Looping backwards through the template filepaths is important
+     * because it allows us to ask HBS to register overtop existing partials
+     * which preserves the file precedence for overrides.
      */
     for (var i=len; i-- > 0;){
-        try {
-          filepaths = recursiveReadSync(this.config.templatePaths[i]);
-          filepaths.map(function(filepath){
-            // get the portion of the filepath under the 'render'
-            // strip off the leading slash
-            // strip off the trailing extension (.hbs)
-            var name = filepath.split('render')[1].split(/\/(.*)$/)[1].split('.hbs')[0];
-            // get the portion of the filepath rooted at the 'render'
-            var relPath = filepath.substr(filepath.lastIndexOf('render'))
-            // register this partial with Handlebars
-            hbs.registerPartial(name, fs.readFileSync(filepath, "utf8"));
-            partialCount++;
-            return {"name": name, "relPath": relPath};
-          });
-        } catch(err){
-            log.error('Path does not exist');
-        }
+      try {
+        filepaths = recursiveReadSync(this.config.templatePaths[i]);
+        filepaths.map(function(filepath){
+          // get the portion of the filepath under the 'render'
+          // strip off the leading slash
+          // strip off the trailing extension (.hbs)
+          var name = filepath.split('render')[1].split(/\/(.*)$/)[1].split('.hbs')[0];
+          // get the portion of the filepath rooted at the 'render'
+          var relPath = filepath.substr(filepath.lastIndexOf('render'))
+          // register this partial with Handlebars
+          hbs.registerPartial(name, fs.readFileSync(filepath, "utf8"));
+          partialCount++;
+          return {"name": name, "relPath": relPath};
+        });
+      } catch(err){
+        log.error('Path does not exist');
+      }
     }
 
     if (partialCount){

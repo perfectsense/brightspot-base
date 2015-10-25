@@ -13,12 +13,12 @@ var dataGenerator = require('./data-generator');
 var serverConfig;
 
 var defaults = {
-    brightSpotBaseRelPath: 'node_modules/brightspot-base',
-    pom: 'pom.xml',
-    wwwroot: 'styleguide',
-    srcRelPath: 'src/main/webapp',
-    host: 'localhost',
-    port: 3000
+  brightSpotBaseRelPath: 'node_modules/brightspot-base',
+  pom: 'pom.xml',
+  wwwroot: 'styleguide',
+  srcRelPath: 'src/main/webapp',
+  host: 'localhost',
+  port: 3000
 };
 
 function Template() {
@@ -37,88 +37,88 @@ var targetNameFromPomXml = function(file) {
 };
 
 var _prepareResponse = function(config, req, res, next) {
-    var dataFileUri;
+  var dataFileUri;
 
-    // if the originalUrl ends with a "/" then default to loading the "index.json" file.
-    // eg: localhost:3000/pages/example/
-    if (req.originalUrl.slice(-1) === '/'){
-        dataFileUri = req.originalUrl + 'index.json';
-    }
-    // if the request has an ".html" extension then just return the response with no additional processing
-    else if (req.originalUrl.slice(-5) === '.html') {
-        next();
-    }
-    // otherwise, assume the user wants a data file and just append the ".json" extension
-    else {
-        dataFileUri = req.baseUrl + '.json';
-    }
+  // if the originalUrl ends with a "/" then default to loading the "index.json" file.
+  // eg: localhost:3000/pages/example/
+  if (req.originalUrl.slice(-1) === '/'){
+    dataFileUri = req.originalUrl + 'index.json';
+  }
+  // if the request has an ".html" extension then just return the response with no additional processing
+  else if (req.originalUrl.slice(-5) === '.html') {
+    next();
+  }
+  // otherwise, assume the user wants a data file and just append the ".json" extension
+  else {
+    dataFileUri = req.baseUrl + '.json';
+  }
 
-    // First, get the entrypoint template as a string
-    hbsRenderer.registerPartials();
-    if (req.query.iframe === 'true') {
-        hbsRenderer.getTemplateAsString('iframe.hbs')
-            .then(function (templateString) {
-                // Then, get the entrypoint data as JSON
-                return hbsRenderer.getJSONData(dataFileUri)
-                    .then(function (jsonData) {
-                        // create a viewmodel out of the JSON
-                        var vm = hbsRenderer.createViewModel(jsonData);
-                        // compile the template
-                        var template = hbs.compile(templateString);
-                        // postprocess the viewmodel data
-                        dataGenerator.process(vm)
-                            // then, hydrate the template and return to client
-                            .then(function (value) {
-                                function convert(data) {
-                                    if (typeof data === 'object') {
-                                        if (Array.isArray(data)) {
-                                            return data.map(function (item) {
-                                                return convert(item);
-                                            });
-
-                                        } else {
-                                            var copy = data._template ? new Template() : {};
-
-                                            Object.keys(data).forEach(function (key) {
-                                                copy[key] = convert(data[key]);
-                                            });
-
-                                            return copy;
-                                        }
-                                    }
-
-                                    return data;
-                                }
-
-                                return res.send(template(convert(value)));
-                            });
-                    });
-            });
-
-    } else {
-        hbsRenderer.getTemplateAsString('main.hbs').then(function (templateString) {
+  // First, get the entrypoint template as a string
+  hbsRenderer.registerPartials();
+  if (req.query.iframe === 'true') {
+    hbsRenderer.getTemplateAsString('iframe.hbs')
+      .then(function (templateString) {
+        // Then, get the entrypoint data as JSON
+        return hbsRenderer.getJSONData(dataFileUri)
+          .then(function (jsonData) {
+            // create a viewmodel out of the JSON
+            var vm = hbsRenderer.createViewModel(jsonData);
+            // compile the template
             var template = hbs.compile(templateString);
-            var paths = [ ];
+            // postprocess the viewmodel data
+            dataGenerator.process(vm)
+              // then, hydrate the template and return to client
+              .then(function (value) {
+                function convert(data) {
+                  if (typeof data === 'object') {
+                    if (Array.isArray(data)) {
+                      return data.map(function (item) {
+                        return convert(item);
+                      });
 
-            function addPaths(prefix) {
-                fs.readdirSync(prefix).forEach(function (file) {
-                    var p = path.join(prefix, file);
-                    var stat = fs.lstatSync(p);
+                    } else {
+                      var copy = data._template ? new Template() : {};
 
-                    if (stat.isDirectory()) {
-                        addPaths(p);
+                      Object.keys(data).forEach(function (key) {
+                        copy[key] = convert(data[key]);
+                      });
 
-                    } else if (p.slice(-5) === '.json') {
-                        paths.push(p.slice(config.wwwroot.length, -5));
+                      return copy;
                     }
-                });
-            }
+                  }
 
-            addPaths(config.wwwroot);
+                  return data;
+                }
 
-            return res.send(template({ 'paths': paths }));
-        })
-    }
+                return res.send(template(convert(value)));
+              });
+          });
+      });
+
+  } else {
+    hbsRenderer.getTemplateAsString('main.hbs').then(function (templateString) {
+      var template = hbs.compile(templateString);
+      var paths = [ ];
+
+      function addPaths(prefix) {
+        fs.readdirSync(prefix).forEach(function (file) {
+          var p = path.join(prefix, file);
+          var stat = fs.lstatSync(p);
+
+          if (stat.isDirectory()) {
+            addPaths(p);
+
+          } else if (p.slice(-5) === '.json') {
+            paths.push(p.slice(config.wwwroot.length, -5));
+          }
+        });
+      }
+
+      addPaths(config.wwwroot);
+
+      return res.send(template({ 'paths': paths }));
+    })
+  }
 };
 
 module.exports = {
@@ -126,10 +126,10 @@ module.exports = {
     var app = express();
     var target;
 
-        log.welcome();
+    log.welcome();
 
-        app.set('env', 'development');
-        app.use(cors());
+    app.set('env', 'development');
+    app.use(cors());
 
     // merge config with defaults
     config = _.extend({}, defaults, config);
@@ -175,26 +175,26 @@ module.exports = {
       console.log('WARNING: Path %s does not exist', config.brightspotBasePath);
     }
 
-        log.success(config.projectDir);
-        log.success(config.targetPath);
-        log.success(config.brightspotBasePath);
-        log.success(config.projectServerRoot);
-        log.success(config.srcRelPath);
+    log.success(config.projectDir);
+    log.success(config.targetPath);
+    log.success(config.brightspotBasePath);
+    log.success(config.projectServerRoot);
+    log.success(config.srcRelPath);
 
-        // TemplatePaths are a list of relative paths to template directories.
-        // Order matters; where the first item has the highest precedence for the application to serve from
-        config.templatePaths = [
-            config.projectDir + '/' + config.srcRelPath + '/render',
-            config.targetPath + '/render',
-            config.projectDir + '/' + config.brightSpotBaseRelPath  + '/' + config.srcRelPath + '/render'
-        ];
+    // TemplatePaths are a list of relative paths to template directories.
+    // Order matters; where the first item has the highest precedence for the application to serve from
+    config.templatePaths = [
+      config.projectDir + '/' + config.srcRelPath + '/render',
+      config.targetPath + '/render',
+      config.projectDir + '/' + config.brightSpotBaseRelPath  + '/' + config.srcRelPath + '/render'
+    ];
 
-        // DataPaths are a list of relative paths to data/json directories
-        // Order matters; where the first item has the highest precedence for the application to serve from
-        config.dataPaths = [
-            config.projectServerRoot,
-            config.projectDir + '/' + config.brightSpotBaseRelPath + '/' + config.wwwroot
-        ];
+    // DataPaths are a list of relative paths to data/json directories
+    // Order matters; where the first item has the highest precedence for the application to serve from
+    config.dataPaths = [
+      config.projectServerRoot,
+      config.projectDir + '/' + config.brightSpotBaseRelPath + '/' + config.wwwroot
+    ];
 
     // assets/render looks for file in project first, then in target
     var serverPaths = [
@@ -206,7 +206,7 @@ module.exports = {
       { '/render': config.projectDir + '/' + config.brightSpotBaseRelPath  + '/' + config.srcRelPath + '/render' }
     ];
 
-        // define all the static paths to serve from
+    // define all the static paths to serve from
     _.forEach(serverPaths, function(value) {
       _.forEach(value, function(localPath, serverPath) {
         if (fs.existsSync(localPath)) {
@@ -218,17 +218,17 @@ module.exports = {
       });
     });
 
-        // Init the server-side template renderer
-        hbsRenderer.init(config);
+    // Init the server-side template renderer
+    hbsRenderer.init(config);
 
-        // serves the Favicon
-        //app.use(favicon(config.projectDir + '/' + config.srcRelPath + '/assets/images/favicon.ico'));
+    // serves the Favicon
+    //app.use(favicon(config.projectDir + '/' + config.srcRelPath + '/assets/images/favicon.ico'));
 
-        // After app.use() is configured above for the static asset paths from the filesystem,
-        // we can handle all other requests and pass them through our custom middleware which renders the HBS templates.
-        app.use('*', function(req, res, next) {
-            _prepareResponse(config, req, res, next);
-        });
+    // After app.use() is configured above for the static asset paths from the filesystem,
+    // we can handle all other requests and pass them through our custom middleware which renders the HBS templates.
+    app.use('*', function(req, res, next) {
+      _prepareResponse(config, req, res, next);
+    });
 
     // start the server
     app.listen(config.port, config.host, function() {
