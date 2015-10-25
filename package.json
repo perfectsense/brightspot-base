@@ -27,7 +27,7 @@
     "serve-favicon": "^2.3.0",
     "systemjs": "0.18.4",
     "terminal-kit": "^0.15.10",
-    "traverse-async": "^0.1.6",
+    "traverse": "^0.6.6",
     "xml2json": "^0.8.1"
   }
 }

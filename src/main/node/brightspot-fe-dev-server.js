@@ -9,7 +9,8 @@ var hbs = require('handlebars');
 var parser = require('xml2json');
 var path = require('path');
 var hbsRenderer = require('./handlebars-renderer');
-var dataGenerator = require('./data-generator');
+var DataGenerator = require('./data-generator');
+var traverse = require('traverse');
 var serverConfig;
 
 var defaults = {
@@ -55,69 +56,66 @@ var _prepareResponse = function(config, req, res, next) {
 
   // First, get the entrypoint template as a string
   hbsRenderer.registerPartials();
+
   if (req.query.iframe === 'true') {
-    hbsRenderer.getTemplateAsString('iframe.hbs')
-      .then(function (templateString) {
-        // Then, get the entrypoint data as JSON
-        return hbsRenderer.getJSONData(dataFileUri)
-          .then(function (jsonData) {
-            // create a viewmodel out of the JSON
-            var vm = hbsRenderer.createViewModel(jsonData);
-            // compile the template
-            var template = hbs.compile(templateString);
-            // postprocess the viewmodel data
-            dataGenerator.process(vm)
-              // then, hydrate the template and return to client
-              .then(function (value) {
-                function convert(data) {
-                  if (typeof data === 'object') {
-                    if (Array.isArray(data)) {
-                      return data.map(function (item) {
-                        return convert(item);
-                      });
+    var data = hbsRenderer.getJSONData(dataFileUri);
 
-                    } else {
-                      var copy = data._template ? new Template() : {};
+    traverse(data).forEach(function (value) {
+      var dataUrl = value._dataUrl;
 
-                      Object.keys(data).forEach(function (key) {
-                        copy[key] = convert(data[key]);
-                      });
+      if (dataUrl) {
+        this.update(hbsRenderer.getJSONData(dataUrl));
+      }
+    });
 
-                      return copy;
-                    }
-                  }
+    new DataGenerator(Math.floor(Math.random() * 1000)).process(data);
 
-                  return data;
-                }
-
-                return res.send(template(convert(value)));
-              });
+    function convert(data) {
+      if (typeof data === 'object') {
+        if (Array.isArray(data)) {
+          return data.map(function (item) {
+            return convert(item);
           });
-      });
 
-  } else {
-    hbsRenderer.getTemplateAsString('main.hbs').then(function (templateString) {
-      var template = hbs.compile(templateString);
-      var paths = [ ];
+        } else {
+          var copy = data._template ? new Template() : {};
 
-      function addPaths(prefix) {
-        fs.readdirSync(prefix).forEach(function (file) {
-          var p = path.join(prefix, file);
-          var stat = fs.lstatSync(p);
+          Object.keys(data).forEach(function (key) {
+            copy[key] = convert(data[key]);
+          });
 
-          if (stat.isDirectory()) {
-            addPaths(p);
-
-          } else if (p.slice(-5) === '.json') {
-            paths.push(p.slice(config.wwwroot.length, -5));
-          }
-        });
+          return copy;
+        }
       }
 
-      addPaths(config.wwwroot);
+      return data;
+    }
 
-      return res.send(template({ 'paths': paths }));
-    })
+    var template = hbs.compile(hbsRenderer.getTemplateAsString('iframe.hbs'));
+
+    return res.send(template(convert(data)));
+
+  } else {
+    var template = hbs.compile(hbsRenderer.getTemplateAsString('main.hbs'));
+    var paths = [ ];
+
+    function addPaths(prefix) {
+      fs.readdirSync(prefix).forEach(function (file) {
+        var p = path.join(prefix, file);
+        var stat = fs.lstatSync(p);
+
+        if (stat.isDirectory()) {
+          addPaths(p);
+
+        } else if (p.slice(-5) === '.json') {
+          paths.push(p.slice(config.wwwroot.length, -5));
+        }
+      });
+    }
+
+    addPaths(config.wwwroot);
+
+    return res.send(template({ 'paths': paths }));
   }
 };
 
