@@ -14,22 +14,26 @@ DataGenerator.prototype.name = function () {
   return this.chance.name();
 };
 
-DataGenerator.prototype._count = function (count) {
-  if (Array.isArray(count)) {
-    return this.chance.integer({
-      min: count[0],
-      max: count[1]
+DataGenerator.prototype.number = function (number) {
+  if (Array.isArray(number)) {
+    var step = number[2];
+    number = this.chance.integer({
+      min: number[0],
+      max: number[1]
     });
 
-  } else {
-    return count;
+    if (step) {
+      number = Math.round(number / step) * step;
+    }
   }
+
+  return number;
 };
 
 DataGenerator.prototype._repeat = function (count, separator, callback) {
   var items = [ ];
 
-  for (count = this._count(count); count > 0; -- count) {
+  for (count = this.number(count); count > 0; -- count) {
     items.push(callback.call(this));
   }
 
@@ -75,7 +79,7 @@ DataGenerator.prototype.process = function (data) {
         var repeat = item._repeat;
 
         if (repeat) {
-          for (repeat = self._count(repeat); repeat > 0; -- repeat) {
+          for (repeat = self.number(repeat); repeat > 0; -- repeat) {
             newArray.push(_.clone(item, true));
           }
 
