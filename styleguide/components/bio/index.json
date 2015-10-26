@@ -1,43 +1,42 @@
 {
   "_template": "components/bsp-bio",
   "image": {
-    "_dataUrl": "/common/image-200x300.json"
+    "_template": "common/image",
+    "attributes": {
+      "src": "{{image(200, 300)}}",
+      "_template": "common/attributes"
+    }
   },
-  "title": "Actor",
+  "title": "{{name}}",
   "subtitles": [
     {
-      "_dataUrl": "/common/link-test-text-14-char.json"
-    },
-    {
-      "_dataUrl": "/common/link-test-text-14-char.json"
+      "_template": "common/link",
+      "_repeat": [ 1, 3 ],
+      "body": "{{words([ 1, 3 ])}}",
+      "attributes": {
+        "_template": "common/attributes",
+        "href": "#"
+      }
     }
   ],
   "text": {
     "_template": "common/html",
-    "text": "<p>Bacon ipsum dolor amet t-bone chicken cupim, capicola shankle brisket andouille ball tip filet mignon pastrami meatball kevin turducken flank. Tri-tip jowl sausage capicola turkey pork beef doner sirloin pork loin meatloaf. Biltong sausage andouille cow ham hock doner sirloin landjaeger pig. Boudin shoulder fatback t-bone andouille pork chop meatloaf beef. Strip steak sirloin pork loin, jowl meatloaf tenderloin bresaola.</p>"
+    "text": "{{paragraphs(1)}}"
   },
   "primaryList": [
     {
       "_template": "components/bsp-bio-list-item",
-      "heading": "Born",
-      "text": "1964"
-    },
-    {
-      "_template": "components/bsp-bio-list-item",
-      "heading": "Number of seats",
-      "text": "1761"
+      "_repeat": [ 1, 5 ],
+      "heading": "{{words([ 1, 3 ])}}",
+      "text": "{{words([ 1, 5 ])}}"
     }
   ],
   "secondaryList": [
     {
       "_template": "components/bsp-bio-list-item",
-      "heading": "Built",
-      "text": "1964"
-    },
-    {
-      "_template": "components/bsp-bio-list-item",
-      "heading": "Number of seats",
-      "text": "1761"
+      "_repeat": [ 1, 5 ],
+      "heading": "{{words([ 1, 3 ])}}",
+      "text": "{{words([ 1, 5 ])}}"
     }
   ],
   "socialLinks": [
