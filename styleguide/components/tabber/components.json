@@ -7,7 +7,7 @@
       "label": "Tab 1",
       "labelSubText": "Tab 1 Sub Text",
       "component": {
-        "_dataUrl": "/components/bsp-list-promo/5-items-no-title-no-cta.json"
+        "_dataUrl": "/components/list-promo/5-items-no-title-no-cta.json"
       }
     },
     {

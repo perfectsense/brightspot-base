@@ -5,10 +5,10 @@
   "galleryTitle": "Full screen gallery Title",
   "gallerySlides": [
     {
-      "_dataUrl": "/components/bsp-gallery-fullscreen/slide-for-dynamic-load-0.json"
+      "_dataUrl": "/components/gallery-fullscreen/slide-for-dynamic-load-0.json"
     }
   ],
   "sharing": {
-    "_dataUrl": "/components/bsp-social-share/share.json"
+    "_dataUrl": "/components/social-share/share.json"
   }
 }

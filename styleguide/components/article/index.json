@@ -1,7 +1,7 @@
 {
   "_template": "components/bsp-article",
   "sharing": {
-    "_dataUrl": "/components/bsp-social-share/share-notitle.json"
+    "_dataUrl": "/components/social-share/share-notitle.json"
   },
   "permalink": "/bsp-article/",
   "publishDate": "05 Apr 2015",
@@ -34,7 +34,7 @@
     }
   ],
   "tags": {
-    "_dataUrl": "/components/bsp-tags/tag-list.json"
+    "_dataUrl": "/components/tags/tag-list.json"
   },
   "lead": {
     "_template": "common/figure",
@@ -94,7 +94,7 @@
     {
       "_template": "components/bsp-enhancement",
       "content": {
-        "_dataUrl": "/components/bsp-gallery-module/7-slides-dots.json"
+        "_dataUrl": "/components/gallery-module/7-slides-dots.json"
       }
     },
     {
