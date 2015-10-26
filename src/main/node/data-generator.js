@@ -7,7 +7,7 @@ function DataGenerator(seed) {
 }
 
 DataGenerator.prototype.image = function (width, height) {
-  return '/placeholder-image/' + this.chance.guid() + '/' + width + 'x' + height;
+  return '/placeholder-image/' + this.chance.guid() + '/' + this.number(width) + 'x' + this.number(height);
 };
 
 DataGenerator.prototype.name = function () {
