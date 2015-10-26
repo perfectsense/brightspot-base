@@ -4,14 +4,14 @@
 {{#if options}}
 	<div class="bsp-form-select">
 		{{#if label}}
-			<label {{label.attributes}}>
-			{{#if labelAfterInput}} {{else}}{{label.text}}{{/if}}
+			<label {{labelAttributes}}>
+			{{#if labelAfterInput}} {{else}}{{render label}}{{/if}}
 		{{/if}}
-			<select {{attributes}} {{#if autoSubmit}}data-bsp-autosubmit{{/if}}>
-				{{#each options}}{{this}}{{/each}}
+			<select {{render attributes}} {{#if autoSubmit}}data-bsp-autosubmit{{/if}}>
+				{{#each options}}{{render this}}{{/each}}
 			</select>
 		{{#if label}}
-			{{#if labelAfterInput}}{{label.text}}{{else}} {{/if}}
+			{{#if labelAfterInput}}{{render label}}{{else}} {{/if}}
 			</label>
 		{{/if}}
 	</div>

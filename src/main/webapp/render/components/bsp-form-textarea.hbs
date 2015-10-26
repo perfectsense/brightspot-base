@@ -4,11 +4,11 @@
 <div class="bsp-form-textarea">
 	{{#if label}}
 		<label {{labelAttributes}}>
-		{{#if labelAfterInput}} {{else}}{{label}}{{/if}}
+		{{#if labelAfterInput}} {{else}}{{render label}}{{/if}}
 	{{/if}}
-		<textarea {{attributes}}>{{#if text}}{{text}}{{/if}}</textarea>
+		<textarea {{render attributes}}>{{#if text}}{{text}}{{/if}}</textarea>
 	{{#if label}}
-		{{#if labelAfterInput}}{{label}}{{else}} {{/if}}
+		{{#if labelAfterInput}}{{render label}}{{else}} {{/if}}
 		</label>
 	{{/if}}
 </div>

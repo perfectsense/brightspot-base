@@ -2,7 +2,7 @@
 	<div data-bsp-form-message="#{{attributes.id}}"
 		{{#if errorMessages}}
 		data-bsp-form-message-options='{
-			"messages": {{errorMessages}}
+			"messages": {{render errorMessages}}
 		}'
 		{{/if}}
 	></div>
