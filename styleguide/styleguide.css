@@ -16,6 +16,15 @@ body {
     margin-bottom: 10px;
 }
 
+.sg-group ul {
+  margin: 0;
+  padding: 0;
+}
+
+.sg-group-name {
+  text-transform: uppercase;
+}
+
 .sg-content {
     bottom: 0;
     position: absolute;
