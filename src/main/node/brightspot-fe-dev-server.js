@@ -11,6 +11,7 @@ var path = require('path');
 var hbsRenderer = require('./handlebars-renderer');
 var DataGenerator = require('./data-generator');
 var traverse = require('traverse');
+var url = require('url');
 var serverConfig;
 
 var defaults = {
@@ -38,84 +39,102 @@ var targetNameFromPomXml = function(file) {
 };
 
 var _prepareResponse = function(config, req, res, next) {
-  var dataFileUri;
+  var reqPath = req.path;
 
-  // if the originalUrl ends with a "/" then default to loading the "index.json" file.
-  // eg: localhost:3000/pages/example/
-  if (req.originalUrl.slice(-1) === '/'){
-    dataFileUri = req.originalUrl + 'index.json';
-  }
-  // if the request has an ".html" extension then just return the response with no additional processing
-  else if (req.originalUrl.slice(-5) === '.html') {
-    next();
-  }
-  // otherwise, assume the user wants a data file and just append the ".json" extension
-  else {
-    dataFileUri = req.baseUrl + '.json';
-  }
-
-  // First, get the entrypoint template as a string
   hbsRenderer.registerPartials();
 
   if (req.query.iframe === 'true') {
-    var data = hbsRenderer.getJSONData(dataFileUri);
+    var filesPath = path.join(config.wwwroot, reqPath);
 
-    traverse(data).forEach(function (value) {
-      var dataUrl = value._dataUrl;
+    if (!fs.statSync(filesPath).isDirectory()) {
+      return res.end(404);
+    }
 
-      if (dataUrl) {
-        this.update(hbsRenderer.getJSONData(dataUrl));
+    var files = [ ];
+
+    fs.readdirSync(filesPath).forEach(function (file) {
+
+      if (file.slice(0, 1) !== '_' && file.slice(-5) === '.json') {
+        var data = hbsRenderer.getJSONData(path.join(filesPath, file).slice(config.wwwroot.length));
+
+        traverse(data).forEach(function (value) {
+          var dataUrl = value._dataUrl;
+
+          if (dataUrl) {
+            this.update(hbsRenderer.getJSONData(dataUrl));
+          }
+        });
+
+        new DataGenerator(Math.floor(Math.random() * 1000)).process(data);
+
+        function convert(data) {
+          if (typeof data === 'object') {
+            if (Array.isArray(data)) {
+              return data.map(function (item) {
+                return convert(item);
+              });
+
+            } else {
+              var copy = data._template ? new Template() : {};
+
+              Object.keys(data).forEach(function (key) {
+                copy[key] = convert(data[key]);
+              });
+
+              return copy;
+            }
+          }
+
+          return data;
+        }
+
+        files.push({
+          name: file,
+          data: convert(data)
+        });
       }
     });
 
-    new DataGenerator(Math.floor(Math.random() * 1000)).process(data);
-
-    function convert(data) {
-      if (typeof data === 'object') {
-        if (Array.isArray(data)) {
-          return data.map(function (item) {
-            return convert(item);
-          });
-
-        } else {
-          var copy = data._template ? new Template() : {};
-
-          Object.keys(data).forEach(function (key) {
-            copy[key] = convert(data[key]);
-          });
-
-          return copy;
-        }
-      }
-
-      return data;
-    }
-
     var template = hbs.compile(hbsRenderer.getTemplateAsString('iframe.hbs'));
 
-    return res.send(template(convert(data)));
+    return res.send(template({ files: files }));
 
   } else {
-    var template = hbs.compile(hbsRenderer.getTemplateAsString('main.hbs'));
-    var paths = [ ];
+    var groups = [ ];
 
-    function addPaths(prefix) {
-      fs.readdirSync(prefix).forEach(function (file) {
-        var p = path.join(prefix, file);
-        var stat = fs.lstatSync(p);
+    fs.readdirSync(config.wwwroot).forEach(function (group) {
+      if (group.slice(0, 1) !== '_') {
+        var groupPath = path.join(config.wwwroot, group);
 
-        if (stat.isDirectory()) {
-          addPaths(p);
+        if (fs.statSync(groupPath).isDirectory()) {
+          var examples = [ ];
 
-        } else if (p.slice(-5) === '.json') {
-          paths.push(p.slice(config.wwwroot.length, -5));
+          fs.readdirSync(groupPath).forEach(function (example) {
+            if (example.slice(0, 1) !== '_') {
+              var examplePath = path.join(groupPath, example);
+
+              if (fs.statSync(examplePath).isDirectory()) {
+                examples.push({
+                  name: example,
+                  path: examplePath.slice(config.wwwroot.length)
+                });
+              }
+            }
+          });
+
+          if (examples.length > 0) {
+            groups.push({
+              name: group,
+              examples: examples
+            });
+          }
         }
-      });
-    }
+      }
+    });
 
-    addPaths(config.wwwroot);
+    var template = hbs.compile(hbsRenderer.getTemplateAsString('main.hbs'));
 
-    return res.send(template({ 'paths': paths }));
+    return res.send(template({ groups: groups }));
   }
 };
 
@@ -226,7 +245,7 @@ module.exports = {
 
     // After app.use() is configured above for the static asset paths from the filesystem,
     // we can handle all other requests and pass them through our custom middleware which renders the HBS templates.
-    app.use('*', function(req, res, next) {
+    app.use('/', function(req, res, next) {
       _prepareResponse(config, req, res, next);
     });
 

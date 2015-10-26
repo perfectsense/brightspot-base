@@ -20,5 +20,10 @@
             }
         </script>
     </head>
-    <body style="margin: 0; padding: 0;">{{this}}</body>
+    <body style="margin: 0; padding: 0;">
+        {{#each files}}
+            <h1>{{name}}</h1>
+            {{data}}
+        {{/each}}
+    </body>
 </html>

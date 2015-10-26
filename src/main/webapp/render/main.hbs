@@ -6,8 +6,15 @@
     <body>
         <div class="sg-menu">
             <ul>
-                {{#each paths}}
-                    <li><a href="{{this}}">{{this}}</a></li>
+                {{#each groups}}
+                    <li class="sg-group">
+                        <span class="sg-group-name">{{name}}</span>
+                        <ul>
+                            {{#each examples}}
+                                <li><a href="{{path}}">{{name}}</a></li>
+                            {{/each}}
+                        </ul>
+                    </li>
                 {{/each}}
             </ul>
         </div>
