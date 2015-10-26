@@ -21,8 +21,13 @@
         </script>
     </head>
     <body style="margin: 0; padding: 0;">
+        <h1>{{name}}</h1>
+
         {{#each files}}
-            <h1>{{name}}</h1>
+            {{#with name}}
+                <h2>{{this}}</h2>
+            {{/with}}
+
             {{data}}
         {{/each}}
     </body>

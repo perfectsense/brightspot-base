@@ -51,9 +51,9 @@ var _prepareResponse = function(config, req, res, next) {
     }
 
     var files = [ ];
+    var indexFile;
 
     fs.readdirSync(filesPath).forEach(function (file) {
-
       if (file.slice(0, 1) !== '_' && file.slice(-5) === '.json') {
         var data = hbsRenderer.getJSONData(path.join(filesPath, file).slice(config.wwwroot.length));
 
@@ -88,16 +88,28 @@ var _prepareResponse = function(config, req, res, next) {
           return data;
         }
 
-        files.push({
-          name: file,
-          data: convert(data)
-        });
+        if (file === 'index.json') {
+          indexFile = { data: convert(data) };
+
+        } else {
+          files.push({
+            name: file,
+            data: convert(data)
+          });
+        }
       }
     });
 
+    if (indexFile) {
+      files.unshift(indexFile);
+    }
+
     var template = hbs.compile(hbsRenderer.getTemplateAsString('iframe.hbs'));
 
-    return res.send(template({ files: files }));
+    return res.send(template({
+      name: filesPath,
+      files: files
+    }));
 
   } else {
     var groups = [ ];
