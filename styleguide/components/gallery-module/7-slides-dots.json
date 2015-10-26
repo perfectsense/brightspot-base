@@ -8,25 +8,12 @@
   },
   "gallerySlides": [
     {
-      "_dataUrl": "/common/image-1200x400.json"
-    },
-    {
-      "_dataUrl": "/common/image-1200x400.json"
-    },
-    {
-      "_dataUrl": "/common/image-1200x400.json"
-    },
-    {
-      "_dataUrl": "/common/image-1200x400.json"
-    },
-    {
-      "_dataUrl": "/common/image-1200x400.json"
-    },
-    {
-      "_dataUrl": "/common/image-1200x400.json"
-    },
-    {
-      "_dataUrl": "/common/image-1200x400.json"
+      "_template": "common/image",
+      "_repeat": 7,
+      "attributes": {
+        "_template": "common/attributes",
+        "src": "{{image([ 600, 1200, 100 ], 400)}}"
+      }
     }
   ],
   "cta": {
