@@ -21,8 +21,10 @@ function HandlebarsRenderer() {
       } catch (ex) {
         //log.error("Couldn't find because ("+ex+"), for ["+rootPath+uri+"]. Falling back on next file...");
       }
-    };
-  }
+    }
+
+    throw new Error(uri + " doesn't exist!");
+  };
 
   // Returns the template string given a file's uri using our precedence/fallback logic
   this.getTemplateAsString = function(uri) {
@@ -38,8 +40,10 @@ function HandlebarsRenderer() {
       } catch (ex) {
         //log.error("Couldn't find because ("+ex+"), for ["+rootPath+uri+"]. Falling back on next file...");
       }
-    };
-  }
+    }
+
+    throw new Error(uri + " doesn't exist!");
+  };
 
   /*
    * This convenience method registers all the partials into Handlebars found under the provided paths.
