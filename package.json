@@ -16,6 +16,6 @@
     "phantomjs": "^1.9.17",
     "phantomjs-polyfill": "0.0.1",
     "systemjs": "0.18.4",
-    "xml2json": "^0.8.1"
+    "node-xml2js": "Leonidas-from-XIV/node-xml2js#0.4.13"
   }
 }
