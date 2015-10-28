@@ -137,6 +137,9 @@
 
 // we are using these styles to create pretty responsive tables
 // we display the data-label as a heading and create display block tall tables
+// we have to use !important to override any site specificity. If we do not want
+// responsive tables on a website, we would have to re-override it with important.
+//
 // we also override any striping, as it's potentially ugly, and force our own
 // that works really well with this display type
 @media @mq-only-xs {
@@ -144,7 +147,7 @@
         width: 100%;
 
         thead {
-            display: none;
+            display: none !important;
         }
 
         td:before {
@@ -155,7 +158,7 @@
 
         td, tr {
             background: none !important;
-            display: block;
+            display: block !important;;
             text-align: right !important;
             width: 100% !important;
         }
@@ -166,7 +169,7 @@
 
         td {
             &:last-of-type {
-                margin-bottom: @space;
+                margin-bottom: @space !important;;
             }
         }
     }
