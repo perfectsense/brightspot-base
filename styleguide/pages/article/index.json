@@ -1,0 +1,18 @@
+{
+  "_template": "common/body",
+  "headerView": {
+    "_dataUrl": "/components/site-header/simple.json"
+  },
+  "mainView": {
+    "_template": "layouts/one-col",
+    "main": [
+      {
+        "_template": "common/text",
+          "text": "Example Page"
+      }
+    ]
+  },
+  "footerView": {
+    "_dataUrl": "/components/site-footer/simple.json"
+  }
+}

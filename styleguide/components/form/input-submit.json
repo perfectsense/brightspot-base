@@ -1,8 +1,0 @@
-{
-  "_template": "components/bsp-form-input",
-  "attributes": {
-    "type": "submit",
-    "value": "Submit",
-    "_template": "common/attributes"
-  }
-}

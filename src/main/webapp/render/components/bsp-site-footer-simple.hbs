@@ -3,15 +3,15 @@
 	<div class="bsp-container">
 		<div class="bsp-row">
 
-		{{#with sharing}}
+		{{#if socialLinks}}
 		<div class="bsp-component">
 
-			<h5 class="bsp-component-title">{{social}}</h5>
+			{{#if socialTitle}}<h5 class="bsp-component-title">{{socialTitle}}</h5>{{/if}}
 
 			<div class="bsp-component-content">
 
 				<ul class="bsp-share-links">
-					{{#each links}}
+					{{#each socialLinks}}
 						<li class="bsp-{{icon}}-share">{{render this cssClass="bsp-share-link"}}</li>
 					{{/each}}
 				</ul>
@@ -19,7 +19,7 @@
 			</div>
 
 		</div>
-		{{/with}}
+		{{/if}}
 
 		<div class="bsp-site-copyright">
 			{{disclaimer}}

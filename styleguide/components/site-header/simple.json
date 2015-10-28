@@ -12,7 +12,7 @@
       "_template": "common/image",
       "attributes": {
         "alt": "Brightspot",
-        "src": "/assets/images/logo-site-header.png",
+        "src": "/assets/logo-site.png",
         "_template": "common/attributes"
       }
     }

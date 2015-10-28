@@ -9,56 +9,35 @@
     {
       "_template": "common/image",
       "attributes": {
-        "src": "/assets/images/1200x400.png",
+        "src": "{{image([ 600, 1200, 100 ], 400)}}",
         "_template": "common/attributes"
       }
     },
     {
       "_template": "common/image",
       "attributes": {
-        "src": "/assets/images/1200x400.png",
+        "src": "{{image([ 600, 1200, 100 ], 400)}}",
         "_template": "common/attributes"
       }
     },
     {
       "_template": "common/image",
       "attributes": {
-        "src": "/assets/images/1200x400.png",
+        "src": "{{image([ 600, 1200, 100 ], 400)}}",
         "_template": "common/attributes"
       }
     },
     {
       "_template": "common/image",
       "attributes": {
-        "src": "/assets/images/1200x400.png",
+        "src": "{{image([ 600, 1200, 100 ], 400)}}",
         "_template": "common/attributes"
       }
     },
     {
       "_template": "common/image",
       "attributes": {
-        "src": "/assets/images/1200x400.png",
-        "_template": "common/attributes"
-      }
-    },
-    {
-      "_template": "common/image",
-      "attributes": {
-        "src": "/assets/images/1200x400.png",
-        "_template": "common/attributes"
-      }
-    },
-    {
-      "_template": "common/image",
-      "attributes": {
-        "src": "/assets/images/1200x400.png",
-        "_template": "common/attributes"
-      }
-    },
-    {
-      "_template": "common/image",
-      "attributes": {
-        "src": "/assets/images/1200x400.png",
+        "src": "{{image([ 600, 1200, 100 ], 400)}}",
         "_template": "common/attributes"
       }
     }
@@ -69,7 +48,7 @@
       "navImage": {
         "_template": "common/image",
         "attributes": {
-          "src": "/assets/images/400x100.png",
+          "src": "{{image(400, 100)}}",
           "_template": "common/attributes"
         }
       }
@@ -79,7 +58,7 @@
       "navImage": {
         "_template": "common/image",
         "attributes": {
-          "src": "/assets/images/400x100.png",
+          "src": "{{image(400, 100)}}",
           "_template": "common/attributes"
         }
       }
@@ -89,7 +68,7 @@
       "navImage": {
         "_template": "common/image",
         "attributes": {
-          "src": "/assets/images/400x100.png",
+          "src": "{{image(400, 100)}}",
           "_template": "common/attributes"
         }
       }
@@ -99,7 +78,7 @@
       "navImage": {
         "_template": "common/image",
         "attributes": {
-          "src": "/assets/images/400x100.png",
+          "src": "{{image(400, 100)}}",
           "_template": "common/attributes"
         }
       }
@@ -109,37 +88,7 @@
       "navImage": {
         "_template": "common/image",
         "attributes": {
-          "src": "/assets/images/400x100.png",
-          "_template": "common/attributes"
-        }
-      }
-    },
-    {
-      "_template": "components/bsp-gallery-module-with-nav-item",
-      "navImage": {
-        "_template": "common/image",
-        "attributes": {
-          "src": "/assets/images/400x100.png",
-          "_template": "common/attributes"
-        }
-      }
-    },
-    {
-      "_template": "components/bsp-gallery-module-with-nav-item",
-      "navImage": {
-        "_template": "common/image",
-        "attributes": {
-          "src": "/assets/images/400x100.png",
-          "_template": "common/attributes"
-        }
-      }
-    },
-    {
-      "_template": "components/bsp-gallery-module-with-nav-item",
-      "navImage": {
-        "_template": "common/image",
-        "attributes": {
-          "src": "/assets/images/400x100.png",
+          "src": "{{image(400, 100)}}",
           "_template": "common/attributes"
         }
       }

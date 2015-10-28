@@ -12,19 +12,39 @@
   },
   "gallerySlides": [
     {
-      "_dataUrl": "/common/image-800x450.json"
+      "_template": "common/image",
+      "attributes": {
+        "src": "{{image([ 600, 1200, 100 ], 400)}}",
+        "_template": "common/attributes"
+      }
     },
     {
-      "_dataUrl": "/common/image-800x450.json"
+      "_template": "common/image",
+      "attributes": {
+        "src": "{{image([ 600, 1200, 100 ], 400)}}",
+        "_template": "common/attributes"
+      }
     },
     {
-      "_dataUrl": "/common/image-800x450.json"
+      "_template": "common/image",
+      "attributes": {
+        "src": "{{image([ 600, 1200, 100 ], 400)}}",
+        "_template": "common/attributes"
+      }
     },
     {
-      "_dataUrl": "/common/image-800x450.json"
+      "_template": "common/image",
+      "attributes": {
+        "src": "{{image([ 600, 1200, 100 ], 400)}}",
+        "_template": "common/attributes"
+      }
     },
     {
-      "_dataUrl": "/common/image-800x450.json"
+      "_template": "common/image",
+      "attributes": {
+        "src": "{{image([ 600, 1200, 100 ], 400)}}",
+        "_template": "common/attributes"
+      }
     }
   ]
 }
