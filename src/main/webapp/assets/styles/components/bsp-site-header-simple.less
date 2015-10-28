@@ -11,6 +11,10 @@
     top: 0;
     width: 100%;
     z-index: @z-index-header;
+
+    .sg-body & {
+        position: relative;
+    }
 }
 
 
@@ -23,13 +27,6 @@
     height: @header-height;
     padding: 0 @space 0 @space-double;
     width: 100%;
-
-    @media @mq-lg {
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0;
-        width: @screen-lg-min;
-    }
 }
 
 // mobile menu
@@ -100,7 +97,7 @@
 }
 
 // additional styles for non mobile view
-@media @header-mobile-breakpoint {
+@media @mq-sm {
 
     // hide mobile display trigger
     .bsp-site-menu-toggle {
@@ -137,6 +134,14 @@
         vertical-align: middle;
         text-align: left;
         width: 215px;
+    }
+}
+
+@media @mq-lg {
+    .bsp-site-header-simple {
+        margin-left: auto;
+        margin-right: auto;
+        width: @screen-lg-min;
     }
 }
 

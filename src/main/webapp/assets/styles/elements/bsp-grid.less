@@ -13,7 +13,13 @@ body {
 	& when (@header-positioning = fixed) {
     	padding-top: @header-tophat-height + (@header-height);
     }
+
+    // when we are a page that is rendererd inside the styleguide, remove the padding
+    &.sg-body {
+        padding-top: 0;
+    }
 }
+
 
 // This will be our grid. We start out by creating our site container, which will determine the overall centered site width
 .bsp-container {
