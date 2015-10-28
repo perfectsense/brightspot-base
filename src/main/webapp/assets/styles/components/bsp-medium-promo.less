@@ -51,50 +51,5 @@
     }
 }
 
-.bsp-overlay-promo () {
-
-    background: rgba(0, 0, 0, 0);
-
-    .type-scale(-1, @lh: 1.3);
-    align-items: center;
-    display: flex;
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    padding: @space-triple;
-    position: absolute;
-    top: 0;
-    width: 100%;
-
-    .overlay-desc {
-        color: @white;
-        margin: 0 0 @space-quarter 0;
-    }
-
-    .overlay-cta-text {
-        color: @brand-primary;
-        font-weight: @font-weight-bold;
-        padding-top: @space-double;
-        text-transform: uppercase;
-    }
-
-    &:hover {
-        opacity: 1;
-        transition: opacity 1s;
-    }
-
-    .overlay-desc, .overlay-cta-text {
-        display: none;
-    }
-
-    @media @mq-sm {
-        background: rgba(0,0,0, 0.7);
-
-        .overlay-desc, .overlay-cta-text {
-            display: block;
-        }
-    }
-
-}
 
 
