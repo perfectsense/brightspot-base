@@ -1,4 +1,4 @@
-/** 
+/**
  * bsp table css
  */
 
@@ -17,9 +17,9 @@
 	// margin-bottom: @space-triple;
 }
 
-.bsp-table {	
+.bsp-table {
 	td, th {
-		padding: @space;		
+		padding: @space;
 	}
 
 	th {
@@ -55,7 +55,7 @@
     	}
     }
 
-	// added additional theming here for styleguide purposes only 
+	// added additional theming here for styleguide purposes only
 	&:extend(.bsp-table-themes all);
 }
 
@@ -63,7 +63,7 @@
 // can be used as mixins to create a table theme
 .left-aligned {
 	td, th {
-		text-align: left;		
+		text-align: left;
 	}
 }
 
@@ -81,7 +81,7 @@
 
 .top-aligned {
 	td, th {
-		vertical-align: top;		
+		vertical-align: top;
 	}
 }
 
@@ -128,12 +128,47 @@
 .vertical-stripes-body {
 	td:nth-child(even) {
 		background-color: @bsp-table-background-color-2;
-	}	
+	}
 	td:nth-child(odd) {
 		background-color: @bsp-table-background-color-1;
-	}	
+	}
 }
 
 
+// we are using these styles to create pretty responsive tables
+// we display the data-label as a heading and create display block tall tables
+// we also override any striping, as it's potentially ugly, and force our own
+// that works really well with this display type
+@media @mq-only-xs {
+    .bsp-table {
+        width: 100%;
+
+        thead {
+            display: none;
+        }
+
+        td:before {
+            content: attr(data-label);
+            float: left;
+            font-weight: bold;
+        }
+
+        td, tr {
+            background: none !important;
+            display: block;
+            text-align: right !important;
+        }
+
+        tr:nth-child(odd) {
+            background-color: @bsp-table-background-color-1 !important;
+        }
+
+        td {
+            &:last-of-type {
+                margin-bottom: @space;
+            }
+        }
+    }
+}
 
 

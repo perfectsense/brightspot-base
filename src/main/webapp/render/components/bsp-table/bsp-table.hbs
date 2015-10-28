@@ -13,7 +13,7 @@
 							<th class="col-{{@index}}">
 								{{#each this}}
 									{{render this}}
-								{{/each}}	
+								{{/each}}
 							</th>
 						{{/each}}
 					</thead>
@@ -22,16 +22,17 @@
 					{{#each rows}}
 						<tr class="row-{{@index}}">
 							{{#each row}}
-								<td class="col-{{@index}}">
+                                {{!-- each column has the associated heading as a data attribute to support mobile responsive tables --}}
+								<td data-label="{{#with (lookup ../../headings @index)}}{{#each this}}{{render this}}{{/each}}{{/with}}" class="col-{{@index}}">
 									{{#each this}}
 										{{render this}}
-									{{/each}}						
+									{{/each}}
 								</td>
 							{{/each}}
 						</tr>
-					{{/each}}			
+					{{/each}}
 				</tbody>
-					
+
 			</table>
 		</div>
 
@@ -40,7 +41,7 @@
 	{{#with cta}}
 		<div class="bsp-component-cta {{#if options.location}}cta-{{options.location}}{{/if}}">
 			{{render content}}
-		</div>	
+		</div>
 	{{/with}}
 
 </div>
