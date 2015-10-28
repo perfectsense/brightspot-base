@@ -26,7 +26,7 @@
 
                         "body" : {
                             "_template" : "common/text",
-                            "text" : "John Deere Classic 2015"
+                            "text" : "Lorem ipsum"
                         }
                     }
                 },
@@ -68,7 +68,7 @@
                                     "title" : "Link Title"
                                 },
 
-                                "description" : "The groundwork was set into motion in the Fall of 2013 following Jordan's participation on the United States President's Cup Team. Jordan’s experiences on and off the course have shaped his outlook toward service. The Jordan Spieth Charitable Fund is his platform to lend time, awareness, and financial assistance to three areas of philanthropic concern: Special needs youth, military families, and junior golf.",
+                                "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur voluptas at, aspernatur provident odio suscipit corporis, animi velit, illum, vero possimus dicta ipsa. Optio, odit, veniam doloribus tenetur consequatur voluptates.",
 
                                 "ctaText" : "Read More"
 
@@ -83,7 +83,7 @@
                     "options" : {
                         "modifierClass" : "bsp-list-promo-desc"
                     },
-                    "text" : "Jordan wins in a two-hole playoff -- his second win at the John Deere in three years"
+                    "text" : "Lorem ipsum dolor sit amet"
                 }
             ]
         },
@@ -105,7 +105,7 @@
 
                         "body" : {
                             "_template" : "common/text",
-                            "text" : "Masters Tournament"
+                            "text" : "consectetur adipisicing "
                         }
 
                     }
@@ -150,7 +150,7 @@
                                     "title" : "Link Title"
                                 },
 
-                                "description" : "The groundwork was set into motion in the Fall of 2013 following Jordan's participation on the United States President's Cup Team. Jordan’s experiences on and off the course have shaped his outlook toward service. The Jordan Spieth Charitable Fund is his platform to lend time, awareness, and financial assistance to three areas of philanthropic concern: Special needs youth, military families, and junior golf.",
+                                "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid itaque et iure dicta dolorum eligendi enim saepe voluptatum fugit cupiditate eum aperiam provident, id iusto inventore! Maxime exercitationem ipsa blanditiis!",
 
                                 "ctaText" : "Read More"
 
@@ -164,7 +164,7 @@
                     "options" : {
                         "modifierClass" : "bsp-list-promo-desc"
                     },
-                    "text" : "Jordan talks to the press and fans after his win at the 2015 John Deere Classic"
+                    "text" : "Distinctio neque sequi"
                 }
             ]
         }
