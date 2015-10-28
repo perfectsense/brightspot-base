@@ -3,6 +3,11 @@
     {{#with image}}
         <div class="bsp-list-promo-image">
             {{render this}}
+
+            {{#with overlayLinked}}
+                {{render this}}
+            {{/with}}
+
         </div>
     {{/with}}
 

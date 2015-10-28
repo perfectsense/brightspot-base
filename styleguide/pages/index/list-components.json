@@ -161,6 +161,38 @@
                 }
 			}
 		},
+        {
+            "_template" : "components/bsp-list-promo-item-handler",
+
+            "link": {
+                "_template" : "common/link",
+
+                "attributes" : {
+                    "href"  : "/components/bsp-small-promo/",
+                    "title" : "BSP Small Promo"
+                },
+                "body" : {
+                    "_template" : "common/text",
+                    "text"  : "BSP Small Promo"
+                }
+            }
+        },
+        {
+            "_template" : "components/bsp-list-promo-item-handler",
+
+            "link": {
+                "_template" : "common/link",
+
+                "attributes" : {
+                    "href"  : "/components/bsp-medium-promo/",
+                    "title" : "BSP Medium Promo"
+                },
+                "body" : {
+                    "_template" : "common/text",
+                    "text"  : "BSP Medium Promo"
+                }
+            }
+        },
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
 

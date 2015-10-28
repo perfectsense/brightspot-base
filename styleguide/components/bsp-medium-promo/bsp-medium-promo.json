@@ -1,0 +1,172 @@
+{
+    "_template" : "components/bsp-list-promo",
+
+    "options" : {
+        "horizontalSplit" : "half",
+        "modifierClass" : "bsp-medium-promo"
+    },
+
+    "listItems" : [
+        {
+            "sections" : [
+                {
+
+                    "_template" : "components/bsp-list-promo-item-handler",
+
+                    "name" : "text-above",
+
+                    "title" : {
+
+                        "_template" : "common/link",
+
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
+
+                        "body" : {
+                            "_template" : "common/text",
+                            "text" : "John Deere Classic 2015"
+                        }
+                    }
+                },
+                {
+
+                    "_template" : "components/bsp-list-promo-item-handler",
+
+                    "name" : "image",
+
+                    "image" : {
+
+                        "_template" : "common/link",
+
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
+
+                        "body" : {
+
+                            "_template" : "common/image",
+
+                            "attributes" : {
+                                "alt" : "Test Alt",
+                                "src" : "/assets/images/600x300.png"
+                            }
+                        },
+
+                        "overlayLinked" : {
+
+                            "_template" : "elements/bsp-overlay-linked",
+
+                            "link" : {
+
+                                "attributes" : {
+                                    "_template" : "common/attributes",
+
+                                    "href"  : "link",
+                                    "title" : "Link Title"
+                                },
+
+                                "description" : "The groundwork was set into motion in the Fall of 2013 following Jordan's participation on the United States President's Cup Team. Jordan’s experiences on and off the course have shaped his outlook toward service. The Jordan Spieth Charitable Fund is his platform to lend time, awareness, and financial assistance to three areas of philanthropic concern: Special needs youth, military families, and junior golf.",
+
+                                "ctaText" : "Read More"
+
+                            }
+                        }
+                    }
+
+                },
+                {
+
+                    "_template" : "common/text",
+                    "options" : {
+                        "modifierClass" : "bsp-list-promo-desc"
+                    },
+                    "text" : "Jordan wins in a two-hole playoff -- his second win at the John Deere in three years"
+                }
+            ]
+        },
+
+        {
+            "sections" : [
+                {
+
+                    "_template" : "components/bsp-list-promo-item-handler",
+
+                    "title" : {
+
+                        "_template" : "common/link",
+
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
+
+                        "body" : {
+                            "_template" : "common/text",
+                            "text" : "Masters Tournament"
+                        }
+
+                    }
+
+                },
+
+                {
+
+                    "_template" : "components/bsp-list-promo-item-handler",
+
+                    "name" : "image",
+
+                    "image" : {
+
+                        "_template" : "common/link",
+
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title"
+                        },
+
+                        "body" : {
+
+                            "_template" : "common/image",
+
+                            "attributes" : {
+                                "alt" : "Test Alt",
+                                "src" : "/assets/images/600x300.png"
+                            }
+                        },
+
+                        "overlayLinked" : {
+
+                            "_template" : "elements/bsp-overlay-linked",
+
+                            "link" : {
+
+                                "attributes" : {
+                                    "_template" : "common/attributes",
+
+                                    "href"  : "link",
+                                    "title" : "Link Title"
+                                },
+
+                                "description" : "The groundwork was set into motion in the Fall of 2013 following Jordan's participation on the United States President's Cup Team. Jordan’s experiences on and off the course have shaped his outlook toward service. The Jordan Spieth Charitable Fund is his platform to lend time, awareness, and financial assistance to three areas of philanthropic concern: Special needs youth, military families, and junior golf.",
+
+                                "ctaText" : "Read More"
+
+                            }
+                        }
+                    }
+                },
+                {
+
+                    "_template" : "common/text",
+                    "options" : {
+                        "modifierClass" : "bsp-list-promo-desc"
+                    },
+                    "text" : "Jordan talks to the press and fans after his win at the 2015 John Deere Classic"
+                }
+            ]
+        }
+    ]
+}

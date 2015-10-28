@@ -12,7 +12,7 @@
         "main" : {
             "components" : [
                 {
-                    "_dataUrl" : "small-promo.json"
+                    "_dataUrl" : "bsp-medium-promo.json"
                 }
             ]
         }
