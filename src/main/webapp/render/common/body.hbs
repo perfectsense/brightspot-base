@@ -1,17 +1,19 @@
-<div class="bsp-site-wrapper{{#if modifierClass}} {{modifierClass}}{{/if}}">
+<body{{#if modifierClass}} class="{{modifierClass}}"{{/if}}>
+    <div class="bsp-site-wrapper">
 
-    {{#with headerView}}
-        {{render this}}
-    {{/with}}
+        {{#with headerView}}
+            {{render this}}
+        {{/with}}
 
-    <div class="bsp-site" style="{{inlineStyle}}">
+        <div class="bsp-site" style="{{inlineStyle}}">
 
-        {{render mainView}}
+            {{render mainView}}
+
+        </div>
+
+        {{#with footerView}}
+            {{render this}}
+        {{/with}}
 
     </div>
-
-    {{#with footerView}}
-        {{render this}}
-    {{/with}}
-
-</div>
+</body>
