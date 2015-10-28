@@ -1,19 +1,13 @@
 {
-  "_template": "common/body",
-  "headerView": {
-    "_dataUrl": "/components/bsp-site-header-simple/styleguide-header.json"
-  },
-  "mainView": {
-    "_template": "layouts/two-col-main-left-aside-right",
-    "main": [
-      {
-        "_dataUrl": "/components/bsp-gallery-fullscreen/gallery.json"
-      }
-    ],
-    "aside": [
-      {
-        "_dataUrl": "/common/link-image-300x250.json"
-      }
-    ]
-  }
+  "_template": "layouts/two-col-main-left-aside-right",
+  "main": [
+    {
+      "_dataUrl": "/components/gallery-fullscreen/gallery.json"
+    }
+  ],
+  "aside": [
+    {
+      "_dataUrl": "/common/link-image-300x250.json"
+    }
+  ]
 }

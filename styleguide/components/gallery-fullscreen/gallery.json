@@ -253,9 +253,9 @@
     }
   ],
   "tags": {
-    "_dataUrl": "/components/bsp-tags/tag-list.json"
+    "_dataUrl": "/components/tags/tag-list.json"
   },
   "sharing": {
-    "_dataUrl": "/components/bsp-social-share/share.json"
+    "_dataUrl": "/components/social-share/share.json"
   }
 }
