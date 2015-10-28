@@ -37,7 +37,7 @@
       }
     }
   },
-  "body": [
+  "articleBody": [
     {
       "_template": "common/html",
       "text": "{{paragraphs}}"
