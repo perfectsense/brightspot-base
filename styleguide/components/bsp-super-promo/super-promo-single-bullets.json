@@ -1,0 +1,15 @@
+{
+    "_template" : "components/bsp-gallery-module",
+
+    "options" : {
+        "carouselDots" : false,
+        "modifierClass" : "bsp-super-promo"
+    },
+
+    "gallerySlides" : [
+        {
+            "_dataUrl" : "list-promo-1-bullets.json"
+        }
+    ]
+
+}

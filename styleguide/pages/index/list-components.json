@@ -209,6 +209,21 @@
                 }
             }
         },
+        {
+            "_template" : "components/bsp-list-promo-item-handler",
+
+            "link": {
+                "_template" : "common/link",
+
+                "attributes" : {
+                    "href"  : "/components/bsp-super-promo/"
+                },
+                "body" : {
+                    "_template" : "common/text",
+                    "text"  : "BSP Super Promo"
+                }
+            }
+        },
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
 
