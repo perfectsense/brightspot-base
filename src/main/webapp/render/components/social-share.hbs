@@ -1,8 +1,8 @@
-<span class="bsp-share-links-wrapper">
+<span class="share-links-wrapper">
 
-	<span class="bsp-share-links-title">{{social}}</span>
-	
-	<ul class="bsp-share-links{{#if monochrome}} icons-monochrome{{/if}}"
+	<span class="share-links-title">{{social}}</span>
+
+	<ul class="sshare-links{{#if monochrome}} icons-monochrome{{/if}}"
 			data-bsp-share
 			data-bsp-share-options=
 			'
@@ -12,7 +12,7 @@
 					"title":"{{title}}",
 					"url":"{{url}}",
 					"redirectUrl":"{{redirectUrl}}",
-					"iconClass":"{{iconClass}}", 
+					"iconClass":"{{iconClass}}",
 					"serviceProps":{
 						"facebook":{"appId":"{{facebookId}}"}
 					}
@@ -20,7 +20,7 @@
 			'
 	>
 		{{#each services}}
-				<li class="bsp-{{this}}-share"></li>
+				<li class="{{this}}-share"></li>
 		{{/each}}
 	</ul>
 </span>

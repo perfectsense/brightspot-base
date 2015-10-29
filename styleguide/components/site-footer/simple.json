@@ -1,5 +1,5 @@
 {
-  "_template": "components/bsp-site-footer-simple",
+  "_template": "components/site-footer-simple",
 
   "socialLinks" : [
     {

@@ -1,5 +1,5 @@
 {
-  "_template": "components/bsp-tags",
+  "_template": "components/tags",
   "tagList": [
     {
       "_template": "common/link",

@@ -2,7 +2,7 @@
 // We also allow for some extending of icon fonts vs using the icon-xxxxx designation in the HTML
 
 
-.bsp-share-links-centering {
+.share-links-centering {
     &:extend(.vertical-center-wrapper all);
 
     display: none;
@@ -10,7 +10,7 @@
     height: 100%;
 }
 
-.bsp-share-links {
+.share-links {
 	&:extend(.ts-1);
 	&:extend(.bsp-list-inline all);
 	&:extend(.vertical-center);
@@ -22,7 +22,7 @@
 	}
 }
 
-.bsp-share-link {
+.share-link {
 	&:extend(.icon);
 
 	//background: @brand-primary;
@@ -39,23 +39,23 @@
 
 	&:before {
 
-		.bsp-facebook-share & {
+		.facebook-share & {
 			content: @fa-var-facebook;
 		}
 
-		.bsp-twitter-share & {
+		.twitter-share & {
 			content: @fa-var-twitter;
 		}
 
-		.bsp-pinterest-share & {
+		.pinterest-share & {
 			content: @fa-var-pinterest;
 		}
 
-		.bsp-linkedin-share & {
+		.linkedin-share & {
 			content: @fa-var-linkedin;
 		}
 
-		.bsp-tumblr-share & {
+		.tumblr-share & {
 			content: @fa-var-tumblr;
 		}
 	}
@@ -69,7 +69,7 @@
 
 @media @mq-sm {
 
-	.bsp-share-links-centering {
+	.share-links-centering {
 		display: block;
 	}
 
