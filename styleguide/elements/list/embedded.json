@@ -6,7 +6,7 @@
       "text": "Item 1"
     },
     {
-      "_template": "components/bsp-component-group",
+      "_template": "components/component-group",
       "components": [
         {
           "_template": "common/text",

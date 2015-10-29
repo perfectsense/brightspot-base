@@ -1,7 +1,3 @@
-// It's possible that we will move bsp-article out of here to it's own bowerable compoment, so that we can try to
-// standardize around it (as it should really be the same for a LOT of projects). That concept is still TBD, so until
-// then it will be included in this repo
-
 .article-wrapper {
 
 }
@@ -66,15 +62,15 @@
 }
 
 .article-title {
-    &:extend(.bsp-page-title all);
+    &:extend(.page-title all);
 }
 
 .article-subtitle {
-    &:extend(.bsp-section-title all);
+    &:extend(.section-title all);
 }
 
 .article-list {
-    &:extend(.bsp-list all);
+    &:extend(.list all);
 }
 
 @media @mq-sm {

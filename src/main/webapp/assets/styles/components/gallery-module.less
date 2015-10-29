@@ -1,4 +1,7 @@
-// TODO: This should be renamed to bsp-gallery-module
+// The gallery module gets a wrapper of "gallery-module" and then a modifier class if it has navigation of
+// of either "gallery-module-nav" for text nav or "gallery-module-thumbs" for thumb navigation. If it's a
+// horizontal gallery module that has multiple slides visible, it gets the "gallery-module-horizontal" modifier
+
 
 // this component needs the optional CTA to have its own margin
 .gallery-module-component {
@@ -8,7 +11,13 @@
 }
 
 .gallery-module {
-	margin-bottom: 40px; // custom spacing to allow pretty spacing with dots
+
+    // on mobile we will hide the arrows (design deemed this so)
+    .bsp-carousel {
+        .slick-prev, .slick-next {
+            display: none !important;
+        }
+    }
 
     // set this up to support portrait and landscape images. The portrait ones will center themselves horizontally
     .bsp-carousel-slide {
@@ -39,6 +48,7 @@
             }
         }
 
+        // we never want previous or next arrows on the nav slider
         .slick-prev, .slick-next {
             display: none !important;
         }
@@ -52,6 +62,7 @@
 	.slick-list {
 		margin: 0 -@space;
 	}
+
 	.bsp-carousel-slide {
 		padding: 0 @space;
 		width: 50%;
@@ -59,7 +70,7 @@
 
 }
 
-// targeted to only take bsp-carousel-slides inside the nav portion of the gallery-nav module
+// targeted to only bsp-carousel-slides inside the nav portion of the gallery-nav module
 // this lets us reuse the renderer for thumbs for the text nav and just write css overrides
 .gallery-module-nav {
 
@@ -113,7 +124,6 @@
 
 // for medium and up, we kill the margin and also hide the nav text, as by default the
 // thumbs gallery at that point drops in the thumbnav
-
 @media @mq-sm {
 
 	.gallery-module-horizontal-slides {
@@ -130,22 +140,41 @@
 @media @mq-md {
 
 	.gallery-module {
-		margin-bottom: 0;
 
-		&.bsp-carousel-dots {
-			margin-bottom: 40px;
-		}
-	}
+        .bsp-carousel {
+            .slick-prev, .slick-next {
+                // on medium and up, we will show previous and next
+                display: inline-block !important;
+            }
+        }
 
-	.gallery-module-nav {
-		.bsp-carousel-stage {
-			.slick-track {
-				margin-bottom: 0px;
-			}
-		}
+        // for anything past medium, we want the thumbs or text nav, anything before, no thumbs
+        .bsp-carousel-nav {
+
+            &.slick-initialized {
+                display: block;
+            }
+
+        }
+
+        // on a stage carousel, we want to make sure there are never dots, even if enabled
+        .bsp-carousel-stage {
+            margin-bottom: 0;
+
+            .slick-track {
+                margin-bottom: 0px;
+            }
+
+            .slick-dots {
+                display: none;
+            }
+        }
+
+        // on desktop, we don't need the nav text as we are using the carousel nav
         .bsp-carousel-slide-nav-text  {
             display: none;
         }
+
 	}
 
 }

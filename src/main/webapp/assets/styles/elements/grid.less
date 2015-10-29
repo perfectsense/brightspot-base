@@ -1,9 +1,9 @@
-// bsp-site-wrapper is around the entire site includeing header, site, and footer
+// site-wrapper is around the entire site includeing header, site, and footer
 .site-wrapper {
 
 }
 
-// bsp-site is just around the site other than the header and footer
+// site is just around the site other than the header and footer
 .site {
 	background: @white;
 	padding: @site-top-and-bottom-space 0;
@@ -30,7 +30,7 @@ body {
     padding-right: @grid-gutter-width-xs / 2;
 
     // when we reuse our layout renderers to create nested layouts, we end up with stacked
-    // bsp-containers. This removes any styles from these, so we don't get doubled up margins, padding, etc
+    // containers. This removes any styles from these, so we don't get doubled up margins, padding, etc
     .container {
     	width: 100%;
     	margin: 0;

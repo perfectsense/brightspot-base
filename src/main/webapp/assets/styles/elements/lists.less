@@ -14,18 +14,18 @@ ul, ol {
 
 // List options
 
-.bsp-list-heading {
+.list-heading {
     color: @brand-primary;
     margin: 0 0 @space 0;
     padding: 0;
 }
 
 // Basic list has the list-style
-.bsp-list {
+.list {
     margin-left: @space-double;
     padding-left: @space;
 }
-ul.bsp-list {
+ul.list {
     list-style: disc;
 
     &[type='circle'] {
@@ -36,7 +36,7 @@ ul.bsp-list {
         list-style: square;
     }
 }
-ol.bsp-list {
+ol.list {
     list-style: decimal;
 
     &[type='A'] {
@@ -57,13 +57,13 @@ ol.bsp-list {
 }
 
 // Unstyled keeps list items block level, just removes default browser padding and list-style
-.bsp-unstyled-list {
+.unstyled-list {
     margin-left: 0;
     padding-left: 0;
 }
 
 // Inline turns list items into inline-block
-.bsp-list-inline {
+.list-inline {
     margin-left: 5px;
 
     > li {

@@ -1,12 +1,15 @@
 /**
  * Vertical Centering from: https://css-tricks.com/centering-in-the-unknown/
  *
- * Ex: 
+ * For most cases we should be using display:flex along with align-items and justify-content
+ * In cases where we ABSOLUTELY need to support older browsers, we can use this
+ *
+ * Ex:
  * <div class="wrapper"><div class="i-am-vertically-centered">haha!</div></div>
  *
  * .wrapper {
- *		&:extend(.vertical-center-wrapper all);	
- *		height: 200px; 
+ *		&:extend(.vertical-center-wrapper all);
+ *		height: 200px;
  * }
  * .i-am-vertically-centered {
  *		&:extend(.vertical-center all);

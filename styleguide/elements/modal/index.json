@@ -10,10 +10,10 @@
       "_template": "elements/modal",
       "id": "foo",
       "content": {
-        "_template": "components/bsp-component-group",
+        "_template": "components/component-group",
         "components": [
           {
-            "_dataUrl": "/components/list-promo/3-items.json"
+            "_dataUrl": "/components/gallery-module/7-slides-dots.json"
           },
           {
             "_template": "common/html",

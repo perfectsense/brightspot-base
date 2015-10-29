@@ -5,7 +5,7 @@
 
 	More info: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol
 --}}
-<{{#if ordered}}ol{{else}}ul{{/if}} {{#if type}}type="{{type}}" {{/if}}class="bsp-{{#if unstyled}}unstyled-{{/if}}list{{#if inline}}-inline{{/if}}{{#if modifierClass}} {{modifierClass}}{{/if}}">
+<{{#if ordered}}ol{{else}}ul{{/if}} {{#if type}}type="{{type}}" {{/if}}class="{{#if unstyled}}unstyled-{{/if}}list{{#if inline}}-inline{{/if}}{{#if modifierClass}} {{modifierClass}}{{/if}}">
 	{{#each items}}
 		<li>{{render this}}</li>
 	{{/each}}
