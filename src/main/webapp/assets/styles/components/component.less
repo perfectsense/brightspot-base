@@ -1,11 +1,11 @@
 // padding vs margin allows for cleaner separation between components, especially if things inside of them use margins
 
-.bsp-component {
+.component {
 	padding-bottom: @bsp-component-bottom-padding;
 	position: relative;
 }
 
-.bsp-component-title {
+.component-title {
 	&:extend(.ts-0);
 
 	background: @bsp-component-title-bg;
@@ -14,11 +14,11 @@
 	margin: 0 0 @space 0;
 }
 
-.bsp-component-content {
+.component-content {
 	overflow: hidden; // making sure things do not go outside of components
 }
 
-.bsp-component-cta {
+.component-cta {
 
 	a {
 		background: @bsp-component-cta-bg;
@@ -27,8 +27,8 @@
 		padding: @space-quarter 0;
 		text-align: center;
 	}
-	
-	&.cta-top-right {
+
+	&.component-cta-top-right {
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -40,7 +40,7 @@
 		}
 	}
 
-	&.cta-bottom-right {
+	&.component-cta-bottom-right {
 		display: inline-block;
 		float: right;
 
@@ -51,7 +51,7 @@
 		}
 	}
 
-	&.cta-bottom-left {
+	&.component-cta-bottom-left {
 		display: inline-block;
 		float: left;
 
@@ -64,6 +64,6 @@
 }
 
 // if the content has hard item heights, there is no margin on the cta, it will screw up the hardcoded item heights
-.bsp-component-content.hard-item-heights + .bsp-component-cta {
+.component-content.hard-item-heights + .component-cta {
 	margin-top: 0;
 }

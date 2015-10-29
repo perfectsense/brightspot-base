@@ -18,7 +18,7 @@
     }
   ],
   "cta": {
-    "_template": "components/bsp-cta",
+    "_template": "components/component-cta",
     "location": "bottom",
     "content": {
       "_dataUrl": "/common/link-test-text-14-char.json"

@@ -30,8 +30,6 @@
 @import "components/move-to-bsp-carousel.less";
 
 // These are elements. Some of these correspond to DOM elements, others are small building blocks that components or parts of components can extend
-@import "elements/bsp-buttons.less";
-@import "elements/bsp-grid.less";
 @import "elements/bsp-icons.less";
 @import "elements/bsp-image.less";
 @import "elements/bsp-lists.less";
@@ -41,17 +39,23 @@
 @import "elements/bsp-typography.less";
 @import "elements/bsp-vertical-center.less";
 
+@import "elements/buttons.less";
+@import "elements/grid.less";
+
 // Components should be ties into CMS components as closely as possible. It would be ideal to maintain a 1:1 relationship of components renderers to
 // components LESS files so they are easy to identify, find, and modify
 @import "components/bsp-article.less";
 @import "components/bsp-blockquote.less";
-@import "components/bsp-component.less";
 @import "components/bsp-meta-data.less";
 @import "components/bsp-share-links.less";
 @import "components/bsp-site-footer-simple.less";
 @import "components/bsp-tags.less";
 
+@import "components/component.less";
 @import "components/site-header-simple.less";
+
+// The gallery module component goes less. It potentially has other components inside of it, so this lets us do some clean overrides
+@import "components/bsp-gallery-module.less";
 
 
  /*

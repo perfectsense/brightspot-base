@@ -1,10 +1,10 @@
 // bsp-site-wrapper is around the entire site includeing header, site, and footer
-.bsp-site-wrapper {
+.site-wrapper {
 
 }
 
 // bsp-site is just around the site other than the header and footer
-.bsp-site {
+.site {
 	background: @white;
 	padding: @site-top-and-bottom-space 0;
 	position: relative;
@@ -24,21 +24,21 @@ body {
 
 
 // This will be our grid. We start out by creating our site container, which will determine the overall centered site width
-.bsp-container {
+.grid-container {
     .container();
     padding-left: @grid-gutter-width-xs / 2;
     padding-right: @grid-gutter-width-xs / 2;
 
     // when we reuse our layout renderers to create nested layouts, we end up with stacked
     // bsp-containers. This removes any styles from these, so we don't get doubled up margins, padding, etc
-    .bsp-container {
+    .container {
     	width: 100%;
     	margin: 0;
     	padding: 0;
     }
 }
 
-.bsp-row {
+.row {
 	&:extend(.clearfix all);
 
 	margin-left:  (@grid-gutter-width-xs / -2);
@@ -51,38 +51,38 @@ body {
 // If we need custom widths for a particular component, we can just use the mixin classes to create something
 // custom for that one component. But if they will be reused throughout a site, we should create reusable classes
 
-.bsp-column-full {
+.column-full {
 	// no styles, this is full on every breakpoint
 	.make-xs-column(12);
 }
 
-.bsp-column-main {
+.column-main {
 	.make-sm-column(7);
 	.make-md-column(8);
 }
 
-.bsp-column-aside {
+.column-aside {
 	.make-sm-column(5);
 	.make-md-column(4);
 }
 
-.bsp-column-half {
+.column-half {
 	.make-sm-column(6);
 }
 
-.bsp-column-two-thirds {
+.column-two-thirds {
 	.make-sm-column(8);
 }
 
-.bsp-column-third {
+.column-third {
 	.make-sm-column(4);
 }
 
-.bsp-column-fourth {
+.column-fourth {
 	.make-sm-column(3);
 }
 
-.bsp-column-fifth {
+.column-fifth {
 	.make-sm-column(2.4);
 }
 
@@ -90,15 +90,15 @@ body {
 // the fixed column knows where to place itself to the left and right. It has to get a hardcoded width, because that is how fixed
 // positioning works
 
-.bsp-column-scrolling {
+.column-scrolling {
 	.make-md-column(9);
 }
 
-.bsp-column-fixed-wrap {
+.column-fixed-wrap {
 	.make-md-column(3);
 }
 
-.bsp-column-fixed {
+.column-fixed {
 	transition: height .15s linear;
 	background: @white;
 	border-top: @border-style-2;
@@ -120,7 +120,7 @@ body {
 	}
 }
 
-body.bsp-column-fixed-toggle-in {
+body.column-fixed-toggle-in {
 	overflow: hidden;
 
     &:before {
@@ -135,7 +135,7 @@ body.bsp-column-fixed-toggle-in {
     }
 }
 
-.bsp-trigger-fixed-column {
+.trigger-fixed-column {
 
 	a {
         .icon();
@@ -192,18 +192,18 @@ body.bsp-column-fixed-toggle-in {
 
 @media @mq-sm {
 
-    .bsp-container {
+    .grid-container {
         .container();
         padding-left: @grid-gutter-width / 2;
         padding-right: @grid-gutter-width / 2;
     }
 
-    .bsp-row {
+    .row {
         margin-left:  (@grid-gutter-width / -2);
         margin-right: (@grid-gutter-width / -2);
     }
 
-    .bsp-column-fixed {
+    .column-fixed {
         &.toggle-in {
             height: 50%;
         }
@@ -214,7 +214,7 @@ body.bsp-column-fixed-toggle-in {
 @media @mq-md {
 
 	// styles to create a fixed column that will be stuck on the screen
-	.bsp-column-fixed {
+	.column-fixed {
 		border-top: none;
 		bottom: auto;
 		display: block;
@@ -228,7 +228,7 @@ body.bsp-column-fixed-toggle-in {
 	}
 
 	// since column is on the screen, we no longer need the toggle
-	.bsp-trigger-fixed-column {
+	.trigger-fixed-column {
 		display: none;
 	}
 }
@@ -236,7 +236,7 @@ body.bsp-column-fixed-toggle-in {
 @media @mq-lg {
 
 	// up th width to match, has to stay hardcoded as it's fixed positioning
-	.bsp-column-fixed {
+	.column-fixed {
 		width: 317px;
 	}
 

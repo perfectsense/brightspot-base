@@ -1,9 +1,9 @@
-<div class="bsp-component bsp-gallery-module-component{{#if modifierClass}} {{modifierClass}}{{/if}}">
+<div class="component bsp-gallery-module-component{{#if modifierClass}} {{modifierClass}}{{/if}}">
 	{{#if galleryTitle}}
-		<h3 class="bsp-component-title">{{render galleryTitle}}</h3>
-	{{/if}}
+        <h3 class="component-title">{{render galleryTitle}}</h3>
+    {{/if}}
 
-	<div class="bsp-component-content">
+	<div class="component-content">
 
 		<div class="gallery-module {{#if textNav}}gallery-module-nav{{else}}gallery-module-thumbs{{/if}}" data-bsp-carousel-thumbnav data-bsp-carousel-thumbnav-options='{ "stage" : { "theme" : "carousel-dots" , "themeConfig" : { } }, "nav": { "themeConfig" : { "slidesToShow" : {{#if thumbnailsToShow}}{{thumbnailsToShow}}{{else}}4{{/if}}, "centerMode" : false } } }'>
 			<div class="bsp-carousel-stage">

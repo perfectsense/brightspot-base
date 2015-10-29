@@ -1,21 +1,21 @@
-<div class="bsp-container{{#if modifierClass}} {{modifierClass}}{{/if}}">
+<div class="container{{#if modifierClass}} {{modifierClass}}{{/if}}">
 
     {{#each aboveColumns}}
         {{render this}}
     {{/each}}
 
-	<div class="bsp-row">
+	<div class="row">
 
-		<div class="bsp-column-scrolling">
+		<div class="column-scrolling">
             {{#each main}}
                 {{render this}}
             {{/each}}
 		</div>
 
-		<div class="bsp-column-fixed-wrap" data-bsp-toggle-item>
-			<div class="bsp-column-fixed toggle-item">
+		<div class="column-fixed-wrap" data-bsp-toggle-item>
+			<div class="column-fixed toggle-item">
 
-				<div class="bsp-trigger-fixed-column toggle-trigger">
+				<div class="trigger-fixed-column toggle-trigger">
 					<a class="toggle-trigger-link-out icon icon-angle-up" href="#">{{#if aside.openText}}{{this}}{{else}}Open{{/if}}</a>
 					<a class="toggle-trigger-link-in  icon icon-angle-down" href="#">{{#if aside.closeText}}{{this}}{{else}}Close{{/if}}</a>
 				</div>
