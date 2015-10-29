@@ -2,7 +2,7 @@
 
 	<span class="share-links-title">{{social}}</span>
 
-	<ul class="sshare-links{{#if monochrome}} icons-monochrome{{/if}}"
+	<ul class="share-links{{#if monochrome}} icons-monochrome{{/if}}"
 			data-bsp-share
 			data-bsp-share-options=
 			'
@@ -15,7 +15,9 @@
 					"iconClass":"{{iconClass}}",
 					"serviceProps":{
 						"facebook":{"appId":"{{facebookId}}"}
-					}
+					},
+                    "sharingClass"       : "share-link",
+                    "serviceClassBefore" : ""
 				}
 			'
 	>
