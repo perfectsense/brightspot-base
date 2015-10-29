@@ -1,0 +1,19 @@
+<div class="bsp-component bsp-callout-component{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}"{{#if style}} style="{{style}}"{{/if}} >
+    <div class="bsp-component-content">
+        <div class="bsp-callout-title">
+            {{#with calloutText}}
+                {{#with plainText}}
+                    {{render this}}
+                {{/with}}
+                {{#with accentText}}
+                    {{render this}}
+                {{/with}}
+            {{/with}}
+        </div>
+        {{#with cta}}
+            <div class="bsp-component-cta">
+                {{render this}}
+            </div>
+        {{/with}}
+    </div>
+</div>

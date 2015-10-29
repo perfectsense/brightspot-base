@@ -224,6 +224,21 @@
                 }
             }
         },
+        {
+            "_template" : "components/bsp-list-promo-item-handler",
+
+            "link": {
+                "_template" : "common/link",
+
+                "attributes" : {
+                    "href"  : "/components/bsp-callout/"
+                },
+                "body" : {
+                    "_template" : "common/text",
+                    "text"  : "BSP Callout"
+                }
+            }
+        },
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
 
