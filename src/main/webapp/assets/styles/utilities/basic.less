@@ -7,10 +7,19 @@
 // -------------------------
 
 .clearfix {
-  .clearfix();
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
 }
 .center-block {
-  .center-block();
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .pull-right {
   float: right !important;
@@ -34,7 +43,11 @@
   visibility: hidden;
 }
 .text-hide {
-  .text-hide();
+  font: ~"0/0" a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
 }
 
 

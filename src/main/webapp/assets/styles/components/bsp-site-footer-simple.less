@@ -29,43 +29,10 @@
  		}
  	}
 
+    // even if it's there in the JSON, remove it
     .bsp-share-links-title {
-        display: block;
-        font-size: @ts-2;
-        margin: 0 0 @space 0;
+        display: none
     }
 
-    form {
-        .input-container {
-            white-space: nowrap;
-
-            .input-content {
-                display: inline-block;
-            }
-
-            .bsp-form-message {
-                width: 0px;
-            }
-
-            input {
-                padding: @space;
-                border: none;
-            }
-
-            input[type=email] {
-                color: @black;
-            }
-
-            input[type=submit] {
-                background-color: @brand-primary;
-                text-transform: uppercase;
-                position: relative;
-                left: -4px;
-            }
-        }
-    }
-    .bsp-site-copyright {
-        margin-top: 0;
-    }
 }
 

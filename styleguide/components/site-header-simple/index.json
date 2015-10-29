@@ -1,5 +1,5 @@
 {
-  "_template": "components/bsp-site-header-simple",
+  "_template": "components/site-header-simple",
   "siteName": "Brightspot Base Styleguide",
   "siteLogo": {
     "_template": "common/link",

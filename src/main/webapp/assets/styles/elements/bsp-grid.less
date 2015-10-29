@@ -1,7 +1,9 @@
 // bsp-site-wrapper is around the entire site includeing header, site, and footer
-.bsp-site-wrapper {}
+.bsp-site-wrapper {
 
-/// bsp-site is just around the site other than the header and footer
+}
+
+// bsp-site is just around the site other than the header and footer
 .bsp-site {
 	background: @white;
 	padding: @site-top-and-bottom-space 0;
@@ -97,8 +99,7 @@ body {
 }
 
 .bsp-column-fixed {
-	.transition(height .15s linear);
-
+	transition: height .15s linear;
 	background: @white;
 	border-top: @border-style-2;
 	height: 50px;
@@ -116,11 +117,6 @@ body {
 		@media @mq-only-sm {
 			height: 25%;
 		}
-	}
-
-	// components inside of fixed columns lose their padding
-	.bsp-component {
-		padding: 0;
 	}
 }
 
@@ -238,26 +234,6 @@ body.bsp-column-fixed-toggle-in {
 }
 
 @media @mq-lg {
-
-    & when (@header-positioning = fixed) {
-
-    	body.full-size-header {
-    	    padding-top: @header-tophat-height + @header-height-before-scroll;
-
-            .bsp-column-fixed {
-                top: @header-tophat-height + @header-height-before-scroll;
-            }
-    	}
-
-    	body.full-size-header.bsp-scrolling {
-    		// adding extra 10px for smoother scrolling user experience
-        	padding-top: @header-tophat-height + @header-height + 10px;
-
-            .bsp-column-fixed {
-                top: @header-tophat-height + @header-height !important;
-            }
-    	}
-    }
 
 	// up th width to match, has to stay hardcoded as it's fixed positioning
 	.bsp-column-fixed {

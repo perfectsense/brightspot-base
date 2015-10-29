@@ -1,9 +1,5 @@
-// temporarily putting this here
-// need to figure out best way to do this
-@simple-header-menu-height: 260px;
-
 // wrapper allows us to create the fixed position look/feel
-.bsp-site-header-simple-wrapper {
+.site-header-simple-wrapper {
     background: @header-background;
     height: @header-height;
     left: 0;
@@ -12,15 +8,15 @@
     width: 100%;
     z-index: @z-index-header;
 
+    // if we are in the styleguide, we want to be relative so we can see this correctly
     .sg-body & {
         position: relative;
     }
 }
 
-
 // This is our simple header.
 // Contains a linked logo and a list of nav/site links
-.bsp-site-header-simple {
+.site-header-simple {
     &:extend(.clearfix all);
     background: @header-background;
     display: table;
@@ -29,36 +25,40 @@
     width: 100%;
 }
 
+// all the below styles are on the root level right now
+// we might move these into site-header-simple as we create more headers so we do not have CSS conflicts
+
 // mobile menu
-.bsp-site-menu-simple {
+.site-menu {
     position: absolute;
     top: @header-height;
     left: 0;
     background-color: @header-background;
     height: 0;
     overflow: hidden;
+    transition: height .15s linear;
     width: 100%;
-
-    .transition(height .15s linear);
     z-index: @z-index-menu;
 
     &.toggle-in {
-        height: @simple-header-menu-height;
+        height: @header-menu-height;
     }
 }
 
-.site-item-simple {
-    margin: @space-double;
+.site-menu-items {
+    > li {
+        margin: @space-double;
+    }
 }
 
 // hide the nav menu by default
 // it should only show on non-mobile
-.bsp-nav-menu-simple {
+.nav-menu {
     display: none;
 }
 
 // mobile logo layout
-.bsp-site-logo-simple {
+.site-logo {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
@@ -69,12 +69,12 @@
 }
 
 // mobile display trigger
-.bsp-site-menu-toggle {
+.site-menu-toggle {
     display: table-cell;
     width: 60px;
 }
 
-.bsp-site-menu-trigger-simple {
+.site-menu-trigger {
     &:extend(.ts-2);
 
     float: left;
@@ -100,28 +100,32 @@
 @media @mq-sm {
 
     // hide mobile display trigger
-    .bsp-site-menu-toggle {
+    .site-menu-toggle {
         display: none;
     }
 
     // nav menu: non-mobile only
-    .bsp-nav-menu-simple {
+    .nav-menu {
         display: table-cell;
         padding: 0;
         position: static;
         width: auto;
+
+        a {
+            color: @white;
+        }
     }
 
     // table display for this so that
     // the nav-items within it are evenly
     // distributed
-    .bsp-nav-menu-items-simple {
+    .nav-menu-items {
         display: table;
         table-layout: fixed;
         width: 100%;
     }
 
-    .nav-item-simple {
+    .nav-item {
         display: table-cell;
         height: @header-height;
         text-align: center;
@@ -129,7 +133,7 @@
     }
 
     // logo
-    .bsp-site-logo-simple {
+    .site-logo {
         padding-right: 25px;
         vertical-align: middle;
         text-align: left;
@@ -138,15 +142,9 @@
 }
 
 @media @mq-lg {
-    .bsp-site-header-simple {
+    .site-header-simple {
         margin-left: auto;
         margin-right: auto;
         width: @screen-lg-min;
     }
 }
-
-
-
-
-
-

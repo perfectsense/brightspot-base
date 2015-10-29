@@ -5,7 +5,7 @@
     "modifierClass" : "article-page",
 
     "headerView": {
-      "_dataUrl": "/components/site-header/simple.json"
+      "_dataUrl": "/components/site-header-simple/index.json"
     },
 
     "mainView": {

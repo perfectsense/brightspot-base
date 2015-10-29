@@ -21,6 +21,11 @@
 // this screen size to trigger that
 @screen-lg-min:         1200px;
 
+// the maxes are easy, minus 1
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+
 // Here are some helper media queries that allow you to write shorthand LESS throughout elements/components/pages
 // Best practice should be to write your original styles for the xsmall screen and allow your items to scale as much
 // as possible. Then if you need to add extra styles because of the wider screens, add in extra items or code in the
@@ -42,20 +47,23 @@
 
 // === Grid ===
 
+@grid-columns:              12;
+
 // Padding between columns. Gets divided in half for the left and right.
 // Sometimes, we want mobile spacing to be a bit bigger because the screen edge
 @grid-gutter-width-xs:      @space;
 @grid-gutter-width:         @space;
 
+
 // Small screen / tablet site width
 // This is between @screen-sm-min and @screen-md-min widths
-@container-tablet:      (720px + @grid-gutter-width);
+@container-sm:      (720px + @grid-gutter-width);
 
 // Medium screen / desktop
 // This is between @screen-md-min and @screen-lg-min widths
-@container-desktop:     (940px + @grid-gutter-width);
+@container-md:     (940px + @grid-gutter-width);
 
 // Large screen / wide desktop
 // If you would like to eliminate this because the designs do not warrant it, just change this to the @container-desktop value
 // @container-large-desktop:      (@container-desktop + @grid-gutter-width);
-@container-large-desktop: (1140px + @grid-gutter-width);
+@container-lg: (1140px + @grid-gutter-width);

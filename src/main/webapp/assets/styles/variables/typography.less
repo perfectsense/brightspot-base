@@ -9,8 +9,11 @@
 // Base font family which is set on the body
 @font-family-base:      @font-family-sans-serif;
 
-// Unit-less line-height used on the body and in components
-@line-height-base:      1.428571429; // 20/14
+//** Unit-less `line-height` for use in components like buttons.
+@line-height-base:        1.428571429; // 20/14
+
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 // Headings get a smaller line height than the rest of the page
 @line-height-headings:  1.1;
@@ -22,6 +25,8 @@
 @font-weight-base:      400;
 @font-weight-light:     400;
 @font-weight-bold:      700;
+
+@font-weight-btn:       normal;
 
 // This is our type scale. These are the variables that are used in the type scale mixin, and we can use this directly in font-size directives
 // This scale can be used as is, the ratios can be changed, or if design insists, we can hardcode values, or add/change what each number means

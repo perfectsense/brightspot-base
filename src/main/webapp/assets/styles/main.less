@@ -9,48 +9,25 @@
  * Your LESS for your project goes at the bottom of this file, including any custom project variables, elements, mixins and components
  */
 
-
-
 /**
  * Our Main CSS file
  */
 
-// Grab the base boostrap variables. These will include some base site variables which we can then overwrite with our own
-@import (reference) "bower/bootstrap/variables";
-
-// This lets us use the bootstrap mixins if we would like to
-@import (reference) "bower/bootstrap/mixins";
-
-// For buttons, since we do not need all the kinds Bootstrap has, we can make our own, but leverage their .btn mixins
-@import (reference) "bower/bootstrap/buttons.less";
-
-// Now we bring in our own variables. These will be new variables and overrides to any of the default boostrap ones we do not like
+// Wwe bring in our variables
 @import (reference) "variables/variables.less";
 
 // This brings in our mixins
 @import (reference) "mixins/mixins.less";
 
-// We will start the compiled CSSS by bringing in the bootstrap normalize reset
-@import "bower/bootstrap/normalize.less";
-
-// And using Bootstrap scaffolding. This has a couple of extra helpers in it that aren't true "scaffolding" like img thumbnails, but that's ok
-@import "bower/bootstrap/scaffolding.less";
+// We bring in our utilities as a direct import, these include the normalize reset,
+// the scaffolding, as well as basic and reponsive utilities. If we create more, we should consider them as reference
+// or mixins, in order to not bloat the CSS too much
+@import "utilities/utilities.less";
 
 // importing base bsp-carousel styles
 @import (inline) "bower/bsp-carousel/bsp-carousel.css";
 // this should really be moved into bsp-carousel.css above, but I'm leaving it here for now for fast development
 @import "components/move-to-bsp-carousel.less";
-
-// importing base datepicker styles
-@import (inline) "bower/jquery.datetimepicker.css";
-
-// importing base bsp-tabber styles
-@import (inline) "bower/bsp-tabber.css";
-
-// Our utilities
-// We compile our main basic utilities. The others are available as mixins to use throughout our components
-@import "utilities/basic.less";
-@import "utilities/responsive.less";
 
 // These are elements. Some of these correspond to DOM elements, others are small building blocks that components or parts of components can extend
 @import "elements/bsp-buttons.less";
@@ -72,12 +49,9 @@
 @import "components/bsp-meta-data.less";
 @import "components/bsp-share-links.less";
 @import "components/bsp-site-footer-simple.less";
-@import "components/bsp-site-header-simple.less";
 @import "components/bsp-tags.less";
 
-// the gallery modules go last. They have some overrides to make sure component images render correctly inside of them
-@import "components/bsp-gallery-fullscreen.less";
-@import "components/bsp-gallery-module.less";
+@import "components/site-header-simple.less";
 
 
  /*

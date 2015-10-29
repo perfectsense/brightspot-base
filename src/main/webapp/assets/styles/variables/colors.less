@@ -1,26 +1,30 @@
 // Here we will redefine some brand colors for our site
-@brand-primary:     #259acd;
-@brand-secondary:   #20343f;
+@brand-primary:     #20343f;
+@brand-secondary:   #2bb7e0;
 @brand-accent:      #fc0029;
 
+// Our grayscale
+@black:             #000;
+@gray-dark-1:       #333;
+@gray-dark-2:       #333;
+@gray-dark-3:       #333;
+@gray:              #666;
+@gray-light-3:      #999;
+@gray-light-2:      #b7b7b7;
+@gray-light-1:      #eee;
+@white:             #fff;
+
+// Other color. We would rather bring these into colors less than distribute hex values throughout the CSS
+@red: #ff0000;
+
+// These are color variables that we use throughout our CSS
+@body-bg: @white;
+
+// link and hover color, as we usually need to customize these per site
 @link-color:            @brand-primary;
 @link-hover-color:      darken(@link-color, 15%);
 
-// Our grayscale
-@black: 			#000;
-@gray-dark-1:		#333;
-@gray-dark-2:		#333;
-@gray-dark-3:		#333;
-@gray:				#666;
-@gray-light-3:		#999;
-@gray-light-2:		#b7b7b7;
-@gray-light-1:		#eee;
-@white:				#fff;
-
-// other colors
-@red: #ff0000;
-// made this one up probably should be replaced - EWS
-@light-blue: #c9dff0;
+@btn-default-color:     @gray-dark-1;
 
 // Main site text color
 @text-color: @gray-dark-2;
@@ -33,5 +37,6 @@
 @instagram-color: #5b2e07;
 @tumblr-color: #3a4a61;
 
+// for the monochrome option of social icons, when we do not want them in their own brand colors
 @social-icons-monochrome-background: @brand-primary;
 @social-icons-monochrome-color: @white;
