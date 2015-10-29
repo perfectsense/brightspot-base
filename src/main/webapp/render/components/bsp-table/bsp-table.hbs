@@ -23,7 +23,11 @@
 						<tr class="row-{{@index}}">
 							{{#each row}}
                                 {{!-- each column has the associated heading as a data attribute to support mobile responsive tables --}}
-								<td data-label="{{#with (lookup ../../headings @index)}}{{#each this}}{{render this}}{{/each}}{{/with}}" class="col-{{@index}}">
+								<td data-label="{{#if ../../options.sort}}
+                                    {{#with (lookup ../../../headings @index)}}{{#each this}}{{render body}}{{/each}}{{/with}}
+                                {{else}}
+                                    {{#with (lookup ../../../headings @index)}}{{#each this}}{{render this}}{{/each}}{{/with}}
+                                {{/if}}" class="col-{{@index}}">
 									{{#each this}}
 										{{render this}}
 									{{/each}}
