@@ -1,23 +1,48 @@
 // TODO: This should be renamed to bsp-gallery-module
 
 // this component needs the optional CTA to have its own margin
-.bsp-gallery-module-component {
-	.bsp-component-cta {
+.gallery-module-component {
+	.component-cta {
 		margin-top: @space;
 	}
 }
 
 .gallery-module {
 	margin-bottom: 40px; // custom spacing to allow pretty spacing with dots
-}
 
-// set this up to support portrait and landscape images. The portrait ones will center themselves horizontally
-.bsp-carousel-slide {
-	img {
-		height: auto;
-		margin: 0 auto;
-		width: auto;
-	}
+    // set this up to support portrait and landscape images. The portrait ones will center themselves horizontally
+    .bsp-carousel-slide {
+        img {
+            height: auto;
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+
+    // all gallery module navs (thumbs, nav, etc) get a pretty border at the top
+    .bsp-carousel-nav {
+
+        .bsp-carousel-slide {
+            position: relative;
+
+            &.current {
+
+                &:after {
+                    content:'';
+                    position: absolute;
+                    bottom: 0;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    border-top: 5px solid @gallery-current-slide-color;
+                }
+            }
+        }
+
+        .slick-prev, .slick-next {
+            display: none !important;
+        }
+    }
 }
 
 // these are styles for the hoziontal layout gallery which has 5 slides across
@@ -34,36 +59,12 @@
 
 }
 
-// all carousel module navs (thumbs, nav, etc) get a pretty border at the top
-.bsp-carousel-nav {
-
-    .bsp-carousel-slide {
-        position: relative;
-
-        &.current {
-
-            &:after {
-                content:'';
-                position: absolute;
-                bottom: 0;
-                top: 0;
-                left: 0;
-                right: 0;
-                border-top: 5px solid @gallery-current-slide-color;
-            }
-        }
-    }
-
-    .slick-prev, .slick-next {
-        display: none !important;
-    }
-}
-
 // targeted to only take bsp-carousel-slides inside the nav portion of the gallery-nav module
 // this lets us reuse the renderer for thumbs for the text nav and just write css overrides
 .gallery-module-nav {
+
 	// we have a 40px bottom margin for the slide nav text to fit
-	.bsp-carousel-stage {
+	.carousel-stage {
 		.slick-track {
 			margin-bottom: 40px;
 		}
@@ -96,18 +97,18 @@
             }
 		}
 	}
-}
 
-// this is use for mobile instead of the thumb nav, as xs and sm resolutions, we get rid of the thumb nav
-// as it's too small to make sense
-.bsp-carousel-slide-nav-text {
-	background-color: @gallery-nav-background-color;
-	color: @white;
-	height: 40px;
-	padding: @space;
-	position: absolute;
-	bottom: -40px;
-	width: 100%;
+    // this is use for mobile instead of the thumb nav, as xs and sm resolutions, we get rid of the thumb nav
+    // as it's too small to make sense
+    .bsp-carousel-slide-nav-text {
+        background-color: @gallery-nav-background-color;
+        color: @white;
+        height: 40px;
+        padding: @space;
+        position: absolute;
+        bottom: -40px;
+        width: 100%;
+    }
 }
 
 // for medium and up, we kill the margin and also hide the nav text, as by default the
@@ -131,7 +132,7 @@
 	.gallery-module {
 		margin-bottom: 0;
 
-		&.carousel-dots {
+		&.bsp-carousel-dots {
 			margin-bottom: 40px;
 		}
 	}
@@ -142,10 +143,9 @@
 				margin-bottom: 0px;
 			}
 		}
-	}
-
-	.bsp-carousel-slide-nav-text  {
-		display: none;
+        .bsp-carousel-slide-nav-text  {
+            display: none;
+        }
 	}
 
 }

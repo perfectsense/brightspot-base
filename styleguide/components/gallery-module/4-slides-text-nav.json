@@ -1,10 +1,13 @@
 {
-  "_template": "components/bsp-gallery-module-with-nav",
+  "_template": "components/gallery-module-with-nav",
+
   "textNav": true,
+
   "galleryTitle": {
     "_template": "common/text",
     "text": "4 Slide with text nav instead of thumbs"
   },
+
   "gallerySlides": [
     {
       "navText": "Shankle pork loin landjaeger pork chop",
@@ -39,22 +42,23 @@
       }
     }
   ],
+
   "galleryNavItems": [
     {
-      "_template": "components/bsp-gallery-module-with-nav-item",
-      "navText": "Shankle pork loin landjaeger pork chop"
+      "_template": "common/text",
+      "text": "Shankle pork loin landjaeger pork chop"
     },
     {
-      "_template": "components/bsp-gallery-module-with-nav-item",
-      "navText": "Salami prosciutto ham hock venison"
+      "_template": "common/text",
+      "text": "Salami prosciutto ham hock venison"
     },
     {
-      "_template": "components/bsp-gallery-module-with-nav-item",
-      "navText": "Ribs meatloaf doner hamburger frankfurter tri-tip"
+      "_template": "common/text",
+      "text": "Ribs meatloaf doner hamburger frankfurter tri-tip"
     },
     {
-      "_template": "components/bsp-gallery-module-with-nav-item",
-      "navText": "Shank capicola strip steak"
+      "_template": "common/text",
+      "text": "Shank capicola strip steak"
     }
   ]
 }

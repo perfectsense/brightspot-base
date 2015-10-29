@@ -5,7 +5,7 @@ img {
 }
 
 // the css below is a hack that doesn't allow the caption and credit to extend past the image dimensions
-.bsp-img-with-meta {
+.img-with-meta {
     display: table;
     width: 100%;
 
@@ -29,18 +29,18 @@ img {
         }
     }
 
-    .bsp-img-credit {
+    .img-credit {
         color: @gray-light-2;
         font-size: @ts-neg-2;
         margin: @space-quarter 0 0 0;
         text-align: right;
     }
 
-    .bsp-img-caption {
+    .img-caption {
         margin-top: @space-half;
 
         // since the credit goes inside the caption if it exists, it gets inline treatment
-        .bsp-img-credit {
+        .img-credit {
             display: inline;
             margin: 0;
         }

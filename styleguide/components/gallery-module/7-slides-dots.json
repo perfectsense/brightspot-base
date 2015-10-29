@@ -1,5 +1,5 @@
 {
-  "_template": "components/bsp-gallery-module",
+  "_template": "components/gallery-module",
   "theme": "carousel-dots",
   "dots": true,
   "galleryTitle": {

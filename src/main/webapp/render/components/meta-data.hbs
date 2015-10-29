@@ -1,0 +1,8 @@
+<div class="meta-data">
+    {{#if authors}}
+        <div class="meta-author">By {{#each authors}}{{#unless @first}}, {{/unless}}{{this}}{{/each}}</div>
+    {{/if}}
+    {{#if publishDate}}
+        <div class="meta-date">{{publishDate}}</div>
+    {{/if}}
+</div>

@@ -1,4 +1,4 @@
-<div class="component bsp-gallery-module-component{{#if modifierClass}} {{modifierClass}}{{/if}}">
+<div class="component gallery-module-component{{#if modifierClass}} {{modifierClass}}{{/if}}">
 	{{#if galleryTitle}}
         <h3 class="component-title">{{render galleryTitle}}</h3>
     {{/if}}
@@ -24,7 +24,7 @@
 
 				{{#each galleryNavItems}}
 					<div class="bsp-carousel-slide">
-                        {{this}}
+                        {{render this}}
 					</div>
 				{{/each}}
 

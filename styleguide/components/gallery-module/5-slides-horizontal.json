@@ -1,5 +1,5 @@
 {
-  "_template": "components/bsp-gallery-module",
+  "_template": "components/gallery-module",
   "horizontalSlides": true,
   "slidesToShowMedium": 5,
   "slidesToShowSmall": 2,
@@ -14,35 +14,35 @@
     {
       "_template": "common/image",
       "attributes": {
-        "src": "{{image([ 600, 1200, 100 ], 400)}}",
+        "src": "{{image(600, 400)}}",
         "_template": "common/attributes"
       }
     },
     {
       "_template": "common/image",
       "attributes": {
-        "src": "{{image([ 600, 1200, 100 ], 400)}}",
+        "src": "{{image(600, 400)}}",
         "_template": "common/attributes"
       }
     },
     {
       "_template": "common/image",
       "attributes": {
-        "src": "{{image([ 600, 1200, 100 ], 400)}}",
+        "src": "{{image(600, 400)}}",
         "_template": "common/attributes"
       }
     },
     {
       "_template": "common/image",
       "attributes": {
-        "src": "{{image([ 600, 1200, 100 ], 400)}}",
+        "src": "{{image(600, 400)}}",
         "_template": "common/attributes"
       }
     },
     {
       "_template": "common/image",
       "attributes": {
-        "src": "{{image([ 600, 1200, 100 ], 400)}}",
+        "src": "{{image(600, 400)}}",
         "_template": "common/attributes"
       }
     }

@@ -2,11 +2,11 @@
 // standardize around it (as it should really be the same for a LOT of projects). That concept is still TBD, so until
 // then it will be included in this repo
 
-.bsp-article-wrapper {
+.article-wrapper {
 
 }
 
-.bsp-article {
+.article {
     border-top: @border-style-1;
     padding: @space-triple 0 @space;
 
@@ -15,19 +15,19 @@
         margin-top: -@space-triple;
     }
 
-    .bsp-share-links {
+    .share-links {
         margin-bottom: @space;
     }
 
-    // when we have a component inside of an article, remove the margin.
+    // when we have a component inside of an article, remove the padding.
     // We let natural margins of p tags and others in the contentdo the spacing instead
-    .bsp-component {
-        margin: 0;
+    .component {
+        padding: 0;
     }
 
 }
 
-.bsp-article-content {
+.article-content {
     &:extend(.clearfix all);
 
     p {
@@ -35,7 +35,7 @@
     }
 }
 
-.bsp-article-enhancement {
+.article-enhancement {
     margin: @space 0;
 
     // on xsmall, there is only center alignment
@@ -44,7 +44,7 @@
         text-align: center;
     }
 
-    .bsp-img-with-meta {
+    .img-with-meta {
         margin: 0 auto;
     }
 
@@ -57,7 +57,7 @@
 
 }
 
-.bsp-article-lead {
+.article-lead {
     img {
         width: 100%;
     }
@@ -65,20 +65,20 @@
     margin-bottom: @space-double;
 }
 
-.bsp-article-title {
+.article-title {
     &:extend(.bsp-page-title all);
 }
 
-.bsp-article-subtitle {
+.article-subtitle {
     &:extend(.bsp-section-title all);
 }
 
-.bsp-article-list {
+.article-list {
     &:extend(.bsp-list all);
 }
 
 @media @mq-sm {
-    .bsp-article-enhancement {
+    .article-enhancement {
 
         &.align-left {
             float: left;

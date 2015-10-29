@@ -1,24 +1,35 @@
 {
-  "_template": "components/bsp-article",
+  "_template": "components/article",
+
   "sharing": {
     "_dataUrl": "/components/social-share/share-notitle.json"
   },
+
   "permalink": "/bsp-article/",
-  "publishDate": "05 Apr 2015",
+
   "title": "{{words}}",
+
   "subTitle": "{{words}}",
-  "authors": [
-    {
-      "_template": "common/link",
-      "_repeat": [ 1, 5 ],
-      "body": "{{name}}",
-      "attributes": {
-        "_template": "common/attributes",
-        "href": "#",
-        "title": "{{name}}"
+
+  "metaData": {
+    "_template": "components/meta-data",
+
+    "publishDate": "05 Apr 2015",
+
+    "authors": [
+      {
+        "_template": "common/link",
+        "_repeat": [ 1, 5 ],
+        "body": "{{name}}",
+        "attributes": {
+          "_template": "common/attributes",
+          "href": "#",
+          "title": "{{name}}"
+        }
       }
-    }
-  ],
+    ]
+  },
+
   "tags": {
     "_dataUrl": "/components/tags/tag-list.json"
   },
@@ -43,9 +54,9 @@
       "text": "{{paragraphs}}"
     },
     {
-      "_template": "components/bsp-enhancement",
+      "_template": "components/article-enhancement",
       "content": {
-        "_template": "components/bsp-blockquote",
+        "_template": "components/blockquote",
         "author": "{{name}}",
         "content": "{{sentences}}"
       }
@@ -55,7 +66,7 @@
       "text": "{{paragraphs}}"
     },
     {
-      "_template": "components/bsp-enhancement",
+      "_template": "components/article-enhancement",
       "content": {
         "_dataUrl": "/components/gallery-module/7-slides-dots.json"
       }
@@ -65,7 +76,7 @@
       "text": "{{paragraphs}}"
     },
     {
-      "_template": "components/bsp-enhancement",
+      "_template": "components/article-enhancement",
       "align": "left",
       "content": {
         "_template": "common/image",
@@ -80,7 +91,7 @@
       "text": "{{paragraphs}}"
     },
     {
-      "_template": "components/bsp-enhancement",
+      "_template": "components/article-enhancement",
       "align": "right",
       "content": {
         "_template": "common/figure",
@@ -93,6 +104,10 @@
           }
         }
       }
+    },
+    {
+      "_template": "common/html",
+      "text": "{{paragraphs}}"
     },
     {
       "_template": "common/html",
