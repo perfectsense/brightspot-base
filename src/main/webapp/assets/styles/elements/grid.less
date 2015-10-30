@@ -76,14 +76,29 @@ body {
 
 .column-third {
 	.make-sm-column(4);
+
+    // grid fix to make sure the 4th, 7th, etc columns wrap correctly
+    &:nth-child(3n+1) {
+        clear: left;
+    }
 }
 
 .column-fourth {
 	.make-sm-column(3);
+
+    // grid fix to make sure the 5th, 8th, etc columns wrap correctly
+    &:nth-child(4n+1) {
+        clear: left;
+    }
 }
 
 .column-fifth {
 	.make-sm-column(2.4);
+
+    // grid fix to make sure the 6th, 9th, etc columns wrap correctly
+    &:nth-child(5n+1) {
+        clear: left;
+    }
 }
 
 // The below styles create a fixed column to the left or to the right, depending on your markup. The column-fixed-wrap is there so that
