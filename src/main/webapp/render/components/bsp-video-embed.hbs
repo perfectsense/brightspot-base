@@ -1,0 +1,5 @@
+<div class="bsp-component bsp-video-player{{#if options.aspectRatio}} ratio-{{options.aspectRatio}}{{/if}}" style="{{#if options.maxWidth}}max-width: {{options.maxWidth}}px; {{/if}}">
+{{#with player}}
+    {{render this}}
+{{/with}}
+</div>

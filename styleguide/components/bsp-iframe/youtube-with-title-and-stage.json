@@ -1,0 +1,11 @@
+{
+	"_template" : "components/jsg-iframe",
+	"options": {
+		"contentAlign" : "center",
+		"contentStage" : true,
+		"contentStageBackgroundColor" : "#666",
+		"contentWidth" : 560
+	},
+	"content" : "<iframe width=\"560\" height=\"349\" src=\"https://www.youtube.com/embed/i3STjxcuk1Y\" frameborder=\"0\" allowfullscreen></iframe>",
+	"title" : "Iframe with title and stage (stage background defaults to black, can be overridden)"
+}

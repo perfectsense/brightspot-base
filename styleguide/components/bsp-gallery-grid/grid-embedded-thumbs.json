@@ -1,0 +1,110 @@
+[
+    {
+        "attributes" : {
+            "href" : "#link1"
+        },
+        "_template" : "common/link",
+        "body" : {
+            "attributes" : {
+                "src" : "/assets/images/gallery-grid/rec-vert1.jpg"
+            },
+            "_template" : "common/image"
+        }
+    },
+    {
+        "attributes" : {
+            "href" : "#link2"
+        },
+        "_template" : "common/link",
+        "body" : {
+            "attributes" : {
+                "src" : "/assets/images/gallery-grid/square1.jpg"
+            },
+            "_template" : "common/image"
+        }
+    },
+    {
+        "attributes" : {
+            "href" : "#link3"
+        },
+        "_template" : "common/link",
+        "body" : {
+            "attributes" : {
+                "src" : "/assets/images/gallery-grid/square2.jpg"
+            },
+            "_template" : "common/image"
+        }
+    },
+    {
+        "attributes" : {
+            "href" : "#link4"
+        },
+        "_template" : "common/link",
+        "body" : {
+            "attributes" : {
+                "src" : "/assets/images/gallery-grid/rec-vert2.jpg"
+            },
+            "_template" : "common/image"
+        }
+    },
+    {
+        "attributes" : {
+            "href" : "#link5"
+        },
+        "_template" : "common/link",
+        "body" : {
+            "attributes" : {
+                "src" : "/assets/images/gallery-grid/square3.jpg"
+            },
+            "_template" : "common/image"
+        }
+    },
+    {
+        "attributes" : {
+            "href" : "#link6"
+        },
+        "_template" : "common/link",
+        "body" : {
+            "attributes" : {
+                "src" : "/assets/images/gallery-grid/rec-horizontal1.jpg"
+            },
+            "_template" : "common/image"
+        }
+    },
+    {
+        "attributes" : {
+            "href" : "#link7"
+        },
+        "_template" : "common/link",
+        "body" : {
+            "attributes" : {
+                "src" : "/assets/images/gallery-grid/square4.jpg"
+            },
+            "_template" : "common/image"
+        }
+    },
+    {
+        "attributes" : {
+            "href" : "#link8"
+        },
+        "_template" : "common/link",
+        "body" : {
+            "attributes" : {
+                "src" : "/assets/images/gallery-grid/square5.jpg"
+            },
+            "_template" : "common/image"
+        }
+    },
+    {
+        "attributes" : {
+            "href" : "#link9"
+        },
+        "_template" : "common/link",
+        "body" : {
+            "attributes" : {
+                "src" : "/assets/images/gallery-grid/square6.jpg"
+            },
+            "_template" : "common/image"
+        }
+    }
+]

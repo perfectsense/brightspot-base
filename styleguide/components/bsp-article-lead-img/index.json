@@ -1,0 +1,24 @@
+{
+	"_template" : "common/body",
+
+	"headerView" : {
+		"_dataUrl" : "/components/bsp-site-header-simple/site-header-simple.json"
+	},
+
+	"mainView" : {
+
+		"_template" : "layouts/one-col",
+
+		"main" : {
+			"components" : [
+				{ "_dataUrl" : "article.json" }
+			]
+		}
+
+	},
+
+	"footerView" : {
+		"_dataUrl" : "/components/bsp-site-footer-simple/bsp-site-footer-simple.json"
+	}
+
+}

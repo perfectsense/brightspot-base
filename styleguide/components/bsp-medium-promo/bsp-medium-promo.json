@@ -13,8 +13,6 @@
 
                     "_template" : "components/bsp-list-promo-item-handler",
 
-                    "name" : "text-above",
-
                     "title" : {
 
                         "_template" : "common/link",

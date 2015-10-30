@@ -1,0 +1,9 @@
+{
+	"_template" : "components/bsp-iframe",
+	"options": {
+		"contentAlign": "center",
+		"contentWidth": "500",
+		"hideMobile": true
+	},
+	"content" : "<blockquote class=\"twitter-tweet\" lang=\"en\"><p lang=\"en\" dir=\"ltr\">Same two guys, just different trophies. Congrats <a href=\"https://twitter.com/CMcCormickGolf\">@CMcCormickGolf</a> on winning 2015 <a href=\"https://twitter.com/pgaofamerica\">@pgaofamerica</a> Teacher of the Year!! <a href=\"http://t.co/CP80Tpno7K\">pic.twitter.com/CP80Tpno7K</a></p>&mdash; Jordan Spieth (@JordanSpieth) <a href=\"https://twitter.com/JordanSpieth/status/623962796938506240\">July 22, 2015</a></blockquote><script async src=\"//platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
+}

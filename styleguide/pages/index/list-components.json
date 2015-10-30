@@ -33,6 +33,21 @@
                 }
 			}
 		},
+        {
+            "_template" : "components/bsp-list-promo-item-handler",
+
+            "link": {
+                "_template" : "common/link",
+
+                "attributes" : {
+                    "href"  : "/components/bsp-article-lead-img/index.html"
+                },
+                "body" : {
+                    "_template" : "common/text",
+                    "text"  : "BSP Article - Lead Image"
+                }
+            }
+        },
 		{
 			"_template" : "components/bsp-list-promo-item-handler",
 

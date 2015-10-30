@@ -1,0 +1,214 @@
+.bsp-article-lead-image-first {
+     &:extend(.bsp-article);
+
+     padding-top: 0;
+
+     ul {
+        list-style-type: disc;
+        margin-bottom: @space-double;
+        padding-left: @space * 3;
+     }
+
+     b, strong {
+        font-family: @font-family-base;
+     }
+
+     h2, a {
+        color: @brand-accent;
+     }
+
+     h2, h3 {
+        font-weight: @font-weight-light;
+        margin-bottom: 0;
+     }
+
+     p {
+        margin-top: 0;
+     }
+
+     .bsp-share-links-wrapper {
+        display: inline-block;
+        margin-top: @space-double;
+        margin-bottom: @space-double;
+    }
+
+    .bsp-share-links {
+        margin-bottom: 0;
+    }
+
+    .bsp-share-links-title {
+        font-size: @ts-0;
+        font-weight: @font-weight-bold;
+        text-transform: uppercase;
+    }
+
+    .bsp-share-link {
+        background: @brand-accent;
+    }
+
+    .icon-facebook:before,
+    .icon-twitter:before,
+    .icon-pinterest:before,
+    .icon-linkedin:before {
+        color: @white;
+    }
+
+     .bsp-article-lead-img {
+        margin-bottom: @space * 4;
+
+        img {
+            height: auto;
+            width: 100%;
+        }
+
+        .bsp-iframe {
+            border-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .bsp-component {
+            padding-top: 0;
+         }
+     }
+
+     .bsp-article-header {
+        .clearfix();
+        max-width: 800px;
+        margin: 0 auto;
+     }
+
+
+
+     .bsp-article-title {
+        color: @brand-accent;
+        float: left;
+        font-family: @font-family-base;
+        font-size: @ts-4;
+        margin: 0;
+        padding-left: @space-double;
+        padding-top: 0;
+        text-transform: none;
+        text-align: left;
+     }
+
+     .bsp-article-title-image ~ .bsp-article-title {
+        width: ~"calc(100% - 75px)";
+     }
+
+     .bsp-article-title-image {
+        max-width: 75px;
+        margin: 0 auto;
+        padding: 7px 10px 0 0;
+    }
+
+     .bsp-article-subtitle {
+        .clearfix();
+        font-family: @font-family-base;
+        padding-left: @space-double;
+        width: 100%;
+        h3 {
+            background-color: @brand-accent;
+            color: #fff;
+            display: inline-block;
+            font-size: @ts-neg-1;
+            margin: 0 auto @space auto;
+            padding: 0 @space-double;
+            text-transform: uppercase;
+        }
+     }
+
+     .bsp-share-wrapper {
+        border-bottom: @border-style-1;
+        margin-bottom: @space-triple;
+        padding: @space-triple 0 @space 0;
+     }
+
+     .bsp-share-title {
+        font-size: @ts-1;
+        font-weight: @font-weight-bold;
+        text-transform: uppercase;
+        vertical-align: super;
+     }
+
+     .bsp-meta-author {
+        font-family: @font-family-base;
+        font-size: @ts-0;
+        font-weight: @font-weight-light;
+        padding-bottom: @space-half;
+        text-transform: none;
+
+        @media @mq-sm {
+            font-size: @ts-2;
+        }
+    }
+
+     .bsp-article-content,
+     .bsp-share-links-wrapper,
+     .bsp-meta-data,
+     .bsp-tags,
+     .bsp-component-cta {
+        margin-left: @space-double;
+        margin-right: @space-double;
+     }
+
+     .bsp-component-cta {
+        padding: @space*4 0 @space*10 0;
+
+        a {
+            color: @brand-accent;
+            font-size: @ts-neg-1;
+            text-align: left;
+            text-transform: uppercase;
+
+            &:after {
+                content: ">";
+                display: inline;
+            }
+        }
+    }
+
+    @media @mq-sm {
+
+        .bsp-article-title {
+            margin-left: 0;
+            padding-left: 0;
+            text-align: left;
+        }
+
+        .bsp-article-title-image {
+            float: left;
+            margin-left: 0;
+        }
+
+        .bsp-article-subtitle {
+            padding-left: 0;
+        }
+
+        .bsp-share-links-wrapper {
+            display: block;
+            margin: @space-double auto @space-double auto;
+            max-width: 800px;
+        }
+
+        .bsp-share-links {
+            padding-left: 0;
+        }
+
+        .bsp-meta-data {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+
+        .bsp-article-content {
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .bsp-component-cta {
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+    }
+}

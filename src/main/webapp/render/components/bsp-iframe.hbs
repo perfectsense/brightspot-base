@@ -1,0 +1,16 @@
+<div class="bsp-component bsp-iframe{{#if options.hideMobile}} bsp-iframe-hide-mobile{{/if}}">
+    {{#if title}}
+        <div class="bsp-component-title">{{title}}</div>
+    {{/if}}
+    {{#if options.contentStage}}
+    <div class="bsp-iframe-stage" style="{{#if options.contentStageBackgroundColor}}background-color: {{options.contentStageBackgroundColor}}{{/if}}">
+    {{/if}}
+        <div class="bsp-component-content{{#if options.contentAlign}} align-{{options.contentAlign}}{{/if}}{{#if options.contentStretch}} align-stretch{{/if}}" style="{{#if options.contentWidth}}width: {{options.contentWidth}}px; {{/if}}{{#if options.contentHeight}}height: {{options.contentHeight}}px; {{/if}}">
+            {{#if options.contentStretch}}<div class="stretch-wrapper">{{/if}}
+            {{{content}}}
+            {{#if options.contentStretch}}</div>{{/if}}
+        </div>
+    {{#if options.contentStage}}
+    </div>
+    {{/if}}
+</div>

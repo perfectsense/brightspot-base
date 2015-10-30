@@ -1,0 +1,355 @@
+{
+    "_template" : "components/bsp-gallery-grid",
+
+    "galleryTitle" : "Low Resolution Gallery",
+
+
+    "galleryCaption" : "Low Resolution Gallery Caption. Bacon ipsum dolor amet swine flank spare ribs, ribeye pork loin sirloin drumstick jerky turkey beef ribs kielbasa short loin. Bresaola bacon kevin pig picanha prosciutto venison short ribs short loin pancetta filet mignon landjaeger sausage meatball ground round. Venison kevin pancetta sausage corned beef ribeye rump shank landjaeger cupim. Sirloin pancetta brisket chicken flank shoulder chuck spare ribs drumstick boudin. Boudin chicken andouille tongue beef ribs ribeye venison porchetta short ribs tail bresaola pork belly landjaeger biltong.",
+
+
+    "options" : [
+        {
+            "key" : "lowRes",
+            "value" : true
+        }
+    ],
+
+    "gallerySlides" : [
+        {
+            "_template" : "components/bsp-list-promo",
+
+            "listItems" : [
+                {
+                    "imgAlign" : "top",
+
+                    "sections" : [
+                        {
+
+                            "_template" : "components/bsp-list-promo-item-handler",
+
+                            "name" : "image",
+
+                            "image" : {
+
+                                "_template" : "common/link",
+
+                                "attributes" : {
+                                    "href"  : "link",
+                                    "title" : "Link Title"
+                                },
+
+                                "body" : {
+
+                                    "_template" : "common/image",
+
+                                    "attributes" : {
+                                        "alt" : "Test Alt",
+                                        "src" : "/assets/images/gallery-test/personal-1.jpeg"
+                                    }
+                                }
+                            }
+                        },
+                        {
+
+                            "_template" : "components/bsp-list-promo-item-handler",
+
+                            "name" : "text",
+
+                            "description" : "Personal 1"
+                        }
+                    ]
+                }
+            ]
+
+        },
+        {
+            "_template" : "components/bsp-list-promo",
+
+            "listItems" : [
+                {
+                    "imgAlign" : "top",
+
+                    "sections" : [
+                        {
+
+                            "_template" : "components/bsp-list-promo-item-handler",
+
+                            "name" : "image",
+
+                            "image" : {
+
+                                "_template" : "common/link",
+
+                                "attributes" : {
+                                    "href"  : "link",
+                                    "title" : "Link Title"
+                                },
+
+                                "body" : {
+
+                                    "_template" : "common/image",
+
+                                    "attributes" : {
+                                        "alt" : "Test Alt",
+                                        "src" : "/assets/images/gallery-test/personal-2.jpeg"
+                                    }
+                                }
+                            }
+                        },
+                        {
+
+                            "_template" : "components/bsp-list-promo-item-handler",
+
+                            "name" : "text",
+
+                            "description" : "Personal 2"
+                        }
+                    ]
+                }
+            ]
+
+        },
+        {
+            "_template" : "components/bsp-list-promo",
+
+            "listItems" : [
+                {
+                    "imgAlign" : "top",
+
+                    "sections" : [
+                        {
+
+                            "_template" : "components/bsp-list-promo-item-handler",
+
+                            "name" : "image",
+
+                            "image" : {
+
+                                "_template" : "common/link",
+
+                                "attributes" : {
+                                    "href"  : "link",
+                                    "title" : "Link Title"
+                                },
+
+                                "body" : {
+
+                                    "_template" : "common/image",
+
+                                    "attributes" : {
+                                        "alt" : "Test Alt",
+                                        "src" : "/assets/images/gallery-test/personal-3.jpeg"
+                                    }
+                                }
+                            }
+                        },
+                        {
+
+                            "_template" : "components/bsp-list-promo-item-handler",
+
+                            "name" : "text",
+
+                            "description" : "Personal 3"
+
+                        }
+                    ]
+                }
+            ]
+
+        },
+        {
+            "_template" : "components/bsp-list-promo",
+
+            "listItems" : [
+                {
+                    "imgAlign" : "top",
+
+                    "sections" : [
+                        {
+
+                            "_template" : "components/bsp-list-promo-item-handler",
+
+                            "name" : "image",
+
+                            "image" : {
+
+                                "_template" : "common/link",
+
+                                "attributes" : {
+                                    "href"  : "link",
+                                    "title" : "Link Title"
+                                },
+
+                                "body" : {
+
+                                    "_template" : "common/image",
+
+                                    "attributes" : {
+                                        "alt" : "Test Alt",
+                                        "src" : "/assets/images/gallery-test/personal-4.jpeg"
+                                    }
+                                }
+                            }
+                        },
+                        {
+
+                            "_template" : "components/bsp-list-promo-item-handler",
+
+                            "name" : "text",
+
+                            "description" : "Personal 4"
+                        }
+                    ]
+                }
+            ]
+
+        },
+        {
+            "_template" : "components/bsp-list-promo",
+
+            "listItems" : [
+                {
+                    "imgAlign" : "top",
+
+                    "sections" : [
+                        {
+
+                            "_template" : "components/bsp-list-promo-item-handler",
+
+                            "name" : "image",
+
+                            "image" : {
+
+                                "_template" : "common/link",
+
+                                "attributes" : {
+                                    "href"  : "link",
+                                    "title" : "Link Title"
+                                },
+
+                                "body" : {
+
+                                    "_template" : "common/image",
+
+                                    "attributes" : {
+                                        "alt" : "Test Alt",
+                                        "src" : "/assets/images/super-promo/jordan-2.jpeg"
+                                    }
+                                }
+                            }
+                        },
+                        {
+
+                            "_template" : "components/bsp-list-promo-item-handler",
+
+                            "name" : "text",
+
+                           "description" : "Image 5"
+                        }
+                    ]
+                }
+            ]
+
+        },
+        {
+            "_template" : "components/bsp-list-promo",
+
+            "listItems" : [
+                {
+                    "imgAlign" : "top",
+
+                    "sections" : [
+                        {
+
+                            "_template" : "components/bsp-list-promo-item-handler",
+
+                            "name" : "image",
+
+                            "image" : {
+
+                                "_template" : "common/link",
+
+                                "attributes" : {
+                                    "href"  : "link",
+                                    "title" : "Link Title"
+                                },
+
+                                "body" : {
+
+                                    "_template" : "common/image",
+
+                                    "attributes" : {
+                                        "alt" : "Test Alt",
+                                        "src" : "/assets/images/super-promo/jordan-3.jpeg"
+                                    }
+                                }
+                            }
+                        },
+                        {
+
+                            "_template" : "components/bsp-list-promo-item-handler",
+
+                            "name" : "text",
+
+                            "description" : "Image 6"
+                        }
+                    ]
+                }
+            ]
+
+        },
+        {
+            "_template" : "components/bsp-list-promo",
+
+            "listItems" : [
+                {
+                    "imgAlign" : "top",
+
+                    "sections" : [
+                        {
+
+                            "_template" : "components/bsp-list-promo-item-handler",
+
+                            "name" : "image",
+
+                            "image" : {
+
+                                "_template" : "common/link",
+
+                                "attributes" : {
+                                    "href"  : "link",
+                                    "title" : "Link Title"
+                                },
+
+                                "body" : {
+
+                                    "_template" : "common/image",
+
+                                    "attributes" : {
+                                        "alt" : "Test Alt",
+                                        "src" : "/assets/images/super-promo/jordan-1.jpeg"
+                                    }
+                                }
+                            }
+                        },
+                        {
+
+                            "_template" : "components/bsp-list-promo-item-handler",
+
+                            "name" : "text",
+
+                            "description" : "Image 7"
+                        }
+                    ]
+                }
+            ]
+
+        }
+    ],
+
+    "galleryGridClassName" : "bsp-gallery-grid-embedded",
+
+    "galleryGridThumbs" : {
+        "_dataUrl" : "/components/bsp-gallery-grid/grid-embedded-thumbs.json"
+    }
+}

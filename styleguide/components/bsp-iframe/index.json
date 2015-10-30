@@ -1,0 +1,26 @@
+{
+	"_template" : "layouts/one-col",
+
+	"main" : {
+		"components" : [
+			{
+				"_dataUrl" : "/components/jsg-iframe/twitter.json"
+			},
+			{
+				"_dataUrl" : "/components/jsg-iframe/youtube.json"
+			},
+			{
+				"_dataUrl" : "/components/jsg-iframe/youtube-with-title.json"
+			},
+			{
+				"_dataUrl" : "/components/jsg-iframe/youtube-with-title-and-stage.json"
+			},
+			{
+				"_dataUrl" : "/components/jsg-iframe/youtube-stretch.json"
+			},
+			{
+				"_dataUrl" : "/components/jsg-iframe/hide-mobile.json"
+			}
+		]
+	}
+}

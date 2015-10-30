@@ -1,0 +1,15 @@
+{ 
+    "_template" : "components/jsg-gallery-grid",
+
+    "galleryTitle" : "Single Image",
+
+    "gallerySlides" : [
+        { 
+            "_dataUrl" : "/common/image-promo-1.json"            
+        }
+    ],
+
+    "galleryGridClassName" : "jsg-gallery-grid-embedded",
+
+    "showImagesAsList" : true
+}

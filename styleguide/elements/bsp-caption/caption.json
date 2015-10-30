@@ -1,0 +1,17 @@
+{
+	"_template": "elements/bsp-caption",
+	"options": {
+		"width" : 200
+	},
+	"content": {
+		"_dataUrl" : "/common/image-200x300.json"
+	},
+	"text": {
+		"_template" : "common/text",
+		"text" : "At 20, Jordan Spieth will be the youngest American to compete in The Presidents Cup"
+	},
+	"credit": {
+		"_template" : "common/text",
+		"text" : "Credit Erik S. Lesser/European Pressphoto Agency"
+	}
+}

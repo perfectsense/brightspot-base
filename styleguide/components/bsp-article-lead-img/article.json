@@ -1,0 +1,277 @@
+{
+
+	"_template" : "components/bsp-article-lead-image-first",
+
+	"options" : {
+		"infinite" : false
+	},
+
+	"sharing" : {
+		"_dataUrl" : "/components/bsp-social-share/share-monochrome.json"
+	},
+
+	"permalink" : "/bsp-article/",
+
+	"title" : "Everything You Need to Know About Jordan Spieth",
+
+    "subTitle": "Inspire Awesome",
+
+	"authors" : [
+		{
+			"name" : "Team Spieth",
+			"link" : {
+				"_template" : "common/link",
+
+				"attributes" : {
+					"title" : "Team Spieth"
+				},
+				"body" : {
+                    "_template": "common/text",
+                    "text": "Team Spieth"
+                }
+			}
+		}
+	],
+
+	"leadImage" : {
+        "_template" : "common/image",
+		"attributes" : {
+			"alt" : "Bacon meatball",
+			"src" : "/components/bsp-article-lead-img/lead-image.jpg"
+		}
+	},
+
+	"body" : [
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<p>Jordan Alexander Spieth was born on July 27, 1993, in Dallas, Texas. The first of three children of father Shawn, a former college baseball player who founded a media analytics startup, and mom Chris, a college basketball player turned computer engineer, Jordan inherited his parents' athletic capabilities. He grew up playing soccer, baseball, football and basketball, with golf eventually taking precedence in the pecking order.</p>"
+            }
+        },
+        {
+            "options" : {
+                "enhancement" : true,
+                "align" : "left"
+            },
+
+            "content" : {
+                "_dataUrl" : "/elements/bsp-caption/caption.json"
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<p>At 9, Jordan mowed a section of the family lawn as low as possible to practice his putting, spurring his parents to join the Brookhaven Country Club to give him access to proper facilities. At 12, the budding champion began taking lessons from former golf pro Cameron McCormick.</p>"
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<p>As a student at St. Monica Catholic School and Jesuit College Preparatory School, Spieth established himself as a golf prodigy. He won the U.S. Junior Amateur Championship in 2009 and 2011, making him just the second golfer, after Tiger Woods, to win the event twice. He also accepted an exemption to play in the PGA Tour's HP Byron Nelson Championship in 2010, where he tied for 16th among the field of professionals.</p>"
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<h4>Family</h4>"
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<p>His mom and dad are Saucon Valley High School graduates and both played collegiate sports. His father, Shawn, played baseball at Lehigh University. His mother, Chris, maiden name Julius, played basketball at Moravian College. His brother, Steven, is a freshman on the basketball team at Brown University. His sister, Ellie, who has special needs, is his hero. He always buys and gives Ellie a keychain as a souvenir from the places he visits. His grandfather, Donald Spieth, lives in Bethlehem, PA.</p>"
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "components/bsp-blockquote",
+                "author": "Jordan Spieth",
+            	"content": "My Dad told me growing up, \"You've got to start setting goals.\" That's been my philosophy, set goals and work hard, stay focused, and reach them as soon as possible. At each level, I always re-evaluate my goals and establish new ones. I never want to become complacent, but always push myself further."
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<h4>College</h4>"
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<p>As a freshman at the University of Texas, Spieth was named Big 12 Player of the Year and a first-team All-American as he led the Longhorns to the NCAA Championship. He earned low amateur status at the U.S. Open in 2012, and at the end of the year the 19-year-old turned professional.</p>"
+            }
+        },
+        {
+            "content" : {
+                "_dataUrl" : "/components/bsp-video/video.json"
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<h4>Jordan's First Years on the PGA TOUR</h4>"
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<p>Spieth finished in the Top 10 in each of his first two events on the Web.com Tour. He then displayed terrific form at a pair of PGA events, finishing tied for second at the Puerto Rico Open and tied for seventh at the Tampa Bay Championship, earning temporary status on the PGA Tour for the remainder of 2013.</p>"
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<p>Spieth opened 2014 by placing second at the Hyundai Tournament of Champions. He then delivered an eye-opening performance at the Masters in April, entering the final day of competition tied for the lead before finishing tied for second. A few weeks later at the Players Championship, the 20-year-old again made a serious bid at a major title before finishing tied for fourth</p>"
+            }
+        },
+        {
+            "content" : {
+                "_template" : "components/bsp-blockquote",
+                "author": "Jordan Spieth",
+            	"content": "It seems unreal, yet I couldn't be happier to have so many people across the country rooting for me to succeed. It is a very humbling thing to see friends and strangers pulling for you to achieve your dreams. I am very grateful for the words of encouragement week in and week out."
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<h4>A Breakthrough Season</h4>"
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<p>At the end of 2014, the unofficial start of the 2015 PGA TOUR season, Jordan played his best round of an already impressive career with an 8-under 63 on Sunday to win the Australian Open by six strokes, making his first trip Down Under a successful one. His 72-hole total of 13-under 271 on the tough, windy Australian Golf Club made him the first American to win the Australian Open since Brad Faxon in 1993, when the 21-year-old Spieth was four months old.\"It's the best round I have ever played, especially considering the conditions,\" Spieth said. \"It was just kind of one of those rounds when you're in the zone and you're not sure what you're at. It's nice that it came on a Sunday. Spieth birdied four holes on the front nine -- three of them in a row -- to lead by three strokes after nine holes, then made light of the challenging, windy conditions by adding four more on the back nine, never threatening to lose his lead.</p>"
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<p>Spieth claimed his second PGA Tour victory at the 2015 Valspar Championship, but the big thrill of his young career came a month later at the Masters. After jumping out to a huge lead, Spieth established records with his scores after 36 and 54 holes. He went on to tie Woods for the lowest score in Masters history at 18-under 270, and became the second-youngest player, after Woods, to don the green jacket as the tournament champion.</p>"
+            }
+        },
+        {
+            "content" : {
+                "_dataUrl" : "/components/bsp-iframe/twitter.json"
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<p>\"This was arguably the greatest day of my life,\" Spieth said afterward. \"To join Masters history and put my name on that trophy and to have this jacket forever, it's something that I can't fathom right now.\"</p>"
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<p>The most grown-up part of Spieth is his game. He has a sophisticated toolbox, saving strokes with intelligent shot-shaping, sound judgment, an artful short game and a brave putter. When he's on, he can go low, as he did with final rounds of 62 and 64 in last year's FedEx Cup. But he specializes in getting the most out of his rounds when he's slightly off, steeped in the ability—to borrow a bromide from Bobby Locke and Jack Nicklaus—to \"play badly well.\" It's why Spieth has finished among the top 20 some 27 times as a pro.</p>"
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "components/bsp-blockquote",
+                "author": "Jordan Spieth",
+
+            	"content": "To be able to have winning in your blood growing up, whether it was pounding my little brother or trying to beat my dad in something, or just competing on teams with my friends, it was nonstop. And I think that's what shaped me to desire to have that each week. And it's why I believe in golf, even when things seem impossible, that I can always get it done."
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<p>In June, Jordan made history again when he won the 2015 U.S. Open to become the youngest golfer ever, at 21 years old, to hold the first two legs of a golf's grand slam. The last player to hold both the Masters and U.S. Open titles in the same year was Tiger Woods in 2002. Johnson had a chance to win on No. 18. After hitting birdie on 17, he set himself up for a 12-foot putt for eagle that would have won the tournament. He just missed, however, hitting the ball past the cup, then blew a five-footer for birdie that would have forced a Monday playoff.</p>"
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<p>Talk of Jordan's bid for a Grand Slam captivated the golf world for weeks but ended on the 18th hole of The Open Championship. Jordan finished with a share of 4th at 14-under and is thirsty for the upcoming tournaments \"I'm hoping to kind of prove, coming off of this last major, that I've got a little bit of revenge that I need to get out, from having control of the Open Championship with two holes to go and not closing it out.\"</p>"
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<h4>Quick Facts About Jordan</h4>"
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<ul><li>Born: July 27, 1993 in Dallas, TX</li><li>Height: 6’1</li><li>Weight: 185</li><li>Education: University of Texas at Austin</li><li>Official World Golf Ranking: 2nd</li><li>2013 FedEx Cup Ranking: 7th</li><li>2014 FedEx Cup Ranking: 15th</li><li>2015 FedEx Cup Ranking: 1st (as of 5/1/15)</li></ul>"
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<h4>Career Highlights</h4>"
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<ul><li>Turned professional in December 2012</li><li>Only player other than Tiger Woods to win multiple U.S. Junior Amateur Titles</li><li>2012 NCAA Champion (Freshman)</li><li>Reached #1 in World in World Amateur Ranking (June 2012)</li><li>Youngest player since 1929 to play on U.S. Ryder Cup Team</li><li>Youngest player to play on a U.S. President's Cup Team</li></ul>"
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<h4>Professional Highlights</h4>"
+            }
+        },
+        {
+            "content" : {
+            	"_template" : "common/html",
+
+            	"text": "<ul><li>2013 John Deere Classic</li><li>2014 Emirates Australian Open</li><li>2014 Hero World Challenge</li><li>2015 Valspar Championship</li><li>2015 U.S. Open</li><li>2015 John Deere Classic</li></ul>"
+            }
+        },
+        {
+            "content" : {
+                "_template" : "common/html",
+
+                "text": "<p>Johnson had a chance to win on No. 18. After hitting birdie on 17, he set himself up for a 12-foot putt for eagle that would have won the tournament. He just missed, however, <strong>this is some inline bold text</strong> hitting the ball past the cup, then blew a five-footer for birdie that would have forced a Monday playoff.</p><h2>heading 2</h2><p>Johnson had a chance to win on No. 18. After hitting birdie on 17, he set himself up for a 12-foot putt for eagle that would have won the tournament. He just missed, however, hitting the ball past the cup, then blew a five-footer for birdie that would have forced a Monday playoff.</p><h3>heading 3</h3><p>Johnson had a chance to win on No. 18. After hitting birdie on 17, he set himself up for a 12-foot putt for eagle that would have won the tournament. He just missed, however, hitting the ball past the cup, then blew a five-footer for birdie that would have forced a Monday playoff.</p>"
+            }
+        },
+        {
+            "content" : {
+                "_template" : "common/html",
+
+                "text": "<a href=\"http://www.perfectsensedigital.com\">An inline link</a>"
+            }
+        }
+    ],
+
+    "cta" : {
+        "content" : {
+            "_template" : "common/link",
+            "attributes" : {
+                "href" : "#cta"
+            },
+            "body" : {
+                "_template" : "common/text",
+                "text" : "Call to action link"
+            }
+        }
+    }
+
+}
