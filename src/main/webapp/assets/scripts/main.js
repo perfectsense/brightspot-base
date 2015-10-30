@@ -1,24 +1,29 @@
-import bsp_ajax_links_plugin from './plugins/bsp-ajax-links-plugin';
+/**
+ * Our main JS file which is used to compile the JS by including any plugins that are used throughout the project
+ * Base doesn't have any JS in it, but rather any JS plugins that are used in base are copied for you with bower
+ * via the bsp-grunt task from their respective repos and compiled in with this file.
+ *
+ * If you have any project specific JS that you need to write, put it into your own scripts/plugins folder
+ * and import from there.
+ *
+ * If you are going to use any plugins that don't come with base and base components, designate them in your
+ * own bower.json and copy them into the scripts/bower folder via a Gruntfile entry
+ */
+import bsp_carousel_plugin from             'bsp-carousel-plugin';
+import bsp_carousel_thumbnav_plugin from    'bsp-carousel-thumbnav-plugin';
+import bsp_carousel_gallery_plugin from     'bsp-carousel-gallery-plugin';
+import bsp_infinite_content_plugin from     'bsp-infinite-content-plugin';
+import bsp_lazyimage_plugin from            'bsp-lazyimage-plugin';
+import bsp_share from                       'bsp-share';
+import bsp_tabber_plugin from               'bsp-tabber-plugin';
+import bsp_toggle_plugin from               'bsp-toggle-item-plugin';
 
-import bsp_carousel_plugin from 'bsp-carousel-plugin';
-import bsp_carousel_thumbnav_plugin from 'bsp-carousel-thumbnav-plugin';
-import bsp_carousel_gallery_plugin from 'bsp-carousel-gallery-plugin';
-
-import bsp_form_plugin from 'bsp-form-plugin';
-import bsp_form_message_plugin from 'bsp-form-message-plugin';
-import bsp_form_constraint_matches_plugin from 'bsp-form-constraint-matches-plugin';
-import bsp_form_field_date_plugin from 'bsp-form-field-date-plugin';
-import bsp_form_field_datetime_local_plugin from 'bsp-form-field-datetime-local-plugin';
-import bsp_form_field_month_plugin from 'bsp-form-field-month-plugin';
-import bsp_form_field_time_plugin from 'bsp-form-field-time-plugin';
-
-import bsp_infinite_content_plugin from 'bsp-infinite-content-plugin';
-import bsp_lazyimage_plugin from 'bsp-lazyimage-plugin';
-import bsp_scroll_checker from './plugins/bsp-scroll-checker-plugin';
-import bsp_share from 'bsp-share';
-import bsp_tabber_plugin from 'bsp-tabber-plugin';
-import bsp_toggle_plugin from 'bsp-toggle-item-plugin';
-import bsp_modal_plugin from './plugins/bsp-modal-plugin';
-import bsp_table_sort_plugin from './plugins/bsp-table-sort-plugin';
-
+/**
+ * These files here are currently residing in base in the plugins folder for ease of development, until we get them
+ * finalized and to a version 1.0 and put them in their own repos.
+ */
+import bsp_ajax_links_plugin from           'base/plugins/bsp-ajax-links-plugin';
+import bsp_modal_plugin from                'base/plugins/bsp-modal-plugin';
+import bsp_scroll_checker from              'base/plugins/bsp-scroll-checker-plugin';
+import bsp_table_sort_plugin from           'base/plugins/bsp-table-sort-plugin';
 export default {};
