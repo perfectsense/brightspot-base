@@ -95,20 +95,40 @@
         "_template": "components/article-enhancement",
 
         "content" : {
-            "_template": "components/gallery-module",
-            "dots": true,
+
+            "_template": "components/gallery-module-with-nav",
+
+            "thumbnailsToShow": "4",
+
+            "galleryTitle": {
+            "_template": "common/text",
+            "text": "5 slides with thumbs"
+            },
+
             "gallerySlides": [
                 {
                     "_template": "common/image",
-                    "_repeat": 5,
+                    "_repeat": 8,
                     "attributes": {
                         "_template": "common/attributes",
-                        "src": "{{image([ 600, 1200, 100 ], 400)}}"
+                        "src": "{{image(1200, 600)}}"
+                    }
+                }
+            ],
+
+            "galleryNavItems": [
+                {
+                    "_template": "common/image",
+                    "_repeat": 8,
+                    "attributes": {
+                        "_template": "common/attributes",
+                        "src": "{{image(250, 150)}}"
                     }
                 }
             ]
         }
     },
+
     {
       "_template": "common/html",
       "text": "{{paragraphs}}"

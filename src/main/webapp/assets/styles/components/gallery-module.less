@@ -13,10 +13,8 @@
 .gallery-module {
 
     // on mobile we will hide the arrows (design deemed this so)
-    .bsp-carousel {
-        .slick-prev, .slick-next {
-            display: none !important;
-        }
+    .slick-prev, .slick-next {
+        display: none !important;
     }
 
     // set this up to support portrait and landscape images. The portrait ones will center themselves horizontally
@@ -48,16 +46,17 @@
             }
         }
 
-        // we never want previous or next arrows on the nav slider
-        .slick-prev, .slick-next {
-            display: none !important;
-        }
     }
 }
 
 // these are styles for the hoziontal layout gallery which has 5 slides across
 .gallery-module-horizontal {
 	margin-bottom: 0;
+
+    // on this gallery though, we have arrows always
+    .slick-prev, .slick-next {
+        display: inline-block !important;
+    }
 
 	.slick-list {
 		margin: 0 -@space;
@@ -141,11 +140,9 @@
 
 	.gallery-module {
 
-        .bsp-carousel {
-            .slick-prev, .slick-next {
-                // on medium and up, we will show previous and next
-                display: inline-block !important;
-            }
+        .slick-prev, .slick-next {
+            // on medium and up, we will show previous and next
+            display: inline-block !important;
         }
 
         // for anything past medium, we want the thumbs or text nav, anything before, no thumbs
@@ -153,6 +150,12 @@
 
             &.slick-initialized {
                 display: block;
+            }
+
+            // also in the carousel nav, no arrows
+            .slick-prev, .slick-next {
+                // on medium and up, we will show previous and next
+                display: none !important;
             }
 
         }
@@ -166,7 +169,7 @@
             }
 
             .slick-dots {
-                display: none;
+                display: none !important;
             }
         }
 

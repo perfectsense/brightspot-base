@@ -12,39 +12,15 @@
   },
   "gallerySlides": [
     {
-      "_template": "common/image",
-      "attributes": {
-        "src": "{{image(600, 400)}}",
-        "_template": "common/attributes"
-      }
-    },
-    {
-      "_template": "common/image",
-      "attributes": {
-        "src": "{{image(600, 400)}}",
-        "_template": "common/attributes"
-      }
-    },
-    {
-      "_template": "common/image",
-      "attributes": {
-        "src": "{{image(600, 400)}}",
-        "_template": "common/attributes"
-      }
-    },
-    {
-      "_template": "common/image",
-      "attributes": {
-        "src": "{{image(600, 400)}}",
-        "_template": "common/attributes"
-      }
-    },
-    {
-      "_template": "common/image",
-      "attributes": {
-        "src": "{{image(600, 400)}}",
-        "_template": "common/attributes"
-      }
+      "_template": "components/gallery-module-slide-content",
+        "_repeat": 5,
+        "content": {
+            "_template": "common/image",
+            "attributes": {
+                "_template": "common/attributes",
+                "src": "{{image(600, 400)}}"
+            }
+        }
     }
   ]
 }

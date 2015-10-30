@@ -6,12 +6,7 @@
 }
 
 .component-title {
-	&:extend(.ts-0);
-
-	background: @bsp-component-title-bg;
-	color: @bsp-component-title-color;
-	padding: @space-quarter @space;
-	margin: 0 0 @space 0;
+	&:extend(.section-title);
 }
 
 .component-content {
@@ -21,11 +16,9 @@
 .component-cta {
 
 	a {
-		background: @bsp-component-cta-bg;
 		display: block;
-		color: @bsp-component-cta-color;
 		padding: @space-quarter 0;
-		text-align: center;
+		text-align: left;
 	}
 
 	&.component-cta-top-right {
@@ -34,8 +27,6 @@
 		right: 0;
 
 		a {
-			background: none;
-			color: @bsp-component-title-color;
 			padding-right: @space;
 		}
 	}
@@ -45,8 +36,6 @@
 		float: right;
 
 		a {
-			background: none;
-			color: @bsp-component-title-color;
 			padding-right: @space;
 		}
 	}
@@ -56,8 +45,6 @@
 		float: left;
 
 		a {
-			background: none;
-			color: @bsp-component-title-color;
 			padding-right: @space;
 		}
 	}

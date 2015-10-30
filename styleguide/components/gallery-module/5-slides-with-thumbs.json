@@ -1,91 +1,31 @@
 {
   "_template": "components/gallery-module-with-nav",
+
   "thumbnailsToShow": "4",
+
   "galleryTitle": {
     "_template": "common/text",
     "text": "5 slides with thumbs"
   },
+
   "gallerySlides": [
     {
       "_template": "common/image",
+      "_repeat" : 8,
       "attributes": {
-        "src": "{{image(1200, 400)}}",
-        "_template": "common/attributes"
-      }
-    },
-    {
-      "_template": "common/image",
-      "attributes": {
-        "src": "{{image(1200, 400)}}",
-        "_template": "common/attributes"
-      }
-    },
-    {
-      "_template": "common/image",
-      "attributes": {
-        "src": "{{image(1200, 400)}}",
-        "_template": "common/attributes"
-      }
-    },
-    {
-      "_template": "common/image",
-      "attributes": {
-        "src": "{{image(1200, 400)}}",
-        "_template": "common/attributes"
-      }
-    },
-    {
-      "_template": "common/image",
-      "attributes": {
-        "src": "{{image(1200, 400)}}",
+        "src": "{{image(1200, 600)}}",
         "_template": "common/attributes"
       }
     }
   ],
   "galleryNavItems": [
     {
-        "_template": "common/image",
-        "attributes": {
-          "src": "{{image(400, 100)}}",
-          "_template": "common/attributes"
-        }
-
-    },
-    {
-
-        "_template": "common/image",
-        "attributes": {
-          "src": "{{image(400, 100)}}",
-          "_template": "common/attributes"
-        }
-
-    },
-    {
-
-        "_template": "common/image",
-        "attributes": {
-          "src": "{{image(400, 100)}}",
-          "_template": "common/attributes"
-        }
-
-    },
-    {
-
-        "_template": "common/image",
-        "attributes": {
-          "src": "{{image(400, 100)}}",
-          "_template": "common/attributes"
-        }
-
-    },
-    {
-
-        "_template": "common/image",
-        "attributes": {
-          "src": "{{image(400, 100)}}",
-          "_template": "common/attributes"
-        }
-
+      "_template": "common/image",
+      "_repeat" : 8,
+      "attributes": {
+        "src": "{{image(250, 150)}}",
+        "_template": "common/attributes"
+      }
     }
   ]
 }

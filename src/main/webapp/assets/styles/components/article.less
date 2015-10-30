@@ -60,7 +60,10 @@
 }
 
 .article-enhancement {
-    margin: @space-and-half 0;
+    border-bottom: @border-style-5;
+    border-top: @border-style-5;
+    padding: @space-triple;
+    margin: @space-triple 0;
 
     // on xsmall, there is only center alignment
     &.align-left, &.align-right, &.align-center {
@@ -80,7 +83,6 @@
         display: block;
         font-size: @ts-1;
         font-weight: @font-weight-bold;
-        margin: @space-double;
     }
 
 }
@@ -89,19 +91,25 @@
     .article-enhancement {
 
         &.align-left {
+            border: none;
             float: left;
             margin: 0 @space-double @space 0;
             max-width: 50%;
+            padding: 0;
         }
 
         &.align-right {
+            border: none;
             float: right;
             margin: 0 0 @space @space-double;
             max-width: 50%;
+            padding: 0;
         }
 
         &.align-center {
-            margin: 0 auto;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
         }
 
         &.align-full {

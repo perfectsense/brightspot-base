@@ -5,7 +5,7 @@
 
 	<div class="component-content">
 
-		<div class="gallery-module {{#if textNav}}gallery-module-nav{{else}}gallery-module-thumbs{{/if}}" data-bsp-carousel-thumbnav data-bsp-carousel-thumbnav-options='{ "stage" : { "theme" : "carousel-dots" , "themeConfig" : { } }, "nav": { "themeConfig" : { "slidesToShow" : {{#if thumbnailsToShow}}{{thumbnailsToShow}}{{else}}4{{/if}}, "centerMode" : false } } }'>
+		<div class="gallery-module {{#if textNav}}gallery-module-nav{{else}}gallery-module-thumbs{{/if}}" data-bsp-carousel-thumbnav data-bsp-carousel-thumbnav-options='{ "stage" : { "theme" : "carousel-dots" , "themeConfig" : { "arrows" : true } }, "nav": { "themeConfig" : { "slidesToShow" : {{#if thumbnailsToShow}}{{thumbnailsToShow}}{{else}}4{{/if}}, "centerMode" : false } } }'>
 			<div class="bsp-carousel-stage">
 
 				{{#each gallerySlides}}

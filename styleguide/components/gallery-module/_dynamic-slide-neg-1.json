@@ -6,7 +6,7 @@
         "attributes": {
             "_template": "common/attributes",
             "src": "{{image(1200, 400)}}",
-            "title": "slide-1"
+            "title": "slide-neg-1"
         }
     }
 }

@@ -9,19 +9,31 @@
   },
   "gallerySlides": [
     {
-      "_template": "common/image",
-      "_repeat": 7,
-      "attributes": {
-        "_template": "common/attributes",
-        "src": "{{image([ 600, 1200, 100 ], 400)}}"
-      }
+        "_template": "components/gallery-module-slide-content",
+        "_repeat": 7,
+        "content": {
+            "_template": "common/image",
+            "attributes": {
+            "_template": "common/attributes",
+            "src": "{{image([ 600, 1200, 100 ], 400)}}"
+            }
+        }
     }
   ],
   "cta": {
     "_template": "components/component-cta",
     "location": "bottom",
     "content": {
-      "_dataUrl": "/common/link-test-text-14-char.json"
+      "_template": "common/link",
+      "attributes": {
+        "href": "link-me",
+        "title": "I are a link",
+        "_template": "common/attributes"
+      },
+      "body": {
+        "_template": "common/text",
+        "text": "I am a CTA Link Test"
+      }
     }
   }
 }
