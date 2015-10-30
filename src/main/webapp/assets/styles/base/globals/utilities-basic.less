@@ -1,0 +1,105 @@
+//
+// @name Basic Utilities
+//
+// @description Basic utility classes that do not fit into another category
+//              These can be mixed in or extended throughout the rest of the CSS
+//
+// --------------------------------------------------
+
+// Floats
+.clearfix {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+// Hide from screenreaders and browsers
+//
+// Credit: HTML5 Boilerplate
+.hidden {
+  display: none !important;
+}
+
+
+// Only display content to screen readers
+//
+// See: http://a11yproject.com/posts/how-to-hide-content/
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+// Use in conjunction with .sr-only to only display content when it's focused.
+// Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+// Credit: HTML5 Boilerplate
+
+.sr-only-focusable {
+  &:active,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
+/**
+ * Vertical Centering from: https://css-tricks.com/centering-in-the-unknown/
+ *
+ * For most cases we should be using display:flex along with align-items and justify-content
+ * In cases where we ABSOLUTELY need to support older browsers, we can use this
+ *
+ * Ex:
+ * <div class="wrapper"><div class="i-am-vertically-centered">haha!</div></div>
+ *
+ * .wrapper {
+ *      &:extend(.vertical-center-wrapper all);
+ *      height: 200px;
+ * }
+ * .i-am-vertically-centered {
+ *      &:extend(.vertical-center all);
+ * }
+ *
+ */
+
+.vertical-center-wrapper {
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -5px; // Adjusts for spacing
+    }
+}
+.vertical-center {
+    display: inline-block;
+    vertical-align: middle;
+}

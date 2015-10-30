@@ -103,8 +103,8 @@
 }
 
 // we will import the variables and mixins as reference so we can use them
-@import (reference) "../bower/fontawesome/variables.less";
-@import (reference) "../bower/fontawesome/mixins.less";
+@import (reference) "../../bower/fontawesome/variables.less";
+@import (reference) "../../bower/fontawesome/mixins.less";
 
 // we can override the base font awesome prefix to give our icon class a custom name here if we want
 // instead of "fa", like "icon" or "client-namespace-icon".
@@ -112,7 +112,7 @@
 @fa-css-prefix: icon;
 
 // we pull in the default font-awesome font path, as well as the core definition
-@import "../bower/fontawesome/path.less";
+@import "../../bower/fontawesome/path.less";
 
 // we drop in our named icon class here using the fa-icon mixin. Allows us to also do extends for semantic class names if that's what we want
 // if we just use the variable here instead of the hardcoded name, we cannot do extends
