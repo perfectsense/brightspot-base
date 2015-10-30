@@ -9,7 +9,7 @@
     },
 
     "mainView": {
-      "_template": "layouts/one-col",
+      "_template": "layouts/full-page",
 
       "main": [
         {

@@ -2,7 +2,7 @@
   "_template": "components/article",
 
   "sharing": {
-    "_dataUrl": "/components/social-share/share-notitle.json"
+    "_dataUrl": "/elements/social-share/share-monochrome.json"
   },
 
   "permalink": "/bsp-article/",
@@ -12,7 +12,7 @@
   "subTitle": "{{words}}",
 
   "metaData": {
-    "_template": "components/meta-data",
+    "_template": "elements/meta-data",
 
     "publishDate": "05 Apr 2015",
 
@@ -31,8 +31,9 @@
   },
 
   "tags": {
-    "_dataUrl": "/components/tags/tag-list.json"
+    "_dataUrl": "/elements/tags/tag-list-no-title.json"
   },
+
   "lead": {
     "_template": "common/figure",
     "credit": "{{name}}",
@@ -48,7 +49,32 @@
       }
     }
   },
+
   "articleBody": [
+    {
+      "_template": "common/html",
+      "text": "{{paragraphs}}"
+    },
+    {
+        "_template": "components/article-enhancement",
+
+        "content" : {
+            "_template" : "common/link",
+
+            "cssClass" : "related-link",
+
+            "attributes" : {
+                "_template" : "common/attributes",
+                "href" : "#"
+            },
+
+            "body": {
+                "_template" : "common/text",
+
+                "text" : "I am a related link as a separate paragraph (via CSS) inside the body of an article as an enhancement"
+            }
+        }
+    },
     {
       "_template": "common/html",
       "text": "{{paragraphs}}"
@@ -66,10 +92,22 @@
       "text": "{{paragraphs}}"
     },
     {
-      "_template": "components/article-enhancement",
-      "content": {
-        "_dataUrl": "/components/gallery-module/7-slides-dots.json"
-      }
+        "_template": "components/article-enhancement",
+
+        "content" : {
+            "_template": "components/gallery-module",
+            "dots": true,
+            "gallerySlides": [
+                {
+                    "_template": "common/image",
+                    "_repeat": 5,
+                    "attributes": {
+                        "_template": "common/attributes",
+                        "src": "{{image([ 600, 1200, 100 ], 400)}}"
+                    }
+                }
+            ]
+        }
     },
     {
       "_template": "common/html",

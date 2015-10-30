@@ -1,13 +1,12 @@
 // Here we provide styles for the share bar
 // We also allow for some extending of icon fonts vs using the icon-xxxxx designation in the HTML
 
+.share-links-wrapper {
 
-.share-links-centering {
-    &:extend(.vertical-center-wrapper all);
+}
 
-    display: none;
-    float: right;
-    height: 100%;
+.share-links-title {
+    text-transform: uppercase;
 }
 
 .share-links {
@@ -27,11 +26,11 @@
 
 	//background: @brand-primary;
 	color: @social-icons-monochrome-color;
-	border-radius: 32px;
-	height: 32px;
-	line-height: 32px;
+	border-radius: 28px;
+	height: 28px;
+	line-height: 28px;
 	text-align: center;
-	width: 32px;
+	width: 28px;
 
 	.icons-monochrome & {
 		background-color: @social-icons-monochrome-background;

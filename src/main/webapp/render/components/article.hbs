@@ -1,39 +1,47 @@
-<div class="article-wrapper {{#if modifierClass}} {{modifierClass}}{{/if}}">
+<div class="article-wrapper{{#if modifierClass}} {{modifierClass}}{{/if}}">
 
-	<div class="article">
+    {{#with lead}}
+    <div class="article-lead">
+        {{render this}}
+    </div>
+    {{/with}}
 
-		{{#if sharing}}{{render sharing }}{{/if}}
+    <div class="grid-container">
+        <div class="row">
+            <div class="column-full">
 
-		<h1 class="article-title">{{title}}</h1>
+                <div class="article">
 
-		{{#if subTitle}}
-			<h3 class="article-subtitle">{{subTitle}}</h3>
-		{{/if}}
+                    {{#with tags}}
+                        {{render this}}
+                    {{/with}}
 
-        {{#with metaData}}
-            {{render this}}
-        {{/with}}
+                    <h1 class="article-title">{{title}}</h1>
 
-		{{#with lead}}
-		<div class="article-lead">
-			{{render this}}
-		</div>
-		{{/with}}
+                    {{#if subTitle}}
+                        <h3 class="article-subtitle">{{subTitle}}</h3>
+                    {{/if}}
 
-		<div class="article-content">
-			{{#each articleBody}}{{this}}{{/each}}
-		</div>
+                    {{#with metaData}}
+                        {{render this}}
+                    {{/with}}
 
-        {{#with tags}}
-    		{{render this}}
-        {{/with}}
+                    {{#if sharing}}{{render sharing }}{{/if}}
 
-        {{#with nextArticle}}
-            <div class="article-load-more">
-                {{render this cssClass="bsp-infinite-load-trigger"}}
-            </div>
-        {{/with}}
+                    <div class="article-content">
+                        {{#each articleBody}}{{this}}{{/each}}
+                    </div>
 
-	</div>
+                    {{#with nextArticle}}
+                        <div class="article-load-more">
+                            {{render this cssClass="bsp-infinite-load-trigger"}}
+                        </div>
+                    {{/with}}
 
-</div>
+                </div>{{!-- article --}}
+
+            </div>{{!-- column-full --}}
+        </div>{{!-- row --}}
+    </div>{{!-- grid-container --}}
+
+</div>{{!-- article-wrapper --}}

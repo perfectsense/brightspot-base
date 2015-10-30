@@ -6,7 +6,7 @@
 	<div class="component-content">
 
 		<div class="gallery-module gallery-module-{{#if theme}}{{theme}}{{/if}}" data-bsp-carousel data-bsp-carousel-options='{
-			"theme" : "{{#if theme}}{{theme}}{{/if}}",
+			"theme" : "{{#if theme}}{{theme}}{{else}}{{#if dots}}carousel-dots{{/if}}{{/if}}",
 
             {{#if dynamicSlideLoad}}"dynamicSlideLoad" : true,{{/if}}
 

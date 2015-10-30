@@ -1,56 +1,10 @@
 .article-wrapper {
+    margin-top: -@site-top-and-bottom-space;
 
-}
-
-.article {
-    border-top: @border-style-1;
-    padding: @space-triple 0 @space;
-
-    &:first-of-type {
-        border-top: none;
-        margin-top: -@space-triple;
+    // when we are presenting in the styleguide, no negative margin
+    .sg-body & {
+        margin: 0;
     }
-
-    .share-links {
-        margin-bottom: @space;
-    }
-
-    // when we have a component inside of an article, remove the padding.
-    // We let natural margins of p tags and others in the contentdo the spacing instead
-    .component {
-        padding: 0;
-    }
-
-}
-
-.article-content {
-    &:extend(.clearfix all);
-
-    p {
-        margin: 0 0 @space-double 0;
-    }
-}
-
-.article-enhancement {
-    margin: @space 0;
-
-    // on xsmall, there is only center alignment
-    &.align-left, &.align-right, &.align-center {
-        margin: @space auto;
-        text-align: center;
-    }
-
-    .img-with-meta {
-        margin: 0 auto;
-    }
-
-    .related-link {
-        display: block;
-        font-size: @ts-1;
-        font-weight: @font-weight-bold;
-        margin: @space-double 0;
-    }
-
 }
 
 .article-lead {
@@ -61,16 +15,74 @@
     margin-bottom: @space-double;
 }
 
+.article {
+    padding: @space-double 0 @space;
+
+    .tags {
+        padding-bottom: @space;
+    }
+
+    .meta-data {
+        padding-bottom: @space-double;
+    }
+
+    // when we have a component inside of an article, remove the padding.
+    // We let natural margins of p tags and others in the content do the spacing instead
+    .component {
+        padding: 0;
+    }
+
+}
+
 .article-title {
     &:extend(.page-title all);
 }
 
 .article-subtitle {
     &:extend(.section-title all);
+
+    padding-bottom: @space-double;
 }
 
-.article-list {
-    &:extend(.list all);
+.article-content {
+    &:extend(.clearfix all);
+
+    border-top: @border-style-5;
+    margin-top: @space-triple;
+    padding-top: @space-triple;
+
+    // custom line height for article content unless it gets overriden
+    line-height: 2;
+
+    p {
+        margin: 0 0 @space-and-half 0;
+    }
+}
+
+.article-enhancement {
+    margin: @space-and-half 0;
+
+    // on xsmall, there is only center alignment
+    &.align-left, &.align-right, &.align-center {
+        margin: @space auto;
+        text-align: center;
+    }
+
+    blockquote.component {
+        margin: 0 @space-double;
+    }
+
+    .img-with-meta {
+        margin: 0 auto;
+    }
+
+    .related-link {
+        display: block;
+        font-size: @ts-1;
+        font-weight: @font-weight-bold;
+        margin: @space-double;
+    }
+
 }
 
 @media @mq-sm {

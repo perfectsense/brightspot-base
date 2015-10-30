@@ -1,7 +1,8 @@
 {
   "_template": "components/gallery-module",
-  "theme": "carousel-dots",
+
   "dots": true,
+
   "galleryTitle": {
     "_template": "common/text",
     "text": "7 slides, with dots, no thumbs"

@@ -2,16 +2,6 @@
   "name": "brightspot-base",
   "version": "2.0.0",
   "devDependencies": {
-    "babel-core": "^5.6.14",
-    "bsp-grunt": "perfectsense/brightspot-js-grunt#2.1.0",
-    "es6-module-loader": "0.16.6",
-    "jasmine-core": "^2.3.4",
-    "karma": "^0.12.36",
-    "karma-jasmine": "^0.3.5",
-    "karma-phantomjs-launcher": "^0.2.0",
-    "karma-systemjs": "^0.5.0",
-    "phantomjs": "^1.9.17",
-    "phantomjs-polyfill": "0.0.1",
-    "systemjs": "0.18.4"
+    "bsp-grunt": "git://github.com/perfectsense/brightspot-js-grunt#feature/refactor"
   }
 }

@@ -31,13 +31,18 @@
 @import (inline) "bower/bsp-carousel/bsp-carousel.css";
 
 // These are elements. Some of these correspond to DOM elements, others are small building blocks that components or parts of components can extend
+// The primary difference is that elements do not have a component class wrapper and they are primarily used inside components, meaning that very
+// rarely will you see an element just stand alone inside a page layout without being represented inside a component
 @import "elements/buttons.less";
 @import "elements/grid.less";
 @import "elements/icons.less";
 @import "elements/image.less";
 @import "elements/lists.less";
+@import "elements/meta-data.less";
 @import "elements/misc.less";
 @import "elements/modal.less";
+@import "elements/share-links.less";
+@import "elements/tags.less";
 @import "elements/titles.less";
 @import "elements/typography.less";
 @import "elements/vertical-center.less";
@@ -47,11 +52,9 @@
 @import "components/article.less";
 @import "components/blockquote.less";
 @import "components/component.less";
-@import "components/meta-data.less";
-@import "components/share-links.less";
 @import "components/site-footer-simple.less";
 @import "components/site-header-simple.less";
-@import "components/tags.less";
+
 // The gallery module component goes last. It potentially has other components inside of it, so this lets us do some clean overrides
 @import "components/gallery-module.less";
 
