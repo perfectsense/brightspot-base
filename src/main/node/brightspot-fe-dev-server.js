@@ -12,6 +12,7 @@ var defaults = {
 	pom: 'pom.xml',
 	wwwroot: 'styleguide',
 	srcRelPath: 'src/main/webapp',
+	targetName: false,
 	host: 'localhost',
 	port: 3000
 };
@@ -33,7 +34,11 @@ module.exports = {
 		}
 
 		// configure/check target path
-		config.targetPath = config.projectDir + '/target/' + targetNameFromPomXml( config.projectDir + '/' + config.pom );
+		if (config.targetName) {
+			config.targetPath = config.projectDir + '/target/' + config.targetName;
+		} else {
+			config.targetPath = config.projectDir + '/target/' + targetNameFromPomXml( config.projectDir + '/' + config.pom );
+		}
 		if (!fs.existsSync(config.targetPath)) {
 			console.error('ERROR: Target dir %s does not exist', config.targetRelPath);
 			process.exit(1);
