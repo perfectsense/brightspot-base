@@ -13,10 +13,6 @@
         font-family: @font-family-base;
      }
 
-     h2, a {
-        color: @brand-accent;
-     }
-
      h2, h3 {
         font-weight: @font-weight-light;
         margin-bottom: 0;
@@ -80,9 +76,10 @@
 
 
      .bsp-article-title {
-        color: @brand-accent;
+        color: @text-color;
         float: left;
         font-family: @font-family-base;
+        font-weight: @font-weight-extra-light;
         font-size: @ts-4;
         margin: 0;
         padding-left: @space-double;
@@ -104,16 +101,13 @@
      .bsp-article-subtitle {
         .clearfix();
         font-family: @font-family-base;
+        font-size: @ts-neg-1;
+        font-weight: @font-weight-light;
         padding-left: @space-double;
         width: 100%;
         h3 {
-            background-color: @brand-accent;
-            color: #fff;
-            display: inline-block;
-            font-size: @ts-neg-1;
-            margin: 0 auto @space auto;
-            padding: 0 @space-double;
-            text-transform: uppercase;
+            .bsp-tag(@tag-background: transparent);
+            border: @border-style-7;
         }
      }
 
@@ -130,16 +124,20 @@
         vertical-align: super;
      }
 
-     .bsp-meta-author {
+     .bsp-meta-data {
+        color: @gray-light-2;
         font-family: @font-family-base;
         font-size: @ts-0;
         font-weight: @font-weight-light;
         padding-bottom: @space-half;
-        text-transform: none;
 
-        @media @mq-sm {
-            font-size: @ts-2;
+        a {
+            color: @gray-light-2;
         }
+    }
+
+    .bsp-meta-author, .bsp-meta-date {
+        text-transform: none;
     }
 
      .bsp-article-content,
@@ -201,8 +199,10 @@
 
 
         .bsp-article-content {
+            border-top: @border-style-5;
             margin: 0 auto;
             max-width: 800px;
+            padding-top: @space-triple;
         }
 
         .bsp-component-cta {

@@ -25,8 +25,6 @@
 			</h1>
 		</header>
 
-		{{#if sharing}}{{render sharing}}{{/if}}
-
 		<div class="bsp-meta-data">
 			{{#if authors}}
 		  		<div class="bsp-meta-author">by {{#each authors}}{{#unless @first}}, {{/unless}}{{render link}}{{/each}}</div>
@@ -34,7 +32,9 @@
 			{{#if publishDate}}
 				<div class="bsp-meta-date">{{publishDate}}</div>
 			{{/if}}
-		</div>				
+		</div>
+
+        {{#if sharing}}{{render sharing}}{{/if}}
 
 		<div class="bsp-article-content">
 			{{#each body}}
@@ -62,7 +62,7 @@
 		{{#with cta}}
 	        <div class="bsp-component-cta {{#if options.location}}cta-{{options.location}}{{/if}}">
 	            {{render content}}
-	        </div>  
+	        </div>
 	    {{/with}}
 
 	</div>
