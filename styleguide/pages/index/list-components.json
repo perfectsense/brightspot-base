@@ -443,6 +443,21 @@
                     "text"  : "BSP Video Player"
                 }
             }
+        },
+        {
+            "_template" : "components/bsp-list-promo-item-handler",
+
+            "link": {
+                "_template" : "common/link",
+
+                "attributes" : {
+                    "href"  : "/components/bsp-gallery-grid"
+                },
+                "body" : {
+                    "_template" : "common/text",
+                    "text"  : "BSP Gallery Grid"
+                }
+            }
         }
 	]
 }
