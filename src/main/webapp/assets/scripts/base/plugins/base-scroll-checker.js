@@ -1,7 +1,3 @@
-/**
- *  TODO: Create a bsp-scroll-checker repo and move this
- */
-
 import $ from 'jquery';
 import bsp_utils from 'bsp-utils';
 
@@ -35,9 +31,9 @@ var bsp_scroll_checker = {
     	if(self.$body.height() > self.$window.height()) {
 
 	    	if(window.scrollY > 0) {
-	    		self.$body.addClass('bsp-scrolling');
+	    		self.$body.addClass('base-scrolling');
 	    	} else {
-	    		self.$body.removeClass('bsp-scrolling');
+	    		self.$body.removeClass('base-scrolling');
 	    	}
 
 	    }
