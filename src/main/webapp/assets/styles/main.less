@@ -1,31 +1,31 @@
-//
-// ===================
-// IMPORTANT READ THIS
-// ===================
-//
-// By default, main is by default configured to pull in all the base LESS.
-// Many projects will not need all of these libraries, so please optimize by commenting out what you do not use.
-// Your LESS for your project goes at the bottom of this file, including any custom project variables, elements, mixins and components
-//
+/**
+* ===================
+* IMPORTANT READ THIS
+* ===================
+*
+* By default, main is by default configured to pull in all the base LESS.
+* Many projects will not need all of these libraries, so please optimize by commenting out what you do not use.
+* Your LESS for your project goes at the bottom of this file, including any custom project variables, elements, mixins and components
+/*
 
 
-//
-// Mixins
-// ---------------------------------------------------------------
-// Leaving these in a separate folder for now. Will figure out if we move thes around
-// but either way they will be brought in and can be used throughout
-// Mixins are prefaced with the private _ so they stay out ouf our automated LESS documentation
-// ---------------------------------------------------------------
-//
+/**
+* Mixins
+* ---------------------------------------------------------------
+* Leaving these in a separate folder for now. Will figure out if we move thes around
+* but either way they will be brought in and can be used throughout
+* Mixins are prefaced with the private _ so they stay out ouf our automated LESS documentation
+* ---------------------------------------------------------------
+*/
 @import (reference) "base/mixins/_mixins.less";
 
 
-//
-// Globals, utilities, mixins, vars
-// ---------------------------------------------------------------
-// Start off with the normalize reset and our scaffolding, then the rest of our globals. Each has their own documentation
-// ---------------------------------------------------------------
-//
+/**
+* Globals, utilities, mixins, vars
+* ---------------------------------------------------------------
+* Start off with the normalize reset and our scaffolding, then the rest of our globals. Each has their own documentation
+* ---------------------------------------------------------------
+*/
 @import "base/globals/normalize.less";
 @import "base/globals/scaffolding.less";
 @import "base/globals/borders.vars";
@@ -41,23 +41,23 @@
 @import "base/globals/z-index.vars";
 
 
-//
-// Bowered CSS.
-// ---------------------------------------------------------------
-// This is for plugins that we bowered in that have their own CSS
-// ---------------------------------------------------------------
-//
+/**
+* Bowered CSS.
+* ---------------------------------------------------------------
+* This is for plugins that we bowered in that have their own CSS
+* ---------------------------------------------------------------
+*/
 @import (inline) "bower/bsp-carousel/bsp-carousel.css";
 
 
-//
-// Elements
-// ---------------------------------------------------------------
-// These are elements. Some of these correspond to DOM elements, others are small building blocks that components or parts of components can extend
-// The primary difference is that elements do not have a component class wrapper and they are primarily used inside components, meaning that very
-// rarely will you see an element just stand alone inside a page layout without being represented inside a component
-// ---------------------------------------------------------------
-//
+/**
+* Elements
+* ---------------------------------------------------------------
+* These are elements. Some of these correspond to DOM elements, others are small building blocks that components or parts of components can extend
+* The primary difference is that elements do not have a component class wrapper and they are primarily used inside components, meaning that very
+* rarely will you see an element just stand alone inside a page layout without being represented inside a component
+* ---------------------------------------------------------------
+*/
 @import "base/elements/buttons.less";
 @import "base/elements/icons.less";
 @import "base/elements/images.less";
@@ -69,13 +69,13 @@
 @import "base/elements/titles.less";
 
 
-//
-// Components
-// ---------------------------------------------------------------
-// Components are synonymous with "modules" and are site components that are surrounded by a component wrapper in most cases. They can containe
-// other components and elements and have spacing relationships between each other (if wrapper is present)
-// ---------------------------------------------------------------
-//
+/**
+* Components
+* ---------------------------------------------------------------
+* Components are synonymous with "modules" and are site components that are surrounded by a component wrapper in most cases. They can containe
+* other components and elements and have spacing relationships between each other (if wrapper is present)
+* ---------------------------------------------------------------
+*/
 @import "base/components/article.less";
 @import "base/components/blockquote.less";
 @import "base/components/component.less";
@@ -89,9 +89,9 @@
 @import "base/components/gallery-module.vars";
 
 
-//
-// ===================
-// Your Project CSS Goes Below Here
-// ===================
-//
+/**
+* ===================
+* Your Project CSS Goes Below Here
+* ===================
+*/
 
