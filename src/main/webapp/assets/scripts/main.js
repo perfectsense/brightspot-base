@@ -16,6 +16,7 @@ import bsp_carousel_thumbnav_plugin from    'bsp-carousel-thumbnav-plugin';
 import bsp_carousel_gallery_plugin from     'bsp-carousel-gallery-plugin';
 import bsp_infinite_content_plugin from     'bsp-infinite-content-plugin';
 import bsp_lazyimage_plugin from            'bsp-lazyimage-plugin';
+import bsp_modal_plugin from                'bsp-modal-plugin';
 import bsp_share from                       'bsp-share';
 import bsp_tabber_plugin from               'bsp-tabber-plugin';
 import bsp_toggle_plugin from               'bsp-toggle-item-plugin';
@@ -32,6 +33,6 @@ import base_scroll_checker from              'base/plugins/base-scroll-checker-p
  * These files here are currently residing in base in the plugins folder for ease of development, until we get them
  * finalized and to a version 1.0 and put them in their own repos.
  */
-import bsp_modal_plugin from                'base/plugins/bsp-modal-plugin';
 import bsp_table_sort_plugin from           'base/plugins/bsp-table-sort-plugin';
+
 export default {};
