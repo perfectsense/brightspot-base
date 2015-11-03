@@ -29,10 +29,4 @@ import bsp_toggle_plugin from               'bsp-toggle-item-plugin';
 import base_scroll_checker from              'base/plugins/base-scroll-checker-plugin';
 
 
-/**
- * These files here are currently residing in base in the plugins folder for ease of development, until we get them
- * finalized and to a version 1.0 and put them in their own repos.
- */
-import bsp_table_sort_plugin from           'base/plugins/bsp-table-sort-plugin';
-
 export default {};
