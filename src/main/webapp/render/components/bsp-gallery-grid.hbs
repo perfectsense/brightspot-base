@@ -18,25 +18,35 @@
             <div class="bsp-gallery-grid {{#unless galleryGridThumbs}} hidden{{/unless}}">
                 <div class="bsp-row">
                     <div class="bsp-column-third">
-                        {{#with galleryGridThumbs.[0]}}
-                            {{render this}}
-                        {{/with}}
-                        {{#with galleryGridThumbs.[1]}}
-                            {{render this}}
-                        {{/with}}
+                        <div class="bsp-gallery-grid-thumb bsp-gallery-grid-thumb0">
+                            {{#with galleryGridThumbs.[0]}}
+                                {{render this}}
+                            {{/with}}
+                        </div>
+                        <div class="bsp-gallery-grid-thumb bsp-gallery-grid-thumb1">
+                            {{#with galleryGridThumbs.[1]}}
+                                {{render this}}
+                            {{/with}}
+                        </div>
                     </div>
                     <div class="bsp-column-third">
-                        {{#with galleryGridThumbs.[2]}}
-                            {{render this}}
-                        {{/with}}
+                        <div class="bsp-gallery-grid-thumb bsp-gallery-grid-thumb2">
+                            {{#with galleryGridThumbs.[2]}}
+                                {{render this}}
+                            {{/with}}
+                        </div>
                     </div>
                     <div class="bsp-column-third">
-                        {{#with galleryGridThumbs.[3]}}
-                            {{render this}}
-                        {{/with}}
-                        {{#with galleryGridThumbs.[4]}}
-                            {{render this}}
-                        {{/with}}
+                        <div class="bsp-gallery-grid-thumb bsp-gallery-grid-thumb1">
+                            {{#with galleryGridThumbs.[3]}}
+                                {{render this}}
+                            {{/with}}
+                        </div>
+                        <div class="bsp-gallery-grid-thumb bsp-gallery-grid-thumb1">
+                            {{#with galleryGridThumbs.[4]}}
+                                {{render this}}
+                            {{/with}}
+                        </div>
                     </div>
                 </div>
             </div>

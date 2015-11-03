@@ -20,6 +20,7 @@ import bsp_tabber_plugin from 'bsp-tabber-plugin';
 import bsp_toggle_plugin from 'bsp-toggle-item-plugin';
 import bsp_modal_plugin from './plugins/bsp-modal-plugin';
 import bsp_table_sort_plugin from './plugins/bsp-table-sort-plugin';
+import bsp_gallery_grid_plugin from 'plugins/bsp-gallery-grid-plugin';
 
 // need to find a neater method than compiling this in our production JS
 // TODO: we are moving to bsp-template for Node, so this will not be needed anymore

@@ -198,9 +198,19 @@
         },
         {
             "content" : {
+                "_dataUrl" : "/components/bsp-gallery-grid/gallery-low-res.json"
+            }
+        },
+        {
+            "content" : {
             	"_template" : "common/html",
 
             	"text": "<p>Talk of Jordan's bid for a Grand Slam captivated the golf world for weeks but ended on the 18th hole of The Open Championship. Jordan finished with a share of 4th at 14-under and is thirsty for the upcoming tournaments \"I'm hoping to kind of prove, coming off of this last major, that I've got a little bit of revenge that I need to get out, from having control of the Open Championship with two holes to go and not closing it out.\"</p>"
+            }
+        },
+        {
+            "content" : {
+                "_dataUrl" : "/components/bsp-gallery-grid/gallery-high-res.json"
             }
         },
         {

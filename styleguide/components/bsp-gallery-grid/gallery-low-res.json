@@ -44,7 +44,7 @@
 
                                     "attributes" : {
                                         "alt" : "Test Alt",
-                                        "src" : "/assets/images/gallery-test/personal-1.jpeg"
+                                        "src" : "/assets/images/gallery/personal-1.jpeg"
                                     }
                                 }
                             }
@@ -91,7 +91,7 @@
 
                                     "attributes" : {
                                         "alt" : "Test Alt",
-                                        "src" : "/assets/images/gallery-test/personal-2.jpeg"
+                                        "src" : "/assets/images/gallery/personal-2.jpeg"
                                     }
                                 }
                             }
@@ -138,7 +138,7 @@
 
                                     "attributes" : {
                                         "alt" : "Test Alt",
-                                        "src" : "/assets/images/gallery-test/personal-3.jpeg"
+                                        "src" : "/assets/images/gallery/personal-3.jpeg"
                                     }
                                 }
                             }
@@ -186,7 +186,7 @@
 
                                     "attributes" : {
                                         "alt" : "Test Alt",
-                                        "src" : "/assets/images/gallery-test/personal-4.jpeg"
+                                        "src" : "/assets/images/gallery/personal-4.jpeg"
                                     }
                                 }
                             }
@@ -233,7 +233,7 @@
 
                                     "attributes" : {
                                         "alt" : "Test Alt",
-                                        "src" : "/assets/images/super-promo/jordan-2.jpeg"
+                                        "src" : "/assets/images/gallery/personal-5.jpeg"
                                     }
                                 }
                             }
@@ -245,100 +245,6 @@
                             "name" : "text",
 
                            "description" : "Image 5"
-                        }
-                    ]
-                }
-            ]
-
-        },
-        {
-            "_template" : "components/bsp-list-promo",
-
-            "listItems" : [
-                {
-                    "imgAlign" : "top",
-
-                    "sections" : [
-                        {
-
-                            "_template" : "components/bsp-list-promo-item-handler",
-
-                            "name" : "image",
-
-                            "image" : {
-
-                                "_template" : "common/link",
-
-                                "attributes" : {
-                                    "href"  : "link",
-                                    "title" : "Link Title"
-                                },
-
-                                "body" : {
-
-                                    "_template" : "common/image",
-
-                                    "attributes" : {
-                                        "alt" : "Test Alt",
-                                        "src" : "/assets/images/super-promo/jordan-3.jpeg"
-                                    }
-                                }
-                            }
-                        },
-                        {
-
-                            "_template" : "components/bsp-list-promo-item-handler",
-
-                            "name" : "text",
-
-                            "description" : "Image 6"
-                        }
-                    ]
-                }
-            ]
-
-        },
-        {
-            "_template" : "components/bsp-list-promo",
-
-            "listItems" : [
-                {
-                    "imgAlign" : "top",
-
-                    "sections" : [
-                        {
-
-                            "_template" : "components/bsp-list-promo-item-handler",
-
-                            "name" : "image",
-
-                            "image" : {
-
-                                "_template" : "common/link",
-
-                                "attributes" : {
-                                    "href"  : "link",
-                                    "title" : "Link Title"
-                                },
-
-                                "body" : {
-
-                                    "_template" : "common/image",
-
-                                    "attributes" : {
-                                        "alt" : "Test Alt",
-                                        "src" : "/assets/images/super-promo/jordan-1.jpeg"
-                                    }
-                                }
-                            }
-                        },
-                        {
-
-                            "_template" : "components/bsp-list-promo-item-handler",
-
-                            "name" : "text",
-
-                            "description" : "Image 7"
                         }
                     ]
                 }
