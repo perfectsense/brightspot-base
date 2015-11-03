@@ -2,13 +2,13 @@
     background: @footer-background;
     padding: @space-double;
     min-height: 25px;
-    color: @white;
+    color: @color-white;
     text-align: center;
 
 	.component-title {
         &:extend(.ts-heading-1);
 
-        color: @white;
+        color: @color-white;
         padding: 0;
 	}
 
@@ -16,9 +16,10 @@
         margin: 0 0 @space-double 0;
 
  		a {
-            background: @social-icons-monochrome-color;
+            background: @color-social-icons-monochrome;
+
             &:before {
-                color: @brand-secondary;
+                color: @color-brand-secondary;
             }
  		}
  	}
