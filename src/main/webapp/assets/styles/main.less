@@ -11,20 +11,20 @@
 
 /**
 * Mixins
-* ---------------------------------------------------------------
+* ----------------------------------------------------------------------------
 * Leaving these in a separate folder for now. Will figure out if we move thes around
 * but either way they will be brought in and can be used throughout
 * Mixins are prefaced with the private _ so they stay out ouf our automated LESS documentation
-* ---------------------------------------------------------------
+* ----------------------------------------------------------------------------
 */
 @import (reference) "base/mixins/_mixins.less";
 
 
 /**
 * Globals, utilities, mixins, vars
-* ---------------------------------------------------------------
+* ----------------------------------------------------------------------------
 * Start off with the normalize reset and our scaffolding, then the rest of our globals. Each has their own documentation
-* ---------------------------------------------------------------
+* ----------------------------------------------------------------------------
 */
 @import "base/globals/normalize.less";
 @import "base/globals/scaffolding.less";
@@ -43,20 +43,20 @@
 
 /**
 * Bowered CSS.
-* ---------------------------------------------------------------
+* ----------------------------------------------------------------------------
 * This is for plugins that we bowered in that have their own CSS
-* ---------------------------------------------------------------
+* ----------------------------------------------------------------------------
 */
 @import (inline) "bower/bsp-carousel/bsp-carousel.css";
 @import (inline) "bower/bsp-modal/bsp-modal.css";
 
 /**
 * Elements
-* ---------------------------------------------------------------
+* ----------------------------------------------------------------------------
 * These are elements. Some of these correspond to DOM elements, others are small building blocks that components or parts of components can extend
 * The primary difference is that elements do not have a component class wrapper and they are primarily used inside components, meaning that very
 * rarely will you see an element just stand alone inside a page layout without being represented inside a component
-* ---------------------------------------------------------------
+* ----------------------------------------------------------------------------
 */
 @import "base/elements/buttons.less";
 @import "base/elements/icons.less";
@@ -71,10 +71,10 @@
 
 /**
 * Components
-* ---------------------------------------------------------------
+* ----------------------------------------------------------------------------
 * Components are synonymous with "modules" and are site components that are surrounded by a component wrapper in most cases. They can containe
 * other components and elements and have spacing relationships between each other (if wrapper is present)
-* ---------------------------------------------------------------
+* ----------------------------------------------------------------------------
 */
 @import "base/components/article.less";
 @import "base/components/blockquote.less";
