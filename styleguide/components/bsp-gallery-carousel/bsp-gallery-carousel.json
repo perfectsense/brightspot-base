@@ -1,0 +1,144 @@
+{
+    "_template" : "components/bsp-gallery-carousel",
+
+    "options" : {
+        "modifierClass" : "bsp-partner-carousel",
+        "slidesToShow" : "7",
+        "slidesToShowMobileLand" : "5",
+        "slidesToShowMobile" : "4"
+    },
+
+    "galleryTitle" : "Jordan's Partners",
+
+    "galleryDescription" : "Bacon ipsum dolor amet salami swine sirloin rump, tri-tip shoulder shank pancetta turkey fatback beef tail drumstick spare ribs.",
+
+    "gallerySlides" : [
+        {
+            "_template" : "common/link",
+
+             "attributes" : {
+                "href"  : "link",
+                "title" : "Link Title"
+            },
+
+            "body" : {
+
+                "_template" : "common/image",
+
+                "attributes" : {
+                    "alt" : "Test Alt",
+                    "src" : "/assets/images/partner-carousel/spons-1.png"
+                }
+            }
+        },
+        {
+            "_template" : "common/link",
+
+             "attributes" : {
+                "href"  : "link",
+                "title" : "Link Title"
+            },
+
+            "body" : {
+
+                "_template" : "common/image",
+
+                "attributes" : {
+                    "alt" : "Test Alt",
+                    "src" : "/assets/images/partner-carousel/spons-2.png"
+                }
+            }
+        },
+        {
+            "_template" : "common/link",
+
+             "attributes" : {
+                "href"  : "link",
+                "title" : "Link Title"
+            },
+
+            "body" : {
+
+                "_template" : "common/image",
+
+                "attributes" : {
+                    "alt" : "Test Alt",
+                    "src" : "/assets/images/partner-carousel/spons-3.png"
+                }
+            }
+        },
+        {
+            "_template" : "common/link",
+
+             "attributes" : {
+                "href"  : "link",
+                "title" : "Link Title"
+            },
+
+            "body" : {
+
+                "_template" : "common/image",
+
+                "attributes" : {
+                    "alt" : "Test Alt",
+                    "src" : "/assets/images/partner-carousel/spons-4.png"
+                }
+            }
+        },
+        {
+            "_template" : "common/link",
+
+             "attributes" : {
+                "href"  : "link",
+                "title" : "Link Title"
+            },
+
+            "body" : {
+
+                "_template" : "common/image",
+
+                "attributes" : {
+                    "alt" : "Test Alt",
+                    "src" : "/assets/images/partner-carousel/spons-5.png"
+                }
+            }
+        },
+        {
+            "_template" : "common/link",
+
+             "attributes" : {
+                "href"  : "link",
+                "title" : "Link Title"
+            },
+
+            "body" : {
+
+                "_template" : "common/image",
+
+                "attributes" : {
+                    "alt" : "Test Alt",
+                    "src" : "/assets/images/partner-carousel/spons-6.png"
+                }
+            }
+        },
+        {
+            "_template" : "common/link",
+
+             "attributes" : {
+                "href"  : "link",
+                "title" : "Link Title"
+            },
+
+            "body" : {
+
+                "_template" : "common/image",
+
+                "attributes" : {
+                    "alt" : "Test Alt",
+                    "src" : "/assets/images/partner-carousel/spons-7.png"
+                }
+            }
+        }
+    ]
+
+}

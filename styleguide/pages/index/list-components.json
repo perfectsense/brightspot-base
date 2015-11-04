@@ -458,6 +458,21 @@
                     "text"  : "BSP Gallery Grid"
                 }
             }
+        },
+        {
+            "_template" : "components/bsp-list-promo-item-handler",
+
+            "link": {
+                "_template" : "common/link",
+
+                "attributes" : {
+                    "href"  : "/components/bsp-gallery-carousel"
+                },
+                "body" : {
+                    "_template" : "common/text",
+                    "text"  : "BSP Gallery Carousel"
+                }
+            }
         }
 	]
 }
