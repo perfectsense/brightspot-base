@@ -1,4 +1,5 @@
 @bsp-embedded-gallery-grid-height: 410px;
+@bsp-embedded-gallery-grid-height-mobile: 175px;
 @bsp-embedded-gallery-height: 495px;
 
 .bsp-gallery-grid-show {
@@ -36,7 +37,11 @@
         }
 
         .bsp-component-content {
-            height: @bsp-embedded-gallery-grid-height;
+            height: @bsp-embedded-gallery-grid-height-mobile;
+
+            @media @mq-sm {
+                height: @bsp-embedded-gallery-grid-height;
+            }
         }
     }
 
@@ -103,6 +108,9 @@
     }
 
     .bsp-column-third {
+        //keep formatting for mobile
+        float: left;
+        width: 33.333%;
         padding-left: 2px;
         padding-right: 2px;
     }
