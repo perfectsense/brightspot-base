@@ -1,0 +1,338 @@
+{
+    "_template": "components/bsp-gallery-fullscreen",
+
+    "options": {
+        "galleryThumbnails" : true,
+
+        "deepLinking" : true,
+
+        "_notes" : "URL to deep link an image would look like: http://www.jordanspieth.com/gallery1?id=slide3, where slide3 is assigned by slideId on each slide",
+        "deepLinkingQueryParam" : "id"
+    },
+
+    "galleryTitle": "Full screen gallery Title",
+
+    "gallerySlides": [
+
+        {
+
+            "_template" : "components/bsp-gallery-fullscreen-slide",
+
+            "slideId" : "slide1",
+
+            "image" : {
+                "_template": "common/image",
+
+                "attributes": {
+                    "src": "http://placehold.it/1590x894"
+                }
+            },
+
+            "caption" : [
+                {
+                    "_template" : "common/text",
+
+                    "text" : "Biltong pig landjaeger tail jowl sirloin drumstick rump pastrami. Filet mignon salami drumstick alcatra pork belly capicola chuck ham hock pork chop tri-tip sirloin."
+                }
+            ],
+
+
+            "thumbnail": {
+                "_template": "common/image",
+
+                "attributes": {
+                    "src": "/assets/images/60x60.png"
+                }
+            }
+        },
+        {
+
+            "_template" : "components/bsp-gallery-fullscreen-slide",
+
+            "slideId" : "slide2",
+
+            "image" : {
+                "_template": "common/image",
+
+                "attributes": {
+                    "src": "http://placehold.it/400x894"
+                }
+            },
+
+            "caption" : [
+                {
+                    "_template" : "common/text",
+
+                    "text" : "Filet mignon salami drumstick alcatra pork belly capicola chuck ham hock pork chop tri-tip sirloin."
+                }
+            ],
+
+
+            "thumbnail": {
+                "_template": "common/image",
+
+                "attributes": {
+                    "src": "/assets/images/60x60.png"
+                }
+            }
+        },
+        {
+
+            "_template" : "components/bsp-gallery-fullscreen-slide",
+
+            "slideId" : "slide3",
+
+            "image" : {
+                "_template": "common/image",
+
+                "attributes": {
+                    "src": "http://placehold.it/1590x894"
+                }
+            },
+
+            "caption" : [
+                {
+                    "_template" : "common/text",
+
+                    "text" : "Kielbasa beef ribs jerky, ham leberkas bacon tongue boudin sirloin jowl tail capicola."
+                }
+            ],
+
+
+            "thumbnail": {
+                "_template": "common/image",
+
+                "attributes": {
+                    "src": "/assets/images/60x60.png"
+                }
+            }
+        },
+        {
+
+            "_template" : "components/bsp-gallery-fullscreen-slide",
+
+            "slideId" : "slide4",
+
+            "image" : {
+                "_template": "common/image",
+
+                "attributes": {
+                    "src": "http://placehold.it/1590x894"
+                }
+            },
+
+            "caption" : [
+                {
+                    "_template" : "common/text",
+
+                    "text" : "Salami porchetta pig, drumstick hamburger prosciutto turducken meatloaf capicola ribeye jerky short loin biltong."
+                }
+            ],
+
+
+            "thumbnail": {
+                "_template": "common/image",
+
+                "attributes": {
+                    "src": "/assets/images/60x60.png"
+                }
+            }
+        },
+        {
+
+            "_template" : "components/bsp-gallery-fullscreen-slide",
+
+            "slideId" : "slide5",
+
+            "image" : {
+                "_template": "common/image",
+
+                "attributes": {
+                    "src": "http://placehold.it/1590x894"
+                }
+            },
+
+            "caption" : [
+                {
+                    "_template" : "common/text",
+
+                    "text" : "Salami porchetta pig, drumstick hamburger prosciutto turducken meatloaf capicola ribeye jerky short loin biltong."
+                }
+            ],
+
+
+            "thumbnail": {
+                "_template": "common/image",
+
+                "attributes": {
+                    "src": "/assets/images/60x60.png"
+                }
+            }
+        },
+        {
+
+            "_template" : "components/bsp-gallery-fullscreen-slide",
+
+            "slideId" : "slide6",
+
+            "image" : {
+                "_template": "common/image",
+
+                "attributes": {
+                    "src": "http://placehold.it/1590x894"
+                }
+            },
+
+            "caption" : [
+                {
+                    "_template" : "common/text",
+
+                    "text" : "Salami porchetta pig, drumstick hamburger prosciutto turducken meatloaf capicola ribeye jerky short loin biltong."
+                }
+            ],
+
+
+            "thumbnail": {
+                "_template": "common/image",
+
+                "attributes": {
+                    "src": "/assets/images/60x60.png"
+                }
+            }
+        },
+        {
+
+            "_template" : "components/bsp-gallery-fullscreen-slide",
+
+            "slideId" : "slide7",
+
+            "image" : {
+                "_template": "common/image",
+
+                "attributes": {
+                    "src": "http://placehold.it/1590x894"
+                }
+            },
+
+            "caption" : [
+                {
+                    "_template" : "common/text",
+
+                    "text" : "Salami porchetta pig, drumstick hamburger prosciutto turducken meatloaf capicola ribeye jerky short loin biltong."
+                }
+            ],
+
+
+            "thumbnail": {
+                "_template": "common/image",
+
+                "attributes": {
+                    "src": "/assets/images/60x60.png"
+                }
+            }
+        },
+        {
+
+            "_template" : "components/bsp-gallery-fullscreen-slide",
+
+            "slideId" : "slide8",
+
+            "image" : {
+                "_template": "common/image",
+
+                "attributes": {
+                    "src": "http://placehold.it/1590x894"
+                }
+            },
+
+            "caption" : [
+                {
+                    "_template" : "common/text",
+
+                    "text" : "Salami porchetta pig, drumstick hamburger prosciutto turducken meatloaf capicola ribeye jerky short loin biltong."
+                }
+            ],
+
+
+            "thumbnail": {
+                "_template": "common/image",
+
+                "attributes": {
+                    "src": "/assets/images/60x60.png"
+                }
+            }
+        },
+        {
+
+            "_template" : "components/bsp-gallery-fullscreen-slide",
+
+            "slideId" : "slide9",
+
+            "image" : {
+                "_template": "common/image",
+
+                "attributes": {
+                    "src": "http://placehold.it/1590x894"
+                }
+            },
+
+            "caption" : [
+                {
+                    "_template" : "common/text",
+
+                    "text" : "Salami porchetta pig, drumstick hamburger prosciutto turducken meatloaf capicola ribeye jerky short loin biltong."
+                }
+            ],
+
+
+            "thumbnail": {
+                "_template": "common/image",
+
+                "attributes": {
+                    "src": "/assets/images/60x60.png"
+                }
+            }
+        },
+        {
+
+            "_template" : "components/bsp-gallery-fullscreen-slide",
+
+            "slideId" : "slide10",
+
+            "image" : {
+                "_template": "common/image",
+
+                "attributes": {
+                    "src": "http://placehold.it/1590x894"
+                }
+            },
+
+            "caption" : [
+                {
+                    "_template" : "common/text",
+
+                    "text" : "Salami porchetta pig, drumstick hamburger prosciutto turducken meatloaf capicola ribeye jerky short loin biltong."
+                }
+            ],
+
+
+            "thumbnail": {
+                "_template": "common/image",
+
+                "attributes": {
+                    "src": "/assets/images/60x60.png"
+                }
+            }
+        }
+    ],
+
+    "tagsTitle" : {
+        "_template" : "common/text",
+
+        "text" : "Related"
+    },
+
+    "sharing" : {
+        "_dataUrl" : "/components/bsp-social-share/share.json"
+    }
+}

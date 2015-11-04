@@ -1,0 +1,86 @@
+.bsp-carousel-gallery {
+
+    .bsp-carousel-stage {
+
+        .slick-track {
+            display: flex;
+              align-items: center;
+              justify-content: center;
+        }
+
+        .bsp-carousel-slide {
+            // friendly for portrait and landscape images
+            img {
+                height: auto;
+                margin: 0 auto;
+                width: auto;
+
+                @media @mq-only-xs {
+                    max-height: 350px
+                }
+                @media @mq-only-sm {
+                    max-height: 400px
+                }
+                @media @mq-only-md {
+                    max-height: 525px
+                }
+                @media @mq-only-lg {
+                    max-height: 635px
+                }
+                // full screen gallery gets a custom media query
+                @media only screen and (min-width: 1400px) {
+                    max-height: 894px
+                }
+            }
+
+            a {
+                color: @brand-accent;
+            }
+
+        }
+    }
+}
+
+.bsp-partner-carousel {
+    .clearfix;
+
+    .bsp-component-title {
+        line-height: 1;
+    }
+
+    .bsp-component-desc {
+        font-size: @ts-neg-2;
+        line-height: 1.4;
+        text-align: center;
+
+        @media @mq-sm {
+            font-size: @ts-0;
+        }
+
+    }
+
+    .bsp-component-content {
+        border-top: @border-style-5;
+        margin-top: @space-double;
+    }
+
+    .bsp-carousel .slick-next {
+        right: 0;
+    }
+
+    .bsp-carousel .slick-prev {
+        left: 0;
+    }
+
+    .slick-prev, .slick-next {
+        &::before {
+            color: @brand-primary;
+        }
+    }
+    // override height 100% coming from base
+    // slick css
+    .slick-slide {
+        height: auto;
+    }
+}
+
