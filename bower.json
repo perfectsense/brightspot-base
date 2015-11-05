@@ -27,5 +27,21 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "brightspot-grunt-files": {
+    "fontawesome": [
+      {
+        "src": "less/*",
+        "dest": "../styles/bower/fontawesome",
+        "expand": true,
+        "flatten": true
+      },
+      {
+        "src": "fonts/*",
+        "dest": "../fonts",
+        "expand": true,
+        "flatten": true
+      }
+    ]
+  }
 }
