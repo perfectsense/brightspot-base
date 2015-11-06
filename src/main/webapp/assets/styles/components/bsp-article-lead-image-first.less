@@ -173,66 +173,73 @@
         }
     }
 
+    // tablets get a bit more spacing
     @media @mq-sm {
 
         .bsp-article-title {
+            padding-left: @space-double;
+        }
+
+        .bsp-article-subtitle {
+            padding-left: @space-double;
+         }
+
+         .bsp-article-content,
+         .bsp-share-links-wrapper,
+         .bsp-meta-data,
+         .bsp-tags,
+         .bsp-component-cta {
+            margin-left: @space-double;
+            margin-right: @space-double;
+         }
+
+    }
+
+    // desktop let the grid determine the left and right paddings, and we center align some things
+    @media @mq-md {
+
+        .bsp-article-title {
+            margin-left: 0;
+            padding-left: 0;
             text-align: left;
         }
 
         .bsp-article-title-image {
             float: left;
+            margin-left: 0;
+        }
+
+        .bsp-article-subtitle {
+            padding-left: 0;
         }
 
         .bsp-share-links-wrapper {
             display: block;
-            margin: @space-double @space @space-triple;
+            margin: @space-double auto @space-triple auto;
             max-width: 800px;
+        }
+
+        .bsp-share-links {
+            padding-left: 0;
         }
 
         .bsp-meta-data {
             max-width: 800px;
-            margin: 0 @space;
+            margin: 0 auto;
         }
 
 
         .bsp-article-content {
             border-top: @border-style-5;
-            margin: 0 @space;
+            margin: 0 auto;
             max-width: 800px;
             padding-top: @space-triple;
         }
 
         .bsp-component-cta {
-            margin: 0 @space;
+            margin: 0 auto;
             max-width: 800px;
         }
 
-    }
-
-    @media @mq-md {
-        .bsp-article-title {
-            padding-left: 0;
-        }
-        .bsp-article-title-image {
-            margin-left: 0;
-        }
-        .bsp-article-subtitle {
-            padding-left: 0;
-        }
-        .bsp-meta-data {
-            margin: 0 auto;
-        }
-        .bsp-share-links-wrapper {
-            margin: @space-double auto @space-triple;
-        }
-        .bsp-share-links {
-            padding-left: 0;
-        }
-        .bsp-article-content {
-            margin: 0 auto;
-        }
-        .bsp-component-cta {
-            margin: 0 auto;
-        }
     }
 }
