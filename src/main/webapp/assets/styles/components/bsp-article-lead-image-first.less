@@ -185,25 +185,25 @@
 
         .bsp-share-links-wrapper {
             display: block;
-            margin: @space-double auto @space-triple auto;
+            margin: @space-double @space @space-triple;
             max-width: 800px;
         }
 
         .bsp-meta-data {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 @space;
         }
 
 
         .bsp-article-content {
             border-top: @border-style-5;
-            margin: 0 auto;
+            margin: 0 @space;
             max-width: 800px;
             padding-top: @space-triple;
         }
 
         .bsp-component-cta {
-            margin: 0 auto;
+            margin: 0 @space;
             max-width: 800px;
         }
 
@@ -219,8 +219,20 @@
         .bsp-article-subtitle {
             padding-left: 0;
         }
+        .bsp-meta-data {
+            margin: 0 auto;
+        }
+        .bsp-share-links-wrapper {
+            margin: @space-double auto @space-triple;
+        }
         .bsp-share-links {
             padding-left: 0;
+        }
+        .bsp-article-content {
+            margin: 0 auto;
+        }
+        .bsp-component-cta {
+            margin: 0 auto;
         }
     }
 }
