@@ -20,12 +20,15 @@
 
         a {
             .type-scale(-2, @lh: 1.3);
-            background: @brand-accent;
+            background: transparent;
             letter-spacing: 1px;
+            border: @border-style-10;
             color: @white;
             padding: @space @space-triple;
 
             &:hover {
+                background: @brand-accent;
+                border: 1px solid @brand-accent;
                 color: @black;
             }
 
