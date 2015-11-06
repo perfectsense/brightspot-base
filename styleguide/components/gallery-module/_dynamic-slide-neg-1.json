@@ -1,11 +1,17 @@
 {
-  "_template": "/assets/templates/base/components/gallery-module-slide-content",
-  "content": {
-    "_template": "/assets/templates/base/common/image",
-    "attributes": {
-      "_template": "/assets/templates/base/common/attributes",
-      "src": "{{image(1200, 400)}}",
-      "title": "slide-neg-1"
+  "_template": "/assets/templates/base/common/page",
+  "body": {
+    "_template": "/assets/templates/base/common/body-embed",
+    "content": {
+      "_template": "/assets/templates/base/components/gallery-module-slide-content",
+      "content": {
+        "_template": "/assets/templates/base/common/image",
+        "attributes": {
+          "_template": "/assets/templates/base/common/attributes",
+          "src": "{{image(1200, 400)}}",
+          "title": "slide-neg-1"
+        }
+      }
     }
   }
 }

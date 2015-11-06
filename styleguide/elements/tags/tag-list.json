@@ -1,21 +1,27 @@
 {
-  "_template": "/assets/templates/base/elements/tags",
-  "title": {
-    "_template": "/assets/templates/base/common/text",
-    "text": "Related Tags:"
-  },
-  "tagList": [
-    {
-      "_template": "/assets/templates/base/common/link",
-      "_repeat": [
-        3,
-        10
-      ],
-      "body": "{{words([ 1, 2 ])}}",
-      "attributes": {
-        "_template": "/assets/templates/base/common/attributes",
-        "href": "#"
-      }
+  "_template": "/assets/templates/base/common/page",
+  "body": {
+    "_template": "/assets/templates/base/common/body-embed",
+    "content": {
+      "_template": "/assets/templates/base/elements/tags",
+      "title": {
+        "_template": "/assets/templates/base/common/text",
+        "text": "Related Tags:"
+      },
+      "tagList": [
+        {
+          "_template": "/assets/templates/base/common/link",
+          "_repeat": [
+            3,
+            10
+          ],
+          "body": "{{words([ 1, 2 ])}}",
+          "attributes": {
+            "_template": "/assets/templates/base/common/attributes",
+            "href": "#"
+          }
+        }
+      ]
     }
-  ]
+  }
 }

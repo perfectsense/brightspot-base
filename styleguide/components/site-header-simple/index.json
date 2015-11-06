@@ -1,94 +1,100 @@
 {
-  "_template": "/assets/templates/base/components/site-header-simple",
-  "siteName": "Brightspot Base Styleguide",
-  "siteLogo": {
-    "_template": "/assets/templates/base/common/link",
-    "attributes": {
-      "href": "/",
-      "title": "Brightspot Base Styleguide",
-      "_template": "/assets/templates/base/common/attributes"
-    },
-    "body": {
-      "_template": "/assets/templates/base/common/image",
-      "attributes": {
-        "alt": "Brightspot",
-        "src": "/assets/logo-site.png",
-        "_template": "/assets/templates/base/common/attributes"
-      }
+  "_template": "/assets/templates/base/common/page",
+  "body": {
+    "_template": "/assets/templates/base/common/body-embed",
+    "content": {
+      "_template": "/assets/templates/base/components/site-header-simple",
+      "siteName": "Brightspot Base Styleguide",
+      "siteLogo": {
+        "_template": "/assets/templates/base/common/link",
+        "attributes": {
+          "href": "/",
+          "title": "Brightspot Base Styleguide",
+          "_template": "/assets/templates/base/common/attributes"
+        },
+        "body": {
+          "_template": "/assets/templates/base/common/image",
+          "attributes": {
+            "alt": "Brightspot",
+            "src": "/assets/logo-site.png",
+            "_template": "/assets/templates/base/common/attributes"
+          }
+        }
+      },
+      "navLinks": [
+        {
+          "_template": "/assets/templates/base/common/link",
+          "attributes": {
+            "href": "link-me",
+            "title": "I are a link",
+            "_template": "/assets/templates/base/common/attributes"
+          },
+          "body": {
+            "_template": "/assets/templates/base/common/text",
+            "text": "Link test text"
+          }
+        },
+        {
+          "_template": "/assets/templates/base/common/link",
+          "attributes": {
+            "href": "link-me",
+            "title": "I are a link",
+            "_template": "/assets/templates/base/common/attributes"
+          },
+          "body": {
+            "_template": "/assets/templates/base/common/text",
+            "text": "Link test text"
+          }
+        },
+        {
+          "_template": "/assets/templates/base/common/link",
+          "attributes": {
+            "href": "link-me",
+            "title": "I are a link",
+            "_template": "/assets/templates/base/common/attributes"
+          },
+          "body": {
+            "_template": "/assets/templates/base/common/text",
+            "text": "Link test text"
+          }
+        },
+        {
+          "_template": "/assets/templates/base/common/link",
+          "attributes": {
+            "href": "link-me",
+            "title": "I are a link",
+            "_template": "/assets/templates/base/common/attributes"
+          },
+          "body": {
+            "_template": "/assets/templates/base/common/text",
+            "text": "Link test text"
+          }
+        },
+        {
+          "_template": "/assets/templates/base/common/link",
+          "attributes": {
+            "href": "link-me",
+            "title": "I are a link",
+            "_template": "/assets/templates/base/common/attributes"
+          },
+          "body": {
+            "_template": "/assets/templates/base/common/text",
+            "text": "Link test text"
+          }
+        },
+        {
+          "_template": "/assets/templates/base/common/link",
+          "attributes": {
+            "href": "link-me",
+            "title": "I are a link",
+            "_template": "/assets/templates/base/common/attributes"
+          },
+          "body": {
+            "_template": "/assets/templates/base/common/text",
+            "text": "Link test text"
+          }
+        }
+      ]
     }
-  },
-  "navLinks": [
-    {
-      "_template": "/assets/templates/base/common/link",
-      "attributes": {
-        "href": "link-me",
-        "title": "I are a link",
-        "_template": "/assets/templates/base/common/attributes"
-      },
-      "body": {
-        "_template": "/assets/templates/base/common/text",
-        "text": "Link test text"
-      }
-    },
-    {
-      "_template": "/assets/templates/base/common/link",
-      "attributes": {
-        "href": "link-me",
-        "title": "I are a link",
-        "_template": "/assets/templates/base/common/attributes"
-      },
-      "body": {
-        "_template": "/assets/templates/base/common/text",
-        "text": "Link test text"
-      }
-    },
-    {
-      "_template": "/assets/templates/base/common/link",
-      "attributes": {
-        "href": "link-me",
-        "title": "I are a link",
-        "_template": "/assets/templates/base/common/attributes"
-      },
-      "body": {
-        "_template": "/assets/templates/base/common/text",
-        "text": "Link test text"
-      }
-    },
-    {
-      "_template": "/assets/templates/base/common/link",
-      "attributes": {
-        "href": "link-me",
-        "title": "I are a link",
-        "_template": "/assets/templates/base/common/attributes"
-      },
-      "body": {
-        "_template": "/assets/templates/base/common/text",
-        "text": "Link test text"
-      }
-    },
-    {
-      "_template": "/assets/templates/base/common/link",
-      "attributes": {
-        "href": "link-me",
-        "title": "I are a link",
-        "_template": "/assets/templates/base/common/attributes"
-      },
-      "body": {
-        "_template": "/assets/templates/base/common/text",
-        "text": "Link test text"
-      }
-    },
-    {
-      "_template": "/assets/templates/base/common/link",
-      "attributes": {
-        "href": "link-me",
-        "title": "I are a link",
-        "_template": "/assets/templates/base/common/attributes"
-      },
-      "body": {
-        "_template": "/assets/templates/base/common/text",
-        "text": "Link test text"
-      }
-    }
-  ]
+  }
 }
