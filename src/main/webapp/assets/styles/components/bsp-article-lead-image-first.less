@@ -176,28 +176,17 @@
     @media @mq-sm {
 
         .bsp-article-title {
-            margin-left: 0;
-            padding-left: 0;
             text-align: left;
         }
 
         .bsp-article-title-image {
             float: left;
-            margin-left: 0;
-        }
-
-        .bsp-article-subtitle {
-            padding-left: 0;
         }
 
         .bsp-share-links-wrapper {
             display: block;
             margin: @space-double auto @space-triple auto;
             max-width: 800px;
-        }
-
-        .bsp-share-links {
-            padding-left: 0;
         }
 
         .bsp-meta-data {
@@ -218,5 +207,20 @@
             max-width: 800px;
         }
 
+    }
+
+    @media @mq-md {
+        .bsp-article-title {
+            padding-left: 0;
+        }
+        .bsp-article-title-image {
+            margin-left: 0;
+        }
+        .bsp-article-subtitle {
+            padding-left: 0;
+        }
+        .bsp-share-links {
+            padding-left: 0;
+        }
     }
 }
