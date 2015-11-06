@@ -12,9 +12,9 @@
 
 // fixed positioning offset if applicable
 body {
-	& when (@header-positioning = fixed) {
-    	padding-top: @header-tophat-height + (@header-height);
-    }
+	// & when (@header-positioning = fixed) {
+    //	padding-top: @header-tophat-height + (@header-height);
+    //}
 
     // when we are a page that is rendererd inside the styleguide, remove the padding
     &.sg-body {
@@ -236,7 +236,8 @@ body.column-fixed-toggle-in {
 		left: auto;
 		margin-top: @site-top-and-bottom-space;
         padding: 0;
-		top: @header-tophat-height + @header-height;
+		// top: @header-tophat-height + @header-height;
+		top: @header-height;
 		// hardcoded width, as it needs to be as it's fixed positioning
 		width: 240px;
         z-index: @z-index-base;
