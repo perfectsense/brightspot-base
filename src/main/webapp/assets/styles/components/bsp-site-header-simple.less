@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
     height: @header-simple-height;
-    padding: 0 @space-quad;
+    padding: 0 @space-double;
     width: 100%;
 
     @media @mq-lg {
@@ -140,7 +140,7 @@
     &:extend(.ts-2);
 
     margin: 0;
-    padding: 0 @space-double;
+    padding: 0;
     position: relative;
 
     a {
@@ -169,6 +169,10 @@
 
 // additional styles for non mobile view
 @media @header-mobile-breakpoint {
+
+    .bsp-site-header-simple {
+        padding: 0 @space-quad;
+    }
 
     // hide mobile display trigger
     .bsp-site-menu-trigger-simple {
