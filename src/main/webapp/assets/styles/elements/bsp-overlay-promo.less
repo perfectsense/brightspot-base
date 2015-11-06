@@ -2,9 +2,9 @@
 
 .bsp-overlay-promo () {
 
-    background: rgba(0, 0, 0, 0);
+    background: rgba(255, 255, 255, 0);
 
-    .type-scale(-1, @lh: 1.8);
+    .type-scale(0, @lh: 1.8);
     align-items: center;
     display: flex;
     height: 100%;
@@ -16,7 +16,7 @@
     width: 100%;
 
     .overlay-desc {
-        color: @white;
+        color: @text-color;
         margin: 0 0 @space-quarter 0;
     }
 
@@ -37,7 +37,7 @@
     }
 
     @media @mq-sm {
-        background: rgba(0,0,0, 0.7);
+        background: rgba(255, 255, 255, 0.7);
 
         .overlay-desc, .overlay-cta-text {
             display: block;
