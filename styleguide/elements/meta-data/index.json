@@ -1,15 +1,16 @@
 {
-  "_template": "elements/meta-data",
-
+  "_template": "/assets/templates/base/elements/meta-data",
   "publishDate": "05 Apr 2015",
-
   "authors": [
     {
-      "_template": "common/link",
-      "_repeat": [ 1, 5 ],
+      "_template": "/assets/templates/base/common/link",
+      "_repeat": [
+        1,
+        5
+      ],
       "body": "{{name}}",
       "attributes": {
-        "_template": "common/attributes",
+        "_template": "/assets/templates/base/common/attributes",
         "href": "#",
         "title": "{{name}}"
       }

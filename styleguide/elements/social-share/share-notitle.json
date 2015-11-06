@@ -1,5 +1,5 @@
 {
-  "_template": "elements/social-share",
+  "_template": "/assets/templates/base/elements/social-share",
   "title": "Brightspot",
   "description": "A user experience platform, designed and developed to power large scale, highly dynamic, editorially rich and visually stunning experiences.",
   "facebookId": 12345,

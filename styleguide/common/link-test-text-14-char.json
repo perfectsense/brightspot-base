@@ -1,12 +1,12 @@
 {
-  "_template": "common/link",
+  "_template": "/assets/templates/base/common/link",
   "attributes": {
     "href": "link-me",
     "title": "I are a link",
-    "_template": "common/attributes"
+    "_template": "/assets/templates/base/common/attributes"
   },
   "body": {
-    "_template": "common/text",
+    "_template": "/assets/templates/base/common/text",
     "text": "Link test text"
   }
 }

@@ -1,12 +1,11 @@
 {
-    "_template": "components/gallery-module-slide-content",
-
-    "content": {
-        "_template": "common/image",
-        "attributes": {
-            "_template": "common/attributes",
-            "src": "{{image(1200, 400)}}",
-            "title": "slide-1"
-        }
+  "_template": "/assets/templates/base/components/gallery-module-slide-content",
+  "content": {
+    "_template": "/assets/templates/base/common/image",
+    "attributes": {
+      "_template": "/assets/templates/base/common/attributes",
+      "src": "{{image(1200, 400)}}",
+      "title": "slide-1"
     }
+  }
 }

@@ -1,16 +1,19 @@
 {
-  "_template": "elements/tags",
+  "_template": "/assets/templates/base/elements/tags",
   "title": {
-    "_template": "common/text",
+    "_template": "/assets/templates/base/common/text",
     "text": "Related Tags:"
   },
   "tagList": [
     {
-      "_template": "common/link",
-      "_repeat": [ 3, 10 ],
+      "_template": "/assets/templates/base/common/link",
+      "_repeat": [
+        3,
+        10
+      ],
       "body": "{{words([ 1, 2 ])}}",
       "attributes": {
-        "_template": "common/attributes",
+        "_template": "/assets/templates/base/common/attributes",
         "href": "#"
       }
     }

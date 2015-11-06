@@ -1,174 +1,155 @@
 {
-  "_template": "components/article",
-
+  "_template": "/assets/templates/base/components/article",
   "sharing": {
     "_dataUrl": "/elements/social-share/share-monochrome.json"
   },
-
   "permalink": "/bsp-article/",
-
   "title": "{{words}}",
-
   "subTitle": "{{words}}",
-
   "metaData": {
-    "_template": "elements/meta-data",
-
+    "_template": "/assets/templates/base/elements/meta-data",
     "publishDate": "05 Apr 2015",
-
     "authors": [
       {
-        "_template": "common/link",
-        "_repeat": [ 1, 5 ],
+        "_template": "/assets/templates/base/common/link",
+        "_repeat": [
+          1,
+          5
+        ],
         "body": "{{name}}",
         "attributes": {
-          "_template": "common/attributes",
+          "_template": "/assets/templates/base/common/attributes",
           "href": "#",
           "title": "{{name}}"
         }
       }
     ]
   },
-
   "tags": {
     "_dataUrl": "/elements/tags/tag-list-no-title.json"
   },
-
   "lead": {
-    "_template": "common/figure",
+    "_template": "/assets/templates/base/common/figure",
     "credit": "{{name}}",
     "caption": {
-      "_template": "common/text",
+      "_template": "/assets/templates/base/common/text",
       "text": "{{words}}"
     },
     "image": {
-      "_template": "common/image",
+      "_template": "/assets/templates/base/common/image",
       "attributes": {
-        "_template": "common/attributes",
+        "_template": "/assets/templates/base/common/attributes",
         "src": "{{image(800, 450)}}"
       }
     }
   },
-
   "articleBody": [
     {
-      "_template": "common/html",
+      "_template": "/assets/templates/base/common/html",
       "text": "{{paragraphs}}"
     },
     {
-        "_template": "components/article-enhancement",
-
-        "content" : {
-            "_template" : "common/link",
-
-            "cssClass" : "related-link",
-
-            "attributes" : {
-                "_template" : "common/attributes",
-                "href" : "#"
-            },
-
-            "body": {
-                "_template" : "common/text",
-
-                "text" : "I am a related link as a separate paragraph (via CSS) inside the body of an article as an enhancement"
-            }
-        }
-    },
-    {
-      "_template": "common/html",
-      "text": "{{paragraphs}}"
-    },
-    {
-      "_template": "components/article-enhancement",
+      "_template": "/assets/templates/base/components/article-enhancement",
       "content": {
-        "_template": "components/blockquote",
+        "_template": "/assets/templates/base/common/link",
+        "cssClass": "related-link",
+        "attributes": {
+          "_template": "/assets/templates/base/common/attributes",
+          "href": "#"
+        },
+        "body": {
+          "_template": "/assets/templates/base/common/text",
+          "text": "I am a related link as a separate paragraph (via CSS) inside the body of an article as an enhancement"
+        }
+      }
+    },
+    {
+      "_template": "/assets/templates/base/common/html",
+      "text": "{{paragraphs}}"
+    },
+    {
+      "_template": "/assets/templates/base/components/article-enhancement",
+      "content": {
+        "_template": "/assets/templates/base/components/blockquote",
         "author": "{{name}}",
         "content": "{{sentences}}"
       }
     },
     {
-      "_template": "common/html",
+      "_template": "/assets/templates/base/common/html",
       "text": "{{paragraphs}}"
     },
     {
-        "_template": "components/article-enhancement",
-
-        "content" : {
-
-            "_template": "components/gallery-module-with-nav",
-
-            "thumbnailsToShow": "4",
-
-            "galleryTitle": {
-            "_template": "common/text",
-            "text": "5 slides with thumbs"
-            },
-
-            "gallerySlides": [
-                {
-                    "_template": "common/image",
-                    "_repeat": 8,
-                    "attributes": {
-                        "_template": "common/attributes",
-                        "src": "{{image(1200, 600)}}"
-                    }
-                }
-            ],
-
-            "galleryNavItems": [
-                {
-                    "_template": "common/image",
-                    "_repeat": 8,
-                    "attributes": {
-                        "_template": "common/attributes",
-                        "src": "{{image(250, 150)}}"
-                    }
-                }
-            ]
-        }
+      "_template": "/assets/templates/base/components/article-enhancement",
+      "content": {
+        "_template": "/assets/templates/base/components/gallery-module-with-nav",
+        "thumbnailsToShow": "4",
+        "galleryTitle": {
+          "_template": "/assets/templates/base/common/text",
+          "text": "5 slides with thumbs"
+        },
+        "gallerySlides": [
+          {
+            "_template": "/assets/templates/base/common/image",
+            "_repeat": 8,
+            "attributes": {
+              "_template": "/assets/templates/base/common/attributes",
+              "src": "{{image(1200, 600)}}"
+            }
+          }
+        ],
+        "galleryNavItems": [
+          {
+            "_template": "/assets/templates/base/common/image",
+            "_repeat": 8,
+            "attributes": {
+              "_template": "/assets/templates/base/common/attributes",
+              "src": "{{image(250, 150)}}"
+            }
+          }
+        ]
+      }
     },
-
     {
-      "_template": "common/html",
+      "_template": "/assets/templates/base/common/html",
       "text": "{{paragraphs}}"
     },
     {
-      "_template": "components/article-enhancement",
+      "_template": "/assets/templates/base/components/article-enhancement",
       "align": "left",
       "content": {
-        "_template": "common/image",
+        "_template": "/assets/templates/base/common/image",
         "attributes": {
-          "_template": "common/attributes",
+          "_template": "/assets/templates/base/common/attributes",
           "src": "{{image([ 200, 300, 10 ], [ 200, 300, 10 ])}}"
         }
       }
     },
     {
-      "_template": "common/html",
+      "_template": "/assets/templates/base/common/html",
       "text": "{{paragraphs}}"
     },
     {
-      "_template": "components/article-enhancement",
+      "_template": "/assets/templates/base/components/article-enhancement",
       "align": "right",
       "content": {
-        "_template": "common/figure",
+        "_template": "/assets/templates/base/common/figure",
         "credit": "{{name}}",
         "image": {
-          "_template": "common/image",
+          "_template": "/assets/templates/base/common/image",
           "attributes": {
-            "_template": "common/attributes",
+            "_template": "/assets/templates/base/common/attributes",
             "src": "{{image([ 200, 300, 10 ], [ 200, 300, 10 ])}}"
           }
         }
       }
     },
     {
-      "_template": "common/html",
+      "_template": "/assets/templates/base/common/html",
       "text": "{{paragraphs}}"
     },
     {
-      "_template": "common/html",
+      "_template": "/assets/templates/base/common/html",
       "text": "{{paragraphs}}"
     }
   ]

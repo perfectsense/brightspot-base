@@ -1,26 +1,18 @@
 {
-
-    "_template": "common/body",
-
-    "modifierClass" : "article-page",
-
-    "headerView": {
-      "_dataUrl": "/components/site-header-simple/index.json"
-    },
-
-    "mainView": {
-      "_template": "layouts/full-page",
-
-      "main": [
-        {
-          "_dataUrl": "/components/article/index.json"
-        }
-      ]
-
-    },
-
-    "footerView": {
-      "_dataUrl": "/components/site-footer/simple.json"
-    }
-
+  "_template": "/assets/templates/base/common/body",
+  "modifierClass": "article-page",
+  "headerView": {
+    "_dataUrl": "/components/site-header-simple/index.json"
+  },
+  "mainView": {
+    "_template": "/assets/templates/base/layouts/full-page",
+    "main": [
+      {
+        "_dataUrl": "/components/article/index.json"
+      }
+    ]
+  },
+  "footerView": {
+    "_dataUrl": "/components/site-footer/simple.json"
+  }
 }

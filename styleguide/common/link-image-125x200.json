@@ -1,16 +1,16 @@
 {
-  "_template": "common/link",
+  "_template": "/assets/templates/base/common/link",
   "attributes": {
     "href": "link",
     "title": "Link Title",
-    "_template": "common/attributes"
+    "_template": "/assets/templates/base/common/attributes"
   },
   "body": {
-    "_template": "common/image",
+    "_template": "/assets/templates/base/common/image",
     "attributes": {
       "alt": "Image",
       "src": "/assets/images/125x200.png",
-      "_template": "common/attributes"
+      "_template": "/assets/templates/base/common/attributes"
     }
   }
 }

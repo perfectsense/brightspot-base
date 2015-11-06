@@ -1,38 +1,38 @@
 {
-  "_template": "elements/list",
+  "_template": "/assets/templates/base/elements/list",
   "items": [
     {
-      "_template": "common/text",
+      "_template": "/assets/templates/base/common/text",
       "text": "Item 1"
     },
     {
-      "_template": "components/component-group",
+      "_template": "/assets/templates/base/components/component-group",
       "components": [
         {
-          "_template": "common/text",
+          "_template": "/assets/templates/base/common/text",
           "text": "Item 2"
         },
         {
-          "_template": "elements/list",
+          "_template": "/assets/templates/base/elements/list",
           "items": [
             {
-              "_template": "common/text",
+              "_template": "/assets/templates/base/common/text",
               "text": "Embedded Item 1"
             },
             {
-              "_template": "common/text",
+              "_template": "/assets/templates/base/common/text",
               "text": "Embedded Item 2"
             },
             {
-              "_template": "common/text",
+              "_template": "/assets/templates/base/common/text",
               "text": "Embedded Item 3"
             },
             {
-              "_template": "common/text",
+              "_template": "/assets/templates/base/common/text",
               "text": "Embedded Item 4"
             },
             {
-              "_template": "common/text",
+              "_template": "/assets/templates/base/common/text",
               "text": "Embedded Item 5"
             }
           ]

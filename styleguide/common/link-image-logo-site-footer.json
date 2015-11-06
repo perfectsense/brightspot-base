@@ -1,16 +1,16 @@
 {
-  "_template": "common/link",
+  "_template": "/assets/templates/base/common/link",
   "attributes": {
     "href": "http://www.brightspot.com/",
     "title": "Brightspot Base Styleguide",
-    "_template": "common/attributes"
+    "_template": "/assets/templates/base/common/attributes"
   },
   "body": {
-    "_template": "common/image",
+    "_template": "/assets/templates/base/common/image",
     "attributes": {
       "alt": "Brightspot",
       "src": "/assets/images/logo-site-footer.png",
-      "_template": "common/attributes"
+      "_template": "/assets/templates/base/common/attributes"
     }
   }
 }
