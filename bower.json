@@ -28,6 +28,11 @@
     "test",
     "tests"
   ],
+  "brightspot-library-files": [
+    "src/main/webapp/assets/scripts/config.js",
+    "src/main/webapp/assets/scripts/main.js",
+    "src/main/webapp/assets/styles/main.less"
+  ],
   "brightspot-grunt-files": {
     "fontawesome": [
       {
