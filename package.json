@@ -17,14 +17,10 @@
     "lodash": "^3.9.3",
     "phantomjs": "^1.9.17",
     "phantomjs-polyfill": "0.0.1",
-<<<<<<< HEAD
     "systemjs": "0.18.4",
     "systemjs-builder": "^0.12.1"
-=======
-    "systemjs": "0.18.4"
   },
   "scripts": {
     "build": "grunt"
->>>>>>> Allows Grunt build process to use local install of `grunt` and
   }
 }
