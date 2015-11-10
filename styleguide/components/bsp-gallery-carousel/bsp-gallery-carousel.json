@@ -138,6 +138,42 @@
                     "src" : "/assets/images/partner-carousel/spons-7.png"
                 }
             }
+        },
+        {
+            "_template" : "common/link",
+
+             "attributes" : {
+                "href"  : "link",
+                "title" : "Link Title"
+            },
+
+            "body" : {
+
+                "_template" : "common/image",
+
+                "attributes" : {
+                    "alt" : "Test Alt",
+                    "src" : "/assets/images/partner-carousel/spons-6.png"
+                }
+            }
+        },
+        {
+            "_template" : "common/link",
+
+             "attributes" : {
+                "href"  : "link",
+                "title" : "Link Title"
+            },
+
+            "body" : {
+
+                "_template" : "common/image",
+
+                "attributes" : {
+                    "alt" : "Test Alt",
+                    "src" : "/assets/images/partner-carousel/spons-7.png"
+                }
+            }
         }
     ]
 
