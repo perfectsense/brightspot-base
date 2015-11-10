@@ -37,27 +37,27 @@
     "brightspot-base": [
       {
         "cwd": "src/main/webapp/assets/scripts",
-        "src": "scripts/base/**",
+        "src": "base/**",
         "dest": "",
         "expand": true
       },
       {
         "cwd": "src/main/webapp/assets/styles",
-        "src": "styles/base/**",
-        "dest": "",
+        "src": "base/**",
+        "dest": "../styles",
         "expand": true
       }
     ],
     "fontawesome": [
       {
         "src": "less/*",
-        "dest": "styles/bower/fontawesome",
+        "dest": "../styles/bower/fontawesome",
         "expand": true,
         "flatten": true
       },
       {
         "src": "fonts/*",
-        "dest": "fonts",
+        "dest": "../fonts",
         "expand": true,
         "flatten": true
       }
