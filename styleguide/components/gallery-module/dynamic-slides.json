@@ -1,44 +1,38 @@
 {
-  "_template": "/assets/templates/base/common/page",
-  "body": {
-    "_template": "/assets/templates/base/common/body-embed",
+  "_template": "/assets/templates/base/components/gallery-module",
+  "dynamicSlideLoad": true,
+  "galleryTitle": {
+    "_template": "/assets/templates/base/common/text",
+    "text": "Dynamic slides, no dots, no thumbs"
+  },
+  "gallerySlides": [
+    {
+      "_template": "/assets/templates/base/components/gallery-module-slide-content",
+      "content": {
+        "_template": "/assets/templates/base/common/image",
+        "attributes": {
+          "_template": "/assets/templates/base/common/attributes",
+          "src": "{{image(1200, 400)}}",
+          "title": "slide-0",
+          "data-next-url": "/components/gallery-module/_dynamic-slide-1?ajax=true",
+          "data-prev-url": "/components/gallery-module/_dynamic-slide-neg-1?ajax=true"
+        }
+      }
+    }
+  ],
+  "cta": {
+    "_template": "/assets/templates/base/components/component-cta",
+    "location": "bottom",
     "content": {
-      "_template": "/assets/templates/base/components/gallery-module",
-      "dynamicSlideLoad": true,
-      "galleryTitle": {
-        "_template": "/assets/templates/base/common/text",
-        "text": "Dynamic slides, no dots, no thumbs"
+      "_template": "/assets/templates/base/common/link",
+      "attributes": {
+        "href": "link-me",
+        "title": "I are a link",
+        "_template": "/assets/templates/base/common/attributes"
       },
-      "gallerySlides": [
-        {
-          "_template": "/assets/templates/base/components/gallery-module-slide-content",
-          "content": {
-            "_template": "/assets/templates/base/common/image",
-            "attributes": {
-              "_template": "/assets/templates/base/common/attributes",
-              "src": "{{image(1200, 400)}}",
-              "title": "slide-0",
-              "data-next-url": "/components/gallery-module/_dynamic-slide-1?ajax=true",
-              "data-prev-url": "/components/gallery-module/_dynamic-slide-neg-1?ajax=true"
-            }
-          }
-        }
-      ],
-      "cta": {
-        "_template": "/assets/templates/base/components/component-cta",
-        "location": "bottom",
-        "content": {
-          "_template": "/assets/templates/base/common/link",
-          "attributes": {
-            "href": "link-me",
-            "title": "I are a link",
-            "_template": "/assets/templates/base/common/attributes"
-          },
-          "body": {
-            "_template": "/assets/templates/base/common/text",
-            "text": "I am a CTA Link Test"
-          }
-        }
+      "body": {
+        "_template": "/assets/templates/base/common/text",
+        "text": "I am a CTA Link Test"
       }
     }
   }

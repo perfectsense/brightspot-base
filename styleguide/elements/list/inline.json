@@ -1,32 +1,26 @@
 {
-  "_template": "/assets/templates/base/common/page",
-  "body": {
-    "_template": "/assets/templates/base/common/body-embed",
-    "content": {
-      "_template": "/assets/templates/base/elements/list",
-      "inline": true,
-      "items": [
-        {
-          "_template": "/assets/templates/base/common/text",
-          "text": "Item 1"
-        },
-        {
-          "_template": "/assets/templates/base/common/text",
-          "text": "Item 2"
-        },
-        {
-          "_template": "/assets/templates/base/common/text",
-          "text": "Item 3"
-        },
-        {
-          "_template": "/assets/templates/base/common/text",
-          "text": "Item 4"
-        },
-        {
-          "_template": "/assets/templates/base/common/text",
-          "text": "Item 5"
-        }
-      ]
+  "_template": "/assets/templates/base/elements/list",
+  "inline": true,
+  "items": [
+    {
+      "_template": "/assets/templates/base/common/text",
+      "text": "Item 1"
+    },
+    {
+      "_template": "/assets/templates/base/common/text",
+      "text": "Item 2"
+    },
+    {
+      "_template": "/assets/templates/base/common/text",
+      "text": "Item 3"
+    },
+    {
+      "_template": "/assets/templates/base/common/text",
+      "text": "Item 4"
+    },
+    {
+      "_template": "/assets/templates/base/common/text",
+      "text": "Item 5"
     }
-  }
+  ]
 }

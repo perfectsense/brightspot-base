@@ -1,55 +1,49 @@
 {
-  "_template": "/assets/templates/base/common/page",
-  "body": {
-    "_template": "/assets/templates/base/common/body-embed",
-    "content": {
-      "_template": "/assets/templates/base/components/site-footer-simple",
-      "socialLinks": [
-        {
-          "_template": "/assets/templates/base/common/link",
-          "icon": "facebook",
-          "attributes": {
-            "href": "http://www.facebook.com",
-            "title": "Facebook",
-            "target": "_blank",
-            "_template": "/assets/templates/base/common/attributes"
-          }
-        },
-        {
-          "_template": "/assets/templates/base/common/link",
-          "icon": "twitter",
-          "attributes": {
-            "href": "http://www.twitter.com",
-            "title": "Twitter",
-            "target": "_blank",
-            "_template": "/assets/templates/base/common/attributes"
-          }
-        },
-        {
-          "_template": "/assets/templates/base/common/link",
-          "icon": "pinterest",
-          "attributes": {
-            "href": "http://www.pinterest.com",
-            "title": "Pinterest",
-            "target": "_blank",
-            "_template": "/assets/templates/base/common/attributes"
-          }
-        },
-        {
-          "_template": "/assets/templates/base/common/link",
-          "icon": "linkedin",
-          "attributes": {
-            "href": "http://www.linkedin.com",
-            "title": "LinkedIn",
-            "target": "_blank",
-            "_template": "/assets/templates/base/common/attributes"
-          }
-        }
-      ],
-      "disclaimer": {
-        "_template": "/assets/templates/base/common/text",
-        "text": "Copyright © Brightspot"
+  "_template": "/assets/templates/base/components/site-footer-simple",
+  "socialLinks": [
+    {
+      "_template": "/assets/templates/base/common/link",
+      "icon": "facebook",
+      "attributes": {
+        "href": "http://www.facebook.com",
+        "title": "Facebook",
+        "target": "_blank",
+        "_template": "/assets/templates/base/common/attributes"
+      }
+    },
+    {
+      "_template": "/assets/templates/base/common/link",
+      "icon": "twitter",
+      "attributes": {
+        "href": "http://www.twitter.com",
+        "title": "Twitter",
+        "target": "_blank",
+        "_template": "/assets/templates/base/common/attributes"
+      }
+    },
+    {
+      "_template": "/assets/templates/base/common/link",
+      "icon": "pinterest",
+      "attributes": {
+        "href": "http://www.pinterest.com",
+        "title": "Pinterest",
+        "target": "_blank",
+        "_template": "/assets/templates/base/common/attributes"
+      }
+    },
+    {
+      "_template": "/assets/templates/base/common/link",
+      "icon": "linkedin",
+      "attributes": {
+        "href": "http://www.linkedin.com",
+        "title": "LinkedIn",
+        "target": "_blank",
+        "_template": "/assets/templates/base/common/attributes"
       }
     }
+  ],
+  "disclaimer": {
+    "_template": "/assets/templates/base/common/text",
+    "text": "Copyright © Brightspot"
   }
 }
