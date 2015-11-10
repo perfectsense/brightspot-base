@@ -1,4 +1,5 @@
 {
+  "_wrapper": "/common/_layout-embed.json",
   "_template": "/assets/templates/base/elements/list",
   "unstyled": true,
   "items": [

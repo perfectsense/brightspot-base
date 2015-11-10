@@ -1,0 +1,9 @@
+{
+  "_template": "/assets/templates/base/common/page",
+  "body": {
+    "_template": "/assets/templates/base/common/body-embed",
+    "content": {
+      "_delegate": true
+    }
+  }
+}
