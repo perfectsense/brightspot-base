@@ -3,7 +3,7 @@
 
     "options": {
         "galleryThumbnails" : true,
-
+        "dynamicSlideLoad" : false,
         "deepLinking" : true,
 
         "_notes" : "URL to deep link an image would look like: http://www.jordanspieth.com/gallery1?id=slide3, where slide3 is assigned by slideId on each slide",
