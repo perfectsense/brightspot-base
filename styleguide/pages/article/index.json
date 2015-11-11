@@ -14,6 +14,6 @@
     ]
   },
   "footerView": {
-    "_dataUrl": "/components/site-footer/simple.json"
+    "_dataUrl": "/components/site-footer-simple/index.json"
   }
 }

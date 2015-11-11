@@ -1,21 +1,6 @@
 <header class="site-header-simple-wrapper">
 
 	<div class="site-header-simple">
-		<div class="site-menu-toggle" data-bsp-toggle-item>
-			<div class="site-menu-trigger toggle-trigger">
-				<a href="#"><i class="icon icon-bars"><span class="sr-only">Toggle Menu</span></i></a>
-			</div>
-			{{#with navLinks}}
-	 			<nav class="site-menu toggle-item">
-					<ul class="site-menu-items">
-						{{#each this}}
-							<li>{{render this }}</li>
-						{{/each}}
-					</ul>
-				</nav>
-			{{/with}}
-		</div>
-
 		<div class="site-logo">
 			{{#with siteLogo}}
 				{{this}}
@@ -31,6 +16,21 @@
 				</ul>
 			</nav>
 		{{/with}}
+
+        <div class="site-menu-toggle" data-bsp-toggle-item>
+            <div class="site-menu-trigger toggle-trigger">
+                <a href="#"><i class="icon icon-bars"><span class="sr-only">Toggle Menu</span></i></a>
+            </div>
+            {{#with navLinks}}
+                <nav class="site-menu toggle-item">
+                    <ul class="site-menu-items">
+                        {{#each this}}
+                            <li>{{render this }}</li>
+                        {{/each}}
+                    </ul>
+                </nav>
+            {{/with}}
+        </div>
 
 	</div>
 

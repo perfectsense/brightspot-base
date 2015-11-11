@@ -9,7 +9,7 @@
     z-index: @z-index-header;
 
     // if we are in the styleguide, we want to be relative so we can see this correctly
-    .sg-body & {
+    .body-embed & {
         position: relative;
     }
 }
@@ -41,13 +41,23 @@
     z-index: @z-index-menu;
 
     &.toggle-in {
-        height: @header-menu-height;
+        height: @header-site-menu-item-height * @header-site-menu-items;
     }
 }
 
 .site-menu-items {
     > li {
-        margin: @space-double;
+        background: @color-gray-light-1;
+        border-bottom: 1px solid @color-white;
+        font-size: @ts-1;
+        line-height: @header-site-menu-item-height;
+        text-align: center;
+        text-transform: uppercase;
+
+        &:last-of-type {
+            border: none;
+        }
+
     }
 }
 
@@ -57,32 +67,29 @@
     display: none;
 }
 
-// mobile logo layout
+// logo layout
 .site-logo {
-    display: table-cell;
-    text-align: center;
+    float: left;
+    line-height: @header-height;
     vertical-align: middle;
-
-    img {
-        width: 215px;
-    }
+    text-align: left;
+    width: @header-site-logo-width;
 }
 
 // mobile display trigger
 .site-menu-toggle {
-    display: table-cell;
-    width: 60px;
+    display: block;
+    float: right;
 }
 
 .site-menu-trigger {
     &:extend(.ts-2);
-
-    float: left;
-    margin: 0 @space 0 -@space-double;
-    padding: 0 @space-double;
+    padding-right: @space;
+    text-align: right;
     position: relative;
 
     a {
+        color: @color-white;
         height: @header-height;
         line-height: @header-height;
 
@@ -92,12 +99,16 @@
     }
 
     &.toggle-in {
-        background: @color-gray-light-2;
+        .icon {
+            &:before {
+                content: @fa-var-close;
+            }
+        }
     }
 }
 
 // additional styles for non mobile view
-@media @mq-sm {
+@media @mq-md {
 
     // hide mobile display trigger
     .site-menu-toggle {
@@ -106,39 +117,30 @@
 
     // nav menu: non-mobile only
     .nav-menu {
-        display: table-cell;
+        display: block;
+        float: right;
         padding: 0;
-        position: static;
-        width: auto;
+        width: 80%;
 
         a {
             color: @color-white;
         }
     }
 
-    // table display for this so that
-    // the nav-items within it are evenly
-    // distributed
     .nav-menu-items {
-        display: table;
-        table-layout: fixed;
-        width: 100%;
+        align-items: center;
+        display: flex;
+        line-height: @header-height;
+        justify-content: center;
     }
 
     .nav-item {
-        display: table-cell;
-        height: @header-height;
-        text-align: center;
-        vertical-align: middle;
+        display: inline-block; // to make IE work
+        font-size: @ts-1;
+        text-transform: uppercase;
+        padding: 0 @space;
     }
 
-    // logo
-    .site-logo {
-        padding-right: 25px;
-        vertical-align: middle;
-        text-align: left;
-        width: 215px;
-    }
 }
 
 @media @mq-lg {
