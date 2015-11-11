@@ -4,7 +4,7 @@
   "homepage": "https://github.com/perfectsense/brightspot-base",
   "dependencies": {
     "bsp-autosubmit" : "perfectsense/brightspot-js-autosubmit#^2.0.0",
-    "bsp-form": "perfectsense/brightspot-js-form#^0.0.5",
+    "bsp-form": "perfectsense/brightspot-js-form#^0.0.6",
     "bsp-lazyimage": "perfectsense/brightspot-js-lazyimage#^1.0.1",
     "bsp-utils": "perfectsense/brightspot-js-utils#^3.0.0",
     "bsp-carousel": "perfectsense/brightspot-js-carousel#^1.1.1",
