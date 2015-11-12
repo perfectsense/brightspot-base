@@ -46,5 +46,20 @@
   "disclaimer": {
     "_template": "/assets/templates/base/common/text",
     "text": "Copyright © Brightspot"
-  }
+  },
+  "navLinks": [
+    {
+    "_repeat" : 5,
+      "_template": "/assets/templates/base/common/link",
+      "attributes": {
+        "href": "link-me",
+        "title": "I are a link",
+        "_template": "/assets/templates/base/common/attributes"
+      },
+      "body": {
+        "_template": "/assets/templates/base/common/text",
+        "text": "Menu Item"
+      }
+    }
+  ]
 }

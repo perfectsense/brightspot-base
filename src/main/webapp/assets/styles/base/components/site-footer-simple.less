@@ -24,6 +24,10 @@
  		}
  	}
 
+    .nav-menu {
+        display: none;
+    }
+
     // even if it's there in the JSON, remove it
     .share-links-title {
         display: none
@@ -31,3 +35,16 @@
 
 }
 
+@media @mq-md {
+    .site-footer-simple {
+        .nav-menu {
+            display: block;
+            float: none;
+            margin: 0 0 @space-double 0;
+            width: 100%;
+        }
+        .nav-menu-item {
+            font-size: @ts-0;
+        }
+    }
+}
