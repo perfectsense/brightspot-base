@@ -9,7 +9,7 @@
     <parent>
         <groupId>com.psddev</groupId>
         <artifactId>dari-parent</artifactId>
-        <version>3.1-SNAPSHOT</version>
+        <version>3.1.2007-15acd0</version>
     </parent>
 
     <artifactId>base</artifactId>
@@ -22,22 +22,21 @@
         <dependency>
             <groupId>com.psddev</groupId>
             <artifactId>cms-db</artifactId>
-            <version>3.1-SNAPSHOT</version>
+            <version>3.1.4531-709f34</version>
         </dependency>
 
         <dependency>
             <groupId>com.psddev</groupId>
             <artifactId>dari-db</artifactId>
-            <version>3.1-SNAPSHOT</version>
+            <version>3.1.2007-15acd0</version>
         </dependency>
 
         <dependency>
             <groupId>com.psddev</groupId>
             <artifactId>dari-util</artifactId>
-            <version>3.1-SNAPSHOT</version>
+            <version>3.1.2007-15acd0</version>
         </dependency>
 
-        <!-- Brightspot Handlebars -->
         <dependency>
             <groupId>com.psddev</groupId>
             <artifactId>handlebars</artifactId>
@@ -144,7 +143,7 @@
     <repositories>
         <repository>
             <id>public.psddev</id>
-            <url>http://public.psddev.com/maven</url>
+            <url>https://artifactory.psdops.com/public</url>
             <snapshots>
                 <updatePolicy>always</updatePolicy>
             </snapshots>
@@ -154,11 +153,23 @@
     <pluginRepositories>
         <pluginRepository>
             <id>public.psddev</id>
-            <url>http://public.psddev.com/maven</url>
+            <url>https://artifactory.psdops.com/public</url>
             <snapshots>
                 <updatePolicy>always</updatePolicy>
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+
+    <distributionManagement>
+        <repository>
+            <id>psddev-releases</id>
+            <url>https://artifactory.psdops.com/psddev-releases</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>psddev-snapshots</id>
+            <url>https://artifactory.psdops.com/psddev-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
