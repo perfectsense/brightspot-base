@@ -40,7 +40,7 @@
       "_template": "/assets/templates/base/common/image",
       "attributes": {
         "_template": "/assets/templates/base/common/attributes",
-        "src": "{{image(800, 450)}}"
+        "src": "{{image(1600, 600)}}"
       }
     }
   },

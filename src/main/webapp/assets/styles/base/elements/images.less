@@ -6,17 +6,11 @@ img {
 
 // the css below is a hack that doesn't allow the caption and credit to extend past the image dimensions
 .img-with-meta {
-    display: table;
     width: 100%;
-
-    img {
-        display: table-row;
-    }
 
     figcaption {
         background: @color-white;
         color: @color-gray;
-        display: table-row;
         font-size: @ts-neg-1;
 
         // if we have two within each other, display the 2nd inline
