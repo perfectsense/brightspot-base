@@ -14,26 +14,26 @@
     }
 }
 
-// This is our simple header.
-// Contains a linked logo and a list of nav/site links
 .site-header-simple {
     &:extend(.clearfix all);
     background: @color-header-background;
-    display: table;
     height: @header-height;
-    padding: 0 @space 0 @space-double;
+    padding: 0 @space-double;
     width: 100%;
 }
 
-// all the below styles are on the root level right now
-// we might move these into site-header-simple as we create more headers so we do not have CSS conflicts
+.site-logo {
+    float: left;
+    line-height: @header-height;
+    vertical-align: middle;
+    text-align: left;
+    width: @header-site-logo-width;
+}
 
-// mobile menu
-.site-menu {
+.site-menu-toggle {
     position: absolute;
     top: @header-height;
     left: 0;
-    background-color: @color-header-background;
     height: 0;
     overflow: hidden;
     transition: height .15s linear;
@@ -41,39 +41,72 @@
     z-index: @z-index-menu;
 
     &.toggle-in {
-        height: @header-site-menu-item-height * @header-site-menu-items;
+        // the number of items * height + their borders (1px) and the height of theh eader for the search
+        height: (@header-site-xs-menu-item-height * @header-site-xs-menu-items) + @header-site-xs-menu-items + @header-height;
     }
 }
 
-.site-menu-items {
-    > li {
-        background: @color-gray-light-1;
-        border-bottom: 1px solid @color-white;
-        font-size: @ts-1;
-        line-height: @header-site-menu-item-height;
-        text-align: center;
-        text-transform: uppercase;
+.nav-menu-item {
+    background: @color-gray-light-1;
+    border-bottom: 1px solid @color-white;
+    font-size: @ts-1;
+    line-height: @header-site-xs-menu-item-height;
+    text-align: center;
+    text-transform: uppercase;
 
-        &:last-of-type {
-            border: none;
-        }
-
+    &:last-of-type {
+        border: none;
     }
 }
 
-// hide the nav menu by default
-// it should only show on non-mobile
-.nav-menu {
-    display: none;
+.site-header-simple-search-wrapper {
+    align-items: center;
+    background: @color-header-background;
+    display: flex;
+    height: @header-height;
 }
 
-// logo layout
-.site-logo {
-    float: left;
-    line-height: @header-height;
-    vertical-align: middle;
+.site-header-simple-search {
+    height: 50%;
+    margin: 0 auto;
+    position: relative;
+    width: 90%;
+}
+
+.site-search-text {
+    height: 100%;
+    width: 100%;
+}
+
+.site-search-text-input {
+    background: @color-header-site-search-input;
+    border: none;
+    color: @color-white;
+    height: 100%;
+    font-size: @ts-1;
     text-align: left;
-    width: @header-site-logo-width;
+    width: 100%;
+}
+
+.site-search-submit-input {
+    background: @color-header-site-search-input;
+    border: none;
+    color: @color-header-site-search-input;
+    height: 25px;
+    width: 25px;
+    overflow: hidden;
+    position: absolute;
+    top: calc(~"50% - 12px");
+    right: @space-quarter;
+
+    .icon();
+
+    &:before {
+        color: @color-white;
+        content: @fa-var-search;
+        font-size: @ts-1;
+        text-indent: 5000px;
+    }
 }
 
 // mobile display trigger
@@ -84,7 +117,6 @@
 
 .site-menu-trigger {
     &:extend(.ts-2);
-    padding-right: @space;
     text-align: right;
     position: relative;
 
@@ -111,42 +143,59 @@
 @media @mq-md {
 
     // hide mobile display trigger
-    .site-menu-toggle {
+    .site-menu-trigger {
         display: none;
     }
 
-    // nav menu: non-mobile only
-    .nav-menu {
-        display: block;
+    .site-menu-toggle {
+        align-items: center;
+        display: flex;
         float: right;
-        padding: 0;
-        width: 80%;
+        position: relative;
+        top: 0;
+        height: auto;
+        width: calc(100% ~"-" (@header-site-logo-width));
+    }
+
+    .nav-menu {
+        float: left;
+        width: 100% - @header-site-search-width;
+    }
+
+    .nav-menu-items {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav-menu-item {
+        background: none;
+        border: none;
+        display: inline-block; // to make older IE work
+        line-height: @line-height-base;
+        text-transform: uppercase;
+        padding: 0 @space;
 
         a {
             color: @color-white;
         }
     }
 
-    .nav-menu-items {
-        align-items: center;
-        display: flex;
-        line-height: @header-height;
-        justify-content: center;
+    .site-header-simple-search-wrapper {
+        float: right;
+        width: @header-site-search-width;
     }
 
-    .nav-item {
-        display: inline-block; // to make IE work
-        font-size: @ts-1;
-        text-transform: uppercase;
-        padding: 0 @space;
+    .site-header-simple-search {
+        margin: 0;
+        width: 100%;
     }
+
 
 }
 
 @media @mq-lg {
     .site-header-simple {
-        margin-left: auto;
-        margin-right: auto;
-        width: @screen-lg-min;
+        padding: 0 @space-quad;
     }
 }

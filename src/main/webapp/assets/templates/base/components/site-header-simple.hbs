@@ -7,31 +7,29 @@
 			{{/with}}
 		</div>
 
-		{{#with navLinks}}
- 			<nav class="nav-menu">
-				<ul class="nav-menu-items">
-					{{#each this}}
-						<li class="nav-item">{{render this }}</li>
-					{{/each}}
-				</ul>
-			</nav>
-		{{/with}}
-
-        <div class="site-menu-toggle" data-bsp-toggle-item>
+        <div class="site-menu-toggle-wrapper" data-bsp-toggle-item>
             <div class="site-menu-trigger toggle-trigger">
                 <a href="#"><i class="icon icon-bars"><span class="sr-only">Toggle Menu</span></i></a>
             </div>
-            {{#with navLinks}}
-                <nav class="site-menu toggle-item">
-                    <ul class="site-menu-items">
-                        {{#each this}}
-                            <li>{{render this }}</li>
-                        {{/each}}
-                    </ul>
-                </nav>
-            {{/with}}
-        </div>
 
+            <div class="site-menu-toggle toggle-item">
+                {{#with navLinks}}
+                    <nav class="nav-menu">
+                        <ul class="nav-menu-items">
+                            {{#each this}}
+                                <li class="nav-menu-item">{{render this }}</li>
+                            {{/each}}
+                        </ul>
+                    </nav>
+                {{/with}}
+
+                {{#with searchForm}}
+                <div class="site-header-simple-search-wrapper toggle-item">
+                    {{this}}
+                </div>
+                {{/with}}
+            </div>
+        </div>
 	</div>
 
 </header>

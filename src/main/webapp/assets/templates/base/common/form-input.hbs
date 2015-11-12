@@ -1,0 +1,17 @@
+<div class="form-input {{#if attributes.type}}form-input-{{attributes.type}}{{/if}}{{#if modifierClass}} {{modifierClass}}{{/if}}">
+    {{#if labelAttributes}}
+        <label {{render labelAttributes}}>
+        {{#if labelAfterInput}} {{else}}{{{labelText}}}{{/if}}
+    {{/if}}
+
+    {{#if isButton}}
+        <button {{#if modifierClass}} class="{{modifierClass}}-input"{{/if}} {{render attributes }} {{#if autoSubmit}}data-bsp-autosubmit{{/if}}>{{attributes.value}}</button>
+    {{else}}
+        <input {{#if modifierClass}} class="{{modifierClass}}-input"{{/if}} {{render attributes }} {{#if autoSubmit}}data-bsp-autosubmit{{/if}} />
+    {{/if}}
+
+    {{#if label}}
+        {{#if labelAfterInput}}{{{labelText}}}{{else}} {{/if}}
+        </label>
+    {{/if}}
+</div>
