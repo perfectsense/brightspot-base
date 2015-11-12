@@ -1,0 +1,201 @@
+// wrapper allows us to create the fixed position look/feel
+.site-header-simple-wrapper {
+    background: @color-header-background;
+    height: @header-height;
+    left: 0;
+    position: @header-positioning;
+    top: 0;
+    width: 100%;
+    z-index: @z-index-header;
+
+    // if we are in the styleguide, we want to be relative so we can see this correctly
+    .body-embed & {
+        position: relative;
+    }
+}
+
+.site-header-simple {
+    &:extend(.clearfix all);
+    background: @color-header-background;
+    height: @header-height;
+    padding: 0 @space-double;
+    width: 100%;
+}
+
+.site-logo {
+    float: left;
+    line-height: @header-height;
+    vertical-align: middle;
+    text-align: left;
+    width: @header-site-logo-width;
+}
+
+.site-menu-toggle {
+    position: absolute;
+    top: @header-height;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height .15s linear;
+    width: 100%;
+    z-index: @z-index-menu;
+
+    &.toggle-in {
+        // the number of items * height + their borders (1px) and the height of theh eader for the search
+        height: (@header-site-xs-menu-item-height * @header-site-xs-menu-items) + @header-site-xs-menu-items + @header-height;
+    }
+}
+
+.nav-menu-item {
+    background: @color-gray-light-1;
+    border-bottom: 1px solid @color-white;
+    font-size: @ts-1;
+    line-height: @header-site-xs-menu-item-height;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:last-of-type {
+        border: none;
+    }
+}
+
+.site-header-simple-search-wrapper {
+    align-items: center;
+    background: @color-header-background;
+    display: flex;
+    height: @header-height;
+}
+
+.site-header-simple-search {
+    height: 50%;
+    margin: 0 auto;
+    position: relative;
+    width: 90%;
+}
+
+.site-search-text {
+    height: 100%;
+    width: 100%;
+}
+
+.site-search-text-input {
+    background: @color-header-site-search-input;
+    border: none;
+    color: @color-white;
+    height: 100%;
+    font-size: @ts-1;
+    text-align: left;
+    width: 100%;
+}
+
+.site-search-submit-input {
+    background: @color-header-site-search-input;
+    border: none;
+    color: @color-header-site-search-input;
+    height: 25px;
+    width: 25px;
+    overflow: hidden;
+    position: absolute;
+    top: calc(~"50% - 12px");
+    right: @space-quarter;
+
+    .icon();
+
+    &:before {
+        color: @color-white;
+        content: @fa-var-search;
+        font-size: @ts-1;
+        text-indent: 5000px;
+    }
+}
+
+// mobile display trigger
+.site-menu-toggle {
+    display: block;
+    float: right;
+}
+
+.site-menu-trigger {
+    &:extend(.ts-2);
+    text-align: right;
+    position: relative;
+
+    a {
+        color: @color-white;
+        height: @header-height;
+        line-height: @header-height;
+
+        .icon {
+            line-height: @header-height;
+        }
+    }
+
+    &.toggle-in {
+        .icon {
+            &:before {
+                content: @fa-var-close;
+            }
+        }
+    }
+}
+
+// additional styles for non mobile view
+@media @mq-md {
+
+    // hide mobile display trigger
+    .site-menu-trigger {
+        display: none;
+    }
+
+    .site-menu-toggle {
+        align-items: center;
+        display: flex;
+        float: right;
+        position: relative;
+        top: 0;
+        height: auto;
+        width: calc(100% ~"-" (@header-site-logo-width));
+    }
+
+    .nav-menu {
+        float: left;
+        width: 100% - @header-site-search-width;
+    }
+
+    .nav-menu-items {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav-menu-item {
+        background: none;
+        border: none;
+        display: inline-block; // to make older IE work
+        line-height: @line-height-base;
+        text-transform: uppercase;
+        padding: 0 @space;
+
+        a {
+            color: @color-white;
+        }
+    }
+
+    .site-header-simple-search-wrapper {
+        float: right;
+        width: @header-site-search-width;
+    }
+
+    .site-header-simple-search {
+        margin: 0;
+        width: 100%;
+    }
+
+
+}
+
+@media @mq-lg {
+    .site-header-simple {
+        padding: 0 @space-quad;
+    }
+}

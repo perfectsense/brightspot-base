@@ -1,0 +1,122 @@
+.article-wrapper {
+    margin-top: -@site-top-and-bottom-space;
+
+    // when we are presenting in the styleguide, no negative margin
+    .sg-body & {
+        margin: 0;
+    }
+}
+
+.article-lead {
+    img {
+        height: auto;
+        max-width: none;
+        width: 100%;
+    }
+
+    margin-bottom: @space-double;
+}
+
+.article {
+    padding: @space-double 0 @space;
+
+    .tags {
+        padding-bottom: @space;
+    }
+
+    .meta-data {
+        padding-bottom: @space-double;
+    }
+
+    // when we have a component inside of an article, remove the padding.
+    // We let natural margins of p tags and others in the content do the spacing instead
+    .component {
+        padding: 0;
+    }
+
+}
+
+.article-title {
+    &:extend(.page-title all);
+}
+
+.article-subtitle {
+    &:extend(.section-title all);
+
+    padding-bottom: @space-double;
+}
+
+.article-content {
+    &:extend(.clearfix all);
+
+    border-top: @border-style-5;
+    margin-top: @space-triple;
+    padding-top: @space-triple;
+
+    // custom line height for article content unless it gets overriden
+    line-height: 2;
+
+    p {
+        margin: 0 0 @space-and-half 0;
+    }
+}
+
+.article-enhancement {
+    border-bottom: @border-style-5;
+    border-top: @border-style-5;
+    padding: @space-triple;
+    margin: @space-triple 0;
+
+    // on xsmall, there is only center alignment
+    &.align-left, &.align-right, &.align-center {
+        margin: @space auto;
+        text-align: center;
+    }
+
+    blockquote.component {
+        margin: 0 @space-double;
+    }
+
+    .img-with-meta {
+        margin: 0 auto;
+    }
+
+    .related-link {
+        display: block;
+        font-size: @ts-1;
+        font-weight: @font-weight-bold;
+    }
+
+}
+
+@media @mq-sm {
+    .article-enhancement {
+
+        &.align-left {
+            border: none;
+            float: left;
+            margin: 0 @space-double @space 0;
+            max-width: 50%;
+            padding: 0;
+        }
+
+        &.align-right {
+            border: none;
+            float: right;
+            margin: 0 0 @space @space-double;
+            max-width: 50%;
+            padding: 0;
+        }
+
+        &.align-center {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        &.align-full {
+            width: 100%;
+        }
+
+    }
+}

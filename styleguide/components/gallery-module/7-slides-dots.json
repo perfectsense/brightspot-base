@@ -1,0 +1,38 @@
+{
+  "_wrapper": "/common/_layout-embed.json",
+  "_template": "/assets/templates/base/components/gallery-module",
+  "dots": true,
+  "galleryTitle": {
+    "_template": "/assets/templates/base/common/text",
+    "text": "7 slides, with dots, no thumbs"
+  },
+  "gallerySlides": [
+    {
+      "_template": "/assets/templates/base/components/gallery-module-slide-content",
+      "_repeat": 7,
+      "content": {
+        "_template": "/assets/templates/base/common/image",
+        "attributes": {
+          "_template": "/assets/templates/base/common/attributes",
+          "src": "{{image([ 600, 1200, 100 ], 400)}}"
+        }
+      }
+    }
+  ],
+  "cta": {
+    "_template": "/assets/templates/base/components/component-cta",
+    "location": "bottom",
+    "content": {
+      "_template": "/assets/templates/base/common/link",
+      "attributes": {
+        "href": "link-me",
+        "title": "I are a link",
+        "_template": "/assets/templates/base/common/attributes"
+      },
+      "body": {
+        "_template": "/assets/templates/base/common/text",
+        "text": "I am a CTA Link Test"
+      }
+    }
+  }
+}

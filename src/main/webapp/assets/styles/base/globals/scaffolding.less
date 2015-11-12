@@ -1,0 +1,93 @@
+//
+// @name Scaffolding
+//
+// @description Setup of our site after the normalize reset and using our variables to set global font sizes, link colors, etc
+//
+// --------------------------------------------------
+
+
+
+// Reset the box-sizing
+* {
+    box-sizing: border-box;
+}
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+// Body reset
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+    font-family: @font-family-base;
+    font-size: @ts-0;
+    line-height: @line-height-base;
+    color: @color-text;
+    background-color: @color-body-bg;
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+
+// Links
+
+a {
+    color: @color-link;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: @color-link-hover;
+        text-decoration: none;
+    }
+
+    &:focus {
+        .tab-focus();
+    }
+}
+
+
+// Figures
+//
+// We reset this here because previously Normalize had no `figure` margins. This
+// ensures we don't break anyone's use of the element.
+
+figure {
+    margin: 0;
+}
+
+
+// Images
+img {
+    vertical-align: middle;
+}
+
+// Horizontal rules
+hr {
+    margin-top:    @space;
+    margin-bottom: @space;
+    border: 0;
+    border-top: @border-style-5;
+}
+
+// iOS "clickable elements" fix for role="button"
+//
+// Fixes "clickability" issue (and more generally, the firing of events such as focus as well)
+// for traditionally non-focusable elements with role="button"
+// see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+[role="button"] {
+  cursor: pointer;
+}

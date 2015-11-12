@@ -1,0 +1,75 @@
+// Here we provide styles for the share bar
+// We also allow for some extending of icon fonts vs using the icon-xxxxx designation in the HTML
+
+.share-links-wrapper {
+
+}
+
+.share-links-title {
+    text-transform: uppercase;
+}
+
+.share-links {
+	&:extend(.ts-1);
+	&:extend(.list-inline all);
+	&:extend(.vertical-center);
+
+    margin: 0;
+
+	li {
+		padding: 0 @space-three-quarter;
+	}
+}
+
+.share-link {
+	&:extend(.icon);
+
+	//background: @color-brand-primary;
+	color: @color-social-icons-monochrome;
+	border-radius: 28px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	width: 28px;
+
+	.icons-monochrome & {
+		background-color: @color-social-icons-monochrome-bg;
+	}
+
+	&:before {
+
+		.facebook-share & {
+			content: @fa-var-facebook;
+		}
+
+		.twitter-share & {
+			content: @fa-var-twitter;
+		}
+
+		.pinterest-share & {
+			content: @fa-var-pinterest;
+		}
+
+		.linkedin-share & {
+			content: @fa-var-linkedin;
+		}
+
+		.tumblr-share & {
+			content: @fa-var-tumblr;
+		}
+	}
+
+	&:hover {
+		color: @color-social-icons-monochrome;
+	}
+
+}
+
+
+@media @mq-sm {
+
+	.share-links-centering {
+		display: block;
+	}
+
+}

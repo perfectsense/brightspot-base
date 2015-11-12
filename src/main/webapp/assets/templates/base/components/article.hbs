@@ -1,0 +1,47 @@
+<div class="article-wrapper{{#if modifierClass}} {{modifierClass}}{{/if}}">
+
+    {{#with lead}}
+    <div class="article-lead">
+        {{render this}}
+    </div>
+    {{/with}}
+
+    <div class="grid-container">
+        <div class="row">
+            <div class="column-full">
+
+                <div class="article">
+
+                    {{#with tags}}
+                        {{render this}}
+                    {{/with}}
+
+                    <h1 class="article-title">{{title}}</h1>
+
+                    {{#if subTitle}}
+                        <h3 class="article-subtitle">{{subTitle}}</h3>
+                    {{/if}}
+
+                    {{#with metaData}}
+                        {{render this}}
+                    {{/with}}
+
+                    {{#if sharing}}{{render sharing }}{{/if}}
+
+                    <div class="article-content">
+                        {{#each articleBody}}{{this}}{{/each}}
+                    </div>
+
+                    {{#with nextArticle}}
+                        <div class="article-load-more">
+                            {{render this cssClass="bsp-infinite-load-trigger"}}
+                        </div>
+                    {{/with}}
+
+                </div>{{!-- article --}}
+
+            </div>{{!-- column-full --}}
+        </div>{{!-- row --}}
+    </div>{{!-- grid-container --}}
+
+</div>{{!-- article-wrapper --}}

@@ -1,0 +1,39 @@
+<div class="component gallery-module-component{{#if modifierClass}} {{modifierClass}}{{/if}}">
+	{{#if galleryTitle}}
+        <h3 class="component-title">{{render galleryTitle}}</h3>
+    {{/if}}
+
+	<div class="component-content">
+
+		<div class="gallery-module {{#if textNav}}gallery-module-nav{{else}}gallery-module-thumbs{{/if}}" data-bsp-carousel-thumbnav data-bsp-carousel-thumbnav-options='{ "stage" : { "theme" : "carousel-dots" , "themeConfig" : { "arrows" : true } }, "nav": { "themeConfig" : { "slidesToShow" : {{#if thumbnailsToShow}}{{thumbnailsToShow}}{{else}}4{{/if}}, "centerMode" : false } } }'>
+			<div class="bsp-carousel-stage">
+
+				{{#each gallerySlides}}
+					<div class="bsp-carousel-slide">
+
+						{{render this}}
+
+						{{#if navText}}
+							<div class="bsp-carousel-slide-nav-text">{{navText}}</div>
+						{{/if}}
+					</div>
+				{{/each}}
+
+			</div>
+			<div class="bsp-carousel-nav">
+
+				{{#each galleryNavItems}}
+					<div class="bsp-carousel-slide">
+                        {{render this}}
+					</div>
+				{{/each}}
+
+			</div>
+		</div>
+
+	</div>
+
+	{{#with cta}}
+        {{render this}}
+	{{/with}}
+</div>

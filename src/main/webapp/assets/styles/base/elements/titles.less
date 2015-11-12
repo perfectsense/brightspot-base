@@ -1,0 +1,21 @@
+// Standard page title wrapper that lives outside of the grid (as the border below stretches the full width of the browser)
+.page-title-wrapper {
+    border-bottom: @border-style-2;
+    margin-bottom: @space-double;
+}
+
+// page title that can live outside of grid in the wrapper, or inside of grid when we need full page titles
+.page-title {
+    &:extend(.ts-heading-1);
+
+    margin: 0;
+    padding: 0 0 @space 0;
+}
+
+// smaller section title that can be used or extended
+.section-title {
+	&:extend(.ts-heading-3);
+
+	margin: 0;
+	padding: 0 0 @space 0;
+}

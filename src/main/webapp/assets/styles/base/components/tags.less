@@ -1,0 +1,29 @@
+// Tags are elemental as they can be used in any bigger
+
+.tags {
+
+}
+
+.tag-list-title {
+    float: left;
+    line-height: 1;
+    margin: 0;
+    // spacing to line it up even with the tags themselves
+    padding: @space-half @space-half 0 0;
+}
+
+.tag-list {
+	&:extend(.list-inline all);
+    display: inline;
+}
+
+.tag {
+	//background: @color-brand-secondary;
+    border: @border-style-1;
+    color: @color-black;
+	display: inline-block;
+	line-height: 1;
+	padding: @space-half @space-double;
+	margin: 0 @space-half @space-half;
+	text-transform: uppercase;
+}

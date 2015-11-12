@@ -1,43 +1,44 @@
 {
-	"_template": "elements/list",
-	"items": [
-		{
-			"_template": "common/text",
-			"text": "Item 1"
-		},
-		{
-			"_template": "components/bsp-component-group",
-			"components": [
-				{
-					"_template": "common/text",
-					"text": "Item 2"
-				},
-				{
-					"_template": "elements/list",
-					"items": [
-						{
-							"_template": "common/text",
-							"text": "Embedded Item 1"
-						},
-						{
-							"_template": "common/text",
-							"text": "Embedded Item 2"
-						},
-						{
-							"_template": "common/text",
-							"text": "Embedded Item 3"
-						},
-						{
-							"_template": "common/text",
-							"text": "Embedded Item 4"
-						},
-						{
-							"_template": "common/text",
-							"text": "Embedded Item 5"
-						}
-					]
-				}
-			]
-		}
-	]
+  "_wrapper": "/common/_layout-embed.json",
+  "_template": "/assets/templates/base/elements/list",
+  "items": [
+    {
+      "_template": "/assets/templates/base/common/text",
+      "text": "Item 1"
+    },
+    {
+      "_template": "/assets/templates/base/components/component-group",
+      "components": [
+        {
+          "_template": "/assets/templates/base/common/text",
+          "text": "Item 2"
+        },
+        {
+          "_template": "/assets/templates/base/elements/list",
+          "items": [
+            {
+              "_template": "/assets/templates/base/common/text",
+              "text": "Embedded Item 1"
+            },
+            {
+              "_template": "/assets/templates/base/common/text",
+              "text": "Embedded Item 2"
+            },
+            {
+              "_template": "/assets/templates/base/common/text",
+              "text": "Embedded Item 3"
+            },
+            {
+              "_template": "/assets/templates/base/common/text",
+              "text": "Embedded Item 4"
+            },
+            {
+              "_template": "/assets/templates/base/common/text",
+              "text": "Embedded Item 5"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

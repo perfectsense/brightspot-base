@@ -1,0 +1,21 @@
+// adding this in here for now. This is a bugfix I applied to playbill that we need to replicate when we add list promo back into base
+.bsp-list-promo-list {
+
+    margin-top: 0;
+
+    li:first-child {
+        margin-top: -@space;
+    }
+
+    li.image-align-left {
+        margin-top: 0;
+
+        .image-50-width-background & {
+            margin-top: -@space
+        }
+    }
+
+    li.image-align-top {
+        margin-top: 0;
+    }
+}

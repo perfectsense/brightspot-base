@@ -1,0 +1,22 @@
+<div class="container{{#if modifierClass}} {{modifierClass}}{{/if}}">
+
+    {{#each aboveColumns}}
+        {{render this}}
+    {{/each}}
+
+	<div class="row">
+
+		<div class="column-two-thirds">
+            {{#each first}}
+                {{render this}}
+            {{/each}}
+		</div>
+
+		<div class="column-third">
+            {{#each second}}
+                {{render this}}
+            {{/each}}
+		</div>
+
+	</div>
+</div>

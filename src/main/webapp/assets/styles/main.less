@@ -1,114 +1,99 @@
 /**
- * ===================
- * IMPORTANT READ THIS
- * ===================
- *
- * By default, main is configured to pull in all the base LESS. Many projects will not need all of these libraries,
- * so please optimize by commenting out what you do not use.
- *
- * Your LESS for your project goes at the bottom of this file, including any custom project variables, elements, mixins and components
- */
-
+* ===================
+* IMPORTANT READ THIS
+* ===================
+*
+* By default, main is by default configured to pull in all the base LESS.
+* Many projects will not need all of these libraries, so please optimize by commenting out what you do not use.
+* Your LESS for your project goes at the bottom of this file, including any custom project variables, elements, mixins and components
+/*
 
 
 /**
- * Our Main CSS file
- */
-
-// Grab the base boostrap variables. These will include some base site variables which we can then overwrite with our own
-@import (reference) "bower/bootstrap/variables";
-
-// This lets us use the bootstrap mixins if we would like to
-@import (reference) "bower/bootstrap/mixins";
-
-// For buttons, since we do not need all the kinds Bootstrap has, we can make our own, but leverage their .btn mixins
-@import (reference) "bower/bootstrap/buttons.less";
-
-// Now we bring in our own variables. These will be new variables and overrides to any of the default boostrap ones we do not like
-@import (reference) "variables/variables.less";
-
-// This brings in our mixins
-@import (reference) "mixins/mixins.less";
-
-// We will start the compiled CSSS by bringing in the bootstrap normalize reset
-@import "bower/bootstrap/normalize.less";
-
-// And using Bootstrap scaffolding. This has a couple of extra helpers in it that aren't true "scaffolding" like img thumbnails, but that's ok
-@import "bower/bootstrap/scaffolding.less";
-
-// importing base bsp-carousel styles
-@import (inline) "bower/bsp-carousel/bsp-carousel.css";
-// this should really be moved into bsp-carousel.css above, but I'm leaving it here for now for fast development
-@import "components/move-to-bsp-carousel.less";
-
-// importing base datepicker styles
-@import (inline) "bower/jquery.datetimepicker.css";
-
-// importing base bsp-tabber styles
-@import (inline) "bower/bsp-tabber.css";
-
-// Our utilities
-// We compile our main basic utilities. The others are available as mixins to use throughout our components
-@import "utilities/basic.less";
-@import "utilities/responsive.less";
-
-// These are elements. Some of these correspond to DOM elements, others are small building blocks that components or parts of components can extend
-@import "elements/bsp-buttons.less";
-@import "elements/bsp-grid.less";
-@import "elements/bsp-icons.less";
-@import "elements/bsp-image.less";
-@import "elements/bsp-lists.less";
-@import "elements/bsp-misc.less";
-@import "elements/bsp-modal.less";
-@import "elements/bsp-titles.less";
-@import "elements/bsp-section.less";
-@import "elements/bsp-tags.less";
-@import "elements/bsp-overlay-promo.less";
-@import "elements/bsp-typography.less";
-@import "elements/bsp-vertical-center.less";
-
-// Components should be ties into CMS components as closely as possible. It would be ideal to maintain a 1:1 relationship of components renderers to
-// components LESS files so they are easy to identify, find, and modify
-@import "components/bsp-article.less";
-@import "components/bsp-article-lead-image-first.less";
-@import "components/bsp-iframe.less";
-@import "components/bsp-blockquote.less";
-@import "components/bsp-component.less";
-@import "components/bsp-dropdown.less";
-@import "components/bsp-bio.less";
-@import "components/bsp-form-input.less";
-@import "components/bsp-form-message.less";
-@import "components/bsp-form-textarea.less";
-@import "components/bsp-image-promo.less";
-@import "components/bsp-list-promo.less";
-@import "components/bsp-small-promo.less";
-@import "components/bsp-medium-promo.less";
-@import "components/bsp-large-promo.less";
-@import "components/bsp-super-promo.less";
-@import "components/bsp-callout.less";
-@import "components/bsp-list-promo-modifiers.less";
-@import "components/bsp-meta-data.less";
-@import "components/bsp-paginate.less";
-@import "components/bsp-search-results.less";
-@import "components/bsp-share-links.less";
-@import "components/bsp-site-footer-simple.less";
-@import "components/bsp-site-footer.less";
-@import "components/bsp-site-header.less";
-@import "components/bsp-site-header-simple.less";
-@import "components/bsp-tabber.less";
-@import "components/bsp-table.less";
-@import "components/bsp-video-player.less";
-@import "components/bsp-gallery-carousel.less";
-@import "components/bsp-gallery-embeded.less";
+* Mixins
+* ----------------------------------------------------------------------------
+* Leaving these in a separate folder for now. Will figure out if we move thes around
+* but either way they will be brought in and can be used throughout
+* Mixins are prefaced with the private _ so they stay out ouf our automated LESS documentation
+* ----------------------------------------------------------------------------
+*/
+@import (reference) "base/mixins/_mixins.less";
 
 
-// the gallery modules go last. They have some overrides to make sure component images render correctly inside of them
-@import "components/bsp-gallery-fullscreen.less";
-@import "components/bsp-gallery-module.less";
+/**
+* Globals, utilities, mixins, vars
+* ----------------------------------------------------------------------------
+* Start off with the normalize reset and our scaffolding, then the rest of our globals. Each has their own documentation
+* ----------------------------------------------------------------------------
+*/
+@import "base/globals/normalize.less";
+@import "base/globals/scaffolding.less";
+@import "base/globals/borders.vars";
+@import "base/globals/colors.vars";
+@import "base/globals/component.less";
+@import "base/globals/component.vars";
+@import "base/globals/grid.less";
+@import "base/globals/grid.vars";
+@import "base/globals/modal.less";
+@import "base/globals/spacing.vars";
+@import "base/globals/typography.less";
+@import "base/globals/typography.vars";
+@import "base/globals/utilities-basic.less";
+@import "base/globals/utilities-responsive.less";
+@import "base/globals/z-index.vars";
 
 
- /*
- * ===================
- * Your Project CSS Goes Below Here
- * ===================
- */
+/**
+* Bowered CSS.
+* ----------------------------------------------------------------------------
+* This is for plugins that we bowered in that have their own CSS
+* ----------------------------------------------------------------------------
+*/
+@import (inline) "bsp-carousel.css";
+@import (inline) "bsp-modal.css";
+
+/**
+* Elements
+* ----------------------------------------------------------------------------
+* These are elements. Some of these correspond to DOM elements, others are small building blocks that components or parts of components can extend
+* The primary difference is that elements do not have a component class wrapper and they are primarily used inside components, meaning that very
+* rarely will you see an element just stand alone inside a page layout without being represented inside a component
+* ----------------------------------------------------------------------------
+*/
+@import "base/elements/buttons.less";
+@import "base/elements/buttons.vars";
+@import "base/elements/icons.less";
+@import "base/elements/images.less";
+@import "base/elements/lists.less";
+@import "base/elements/loading-icons.less";
+@import "base/elements/meta-data.less";
+@import "base/elements/share-links.less";
+@import "base/elements/share-links.vars";
+@import "base/elements/tags.less";
+@import "base/elements/titles.less";
+
+
+/**
+* Components
+* ----------------------------------------------------------------------------
+* Components are synonymous with "modules" and are site components that are surrounded by a component wrapper in most cases. They can containe
+* other components and elements and have spacing relationships between each other (if wrapper is present)
+* ----------------------------------------------------------------------------
+*/
+@import "base/components/article.less";
+@import "base/components/blockquote.less";
+@import "base/components/site-footer-simple.less";
+@import "base/components/site-footer-simple.vars";
+@import "base/components/site-header-simple.less";
+@import "base/components/site-header-simple.vars";
+// The gallery module component goes last. It potentially has other components inside of it, so this lets us do some clean overrides
+@import "base/components/gallery-module.less";
+@import "base/components/gallery-module.vars";
+
+
+/**
+* ===================
+* Your Project CSS Goes Below Here
+* ===================
+*/
+

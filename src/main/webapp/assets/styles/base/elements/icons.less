@@ -1,0 +1,202 @@
+/**
+ * We have 3 way of doing icons. All 3 are based off of Font Awesome.
+ *
+ * Method 1 - compiles all of FA and uses it out of the box
+ * Method 2 - adds a custom icon class (if desired) and you have to manually specify which icons you use (more work, but less CSS size)
+ * Method 3 - if we have custom icons, we use FA as the base, and add custom icon definitions on top (most work, most performant)
+ *
+ * As our exampe, we use Method 3, as it's the most complex.
+ * If you will use Method 1 or 2, delete the icomoon font files in the assets folder and the other code out of this LESS file
+ */
+
+
+
+
+
+/**
+ * Method #1
+ *
+ * The first way is very straightfoward as it just includes font awesome
+ * Use this if you are using a lot of the Font Awesome icons out of the box. This way you can use the standard
+ * FA documentation and create icon classes throughout your html ex: <i class="fa fa-bed">
+ */
+
+/*
+@import "../bower/fontawesome/font-awesome.less";
+*/
+
+
+
+
+
+/**
+ * Method #2
+ *
+ * The second way is our custom implementation of font-awesome. Here we will only include the font awesome icons that we
+ * need. This way we can cut down on the amount of CSS compiled in, especially if we are only using a few of the
+ * Font Awesome icons in our code. This can cut down on up to 25kb as we are not compiling the FA classes that we will not
+ * use. This still pulls in the heavy font file though, but that is heavily cached.
+ */
+
+
+// We write out the icons we are using at the top of the LESS file for easy access
+
+// instead of importing fontawesome/icons.less which includes all the icons that can be used, we will manually
+// write out the ones we need here. We can just drop these classes into the DOM
+.@{fa-css-prefix}-twitter {
+    background-color: @color-twitter;
+    &:before {
+        content: @fa-var-twitter;
+    }
+}
+.@{fa-css-prefix}-facebook {
+    background-color: @color-facebook;
+    &:before {
+        content: @fa-var-facebook;
+    }
+}
+.@{fa-css-prefix}-linkedin {
+    background-color: @color-linkedin;
+    &:before {
+        content: @fa-var-linkedin;
+    }
+}
+
+.@{fa-css-prefix}-pinterest {
+    background-color: @color-pinterest;
+    &:before {
+        content: @fa-var-pinterest;
+    }
+}
+.@{fa-css-prefix}-external-link:before {
+    content: @fa-var-external-link;
+}
+.@{fa-css-prefix}-instagram {
+    background-color: @color-instagram;
+    &:before {
+        content: @fa-var-instagram;
+    }
+}
+.@{fa-css-prefix}-tumblr {
+    background-color: @color-tumblr;
+    &:before {
+        content: @fa-var-tumblr;
+    }
+}
+.@{fa-css-prefix}-search:before {
+    content: @fa-var-search;
+}
+.@{fa-css-prefix}-th-large:before {
+    content: @fa-var-th-large;
+}
+.@{fa-css-prefix}-info-circle:before {
+    content: @fa-var-info-circle;
+}
+.@{fa-css-prefix}-bars:before {
+    content: @fa-var-bars;
+}
+.@{fa-css-prefix}-angle-left:before {
+    content: @fa-var-angle-left;
+}
+.@{fa-css-prefix}-angle-right:before {
+    content: @fa-var-angle-right;
+}
+
+// we will import the variables and mixins as reference so we can use them
+@import (reference) "../../bower/fontawesome/variables.less";
+@import (reference) "../../bower/fontawesome/mixins.less";
+
+// we can override the base font awesome prefix to give our icon class a custom name here if we want
+// instead of "fa", like "icon" or "client-namespace-icon".
+// use this as your class name in your HTML ex: <i class="icon icon-bed">
+@fa-css-prefix: icon;
+
+// we pull in the default font-awesome font path, as well as the core definition
+@import "../../bower/fontawesome/path.less";
+
+// we drop in our named icon class here using the fa-icon mixin. Allows us to also do extends for semantic class names if that's what we want
+// if we just use the variable here instead of the hardcoded name, we cannot do extends
+.icon {
+  .fa-icon()
+}
+
+
+/**
+ * Method #3
+ *
+ * The third method can be the most efficient, and should also be used if you have custom fonts for your project.
+ * If the design team will be providing custom icons it would be best to use a service like icomoon.io to create a custom
+ * font file that is based on Font Awesome. This will allow you to use as many of the Font Awesome icons as design wants
+ * but not compile into the font file the ones that are not needed, and also compile any extras as well
+ */
+
+
+
+
+// We write out the icons we are using at the top of the LESS file for easy access
+
+// instead of importing fontawesome/icons.less which includes all the icons that can be used, we will manually
+// write out the ones we need here.
+/*
+.@{fa-css-prefix}-glass:before {
+    content: @fa-var-glass;
+}
+.@{fa-css-prefix}-futbol-o:before {
+    content: @fa-var-futbol-o;
+}
+.@{fa-css-prefix}-twitter:before {
+    content: @fa-var-twitter-square;
+}
+.@{fa-css-prefix}-facebook:before {
+    content: @fa-var-facebook-square;
+}
+.@{fa-css-prefix}-google:before {
+    content: @fa-var-google-plus-square;
+}
+.@{fa-css-prefix}-linkedin:before {
+    content: @fa-var-linkedin-square;
+}
+.@{fa-css-prefix}-pinterest:before {
+    content: @fa-var-pinterest-square;
+}
+
+// for any custom icons, we have to specify the actual content values, since there are no variables for us to use
+.@{fa-css-prefix}-custom-one:before {
+    content: "\f1e3";
+}
+
+
+// we will import the variables and mixins as reference so we can use them
+@import (reference) "../bower/fontawesome/variables.less";
+@import (reference) "../bower/fontawesome/mixins.less";
+
+// we can override the base font awesome prefix to give our icon class a custom name here if we want
+// instead of "fa", like "icon" or "client-namespace-icon".
+// use this as your class name in your HTML ex: <i class="icon icon-bed">
+@fa-css-prefix: icon;
+
+// we pull in our custom font file. Place your custom font file in the assets/fonts directory
+// for each version of the font file that you upload, place a new cachebusting parameter
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon.eot?-8ootkx');
+    src:url('../fonts/icomoon.eot?#iefix-8ootkx') format('embedded-opentype'),
+        url('../fonts/icomoon.woff?-8ootkx') format('woff'),
+        url('../fonts/icomoon.ttf?-8ootkx') format('truetype'),
+        url('../fonts/icomoon.svg?-8ootkx#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// we create our custom font icon declaratio here. Not the "CustomFontName" in the font declaration
+.@{fa-css-prefix} {
+  display: inline-block;
+  font: normal normal normal @fa-font-size-base/1 icomoon; // shortening font declaration
+  font-size: inherit; // can't have font-size inherit on line above, so need to override
+  text-rendering: auto; // optimizelegibility throws things off #1094
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0); // ensures no half-pixel rendering in firefox
+}
+*/
+

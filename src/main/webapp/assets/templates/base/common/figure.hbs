@@ -1,0 +1,8 @@
+<figure class="img-with-meta">
+    {{image}}
+    {{#if caption}}
+        <figcaption><span class="img-caption">{{render caption}}{{#if credit}}<figcaption><span class="img-credit"> ({{credit}})</span></figcaption>{{/if}}</span></figcaption>
+    {{else}}
+        {{#if credit}}<figcaption><span class="img-credit">{{credit}}</span></figcaption>{{/if}}
+    {{/if}}
+</figure>

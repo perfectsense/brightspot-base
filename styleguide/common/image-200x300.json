@@ -1,7 +1,7 @@
-{ 
-	"_template" : "common/image",
-
-	"attributes" : {
-		"src" : "/assets/images/200x300.png"
-	}
+{
+  "_template": "/assets/templates/base/common/image",
+  "attributes": {
+    "src": "/assets/images/200x300.png",
+    "_template": "/assets/templates/base/common/attributes"
+  }
 }

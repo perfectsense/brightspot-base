@@ -1,0 +1,72 @@
+<div class="component gallery-module-component{{#if modifierClass}} {{modifierClass}}{{/if}}">
+	{{#if galleryTitle}}
+		<h3 class="component-title">{{render galleryTitle}}</h3>
+	{{/if}}
+
+	<div class="component-content">
+
+		<div class="gallery-module gallery-module-{{#if theme}}{{theme}}{{/if}}" data-bsp-carousel data-bsp-carousel-options='{
+			"theme" : "{{#if theme}}{{theme}}{{else}}{{#if dots}}carousel-dots{{/if}}{{/if}}",
+
+            {{#if dynamicSlideLoad}}"dynamicSlideLoad" : true,{{/if}}
+
+			"themeConfig" : {
+	            "arrows" : {{#if arrows}}{{arrows}}{{else}}true{{/if}},
+	            "dots" : {{#if dots}}true{{else}}false{{/if}}
+
+	            {{#if horizontalSlides}},
+
+                    {{#if slidesToScrollMedium}}
+                        "slidesToScroll" : {{slidesToScrollMedium}},
+                    {{else}}
+                        "slidesToScroll" : 5,
+                    {{/if}}
+
+					{{#if slidesToShowMedium}}
+					"slidesToShow" : {{slidesToShowMedium}},
+
+					"responsive": [
+				    {
+				      "breakpoint": 768,
+				      "settings": {
+				        "slidesToShow": {{slidesToShowSmall}},
+                        {{#if slidesToScrollSmall}}
+                            "slidesToScroll" : {{slidesToScrollSmall}}
+                        {{else}}
+                            "slidesToScroll" : 2
+                        {{/if}}
+				      }
+				    }]
+				    {{else}}
+
+                    "slidesToShow" : 5,
+					"responsive": [
+				    {
+				      "breakpoint": 768,
+				      "settings": {
+				        "slidesToShow": 2,
+                        {{#if slidesToScrollSmall}}
+                            "slidesToScroll" : {{slidesToScrollSmall}}
+                        {{else}}
+                            "slidesToScroll" : 2
+                        {{/if}}
+				      }
+				    }]
+				    {{/if}}
+			    {{/if}}
+			    }
+			}'>
+
+			{{#each gallerySlides}}
+				<div class="bsp-carousel-slide">
+					{{render this}}
+				</div>
+			{{/each}}
+		</div>
+
+	</div>
+
+	{{#with cta}}
+        {{render this}}
+	{{/with}}
+</div>

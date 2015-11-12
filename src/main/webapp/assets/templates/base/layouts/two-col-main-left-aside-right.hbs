@@ -1,0 +1,22 @@
+<div class="grid-container{{#if modifierClass}} {{modifierClass}}{{/if}}">
+
+    {{#each aboveColumns}}
+        {{render this}}
+    {{/each}}
+
+	<div class="row">
+
+		<div class="column-main">
+            {{#each main}}
+                {{render this}}
+            {{/each}}
+		</div>
+
+		<div class="column-aside">
+            {{#each aside}}
+                {{render this}}
+            {{/each}}
+		</div>
+
+	</div>
+</div>
