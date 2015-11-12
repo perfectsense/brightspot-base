@@ -1,0 +1,31 @@
+<div class="component promo-component{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
+    {{#with heading}}
+        <div class="component-title">{{render this}}</div>
+    {{/with}}
+
+    <div class="component-content">
+
+        <div class="promo">
+            <ul class="promo-list {{#if options.horizontalSplit}}row{{/if}}">
+                {{#each listItems}}
+                    <li class="{{#if ../options.horizontalSplit}}column-{{/if}}{{../options.horizontalSplit}} {{#if imgAlign}}image-align-{{imgAlign}}{{/if}}">
+
+                        {{#if sections}}
+                            {{#each sections}}
+                                {{render this}}
+                            {{/each}}
+                        {{else}}
+                            {{render this}}
+                        {{/if}}
+
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+
+    </div>
+
+    {{#with cta}}
+        {{render this}}
+    {{/with}}
+</div>

@@ -1,0 +1,35 @@
+{
+    "_wrapper": "/common/_layout-embed.json",
+    "_template" : "/assets/templates/base/components/promo",
+    "heading" : {
+        "_template" : "/assets/templates/base/common/text",
+        "text" : "Just Image"
+    },
+    "listItems" : [
+        {
+            "_template": "/assets/templates/base/components/promo-item",
+            "sections" : [
+                {
+                    "_template" : "/assets/templates/base/components/promo-section",
+                    "imgAlign" : "top",
+                    "image" : {
+                        "_template" : "/assets/templates/base/common/link",
+                        "attributes" : {
+                            "href"  : "link",
+                            "title" : "Link Title",
+                            "_template": "/assets/templates/base/common/attributes"
+                        },
+                        "body" : {
+                            "_template" : "/assets/templates/base/common/image",
+                            "attributes" : {
+                                "alt" : "Image",
+                                "src" : "{{image(800, 450)}}",
+                                "_template": "/assets/templates/base/common/attributes"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
