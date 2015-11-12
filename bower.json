@@ -46,6 +46,12 @@
         "src": "base/**",
         "dest": "../styles",
         "expand": true
+      },
+      {
+        "cwd": "src/main/webapp/assets/templates",
+        "src": "base/**",
+        "dest": "../templates",
+        "expand": true
       }
     ],
     "fontawesome": [
