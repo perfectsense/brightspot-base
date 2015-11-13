@@ -1,18 +1,11 @@
-module.exports = function(grunt) {
+'use strict';
 
-    'use strict';
-
+module.exports = function (grunt) {
     require('bsp-grunt')(grunt, {
         bsp: {
-            brightspotBase: {
-                enable: true
-            },
-
             styles: {
                 dir: 'assets/styles',
-                less: [
-                    ' *.less'
-                ],
+                less: [ '*.less' ],
                 autoprefixer: true
             },
 
@@ -20,7 +13,5 @@ module.exports = function(grunt) {
                 dir: 'assets/scripts'
             }
         }
-
     });
-
 };
