@@ -7,6 +7,17 @@
 
 .component-title {
     &:extend(.section-title);
+
+    a {
+        color: @color-text;
+    }
+}
+
+.component-subtitle {
+    display: block;
+    font-size: @ts-0;
+    line-height: @line-height-base;
+    margin-top: @space;
 }
 
 .component-content {
@@ -14,11 +25,22 @@
 }
 
 .component-cta {
+    border-top: @border-style-7;
+    margin-top: @space-double;
+    padding-top: @space;
+    text-align: center;
 
     a {
         display: block;
+        font-weight: @font-weight-bold;
         padding: @space-quarter 0;
-        text-align: left;
+        text-transform: uppercase;
+
+        .icon();
+
+        &:after {
+            content: @fa-var-angle-right;
+        }
     }
 
     &.component-cta-top-right {
@@ -53,4 +75,11 @@
 // if the content has hard item heights, there is no margin on the cta, it will screw up the hardcoded item heights
 .component-content.hard-item-heights + .component-cta {
     margin-top: 0;
+}
+
+
+@media @mq-sm {
+    .component-cta {
+        border-top: none;
+    }
 }

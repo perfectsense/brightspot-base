@@ -1,0 +1,99 @@
+{
+    "_wrapper": "/common/_layout-embed.json",
+    "_template" : "/assets/templates/base/components/promo",
+
+    "modifier" : "promo-large",
+
+    "heading" : {
+        "_template" : "/assets/templates/base/components/component-group",
+
+        "components" : [
+            {
+                "_template" : "/assets/templates/base/common/link",
+
+                "attributes" : {
+                    "_template" : "/assets/templates/base/common/attributes",
+                    "href"  : "link"
+                },
+
+                "body" : {
+                    "_template" : "/assets/templates/base/common/text",
+                    "text" : "{{words([ 1, 2 ])}}"
+                }
+            },
+            {
+
+                "_template" : "/assets/templates/base/common/text",
+
+                "modifierClass" : "component-subtitle",
+
+                "text" : "{{words(20)}}"
+
+            }
+        ]
+    },
+
+    "listItems" : [
+        {
+            "_template": "/assets/templates/base/components/promo-item",
+
+            "sections" : [
+                {
+
+                    "_template" : "/assets/templates/base/components/promo-section",
+
+                    "type" : "image",
+
+                    "image" : {
+
+                        "_template" : "/assets/templates/base/common/link",
+
+                        "attributes" : {
+                            "_template" : "/assets/templates/base/common/attributes",
+                            "href"  : "link"
+                        },
+
+                        "body" : {
+
+                            "_template" : "/assets/templates/base/common/image",
+
+                            "attributes" : {
+                                "_template" : "/assets/templates/base/common/attributes",
+                                "alt" : "{{words([ 1, 2 ])}}",
+                                "src" : "{{image(1200, 400)}}"
+                            }
+                        }
+                    },
+
+                    "overlay" : {
+
+                        "_template" : "/assets/templates/base/components/promo-section",
+
+                        "type" : "overlay",
+
+                        "description" : {
+                            "_template" : "/assets/templates/base/common/text",
+                            "text" : "{{words(20)}}"
+                        },
+
+                        "link" : {
+                            "_template" : "/assets/templates/base/common/link",
+
+                            "attributes" : {
+                                "_template" : "/assets/templates/base/common/attributes",
+                                "href"  : "#"
+                            },
+
+                            "body" : {
+                                "_template" : "/assets/templates/base/common/text",
+                                "text" : "{{words([ 1, 2 ])}}"
+                            }
+                        }
+
+                    }
+                }
+
+            ]
+        }
+    ]
+}

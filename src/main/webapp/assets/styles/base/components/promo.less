@@ -1,21 +1,71 @@
-// adding this in here for now. This is a bugfix I applied to playbill that we need to replicate when we add list promo back into base
-.bsp-list-promo-list {
-
-    margin-top: 0;
-
-    li:first-child {
-        margin-top: -@space;
+.promo-list {
+    > li{
+        margin-bottom: @space-double;
     }
+}
 
-    li.image-align-left {
-        margin-top: 0;
+.promo-section-image {
+    margin-bottom: @space-double;
+    position: relative;
+}
 
-        .image-50-width-background & {
-            margin-top: -@space
+.promo-section-tags {
+    padding-bottom: @space-half;
+}
+
+.promo-title {
+    &:extend(.ts-heading-3);
+
+    font-weight: @font-weight-light;
+    margin-bottom: @space-double;
+
+    a {
+        color: @color-text;
+
+        &:hover {
+            color: @color-link;
+        }
+    }
+}
+
+.promo-section-overlay {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    padding: @space-triple;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    .promo-link {
+        padding-top: @space-double;
+
+        a {
+            &:extend(.component-cta a all);
+        }
+    }
+}
+
+
+
+@media @mq-sm {
+    .promo-list {
+        > li {
+            margin-bottom: 0;
         }
     }
 
-    li.image-align-top {
-        margin-top: 0;
+    .promo-section-overlay {
+        background: rgba(255, 255, 255, 0.85);
+
+        &:hover {
+            opacity: 1;
+            transition: opacity 1s;
+        }
     }
 }
