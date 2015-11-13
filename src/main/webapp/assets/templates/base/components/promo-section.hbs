@@ -24,4 +24,12 @@
     {{#with link}}
         <div class="promo-link">{{render this}}</div>
     {{/with}}
+
+    {{#with links}}
+        <ul class="promo-links">
+            {{#each this}}
+                <li class="promo-link">{{render this}}</li>
+            {{/each}}
+        </ul>
+    {{/with}}
 </div>

@@ -28,6 +28,20 @@
     }
 }
 
+.promo-links {
+    margin-top: @space-double;
+
+    > li {
+        margin-bottom: @space;
+    }
+}
+
+.promo-link {
+    a {
+        &:extend(.component-cta a all);
+    }
+}
+
 .promo-section-overlay {
     align-items: flex-start;
     flex-direction: column;
@@ -44,10 +58,6 @@
 
     .promo-link {
         padding-top: @space-double;
-
-        a {
-            &:extend(.component-cta a all);
-        }
     }
 }
 
@@ -66,6 +76,16 @@
         &:hover {
             opacity: 1;
             transition: opacity 1s;
+        }
+    }
+
+    .promo-links {
+        display: flex;
+        justify-content: space-between;
+
+        > li {
+            display: inline-block;
+            margin: 0;
         }
     }
 }
