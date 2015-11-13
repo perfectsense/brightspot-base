@@ -52,7 +52,7 @@
 
                         "body" : {
                             "_template" : "/assets/templates/base/common/text",
-                            "text" : "{{words([ 1, 2 ])}}"
+                            "text" : "Super Promo"
                         }
                     },
 
