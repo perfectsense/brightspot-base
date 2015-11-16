@@ -5,6 +5,11 @@
     position: relative;
 }
 
+.component-inverse-color {
+    background: @color-gray-dark-1;
+    color: @color-white;
+}
+
 .component-title {
     &:extend(.section-title);
     text-align: center;
@@ -23,11 +28,6 @@
 
 .component-content {
     overflow: hidden; // making sure things do not go outside of components
-}
-
-.component-content-inverse-color {
-    background: @color-gray-dark-1;
-    color: @color-white;
 }
 
 .component-cta {
