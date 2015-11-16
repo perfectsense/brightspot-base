@@ -33,6 +33,22 @@
                     "text"  : "Full Page Gallery"
                 }
             }
+        },
+        {
+            "_template" : "components/bsp-list-promo-item-handler",
+
+            "link": {
+                "_template" : "common/link",
+
+                "attributes" : {
+                    "href"  : "/pages/video-asset/",
+                    "title" : "Video Asset"
+                },
+                "body" : {
+                    "_template" : "common/text",
+                    "text"  : "Video Asset"
+                }
+            }
         }
 	]
 }
