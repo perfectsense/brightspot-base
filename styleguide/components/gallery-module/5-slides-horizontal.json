@@ -7,10 +7,12 @@
   "slidesToScrollMedium": 5,
   "slidesToScrollSmall": 2,
   "theme": "horizontal",
-  "galleryTitle": {
+
+  "heading": {
     "_template": "/assets/templates/base/common/text",
     "text": "5 slides at a time, 2 on mobile"
   },
+
   "gallerySlides": [
     {
       "_template": "/assets/templates/base/components/gallery-module-slide-content",

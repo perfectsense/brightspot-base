@@ -2,7 +2,7 @@
   "_wrapper": "/_wrapper.json",
   "_template": "/assets/templates/base/components/gallery-module-with-nav",
   "textNav": true,
-  "galleryTitle": {
+  "heading": {
     "_template": "/assets/templates/base/common/text",
     "text": "4 Slide with text nav instead of thumbs"
   },

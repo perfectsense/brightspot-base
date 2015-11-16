@@ -1,0 +1,23 @@
+<div class="component callout-component{{#if modifierClass}} {{modifierClass}}{{/if}}">
+    {{#with heading}}
+        <div class="component-title">{{render this}}</div>
+    {{/with}}
+
+    <div class="component-content">
+
+        <div class="callout">
+            {{#if sections}}
+                {{#each sections}}
+                    {{render this}}
+                {{/each}}
+            {{else}}
+                {{render this}}
+            {{/if}}
+        </div>
+
+    </div>
+
+    {{#with cta}}
+        {{render this}}
+    {{/with}}
+</div>

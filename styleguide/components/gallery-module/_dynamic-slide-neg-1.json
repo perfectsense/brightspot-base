@@ -1,5 +1,4 @@
 {
-  "_wrapper": "/_wrapper.json",
   "_template": "/assets/templates/base/components/gallery-module-slide-content",
   "content": {
     "_template": "/assets/templates/base/common/image",

@@ -1,0 +1,14 @@
+.callout-component {
+    padding-top: @component-bottom-margin;
+}
+.callout {
+    &:extend(.ts-heading-1);
+    font-weight: @font-weight-light;
+    text-align: center;
+
+    .tag {
+        font-size: @ts-1;
+        margin-top: @space-double;
+        padding: @space-double;
+    }
+}

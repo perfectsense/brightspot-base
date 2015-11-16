@@ -2,7 +2,7 @@
   "_wrapper": "/_wrapper.json",
   "_template": "/assets/templates/base/components/gallery-module",
   "dots": true,
-  "galleryTitle": {
+  "heading": {
     "_template": "/assets/templates/base/common/text",
     "text": "7 slides, with dots, no thumbs"
   },

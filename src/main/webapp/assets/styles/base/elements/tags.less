@@ -28,4 +28,14 @@
         border: 1px solid @color-brand-accent;
         color: @color-white;
     }
+
+    .component-inverse-color & {
+        border-color: @color-white;
+        color: @color-white;
+
+         &:hover {
+            border-color: @color-brand-accent;
+            color: @color-text;
+        }
+    }
 }
