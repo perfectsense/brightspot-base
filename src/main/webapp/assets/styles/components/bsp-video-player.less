@@ -9,7 +9,7 @@
     .bsp-component-content {
         margin: 0 auto;
         max-width: @screen-lg-min;
-        padding: @space-quad @space-double;
+        padding: @space-double;
 
         @media @mq-lg {
             padding: @space-quad 0;
@@ -18,10 +18,14 @@
 }
 
 .bsp-primary-tag {
-    padding-bottom: @space;
+
+    @media @mq-md {
+        padding-bottom: @space;
+    }
 
     a {
         .bsp-tag(@bsp-video-player-tag-background);
+        font-size: @bsp-video-player-text-size;
         font-weight: @font-weight-light;
         border: @border-style-10;
         color: @bsp-video-player-tag-text-color;
