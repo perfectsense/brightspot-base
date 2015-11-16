@@ -18,6 +18,8 @@
 }
 
 .bsp-primary-tag {
+    padding-bottom: @space;
+
     a {
         .bsp-tag(@bsp-video-player-tag-background);
         font-weight: @font-weight-light;
@@ -35,17 +37,23 @@
 
 .bsp-video-player-description {
     color: @bsp-video-player-text-color;
-    margin: @space-double 0 @space;
+    font-weight: @font-weight-extra-light;
+    margin: @space-double 0;
 }
 
 .bsp-video-player {
+    color: @bsp-video-player-share-text-color;
     .bsp-tags {
         margin: @space 0 0 0;
     }
 }
 
 .bsp-video-player-sharing {
+    color: @bsp-video-player-share-text-color;
+    font-weight: @font-weight-bold;
     margin: @space 0;
+    text-transform: uppercase;
+
     a {
         background: @bsp-video-player-share-background;
     }
