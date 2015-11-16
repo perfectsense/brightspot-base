@@ -1,0 +1,276 @@
+body.gallery-full {
+    background: @color-gray-dark-1;
+
+    .site {
+        background: inherit;
+    }
+}
+
+.gallery-full-wrapper {
+    padding-top: @space-double;
+
+    .interstitial-showing {
+        .gallery-full-slide-caption-wrapper,
+        .gallery-full-caption-trigger,
+        .gallery-full-thumbs {
+            display: none !important;
+        }
+    }
+}
+
+.gallery-full-header {
+    margin-bottom: @space-double;
+}
+
+.gallery-full-title {
+    &:extend(.section-title all);
+}
+
+.gallery-full {
+    margin-bottom: @space;
+    position: relative;
+
+    .bsp-carousel-stage {
+        .bsp-carousel-slide {
+            position: relative;
+
+            // make sure that image fits the slide as much as possible
+            img {
+                height: auto;
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            // seo link that is used for linking to slides for SEO purposes
+            .seo-link {
+                display:none;
+                visibility:hidden;
+            }
+        }
+    }
+
+    // gives the overlay look to the 2nd carousel
+    // it's hidden by default on xs and sm screens and comes into play md and up by default
+    // it has a max-height to give it a smooth look/feel when coming in
+    .bsp-carousel-nav {
+        background: rgba(0, 0, 0, 0.7);
+        bottom: 0;
+        max-height: 0;
+        height: auto;
+        position: absolute;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        width: 100%;
+
+        .thumbs-visible & {
+            max-height: 250px;
+        }
+
+        // TODO: Move these to bsp-carousel or at least to base a regular bsp-carousel-nav thing
+        // we have smaller arrows for the thumbs than default
+        .slick-prev,
+        .slick-next {
+
+            height: 20px;
+            width: 20px;
+            margin-top: -10px;
+
+            &:before {
+                font-size: 20px;
+            }
+        }
+
+        // current thumb gets a pretty accent border
+        .current {
+            &:after {
+                border-top: 4px solid @color-brand-accent;
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+            }
+        }
+
+        .bsp-carousel-slide {
+            padding: @space-double;
+            position: relative;
+
+            // make sure that thumb fits the container as much as possible
+            img {
+                height: auto;
+                margin: 0 auto;
+                width: 100%;
+            }
+        }
+    }
+}
+
+// the caption wrapper gets a bottom placement on the slide along with the same max-height transition as the nav carousel
+.gallery-full-slide-caption-wrapper {
+    bottom: 0;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: max-height 0.5s;
+    width: 100%;
+
+    .captions-visible & {
+        max-height: 150px;
+    }
+}
+
+.gallery-full-slide-caption {
+    &:extend(.ts-neg-1);
+
+    background: rgba(0, 0, 0, 0.5);
+    height: auto;
+    padding: @space;
+}
+
+// elements at the bottom of the footer
+.gallery-full-thumbs, .gallery-full-count-wrapper, .gallery-full-caption-trigger {
+    display: inline-block;
+    margin: @space-half @space-double @space-half 0;
+    padding: 0 @space;
+}
+
+// we don't want to show the thumbs icon until a bigger screen size
+.gallery-full-thumbs {
+    .icon {
+        display: none;
+    }
+}
+
+.gallery-full-footer {
+    &:extend(.clearfix all);
+}
+
+// Used to create show and hide text for the caption trigger.
+.gallery-full-caption-trigger {
+    cursor: pointer;
+
+    span.captions-visible {
+        display: none;
+    }
+
+    .captions-visible & {
+         span.captions-visible {
+            display: inline-block;
+        }
+        span.captions-hidden {
+            display: none;
+        }
+    }
+}
+
+.gallery-full-sharing {
+    clear: both;
+    margin: @space 0;
+    padding: 0 @space;
+}
+
+.gallery-full-footer {
+    .tags {
+        clear: both;
+        margin: @space-half 0;
+        padding: 0 @space;
+    }
+}
+
+.gallery-full-interstitial-counter {
+    background: @color-brand-primary;
+    color: @color-brand-secondary;
+    display: none;
+    padding: @space;
+    position: absolute;
+    &.counting {
+        display: block;
+    }
+    &.topMiddle {
+        width: 100%;
+        text-align: center;
+    }
+    &.topRight {
+        top: 0;
+        right: 0;
+    }
+    &.bottomLeft {
+        bottom: 0;
+        left: 0;
+    }
+    &.bottomMiddle {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    &.bottomRight {
+        bottom: 0;
+        right: 0;
+    }
+}
+.gallery-full-interstitial-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media @mq-md {
+
+    .gallery-full {
+        // for anything past medium, we want the thumbs nav, anything before, no thumbs (which is default)
+        .bsp-carousel-nav {
+            &.slick-initialized {
+                display: block;
+            }
+
+            // also in the carousel nav, no arrows
+            .slick-prev, .slick-next {
+                // on medium and up, we will show previous and next
+                display: none !important;
+            }
+        }
+    }
+
+    .gallery-full-thumbs, .gallery-full-count-wrapper, .gallery-full-caption-trigger {
+        float: left;
+    }
+
+    .gallery-full-thumbs {
+        cursor: pointer;
+
+        .icon {
+            display: inline-block;
+            margin-right: @space-half;
+        }
+    }
+
+    .gallery-full-caption-trigger {
+
+        .icon {
+            margin-right: @space-half;
+        }
+
+    }
+
+    .gallery-full-sharing {
+        clear: none;
+        float: right;
+        margin: @space-half 0;
+    }
+
+}
+
+// full screen gallery gets a custom media query
+@media only screen and (min-width: 1400px) {
+
+    body.gallery-full {
+        .container {
+            width: 85%;
+            max-width: 1600px;
+        }
+    }
+
+}

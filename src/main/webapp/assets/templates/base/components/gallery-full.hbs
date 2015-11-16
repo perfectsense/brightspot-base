@@ -1,0 +1,72 @@
+<div data-bsp-carousel-gallery data-bsp-carousel-gallery-options='{ "baseClass" : "gallery-full", "dynamicSlideLoad" : "{{dynamicSlideLoad}}" {{#if thumbnailsToShow}},"nav": { "themeConfig" : { "slidesToShow" : {{thumbnailsToShow}} } } {{/if}} }'{{#if modifierClass}} class="{{modifierClass}}"{{/if}}>
+
+    <div class="gallery-full-wrapper">
+
+        {{#if heading}}
+        <div class="gallery-full-header">
+            <h2 class="gallery-full-title">
+                {{{render heading}}}
+            </h2>
+            {{#if description}}
+                <div class="gallery-full-desc">
+                    {{render description}}
+                </div>
+            {{/if}}
+        </div>
+        {{/if}}
+
+        <div class="gallery-full">
+            <div class="bsp-carousel-stage">
+                {{#each slides}}
+                    <div class="bsp-carousel-slide{{#if modifierClass}} {{modifierClass}}{{/if}}">
+                        {{render this}}
+                    </div>
+                {{/each}}
+            </div>
+
+            {{#if thumbnails}}
+                <div class="bsp-carousel-nav">
+
+                    {{#each slides}}
+                        <div class="bsp-carousel-slide{{#if modifierClass}} {{modifierClass}}{{/if}}">
+                            {{render this.thumbnail}}
+                        </div>
+                    {{/each}}
+
+                </div>
+            {{/if}}
+        </div>
+
+        <div class="gallery-full-footer">
+
+            {{#if thumbnails}}
+            <div class="gallery-full-thumbs">
+                <span class="icon icon-th-large" href=""></span>
+                <span class="gallery-full-count"></span>
+            </div>
+            {{else}}
+            <div class="gallery-full-count-wrapper">
+                <span class="gallery-full-count"></span>
+            </div>
+            {{/if}}
+
+            <div class="gallery-full-caption-trigger">
+                <span class="icon icon-info-circle" href=""></span>
+                <span class="captions-visible">Hide Captions</span>
+                <span class="captions-hidden">Show Captions</span>
+            </div>
+
+            {{#with sharing}}
+            <div class="gallery-full-sharing">
+                {{render this}}
+            </div>
+            {{/with}}
+
+            {{#with tags}}
+                {{render this}}
+            {{/with}}
+
+        </div>
+
+    </div>
+</div>

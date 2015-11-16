@@ -1,0 +1,15 @@
+{{render this.image}}
+
+{{#if this.seoLink}}
+    {{render this.seoLink cssClass="seo-link"}}
+{{/if}}
+
+{{#if this.caption}}
+<div class="gallery-full-slide-caption-wrapper">
+    <div class="gallery-full-slide-caption">
+        {{#each this.caption}}
+            {{render this}}
+        {{/each}}
+    </div>
+</div>
+{{/if}}
