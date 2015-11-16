@@ -1,0 +1,126 @@
+{
+    "_template" : "components/bsp-video-player",
+
+    "options" : {
+        "modifierClass" : "bsp-video-left"
+    },
+
+    "primaryTag" : {
+        "_template" : "common/link",
+
+        "attributes" : {
+            "href"  : "link",
+            "title" : "Link Title"
+        },
+
+        "body" : {
+            "_template" : "common/text",
+            "text" : "Inspire Awesome"
+        }
+    },
+
+    "title" : {
+        "_template" : "common/text",
+        "text" : "Youtube Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. "
+    },
+
+    "description" : {
+        "_template" : "common/text",
+        "text" : "Short loin andouille turkey kielbasa meatloaf, short ribs pork beef ribs alcatra. Meatball shoulder leberkas, ham pastrami jerky kielbasa jowl strip steak alcatra venison beef tri-tip ground round. Fatback meatball t-bone venison."
+    },
+
+    "video" : {
+        "kaltura" : true,
+        "src" : "http://cdnapi.kaltura.com/p/2034801/sp/203480100/embedIframeJs/uiconf_id/32210771/partner_id/2034801",
+        "queryStrings" : [
+            {
+                "iframeembed" : "true"
+            },
+            {
+                "playerId" : "kaltura_player_1447346666"
+            },
+            {
+                "entry_id" : "1_6jetw0ob"
+            }
+        ]
+    },
+
+    "tagsTitle" : {
+        "_template" : "common/text",
+
+        "text" : "Related:"
+    },
+
+    "tags" : [
+        {
+            "_template" : "common/link",
+
+            "attributes" : {
+                "href" : "#"
+            },
+
+            "body" : {
+                "_template" : "common/text",
+
+                "text" : "MTB"
+            }
+        },
+        {
+            "_template" : "common/link",
+
+            "attributes" : {
+                "href" : "#"
+            },
+
+            "body" : {
+                "_template" : "common/text",
+
+                "text" : "Cycling"
+            }
+        },
+        {
+            "_template" : "common/link",
+
+            "attributes" : {
+                "href" : "#"
+            },
+
+            "body" : {
+                "_template" : "common/text",
+
+                "text" : "Downhill"
+            }
+        },
+        {
+            "_template" : "common/link",
+
+            "attributes" : {
+                "href" : "#"
+            },
+
+            "body" : {
+                "_template" : "common/text",
+
+                "text" : "Enduro"
+            }
+        },
+        {
+            "_template" : "common/link",
+
+            "attributes" : {
+                "href" : "#"
+            },
+
+            "body" : {
+                "_template" : "common/text",
+
+                "text" : "Dirt Jumping"
+            }
+        }
+    ],
+
+    "sharing" : {
+        "_dataUrl": "/components/bsp-social-share/share.json"
+    }
+
+}

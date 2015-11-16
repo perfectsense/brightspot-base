@@ -3,10 +3,6 @@
     <div class="bsp-component-content">
         <div class="bsp-video-player">
 
-            {{#if title}}
-                <h4 class="bsp-video-player-title">{{render this.title}}</h4>
-            {{/if}}
-
             {{#if video.native}}
                 <video class="bsp-video-player-native" controls>
                     <source src="{{video.src}}.mp4" type="video/mp4">
@@ -46,6 +42,25 @@
                 </div>
             {{/if}}
 
+            {{#if video.kaltura}}
+                <div class="bsp-video-player-iframe-wrapper">
+                    {{#with video}}
+                        <iframe src="{{src}}{{#if queryStrings.length}}?{{#each queryStrings}}{{#if @last}}{{#each this}}{{@key}}={{this}}{{/each}}{{else}}{{#each this}}{{@key}}={{this}}&amp;{{/each}}{{/if}}{{/each}}{{/if}}" width="935" height="526" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0"></iframe>
+                        {{!-- <iframe src="http://cdnapi.kaltura.com/p/2034801/sp/203480100/embedIframeJs/uiconf_id/32243031/partner_id/2034801?iframeembed=true&playerId=kaltura_player_1447346666&entry_id=1_6jetw0ob" width="935" height="526" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0"></iframe> --}}
+                    {{/with}}
+
+
+                </div>
+            {{/if}}
+
+            {{#if primaryTag}}
+                <div class="bsp-primary-tag">{{render this.primaryTag}}</div>
+            {{/if}}
+
+            {{#if title}}
+                <h4 class="bsp-video-player-title">{{render this.title}}</h4>
+            {{/if}}
+
             {{#if description}}
                 <div class="bsp-video-player-description">{{render this.description}}</div>
             {{/if}}
@@ -61,8 +76,8 @@
             {{#if cta}}
                 <div class="bsp-component-cta {{#if this.cta.options.location}}cta-{{this.cta.options.location}}{{/if}}">
                     {{render this.cta.content}}
-                </div>  
-            {{/if}}   
+                </div>
+            {{/if}}
 
         </div>
     </div>
