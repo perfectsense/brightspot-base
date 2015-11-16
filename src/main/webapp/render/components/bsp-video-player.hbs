@@ -45,11 +45,10 @@
             {{#if video.kaltura}}
                 <div class="bsp-video-player-iframe-wrapper">
                     {{#with video}}
+                        {{!-- Temporary implementation until additional details
+                        are available on kaltura implemetation --}}
                         <iframe src="{{src}}{{#if queryStrings.length}}?{{#each queryStrings}}{{#if @last}}{{#each this}}{{@key}}={{this}}{{/each}}{{else}}{{#each this}}{{@key}}={{this}}&amp;{{/each}}{{/if}}{{/each}}{{/if}}" width="935" height="526" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0"></iframe>
-                        {{!-- <iframe src="http://cdnapi.kaltura.com/p/2034801/sp/203480100/embedIframeJs/uiconf_id/32243031/partner_id/2034801?iframeembed=true&playerId=kaltura_player_1447346666&entry_id=1_6jetw0ob" width="935" height="526" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0"></iframe> --}}
                     {{/with}}
-
-
                 </div>
             {{/if}}
 
