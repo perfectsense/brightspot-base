@@ -1,14 +1,31 @@
+// The super promo has a inverse look and feel for color, but a couple of certain elements inside need additional overrides
 .promo-super {
+    &:extend(.component-content-inverse-color all);
     text-align: center;
 
     .promo-section-text {
         padding: 0 @space;
     }
 
+    .promo-title {
+        a {
+            color: @color-white;
+        }
+    }
+
     .promo-links {
         max-width: @container-lg;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .tag {
+        border-color: @color-white;
+        color: @color-white;
+
+        &:hover {
+            background: transparent;
+        }
     }
 }
 
