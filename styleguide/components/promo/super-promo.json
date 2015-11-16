@@ -31,7 +31,7 @@
                             "attributes" : {
                                 "_template" : "/assets/templates/base/common/attributes",
                                 "alt" : "{{words([ 1, 2 ])}}",
-                                "src" : "{{image(1600, 400)}}"
+                                "src" : "{{image(1600, 600)}}"
                             }
                         }
                     }
@@ -76,7 +76,7 @@
 
                         "body" : {
                             "_template" : "/assets/templates/base/common/text",
-                            "text" : "Super Promo"
+                            "text" : "Super Promo Super Promo Super Promo"
                         }
                     },
 

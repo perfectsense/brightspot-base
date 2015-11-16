@@ -29,10 +29,12 @@
 
 .article-title {
     &:extend(.page-title all);
+    border: none;
 }
 
 .article-subtitle {
     &:extend(.section-title all);
+    border: none;
 
     padding-bottom: @space-double;
 }
@@ -53,10 +55,15 @@
 }
 
 .article-enhancement {
-    border-bottom: @border-style-5;
-    border-top: @border-style-5;
-    padding: @space-triple;
-    margin: @space-triple 0;
+    padding: @space-double;
+    margin: @space-double 0;
+
+    // when we have a component inside of an article enhancement, we are going to do our
+    // own padding/margin instead of letting them decide
+    .component {
+        margin: 0;
+        padding: 0;
+    }
 
     // on xsmall, there is only center alignment
     &.align-left, &.align-right, &.align-center {
