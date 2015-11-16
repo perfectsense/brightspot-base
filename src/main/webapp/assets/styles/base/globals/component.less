@@ -1,13 +1,15 @@
 // padding vs margin allows for cleaner separation between components, especially if things inside of them use margins
 
 .component {
-    padding-bottom: @component-bottom-padding;
+    margin-bottom: @component-bottom-margin;
     position: relative;
 }
 
 .component-inverse-color {
     background: @color-gray-dark-1;
     color: @color-white;
+    // since inverse promos have this background, we need additional padding
+    padding-bottom: @component-bottom-margin;
 }
 
 .component-title {
