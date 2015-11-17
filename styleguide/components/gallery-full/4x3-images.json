@@ -2,7 +2,7 @@
     "_wrapper" : "/_wrapper.json",
     "_template": "/assets/templates/base/components/gallery-full",
 
-    "modifierClass" : "component-inverse-color",
+    "modifierClass" : "component-inverse-color ratio-4x3",
 
     "thumbnails" : true,
 
@@ -18,13 +18,60 @@
 
     "slides": [
         {
-            "_repeat" : 5,
+            "_repeat" : 2,
             "_template" : "/assets/templates/base/components/gallery-full-slide-content",
             "image" : {
                 "_template": "/assets/templates/base/common/image",
                 "attributes": {
                     "_template": "/assets/templates/base/common/attributes",
-                    "src": "{{image(850, 450)}}"
+                    "src": "{{image(1200, 900)}}"
+                }
+            },
+            "thumbnail": {
+                "_template": "/assets/templates/base/common/image",
+                "attributes": {
+                    "_template": "/assets/templates/base/common/attributes",
+                    "src": "{{image(100, 100)}}"
+                }
+            },
+            "caption" : [
+                {
+                    "_template": "/assets/templates/base/common/text",
+                    "text" : "{{words(20)}}"
+                }
+            ]
+        },
+        {
+            "_template" : "/assets/templates/base/components/gallery-full-slide-content",
+            "image" : {
+                "_template": "/assets/templates/base/common/image",
+                "attributes": {
+                    "_template": "/assets/templates/base/common/attributes",
+                    "src": "{{image(675, 900)}}"
+                }
+            },
+            "thumbnail": {
+                "_template": "/assets/templates/base/common/image",
+                "attributes": {
+                    "_template": "/assets/templates/base/common/attributes",
+                    "src": "{{image(100, 100)}}"
+                }
+            },
+            "caption" : [
+                {
+                    "_template": "/assets/templates/base/common/text",
+                    "text" : "{{words(20)}}"
+                }
+            ]
+        },
+        {
+            "_repeat" : 2,
+            "_template" : "/assets/templates/base/components/gallery-full-slide-content",
+            "image" : {
+                "_template": "/assets/templates/base/common/image",
+                "attributes": {
+                    "_template": "/assets/templates/base/common/attributes",
+                    "src": "{{image(1200, 900)}}"
                 }
             },
             "thumbnail": {
@@ -59,7 +106,7 @@
                 "_template": "/assets/templates/base/common/image",
                 "attributes": {
                     "_template": "/assets/templates/base/common/attributes",
-                    "src": "{{image(850, 450)}}"
+                    "src": "{{image(1200, 900)}}"
                 }
             },
             "thumbnail": {

@@ -1,0 +1,135 @@
+{
+    "_wrapper" : "/_wrapper.json",
+    "_template": "/assets/templates/base/components/gallery-full",
+
+    "modifierClass" : "component-inverse-color ratio-16x9",
+
+    "thumbnails" : true,
+
+    "heading": {
+        "_template" : "/assets/templates/base/common/text",
+        "text" : "{{words(10)}}"
+    },
+
+    "description" : {
+        "_template" : "/assets/templates/base/common/text",
+        "text" : "{{words(20)}}"
+    },
+
+    "slides": [
+        {
+            "_repeat" : 2,
+            "_template" : "/assets/templates/base/components/gallery-full-slide-content",
+            "image" : {
+                "_template": "/assets/templates/base/common/image",
+                "attributes": {
+                    "_template": "/assets/templates/base/common/attributes",
+                    "src": "{{image(1600, 900)}}"
+                }
+            },
+            "thumbnail": {
+                "_template": "/assets/templates/base/common/image",
+                "attributes": {
+                    "_template": "/assets/templates/base/common/attributes",
+                    "src": "{{image(100, 100)}}"
+                }
+            },
+            "caption" : [
+                {
+                    "_template": "/assets/templates/base/common/text",
+                    "text" : "{{words(20)}}"
+                }
+            ]
+        },
+        {
+            "_template" : "/assets/templates/base/components/gallery-full-slide-content",
+            "image" : {
+                "_template": "/assets/templates/base/common/image",
+                "attributes": {
+                    "_template": "/assets/templates/base/common/attributes",
+                    "src": "{{image(500, 900)}}"
+                }
+            },
+            "thumbnail": {
+                "_template": "/assets/templates/base/common/image",
+                "attributes": {
+                    "_template": "/assets/templates/base/common/attributes",
+                    "src": "{{image(100, 100)}}"
+                }
+            },
+            "caption" : [
+                {
+                    "_template": "/assets/templates/base/common/text",
+                    "text" : "{{words(20)}}"
+                }
+            ]
+        },
+        {
+            "_repeat" : 2,
+            "_template" : "/assets/templates/base/components/gallery-full-slide-content",
+            "image" : {
+                "_template": "/assets/templates/base/common/image",
+                "attributes": {
+                    "_template": "/assets/templates/base/common/attributes",
+                    "src": "{{image(1600, 900)}}"
+                }
+            },
+            "thumbnail": {
+                "_template": "/assets/templates/base/common/image",
+                "attributes": {
+                    "_template": "/assets/templates/base/common/attributes",
+                    "src": "{{image(100, 100)}}"
+                }
+            },
+            "caption" : [
+                {
+                    "_template": "/assets/templates/base/common/text",
+                    "text" : "{{words(20)}}"
+                }
+            ]
+        },
+        {
+            "_template" : "/assets/templates/base/components/gallery-full-interstitial",
+            "modifierClass" : "interstitial",
+            "contentUrl" : "_interstitial.html",
+            "countDisable" : false,
+            "countMessage" : "Advertisement: You may skip in {n} seconds",
+            "countDuration" : 5,
+            "countPosition" : "topRight",
+            "navEnabled" : false,
+            "navVisible" : true
+        },
+        {
+            "_repeat" : 5,
+            "_template" : "/assets/templates/base/components/gallery-full-slide-content",
+            "image" : {
+                "_template": "/assets/templates/base/common/image",
+                "attributes": {
+                    "_template": "/assets/templates/base/common/attributes",
+                    "src": "{{image(1600, 900)}}"
+                }
+            },
+            "thumbnail": {
+                "_template": "/assets/templates/base/common/image",
+                "attributes": {
+                    "_template": "/assets/templates/base/common/attributes",
+                    "src": "{{image(100, 100)}}"
+                }
+            },
+            "caption" : [
+                {
+                    "_template": "/assets/templates/base/common/text",
+                    "text" : "{{words(20)}}"
+                }
+            ]
+        }
+    ],
+
+    "tags" : {
+        "_dataUrl" : "/elements/tags/tag-list.json"
+    },
+
+    "sharing" : {
+        "_dataUrl" : "/elements/social-share/share-monochrome.json"
+    }
+}

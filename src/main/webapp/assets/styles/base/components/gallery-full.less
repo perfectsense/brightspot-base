@@ -1,4 +1,4 @@
-body.gallery-full {
+body.gallery-page {
     background: @color-gray-dark-1;
 
     .site {
@@ -32,19 +32,34 @@ body.gallery-full {
 
     .bsp-carousel-stage {
         .bsp-carousel-slide {
+            display: flex;
+            align-content: center;
             position: relative;
+            text-align: center;
 
             // make sure that image fits the slide as much as possible
             img {
                 height: auto;
                 margin: 0 auto;
-                width: 100%;
+                width: auto;
+
+                max-height: 275px;
             }
 
             // seo link that is used for linking to slides for SEO purposes
             .seo-link {
-                display:none;
-                visibility:hidden;
+                display: none;
+                visibility: hidden;
+            }
+        }
+    }
+
+    .ratio-4x3 & {
+        .bsp-carousel-stage {
+            .bsp-carousel-slide {
+                img {
+                    max-height: 325px;
+                }
             }
         }
     }
@@ -263,13 +278,112 @@ body.gallery-full {
 
 }
 
+
+
+
+@media @mq-sm {
+    .gallery-full {
+        .bsp-carousel-stage {
+            .bsp-carousel-slide {
+                img {
+                    max-height: 400px;
+                }
+            }
+        }
+    }
+
+    .gallery-full {
+        .ratio-4x3 & {
+            .bsp-carousel-stage {
+                .bsp-carousel-slide {
+                    img {
+                        max-height: 533px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media @mq-md {
+    .gallery-full {
+        .bsp-carousel-stage {
+            .bsp-carousel-slide {
+                img {
+                    max-height: 525px;
+                }
+            }
+        }
+    }
+
+    .gallery-full {
+        .ratio-4x3 & {
+            .bsp-carousel-stage {
+                .bsp-carousel-slide {
+                    img {
+                        max-height: 698px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media @mq-lg {
+    .gallery-full {
+        .bsp-carousel-stage {
+            .bsp-carousel-slide {
+                img {
+                    max-height: 636px;
+                }
+            }
+        }
+    }
+
+    .gallery-full {
+        .ratio-4x3 & {
+            .bsp-carousel-stage {
+                .bsp-carousel-slide {
+                    img {
+                        // we make sure at all past (even custom) breakpoints, we override
+                        max-height: 900px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
 // full screen gallery gets a custom media query
 @media only screen and (min-width: 1400px) {
-
-    body.gallery-full {
-        .container {
+    body.gallery-page {
+        .grid-container {
             width: 85%;
             max-width: 1600px;
+        }
+    }
+
+    .gallery-full {
+        .bsp-carousel-stage {
+            .bsp-carousel-slide {
+                img {
+                    max-height: 757px;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1600px) {
+
+    .gallery-full {
+        .bsp-carousel-stage {
+            .bsp-carousel-slide {
+                img {
+                    max-height: 900px;
+                }
+            }
         }
     }
 

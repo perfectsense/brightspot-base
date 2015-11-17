@@ -1,0 +1,26 @@
+{
+  "_template": "/assets/templates/base/common/page",
+
+  "body" : {
+    "_template": "/assets/templates/base/common/body",
+
+    "modifierClass": "gallery-page",
+
+    "headerView": {
+      "_dataUrl": "/components/site-header-simple/index.json"
+    },
+
+    "mainView": {
+      "_template": "/assets/templates/base/layouts/one-col",
+      "main": [
+        {
+          "_dataUrl": "/components/gallery-full/16x9-images.json"
+        }
+      ]
+    },
+
+    "footerView": {
+      "_dataUrl": "/components/site-footer-simple/index.json"
+    }
+  }
+}

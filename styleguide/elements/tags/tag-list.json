@@ -10,7 +10,7 @@
       "_template": "/assets/templates/base/common/link",
       "_repeat": [
         3,
-        10
+        8
       ],
       "body": "{{words([ 1, 2 ])}}",
       "attributes": {
