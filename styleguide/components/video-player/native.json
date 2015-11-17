@@ -1,0 +1,16 @@
+{
+    "_wrapper": "/_wrapper.json",
+
+    "_template" : "/assets/templates/base/components/video-player",
+
+    "title" : {
+        "_template" : "/assets/templates/base/common/text",
+        "text" : "{{words(20)}}"
+    },
+
+    "native" : true,
+
+    "src" : "http://vid297.photobucket.com/albums/mm238/daystar170/RickRoll",
+
+    "poster" : "{{image(900, 560)}}"
+}

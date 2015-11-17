@@ -1,0 +1,80 @@
+<div class="component video-player-component{{#if options.modifierClass}} {{options.modifierClass}}{{/if}}">
+
+    <div class="bsp-component-content">
+        <div class="video-player">
+
+            {{#if native}}
+                <div class="video-player-native-wrapper">
+                    <video class="video-player-native" controls>
+                        <source src="{{src}}.mp4" type="video/mp4" {{#with poster}}poster={{this}}{{/with}}>
+                        <source src="{{src}}.ogg" type="video/ogg" {{#with poster}}poster={{this}}{{/with}}>
+                    </video>
+                </div>
+            {{/if}}
+
+            {{#if youtube}}
+                <div class="video-player-iframe-wrapper {{#with aspectRatio}}aspect-{{this}}{{/with}}">
+                    <iframe src="{{src}}" frameborder="0" allowfullscreen></iframe>
+                </div>
+            {{/if}}
+
+            {{#if vimeo}}
+                <div class="video-player-iframe-wrapper {{#with aspectRatio}}aspect-{{this}}{{/with}}">
+                    <iframe src="{{src}}" frameborder="0" allowfullscreen></iframe>
+                </div>
+            {{/if}}
+
+            {{#if brightcove}}
+                <div class="video-player-brightcove">
+
+                    <script type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+
+                    <div class="video-player-object-wrapper">
+                        <object type="application/x-shockwave-flash" data="http://c.brightcove.com/services/viewer/federated_f9?&amp;flashID=video{{video.id}}&amp;bgcolor={{video.bgHex}}&amp;playerID={{video.playerId}}&amp;playerKey={{video.playerKey}}&amp;isVid=true&amp;dynamicStreaming=true&amp;%40videoPlayer={{video.id}}&amp;autoStart=&amp;debuggerID=&amp;wmode=transparent" id="video{{video.id}}" class="BrightcoveExperience" seamlesstabbing="undefined">
+                            <param name="allowScriptAccess" value="always" />
+                            <param name="allowFullScreen" value="true" />
+                            <param name="seamlessTabbing" value="false" />
+                            <param name="swliveconnect" value="true" />
+                            <param name="wmode" value="transparent" />
+                            <param name="quality" value="high" />
+                            <param name="bgcolor" value="{{video.bgHex}}" />
+                        </object>
+                    </div>
+
+                </div>
+            {{/if}}
+
+            {{#if kaltura}}
+                <div class="video-player-iframe-wrapper {{#with aspectRatio}}aspect-{{aspectRatio}}{{/with}}">
+                    <iframe src="{{src}}{{#with querystring}}?{{render this}}{{/with}}" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0"></iframe>
+                </div>
+            {{/if}}
+
+            {{#with primaryTag}}
+                <div class="video-player-primary-tag">{{render this}}</div>
+            {{/with}}
+
+            {{#with title}}
+                <h4 class="video-player-title">{{render this}}</h4>
+            {{/with}}
+
+            {{#with description}}
+                <div class="video-player-description">{{render this}}</div>
+            {{/with}}
+
+            {{#with tags}}
+                {{ render this }}
+            {{/with}}
+
+            {{#with sharing}}
+                <div class="video-player-sharing">{{render this}}</div>
+            {{/with}}
+
+            {{#with cta}}
+                {{render this}}
+            {{/with}}
+
+        </div>
+    </div>
+
+</div>

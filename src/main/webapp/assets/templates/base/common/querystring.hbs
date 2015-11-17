@@ -1,0 +1,4 @@
+{{!--
+    Allows you to write out an querystring based on your object. All on one line to make sure we do not have line breaks in final output
+--}}
+{{#each this}}{{#if @last}}{{@key}}={{this}}{{else}}{{@key}}={{this}}&amp;{{/if}}{{/each}}

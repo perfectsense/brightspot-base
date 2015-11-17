@@ -1,0 +1,28 @@
+{
+    "_wrapper": "/_wrapper.json",
+
+    "_template" : "/assets/templates/base/components/video-player",
+
+    "title" : {
+        "_template" : "/assets/templates/base/common/text",
+        "text" : "{{words(10)}}"
+    },
+
+    "description" : {
+        "_template" : "/assets/templates/base/common/text",
+        "text" : "{{words(20)}}"
+    },
+
+    "youtube" : true,
+
+    "src" : "https://www.youtube.com/embed/dQw4w9WgXcQ",
+
+    "tags" : {
+        "_dataUrl": "/elements/tags/tag-list.json"
+    },
+
+    "sharing" : {
+        "_dataUrl": "/elements/social-share/share-monochrome.json"
+    }
+
+}

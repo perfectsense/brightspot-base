@@ -1,0 +1,16 @@
+{
+  "_wrapper": "/_wrapper.json",
+
+  "_template" : "/assets/templates/base/components/video-player",
+
+  "kaltura" : true,
+
+  "src" : "http://cdnapi.kaltura.com/p/2034801/sp/203480100/embedIframeJs/uiconf_id/32210771/partner_id/2034801",
+
+  "querystring" : {
+    "_template" : "/assets/templates/base/common/querystring",
+    "iframeembed" : "true",
+    "playerId" : "kaltura_player_1447346666",
+    "entry_id" : "1_6jetw0ob"
+  }
+}

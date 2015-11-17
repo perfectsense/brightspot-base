@@ -1,0 +1,32 @@
+.video-player {
+    .tags {
+        margin: @space-double 0;
+    }
+}
+
+.video-player-title {
+    &:extend(.ts-heading-4);
+    margin: @space 0;
+}
+
+.video-player-description {
+    margin: @space-double 0 @space;
+}
+
+.video-player-iframe-wrapper, .video-player-object-wrapper, .video-player-native-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+
+    &.aspect-4x3 {
+        padding-bottom: 75.01%; /* 4:3 */
+    }
+}
+
+.video-player-iframe-wrapper iframe, .video-player-object-wrapper object, .video-player-native {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
