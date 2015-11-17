@@ -1,5 +1,5 @@
 {
-  "_wrapper": "/common/_layout-embed.json",
+  "_wrapper": "/_wrapper.json",
   "_template": "/assets/templates/base/elements/list",
   "ordered": true,
   "items": [
