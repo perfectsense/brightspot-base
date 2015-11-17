@@ -128,7 +128,20 @@
     },
     {
       "_template": "/assets/templates/base/common/html",
-      "text": "{{paragraphs}}"
+      "text": "{{paragraphs(3)}}"
+    },
+    {
+      "_template": "/assets/templates/base/components/article-enhancement",
+      "align": "center",
+      "content": {
+        "_template" : "/assets/templates/base/components/video-player",
+        "youtube" : true,
+        "src" : "https://www.youtube.com/embed/i3STjxcuk1Y"
+      }
+    },
+    {
+      "_template": "/assets/templates/base/common/html",
+      "text": "{{paragraphs(2)}}"
     },
     {
       "_template": "/assets/templates/base/components/article-enhancement",
@@ -147,11 +160,7 @@
     },
     {
       "_template": "/assets/templates/base/common/html",
-      "text": "{{paragraphs}}"
-    },
-    {
-      "_template": "/assets/templates/base/common/html",
-      "text": "{{paragraphs}}"
+      "text": "{{paragraphs(2)}}"
     }
   ]
 }
