@@ -71,7 +71,7 @@
     {
       "_template": "/assets/templates/base/components/article-enhancement",
       "content": {
-        "_template": "/assets/templates/base/components/blockquote",
+        "_template": "/assets/templates/base/elements/blockquote",
         "author": "{{name}}",
         "content": "{{sentences(2)}}"
       }
