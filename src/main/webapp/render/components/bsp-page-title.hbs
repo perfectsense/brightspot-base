@@ -1,8 +1,10 @@
-<div class="bsp-page-title-wrapper">
+<div class="bsp-page-title-wrapper"{{#if style}} style="{{style}}"{{/if}}>
 	<div class="bsp-container">
 		<div class="bsp-row">
 			<div class="bsp-column-full">
-				<h1 class="bsp-page-title">{{render this.pageTitle}}</h1>
+                {{#with pageTitle}}
+                    <h1 class="bsp-page-title"{{#if style}} style="{{style}}"{{/if}}>{{render this}}</h1>
+                {{/with}}
 			</div>
 		</div>
 	</div>
