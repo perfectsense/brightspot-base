@@ -2,7 +2,7 @@
     "_wrapper" : "/_wrapper.json",
     "_template": "/assets/templates/base/components/gallery-full",
 
-    "modifierClass" : "component-inverse-color ratio-4x3",
+    "modifierClass" : "component-inverse-color aspect-4x3",
 
     "thumbnails" : true,
 
