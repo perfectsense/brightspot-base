@@ -1,0 +1,67 @@
+{
+  "_template": "/assets/templates/base/common/page",
+
+  "body" : {
+    "_template": "/assets/templates/base/common/body",
+
+    "modifierClass": "homepage",
+
+    "headerView": {
+      "_dataUrl": "/components/site-header-simple/index.json"
+    },
+
+    "mainView": {
+      "_template": "/assets/templates/base/components/component-group",
+
+      "components": [
+        {
+          "_template": "/assets/templates/base/layouts/full-page",
+
+          "main" : [
+            {
+              "_dataUrl" : "/components/promo/super-promo.json"
+            }
+          ]
+        },
+        {
+          "_template": "/assets/templates/base/layouts/one-col",
+
+          "main" : [
+            {
+              "_dataUrl" : "/components/promo/small-promo.json"
+            }
+          ]
+
+        },
+        {
+          "_template": "/assets/templates/base/layouts/full-page",
+
+          "main" : [
+            {
+              "_dataUrl" : "/components/callout/text.json"
+            }
+          ]
+        },
+        {
+          "_template": "/assets/templates/base/layouts/one-col",
+
+          "main" : [
+            {
+              "_dataUrl" : "/components/promo/medium-promo.json"
+            },
+            {
+              "_dataUrl" : "/components/promo/large-promo.json"
+            },
+            {
+              "_dataUrl" : "/components/gallery-module/7-slides-horizontal.json"
+            }
+          ]
+        }
+      ]
+    },
+
+    "footerView": {
+      "_dataUrl": "/components/site-footer-simple/index.json"
+    }
+  }
+}
