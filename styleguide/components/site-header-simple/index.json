@@ -13,7 +13,7 @@
       "_template": "/assets/templates/base/common/image",
       "attributes": {
         "alt": "Brightspot",
-        "src": "/assets/logo-site.png",
+        "src": "/brightspot-base/assets/logo-site.png",
         "_template": "/assets/templates/base/common/attributes"
       }
     }
