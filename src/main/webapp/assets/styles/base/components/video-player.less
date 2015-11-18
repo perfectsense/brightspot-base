@@ -1,6 +1,21 @@
+.video-player-component.content-aligned {
+    // when we have aligned content, we do not want the standard bottom component padding
+    padding: 0;
+}
+
 .video-player {
     .tags {
         margin: @space-double 0;
+    }
+
+    // the video player pulled needs to leave more room than the standard grid for the text
+    .column-three-fourths {
+        &.pull-left {
+            padding-right: @space-double;
+        }
+        &.pull-right {
+            padding-left: @space-double;
+        }
     }
 }
 

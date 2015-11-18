@@ -1,6 +1,8 @@
 {
     "_wrapper": "/_wrapper.json",
 
+    "modifierClass" : "component-inverse-color",
+
     "_template" : "/assets/templates/base/components/video-player",
 
     "title" : {
@@ -12,6 +14,8 @@
         "_template" : "/assets/templates/base/common/text",
         "text" : "{{words(20)}}"
     },
+
+    "align" : "right",
 
     "youtube" : true,
 
