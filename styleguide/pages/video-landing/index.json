@@ -8,25 +8,17 @@
   "body" : {
     "_template": "/assets/templates/base/common/body",
 
-    "modifierClass": "bsp-video-landing",
-
     "headerView": {
-      "_template": "/assets/templates/base/components/component-group",
-
-      "components": [
-        {
-          "_dataUrl": "/components/site-header-simple/index.json"
-        },
-        {
-          "_dataUrl": "/components/page-title/page-title.json"
-        }
-      ]
+      "_dataUrl": "/components/site-header-simple/index.json"
     },
 
     "mainView": {
       "_template": "/assets/templates/base/components/component-group",
 
       "components": [
+        {
+          "_dataUrl": "/components/page-title/page-title.json"
+        },
         {
           "_template": "/assets/templates/base/layouts/full-page",
 
@@ -43,7 +35,7 @@
 
           "main" : [
             {
-              "_dataUrl" : "/components/promo/small-promo-video.json"
+              "_dataUrl" : "/components/promo/small-promo-no-cta.json"
             }
           ]
         }
