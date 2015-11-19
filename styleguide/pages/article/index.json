@@ -1,6 +1,10 @@
 {
   "_template": "/assets/templates/base/common/page",
 
+  "head" : {
+    "_dataUrl": "/common/head.json"
+  },
+
   "body" : {
     "_template": "/assets/templates/base/common/body",
     "modifierClass": "article-page",

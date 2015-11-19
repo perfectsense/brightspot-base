@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+{{#if disableResponsive}}
+{{else}}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{/if}}
+
+{{#with meta}}
+    {{render this}}
+{{/with}}
+
+{{#each icon}}
+    <link {{render this}}>
+{{/each}}
+
+{{#each style}}
+    {{#if this.content}}
+        <style {{render this.attributes}}>{{render this}}</style>
+    {{else}}
+        <link {{render this}} />
+    {{/if}}
+{{/each}}
+
+{{#each script}}
+    <script {{render this}}>{{#if this.content}}{{{render this.content}}}{{/if}}</script>
+{{/each}}
+

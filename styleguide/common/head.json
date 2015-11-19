@@ -1,0 +1,23 @@
+{
+  "_template" : "/assets/templates/base/common/head",
+
+  "style" : [
+    {
+      "_template" : "/assets/templates/base/common/attributes",
+      "rel" : "stylesheet",
+      "type" : "text/css",
+      "href" : "/assets/styles/main.min.css"
+    },
+    {
+      "_template" : "/assets/templates/base/common/attributes",
+      "rel" : "stylesheet",
+      "type" : "text/css",
+      "href" : "http://fonts.googleapis.com/css?family=Roboto:700,400,300,100"
+    }
+  ],
+
+  "script" : [{
+    "_template" : "/assets/templates/base/common/attributes",
+    "src" : "/assets/scripts/main.min.js"
+  }]
+}
