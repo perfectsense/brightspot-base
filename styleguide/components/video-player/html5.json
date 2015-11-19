@@ -8,7 +8,7 @@
         "text" : "{{words(20)}}"
     },
 
-    "native" : true,
+    "html5" : true,
 
     "src" : "http://vid297.photobucket.com/albums/mm238/daystar170/RickRoll",
 
