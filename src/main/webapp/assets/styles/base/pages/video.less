@@ -1,0 +1,22 @@
+// Only onthe video page do we have top padding. All other pages are flush top
+.video-page {
+    .component-group {
+        padding-top: @space-double;
+    }
+}
+
+@media @mq-sm {
+    .video-page {
+        .component-group {
+            padding-top: @space-quad;
+        }
+    }
+}
+
+@media @mq-lg {
+    .video-page {
+        .component-group {
+            padding-top: 8rem; // custom value just for this
+        }
+    }
+}
