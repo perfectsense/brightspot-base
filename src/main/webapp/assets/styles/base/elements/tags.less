@@ -1,4 +1,7 @@
 // Tags are elemental as they can be used in any bigger component
+.tags {
+    font-size: @ts-neg-1;
+}
 
 .tag-list-title {
     float: left;
@@ -9,19 +12,19 @@
 }
 
 .tag-list {
-	&:extend(.list-inline all);
+    &:extend(.list-inline all);
     display: inline;
 }
 
 .tag {
-	//background: @color-brand-secondary;
+    //background: @color-brand-secondary;
     border: @border-style-1;
     color: @color-black;
-	display: inline-block;
-	line-height: 1;
-	padding: @space-half @space-double;
-	margin: 0 @space-half @space-half;
-	text-transform: uppercase;
+    display: inline-block;
+    line-height: 1;
+    padding: @space-half @space-double;
+    margin: 0 @space-half @space-half;
+    text-transform: uppercase;
 
     &:hover {
         background: @color-brand-accent;

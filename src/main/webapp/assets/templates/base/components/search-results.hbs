@@ -1,0 +1,19 @@
+<div class="component search-results-component{{#if modifierClass}} {{modifierClass}}{{/if}}">
+    {{#with heading}}
+        <div class="component-title">
+            {{render this}}
+            {{render searchResultsSort}}
+        </div>
+
+    {{/with}}
+
+    <div class="component-content">
+        <div class="search-results">
+            {{render searchResults}}
+        </div>
+    </div>
+
+    {{#with cta}}
+        {{render this}}
+    {{/with}}
+</div>

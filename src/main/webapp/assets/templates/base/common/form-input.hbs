@@ -1,7 +1,7 @@
 <div class="form-input {{#if attributes.type}}form-input-{{attributes.type}}{{/if}}{{#if modifierClass}} {{modifierClass}}{{/if}}">
     {{#if labelAttributes}}
         <label {{render labelAttributes}}>
-        {{#if labelAfterInput}} {{else}}{{{labelText}}}{{/if}}
+        {{#if labelAfterInput}} {{else}}{{{render labelText}}}{{/if}}
     {{/if}}
 
     {{#if isButton}}
@@ -10,8 +10,8 @@
         <input {{#if modifierClass}} class="{{modifierClass}}-input"{{/if}} {{render attributes }} {{#if autoSubmit}}data-bsp-autosubmit{{/if}} />
     {{/if}}
 
-    {{#if label}}
-        {{#if labelAfterInput}}{{{labelText}}}{{else}} {{/if}}
+    {{#if labelAttributes}}
+        {{#if labelAfterInput}}{{{render labelText}}}{{else}} {{/if}}
         </label>
     {{/if}}
 </div>

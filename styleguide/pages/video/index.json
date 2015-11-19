@@ -12,7 +12,9 @@
       "_dataUrl": "/components/site-header-simple/index.json"
     },
     "mainView": {
+
       "_template": "/assets/templates/base/layouts/full-page",
+
       "main": [
         {
           "_template" : "/assets/templates/base/components/component-group",
