@@ -1,0 +1,94 @@
+{
+    "_wrapper": "/_wrapper.json",
+    "_template" : "/assets/templates/base/components/promo",
+
+    "modifierClass" : "promo-super",
+
+    "listItems" : [
+        {
+            "_template": "/assets/templates/base/components/promo-item",
+
+            "sections" : [
+                {
+
+                    "_template" : "/assets/templates/base/components/promo-section",
+
+                    "type" : "image",
+
+                    "image" : {
+
+                        "_template" : "/assets/templates/base/common/link",
+
+                        "attributes" : {
+                            "_template" : "/assets/templates/base/common/attributes",
+                            "href"  : "link"
+                        },
+
+                        "body" : {
+
+                            "_template" : "/assets/templates/base/common/image",
+
+                            "attributes" : {
+                                "_template" : "/assets/templates/base/common/attributes",
+                                "alt" : "{{words([ 1, 2 ])}}",
+                                "src" : "{{image(1600, 600)}}"
+                            }
+                        }
+                    }
+                },
+                {
+
+                    "_template" : "/assets/templates/base/components/promo-section",
+
+                    "type" : "tags",
+
+                    "tags" : {
+
+                        "_template": "/assets/templates/base/elements/tags",
+                        "tagList": [
+                            {
+                                "_template": "/assets/templates/base/common/link",
+                                "attributes": {
+                                    "href": "#",
+                                    "_template": "/assets/templates/base/common/attributes"
+                                },
+                                "body": {
+                                    "_template": "/assets/templates/base/common/text",
+                                    "text": "{{words(2)}}"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+
+                    "_template" : "/assets/templates/base/components/promo-section",
+
+                    "type" : "text",
+
+                    "title" : {
+                        "_template" : "/assets/templates/base/common/link",
+
+                        "attributes" : {
+                            "_template" : "/assets/templates/base/common/attributes",
+                            "href"  : "#"
+                        },
+
+                        "body" : {
+                            "_template" : "/assets/templates/base/common/text",
+                            "text" : "Super Promo Super Promo Super Promo"
+                        }
+                    },
+
+                    "description" : {
+                        "_template" : "/assets/templates/base/common/text",
+
+                        "text" : "{{words(10)}}"
+                    }
+
+                }
+
+            ]
+        }
+    ]
+}
