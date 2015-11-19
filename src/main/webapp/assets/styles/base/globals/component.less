@@ -10,6 +10,11 @@
     color: @component-inverse-color-text;
     // since inverse promos have this background, we need additional padding
     padding-bottom: @component-bottom-margin;
+
+    // if we inverse a whole component group vs just a component, do not add the extra padding to it
+    &.component-group {
+        padding: 0;
+    }
 }
 
 .component-title {

@@ -4,18 +4,22 @@
 }
 
 .video-player {
-
+    &:extend(.clearfix all);
 
     // only in the video player do we start the single column at small vs xsmall
     .column-three-fourths {
-        .make-sm-column(12);
+        .make-xs-column(12);
         .make-md-column(9);
     }
 
     .column-fourth{
-        .make-sm-column(12);
+        .make-xs-column(12);
         .make-md-column(3);
     }
+}
+
+.video-player-primary-tag {
+    margin-top: @space-double;
 }
 
 .video-player-title {
@@ -60,5 +64,8 @@
                 padding-left: @space-double;
             }
         }
+    }
+    .video-player-primary-tag {
+        margin: 0;
     }
 }
