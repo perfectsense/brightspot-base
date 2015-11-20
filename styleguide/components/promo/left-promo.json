@@ -1,0 +1,74 @@
+{
+    "_wrapper": "/_wrapper.json",
+    "_template" : "/assets/templates/base/components/promo",
+    "horizontalSplit" : "half",
+    "modifierClass" : "promo-left",
+
+    "heading" : {
+        "_template" : "/assets/templates/base/common/text",
+
+        "text" : "Promo Left"
+    },
+
+    "listItems" : [
+        {
+            "_template": "/assets/templates/base/components/promo-item",
+
+            "sections" : [
+                {
+
+                    "_template" : "/assets/templates/base/components/promo-section",
+
+                    "type" : "image",
+
+                    "image" : {
+
+                        "_template" : "/assets/templates/base/common/link",
+
+                        "attributes" : {
+                            "_template" : "/assets/templates/base/common/attributes",
+                            "href"  : "link"
+                        },
+
+                        "body" : {
+
+                            "_template" : "/assets/templates/base/common/image",
+
+                            "attributes" : {
+                                "_template" : "/assets/templates/base/common/attributes",
+                                "alt" : "{{words([ 1, 2 ])}}",
+                                "src" : "{{image(564, 288)}}"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+           "_template": "/assets/templates/base/components/promo-item",
+
+           "sections" : [
+              {
+
+                "_template" : "/assets/templates/base/components/promo-section",
+
+                "links" : [{
+                  "_template" : "/assets/templates/base/common/link",
+
+                  "_repeat" : 5,
+
+                  "attributes" : {
+                      "_template" : "/assets/templates/base/common/attributes",
+                      "href"  : "#"
+                  },
+
+                  "body" : {
+                      "_template" : "/assets/templates/base/common/text",
+                      "text" : "{{words([2, 10 ])}}"
+                  }
+                }]
+              }
+          ]
+       }
+    ]
+}

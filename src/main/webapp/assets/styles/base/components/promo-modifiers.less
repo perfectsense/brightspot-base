@@ -31,3 +31,49 @@
 
     }
 }
+
+// adding a few overrides for left-promo here
+.promo-left {
+
+    .promo-list {
+        &>li {
+            margin-bottom: 0;
+        }
+    }
+
+
+    .promo-section-image {
+        display: none;
+    }
+
+    .promo-links {
+        margin-top: 0;
+    }
+
+    .promo-link {
+        margin-bottom: @space-triple;
+        a {
+            font-weight: @font-weight-bold;
+            &:after {
+                content: "";
+            }
+        }
+    }
+
+
+
+}
+
+@media @mq-sm {
+    .promo-left {
+
+        .promo-section-image {
+            display: block;
+        }
+
+        .promo-links {
+            display: block;
+            margin-top: 0;
+        }
+    }
+}
