@@ -1,6 +1,16 @@
+// For the promo component, we want to put the spacing on the promo list items instead of the component itself
+// that way if you have multiple rows, things are even
+.promo-component {
+    padding-bottom: 0;
+
+    // if you have the cta in a promo component, give it spacing too so everything looks even
+    .component-cta {
+        padding-bottom: @space-component-bottom;
+    }
+}
 .promo-list {
-    > li{
-        margin-bottom: @space-double;
+    > li {
+        padding-bottom: @space-component-bottom;
     }
 }
 
