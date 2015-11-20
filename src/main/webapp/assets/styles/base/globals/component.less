@@ -3,6 +3,11 @@
 .component {
     margin-bottom: @component-bottom-margin;
     position: relative;
+
+    // if we have components inside of each other. No margin on the inside ones
+    .component {
+        margin: 0;
+    }
 }
 
 .component-inverse-color {
@@ -13,6 +18,11 @@
 
     // if we inverse a whole component group vs just a component, do not add the extra padding to it
     &.component-group {
+        padding: 0;
+    }
+
+    // if we have components inside of an inverse color one, no padding either
+    .component {
         padding: 0;
     }
 }

@@ -8,6 +8,6 @@
       "_note" : "The style property below is not required. Only use this propery when overriding the default title text color (or other css properties)",
       "style" : "color: #fff",
 
-      "text" : "Video"
+      "text" : "{{words(2)}}"
     }
 }
