@@ -1,0 +1,15 @@
+<div class="form-select{{#if modifierClass}} {{modifierClass}}{{/if}}">
+    {{#if labelAttributes}}
+        <label {{render labelAttributes}}>
+        {{#if labelAfterInput}} {{else}}{{{render labelText}}}{{/if}}
+    {{/if}}
+    <select {{render attributes}}  {{#if autoSubmit}}data-bsp-autosubmit{{/if}}>
+        {{#each optionsData}}
+            {{render this}}
+        {{/each}}
+    </select>
+    {{#if labelAttributes}}
+        {{#if labelAfterInput}}{{{render labelText}}}{{else}} {{/if}}
+        </label>
+    {{/if}}
+</div>

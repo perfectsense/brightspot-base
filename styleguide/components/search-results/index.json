@@ -34,15 +34,14 @@
 
             "inputs" : [
                 {
-                    "_template" : "/assets/templates/base/common/form-input",
 
-                    "isButton" : true,
+                    "_template" : "/assets/templates/base/common/form-select",
+
+                    "autoSubmit" : true,
 
                     "attributes": {
-                        "_template": "/assets/templates/base/common/attributes",
-                        "id" : "search-results-sort",
-                        "type" : "submit",
-                        "value": "Go"
+                      "_template" : "/assets/templates/base/common/attributes",
+                      "id": "search-results-sort"
                     },
 
                     "labelAttributes" : {
@@ -53,7 +52,24 @@
                     "labelText" : {
                         "_template" : "/assets/templates/base/common/text",
                         "text": "Sort by:"
-                    }
+                    },
+
+                    "optionsData": [
+                      {
+                        "_template" : "/assets/templates/base/common/form-select-option",
+
+                        "_repeat" : 3,
+
+                        "attributes": {
+                          "_template": "/assets/templates/base/common/attributes",
+                          "value": "{{words(1)}}"
+                        },
+                        "text": {
+                          "_template": "/assets/templates/base/common/text",
+                          "text" : "{{words(1)}}"
+                        }
+                      }
+                    ]
                 }
             ]
         }
