@@ -13,9 +13,9 @@
       },
       {
         "_template" : "/assets/templates/base/common/attributes",
-        "_rel" : "stylesheet",
-        "_type" : "text/css",
-        "_href" : "http://fonts.googleapis.com/css?family=Roboto:700,400,300,100"
+        "rel" : "stylesheet",
+        "type" : "text/css",
+        "href" : "http://fonts.googleapis.com/css?family=Roboto:700,400,300,100"
       }
     ],
 
