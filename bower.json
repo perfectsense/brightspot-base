@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "homepage": "https://github.com/perfectsense/brightspot-base",
   "dependencies": {
-    "bsp-ajax-links" : "perfectsense/brightspot-js-ajax-links#^0.0.1",
+    "bsp-ajax-links" : "perfectsense/brightspot-js-ajax-links#0.0.4",
     "bsp-autosubmit" : "perfectsense/brightspot-js-autosubmit#^2.0.0",
     "bsp-carousel": "perfectsense/brightspot-js-carousel#^1.1.3",
     "bsp-form": "perfectsense/brightspot-js-form#^0.0.5",

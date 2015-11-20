@@ -1,4 +1,4 @@
-<div class="component promo-component{{#if modifierClass}} {{modifierClass}}{{/if}}">
+<div class="component promo-component{{#if modifierClass}} {{modifierClass}}{{/if}}" {{#if options.loadMore}}data-bsp-ajax-links data-bsp-ajax-links-options='{"loadType":"loadMore"}'{{/if}}>
     {{#with heading}}
         <div class="component-title">{{render this}}</div>
     {{/with}}

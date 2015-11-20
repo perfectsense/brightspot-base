@@ -1,6 +1,11 @@
 {
     "_wrapper": "/_wrapper.json",
+
     "_template" : "/assets/templates/base/components/search-results",
+
+    "options" : {
+      "loadMore" : true
+    },
 
     "heading" : {
         "_template" : "/assets/templates/base/components/component-group",
@@ -55,116 +60,122 @@
     },
 
     "searchResults" : {
-        "_template" : "/assets/templates/base/components/promo",
+      "_template" : "/assets/templates/base/components/promo",
 
-        "modifierClass" : "promo-small",
+      "modifierClass" : "promo-small",
 
-        "horizontalSplit" : "third",
+      "horizontalSplit" : "third",
 
-        "listItems" : [
-            {
-                "_template": "/assets/templates/base/components/promo-item",
+      "listItems" : [
+          {
+              "_template": "/assets/templates/base/components/promo-item",
 
-                "_repeat" : 9,
+              "_repeat" : 9,
 
-                "sections" : [
-                    {
+              "sections" : [
+                  {
 
-                        "_template" : "/assets/templates/base/components/promo-section",
+                      "_template" : "/assets/templates/base/components/promo-section",
 
-                        "type" : "tags",
+                      "type" : "tags",
 
-                        "tags" : {
+                      "tags" : {
 
-                            "_template": "/assets/templates/base/elements/tags",
-                            "tagList": [
-                                {
-                                    "_template": "/assets/templates/base/common/link",
-                                    "attributes": {
-                                        "href": "#",
-                                        "_template": "/assets/templates/base/common/attributes"
-                                    },
-                                    "body": {
-                                        "_template": "/assets/templates/base/common/text",
-                                        "text": "{{words(2)}}"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
+                          "_template": "/assets/templates/base/elements/tags",
+                          "tagList": [
+                              {
+                                  "_template": "/assets/templates/base/common/link",
+                                  "attributes": {
+                                      "href": "#",
+                                      "_template": "/assets/templates/base/common/attributes"
+                                  },
+                                  "body": {
+                                      "_template": "/assets/templates/base/common/text",
+                                      "text": "{{words(2)}}"
+                                  }
+                              }
+                          ]
+                      }
+                  },
+                  {
 
-                        "_template" : "/assets/templates/base/components/promo-section",
+                      "_template" : "/assets/templates/base/components/promo-section",
 
-                        "type" : "image",
+                      "type" : "image",
 
-                        "image" : {
+                      "image" : {
 
-                            "_template" : "/assets/templates/base/common/link",
+                          "_template" : "/assets/templates/base/common/link",
 
-                            "attributes" : {
-                                "_template" : "/assets/templates/base/common/attributes",
-                                "href"  : "link"
-                            },
+                          "attributes" : {
+                              "_template" : "/assets/templates/base/common/attributes",
+                              "href"  : "link"
+                          },
 
-                            "body" : {
+                          "body" : {
 
-                                "_template" : "/assets/templates/base/common/image",
+                              "_template" : "/assets/templates/base/common/image",
 
-                                "attributes" : {
-                                    "_template" : "/assets/templates/base/common/attributes",
-                                    "alt" : "{{words([ 1, 2 ])}}",
-                                    "src" : "{{image(800, 450)}}"
-                                }
-                            }
-                        }
-                    },
-                    {
+                              "attributes" : {
+                                  "_template" : "/assets/templates/base/common/attributes",
+                                  "alt" : "{{words([ 1, 2 ])}}",
+                                  "src" : "{{image(800, 450)}}"
+                              }
+                          }
+                      }
+                  },
+                  {
 
-                        "_template" : "/assets/templates/base/components/promo-section",
+                      "_template" : "/assets/templates/base/components/promo-section",
 
-                        "type" : "text",
+                      "type" : "text",
 
-                        "title" : {
-                            "_template" : "/assets/templates/base/common/link",
+                      "title" : {
+                          "_template" : "/assets/templates/base/common/link",
 
-                            "attributes" : {
-                                "_template" : "/assets/templates/base/common/attributes",
-                                "href"  : "#"
-                            },
+                          "attributes" : {
+                              "_template" : "/assets/templates/base/common/attributes",
+                              "href"  : "#"
+                          },
 
-                            "body" : {
-                                "_template" : "/assets/templates/base/common/text",
-                                "text" : "{{words([ 1, 2 ])}}"
-                            }
-                        },
+                          "body" : {
+                              "_template" : "/assets/templates/base/common/text",
+                              "text" : "{{words([ 1, 2 ])}}"
+                          }
+                      },
 
-                        "description" : {
-                            "_template" : "/assets/templates/base/common/text",
+                      "description" : {
+                          "_template" : "/assets/templates/base/common/text",
 
-                            "text" : "{{words(10)}}"
-                        }
+                          "text" : "{{words(10)}}"
+                      }
 
-                    }
+                  }
 
-                ]
-            }
-        ]
-    },
+              ]
+          }
+      ],
 
-    "cta": {
-        "_template": "/assets/templates/base/components/component-cta",
-        "location": "bottom",
-        "content": {
-            "_template": "/assets/templates/base/common/link",
-            "attributes": {
-                "href": "link-me",
-                "_template": "/assets/templates/base/common/attributes"
-            },
-            "body": {
-                "_template": "/assets/templates/base/common/text",
-                "text": "{{words(2)}}"
-            }
-        }
-    }
+      "cta": {
+          "_template": "/assets/templates/base/components/component-cta",
+
+          "options" : {
+            "loadMore" : true,
+            "location" : "bottom"
+          },
+          "content": {
+              "_template": "/assets/templates/base/common/link",
+              "attributes": {
+                  "href": "index",
+                  "_template": "/assets/templates/base/common/attributes",
+                  "data-ajax-link-target" : ".search-results"
+              },
+              "body": {
+                  "_template": "/assets/templates/base/common/text",
+                  "text": "{{words(2)}}"
+              }
+          }
+      }
+  }
+
 }

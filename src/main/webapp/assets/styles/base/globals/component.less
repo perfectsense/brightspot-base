@@ -95,6 +95,18 @@
             padding-right: @space;
         }
     }
+
+    // if we are load more, we look like a tag
+    &.load-more {
+        a {
+            padding: @space-double !important; // the element we are extending comes in after globals for specificity
+            &:extend(.tag all);
+
+            &:after {
+                content: '';
+            }
+        }
+    }
 }
 
 // if the content has hard item heights, there is no margin on the cta, it will screw up the hardcoded item heights
