@@ -1,7 +1,9 @@
 {
   "_wrapper": "/_wrapper.json",
   "_template": "/assets/templates/base/components/gallery-module",
-  "dots": true,
+  "displayOptions" : {
+    "dots": true
+    },
   "heading": {
     "_template": "/assets/templates/base/common/text",
     "text": "7 slides, with dots, no thumbs"
@@ -21,7 +23,6 @@
   ],
   "cta": {
     "_template": "/assets/templates/base/components/component-cta",
-    "location": "bottom",
     "content": {
       "_template": "/assets/templates/base/common/link",
       "attributes": {

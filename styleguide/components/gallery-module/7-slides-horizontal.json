@@ -2,12 +2,14 @@
   "_wrapper": "/_wrapper.json",
   "_template": "/assets/templates/base/components/gallery-module",
 
-  "horizontalSlides": true,
-  "slidesToShowMedium": 7,
-  "slidesToShowSmall": 4,
-  "slidesToScrollMedium": 7,
-  "slidesToScrollSmall": 4,
-  "theme": "horizontal",
+  "displayOptions" : {
+      "horizontalSlides": true,
+      "slidesToShowMedium": 7,
+      "slidesToShowSmall": 4,
+      "slidesToScrollMedium": 7,
+      "slidesToScrollSmall": 4,
+      "theme": "horizontal"
+  },
 
   "heading": {
     "_template" : "/assets/templates/base/components/component-group",

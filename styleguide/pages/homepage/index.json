@@ -8,8 +8,6 @@
   "body" : {
     "_template": "/assets/templates/base/common/body",
 
-    "modifierClass": "homepage",
-
     "headerView": {
       "_dataUrl": "/components/site-header-simple/index.json"
     },

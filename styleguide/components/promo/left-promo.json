@@ -1,8 +1,11 @@
 {
     "_wrapper": "/_wrapper.json",
     "_template" : "/assets/templates/base/components/promo",
-    "horizontalSplit" : "half",
-    "modifierClass" : "promo-left",
+
+    "displayOptions" : {
+        "horizontalSplit" : "half",
+        "modifierClass" : "promo-left"
+    },
 
     "heading" : {
         "_template" : "/assets/templates/base/common/text",

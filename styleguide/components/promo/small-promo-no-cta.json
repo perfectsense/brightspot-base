@@ -2,9 +2,10 @@
     "_wrapper": "/_wrapper.json",
     "_template" : "/assets/templates/base/components/promo",
 
-    "modifierClass" : "promo-small",
-
-    "horizontalSplit" : "third",
+    "displayOptions" : {
+        "horizontalSplit" : "third",
+        "modifierClass" : "promo-small"
+    },
 
     "listItems" : [
         {

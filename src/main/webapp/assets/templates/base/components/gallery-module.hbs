@@ -1,37 +1,37 @@
-<div class="component gallery-module-component{{#if modifierClass}} {{modifierClass}}{{/if}}">
+<div class="component gallery-module-component{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
 	{{#if heading}}
 		<h3 class="component-title">{{render heading}}</h3>
 	{{/if}}
 
 	<div class="component-content">
 
-		<div class="gallery-module gallery-module-{{#if theme}}{{theme}}{{/if}}" data-bsp-carousel data-bsp-carousel-options='{
-			"theme" : "{{#if theme}}{{theme}}{{else}}{{#if dots}}carousel-dots{{/if}}{{/if}}",
+		<div class="gallery-module gallery-module-{{#if displayOptions.theme}}{{displayOptions.theme}}{{/if}}" data-bsp-carousel data-bsp-carousel-options='{
+			"theme" : "{{#if displayOptions.theme}}{{displayOptions.theme}}{{else}}{{#if displayOptions.dots}}carousel-dots{{/if}}{{/if}}",
 
             {{#if dynamicSlideLoad}}"dynamicSlideLoad" : true,{{/if}}
 
 			"themeConfig" : {
-	            "arrows" : {{#if arrows}}{{arrows}}{{else}}true{{/if}},
-	            "dots" : {{#if dots}}true{{else}}false{{/if}}
+	            "arrows" : {{#if displayOptions.arrows}}{{displayOptions.arrows}}{{else}}true{{/if}},
+	            "dots" : {{#if displayOptions.dots}}true{{else}}false{{/if}}
 
-	            {{#if horizontalSlides}},
+	            {{#if displayOptions.horizontalSlides}},
 
-                    {{#if slidesToScrollMedium}}
-                        "slidesToScroll" : {{slidesToScrollMedium}},
+                    {{#if displayOptions.slidesToScrollMedium}}
+                        "slidesToScroll" : {{displayOptions.slidesToScrollMedium}},
                     {{else}}
                         "slidesToScroll" : 5,
                     {{/if}}
 
-					{{#if slidesToShowMedium}}
-					"slidesToShow" : {{slidesToShowMedium}},
+					{{#if displayOptions.slidesToShowMedium}}
+					"slidesToShow" : {{displayOptions.slidesToShowMedium}},
 
 					"responsive": [
 				    {
 				      "breakpoint": 768,
 				      "settings": {
-				        "slidesToShow": {{slidesToShowSmall}},
-                        {{#if slidesToScrollSmall}}
-                            "slidesToScroll" : {{slidesToScrollSmall}}
+				        "slidesToShow": {{displayOptions.slidesToShowSmall}},
+                        {{#if displayOptions.slidesToScrollSmall}}
+                            "slidesToScroll" : {{displayOptions.slidesToScrollSmall}}
                         {{else}}
                             "slidesToScroll" : 2
                         {{/if}}
@@ -45,8 +45,8 @@
 				      "breakpoint": 768,
 				      "settings": {
 				        "slidesToShow": 2,
-                        {{#if slidesToScrollSmall}}
-                            "slidesToScroll" : {{slidesToScrollSmall}}
+                        {{#if displayOptions.slidesToScrollSmall}}
+                            "slidesToScroll" : {{displayOptions.slidesToScrollSmall}}
                         {{else}}
                             "slidesToScroll" : 2
                         {{/if}}

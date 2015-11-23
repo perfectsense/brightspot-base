@@ -37,11 +37,12 @@
 
               "modifierClass" : "promo-small tag-results",
 
-              "options" : {
-                "loadMore" : true
-              },
+              "loadMore" : true,
 
-              "horizontalSplit" : "third",
+              "displayOptions" : {
+                "horizontalSplit" : "third"
+
+                },
 
               "listItems" : [
                   {
@@ -112,8 +113,7 @@
               "cta": {
                   "_template": "/assets/templates/base/components/component-cta",
 
-                  "options" : {
-                    "location": "bottom",
+                  "displayOptions" : {
                     "loadMore" : true
                   },
 

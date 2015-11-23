@@ -3,9 +3,7 @@
 
     "_template" : "/assets/templates/base/components/search-results",
 
-    "options" : {
-      "loadMore" : true
-    },
+    "loadMore" : true,
 
     "heading" : {
         "_template" : "/assets/templates/base/components/component-group",
@@ -25,7 +23,9 @@
         "searchResultsSort" : {
             "_template": "/assets/templates/base/common/form",
 
-            "modifierClass": "search-results-sort",
+            "displayOptions" : {
+                "modifierClass": "search-results-sort"
+            },
 
             "attributes" : {
                 "_template": "/assets/templates/base/common/attributes",
@@ -78,9 +78,10 @@
     "searchResults" : {
       "_template" : "/assets/templates/base/components/promo",
 
-      "modifierClass" : "promo-small",
-
-      "horizontalSplit" : "third",
+      "displayOptions" : {
+        "modifierClass" : "promo-small",
+        "horizontalSplit" : "third"
+      },
 
       "listItems" : [
           {
@@ -175,10 +176,10 @@
       "cta": {
           "_template": "/assets/templates/base/components/component-cta",
 
-          "options" : {
-            "loadMore" : true,
-            "location" : "bottom"
-          },
+          "displayOptions" : {
+            "loadMore" : true
+            },
+
           "content": {
               "_template": "/assets/templates/base/common/link",
               "attributes": {

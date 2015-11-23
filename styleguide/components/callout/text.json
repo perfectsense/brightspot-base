@@ -2,7 +2,9 @@
     "_wrapper": "/_wrapper.json",
     "_template" : "/assets/templates/base/components/callout",
 
-    "modifierClass" : "component-inverse-color",
+    "displayOptions" : {
+      "modifierClass" : "component-inverse-color"
+    },
 
     "sections" : [
         {
@@ -10,13 +12,13 @@
 
             "components" : [
                 {
-                    "_template" : "/assets/templates/base/common/text",
-                    "text" : "{{words(4)}}"
+                  "_template" : "/assets/templates/base/common/text",
+                  "text" : "{{words(4)}}"
                 },
                 {
-                    "_template" : "/assets/templates/base/common/text",
-                    "modifierClass" : "text-brand-accent",
-                    "text" : "{{words(4)}}"
+                  "_template" : "/assets/templates/base/common/text",
+                  "modifierClass" : "text-brand-accent",
+                  "text" : "{{words(4)}}"
                 }
 
             ]
@@ -28,15 +30,13 @@
             "cssClass" : "tag",
 
             "attributes" : {
-                "_template" : "/assets/templates/base/common/attributes",
-                "href"  : "link"
+              "_template" : "/assets/templates/base/common/attributes",
+              "href"  : "link"
             },
 
             "body" : {
-
-                "_template" : "/assets/templates/base/common/text",
-
-                "text" : "{{words(4)}}:"
+              "_template" : "/assets/templates/base/common/text",
+              "text" : "{{words(4)}}:"
             }
         }
     ]

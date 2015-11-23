@@ -1,11 +1,13 @@
 {
   "_wrapper": "/_wrapper.json",
   "_template": "/assets/templates/base/elements/social-share",
-  "social": "Share",
+  "socialTitle": {
+    "_template": "/assets/templates/base/common/text",
+    "text" : "Share"
+    },
   "title": "Brightspot",
   "description": "A user experience platform, designed and developed to power large scale, highly dynamic, editorially rich and visually stunning experiences.",
   "facebookId": 12345,
-  "iconClass": "icon",
   "image": "http://www.brightspot.com/assets/brightspot.png",
   "url": "http://www.brightspot.com",
   "redirectUrl": "http://www.brightspot.com",

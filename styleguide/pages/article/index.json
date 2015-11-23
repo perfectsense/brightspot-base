@@ -7,7 +7,9 @@
 
   "body" : {
     "_template": "/assets/templates/base/common/body",
-    "modifierClass": "article-page",
+    "displayOptions" : {
+        "modifierClass": "article-page"
+    },
     "headerView": {
       "_dataUrl": "/components/site-header-simple/index.json"
     },

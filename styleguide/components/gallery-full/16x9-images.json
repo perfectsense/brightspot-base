@@ -2,9 +2,10 @@
     "_wrapper" : "/_wrapper.json",
     "_template": "/assets/templates/base/components/gallery-full",
 
-    "modifierClass" : "component-inverse-color ratio-16x9",
-
-    "thumbnails" : true,
+    "displayOptions" : {
+        "modifierClass" : "component-inverse-color ratio-16x9",
+        "thumbnails" : true
+    },
 
     "heading": {
         "_template" : "/assets/templates/base/common/text",
@@ -90,14 +91,15 @@
         },
         {
             "_template" : "/assets/templates/base/components/gallery-full-interstitial",
-            "modifierClass" : "interstitial",
-            "contentUrl" : "_interstitial.html",
-            "countDisable" : false,
-            "countMessage" : "Advertisement: You may skip in {n} seconds",
-            "countDuration" : 5,
-            "countPosition" : "topRight",
-            "navEnabled" : false,
-            "navVisible" : true
+            "displayOptions" : {
+                "countDisable" : false,
+                "countMessage" : "Advertisement: You may skip in {n} seconds",
+                "countDuration" : 5,
+                "countPosition" : "topRight",
+                "navEnabled" : false,
+                "navVisible" : true
+            },
+            "contentUrl" : "_interstitial.html"
         },
         {
             "_repeat" : 5,

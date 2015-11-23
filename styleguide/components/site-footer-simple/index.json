@@ -4,7 +4,9 @@
   "socialLinks": [
     {
       "_template": "/assets/templates/base/common/link",
-      "icon": "facebook",
+      "displayOptions" : {
+         "icon": "facebook"
+      },
       "attributes": {
         "href": "http://www.facebook.com",
         "title": "Facebook",
@@ -14,7 +16,9 @@
     },
     {
       "_template": "/assets/templates/base/common/link",
-      "icon": "twitter",
+      "displayOptions" : {
+        "icon": "twitter"
+      },
       "attributes": {
         "href": "http://www.twitter.com",
         "title": "Twitter",
@@ -24,7 +28,9 @@
     },
     {
       "_template": "/assets/templates/base/common/link",
-      "icon": "pinterest",
+      "displayOptions" : {
+        "icon": "pinterest"
+        },
       "attributes": {
         "href": "http://www.pinterest.com",
         "title": "Pinterest",
@@ -34,7 +40,9 @@
     },
     {
       "_template": "/assets/templates/base/common/link",
-      "icon": "linkedin",
+      "displayOptions" : {
+        "icon": "linkedin"
+        },
       "attributes": {
         "href": "http://www.linkedin.com",
         "title": "LinkedIn",

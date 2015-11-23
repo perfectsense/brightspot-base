@@ -1,7 +1,11 @@
 {
   "_wrapper": "/_wrapper.json",
   "_template": "/assets/templates/base/elements/social-share",
-  "monochrome": true,
+
+  "displayOptions" : {
+    "monochrome": true
+   },
+
   "title": "Brightspot",
   "description": "A user experience platform, designed and developed to power large scale, highly dynamic, editorially rich and visually stunning experiences.",
   "facebookId": 12345,

@@ -1,4 +1,4 @@
-<div class="component promo-component{{#if modifierClass}} {{modifierClass}}{{/if}}" {{#if options.loadMore}}data-bsp-ajax-links data-bsp-ajax-links-options='{"loadType":"loadMore"}'{{/if}}>
+<div class="component promo-component{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}" {{#if loadMore}}data-bsp-ajax-links data-bsp-ajax-links-options='{"loadType":"loadMore"}'{{/if}}>
     {{#with heading}}
         <div class="component-title">{{render this}}</div>
     {{/with}}
@@ -6,12 +6,10 @@
     <div class="component-content">
 
         <div class="promo">
-            <ul class="promo-list {{#if horizontalSplit}}row{{/if}}">
+            <ul class="promo-list {{#if displayOptions.horizontalSplit}}row{{/if}}">
                 {{#each listItems}}
-                    <li class="{{#if ../horizontalSplit}}column-{{../horizontalSplit}}{{/if}}">
-
+                    <li class="{{#if ../displayOptions.horizontalSplit}}column-{{../displayOptions.horizontalSplit}}{{/if}}">
                         {{render this}}
-
                     </li>
                 {{/each}}
             </ul>

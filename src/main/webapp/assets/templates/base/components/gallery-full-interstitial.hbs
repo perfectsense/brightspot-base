@@ -9,17 +9,17 @@
     navVisible - if true, show navigation while the countdown is happening
 --}}
 <div
-    class="gallery-full-interstitial{{#if modifierClass}} {{modifierClass}}{{/if}}"
+    class="gallery-full-interstitial{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}"
     data-options=
     '
         {
             "contentUrl" : "{{contentUrl}}",
-            "countDisable" : {{countDisable}},
-            "countMessage" : "{{countMessage}}",
-            "countDuration" : {{countDuration}},
-            "countPosition" : "{{countPosition}}",
-            "navEnabled" : {{navEnabled}},
-            "navVisible" : {{navVisible}}
+            "countDisable" : {{displayOptions.countDisable}},
+            "countMessage" : "{{displayOptions.countMessage}}",
+            "countDuration" : {{displayOptions.countDuration}},
+            "countPosition" : "{{displayOptions.countPosition}}",
+            "navEnabled" : {{displayOptions.navEnabled}},
+            "navVisible" : {{displayOptions.navVisible}}
         }
     '
 >

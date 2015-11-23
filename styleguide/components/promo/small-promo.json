@@ -2,14 +2,15 @@
     "_wrapper": "/_wrapper.json",
     "_template" : "/assets/templates/base/components/promo",
 
-    "modifierClass" : "promo-small",
+    "displayOptions" : {
+        "horizontalSplit" : "third",
+        "modifierClass" : "promo-small"
+    },
 
     "heading" : {
         "_template" : "/assets/templates/base/common/text",
         "text" : "Small Promo"
     },
-
-    "horizontalSplit" : "third",
 
     "listItems" : [
         {
@@ -79,7 +80,6 @@
 
     "cta": {
         "_template": "/assets/templates/base/components/component-cta",
-        "location": "bottom",
         "content": {
             "_template": "/assets/templates/base/common/link",
             "attributes": {

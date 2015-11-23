@@ -3,76 +3,18 @@
 * IMPORTANT READ THIS
 * ===================
 *
-* By default, main is by default configured to pull in all the base LESS.
-* Many projects will not need all of these libraries, so please optimize by commenting out what you do not use.
+* By default, main is by default configured to pull in base and all base components
+* Many projects will not need all of these components, so please optimize by commenting out what you do not use.
 * Your LESS for your project goes at the bottom of this file, including any custom project variables, elements, mixins and components
 /*
 
-
 /**
-* Mixins
+* Base
 * ----------------------------------------------------------------------------
-* Leaving these in a separate folder for now. Will figure out if we move thes around
-* but either way they will be brought in and can be used throughout
-* Mixins are prefaced with the private _ so they stay out ouf our automated LESS documentation
+* This is the Base LESS, which contains variables, mixings, globals, and elements
 * ----------------------------------------------------------------------------
 */
-@import (reference) "base/mixins/_mixins.less";
-
-
-/**
-* Globals, utilities, mixins, vars
-* ----------------------------------------------------------------------------
-* Start off with the normalize reset and our scaffolding, then the rest of our globals. Each has their own documentation
-* ----------------------------------------------------------------------------
-*/
-@import "base/globals/normalize.less";
-@import "base/globals/scaffolding.less";
-@import "base/globals/borders.vars";
-@import "base/globals/colors.vars";
-@import "base/globals/component.less";
-@import "base/globals/component.vars";
-@import "base/globals/grid.less";
-@import "base/globals/grid.vars";
-@import "base/globals/modal.less";
-@import "base/globals/spacing.vars";
-@import "base/globals/typography.less";
-@import "base/globals/typography.vars";
-@import "base/globals/utilities-basic.less";
-@import "base/globals/utilities-responsive.less";
-@import "base/globals/z-index.vars";
-
-
-/**
-* Bowered CSS.
-* ----------------------------------------------------------------------------
-* This is for plugins that we bowered in that have their own CSS
-* ----------------------------------------------------------------------------
-*/
-@import (inline) "bsp-carousel.css";
-@import (inline) "bsp-modal.css";
-
-/**
-* Elements
-* ----------------------------------------------------------------------------
-* These are elements. Some of these correspond to DOM elements, others are small building blocks that components or parts of components can extend
-* The primary difference is that elements do not have a component class wrapper and they are primarily used inside components, meaning that very
-* rarely will you see an element just stand alone inside a page layout without being represented inside a component
-* ----------------------------------------------------------------------------
-*/
-@import "base/elements/blockquote.less";
-@import "base/elements/buttons.less";
-@import "base/elements/buttons.vars";
-@import "base/elements/icons.less";
-@import "base/elements/images.less";
-@import "base/elements/lists.less";
-@import "base/elements/loading-icons.less";
-@import "base/elements/meta-data.less";
-@import "base/elements/share-links.less";
-@import "base/elements/share-links.vars";
-@import "base/elements/tags.less";
-@import "base/elements/titles.less";
-
+@import "base/base.less";
 
 /**
 * Components
@@ -103,6 +45,7 @@
 * These are specific overrides for pages only. Use these in emergency situation when one page has a different treatment than the rest of the site
 * ----------------------------------------------------------------------------
 */
+@import "base/pages/gallery.less";
 @import "base/pages/video.less";
 
 /**
@@ -110,4 +53,3 @@
 * Your Project CSS Goes Below Here
 * ===================
 */
-

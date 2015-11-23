@@ -8,7 +8,9 @@
   "body" : {
     "_template": "/assets/templates/base/common/body",
 
-    "modifierClass": "gallery-page",
+    "displayOptions" : {
+        "modifierClass" : "gallery-page"
+    },
 
     "headerView": {
       "_dataUrl": "/components/site-header-simple/index.json"

@@ -1,7 +1,9 @@
 {
   "_wrapper": "/_wrapper.json",
   "_template": "/assets/templates/base/elements/list",
-  "ordered": true,
+  "displayOptions" : {
+    "ordered": true
+    },
   "items": [
     {
       "_template": "/assets/templates/base/common/text",

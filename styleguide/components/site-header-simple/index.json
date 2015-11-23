@@ -38,7 +38,9 @@
 
         "_template": "/assets/templates/base/common/form",
 
-        "modifierClass": "site-header-simple-search",
+        "displayOptions" : {
+            "modifierClass": "site-header-simple-search"
+        },
 
         "attributes" : {
             "_template": "/assets/templates/base/common/attributes",
@@ -49,7 +51,9 @@
             {
                 "_template" : "/assets/templates/base/common/form-input",
 
-                "modifierClass" : "site-search-text",
+                "displayOptions" : {
+                    "modifierClass" : "site-search-text"
+                },
 
                 "attributes": {
                     "_template": "/assets/templates/base/common/attributes",
@@ -63,9 +67,10 @@
             {
                 "_template" : "/assets/templates/base/common/form-input",
 
-                "modifierClass" : "site-search-submit",
-
-                "isButton" : true,
+                "displayOptions" : {
+                    "isButton" : true,
+                    "modifierClass" : "site-search-submit"
+                },
 
                 "attributes": {
                     "_template": "/assets/templates/base/common/attributes",

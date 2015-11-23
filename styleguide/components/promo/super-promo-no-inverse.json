@@ -3,7 +3,7 @@
     "_template" : "/assets/templates/base/components/promo",
 
     "displayOptions" : {
-        "modifierClass" : "promo-super component-inverse-color"
+        "modifierClass" : "promo-super"
     },
 
     "listItems" : [

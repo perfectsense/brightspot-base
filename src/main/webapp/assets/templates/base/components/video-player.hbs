@@ -1,12 +1,12 @@
-<div class="component video-player-component{{#if modifierClass}} {{modifierClass}}{{/if}} {{#if align}}content-aligned{{/if}}">
+<div class="component video-player-component{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}} {{#if align}}content-aligned{{/if}}">
 
     <div class="bsp-component-content">
         <div class="video-player">
             <div class="container">
             <div class="row">
 
-                {{#if align}}
-                <div class="column-three-fourths pull-{{align}}">
+                {{#if displayOptions.align}}
+                <div class="column-three-fourths pull-{{displayOptions.align}}">
                 {{else}}
                 <div class="column-full">
                 {{/if}}
@@ -60,7 +60,7 @@
 
                 </div> {{!-- end of column --}}
 
-                {{#if align}}
+                {{#if displayOptions.align}}
                 <div class="column-fourth">
                 {{else}}
                 <div class="column-full">

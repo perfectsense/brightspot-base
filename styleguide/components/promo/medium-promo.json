@@ -2,14 +2,15 @@
     "_wrapper": "/_wrapper.json",
     "_template" : "/assets/templates/base/components/promo",
 
-    "modifier" : "promo-medium",
+    "displayOptions" : {
+        "horizontalSplit" : "half",
+        "modifierClass" : "promo-medium"
+    },
 
     "heading" : {
         "_template" : "/assets/templates/base/common/text",
         "text" : "Medium Promo"
     },
-
-    "horizontalSplit" : "half",
 
     "listItems" : [
         {

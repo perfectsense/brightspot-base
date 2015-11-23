@@ -7,7 +7,9 @@
 
   "body" : {
     "_template": "/assets/templates/base/common/body",
-    "modifierClass": "video-page",
+    "displayOptions" : {
+        "modifierClass": "video-page"
+    },
     "headerView": {
       "_dataUrl": "/components/site-header-simple/index.json"
     },
@@ -19,7 +21,9 @@
         {
           "_template" : "/assets/templates/base/components/component-group",
 
-          "modifierClass" : "component-inverse-color",
+          "displayOptions" : {
+            "modifierClass" : "component-inverse-color"
+            },
 
           "components" : [{
 

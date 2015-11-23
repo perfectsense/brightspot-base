@@ -1,9 +1,12 @@
 {
   "_wrapper": "/_wrapper.json",
+
   "_template": "/assets/templates/base/components/article",
+
   "sharing": {
     "_dataUrl": "/elements/social-share/share-monochrome.json"
   },
+
   "permalink": "/bsp-article/",
   "title": "{{words}}",
   "subTitle": "{{words}}",

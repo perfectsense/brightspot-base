@@ -1,12 +1,15 @@
 {
   "_wrapper": "/_wrapper.json",
   "_template": "/assets/templates/base/components/gallery-module",
-  "horizontalSlides": true,
-  "slidesToShowMedium": 5,
-  "slidesToShowSmall": 2,
-  "slidesToScrollMedium": 5,
-  "slidesToScrollSmall": 2,
-  "theme": "horizontal",
+
+  "displayOptions" : {
+      "horizontalSlides": true,
+      "slidesToShowMedium": 5,
+      "slidesToShowSmall": 2,
+      "slidesToScrollMedium": 5,
+      "slidesToScrollSmall": 2,
+      "theme": "horizontal"
+  },
 
   "heading": {
     "_template": "/assets/templates/base/common/text",

@@ -2,7 +2,9 @@
     "_wrapper": "/_wrapper.json",
     "_template" : "/assets/templates/base/components/promo",
 
-    "modifierClass" : "promo-super component-inverse-color",
+    "displayOptions" : {
+        "modifierClass" : "promo-super component-inverse-color"
+    },
 
     "listItems" : [
         {

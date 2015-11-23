@@ -1,14 +1,14 @@
-<div class="component iframe-component{{#if hideMobile}} hidden-xs{{/if}}">
+<div class="component iframe-component{{#if displayOptions.hideMobile}} hidden-xs{{/if}}">
     {{#if heading}}
         <div class="component-title">{{heading}}</div>
     {{/if}}
-    {{#if contentStage}}
-    <div class="iframe-stage" style="{{#if contentStageBackgroundColor}}background-color: {{contentStageBackgroundColor}}{{/if}}">
+    {{#if displayOptions.contentStage}}
+    <div class="iframe-stage" style="{{#if displayOptions.contentStageBackgroundColor}}background-color: {{displayOptions.contentStageBackgroundColor}}{{else}}#333{{/if}}">
     {{/if}}
-        <div class="component-content{{#if contentAlign}} align-{{contentAlign}}{{/if}}" style="{{#if contentWidth}}width: {{contentWidth}}px; {{/if}}{{#if contentHeight}}height: {{contentHeight}}px; {{/if}}">
+        <div class="component-content{{#if displayOptions.contentAlign}} align-{{displayOptions.contentAlign}}{{/if}}" style="{{#if displayOptions.contentWidth}}width: {{displayOptions.contentWidth}}px; {{/if}}{{#if displayOptions.contentHeight}}height: {{displayOptions.contentHeight}}px; {{/if}}">
             {{{content}}}
         </div>
-    {{#if contentStage}}
+    {{#if displayOptions.contentStage}}
     </div>
     {{/if}}
 </div>

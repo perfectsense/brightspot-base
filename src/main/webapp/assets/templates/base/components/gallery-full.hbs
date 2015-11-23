@@ -1,4 +1,4 @@
-<div data-bsp-carousel-gallery data-bsp-carousel-gallery-options='{ "baseClass" : "gallery-full", "dynamicSlideLoad" : "{{dynamicSlideLoad}}" {{#if thumbnailsToShow}},"nav": { "themeConfig" : { "slidesToShow" : {{thumbnailsToShow}} } } {{/if}} }'{{#if modifierClass}} class="{{modifierClass}}"{{/if}}>
+<div data-bsp-carousel-gallery data-bsp-carousel-gallery-options='{ "baseClass" : "gallery-full", "dynamicSlideLoad" : "{{dynamicSlideLoad}}" {{#if displayOptions.thumbnailsToShow}},"nav": { "themeConfig" : { "slidesToShow" : {{displayOptions.thumbnailsToShow}} } } {{/if}} }'{{#if displayOptions.modifierClass}} class="{{displayOptions.modifierClass}}"{{/if}}>
 
     <div class="gallery-full-wrapper">
 
@@ -18,7 +18,7 @@
         <div class="gallery-full">
             <div class="bsp-carousel-stage">
                 {{#each slides}}
-                    <div class="bsp-carousel-slide{{#if modifierClass}} {{modifierClass}}{{/if}}">
+                    <div class="bsp-carousel-slide{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
                         {{render this}}
                     </div>
                 {{/each}}
@@ -28,7 +28,7 @@
                 <div class="bsp-carousel-nav">
 
                     {{#each slides}}
-                        <div class="bsp-carousel-slide{{#if modifierClass}} {{modifierClass}}{{/if}}">
+                        <div class="bsp-carousel-slide{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
                             {{render this.thumbnail}}
                         </div>
                     {{/each}}

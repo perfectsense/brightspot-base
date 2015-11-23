@@ -23,7 +23,6 @@
   ],
   "cta": {
     "_template": "/assets/templates/base/components/component-cta",
-    "location": "bottom",
     "content": {
       "_template": "/assets/templates/base/common/link",
       "attributes": {

@@ -1,7 +1,11 @@
 {
   "_wrapper": "/_wrapper.json",
   "_template": "/assets/templates/base/components/gallery-module-with-nav",
-  "thumbnailsToShow": "4",
+
+  "displayOptions" : {
+    "thumbnailsToShow": "4"
+    },
+
   "heading": {
     "_template": "/assets/templates/base/common/text",
     "text": "5 slides with thumbs"
