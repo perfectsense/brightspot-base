@@ -3,11 +3,6 @@
   "_template": "/assets/templates/base/layouts/one-col",
   "main": [
     {
-      "_template": "/assets/templates/base/common/html",
-      "modifierClass": "styleguide-page-description",
-      "text": "<p>TODO: Clean up this documentation, at least it's a start</p><p>The bsp-modal code uses http://github.hubspot.com/vex/ as it's base much like bsp-carousel uses slick. To create a modal, create a div with the class 'bsp-modal-data' with the data attribute of 'data-bsp-modal' to trigger the JS init. There is an optional id that can be set to override the modal id for custom CSS. Default is 'modal'. Example: </p><pre> &lt;div class=\"bsp-modal-data\" data-bsp-modal data-bsp-modal-options='{\"id\" : \"id-here\"}'&gt;</pre><p>This div should have the contents of the modal. To open said modal via a click, create a link with data-bsp-modal-open=\"id-here\". Upon click of the link the modal will open. It can be closed with it's own close button, Esc key, or an off click. Example:</p><pre> &lt;a data-bsp-modal-open=\"id-here\" href=\"#\"&gt;Open the modal with data-bsp-modal id of \"id-here\"&lt;/a&gt;</pre><p>When initialized the API for the modal is attached to the data attribute 'bsp-modal' of the original div, so you can: </p><pre> $('[data-bsp-modal-id-here]').data('bsp-modal').open()\n or\n $('[data-bsp-modal-id-here]').data('bsp-modal').close()</pre> You can also listen to events on that div: </p><pre> $('[data-bsp-modal-id-here]').on('bsp-modal:open', function(){ alert('id-here modal opened!'); });</pre><p>or on the body</p><pre> $('body').on('bsp-modal:open', function(event, modal) { \n // modal is the instance of the modal object so you can close, open, etc \n // example: modal.close(); \n });</pre><p>Multiple modals can be opened on top of each other. They will overlay themselves with the latest being on top.</p><p>Lastly, the bsp-modal can just be imported into another JS plugin/module and used to interface with the modal. The open public API allows you to pass a Jquery object, theme and id to open a modal with that content. The modal will self attach to the Esc key and it's own close button, but you can also call the close public API function to close your modal.</p> <pre> import bsp_modal from './bsp-modal'; \n var myModal = Object.create(bsp_modal); \n myModal.open($('&lt;div&gt;asdf&lt;/div&gt;'); \n myModal.close();</pre>"
-    },
-    {
       "_template": "/assets/templates/base/elements/modal",
       "id": "foo",
       "content": {
@@ -32,7 +27,7 @@
     },
     {
       "_template": "/assets/templates/base/common/html",
-      "text": "<p><a data-bsp-modal-open=\"foo\" href=\"#\">Open the modal with data-bsp-modal id of \"foo\"</a></p>"
+      "text": "<div style=\"height: 750px;\"><p><a data-bsp-modal-open=\"foo\" href=\"#\">Open the modal with data-bsp-modal id of \"foo\"</a></p></div>"
     }
   ]
 }
