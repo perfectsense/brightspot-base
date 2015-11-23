@@ -279,8 +279,6 @@ body.gallery-page {
 }
 
 
-
-
 @media @mq-sm {
     .gallery-full {
         .bsp-carousel-stage {
@@ -388,3 +386,52 @@ body.gallery-page {
     }
 
 }
+
+// Adding this in here, as we are going to have to experiment with this. Talking to Kaitlin, we might want to create the gallery so it
+// stretches to the full size of the browser. If we do this, we'd have to eliminate the footer on gallery pages, or at least create
+// a small footer. Or throw it into the modal. Either way, don't want to lose this code, as it seems to work well
+.gallery-stretch-concept {
+    .gallery-full-wrapper {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background: #333;
+    }
+
+    .gallery-full-header {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .gallery-full-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .gallery-full {
+        position: absolute;
+        top: 100px;
+        bottom: 100px;
+        width: 100%;
+
+        .bsp-carousel-stage {
+            height: 100%;
+
+            .slick-list, .slick-track, .bsp-carousel-slide {
+                height: 100%;
+            }
+
+            .bsp-carousel-slide {
+                img {
+                    max-height: none;
+                }
+            }
+
+        }
+    }
+}
+
+
