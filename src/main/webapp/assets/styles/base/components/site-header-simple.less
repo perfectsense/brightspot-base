@@ -50,26 +50,26 @@
 }
 
 .nav-menu-item {
-    background: @color-header-background;
+    background: @color-gray-light-1;
     border-bottom: 1px solid @color-white;
     line-height: @header-site-xs-menu-item-height;
     text-align: center;
     text-transform: uppercase;
 
     a {
-        color: @color-white;
+        color: @color-text;
     }
 }
 
 .site-header-simple-search-wrapper {
     align-items: center;
-    background: @color-header-background;
+    background: @color-gray-light-1;
     display: flex;
     height: @header-height;
 }
 
 .site-header-simple-search {
-    height: 50%;
+    height: 75%;
     margin: 0 auto;
     position: relative;
     width: 90%;
@@ -81,18 +81,19 @@
 }
 
 .site-search-text-input {
-    background: @color-header-site-search-input;
+    background: @color-gray-light-1;
     border: none;
-    color: @color-white;
+    color: @color-text;
     height: 100%;
     text-align: left;
+    text-transform: uppercase;
     width: 100%;
 }
 
 .site-search-submit-input {
-    background: @color-header-site-search-input;
+    background: @color-gray-light-1;
     border: none;
-    color: @color-header-site-search-input;
+    color: @color-gray-light-1;
     height: 25px;
     width: 25px;
     overflow: hidden;
@@ -103,7 +104,7 @@
     .icon();
 
     &:before {
-        color: @color-white;
+        color: @color-text;
         content: @fa-var-search;
         font-size: @ts-1;
         text-indent: 5000px;
@@ -152,7 +153,8 @@
         align-items: center;
         display: flex;
         float: right;
-        position: relative;
+        overflow: visible;
+        position: static;
         top: 0;
         height: auto;
         width: calc(100% ~"-" (@header-site-logo-width));
@@ -178,6 +180,10 @@
         line-height: @line-height-base;
         text-transform: uppercase;
         padding: 0 @space;
+
+        a {
+            color: @color-white;
+        }
     }
 
     .site-header-simple-search-wrapper {
@@ -187,8 +193,17 @@
 
     .site-header-simple-search {
         margin: 0;
+        position: absolute;
+        top: @header-height+@header-border-width;
+        left: 0;
         width: 100%;
     }
 
+    .site-search-text-input {
+        padding-left: @space-double;
+    }
 
+    .site-search-submit-input {
+        right: @space-double;
+    }
 }

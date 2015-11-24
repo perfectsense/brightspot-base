@@ -76,7 +76,7 @@
 
           "main" : [
             {
-              "_dataUrl" : "/components/promo/small-promo.json"
+              "_dataUrl" : "/components/social-feed/index.json"
             }
           ]
         },

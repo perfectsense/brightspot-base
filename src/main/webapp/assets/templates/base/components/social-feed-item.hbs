@@ -1,0 +1,20 @@
+<div class="social-feed-item">
+    <div class="social-feed-profile">
+        <div class="profile-photo">
+            {{render profilePhoto}}
+        </div>
+        <div class="profile-info">
+            {{#if profileName}}<div class="profile-name">{{render profileName}}</div>{{/if}}
+            {{#if profileName}}<div class="profile-user">{{render profileUser}}</div>{{/if}}
+        </div>
+    </div>
+    <div class="social-feed-body">
+        {{#each socialFeedBody}}
+            {{render this}}
+        {{/each}}
+    </div>
+    <div class="social-feed-footer">
+        <div class="feed-icon"><i class="icon icon-{{feedType}}"></i></div>
+        {{#if publishDate}}<div class="publish-date">{{render publishDate}}</div>{{/if}}
+    </div>
+</div>

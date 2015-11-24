@@ -43,15 +43,12 @@
 }
 
 .component-title {
-    &:extend(.section-title);
+    &:extend(.section-title all);
     text-align: center;
-
-    a {
-        color: @color-text;
-    }
 }
 
 .component-subtitle {
+    color: @color-text;
     display: block;
     font-size: @ts-0;
     line-height: @line-height-base;

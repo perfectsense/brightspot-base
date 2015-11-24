@@ -1,0 +1,23 @@
+<div class="component social-feed-component{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}" {{#if loadMore}}data-bsp-ajax-links data-bsp-ajax-links-options='{"loadType":"loadMore"}'{{/if}}>
+    {{#with heading}}
+        <div class="component-title">{{render this}}</div>
+    {{/with}}
+
+    <div class="component-content">
+
+        <div class="social-feed">
+            <ul class="social-feed-list {{#if displayOptions.horizontalSplit}}row{{/if}}">
+                {{#each items}}
+                    <li class="{{#if ../displayOptions.horizontalSplit}}column-{{../displayOptions.horizontalSplit}}{{/if}}">
+                        {{render this}}
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+
+    </div>
+
+    {{#with cta}}
+        {{render this}}
+    {{/with}}
+</div>

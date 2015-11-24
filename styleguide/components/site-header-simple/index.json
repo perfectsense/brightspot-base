@@ -61,7 +61,8 @@
                     "id" : "q",
                     "name" : "q",
                     "required": true,
-                    "type": "text"
+                    "type": "text",
+                    "placeholder": "Enter Keyword Search..."
                 }
             },
             {
