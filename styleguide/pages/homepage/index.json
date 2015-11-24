@@ -26,14 +26,21 @@
           ]
         },
         {
-          "_template": "/assets/templates/base/layouts/one-col",
+            "_template": "/assets/templates/base/layouts/full-page",
 
-          "main" : [
-            {
-              "_dataUrl" : "/components/promo/small-promo.json"
-            }
-          ]
+            "displayOptions" : {
+                "modifierClass" : "layout-secondary-color"
+            },
 
+            "main" : [
+                {
+                    "_template": "/assets/templates/base/layouts/one-col",
+
+                    "main" : [{
+                        "_dataUrl" : "/components/promo/medium-promo.json"
+                    }]
+                }
+            ]
         },
         {
           "_template": "/assets/templates/base/layouts/one-col",
@@ -46,26 +53,39 @@
 
         },
         {
-          "_template": "/assets/templates/base/layouts/full-page",
+            "_template": "/assets/templates/base/layouts/full-page",
 
-          "main" : [
-            {
-              "_dataUrl" : "/components/callout/text.json"
-            }
-          ]
+            "displayOptions" : {
+                "modifierClass" : "layout-secondary-color"
+            },
+
+            "main" : [
+                {
+                  "_template": "/assets/templates/base/layouts/one-col",
+
+                  "main" : [
+                    {
+                      "_dataUrl" : "/components/promo/small-promo.json"
+                    }
+                  ]
+                }
+            ]
         },
         {
           "_template": "/assets/templates/base/layouts/one-col",
 
           "main" : [
             {
-              "_dataUrl" : "/components/promo/medium-promo.json"
-            },
+              "_dataUrl" : "/components/promo/small-promo.json"
+            }
+          ]
+        },
+        {
+          "_template": "/assets/templates/base/layouts/full-page",
+
+          "main" : [
             {
-              "_dataUrl" : "/components/promo/large-promo.json"
-            },
-            {
-              "_dataUrl" : "/components/gallery-module/7-slides-horizontal.json"
+              "_dataUrl" : "/components/callout/text.json"
             }
           ]
         }

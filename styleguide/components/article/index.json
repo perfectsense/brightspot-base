@@ -86,7 +86,9 @@
     {
       "_template": "/assets/templates/base/components/article-enhancement",
 
-      "align": "center",
+      "displayOptions" : {
+        "align": "center"
+      },
 
       "content": {
         "_template" : "/assets/templates/base/common/iframe",
@@ -138,7 +140,9 @@
     },
     {
       "_template": "/assets/templates/base/components/article-enhancement",
-      "align": "left",
+      "displayOptions" : {
+        "align": "left"
+      },
       "content": {
         "_template": "/assets/templates/base/common/image",
         "attributes": {
@@ -153,7 +157,9 @@
     },
     {
       "_template": "/assets/templates/base/components/article-enhancement",
-      "align": "center",
+      "displayOptions" : {
+        "align": "center"
+      },
       "content": {
         "_template" : "/assets/templates/base/components/video-player",
         "youtube" : true,
@@ -166,7 +172,9 @@
     },
     {
       "_template": "/assets/templates/base/components/article-enhancement",
-      "align": "right",
+      "displayOptions" : {
+        "align": "right"
+      },
       "content": {
         "_template": "/assets/templates/base/common/figure",
         "credit": "{{name}}",

@@ -1,7 +1,7 @@
 // padding vs margin allows for cleaner separation between components, especially if things inside of them use margins
 
 .component {
-    padding-bottom: @space-component-bottom;
+    padding: @space-component-bottom 0;
     position: relative;
 
     // if we have components inside of each other. No margin on the inside ones
@@ -11,11 +11,8 @@
 }
 
 .component-inverse-color {
-    background: @component-inverse-color-background;
-    color: @component-inverse-color-text;
-    // since inverse promos have this background, we need padding and margin to make them look right
-    margin-bottom: @space-component-bottom;
-    padding-bottom: @space-component-bottom;
+    background: @color-component-inverse-background;
+    color: @color-component-inverse-text;
 
     // if we inverse a whole component group vs just a component, do not add the extra padding to it
     &.component-group {
@@ -24,6 +21,22 @@
     }
 
     // if we have components inside of an inverse color one, no padding either
+    .component {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.component-secondary-color {
+    background: @color-component-secondary-background;
+
+    // if we secondary a whole component group vs just a component, do not add the extra padding to it
+    &.component-group {
+        margin: 0;
+        padding: 0;
+    }
+
+    // if we have components inside of an secondary color one, no padding either
     .component {
         margin: 0;
         padding: 0;
@@ -51,7 +64,7 @@
 }
 
 .component-cta {
-    border-top: @border-style-7;
+    border-top: @border-style-9;
     padding-top: @space;
     text-align: center;
 

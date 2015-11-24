@@ -1,5 +1,5 @@
-<div{{#if displayOptions.modifierClass}} class="{{displayOptions.modifierClass}}"{{/if}}>
+{{#if displayOptions.modifierClass}}<div class="{{displayOptions.modifierClass}}">{{/if}}
     {{#each main}}
         {{render this}}
     {{/each}}
-</div>
+{{#if displayOptions.modifierClass}}</div>{{/if}}
