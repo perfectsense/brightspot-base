@@ -27,8 +27,13 @@
 // adding a few overrides for left-promo here
 .promo-left {
 
-    .promo-section-image {
+    .column-half:first-of-type {
         display: none;
+    }
+
+    // for this modifier, we make a custom grid
+    .column-half {
+        width: 100%;
     }
 
     .promo-links {
@@ -63,15 +68,19 @@
 
     }
 
+}
+
+@media @mq-md {
 
     .promo-left {
 
-        .promo-section-image {
+        .column-half:first-of-type {
             display: block;
         }
 
-        .promo-links {
-            display: block;
+        .column-half {
+            width: 50%;
         }
+
     }
 }
