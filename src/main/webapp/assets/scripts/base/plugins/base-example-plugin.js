@@ -1,11 +1,11 @@
 import $ from 'jquery';
 import bsp_utils from 'bsp-utils';
-import bsp_scroll_checker from './base-scroll-checker';
+import bsp_example from './base-example';
 
-export default bsp_utils.plugin(false, 'base', 'scroll-checker', {
+export default bsp_utils.plugin(false, 'base', 'example', {
     '_each': function(item) {
         var options = this.option(item);
-        var moduleInstance = Object.create(bsp_scroll_checker);
+        var moduleInstance = Object.create(bsp_example);
         moduleInstance.init($(item), options);
     }
 });

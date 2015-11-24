@@ -21,12 +21,11 @@ import bsp_share from                       'bsp-share';
 import bsp_tabber_plugin from               'bsp-tabber-plugin';
 import bsp_toggle_plugin from               'bsp-toggle-item-plugin';
 
-
 /**
  * These are Base specific JS plugins. These are not generic enough to have their own repo, so we put them in the base plugins
  * folder, and they can be compiled in, if you need to use them
  */
-import base_scroll_checker from              'base/plugins/base-scroll-checker-plugin';
+import base_example from              'base/plugins/base-example-plugin';
 
 
 export default {};

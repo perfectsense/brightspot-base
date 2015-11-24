@@ -1,3 +1,5 @@
+/** This file is in this repo temporarily for fast development/QA, until we make our final changes and move out to brightspot-js-carousel */
+
 import $ from 'jquery';
 import bsp_carousel from 'bsp-carousel-thumbnav';
 import historyAPI from 'native.history';
