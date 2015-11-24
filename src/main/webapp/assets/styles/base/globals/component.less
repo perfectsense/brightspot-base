@@ -1,7 +1,6 @@
 // padding vs margin allows for cleaner separation between components, especially if things inside of them use margins
-
 .component {
-    padding: @space-component-bottom 0;
+    padding: @space-component-bottom/2 0;
     position: relative;
 
     // if we have components inside of each other. No margin on the inside ones
@@ -129,6 +128,10 @@
 
 
 @media @mq-sm {
+    .component {
+        padding: @space-component-bottom 0;
+    }
+
     .component-cta {
         border-top: none;
         padding-top: 0;

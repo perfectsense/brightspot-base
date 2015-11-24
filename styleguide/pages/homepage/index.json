@@ -21,7 +21,7 @@
 
           "main" : [
             {
-              "_dataUrl" : "/components/promo/super-promo.json"
+              "_dataUrl" : "/components/promo/super-promo-no-bullets.json"
             }
           ]
         },

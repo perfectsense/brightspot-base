@@ -5,12 +5,12 @@
 
     // if you have the cta in a promo component, give it spacing too so everything looks even
     .component-cta {
-        padding-bottom: @space-component-bottom;
+        padding-bottom: @space-component-bottom/2;
     }
 }
 .promo-list {
     > li {
-        padding-bottom: @space-component-bottom;
+        padding-bottom: @space-component-bottom/2;
     }
 }
 
@@ -78,6 +78,17 @@
 
 
 @media @mq-sm {
+    .promo-component {
+        .component-cta {
+            padding-bottom: @space-component-bottom;
+        }
+    }
+    .promo-list {
+        > li {
+            padding-bottom: @space-component-bottom;
+        }
+    }
+
     .promo-list {
         > li {
             margin-bottom: 0;

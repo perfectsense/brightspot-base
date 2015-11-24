@@ -1,7 +1,8 @@
 // wrapper allows us to create the fixed position look/feel
 .site-header-simple-wrapper {
     background: @color-header-background;
-    height: @header-height;
+    border-bottom: @header-border-bottom;
+    height: @header-height+@header-border-width;
     left: 0;
     position: @header-positioning;
     top: 0;
@@ -18,13 +19,15 @@
     &:extend(.clearfix all);
     background: @color-header-background;
     height: @header-height;
-    padding: 0 @space-double;
+    padding: 0 @space-double 0 0;
     width: 100%;
 }
 
 .site-logo {
+    display: flex;
+    align-items: center;
     float: left;
-    line-height: @header-height;
+    height: 100%;
     vertical-align: middle;
     text-align: left;
     width: @header-site-logo-width;
@@ -47,15 +50,14 @@
 }
 
 .nav-menu-item {
-    background: @color-gray-light-1;
+    background: @color-header-background;
     border-bottom: 1px solid @color-white;
-    font-size: @ts-1;
     line-height: @header-site-xs-menu-item-height;
     text-align: center;
     text-transform: uppercase;
 
-    &:last-of-type {
-        border: none;
+    a {
+        color: @color-white;
     }
 }
 
@@ -83,7 +85,6 @@
     border: none;
     color: @color-white;
     height: 100%;
-    font-size: @ts-1;
     text-align: left;
     width: 100%;
 }
@@ -164,7 +165,8 @@
 
     .nav-menu-items {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
+        padding-right: @space-double;
         text-align: center;
     }
 
@@ -172,13 +174,10 @@
         background: none;
         border: none;
         display: inline-block; // to make older IE work
+        font-size: @ts-neg-1;
         line-height: @line-height-base;
         text-transform: uppercase;
         padding: 0 @space;
-
-        a {
-            color: @color-white;
-        }
     }
 
     .site-header-simple-search-wrapper {
@@ -192,10 +191,4 @@
     }
 
 
-}
-
-@media @mq-lg {
-    .site-header-simple {
-        padding: 0 @space-quad;
-    }
 }
