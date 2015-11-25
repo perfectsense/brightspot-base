@@ -3,8 +3,8 @@
     "_template": "/assets/templates/base/components/gallery-full",
 
     "displayOptions" : {
-      "modifierClass" : "component-inverse-color aspect-4x3",
-      "thumbnails" : true
+        "modifierClass" : "component-inverse-color aspect-4x3",
+        "thumbnails" : true
     },
 
     "heading": {
