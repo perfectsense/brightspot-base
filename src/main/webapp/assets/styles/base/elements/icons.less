@@ -44,26 +44,26 @@
 // instead of importing fontawesome/icons.less which includes all the icons that can be used, we will manually
 // write out the ones we need here. We can just drop these classes into the DOM
 .@{fa-css-prefix}-twitter {
-    background-color: @color-twitter;
+    color: @color-twitter;
     &:before {
         content: @fa-var-twitter;
     }
 }
 .@{fa-css-prefix}-facebook {
-    background-color: @color-facebook;
+    color: @color-facebook;
     &:before {
         content: @fa-var-facebook;
     }
 }
 .@{fa-css-prefix}-linkedin {
-    background-color: @color-linkedin;
+    color: @color-linkedin;
     &:before {
         content: @fa-var-linkedin;
     }
 }
 
 .@{fa-css-prefix}-pinterest {
-    background-color: @color-pinterest;
+    color: @color-pinterest;
     &:before {
         content: @fa-var-pinterest;
     }
@@ -72,13 +72,13 @@
     content: @fa-var-external-link;
 }
 .@{fa-css-prefix}-instagram {
-    background-color: @color-instagram;
+    color: @color-instagram;
     &:before {
         content: @fa-var-instagram;
     }
 }
 .@{fa-css-prefix}-tumblr {
-    background-color: @color-tumblr;
+    color: @color-tumblr;
     &:before {
         content: @fa-var-tumblr;
     }
@@ -101,6 +101,25 @@
 .@{fa-css-prefix}-angle-right:before {
     content: @fa-var-angle-right;
 }
+.@{fa-css-prefix}-share:before {
+    content: @fa-var-share;
+}
+.@{fa-css-prefix}-retweet:before {
+    content: @fa-var-retweet;
+}
+.@{fa-css-prefix}-thumbs-up:before {
+    content: @fa-var-thumbs-up;
+}
+.@{fa-css-prefix}-thumbs-down:before {
+    content: @fa-var-thumbs-down;
+}
+.@{fa-css-prefix}-star:before {
+    content: @fa-var-star;
+}
+.@{fa-css-prefix}-comment:before {
+    content: @fa-var-comment;
+}
+
 
 // we will import the variables and mixins as reference so we can use them
 @import (reference) "../../bower/fontawesome/variables.less";

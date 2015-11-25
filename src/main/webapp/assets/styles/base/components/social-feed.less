@@ -1,7 +1,5 @@
 .social-feed-list {
-    > li {
-        padding-bottom: @space-component-bottom/2;
-    }
+    &:extend(.promo-list all);
 }
 
 .social-feed-item {
@@ -38,42 +36,51 @@
 
 .social-feed-body {
     &:extend(.clearfix all);
-    height: 130px;
+    height: 120px;
     overflow: hidden;
     padding: @space;
     font-size: @ts-neg-1;
 
     img {
        float: left;
-        margin-right: @space;
+       margin: 0 @space @space-half 0;
     }
 }
 
 .social-feed-footer {
-    &:extend(.clearfix all);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     border-top: @border-style-7;
+    height: 35px;
     padding: @space-half;
 
-    .feed-icon {
-        float: left;
-        padding-right: @space-half;
+    .publish-info {
+        color: @color-gray;
+        float: left; // for old skool browsers
+        font-size: @ts-neg-2;
+        text-transform: uppercase;
 
         .icon {
             background: none;
+            font-size: @ts-0;
+            line-height: 2; // helps align it centered
+            margin-right: @space-half;
         }
     }
 
-    .publishDate {
-        float: left;
-        font-size: @ts-neg-2;
-        text-transform: uppercase;
-    }
-}
+    .publish-links {
+        &:extend(.list-inline all);
 
-@media @mq-sm {
-    .social-feed-list {
-        > li {
-            padding-bottom: @space-component-bottom;
+        float: right; // for old skool browsers
+        font-size: @ts-neg-1;
+        text-transform: uppercase;
+
+        a {
+            color: @color-gray-light-2;
+            margin-left: @space-double;
+            .icon();
         }
     }
 }

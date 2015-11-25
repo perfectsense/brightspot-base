@@ -14,7 +14,11 @@
         {{/each}}
     </div>
     <div class="social-feed-footer">
-        <div class="feed-icon"><i class="icon icon-{{feedType}}"></i></div>
-        {{#if publishDate}}<div class="publish-date">{{render publishDate}}</div>{{/if}}
+        <div class="publish-info"><i class="icon icon-{{feedType}}"></i> {{#if publishDate}}{{render publishDate}}{{/if}}</div>
+        <ul class="publish-links">
+            {{#each publishLinks}}
+                <li>{{render this}}</li>
+            {{/each}}
+        </ul>
     </div>
 </div>

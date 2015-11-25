@@ -1,0 +1,95 @@
+{
+    "_wrapper": "/_wrapper.json",
+    "_template" : "/assets/templates/base/components/promo",
+
+    "displayOptions" : {
+        "horizontalSplit" : "third",
+        "modifierClass" : "promo-small"
+    },
+
+    "heading" : {
+        "_template" : "/assets/templates/base/common/text",
+        "text" : "Small Promo"
+    },
+
+    "listItems" : [
+        {
+            "_template": "/assets/templates/base/components/promo-item",
+
+            "_repeat" : 6,
+
+            "sections" : [
+                {
+
+                    "_template" : "/assets/templates/base/components/promo-section",
+
+                    "type" : "image",
+
+                    "image" : {
+
+                        "_template" : "/assets/templates/base/common/link",
+
+                        "attributes" : {
+                            "_template" : "/assets/templates/base/common/attributes",
+                            "href"  : "link"
+                        },
+
+                        "body" : {
+
+                            "_template" : "/assets/templates/base/common/image",
+
+                            "attributes" : {
+                                "_template" : "/assets/templates/base/common/attributes",
+                                "alt" : "{{words([ 1, 2 ])}}",
+                                "src" : "{{image(800, 450)}}"
+                            }
+                        }
+                    }
+                },
+                {
+
+                    "_template" : "/assets/templates/base/components/promo-section",
+
+                    "type" : "text",
+
+                    "title" : {
+                        "_template" : "/assets/templates/base/common/link",
+
+                        "attributes" : {
+                            "_template" : "/assets/templates/base/common/attributes",
+                            "href"  : "#"
+                        },
+
+                        "body" : {
+                            "_template" : "/assets/templates/base/common/text",
+                            "text" : "{{words([ 1, 2 ])}}"
+                        }
+                    },
+
+                    "description" : {
+                        "_template" : "/assets/templates/base/common/text",
+
+                        "text" : "{{words(10)}}"
+                    }
+
+                }
+
+            ]
+        }
+    ],
+
+    "cta": {
+        "_template": "/assets/templates/base/components/component-cta",
+        "content": {
+            "_template": "/assets/templates/base/common/link",
+            "attributes": {
+                "href": "link-me",
+                "_template": "/assets/templates/base/common/attributes"
+            },
+            "body": {
+                "_template": "/assets/templates/base/common/text",
+                "text": "{{words(2)}}"
+            }
+        }
+    }
+}

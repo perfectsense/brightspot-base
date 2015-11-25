@@ -76,6 +76,11 @@ body {
 
 .column-half {
 	.make-sm-column(6);
+
+    // grid fix to make sure the 3th, 6th, etc columns wrap correctly
+    &:nth-child(2n+1) {
+        clear: left;
+    }
 }
 
 .column-two-thirds {

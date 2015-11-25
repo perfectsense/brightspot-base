@@ -1,17 +1,12 @@
-// For the promo component, we want to put the spacing on the promo list items instead of the component itself
-// that way if you have multiple rows, things are even
 .promo-component {
-    padding-bottom: 0;
-
-    // if you have the cta in a promo component, give it spacing too so everything looks even
     .component-cta {
-        padding-bottom: @space-component-bottom/2;
+        padding-top: @space-double;
     }
 }
 
 .promo-list {
     > li {
-        padding-bottom: @space-component-bottom/2;
+        padding-bottom: @space-double;
     }
 }
 
@@ -79,20 +74,22 @@
 
 
 @media @mq-sm {
-    .promo-component {
-        .component-cta {
-            padding-bottom: @space-component-bottom;
-        }
-    }
     .promo-list {
-        > li {
-            padding-bottom: @space-component-bottom;
+        .column-half:nth-child(n+3) {
+            padding-top: @space-double;
         }
-    }
+        .column-third:nth-child(n+4) {
+            padding-top: @space-double;
+        }
+        .column-fourth:nth-child(n+5) {
+            padding-top: @space-double;
+        }
+        .column-fifth:nth-child(n+5) {
+            padding-top: @space-double;
+        }
 
-    .promo-list {
         > li {
-            margin-bottom: 0;
+            padding-bottom: 0;
         }
     }
 
@@ -104,5 +101,4 @@
             transition: opacity 1s;
         }
     }
-
 }

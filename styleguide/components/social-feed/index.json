@@ -96,7 +96,7 @@
                     "attributes" : {
                         "_template" : "/assets/templates/base/common/attributes",
                         "alt" : "{{words([ 1, 2 ])}}",
-                        "src" : "{{image(100, 100)}}"
+                        "src" : "{{image(80, 80)}}"
                     }
                 },
                 {
@@ -108,7 +108,34 @@
             "publishDate" : {
                 "_template": "/assets/templates/base/common/text",
                 "text": "Oct 24 5:30pm"
-            }
+            },
+
+            "publishLinks" : [
+                {
+                    "_template": "/assets/templates/base/common/link",
+                    "cssClass" : "icon-share",
+                    "attributes": {
+                        "href": "share-link",
+                        "_template": "/assets/templates/base/common/attributes"
+                    }
+                },
+                {
+                    "_template": "/assets/templates/base/common/link",
+                    "cssClass" : "icon-thumbs-up",
+                    "attributes": {
+                        "href": "retweet-link",
+                        "_template": "/assets/templates/base/common/attributes"
+                    }
+                },
+                {
+                    "_template": "/assets/templates/base/common/link",
+                    "cssClass" : "icon-comment",
+                    "attributes": {
+                        "href": "star-link",
+                        "_template": "/assets/templates/base/common/attributes"
+                    }
+                }
+            ]
         },
         {
             "_template": "/assets/templates/base/components/social-feed-item",
@@ -151,6 +178,38 @@
                 {
                     "_template": "/assets/templates/base/common/html",
                     "text": "{{words([ 20, 30 ])}}"
+                }
+            ],
+
+            "publishDate" : {
+                "_template": "/assets/templates/base/common/text",
+                "text": "Oct 24 5:30pm"
+            },
+
+            "publishLinks" : [
+                {
+                    "_template": "/assets/templates/base/common/link",
+                    "cssClass" : "icon-share",
+                    "attributes": {
+                        "href": "share-link",
+                        "_template": "/assets/templates/base/common/attributes"
+                    }
+                },
+                {
+                    "_template": "/assets/templates/base/common/link",
+                    "cssClass" : "icon-retweet",
+                    "attributes": {
+                        "href": "retweet-link",
+                        "_template": "/assets/templates/base/common/attributes"
+                    }
+                },
+                {
+                    "_template": "/assets/templates/base/common/link",
+                    "cssClass" : "icon-star",
+                    "attributes": {
+                        "href": "star-link",
+                        "_template": "/assets/templates/base/common/attributes"
+                    }
                 }
             ]
         }
