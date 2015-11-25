@@ -101,7 +101,7 @@
                 },
                 {
                     "_template": "/assets/templates/base/common/html",
-                    "text": "{{words([ 10, 20 ])}}"
+                    "text": "{{words([ 20, 50 ])}}"
                 }
             ],
 
@@ -177,7 +177,7 @@
             "socialFeedBody" : [
                 {
                     "_template": "/assets/templates/base/common/html",
-                    "text": "{{words([ 20, 30 ])}}"
+                    "text": "{{words([ 20, 50 ])}}"
                 }
             ],
 
