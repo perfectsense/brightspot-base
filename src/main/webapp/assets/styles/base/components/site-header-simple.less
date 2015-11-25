@@ -49,6 +49,7 @@
     }
 }
 
+// nav menu is technically an "element" as we are providing non wrapped styles here, and we are also using it in the footer with an override
 .nav-menu-item {
     background: @color-gray-light-1;
     border-bottom: 1px solid @color-white;
@@ -160,6 +161,7 @@
         width: calc(100% ~"-" (@header-site-logo-width));
     }
 
+    // nav menu is technically an "element" as we are providing non wrapped styles here, and we are also using it in the footer with an override
     .nav-menu {
         float: left;
         width: 100% - @header-site-search-width;

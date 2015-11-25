@@ -36,12 +36,16 @@
 }
 
 @media @mq-md {
+    // the nav menu gets it's main styles from the site-header-simple component
     .site-footer-simple {
         .nav-menu {
             display: block;
             float: none;
             margin: 0 0 @space-double 0;
             width: 100%;
+        }
+        .nav-menu-items {
+            justify-content: center;
         }
         .nav-menu-item {
             font-size: @ts-0;
