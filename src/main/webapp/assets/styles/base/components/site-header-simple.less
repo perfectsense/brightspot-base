@@ -19,7 +19,6 @@
     &:extend(.clearfix all);
     background: @color-header-background;
     height: @header-height;
-    padding: 0 @space-double 0 0;
     width: 100%;
 }
 
@@ -63,17 +62,17 @@
 }
 
 .site-header-simple-search-wrapper {
-    align-items: center;
     background: @color-gray-light-1;
-    display: flex;
     height: @header-height;
 }
 
 .site-header-simple-search {
-    height: 75%;
-    margin: 0 auto;
+    height: 100%;
     position: relative;
-    width: 90%;
+}
+
+.site-search-toggle-trigger {
+    display: none;
 }
 
 .site-search-text {
@@ -86,6 +85,7 @@
     border: none;
     color: @color-text;
     height: 100%;
+    padding-left: @space-double;
     text-align: left;
     text-transform: uppercase;
     width: 100%;
@@ -100,7 +100,7 @@
     overflow: hidden;
     position: absolute;
     top: calc(~"50% - 12px");
-    right: @space-quarter;
+    right: @space-double;
 
     .icon();
 
@@ -120,7 +120,10 @@
 
 .site-menu-trigger {
     &:extend(.ts-2);
+    cursor: pointer;
+    float: right;
     text-align: right;
+    padding: 0 @space-double;
     position: relative;
 
     a {
@@ -153,7 +156,7 @@
     .site-menu-toggle {
         align-items: center;
         display: flex;
-        float: right;
+        justify-content: flex-end;
         overflow: visible;
         position: static;
         top: 0;
@@ -188,26 +191,47 @@
         }
     }
 
+    .site-search-toggle-trigger {
+        cursor: pointer;
+        display: block;
+        line-height: @header-height;
+        padding: 0 @space-triple;
+        text-align: center;
+
+        a {
+           color: @color-white;
+           display: block;
+           width: 20px; // used to make sure even if we change icons, it won't change in size
+        }
+
+        &.toggle-in {
+            .icon {
+                &:before {
+                    content: @fa-var-close;
+                }
+            }
+        }
+    }
+
     .site-header-simple-search-wrapper {
-        float: right;
-        width: @header-site-search-width;
+        background: @color-header-site-search-trigger;
+        width: auto;
     }
 
     .site-header-simple-search {
         height: 0;
         margin: 0;
+        opacity: 0.85;
         overflow: hidden;
         position: absolute;
         top: @header-height+@header-border-width;
+        transition: height 0.15s;
         left: 0;
         width: 100%;
+
+        &.toggle-in {
+            height: @header-height;
+        }
     }
 
-    .site-search-text-input {
-        padding-left: @space-double;
-    }
-
-    .site-search-submit-input {
-        right: @space-double;
-    }
 }
