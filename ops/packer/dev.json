@@ -1,0 +1,5 @@
+{
+  "source_ami": "ami-6440020e",
+  "recipe": "recipe[brightspot-base::default]",
+  "layer": "development"
+}

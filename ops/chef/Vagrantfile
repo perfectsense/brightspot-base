@@ -1,0 +1,73 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.require_version ">= 1.5.0"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  override_fs = ENV['FS'] ? ENV['FS'] : "nfs"
+  override_recipe = ENV['RECIPE'] ? ENV['RECIPE'] : "brightspot-base::vagrant"
+
+  config.vm.hostname = "brightspot-base-cookbook"
+  config.omnibus.chef_version = '12.4.1'
+  config.vm.box = "brightspot-base-76dd89"
+  config.vm.box_url = "http://s3.amazonaws.com/perfectsense-ops/boxes/brightspot-base-vagrant-76dd89.box?AWSAccessKeyId=AKIAJI42Z4BH7EME6IVQ&Expires=1454118286&Signature=EQ1Y%2FlqFgwbp%2FRQLEBYJFE%2B584w%3D"
+  config.vm.network :private_network, type: "dhcp"
+  config.vm.synced_folder '.', '/vagrant', type: override_fs
+  config.vm.synced_folder '../../', '/code', type: override_fs
+
+  config.vm.define config.vm.hostname do |t|
+  end
+
+  config.vm.provider :virtualbox do |vb|
+    vb.name = "brightspot-base-cookbook"
+    vb.customize ["modifyvm", :id, "--memory", "2048"]
+    vb.customize ["modifyvm", :id, "--cpus", "2"]
+    vb.customize ["modifyvm", :id, "--ioapic", "on"]
+    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+    vb.customize ["modifyvm", :id, "--chipset", "ich9"]
+    vb.customize ["modifyvm", :id, "--nictype1", "virtio"]
+  end
+
+  config.vm.provider :vmware_fusion do |fusion, override|
+    fusion.vmx["memsize"] = "2048"
+    fusion.vmx["numvcpus"] = "2"
+
+    override.vm.box = "shopify/ubuntu-12.04"
+    override.vm.box_url = "http://shopify-vagrant.s3.amazonaws.com/ubuntu-12.04_vmware.box"
+  end
+  
+  config.berkshelf.enabled = true
+
+  if Vagrant.has_plugin?("vagrant-cachier")
+    config.cache.scope = :box
+  end
+
+  config.vm.provision :chef_solo do |chef|
+    chef.data_bags_path = 'data_bags'
+    chef.environments_path = 'environments'
+
+    if ENV['BRIGHTSPOT_ENV']
+      chef.environment = ENV['BRIGHTSPOT_ENV']
+    else
+      chef.environment = 'development'
+    end
+
+    chef.json = {
+      :instance_role => "vagrant",
+      :instance_env => "dev",
+      :zabbix_agent => {
+        :enabled => false
+      }
+    }
+
+    chef.log_level = ENV.fetch("CHEF_LOG", "info").downcase.to_sym
+    chef.encrypted_data_bag_secret_key_path = '~/.chef/chef-solo-databag.key'
+    chef.run_list = [
+      "recipe[#{override_recipe}]"
+    ]
+  end
+end

@@ -1,0 +1,85 @@
+
+network: network.yml
+
+layers:
+
+  - name: frontend
+    image: <frontend_image>
+    instanceType: t2.medium
+    rolePolicies:
+      - s3-full-access
+      - describe-tags
+
+    deployment:
+      buildNumber: <build_number>
+      jenkinsBucket: brightspot-base-ops
+      jenkinsBuildPath: jobs/master
+      jenkinsWarfile: <war_file>
+
+    securityRules:
+      - production-frontend
+
+    provisioners:
+      - type: knife-solo
+        cookbookPath: ../chef
+        recipe: brightspot-base::frontend
+
+    placements:
+      - subnetType: private
+        autoscale:
+# Remember to uncomment the loadBalancers line in network.yml
+#          loadBalancer: web
+          minPerSubnet: 1
+          maxPerSubnet: 4
+          policies:
+            - name: high-cpu-scale-up
+              instancesPerSubnet: 2
+              cooldown: 120
+              alarm:
+                metric: cpu
+                greater: 60
+                period: 60
+
+            - name: high-cpu-scale-down
+              instancesPerSubnet: -2
+              cooldown: 300
+              alarm:
+                metric: cpu
+                less: 20
+                period: 300
+
+  - name: backend
+    image: <backend_image>
+    instanceType: t2.medium
+    rolePolicies:
+      - s3-full-access
+
+    securityRules:
+      - production-backend
+
+    provisioners:
+      - type: knife-solo
+        cookbookPath: ../chef
+        recipe: brightspot-base::backend
+
+    placements:
+      - subnetType: private
+        sizePerSubnet: 1
+
+  - name: master
+    image: <backend_image>
+    instanceType: t2.medium
+    rolePolicies:
+      - s3-full-access
+
+    securityRules:
+      - production-master
+
+    provisioners:
+      - type: knife-solo
+        cookbookPath: ../chef
+        recipe: brightspot-base::backend
+
+    placements:
+      - subnetType: master
+        sizePerSubnet: 1

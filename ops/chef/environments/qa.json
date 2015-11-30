@@ -1,0 +1,21 @@
+{
+  "name": "qa",
+  "description": "QA Only Settings",
+  "default_attributes": {
+    "brightspot" : {
+      "production" : true,
+      "auth" : {
+        "enabled" : true,
+        "allow_ips" : ["10.0.0.0/16", "209.31.167.24/30", "4.35.15.108/30"],
+        "exclude_paths" : ["^/_ping", "^/dims"]
+      },
+      "context.xml" : {
+        "dari/imageEditor/dims/baseUrl" : "http://qa.brightspot-base.psdops.com/dims4/default",
+        "cms/tool/isAutoCreateUser" : "true"
+      }
+    }
+  },
+
+  "json_class": "Chef::Environment",
+  "chef_type": "qa"
+}

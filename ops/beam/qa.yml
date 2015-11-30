@@ -1,0 +1,27 @@
+
+network: network.yml
+
+layers:
+
+  - name: qa
+    image: ami-xxxxxxxx
+    instanceType: m3.large
+    rolePolicies:
+      - beam-server-readonly
+      - s3-full-access
+
+    securityRules:
+      - qa
+      - operations
+
+    provisioners:
+    - type: knife-solo
+      cookbookPath: ../chef
+      recipe: brightspot-base::qa
+
+    placements:
+      - subnetType: development
+        sizePerSubnet: 1
+        hostnames:
+          - "qa.brightspot-base.psdops.com."
+          - "*.qa.brightspot-base.psdops.com."

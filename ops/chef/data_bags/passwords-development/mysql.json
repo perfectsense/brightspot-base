@@ -1,0 +1,21 @@
+{
+  "replication":{
+    "cipher":"aes-256-cbc",
+    "iv":"olDjMy9O8oSMq9L+cs+/oQ==",
+    "version":1,
+    "encrypted_data":"SUwzzl8dGE9NBjN5woiM37DtPwq7qjI67pWnguQoXU//QcUial/z9Zri0+lOMYj7wznQ661PQGflFCMRu621Kg=="
+  },
+  "backup":{
+    "cipher":"aes-256-cbc",
+    "iv":"NuGCoPiKDodxSNV/qLfm+g==",
+    "version":1,
+    "encrypted_data":"yRlwXOBnORFe8DdgJFXd6vhadhFAe+Aj8iI5gH5i+DNldMVzTAzlB6XX12d0YRvuydPdese3UmglMZ7W2zyWiQ=="
+  },
+  "root":{
+    "cipher":"aes-256-cbc",
+    "iv":"amgwaK0dBt0nmvWtSpHBmQ==",
+    "version":1,
+    "encrypted_data":"GJSDoAInsiLu4Ci/UPlTFR7hDBneQnHhHc/bpMxQWE9NKR2gWAhsX+LHwedYZ6S28dWiwp/D2GUYJTyJl4MEkA=="
+  },
+  "id":"mysql"
+}

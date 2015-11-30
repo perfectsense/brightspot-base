@@ -1,0 +1,30 @@
+Encoding.default_external = Encoding::UTF_8
+
+source "https://api.berkshelf.com"
+
+metadata
+
+def company_cookbook(name, version = '>= 0.0.0', options = {})
+  if ENV['BRIGHTSPOT_CHEF']
+    cookbook(name, version, {
+        path: "#{ENV['BRIGHTSPOT_CHEF']}/cookbooks/#{name}"
+    }.merge(options))
+  else
+    cookbook(name, version, {
+        git: "git@github.com:perfectsense/brightspot-chef.git",
+        rel: "cookbooks/#{name}"
+    }.merge(options))
+  end
+end
+
+cookbook 'td-agent', github: "treasure-data/chef-td-agent"
+
+company_cookbook 'beam', '~> 1.0.0'
+company_cookbook 'brightspot', '~> 2.0.0'
+company_cookbook 'perfectsense-brightspot', '~> 1.0.0'
+company_cookbook 'perfectsense-base', '~> 1.0.0'
+company_cookbook 'perfectsense-java', '~> 1.0.0'
+company_cookbook 'perfectsense-tomcat', '~> 1.0.0'
+company_cookbook 'perfectsense-solr', '~> 1.0.0'
+company_cookbook 'perfectsense-moddims', '~> 1.0.0'
+company_cookbook 'perfectsense-zabbix', '~> 1.0.0'

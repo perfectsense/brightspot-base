@@ -1,0 +1,286 @@
+name: brightspot-base
+account: psd-poc-dev
+subdomain: brightspot-base.psdops.com
+internalDomain: brightspot-base.internal
+serial: 1
+
+rules:
+
+  - name: operations
+    permissions:
+      - cidr: 52.5.144.128/32
+      - cidr: 54.174.153.68/32
+      - cidr: 52.8.3.47/32
+      - cidr: 52.18.247.145/32
+      - cidr: 209.31.167.24/30
+      - cidr: 4.35.15.108/30
+
+  - name: network-gateway
+    permissions:
+      - cidr: production-frontend
+      - cidr: production-backend
+      - cidr: production-master
+      - name: http/https
+        cidr: 0.0.0.0/0
+        ports:
+          - 80
+          - 443
+      - name: openvpn
+        cidr: 0.0.0.0/0
+        protocol: udp
+        ports:
+          - 1194
+
+  - name: production-frontend
+    permissions:
+      - cidr: network-gateway
+      - cidr: elb
+
+  - name: production-backend
+    permissions:
+      - cidr: network-gateway
+      - cidr: production-frontend
+      - cidr: production-master
+
+  - name: production-master
+    permissions:
+      - cidr: network-gateway
+      - cidr: production-frontend
+      - cidr: production-backend
+
+  - name: elb
+    permissions:
+      - name: http
+        cidr: 0.0.0.0/0
+        ports:
+          - 80
+          - 443
+
+  - name: development
+  
+  - name: qa
+    permissions:
+      - cidr: development
+
+clouds:
+
+  - cloud: ec2
+    activeRegions:
+      - us-east-1
+
+    buckets:
+      - name: brightspot-base-ops
+      - name: brightspot-base-brightspot
+        corsRules:
+          - allowedHeaders: [ '*' ]
+            allowedMethods: [ 'GET' ]
+            allowedOrigins: [ '*' ]
+            maxAgeSeconds: 3000
+
+    regions:
+      - name: us-east-1
+        cidr: 10.0.0.0/16
+
+# Remember to uncomment the loadBalancer line in prod.yml
+#        loadBalancers:
+#          - name: web
+#            subnetType: public
+#            dns:
+#              hostnames:
+#                - "prod.brightspot-base.psdops.com."
+#                - "*.prod.brightspot-base.psdops.com."
+#              verificationHostnames:
+#                - "verify.brightspot-base.psdops.com."
+#                - "*.verify.brightspot-base.psdops.com."
+#
+#            listeners:
+#              - protocol: http
+#                sourcePort: 80
+#                destPort: 80
+#
+#            healthCheck:
+#                protocol: http
+#                port: 80
+#                path: /_ping
+#                timeout: 5
+#                interval: 6
+#                unhealthyCount: 2
+#                healthyCount: 2
+#
+#            securityRules:
+#              - elb
+
+        endpoints:
+          - name: s3-default
+            service: s3
+
+        zones:
+
+          - name: us-east-1d
+            subnets: 
+              - types: [public, gateway]
+                cidr: 10.0.3.0/26
+                publicAccessible: true
+#                gateway: &gateway
+#                  image: ami-34cc7a5c # Ubuntu 12.04 LTS (Released 20140927)
+#                  ipAddress: 10.0.3.10
+#                  instanceType: t2.medium
+#                  rolePolicies:
+#                    - beam-server-readonly
+#                  hostnames:
+#                    - "vpn.brightspot-base.psdops.com."
+#                    - "us-east-1d.vpn.brightspot-base.psdops.com."
+#
+#                  securityRules:
+#                    - network-gateway
+#                    - operations
+#                
+#                  provisioners:
+#                    - type: knife-solo
+#                      cookbookPath: ../chef
+#                      environment: production
+#                      recipe: brightspot-base::gateway
+
+
+              - types: [private]
+                cidr: 10.0.3.128/25
+                endpoints:
+                  - s3-default
+
+              - types: [development, qa]
+                publicAccessible: true
+                cidr: 10.0.3.64/26
+
+          - name: us-east-1b
+            subnets:
+              - types: [public, gateway]
+                cidr: 10.0.1.0/26
+                publicAccessible: true
+#                gateway:
+#                  <<: *gateway
+#                  ipAddress: 10.0.1.10
+#                  hostnames:
+#                    - "vpn.brightspot-base.psdops.com."
+#                    - "us-east-1b.vpn.brightspot-base.psdops.com."
+
+              - types: [private]
+                cidr: 10.0.1.128/25
+                endpoints:
+                  - s3-default
+
+          - name: us-east-1c
+            subnets:
+              - types: [gateway]
+                cidr: 10.0.2.0/26
+                publicAccessible: true
+#                gateway:
+#                  <<: *gateway
+#                  ipAddress: 10.0.2.10
+#                  hostnames:
+#                    - "vpn.brightspot-base.psdops.com."
+#                    - "us-east-1c.vpn.brightspot-base.psdops.com."
+
+              - types: [master]
+                cidr: 10.0.2.128/25
+                endpoints:
+                  - s3-default
+
+      - name: us-west-2
+        cidr: 10.2.0.0/16
+        recoveryRegion: true
+
+        loadBalancers:
+          - name: web
+            subnetType: public
+            dns:
+              hostnames:
+                - "us-west-2.prod.brightspot-base.psdops.com."
+                - "*.us-west-2.prod.brightspot-base.psdops.com."
+              verificationHostnames:
+                - "us-west-2.verify.brightspot-base.psdops.com."
+                - "*.us-west-2.verify.brightspot-base.psdops.com."
+
+            listeners:
+              - protocol: http
+                sourcePort: 80
+                destPort: 80
+
+            healthCheck:
+                protocol: http
+                port: 80
+                path: /_ping
+                timeout: 5
+                interval: 6
+                unhealthyCount: 2
+                healthyCount: 2
+
+            securityRules:
+              - elb
+
+        endpoints:
+          - name: s3-default
+            service: s3
+
+        zones:
+
+          - name: us-west-2a
+            subnets:
+              - types: [public, gateway]
+                cidr: 10.2.0.0/26
+                publicAccessible: true
+#                gateway: &gateway
+#                  image: ami-34cc7a5c # Ubuntu 12.04 LTS (Released 20140927)
+#                  ipAddress: 10.2.0.10
+#                  instanceType: t2.medium
+#                  rolePolicies:
+#                    - beam-server-readonly
+#                  hostnames:
+#                    - "us-west-2a.vpn.brightspot-base.psdops.com."
+#
+#                  securityRules:
+#                    - network-gateway
+#                    - operations
+#
+#                  provisioners:
+#                    - type: knife-solo
+#                      cookbookPath: ../chef
+#                      environment: production
+#                      recipe: brightspot-base::gateway
+
+
+              - types: [private]
+                cidr: 10.2.0.128/25
+                endpoints:
+                  - s3-default
+
+          - name: us-west-2b
+            subnets:
+              - types: [public, gateway]
+                cidr: 10.2.1.0/26
+                publicAccessible: true
+#                gateway:
+#                  <<: *gateway
+#                  ipAddress: 10.2.1.10
+#                  hostnames:
+#                    - "us-west-2c.vpn.brightspot-base.psdops.com."
+
+              - types: [private]
+                cidr: 10.2.1.128/25
+                endpoints:
+                  - s3-default
+
+          - name: us-west-2c
+            subnets:
+              - types: [gateway]
+                cidr: 10.2.2.0/26
+                publicAccessible: true
+#                gateway:
+#                  <<: *gateway
+#                  ipAddress: 10.2.2.10
+#                  hostnames:
+#                    - "us-west-2c.vpn.brightspot-base.psdops.com."
+
+              - types: [master]
+                cidr: 10.2.2.128/25
+                endpoints:
+                  - s3-default

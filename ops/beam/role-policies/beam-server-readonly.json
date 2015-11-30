@@ -1,0 +1,26 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "autoscaling:Describe*",
+        "ec2:Describe*",
+        "elasticache:Describe*",
+        "elasticloadbalancing:Describe*",
+        "iam:List*",
+        "iam:Get*",
+        "route53:Get*",
+        "route53:List*",
+        "s3:Get*",
+        "s3:List*",
+        "sns:Get*",
+        "sns:List*",
+        "sqs:GetQueueAttributes",
+        "sqs:ListQueues",
+        "sqs:ReceiveMessage"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}

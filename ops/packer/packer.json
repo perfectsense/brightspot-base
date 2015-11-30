@@ -1,0 +1,94 @@
+{
+ "variables": {
+    "project": "brightspot-base",
+    "layer": "development",
+    "environment": "development",
+    "source_ami": "ami-34cc7a5c",
+    "recipe": "recipe[perfectsense-brightspot::default]",
+    "databag_secret_path": "",
+    "aws_access_key": "{{env `AWS_ACCESS_KEY`}}",
+    "aws_secret_key": "{{env `AWS_SECRET_KEY`}}",
+    "build_number": "{{env `BUILD_NUMBER`}}",
+    "git_commit": "{{env `GIT_COMMIT`}}"
+  },
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "region": "us-east-1",
+      "source_ami": "{{ user `source_ami`}}",
+      "instance_type": "m3.medium",
+      "ssh_username": "ubuntu",
+      "access_key": "{{user `aws_access_key`}}",
+      "secret_key": "{{user `aws_secret_key`}}",
+      "ami_name": "{{user `project`}} [{{user `layer`}}] hvm [{{user `build_number`}}]",
+      "ami_regions" : ["us-west-2"],
+      "associate_public_ip_address": "true",
+      "enhanced_networking": "true",
+      "user_data_file": "packer.userdata.json",
+      "run_tags" : {
+        "Name" : "{{user `project`}} - [packer]",
+        "beam.project" : "{{user `project`}}",
+        "beam.layer"   : "{{user `layer`}}"
+      },
+      "tags" : {
+        "beam.project" : "{{user `project`}}",
+        "beam.layer"   : "{{user `layer`}}",
+        "beam.commit"  : "{{user `git_commit`}}"
+      },
+      "launch_block_device_mappings": [ 
+        {
+          "device_name": "/dev/sda1",
+          "volume_size": 15,
+          "volume_type": "gp2",
+          "delete_on_termination": true
+        },
+        {
+          "device_name": "/dev/sdf",
+          "volume_size": 100,
+          "volume_type": "gp2",
+          "delete_on_termination": true
+        },
+        {
+          "device_name": "/dev/sdg",
+          "volume_size": 100,
+          "volume_type": "standard",
+          "delete_on_termination": true
+        }
+      ],
+      "ami_block_device_mappings": [
+        {
+          "device_name": "/dev/sdb",
+          "virtual_name": "ephemeral0"
+        },
+        {
+          "device_name": "/dev/sdc",
+          "virtual_name": "ephemeral1"
+        },
+        {
+          "device_name": "/dev/sdd",
+          "virtual_name": "ephemeral2"
+        },
+        {
+          "device_name": "/dev/sde",
+          "virtual_name": "ephemeral3"
+        }
+      ]
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "chef-solo",
+      "cookbook_paths": ["cookbooks"],
+      "data_bags_path": "../chef/data_bags",
+      "encrypted_data_bag_secret_path": "{{user `databag_secret_path`}}",
+      "environments_path": "../chef/environments",
+      "chef_environment": "{{user `environment`}}",
+      "run_list": [ "{{user `recipe`}}" ],
+      "install_command" : "curl -LO https://www.opscode.com/chef/install.sh && {{ if .Sudo}}sudo{{end}} bash ./install.sh -v 12.4.1 && rm install.sh"
+    },
+    {
+      "type": "shell",
+      "script": "image-cleanup.sh"
+    }
+  ]
+}

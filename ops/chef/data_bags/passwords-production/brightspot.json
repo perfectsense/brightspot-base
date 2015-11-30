@@ -1,0 +1,33 @@
+{
+  "debug_password": {
+    "encrypted_data": "PFyWMXkdv5XuG33BC+lHby1zNYSV0XaWBRMv0ExnjbMaZAW8e/QRdqm21eqt\nb3OBzZ7MzMkHymDMasypmRFjBw==\n",
+    "iv": "0pyEe4j5QzrlOdLclJN1Tg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "aws_access": {
+    "encrypted_data": "5nxVfv7gvh6ZWGWN0WHaA6MiKl/z9f9l/5HesyfMJVeaXNT18pljqURUO8gi\nQQrB\n",
+    "iv": "7v4zW0AOvnNxoHzMc17H7Q==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "aws_secret": {
+    "encrypted_data": "bcfzMJycogi1B/jhkZEbi6LC7wb5RYcvOIxzVbGS5EayW+poYrvdNa8xdnG7\nq/sbpAw3vpUoHsmAnwEMMTImLA==\n",
+    "iv": "G+emxOqJd/SeAA4Uj6gMqg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "id": "brightspot",
+  "dims_secret": {
+    "encrypted_data": "xExvwcJ89KbRQsjeJxfLZPMEPthEFjJ1InKFLizwPMs=\n",
+    "iv": "3WaR1MNKquDLiLHB4sKO7g==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "mysql_password": {
+    "encrypted_data": "DHuj3qdoM35WTiPR58rQrG9kgjp4uFPc4zJuDFJS7BwyL8V8DUuDkwVQcxKN\nbHsaUdSu+BLAiQ+6bPvB75OmEw==\n",
+    "iv": "DbZny0j+oTdnoKXoIN+Tfg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

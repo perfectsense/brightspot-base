@@ -1,0 +1,9 @@
+{
+  "ticket_secret":{
+    "cipher":"aes-256-cbc",
+    "iv":"uedK7Swaxz8ejwnoJGUWzA==",
+    "version":1,
+    "encrypted_data":"X3+fAQL2Ik7l0AuTM+5VCPF9Pks8VTM46EMRVN+rI9SeNq5DMJZJVpLSYKgM9d9UB6882FFotmz9I4hsp0O/kg=="
+  },
+  "id":"beam"
+}

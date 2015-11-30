@@ -1,0 +1,9 @@
+{
+  "td_agent_password":{
+    "cipher":"aes-256-cbc",
+    "iv":"Z6+2nSne2co1DTatguZO0g==\n",
+    "version":1,
+    "encrypted_data":"U5tsST50zUsC4qO8JZCIhjfIKck7FrIaiFYdyxSFlxg6F4E7KGxR++/gpHIt\nX5DS\n"
+  },
+  "id":"td-agent"
+}

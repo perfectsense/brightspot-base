@@ -1,0 +1,5 @@
+{
+  "source_ami": "ami-xxxxxxxx",
+  "recipe": "recipe[brightspot-base::qa]",
+  "layer": "qa"
+}

@@ -1,0 +1,11 @@
+{
+    "Statement": [
+        {
+		"Sid": "",
+		"Effect": "Allow",
+		"Principal": "*",
+		"Action": "*",
+		"Resource": "*"
+        }
+    ]
+}
