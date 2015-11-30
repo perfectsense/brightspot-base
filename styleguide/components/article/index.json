@@ -50,7 +50,17 @@
   "articleBody": [
     {
       "_template": "/assets/templates/base/common/html",
-      "text": "{{paragraphs}}"
+      "text": "{{paragraphs(2)}}"
+    },
+    {
+      "_template": "/assets/templates/base/components/article-enhancement",
+      "content": {
+        "_dataUrl" : "/components/gallery-grid/index.json"
+      }
+    },
+    {
+      "_template": "/assets/templates/base/common/html",
+      "text": "{{paragraphs(2)}}"
     },
     {
       "_template": "/assets/templates/base/components/article-enhancement",

@@ -1,0 +1,29 @@
+<div class="component gallery-grid-component{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
+    {{#with heading}}
+        <div class="component-title">{{render this}}</div>
+    {{/with}}
+
+    <div class="component-content" data-bsp-toggle-item data-bsp-toggle-item-options='{"toggleItem":".gallery-grid-gallery","toggleTrigger":".gallery-grid"}'>
+
+        <div class="gallery-grid">
+            {{#each grid}}
+                {{render this}}
+            {{/each}}
+        </div>
+
+        <div class="gallery-grid-gallery">
+            {{#with gallery}}
+                {{render this}}
+            {{/with}}
+        </div>
+
+        {{#with description}}
+            <div class="gallery-grid-description">{{render this}}</div>
+        {{/with}}
+
+    </div>
+
+    {{#with cta}}
+        {{render this}}
+    {{/with}}
+</div>
