@@ -1,0 +1,59 @@
+{
+
+    "_template" : "/assets/templates/base/components/promo",
+
+    "displayOptions" : {
+        "modifierClass" : "promo-75-25"
+    },
+
+    "listItems" : [
+        {
+            "_template": "/assets/templates/base/components/promo-item",
+
+            "_repeat" : 2,
+
+            "sections" : [
+                {
+
+                    "_template" : "/assets/templates/base/components/promo-section",
+
+                    "type" : "image",
+
+                    "image" : {
+
+                        "_template" : "/assets/templates/base/common/link",
+
+                        "attributes" : {
+                            "_template" : "/assets/templates/base/common/attributes",
+                            "href"  : "link"
+                        },
+
+                        "body" : {
+
+                            "_template" : "/assets/templates/base/common/image",
+
+                            "attributes" : {
+                                "_template" : "/assets/templates/base/common/attributes",
+                                "alt" : "{{words([ 1, 2 ])}}",
+                                "src" : "{{image(800, 450)}}"
+                            }
+                        }
+                    }
+                },
+                {
+
+                    "_template" : "/assets/templates/base/components/promo-section",
+
+                    "type" : "text",
+
+                    "description" : {
+                        "_template" : "/assets/templates/base/common/text",
+                        "text" : "{{words(20,40)}}"
+                    }
+
+                }
+
+            ]
+        }
+    ]
+}
