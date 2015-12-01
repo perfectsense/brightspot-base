@@ -4,7 +4,7 @@ network: network.yml
 layers:
 
   - name: development
-    image: brightspot-base [development] hvm [11]
+    image: brightspot-base [development] hvm [1]
     instanceType: m3.large
     rolePolicies:
       - beam-server-readonly
