@@ -9,7 +9,7 @@
     "_template": "/assets/templates/base/common/body",
 
     "displayOptions" : {
-        "modifierClass" : "gallery-page"
+        "modifierClass" : "gallery-page gallery-fullscreen"
     },
 
     "headerView": {
@@ -23,10 +23,6 @@
           "_dataUrl": "/components/gallery-full/16x9-images.json"
         }
       ]
-    },
-
-    "footerView": {
-      "_dataUrl": "/components/site-footer-simple/index.json"
     }
   }
 }

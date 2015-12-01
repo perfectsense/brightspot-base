@@ -1,0 +1,1 @@
+This full screen gallery page has a modifier class on the body. This allows this special full screen experience of this page. In the medium and up breakpoint, this allows the gallery full to expand/contract with the browser window size rather than let the image size determine the height of the gallery itself (as it does by default)

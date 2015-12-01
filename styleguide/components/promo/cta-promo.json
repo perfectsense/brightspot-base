@@ -4,13 +4,13 @@
 
     "displayOptions" : {
         "horizontalSplit" : "half",
-        "modifierClass" : "promo-left"
+        "modifierClass" : "promo-cta"
     },
 
     "heading" : {
         "_template" : "/assets/templates/base/common/text",
 
-        "text" : "Promo Left"
+        "text" : "Call to Action Promo"
     },
 
     "listItems" : [

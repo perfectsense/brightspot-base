@@ -1,0 +1,56 @@
+{
+  "_wrapper": "/_wrapper.json",
+
+  "_template": "/assets/templates/base/components/photofall",
+
+  "sharing": {
+    "_dataUrl": "/elements/social-share/share-monochrome.json"
+  },
+
+  "permalink": "/bsp-article/",
+  "title": "{{words}}",
+  "subTitle": "{{words}}",
+  "metaData": {
+    "_template": "/assets/templates/base/elements/meta-data",
+    "publishDate": "05 Apr 2015",
+    "authors": [
+      {
+        "_template": "/assets/templates/base/common/link",
+        "_repeat": [
+          1,
+          5
+        ],
+        "body": "{{name}}",
+        "attributes": {
+          "_template": "/assets/templates/base/common/attributes",
+          "href": "#",
+          "title": "{{name}}"
+        }
+      }
+    ]
+  },
+  "tags": {
+    "_dataUrl": "/elements/tags/tag-list-no-title.json"
+  },
+  "lead": {
+    "_template": "/assets/templates/base/common/figure",
+    "credit": "{{name}}",
+    "caption": {
+      "_template": "/assets/templates/base/common/text",
+      "text": "{{words}}"
+    },
+    "image": {
+      "_template": "/assets/templates/base/common/image",
+      "attributes": {
+        "_template": "/assets/templates/base/common/attributes",
+        "src": "{{image(1600, 600)}}"
+      }
+    }
+  },
+  "photofallBody": [
+    {
+      "_template": "/assets/templates/base/common/html",
+      "text": "{{paragraphs(1)}}"
+    }
+  ]
+}

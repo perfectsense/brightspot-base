@@ -1,18 +1,13 @@
-<div class="component article-component{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
-
-    {{#with lead}}
-    <div class="article-lead">
-        {{render this}}
-    </div>
-    {{/with}}
+<div class="component photofall-component component-inverse-color {{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
 
     <div class="grid-container">
         <div class="row">
             <div class="column-full">
 
-                <div class="article">
+                <div class="photofall">
 
-                    <div class="article-head">
+                    <div class="photofall-head">
+
                         {{#with tags}}
                             {{render this}}
                         {{/with}}
@@ -28,16 +23,19 @@
                         {{/with}}
 
                         {{#if sharing}}{{render sharing }}{{/if}}
+
                     </div>
 
-                    <div class="article-content">
-                        {{#each articleBody}}{{this}}{{/each}}
+                    <div class="photofall-content">
+                        {{#each photofallBody}}{{this}}{{/each}}
                     </div>
 
-                </div>{{!-- article --}}
+
+
+                </div>{{!-- photofall --}}
 
             </div>{{!-- column-full --}}
         </div>{{!-- row --}}
     </div>{{!-- grid-container --}}
 
-</div>{{!-- article-wrapper --}}
+</div>{{!-- photofall-wrapper --}}

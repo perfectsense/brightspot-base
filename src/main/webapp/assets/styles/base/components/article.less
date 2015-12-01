@@ -1,3 +1,7 @@
+.article-component {
+    padding: 0;
+}
+
 .article-lead {
     img {
         height: auto;
@@ -10,7 +14,10 @@
 
 .article {
     padding: @space-double 0 @space;
+}
 
+// putting this in a separate wrapper so we can extend this for other pieces of content
+.article-head {
     .tags {
         padding-bottom: @space;
     }
@@ -19,25 +26,22 @@
         padding-bottom: @space-double;
     }
 
-    // when we have a component inside of an article, remove the padding.
-    // We let natural margins of p tags and others in the content do the spacing instead
-    .component {
-        padding: 0;
+    .article-title {
+        &:extend(.page-title all);
+        border: none;
+        color: @color-brand-accent;
     }
 
-}
+    .article-subtitle {
+        &:extend(.section-title all);
+        border: none;
+        color: @color-text;
+        padding-bottom: @space-double;
 
-.article-title {
-    &:extend(.page-title all);
-    border: none;
-    color: @color-brand-accent;
-}
-
-.article-subtitle {
-    &:extend(.section-title all);
-    border: none;
-    color: @color-text;
-    padding-bottom: @space-double;
+        .component-inverse-color &, .component-secondary-color & {
+            color: @color-white;
+        }
+    }
 }
 
 .article-content {
