@@ -1,4 +1,6 @@
 {
+  "_wrapper" : false,
+
   "_template": "/assets/templates/base/common/page",
 
   "head" : {
