@@ -49,7 +49,7 @@
 
           "main" : [
             {
-              "_dataUrl" : "/components/promo/left-promo.json"
+              "_dataUrl" : "/components/promo/cta-promo.json"
             }
           ]
 
