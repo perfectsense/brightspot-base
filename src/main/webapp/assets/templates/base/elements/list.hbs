@@ -7,6 +7,6 @@
 --}}
 <{{#if displayOptions.ordered}}ol{{else}}ul{{/if}} {{#if type}}type="{{type}}" {{/if}}class="{{#if displayOptions.unstyled}}unstyled-{{/if}}list{{#if displayOptions.inline}}-inline{{/if}}{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
 	{{#each items}}
-		<li{{#if displayOptions.modifierClass}} class="{{displayOptions.modifierClass}}"{{/if}}>{{render this}}</li>
+		<li{{#if this.displayOptions.modifierClass}} class="{{this.displayOptions.modifierClass}}"{{/if}}>{{render this}}</li>
 	{{/each}}
 </{{#if displayOptions.ordered}}ol{{else}}ul{{/if}}>
