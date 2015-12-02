@@ -1,0 +1,47 @@
+{
+	"_template" : "components/bsp-gallery-module",
+
+    "options" : {
+         "dynamicSlideLoad" : true,
+         "horizontalSlides" : true,
+         "slidesToScroll" : {
+         	"small" : 1,
+         	"medium" : 4
+         },
+         "slidesToShow" : {
+         	"small" : 1,
+         	"medium" : 4
+         }
+    },
+
+	"galleryTitle" : {
+
+		"_template" : "common/text",
+
+		"text" : "Dynamic slides, show multiple"
+
+	},
+
+	"gallerySlides" : [
+		{
+            "_template" : "common/image",
+
+            "attributes" : {
+                "src" : "/assets/images/200x300.png",
+                "title" : "slide-0",
+                "data-next-url" : "/components/bsp-gallery-module/slide-for-dynamic-load-multiple.html",
+                "data-prev-url" : "/components/bsp-gallery-module/slide-for-dynamic-load-multiple.html"
+            }
+        }
+	],
+
+	"cta" : {
+		"options" : {
+			"location" : "bottom"
+		},
+
+		"content" : {
+			"_dataUrl" : "/common/link-test-text-14-char.json"
+		}
+	}
+}
