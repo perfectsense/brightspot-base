@@ -1,0 +1,57 @@
+.modal-data {
+    display: none;
+}
+
+// this our base on the default vex theme
+.modal-theme-default {
+    .vex-content {
+        border-radius: 5px;
+        position: relative;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 100%;
+
+        .component {
+            padding: 0;
+        }
+     }
+}
+
+// fullscreen theme
+.modal-fullscreen {
+    .vex-content {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+@media @mq-sm {
+    .modal-theme-default {
+        .vex-content {
+            width: 80%;
+        }
+    }
+
+    .modal-fullscreen {
+        .vex-content {
+            width: 100%;
+        }
+    }
+}
+
+@media @mq-lg {
+    .modal-theme-default {
+        .vex-content {
+            width: 70%;
+        }
+    }
+
+    .modal-fullscreen {
+        .vex-content {
+            width: 100%;
+        }
+    }
+}
