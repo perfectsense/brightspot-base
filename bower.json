@@ -5,7 +5,7 @@
   "dependencies": {
     "bsp-ajax-links" : "perfectsense/brightspot-js-ajax-links#0.0.4",
     "bsp-autosubmit" : "perfectsense/brightspot-js-autosubmit#^2.0.0",
-    "bsp-carousel": "perfectsense/brightspot-js-carousel#^1.1.3",
+    "bsp-carousel": "perfectsense/brightspot-js-carousel#^1.2.0",
     "bsp-feature-detect": "perfectsense/brightspot-js-feature-detect#^1.0.0",
     "bsp-infinite-content": "perfectsense/brightspot-js-infinite-content#0.0.6",
     "bsp-lazyimage": "perfectsense/brightspot-js-lazyimage#^1.0.1",

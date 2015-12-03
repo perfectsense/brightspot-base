@@ -18,7 +18,7 @@
     &:extend(.section-title all);
 }
 
-.gallery-full {
+.bsp-carousel-gallery {
     margin-bottom: @space;
     position: relative;
 
@@ -115,20 +115,21 @@
 }
 
 // the caption wrapper gets a bottom placement on the slide along with the same max-height transition as the nav carousel
-.gallery-full-slide-caption-wrapper {
+.bsp-carousel-gallery-slide-caption-wrapper {
     bottom: 0;
     max-height: 0;
     overflow: hidden;
     position: absolute;
     transition: max-height 0.5s;
     width: 100%;
+    z-index: @z-index-base;
 
     .captions-visible & {
         max-height: 150px;
     }
 }
 
-.gallery-full-slide-caption {
+.bsp-carousel-gallery-slide-caption {
     &:extend(.ts-neg-1);
 
     background: rgba(0, 0, 0, 0.5);
@@ -137,25 +138,21 @@
 }
 
 // elements at the bottom of the footer
-.gallery-full-thumbs, .gallery-full-count-wrapper, .gallery-full-caption-trigger {
+.bsp-carousel-gallery-thumbs, .bsp-carousel-gallery-count-wrapper, .bsp-carousel-gallery-caption-trigger {
     display: inline-block;
     margin: @space-half @space-double @space-half 0;
     padding: 0 @space;
 }
 
 // we don't want to show the thumbs icon until a bigger screen size
-.gallery-full-thumbs {
+.bsp-carousel-gallery-thumbs {
     .icon {
         display: none;
     }
 }
 
-.gallery-full-footer {
-    &:extend(.clearfix all);
-}
-
 // Used to create show and hide text for the caption trigger.
-.gallery-full-caption-trigger {
+.bsp-carousel-gallery-caption-trigger {
     cursor: pointer;
 
     span.captions-visible {
@@ -179,6 +176,8 @@
 }
 
 .gallery-full-footer {
+    &:extend(.clearfix all);
+
     .tags {
         clear: both;
         margin: @space-half 0;
@@ -186,7 +185,7 @@
     }
 }
 
-.gallery-full-interstitial-counter {
+.bsp-carousel-gallery-interstitial-counter {
     background: @color-brand-primary;
     color: @color-brand-secondary;
     display: none;
@@ -218,7 +217,7 @@
         right: 0;
     }
 }
-.gallery-full-interstitial-content {
+.bsp-carousel-gallery-interstitial-content {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -227,7 +226,7 @@
 
 
 
-// this gives a fake "fullscreen" experience where the gallery-full moves with the size of the browser
+// this gives a fake "fullscreen" experience where the gallery moves with the size of the browser
 .gallery-fullscreen {
     position: absolute;
     top: 0;
@@ -270,7 +269,7 @@
         width: 100%;
     }
 
-    .gallery-full {
+    .bsp-carousel-gallery {
         position: absolute;
         top: 90px;
         bottom: 100px;
@@ -298,7 +297,7 @@
 
 @media @mq-md {
 
-    .gallery-full {
+    .bsp-carousel-gallery {
         // for anything past medium, we want the thumbs nav, anything before, no thumbs (which is default)
         .bsp-carousel-nav {
             &.slick-initialized {
@@ -313,11 +312,11 @@
         }
     }
 
-    .gallery-full-thumbs, .gallery-full-count-wrapper, .gallery-full-caption-trigger {
+    .bsp-carousel-gallery-thumbs, .bsp-carousel-gallery-count-wrapper, .bsp-carousel-gallery-caption-trigger {
         float: left;
     }
 
-    .gallery-full-thumbs {
+    .bsp-carousel-gallery-thumbs {
         cursor: pointer;
 
         .icon {
@@ -326,7 +325,7 @@
         }
     }
 
-    .gallery-full-caption-trigger {
+    .bsp-carousel-gallery-caption-trigger {
 
         .icon {
             margin-right: @space-half;
@@ -351,7 +350,7 @@
 
 
 @media @mq-sm {
-    .gallery-full {
+    .bsp-carousel-gallery {
         .bsp-carousel-stage {
             .bsp-carousel-slide {
                 img {
@@ -361,7 +360,7 @@
         }
     }
 
-    .gallery-full {
+    .bsp-carousel-gallery {
         .aspect-4x3 & {
             .bsp-carousel-stage {
                 .bsp-carousel-slide {
@@ -374,7 +373,7 @@
     }
 }
 @media @mq-md {
-    .gallery-full {
+    .bsp-carousel-gallery {
         .bsp-carousel-stage {
             .bsp-carousel-slide {
                 img {
@@ -384,7 +383,7 @@
         }
     }
 
-    .gallery-full {
+    .bsp-carousel-gallery {
         .aspect-4x3 & {
             .bsp-carousel-stage {
                 .bsp-carousel-slide {
@@ -397,7 +396,7 @@
     }
 }
 @media @mq-lg {
-    .gallery-full {
+    .bsp-carousel-gallery {
         .bsp-carousel-stage {
             .bsp-carousel-slide {
                 img {
@@ -407,7 +406,7 @@
         }
     }
 
-    .gallery-full {
+    .bsp-carousel-gallery {
         .aspect-4x3 & {
             .bsp-carousel-stage {
                 .bsp-carousel-slide {
@@ -432,7 +431,7 @@
         }
     }
 
-    .gallery-full {
+    .bsp-carousel-gallery {
         .bsp-carousel-stage {
             .bsp-carousel-slide {
                 img {
@@ -446,7 +445,7 @@
 
 @media only screen and (min-width: 1600px) {
 
-    .gallery-full {
+    .bsp-carousel-gallery {
         .bsp-carousel-stage {
             .bsp-carousel-slide {
                 img {
