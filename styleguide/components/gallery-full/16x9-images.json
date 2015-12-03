@@ -46,6 +46,7 @@
             "_template" : "/assets/templates/base/components/gallery-full-slide-content",
             "image" : {
                 "_template": "/assets/templates/base/common/image",
+                "cssClass" : "image-portait",
                 "attributes": {
                     "_template": "/assets/templates/base/common/attributes",
                     "src": "{{image(500, 900)}}"

@@ -83,7 +83,8 @@
 
                             "attributes" : {
                                 "_template" : "/assets/templates/base/common/attributes",
-                                "href"  : "link"
+                                "data-bsp-modal-open" : "fullscreen",
+                                "href"  : "#image2"
                             },
 
                             "body" : {
@@ -115,6 +116,63 @@
             }
         ]
     }
+  ],
 
-  ]
+  "gallery" : {
+
+      "_template": "/assets/templates/base/elements/modal",
+
+      "id": "fullscreen",
+
+      "content": {
+        "_template": "/assets/templates/base/components/gallery-full",
+
+        "displayOptions" : {
+            "modifierClass" : "component-inverse-color ratio-16x9",
+            "thumbnails" : true
+        },
+
+        "heading": {
+            "_template" : "/assets/templates/base/common/text",
+            "text" : "{{words(10)}}"
+        },
+
+        "description" : {
+            "_template" : "/assets/templates/base/common/text",
+            "text" : "{{words(20)}}"
+        },
+
+        "slides": [
+            {
+                "_repeat" : 5,
+                "_template" : "/assets/templates/base/components/gallery-full-slide-content",
+                "image" : {
+                    "_template": "/assets/templates/base/common/image",
+                    "attributes": {
+                        "_template": "/assets/templates/base/common/attributes",
+                        "src": "{{image(1600, 900)}}"
+                    }
+                },
+                "thumbnail": {
+                    "_template": "/assets/templates/base/common/image",
+                    "attributes": {
+                        "_template": "/assets/templates/base/common/attributes",
+                        "src": "{{image(100, 100)}}"
+                    }
+                },
+                "caption" : [
+                    {
+                        "_template": "/assets/templates/base/common/text",
+                        "text" : "{{words(20)}}"
+                    }
+                ]
+            }
+        ],
+
+        "sharing" : {
+            "_dataUrl" : "/elements/social-share/share-monochrome.json"
+        }
+      }
+
+  }
 }
