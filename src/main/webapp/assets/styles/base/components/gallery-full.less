@@ -224,6 +224,78 @@
     justify-content: center;
 }
 
+
+
+
+// this gives a fake "fullscreen" experience where the gallery-full moves with the size of the browser
+.gallery-fullscreen {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: #333;
+
+    .site-wrapper, .site, .grid-container, .row, .column-full {
+        height: 100%;
+    }
+}
+
+.gallery-fullscreen, .modal-fullscreen {
+
+    .gallery-full-component {
+        height: 100%;
+    }
+
+    .gallery-full-wrapper {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        padding: 0;
+        width: 100%;
+        background: #333;
+    }
+
+    .gallery-full-header {
+        height: 82px;
+        margin: 0;
+        overflow: hidden;
+        padding-top: @space-double;
+    }
+
+    .gallery-full-footer {
+        height: 70px;
+        position: absolute;
+        overflow: hidden;
+        bottom: @space-double;
+        width: 100%;
+    }
+
+    .gallery-full {
+        position: absolute;
+        top: 90px;
+        bottom: 100px;
+        width: 100%;
+
+        .bsp-carousel-stage {
+            height: 100%;
+
+            .slick-list, .slick-track, .bsp-carousel-slide {
+                height: 100%;
+            }
+
+            .bsp-carousel-slide {
+                img {
+                    max-height: none;
+                }
+            }
+
+        }
+    }
+}
+
+
+
+
 @media @mq-md {
 
     .gallery-full {
@@ -269,6 +341,13 @@
     }
 
 }
+
+
+
+
+
+
+
 
 
 @media @mq-sm {
@@ -379,67 +458,6 @@
 
 }
 
-@media @mq-md {
 
-    // this gives a fake "fullscreen" experience where the gallery-full moves with the size of the browser
-    // but on only the medium and up breakpoint. XS and SM are standard, as the smaller screen sizes don't work well with this
-    .gallery-fullscreen {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-        background: #333;
-
-        .site-wrapper, .site, .grid-container, .row, .column-full, .gallery-full-component {
-            height: 100%;
-        }
-
-        .gallery-full-wrapper {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            padding: 0;
-            width: 100%;
-            background: #333;
-        }
-
-        .gallery-full-header {
-            height: 82px;
-            margin: 0;
-            overflow: hidden;
-            padding-top: @space-double;
-        }
-
-        .gallery-full-footer {
-            height: 70px;
-            position: absolute;
-            overflow: hidden;
-            bottom: @space-double;
-            width: 100%;
-        }
-
-        .gallery-full {
-            position: absolute;
-            top: 90px;
-            bottom: 100px;
-            width: 100%;
-
-            .bsp-carousel-stage {
-                height: 100%;
-
-                .slick-list, .slick-track, .bsp-carousel-slide {
-                    height: 100%;
-                }
-
-                .bsp-carousel-slide {
-                    img {
-                        max-height: none;
-                    }
-                }
-
-            }
-        }
-    }
-}
 
 

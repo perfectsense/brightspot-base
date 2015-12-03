@@ -118,7 +118,7 @@
     }
   ],
 
-  "gallery" : {
+  "modalGallery" : {
 
       "_template": "/assets/templates/base/elements/modal",
 
