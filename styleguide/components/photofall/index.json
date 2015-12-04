@@ -79,8 +79,7 @@
 
                             "_template" : "/assets/templates/base/common/link",
 
-                            "attributes" : {
-                                "_template" : "/assets/templates/base/common/attributes",
+                            "extraAttributes" : {
                                 "data-bsp-modal-open" : "fullscreen",
                                 "href"  : "#slide-1"
                             },
@@ -89,8 +88,7 @@
 
                                 "_template" : "/assets/templates/base/common/image",
 
-                                "attributes" : {
-                                    "_template" : "/assets/templates/base/common/attributes",
+                                "extraAttributes" : {
                                     "alt" : "{{words([ 1, 2 ])}}",
                                     "src" : "{{image(800, 450)}}"
                                 }
@@ -126,8 +124,7 @@
 
                             "_template" : "/assets/templates/base/common/link",
 
-                            "attributes" : {
-                                "_template" : "/assets/templates/base/common/attributes",
+                            "extraAttributes" : {
                                 "data-bsp-modal-open" : "fullscreen",
                                 "href"  : "#slide-2"
                             },
@@ -136,8 +133,7 @@
 
                                 "_template" : "/assets/templates/base/common/image",
 
-                                "attributes" : {
-                                    "_template" : "/assets/templates/base/common/attributes",
+                                "extraAttributes" : {
                                     "alt" : "{{words([ 1, 2 ])}}",
                                     "src" : "{{image(800, 450)}}"
                                 }

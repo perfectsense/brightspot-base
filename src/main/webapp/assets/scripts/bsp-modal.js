@@ -125,7 +125,10 @@ var bsp_modal = {
     // way it founded, leaving the DOM intact
     _openFromDOM: function(options) {
         var self = this;
-        var $savedContents = self.$el.contents().clone();
+        // grab the modal data within that element
+        var $modalData = self.$el.find('.modal-data').contents();
+        // save it off, we're going to need to put it back
+        var $savedContents = $modalData.clone();
 
         if(options.hash) {
             window.location.hash = options.hash;
@@ -137,12 +140,12 @@ var bsp_modal = {
         // we do not want to do a clone here, as there can be clicks and other modules tied to this DOM
         self.vexInstance = vex.open({
 
-            content: self.$el.contents(),
+            content: $modalData,
 
             // before we close those, put the stuff back (except for the close button of course)
             beforeClose: function() {
                 self.vexInstance.find('.vex-close').remove();
-                self.$el.append($savedContents);
+                self.$el.find('.modal-data').html($savedContents);
             }
 
         });

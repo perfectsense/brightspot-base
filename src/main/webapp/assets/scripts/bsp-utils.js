@@ -74,9 +74,12 @@ var bsp_utils = { };
     // Execute all callbacks on any new elements.
     function doDomInsert(domInsert) {
         var insertedClassName = domInsert.insertedClassName;
+        // filter for anything that has already been initialized
         var $items = domInsert.$roots.find(domInsert.selector).filter(':not(.' + insertedClassName + ')');
+        // also filter for things that are not hidden, we do not want to inialize those
+        $items = $items.filter(':not(.hidden)');
 
-        if (!$items.parents('.modal-data').length) {
+        if (!$items.parents('.hidden').length) {
             if ($items.length > 0) {
                 $items.addClass(insertedClassName);
 
