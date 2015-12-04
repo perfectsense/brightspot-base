@@ -9,7 +9,8 @@ var bsp_modal = {
 
     defaults: {
         'id'    : 'modal',
-        'theme' : 'default'
+        'theme' : 'default',
+        'autoOpenHash' : 'slide-'
     },
 
     init: function($el, options) {
@@ -27,6 +28,20 @@ var bsp_modal = {
 
         self.$el.data('bsp-modal', self);
 
+        self._handleAutoOpenFromHash();
+
+    },
+
+    // this is fairly custom for base, but the idea is that if you have a special hash,
+    // we will go ahead and auto open the modal. The default use case for this will be
+    // to open the modal if there is a deep linkable slider in it and someone wants that
+    // this can be changed by passing in an option for whatever we want the auto open hash to be
+    _handleAutoOpenFromHash: function(){
+        var self = this;
+
+        if(window.location.hash.indexOf('#' + self.settings.autoOpenHash) > -1) {
+            self._openFromDOM();
+        }
     },
 
     // run through the body and grap and links to open THIS modal and hit the public API when clicked
@@ -125,6 +140,8 @@ var bsp_modal = {
     // way it founded, leaving the DOM intact
     _openFromDOM: function(options) {
         var self = this;
+        // just in case no options are passed in
+        options = options || {};
         // grab the modal data within that element
         var $modalData = self.$el.find('.modal-data').contents();
         // save it off, we're going to need to put it back
