@@ -20,8 +20,8 @@
         {
           "_template": "/assets/templates/base/common/image",
           "_repeat" : 2,
-          "attributes": {
-            "_template": "/assets/templates/base/common/attributes",
+          "extraAttributes": {
+            
             "src": "{{image(800,600)}}"
           }
         }
@@ -33,8 +33,8 @@
       "rows" : [
         {
           "_template": "/assets/templates/base/common/image",
-          "attributes": {
-            "_template": "/assets/templates/base/common/attributes",
+          "extraAttributes": {
+            
             "src": "{{image(600,800)}}"
           }
         }
@@ -47,8 +47,8 @@
         {
           "_template": "/assets/templates/base/common/image",
           "_repeat" : 2,
-          "attributes": {
-            "_template": "/assets/templates/base/common/attributes",
+          "extraAttributes": {
+            
             "src": "{{image(800,600)}}"
           }
         }
@@ -66,8 +66,8 @@
         "_repeat": 7,
         "content": {
           "_template": "/assets/templates/base/common/image",
-          "attributes": {
-            "_template": "/assets/templates/base/common/attributes",
+          "extraAttributes": {
+            
             "src": "{{image(800, 450)}}"
           }
         }

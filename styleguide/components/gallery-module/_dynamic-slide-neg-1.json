@@ -2,8 +2,8 @@
   "_template": "/assets/templates/base/components/gallery-module-slide-content",
   "content": {
     "_template": "/assets/templates/base/common/image",
-    "attributes": {
-      "_template": "/assets/templates/base/common/attributes",
+    "extraAttributes": {
+      
       "src": "{{image(1200, 400)}}",
       "title": "slide-neg-1"
     }

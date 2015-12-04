@@ -13,7 +13,7 @@
             {
                 "_template" : "/assets/templates/base/common/link",
 
-                "attributes" : {
+                "extraAttributes" : {
                     "_template" : "/assets/templates/base/common/attributes",
                     "href"  : "link"
                 },
@@ -48,7 +48,7 @@
             "profilePhoto" : {
                 "_template" : "/assets/templates/base/common/link",
 
-                "attributes" : {
+                "extraAttributes" : {
                     "_template" : "/assets/templates/base/common/attributes",
                     "href"  : "link"
                 },
@@ -57,7 +57,7 @@
 
                     "_template" : "/assets/templates/base/common/image",
 
-                    "attributes" : {
+                    "extraAttributes" : {
                         "_template" : "/assets/templates/base/common/attributes",
                         "alt" : "{{words([ 1, 2 ])}}",
                         "src" : "{{image(50, 50)}}"
@@ -67,7 +67,7 @@
 
             "profileName" : {
                 "_template": "/assets/templates/base/common/link",
-                "attributes": {
+                "extraAttributes": {
                     "href": "link-me",
                     "_template": "/assets/templates/base/common/attributes"
                 },
@@ -79,7 +79,7 @@
 
             "profileUser" : {
                 "_template": "/assets/templates/base/common/link",
-                "attributes": {
+                "extraAttributes": {
                     "href": "link-me",
                     "_template": "/assets/templates/base/common/attributes"
                 },
@@ -93,7 +93,7 @@
                 {
                     "_template" : "/assets/templates/base/common/image",
 
-                    "attributes" : {
+                    "extraAttributes" : {
                         "_template" : "/assets/templates/base/common/attributes",
                         "alt" : "{{words([ 1, 2 ])}}",
                         "src" : "{{image(80, 80)}}"
@@ -114,7 +114,7 @@
                 {
                     "_template": "/assets/templates/base/common/link",
                     "cssClass" : "icon-share",
-                    "attributes": {
+                    "extraAttributes": {
                         "href": "share-link",
                         "_template": "/assets/templates/base/common/attributes"
                     }
@@ -122,7 +122,7 @@
                 {
                     "_template": "/assets/templates/base/common/link",
                     "cssClass" : "icon-thumbs-up",
-                    "attributes": {
+                    "extraAttributes": {
                         "href": "retweet-link",
                         "_template": "/assets/templates/base/common/attributes"
                     }
@@ -130,7 +130,7 @@
                 {
                     "_template": "/assets/templates/base/common/link",
                     "cssClass" : "icon-comment",
-                    "attributes": {
+                    "extraAttributes": {
                         "href": "star-link",
                         "_template": "/assets/templates/base/common/attributes"
                     }
@@ -145,7 +145,7 @@
             "profilePhoto" : {
                 "_template" : "/assets/templates/base/common/link",
 
-                "attributes" : {
+                "extraAttributes" : {
                     "_template" : "/assets/templates/base/common/attributes",
                     "href"  : "link"
                 },
@@ -154,7 +154,7 @@
 
                     "_template" : "/assets/templates/base/common/image",
 
-                    "attributes" : {
+                    "extraAttributes" : {
                         "_template" : "/assets/templates/base/common/attributes",
                         "alt" : "{{words([ 1, 2 ])}}",
                         "src" : "{{image(50, 50)}}"
@@ -164,7 +164,7 @@
 
             "profileName" : {
                 "_template": "/assets/templates/base/common/link",
-                "attributes": {
+                "extraAttributes": {
                     "href": "link-me",
                     "_template": "/assets/templates/base/common/attributes"
                 },
@@ -190,7 +190,7 @@
                 {
                     "_template": "/assets/templates/base/common/link",
                     "cssClass" : "icon-share",
-                    "attributes": {
+                    "extraAttributes": {
                         "href": "share-link",
                         "_template": "/assets/templates/base/common/attributes"
                     }
@@ -198,7 +198,7 @@
                 {
                     "_template": "/assets/templates/base/common/link",
                     "cssClass" : "icon-retweet",
-                    "attributes": {
+                    "extraAttributes": {
                         "href": "retweet-link",
                         "_template": "/assets/templates/base/common/attributes"
                     }
@@ -206,7 +206,7 @@
                 {
                     "_template": "/assets/templates/base/common/link",
                     "cssClass" : "icon-star",
-                    "attributes": {
+                    "extraAttributes": {
                         "href": "star-link",
                         "_template": "/assets/templates/base/common/attributes"
                     }
@@ -219,7 +219,7 @@
         "_template": "/assets/templates/base/components/component-cta",
         "content": {
             "_template": "/assets/templates/base/common/link",
-            "attributes": {
+            "extraAttributes": {
                 "href": "link-me",
                 "_template": "/assets/templates/base/common/attributes"
             },

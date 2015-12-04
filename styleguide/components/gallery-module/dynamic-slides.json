@@ -11,8 +11,8 @@
       "_template": "/assets/templates/base/components/gallery-module-slide-content",
       "content": {
         "_template": "/assets/templates/base/common/image",
-        "attributes": {
-          "_template": "/assets/templates/base/common/attributes",
+        "extraAttributes": {
+          
           "src": "{{image(1200, 400)}}",
           "title": "slide-0",
           "data-next-url": "_dynamic-slide-1?ajax=true",
@@ -25,7 +25,7 @@
     "_template": "/assets/templates/base/components/component-cta",
     "content": {
       "_template": "/assets/templates/base/common/link",
-      "attributes": {
+      "extraAttributes": {
         "href": "link-me",
         "title": "I are a link",
         "_template": "/assets/templates/base/common/attributes"

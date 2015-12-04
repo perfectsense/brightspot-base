@@ -28,7 +28,7 @@
 
                         "_template" : "/assets/templates/base/common/link",
 
-                        "attributes" : {
+                        "extraAttributes" : {
                             "_template" : "/assets/templates/base/common/attributes",
                             "href"  : "link"
                         },
@@ -37,7 +37,7 @@
 
                             "_template" : "/assets/templates/base/common/image",
 
-                            "attributes" : {
+                            "extraAttributes" : {
                                 "_template" : "/assets/templates/base/common/attributes",
                                 "alt" : "{{words([ 1, 2 ])}}",
                                 "src" : "{{image(564, 288)}}"
@@ -60,7 +60,7 @@
 
                   "_repeat" : 5,
 
-                  "attributes" : {
+                  "extraAttributes" : {
                       "_template" : "/assets/templates/base/common/attributes",
                       "href"  : "#"
                   },

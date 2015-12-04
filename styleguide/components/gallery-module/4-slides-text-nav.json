@@ -13,7 +13,7 @@
     {
       "navText": "Shankle pork loin landjaeger pork chop",
       "_template": "/assets/templates/base/common/image",
-      "attributes": {
+      "extraAttributes": {
         "data-lazy": "{{image(1200, 400)}}",
         "_template": "/assets/templates/base/common/attributes"
       }
@@ -21,7 +21,7 @@
     {
       "navText": "Salami prosciutto ham hock venison",
       "_template": "/assets/templates/base/common/image",
-      "attributes": {
+      "extraAttributes": {
         "data-lazy": "{{image(1200, 400)}}",
         "_template": "/assets/templates/base/common/attributes"
       }
@@ -29,7 +29,7 @@
     {
       "navText": "Ribs meatloaf doner hamburger frankfurter tri-tip",
       "_template": "/assets/templates/base/common/image",
-      "attributes": {
+      "extraAttributes": {
         "data-lazy": "{{image(1200, 400)}}",
         "_template": "/assets/templates/base/common/attributes"
       }
@@ -37,7 +37,7 @@
     {
       "navText": "Shank capicola strip steak",
       "_template": "/assets/templates/base/common/image",
-      "attributes": {
+      "extraAttributes": {
         "data-lazy": "{{image(1200, 400)}}",
         "_template": "/assets/templates/base/common/attributes"
       }

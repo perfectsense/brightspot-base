@@ -37,13 +37,11 @@
             {
               "_template" : "/assets/templates/base/components/promo",
 
-              "modifierClass" : "promo-small tag-results",
-
               "loadMore" : true,
 
               "displayOptions" : {
-                "horizontalSplit" : "third"
-
+                "horizontalSplit" : "third",
+                "modifierClass" : "promo-small tag-results"
                 },
 
               "listItems" : [
@@ -63,8 +61,7 @@
 
                                   "_template" : "/assets/templates/base/common/link",
 
-                                  "attributes" : {
-                                      "_template" : "/assets/templates/base/common/attributes",
+                                  "extraAttributes" : {
                                       "href"  : "link"
                                   },
 
@@ -72,8 +69,7 @@
 
                                       "_template" : "/assets/templates/base/common/image",
 
-                                      "attributes" : {
-                                          "_template" : "/assets/templates/base/common/attributes",
+                                      "extraAttributes" : {
                                           "alt" : "{{words([ 1, 2 ])}}",
                                           "src" : "{{image(800, 450)}}"
                                       }
@@ -89,8 +85,7 @@
                               "title" : {
                                   "_template" : "/assets/templates/base/common/link",
 
-                                  "attributes" : {
-                                      "_template" : "/assets/templates/base/common/attributes",
+                                  "extraAttributes" : {
                                       "href"  : "#"
                                   },
 
@@ -122,10 +117,9 @@
                   "content": {
                       "_template": "/assets/templates/base/common/link",
 
-                      "attributes": {
+                      "extraAttributes": {
                           "href": "index",
-                          "data-ajax-link-target" : ".tag-results",
-                          "_template": "/assets/templates/base/common/attributes"
+                          "data-ajax-link-target" : ".tag-results"
                       },
 
                       "body": {

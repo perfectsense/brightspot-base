@@ -29,7 +29,7 @@
 
             "cssClass" : "tag",
 
-            "attributes" : {
+            "extraAttributes" : {
               "_template" : "/assets/templates/base/common/attributes",
               "href"  : "link"
             },

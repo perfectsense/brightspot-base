@@ -102,7 +102,7 @@
                           "tagList": [
                               {
                                   "_template": "/assets/templates/base/common/link",
-                                  "attributes": {
+                                  "extraAttributes": {
                                       "href": "#",
                                       "_template": "/assets/templates/base/common/attributes"
                                   },
@@ -124,7 +124,7 @@
 
                           "_template" : "/assets/templates/base/common/link",
 
-                          "attributes" : {
+                          "extraAttributes" : {
                               "_template" : "/assets/templates/base/common/attributes",
                               "href"  : "link"
                           },
@@ -133,7 +133,7 @@
 
                               "_template" : "/assets/templates/base/common/image",
 
-                              "attributes" : {
+                              "extraAttributes" : {
                                   "_template" : "/assets/templates/base/common/attributes",
                                   "alt" : "{{words([ 1, 2 ])}}",
                                   "src" : "{{image(800, 450)}}"
@@ -150,7 +150,7 @@
                       "title" : {
                           "_template" : "/assets/templates/base/common/link",
 
-                          "attributes" : {
+                          "extraAttributes" : {
                               "_template" : "/assets/templates/base/common/attributes",
                               "href"  : "#"
                           },
@@ -182,9 +182,9 @@
 
           "content": {
               "_template": "/assets/templates/base/common/link",
-              "attributes": {
+              "extraAttributes": {
                   "href": "index",
-                  "_template": "/assets/templates/base/common/attributes",
+
                   "data-ajax-link-target" : ".search-results"
               },
               "body": {

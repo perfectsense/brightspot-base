@@ -1,5 +1,5 @@
 {
-  
+
   "_template": "/assets/templates/base/elements/meta-data",
   "publishDate": "05 Apr 2015",
   "authors": [
@@ -10,8 +10,7 @@
         5
       ],
       "body": "{{name}}",
-      "attributes": {
-        "_template": "/assets/templates/base/common/attributes",
+      "extraAttributes": {
         "href": "#",
         "title": "{{name}}"
       }
