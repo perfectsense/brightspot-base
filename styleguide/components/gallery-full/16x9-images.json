@@ -98,7 +98,8 @@
                 "countDuration" : 5,
                 "countPosition" : "topRight",
                 "navEnabled" : false,
-                "navVisible" : true
+                "navVisible" : true,
+                "modifierClass" : "interstitial"
             },
             "contentUrl" : "_interstitial.html"
         },
