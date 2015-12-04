@@ -1,5 +1,5 @@
 {
-    
+
 
     "_template" : "/assets/templates/base/components/search-results",
 
@@ -27,8 +27,7 @@
                 "modifierClass": "search-results-sort"
             },
 
-            "attributes" : {
-                "_template": "/assets/templates/base/common/attributes",
+            "extraAttributes" : {
                 "action" : ""
             },
 
@@ -39,14 +38,16 @@
 
                     "autoSubmit" : true,
 
-                    "attributes": {
-                      "_template" : "/assets/templates/base/common/attributes",
+                    "extraAttributes": {
                       "id": "search-results-sort"
                     },
 
-                    "labelAttributes" : {
-                        "_template": "/assets/templates/base/common/attributes",
-                        "for": "search-results-sort"
+                    "label" : {
+                        "_template": "/assets/templates/base/common/form-label-attributes",
+
+                        "extraAttributes" : {
+                            "for": "search-results-sort"
+                        }
                     },
 
                     "labelText" : {
@@ -60,8 +61,7 @@
 
                         "_repeat" : 3,
 
-                        "attributes": {
-                          "_template": "/assets/templates/base/common/attributes",
+                        "extraAttributes": {
                           "value": "{{words(1)}}"
                         },
                         "text": {

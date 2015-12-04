@@ -1,16 +1,16 @@
-<div class="form-input {{#if attributes.type}}form-input-{{attributes.type}}{{/if}}{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
-    {{#if labelAttributes}}
-        <label {{render labelAttributes}}>
+<div class="form-input {{#if extraAttributes.type}}form-input-{{extraAttributes.type}}{{/if}}{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
+    {{#if label}}
+        <label {{label}}>
         {{#if labelAfterInput}} {{else}}{{{render labelText}}}{{/if}}
     {{/if}}
 
     {{#if displayOptions.isButton}}
-        <button {{#if displayOptions.modifierClass}} class="{{displayOptions.modifierClass}}-input"{{/if}} {{render attributes }} {{#if autoSubmit}}data-bsp-autosubmit{{/if}}>{{attributes.value}}</button>
+        <button {{#if displayOptions.modifierClass}} class="{{displayOptions.modifierClass}}-input"{{/if}}{{extraAttributes}}{{#if autoSubmit}} data-bsp-autosubmit{{/if}}>{{extraAttributes.value}}</button>
     {{else}}
-        <input {{#if displayOptions.modifierClass}} class="{{displayOptions.modifierClass}}-input"{{/if}} {{render attributes }} {{#if autoSubmit}}data-bsp-autosubmit{{/if}} />
+        <input {{#if displayOptions.modifierClass}} class="{{displayOptions.modifierClass}}-input"{{/if}}{{extraAttributes}}{{#if autoSubmit}} data-bsp-autosubmit{{/if}} />
     {{/if}}
 
-    {{#if labelAttributes}}
+    {{#if label}}
         {{#if labelAfterInput}}{{{render labelText}}}{{else}} {{/if}}
         </label>
     {{/if}}

@@ -1,4 +1,4 @@
-<form{{#if displayOptions.modifierClass}} class="{{displayOptions.modifierClass}}"{{/if}} {{#with attributes}}{{this}}{{/with}}>
+<form{{#if displayOptions.modifierClass}} class="{{displayOptions.modifierClass}}"{{/if}}{{extraAttributes}}>
     {{#each inputs}}
         {{this}}
     {{/each}}
