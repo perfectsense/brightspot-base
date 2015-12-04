@@ -1,23 +1,78 @@
 {
-  "_template" : "/assets/templates/base/common/head",
+    "_template" : "/assets/templates/base/common/head",
 
-  "style" : [
-    {
-      "_template" : "/assets/templates/base/common/attributes",
-      "rel" : "stylesheet",
-      "type" : "text/css",
-      "href" : "/assets/styles/main.min.css"
-    },
-    {
-      "_template" : "/assets/templates/base/common/attributes",
-      "rel" : "stylesheet",
-      "type" : "text/css",
-      "href" : "http://fonts.googleapis.com/css?family=Roboto:700,400,300,100"
-    }
-  ],
+    "title" : "Styleguide",
+    "description" : "Inspire Confidence Styleguide",
+    "keywords" : "Brightspot Base, Styleguide, Inspire Confidence",
+    "canonicalLink" : "http://styleguide.inspireconfidence.psdops.com",
 
-  "script" : [{
-    "_template" : "/assets/templates/base/common/attributes",
-    "src" : "/assets/scripts/main.min.js"
-  }]
+    "metas" : [
+      {
+        "_template": "/assets/templates/base/common/meta",
+        "extraAttributes": {
+          "http-equiv" : "X-UA-Compatible",
+          "content" : "IE=edge"
+        }
+      },
+      {
+        "_template": "/assets/templates/base/common/meta",
+        "extraAttributes": {
+          "name" : "viewport",
+          "content" : "width=device-width, initial-scale=1"
+        }
+      }
+    ],
+
+    "icons" : [
+      {
+        "_template": "/assets/templates/base/common/icon",
+        "extraAttributes": {
+          "rel": "shortcut icon",
+          "href": "/favicon.ico"
+        }
+      }
+    ],
+
+    "styles" : [
+      {
+        "_template" : "/assets/templates/base/common/style",
+        "extraAttributes": {
+          "rel" : "stylesheet",
+          "type" : "text/css",
+          "href" : "/assets/styles/main.min.css"
+        }
+      }, {
+        "_template" : "/assets/templates/base/common/style",
+        "extraAttributes": {
+          "rel" : "stylesheet",
+          "type" : "text/css",
+          "href" : "http://fonts.googleapis.com/css?family=Roboto:700,400,300,100"
+        }
+      }, {
+        "_template" : "/assets/templates/base/common/style",
+        "content" : {
+          "_template" : "/assets/templates/base/common/html",
+          "text" : ".foo { text-align: center; content: 'hello & world' }"
+        }
+      }
+    ],
+
+    "scripts" : [
+      {
+        "_template" : "/assets/templates/base/common/script",
+        "extraAttributes": {
+          "type" : "text/javascript",
+          "src": "/assets/scripts/main.min.js"
+        }
+      }, {
+        "_template": "/assets/templates/base/common/script",
+        "extraAttributes": {
+          "type" : "text/javascript"
+        },
+        "content" : {
+          "_template" : "/assets/templates/base/common/html",
+          "text" : "console.log('Hello & World!');"
+        }
+      }
+    ]
 }
