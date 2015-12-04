@@ -20,9 +20,16 @@ var bsp_carousel = {};
     bsp_carousel.init = function($el, options) {
         var self = this;
         this.$el = $el;
+        this.options = options;
+        this.themeOptions = this.mergeOptions(options);
+
         this.addClasses(options);
         this._createSlickMethodsAvailablePromise();
         this.addEvents();
+
+        if(self.options.deepLinking) {
+            this.handleDeepLinking();
+        }
 
         // if we are a dynamic slide load, we go ahead and create all the event bindings up front
         // and also make sure that we remove infinite status. Dynamic and infinite do not go together
@@ -34,20 +41,34 @@ var bsp_carousel = {};
         this._interstitialsEnabled = true;
         this._interstitialClass = 'interstitial'; // wtf, don't know why this doesn't save when passed as an option
 
-        this.options = this.mergeOptions(options);
-
-        $el.slick(this.options);
+        $el.slick(this.themeOptions);
         $el.data('bsp_carousel', this);
 
-        // feels a little dirty, if someone has a better suggestion, please do a Pull Request
-        // we are binding ourselves to the modal opening to reinit
-        $('body').bind('bsp-modal:open', function() {
-            self.reInit();
-            // once we init, we trigger a resize, to make sure modal stays centered
-            $(window).trigger('resize');
-        });
-
         return this;
+    };
+
+    bsp_carousel.handleDeepLinking = function() {
+        var self = this;
+        var hash = window.location.hash;
+        var deepLinkSlide;
+
+        if(hash.indexOf(self.options.deepLinkId) > -1) {
+            deepLinkSlide = hash.replace('#' + self.options.deepLinkId,'');
+        }
+
+        if(deepLinkSlide) {
+            self.themeOptions.initialSlide = deepLinkSlide-1;
+        } else {
+            window.location.hash = self.options.deepLinkId + 1;
+        }
+
+        this.$el.on('carousel:afterChange', function() {
+            if(self.currentSlideAdjustedForInterstitials() === 'interstitial') {
+                window.location.hash = '';
+            } else {
+                window.location.hash = self.options.deepLinkId + (self.currentSlideAdjustedForInterstitials()+1);
+            }
+        });
     };
 
     bsp_carousel.mergeOptions = function(options) {
@@ -139,7 +160,7 @@ var bsp_carousel = {};
 
         if (this._slickMethodsAvailable()) {
             this.$el.slick('unslick');
-            this.$el.slick(this.options);
+            this.$el.slick(this.themeOptions);
         }
 
     };
@@ -312,7 +333,6 @@ var bsp_carousel = {};
      */
     bsp_carousel._slickMethod = function() {
         if (this._slickMethodsAvailable()) {
-            console.log(arguments);
             return this.$el.slick.apply(this.$el, arguments);
         } else {
             if (arguments[0] == 'getSlick') {

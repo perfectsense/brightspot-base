@@ -68,7 +68,99 @@
             {
                 "_template": "/assets/templates/base/components/promo-item",
 
-                "_repeat" : 5,
+                "sections" : [
+                    {
+
+                        "_template" : "/assets/templates/base/components/promo-section",
+
+                        "type" : "image",
+
+                        "image" : {
+
+                            "_template" : "/assets/templates/base/common/link",
+
+                            "attributes" : {
+                                "_template" : "/assets/templates/base/common/attributes",
+                                "data-bsp-modal-open" : "fullscreen",
+                                "href"  : "#slide-1"
+                            },
+
+                            "body" : {
+
+                                "_template" : "/assets/templates/base/common/image",
+
+                                "attributes" : {
+                                    "_template" : "/assets/templates/base/common/attributes",
+                                    "alt" : "{{words([ 1, 2 ])}}",
+                                    "src" : "{{image(800, 450)}}"
+                                }
+                            }
+                        }
+                    },
+                    {
+
+                        "_template" : "/assets/templates/base/components/promo-section",
+
+                        "type" : "text",
+
+                        "description" : {
+                            "_template" : "/assets/templates/base/common/text",
+                            "text" : "{{words(20,40)}}"
+                        }
+
+                    }
+
+                ]
+            },
+            {
+                "_template": "/assets/templates/base/components/promo-item",
+
+                "sections" : [
+                    {
+
+                        "_template" : "/assets/templates/base/components/promo-section",
+
+                        "type" : "image",
+
+                        "image" : {
+
+                            "_template" : "/assets/templates/base/common/link",
+
+                            "attributes" : {
+                                "_template" : "/assets/templates/base/common/attributes",
+                                "data-bsp-modal-open" : "fullscreen",
+                                "href"  : "#slide-2"
+                            },
+
+                            "body" : {
+
+                                "_template" : "/assets/templates/base/common/image",
+
+                                "attributes" : {
+                                    "_template" : "/assets/templates/base/common/attributes",
+                                    "alt" : "{{words([ 1, 2 ])}}",
+                                    "src" : "{{image(800, 450)}}"
+                                }
+                            }
+                        }
+                    },
+                    {
+
+                        "_template" : "/assets/templates/base/components/promo-section",
+
+                        "type" : "text",
+
+                        "description" : {
+                            "_template" : "/assets/templates/base/common/text",
+                            "text" : "{{words(20,40)}}"
+                        }
+
+                    }
+
+                ]
+            },
+            {
+                "_template": "/assets/templates/base/components/promo-item",
 
                 "sections" : [
                     {
@@ -84,7 +176,7 @@
                             "extraAttributes" : {
                                 "_template" : "/assets/templates/base/common/attributes",
                                 "data-bsp-modal-open" : "fullscreen",
-                                "href"  : "#image2"
+                                "href"  : "#slide-3"
                             },
 
                             "body" : {
@@ -144,7 +236,7 @@
 
         "slides": [
             {
-                "_repeat" : 5,
+                "_repeat" : 3,
                 "_template" : "/assets/templates/base/components/gallery-full-slide-content",
                 "image" : {
                     "_template": "/assets/templates/base/common/image",

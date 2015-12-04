@@ -9,9 +9,6 @@ export default {
     // defaults for full screen gallery. Options can be passed in through HTML
     defaults : {
 
-        deepLinkId : 'slide-',
-        deepLinking : true,
-
         nav: {
             themeConfig: {
                 centerMode: true,
@@ -23,6 +20,8 @@ export default {
         },
 
         stage: {
+            deepLinkId : 'slide-',
+            deepLinking : true,
             interstitials: true,
             interstitialClass: 'interstitial',
             themeConfig: {
@@ -40,10 +39,6 @@ export default {
 
         self.saveElements();
         self.buildCarousel();
-
-        if (self.options.deepLinking) {
-            self.handleDeeplinking();
-        }
 
         self.addThumbCaptionClicks();
         self.addInterstitials();
@@ -71,20 +66,6 @@ export default {
                 History.replaceState({},'',url);
             }
         });
-    },
-
-    handleDeeplinking() {
-        var self = this;
-        var hash = window.location.hash;
-        var deepLinkSlide;
-
-        if(hash.indexOf(self.options.deepLinkId) > -1) {
-            deepLinkSlide = hash.replace('#' + self.options.deepLinkId,'');
-        }
-
-        if(deepLinkSlide) {
-            self.carousel.stage.goTo(deepLinkSlide-1, true);
-        }
     },
 
     saveElements() {
@@ -121,6 +102,7 @@ export default {
     addInterstitials() {
         var self = this;
         var stage = self.carousel.stage;
+
         stage.bind('carousel:beforeChange', (e, carousel, currentSlide, nextSlide) => {
             if (stage.slideIsInterstitial(nextSlide)) {
                 self.$el.addClass('interstitial-showing');
