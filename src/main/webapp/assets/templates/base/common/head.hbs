@@ -1,28 +1,14 @@
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-{{#if disableResponsive}}
-{{else}}
-<meta name="viewport" content="width=device-width, initial-scale=1">
-{{/if}}
+{{#if title}}<title>{{title}}</title>{{/if}}
 
-{{#with meta}}
-    {{render this}}
-{{/with}}
+{{#if canonicalLink}}<link rel="canonical" href="{{canonicalLink}}">{{/if}}
 
-{{#each icon}}
-    <link {{render this}}>
-{{/each}}
+{{#if description}}<meta name="description" content="{{description}}" />{{/if}}
 
-{{#each style}}
-    {{#if this.content}}
-        <style {{render this.attributes}}>{{render this}}</style>
-    {{else}}
-        <link {{render this}} />
-    {{/if}}
-{{/each}}
+{{#if keywords}}<meta name="news_keywords" content="{{keywords}}" />{{/if}}
 
-{{#each script}}
-    <script {{render this}}>{{#if this.content}}{{{render this.content}}}{{/if}}</script>
-{{/each}}
-
+{{#each metas}}{{this}}{{/each}}
+{{#each icons}}{{this}}{{/each}}
+{{#each styles}}{{this}}{{/each}}
+{{#each scripts}}{{this}}{{/each}}

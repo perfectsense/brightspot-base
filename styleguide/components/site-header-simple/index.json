@@ -1,17 +1,17 @@
 {
-  
+
   "_template": "/assets/templates/base/components/site-header-simple",
   "siteName": "Brightspot Base Styleguide",
   "siteLogo": {
     "_template": "/assets/templates/base/common/link",
-    "attributes": {
+    "extraAttributes": {
       "href": "/",
       "title": "Brightspot Base Styleguide",
       "_template": "/assets/templates/base/common/attributes"
     },
     "body": {
       "_template": "/assets/templates/base/common/image",
-      "attributes": {
+      "extraAttributes": {
         "alt": "Brightspot",
         "src": "/brightspot-base/assets/logo-site.png",
         "_template": "/assets/templates/base/common/attributes"
@@ -22,7 +22,7 @@
     {
     "_repeat" : 5,
       "_template": "/assets/templates/base/common/link",
-      "attributes": {
+      "extraAttributes": {
         "href": "link-me",
         "title": "I are a link",
         "_template": "/assets/templates/base/common/attributes"
@@ -42,8 +42,7 @@
             "modifierClass": "site-header-simple-search"
         },
 
-        "attributes" : {
-            "_template": "/assets/templates/base/common/attributes",
+        "extraAttributes" : {
             "action" : "/components/bsp-search-results/search-results-ajax-1.html?q=test"
         },
 
@@ -55,8 +54,7 @@
                     "modifierClass" : "site-search-text"
                 },
 
-                "attributes": {
-                    "_template": "/assets/templates/base/common/attributes",
+                "extraAttributes": {
                     "autocomplete": "off",
                     "id" : "q",
                     "name" : "q",
@@ -73,8 +71,7 @@
                     "modifierClass" : "site-search-submit"
                 },
 
-                "attributes": {
-                    "_template": "/assets/templates/base/common/attributes",
+                "extraAttributes": {
                     "type": "submit",
                     "value": "Go"
                 }

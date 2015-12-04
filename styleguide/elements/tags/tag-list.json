@@ -1,5 +1,5 @@
 {
-  
+
   "_template": "/assets/templates/base/elements/tags",
   "title": {
     "_template": "/assets/templates/base/common/text",
@@ -13,8 +13,7 @@
         8
       ],
       "body": "{{words([ 1, 2 ])}}",
-      "attributes": {
-        "_template": "/assets/templates/base/common/attributes",
+      "extraAttributes": {
         "href": "#"
       }
     }

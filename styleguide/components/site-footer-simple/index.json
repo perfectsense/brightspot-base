@@ -7,7 +7,7 @@
       "displayOptions" : {
          "icon": "facebook"
       },
-      "attributes": {
+      "extraAttributes": {
         "href": "http://www.facebook.com",
         "title": "Facebook",
         "target": "_blank",
@@ -19,7 +19,7 @@
       "displayOptions" : {
         "icon": "twitter"
       },
-      "attributes": {
+      "extraAttributes": {
         "href": "http://www.twitter.com",
         "title": "Twitter",
         "target": "_blank",
@@ -31,7 +31,7 @@
       "displayOptions" : {
         "icon": "pinterest"
         },
-      "attributes": {
+      "extraAttributes": {
         "href": "http://www.pinterest.com",
         "title": "Pinterest",
         "target": "_blank",
@@ -43,7 +43,7 @@
       "displayOptions" : {
         "icon": "linkedin"
         },
-      "attributes": {
+      "extraAttributes": {
         "href": "http://www.linkedin.com",
         "title": "LinkedIn",
         "target": "_blank",
@@ -59,7 +59,7 @@
     {
     "_repeat" : 5,
       "_template": "/assets/templates/base/common/link",
-      "attributes": {
+      "extraAttributes": {
         "href": "link-me",
         "title": "I are a link",
         "_template": "/assets/templates/base/common/attributes"

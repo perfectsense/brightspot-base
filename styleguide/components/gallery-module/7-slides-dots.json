@@ -14,8 +14,8 @@
       "_repeat": 7,
       "content": {
         "_template": "/assets/templates/base/common/image",
-        "attributes": {
-          "_template": "/assets/templates/base/common/attributes",
+        "extraAttributes": {
+          
           "src": "{{image([ 600, 1200, 100 ], 400)}}"
         }
       }
@@ -25,7 +25,7 @@
     "_template": "/assets/templates/base/components/component-cta",
     "content": {
       "_template": "/assets/templates/base/common/link",
-      "attributes": {
+      "extraAttributes": {
         "href": "link-me",
         "title": "I are a link",
         "_template": "/assets/templates/base/common/attributes"

@@ -1,6 +1,4 @@
 {
-    
-
     "modifierClass" : "component-inverse-color",
 
     "_template" : "/assets/templates/base/components/video-player",
@@ -27,8 +25,8 @@
         {
           "_template": "/assets/templates/base/common/link",
           "body": "{{words([ 1, 2 ])}}",
-          "attributes": {
-            "_template": "/assets/templates/base/common/attributes",
+          "extraAttributes": {
+
             "href": "#"
           }
         }

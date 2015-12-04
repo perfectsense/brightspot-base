@@ -31,7 +31,7 @@
                         "tagList": [
                             {
                                 "_template": "/assets/templates/base/common/link",
-                                "attributes": {
+                                "extraAttributes": {
                                     "href": "#",
                                     "_template": "/assets/templates/base/common/attributes"
                                 },
@@ -54,7 +54,7 @@
 
                         "_template" : "/assets/templates/base/common/link",
 
-                        "attributes" : {
+                        "extraAttributes" : {
                             "_template" : "/assets/templates/base/common/attributes",
                             "href"  : "link"
                         },
@@ -63,7 +63,7 @@
 
                             "_template" : "/assets/templates/base/common/image",
 
-                            "attributes" : {
+                            "extraAttributes" : {
                                 "_template" : "/assets/templates/base/common/attributes",
                                 "alt" : "{{words([ 1, 2 ])}}",
                                 "src" : "{{image(800, 450)}}"
@@ -85,7 +85,7 @@
                         "link" : {
                             "_template" : "/assets/templates/base/common/link",
 
-                            "attributes" : {
+                            "extraAttributes" : {
                                 "_template" : "/assets/templates/base/common/attributes",
                                 "href"  : "#"
                             },
@@ -107,7 +107,7 @@
                     "title" : {
                         "_template" : "/assets/templates/base/common/link",
 
-                        "attributes" : {
+                        "extraAttributes" : {
                             "_template" : "/assets/templates/base/common/attributes",
                             "href"  : "#"
                         },

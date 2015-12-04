@@ -21,7 +21,7 @@
 
                         "_template" : "/assets/templates/base/common/link",
 
-                        "attributes" : {
+                        "extraAttributes" : {
                             "_template" : "/assets/templates/base/common/attributes",
                             "href"  : "link"
                         },
@@ -30,7 +30,7 @@
 
                             "_template" : "/assets/templates/base/common/image",
 
-                            "attributes" : {
+                            "extraAttributes" : {
                                 "_template" : "/assets/templates/base/common/attributes",
                                 "alt" : "{{words([ 1, 2 ])}}",
                                 "src" : "{{image(1600, 600)}}"
@@ -50,7 +50,7 @@
                         "tagList": [
                             {
                                 "_template": "/assets/templates/base/common/link",
-                                "attributes": {
+                                "extraAttributes": {
                                     "href": "#",
                                     "_template": "/assets/templates/base/common/attributes"
                                 },
@@ -71,7 +71,7 @@
                     "title" : {
                         "_template" : "/assets/templates/base/common/link",
 
-                        "attributes" : {
+                        "extraAttributes" : {
                             "_template" : "/assets/templates/base/common/attributes",
                             "href"  : "#"
                         },
@@ -93,7 +93,7 @@
 
                         "_repeat" : 3,
 
-                        "attributes" : {
+                        "extraAttributes" : {
                             "_template" : "/assets/templates/base/common/attributes",
                             "href"  : "#"
                         },

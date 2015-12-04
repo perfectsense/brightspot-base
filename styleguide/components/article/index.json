@@ -21,8 +21,8 @@
           5
         ],
         "body": "{{name}}",
-        "attributes": {
-          "_template": "/assets/templates/base/common/attributes",
+        "extraAttributes": {
+          
           "href": "#",
           "title": "{{name}}"
         }
@@ -41,8 +41,8 @@
     },
     "image": {
       "_template": "/assets/templates/base/common/image",
-      "attributes": {
-        "_template": "/assets/templates/base/common/attributes",
+      "extraAttributes": {
+        
         "src": "{{image(1600, 600)}}"
       }
     }
@@ -67,8 +67,8 @@
       "content": {
         "_template": "/assets/templates/base/common/link",
         "cssClass": "related-link",
-        "attributes": {
-          "_template": "/assets/templates/base/common/attributes",
+        "extraAttributes": {
+          
           "href": "#"
         },
         "body": {
@@ -126,8 +126,8 @@
           {
             "_template": "/assets/templates/base/common/image",
             "_repeat": 8,
-            "attributes": {
-              "_template": "/assets/templates/base/common/attributes",
+            "extraAttributes": {
+              
               "src": "{{image(1200, 600)}}"
             }
           }
@@ -136,8 +136,8 @@
           {
             "_template": "/assets/templates/base/common/image",
             "_repeat": 8,
-            "attributes": {
-              "_template": "/assets/templates/base/common/attributes",
+            "extraAttributes": {
+              
               "src": "{{image(250, 150)}}"
             }
           }
@@ -155,8 +155,8 @@
       },
       "content": {
         "_template": "/assets/templates/base/common/image",
-        "attributes": {
-          "_template": "/assets/templates/base/common/attributes",
+        "extraAttributes": {
+          
           "src": "{{image([ 200, 300, 10 ], [ 200, 300, 10 ])}}"
         }
       }
@@ -190,8 +190,8 @@
         "credit": "{{name}}",
         "image": {
           "_template": "/assets/templates/base/common/image",
-          "attributes": {
-            "_template": "/assets/templates/base/common/attributes",
+          "extraAttributes": {
+            
             "src": "{{image([ 200, 300, 10 ], [ 200, 300, 10 ])}}"
           }
         }

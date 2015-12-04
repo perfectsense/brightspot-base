@@ -22,8 +22,8 @@
       "_repeat": 5,
       "content": {
         "_template": "/assets/templates/base/common/image",
-        "attributes": {
-          "_template": "/assets/templates/base/common/attributes",
+        "extraAttributes": {
+          
           "src": "{{image(600, 400)}}"
         }
       }

@@ -18,7 +18,7 @@
             {
                 "_template" : "/assets/templates/base/common/link",
 
-                "attributes" : {
+                "extraAttributes" : {
                     "_template" : "/assets/templates/base/common/attributes",
                     "href"  : "link"
                 },
@@ -45,8 +45,8 @@
       "_repeat": 7,
       "content": {
         "_template": "/assets/templates/base/common/image",
-        "attributes": {
-          "_template": "/assets/templates/base/common/attributes",
+        "extraAttributes": {
+          
           "src": "{{image(200, 200)}}"
         }
       }

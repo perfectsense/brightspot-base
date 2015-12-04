@@ -14,7 +14,7 @@
     {
       "_template": "/assets/templates/base/common/image",
       "_repeat": 8,
-      "attributes": {
+      "extraAttributes": {
         "src": "{{image(1200, 600)}}",
         "_template": "/assets/templates/base/common/attributes"
       }
@@ -24,7 +24,7 @@
     {
       "_template": "/assets/templates/base/common/image",
       "_repeat": 8,
-      "attributes": {
+      "extraAttributes": {
         "src": "{{image(250, 150)}}",
         "_template": "/assets/templates/base/common/attributes"
       }

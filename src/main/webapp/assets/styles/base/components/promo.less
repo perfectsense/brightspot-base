@@ -2,6 +2,15 @@
     .component-cta {
         padding-top: @space-double;
     }
+
+    // this is to help us with consistent spacing for load more ajax use cases where we double up on content
+    .component-content {
+        padding-top: @space-double;
+
+        &:first-of-type {
+            padding: 0;
+        }
+    }
 }
 
 .promo-list {

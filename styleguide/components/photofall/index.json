@@ -21,8 +21,8 @@
           5
         ],
         "body": "{{name}}",
-        "attributes": {
-          "_template": "/assets/templates/base/common/attributes",
+        "extraAttributes": {
+
           "href": "#",
           "title": "{{name}}"
         }
@@ -41,8 +41,8 @@
     },
     "image": {
       "_template": "/assets/templates/base/common/image",
-      "attributes": {
-        "_template": "/assets/templates/base/common/attributes",
+      "extraAttributes": {
+
         "src": "{{image(1600, 600)}}"
       }
     }
@@ -81,7 +81,7 @@
 
                             "_template" : "/assets/templates/base/common/link",
 
-                            "attributes" : {
+                            "extraAttributes" : {
                                 "_template" : "/assets/templates/base/common/attributes",
                                 "data-bsp-modal-open" : "fullscreen",
                                 "href"  : "#image2"
@@ -91,7 +91,7 @@
 
                                 "_template" : "/assets/templates/base/common/image",
 
-                                "attributes" : {
+                                "extraAttributes" : {
                                     "_template" : "/assets/templates/base/common/attributes",
                                     "alt" : "{{words([ 1, 2 ])}}",
                                     "src" : "{{image(800, 450)}}"
@@ -148,15 +148,15 @@
                 "_template" : "/assets/templates/base/components/gallery-full-slide-content",
                 "image" : {
                     "_template": "/assets/templates/base/common/image",
-                    "attributes": {
-                        "_template": "/assets/templates/base/common/attributes",
+                    "extraAttributes": {
+
                         "src": "{{image(1600, 900)}}"
                     }
                 },
                 "thumbnail": {
                     "_template": "/assets/templates/base/common/image",
-                    "attributes": {
-                        "_template": "/assets/templates/base/common/attributes",
+                    "extraAttributes": {
+
                         "src": "{{image(100, 100)}}"
                     }
                 },

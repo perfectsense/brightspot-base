@@ -26,8 +26,8 @@
             "text" : "{{words(20)}}"
         },
 
-        "attributes": {
-          "_template": "/assets/templates/base/common/attributes",
+        "extraAttributes": {
+          
           "src": "{{image([ 600, 1200, 100 ], 400)}}"
         }
       }
