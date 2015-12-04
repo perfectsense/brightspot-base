@@ -4,6 +4,7 @@
 
     "displayOptions" : {
         "modifierClass" : "component-inverse-color aspect-4x3",
+        "disableDeepLinking" : true,
         "thumbnails" : true
     },
 
@@ -24,14 +25,14 @@
             "image" : {
                 "_template": "/assets/templates/base/common/image",
                 "extraAttributes": {
-                    
+
                     "src": "{{image(1200, 900)}}"
                 }
             },
             "thumbnail": {
                 "_template": "/assets/templates/base/common/image",
                 "extraAttributes": {
-                    
+
                     "src": "{{image(100, 100)}}"
                 }
             },
@@ -48,14 +49,14 @@
                 "_template": "/assets/templates/base/common/image",
                 "cssClass" : "image-portait",
                 "extraAttributes": {
-                    
+
                     "src": "{{image(675, 900)}}"
                 }
             },
             "thumbnail": {
                 "_template": "/assets/templates/base/common/image",
                 "extraAttributes": {
-                    
+
                     "src": "{{image(100, 100)}}"
                 }
             },
@@ -72,14 +73,14 @@
             "image" : {
                 "_template": "/assets/templates/base/common/image",
                 "extraAttributes": {
-                    
+
                     "src": "{{image(1200, 900)}}"
                 }
             },
             "thumbnail": {
                 "_template": "/assets/templates/base/common/image",
                 "extraAttributes": {
-                    
+
                     "src": "{{image(100, 100)}}"
                 }
             },
