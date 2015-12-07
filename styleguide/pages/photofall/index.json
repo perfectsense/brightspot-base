@@ -11,7 +11,7 @@
     "_template": "/assets/templates/base/common/body",
 
     "displayOptions" : {
-        "modifierClass" : "gallery-page gallery-fullscreen"
+        "modifierClass" : "layout-inverse-color"
     },
 
     "headerView": {
@@ -22,9 +22,13 @@
       "_template": "/assets/templates/base/layouts/one-col",
       "main": [
         {
-          "_dataUrl": "/components/gallery-full/16x9-images.json"
+          "_dataUrl": "/components/photofall/index.json"
         }
       ]
+    },
+
+    "footerView": {
+      "_dataUrl": "/components/site-footer-simple/index.json"
     }
   }
 }

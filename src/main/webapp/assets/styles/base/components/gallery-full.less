@@ -140,7 +140,7 @@
 // elements at the bottom of the footer
 .bsp-carousel-gallery-thumbs, .bsp-carousel-gallery-count-wrapper, .bsp-carousel-gallery-caption-trigger {
     display: inline-block;
-    margin: @space-half @space-double @space-half 0;
+    margin: @space @space-double @space 0;
     padding: 0 @space;
 }
 
@@ -260,21 +260,32 @@
         height: 82px;
         margin: 0;
         overflow: hidden;
-        padding-top: @space-double;
+        padding-top: @space;
+    }
+
+    .gallery-full-title {
+        padding-left: @space-double;
+        padding-right: @space-double;
+    }
+
+    .gallery-full-desc {
+        display: none;
     }
 
     .gallery-full-footer {
-        height: 70px;
+        height: 50px;
+        padding: 0 @space; // the footer components already have a bit of space, so we are even with title
         position: absolute;
         overflow: hidden;
-        bottom: @space-double;
+        bottom: 0;
         width: 100%;
     }
 
     .bsp-carousel-gallery {
+        margin: 0;
         position: absolute;
-        top: 90px;
-        bottom: 100px;
+        top: 80px;
+        bottom: 60px;
         width: 100%;
 
         .bsp-carousel-stage {
@@ -341,123 +352,129 @@
         margin: @space-half 0;
     }
 
-}
-
-
-
-
-
-
-
-
-
-@media @mq-sm {
-    .bsp-carousel-gallery {
-        .bsp-carousel-stage {
-            .bsp-carousel-slide {
-                img {
-                    max-height: 400px;
-                }
-            }
-        }
-    }
-
-    .bsp-carousel-gallery {
-        .aspect-4x3 & {
-            .bsp-carousel-stage {
-                .bsp-carousel-slide {
-                    img {
-                        max-height: 533px;
-                    }
-                }
-            }
-        }
-    }
-}
-@media @mq-md {
-    .bsp-carousel-gallery {
-        .bsp-carousel-stage {
-            .bsp-carousel-slide {
-                img {
-                    max-height: 525px;
-                }
-            }
-        }
-    }
-
-    .bsp-carousel-gallery {
-        .aspect-4x3 & {
-            .bsp-carousel-stage {
-                .bsp-carousel-slide {
-                    img {
-                        max-height: 698px;
-                    }
-                }
-            }
-        }
-    }
-}
-@media @mq-lg {
-    .bsp-carousel-gallery {
-        .bsp-carousel-stage {
-            .bsp-carousel-slide {
-                img {
-                    max-height: 636px;
-                }
-            }
-        }
-    }
-
-    .bsp-carousel-gallery {
-        .aspect-4x3 & {
-            .bsp-carousel-stage {
-                .bsp-carousel-slide {
-                    img {
-                        // we make sure at all past (even custom) breakpoints, we override
-                        max-height: 900px !important;
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-
-// full screen gallery gets a custom media query
-@media only screen and (min-width: 1400px) {
-    body.gallery-page {
-        .grid-container {
-            width: 85%;
-            max-width: 1600px;
-        }
-    }
-
-    .bsp-carousel-gallery {
-        .bsp-carousel-stage {
-            .bsp-carousel-slide {
-                img {
-                    max-height: 757px;
-                }
-            }
+    .gallery-fullscreen, .modal-fullscreen {
+        .gallery-full-header {
+            padding-top: @space-double;
         }
     }
 
 }
 
-@media only screen and (min-width: 1600px) {
 
-    .bsp-carousel-gallery {
-        .bsp-carousel-stage {
-            .bsp-carousel-slide {
-                img {
-                    max-height: 900px;
-                }
-            }
-        }
-    }
 
-}
+
+
+
+
+
+
+// @media @mq-sm {
+//     .bsp-carousel-gallery {
+//         .bsp-carousel-stage {
+//             .bsp-carousel-slide {
+//                 img {
+//                     max-height: 400px;
+//                 }
+//             }
+//         }
+//     }
+
+//     .bsp-carousel-gallery {
+//         .aspect-4x3 & {
+//             .bsp-carousel-stage {
+//                 .bsp-carousel-slide {
+//                     img {
+//                         max-height: 533px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media @mq-md {
+//     .bsp-carousel-gallery {
+//         .bsp-carousel-stage {
+//             .bsp-carousel-slide {
+//                 img {
+//                     max-height: 525px;
+//                 }
+//             }
+//         }
+//     }
+
+//     .bsp-carousel-gallery {
+//         .aspect-4x3 & {
+//             .bsp-carousel-stage {
+//                 .bsp-carousel-slide {
+//                     img {
+//                         max-height: 698px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media @mq-lg {
+//     .bsp-carousel-gallery {
+//         .bsp-carousel-stage {
+//             .bsp-carousel-slide {
+//                 img {
+//                     max-height: 636px;
+//                 }
+//             }
+//         }
+//     }
+
+//     .bsp-carousel-gallery {
+//         .aspect-4x3 & {
+//             .bsp-carousel-stage {
+//                 .bsp-carousel-slide {
+//                     img {
+//                         // we make sure at all past (even custom) breakpoints, we override
+//                         max-height: 900px !important;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+
+// // full screen gallery gets a custom media query
+// @media only screen and (min-width: 1400px) {
+//     body.gallery-page {
+//         .grid-container {
+//             width: 85%;
+//             max-width: 1600px;
+//         }
+//     }
+
+//     .bsp-carousel-gallery {
+//         .bsp-carousel-stage {
+//             .bsp-carousel-slide {
+//                 img {
+//                     max-height: 757px;
+//                 }
+//             }
+//         }
+//     }
+
+// }
+
+// @media only screen and (min-width: 1600px) {
+
+//     .bsp-carousel-gallery {
+//         .bsp-carousel-stage {
+//             .bsp-carousel-slide {
+//                 img {
+//                     max-height: 900px;
+//                 }
+//             }
+//         }
+//     }
+
+// }
 
 
 
