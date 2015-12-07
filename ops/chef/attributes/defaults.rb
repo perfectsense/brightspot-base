@@ -33,3 +33,7 @@ default['brightspot']['context.xml']['dari/imageEditor/dims/useLegacyThumbnail']
 default['brightspot']['context.xml']['dari/imageEditor/dims/quality'] = 90
 
 default['brightspot']['context.xml']['cookieSecret'] = 'b54e1502aaef0b1ae0989200fb7c9ca8'
+
+default['java']['jdk8_url'] = "http://perfectsense-ops.s3.amazonaws.com/jdk/jdk-8u60-linux-x64.tar.gz"
+default['java']['jdk8_checksum'] = 'ebe51554d2f6c617a4ae8fc9a8742276e65af01bd273e96848b262b3c05424e5'
+default['java']['jdk8_version'] = '1.8.0_60'
