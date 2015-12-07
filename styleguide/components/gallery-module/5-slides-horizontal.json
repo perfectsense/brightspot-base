@@ -1,5 +1,5 @@
 {
-  
+
   "_template": "/assets/templates/base/components/gallery-module",
 
   "displayOptions" : {
@@ -16,17 +16,17 @@
     "text": "5 slides at a time, 2 on mobile"
   },
 
-  "gallerySlides": [
+  "gallerySlides":
     {
       "_template": "/assets/templates/base/components/gallery-module-slide-content",
-      "_repeat": 5,
-      "content": {
+
+      "content": [{
         "_template": "/assets/templates/base/common/image",
+        "_repeat": 5,
         "extraAttributes": {
-          
+
           "src": "{{image(600, 400)}}"
         }
-      }
+      }]
     }
-  ]
 }

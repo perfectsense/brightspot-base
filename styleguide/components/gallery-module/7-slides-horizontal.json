@@ -1,5 +1,5 @@
 {
-  
+
   "_template": "/assets/templates/base/components/gallery-module",
 
   "displayOptions" : {
@@ -39,17 +39,15 @@
             }
         ]
   },
-  "gallerySlides": [
-    {
+  "gallerySlides": {
       "_template": "/assets/templates/base/components/gallery-module-slide-content",
-      "_repeat": 7,
-      "content": {
+      "content": [{
         "_template": "/assets/templates/base/common/image",
+        "_repeat": 7,
         "extraAttributes": {
-          
+
           "src": "{{image(200, 200)}}"
         }
-      }
+      }]
     }
-  ]
 }

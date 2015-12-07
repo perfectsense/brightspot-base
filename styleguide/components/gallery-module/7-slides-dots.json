@@ -1,5 +1,5 @@
 {
-  
+
   "_template": "/assets/templates/base/components/gallery-module",
   "displayOptions" : {
     "dots": true
@@ -8,19 +8,17 @@
     "_template": "/assets/templates/base/common/text",
     "text": "7 slides, with dots, no thumbs"
   },
-  "gallerySlides": [
-    {
+  "gallerySlides": {
       "_template": "/assets/templates/base/components/gallery-module-slide-content",
-      "_repeat": 7,
-      "content": {
+      "content": [{
         "_template": "/assets/templates/base/common/image",
+        "_repeat": 7,
         "extraAttributes": {
-          
+
           "src": "{{image([ 600, 1200, 100 ], 400)}}"
         }
-      }
-    }
-  ],
+      }]
+    },
   "cta": {
     "_template": "/assets/templates/base/components/component-cta",
     "content": {

@@ -8,25 +8,12 @@
 		<div class="gallery-module {{#if displayOptions.textNav}}gallery-module-nav{{else}}gallery-module-thumbs{{/if}}" data-bsp-carousel-thumbnav data-bsp-carousel-thumbnav-options='{ "stage" : { "theme" : "carousel-dots" , "themeConfig" : { "arrows" : true } }, "nav": { "themeConfig" : { "slidesToShow" : {{#if displayOptions.thumbnailsToShow}}{{displayOptions.thumbnailsToShow}}{{else}}4{{/if}}, "centerMode" : false } } }'>
 			<div class="bsp-carousel-stage">
 
-				{{#each gallerySlides}}
-					<div class="bsp-carousel-slide">
-
-						{{render this}}
-
-						{{#if navText}}
-							<div class="bsp-carousel-slide-nav-text">{{navText}}</div>
-						{{/if}}
-					</div>
-				{{/each}}
+				{{render gallerySlides}}
 
 			</div>
 			<div class="bsp-carousel-nav">
 
-				{{#each galleryNavItems}}
-					<div class="bsp-carousel-slide">
-                        {{render this}}
-					</div>
-				{{/each}}
+                {{render galleryNavItems}}
 
 			</div>
 		</div>

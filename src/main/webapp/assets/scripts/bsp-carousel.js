@@ -33,9 +33,9 @@ var bsp_carousel = {};
 
         // if we are a dynamic slide load, we go ahead and create all the event bindings up front
         // and also make sure that we remove infinite status. Dynamic and infinite do not go together
-        if(options.dynamicSlideLoad) {
+        if(self.options.dynamicSlideLoad) {
             this._createDynamicSlideLoad();
-            options.themeConfig.infinite = false;
+            this.themeOptions.infinite = false;
         }
 
         this._interstitialsEnabled = true;

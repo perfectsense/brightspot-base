@@ -26,10 +26,12 @@
     display: flex;
     align-items: center;
     float: left;
+    position: relative;
+    left: @header-site-logo-xs-left-offset;
     height: 100%;
     vertical-align: middle;
     text-align: left;
-    width: @header-site-logo-width;
+    width: (@header-site-logo-width)*(@header-site-logo-xs-ratio);
 }
 
 .site-menu-toggle {
@@ -120,11 +122,13 @@
 
 .site-menu-trigger {
     &:extend(.ts-2);
+    background: @color-brand-secondary;
     cursor: pointer;
-    float: right;
-    text-align: right;
-    padding: 0 @space-double;
-    position: relative;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 64px;
 
     a {
         color: @color-white;
@@ -142,6 +146,13 @@
                 content: @fa-var-close;
             }
         }
+    }
+}
+
+@media @mq-sm {
+    .site-logo {
+        left: 0;
+        width: @header-site-logo-width;
     }
 }
 

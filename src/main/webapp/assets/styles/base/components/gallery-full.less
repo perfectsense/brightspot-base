@@ -241,7 +241,7 @@
     }
 }
 
-.gallery-fullscreen, .modal-fullscreen {
+.gallery-fullscreen, .modal-gallery-fullscreen {
 
     .gallery-full-component {
         height: 100%;
@@ -329,14 +329,16 @@
         float: left;
     }
 
-    .bsp-carousel-gallery-thumbs {
+    /* commenting this out, as we do not want thumbs anymore, but this can be
+       overrided on a site basis if someone wants to re-enable thumbs
+    bsp-carousel-gallery-thumbs {
         cursor: pointer;
 
         .icon {
             display: inline-block;
             margin-right: @space-half;
         }
-    }
+    }*/
 
     .bsp-carousel-gallery-caption-trigger {
 
@@ -352,7 +354,7 @@
         margin: @space-half 0;
     }
 
-    .gallery-fullscreen, .modal-fullscreen {
+    .gallery-fullscreen, .modal-gallery-fullscreen {
         .gallery-full-header {
             padding-top: @space-double;
         }

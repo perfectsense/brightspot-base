@@ -5,7 +5,7 @@
     "displayOptions" : {
         "modifierClass" : "component-inverse-color aspect-4x3",
         "disableDeepLinking" : true,
-        "thumbnails" : true
+        "thumbnails" : false
     },
 
     "heading": {

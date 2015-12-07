@@ -40,6 +40,8 @@ export default {
         self.saveElements();
         self.buildCarousel();
 
+        self.carousel.$stage[0].focus();
+
         self.addThumbCaptionClicks();
         self.addInterstitials();
 
@@ -79,6 +81,11 @@ export default {
         var self = this;
 
         self.carousel = Object.create(bsp_carousel_thumbnav);
+
+        // if there is no nav in the DOM, disable it to make sure not to cause JS errors
+        if(self.$el.find('.bsp-carousel-nav').length === 0) {
+            self.options.nav = 'disable';
+        }
 
         self.carousel.init(self.$carousel, self.options);
     },

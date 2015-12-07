@@ -1,15 +1,17 @@
-{{render this.image}}
+<div class="bsp-carousel-slide{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
+    {{render this.image}}
 
-{{#if this.seoLink}}
-    {{render this.seoLink cssClass="seo-link"}}
-{{/if}}
+    {{#if this.seoLink}}
+        {{render this.seoLink cssClass="seo-link"}}
+    {{/if}}
 
-{{#if this.caption}}
-<div class="bsp-carousel-gallery-slide-caption-wrapper">
-    <div class="bsp-carousel-gallery-slide-caption">
-        {{#each this.caption}}
-            {{render this}}
-        {{/each}}
+    {{#if this.caption}}
+    <div class="bsp-carousel-gallery-slide-caption-wrapper">
+        <div class="bsp-carousel-gallery-slide-caption">
+            {{#each this.caption}}
+                {{render this}}
+            {{/each}}
+        </div>
     </div>
+    {{/if}}
 </div>
-{{/if}}

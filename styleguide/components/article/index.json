@@ -1,5 +1,5 @@
 {
-  
+
 
   "_template": "/assets/templates/base/components/article",
 
@@ -22,7 +22,7 @@
         ],
         "body": "{{name}}",
         "extraAttributes": {
-          
+
           "href": "#",
           "title": "{{name}}"
         }
@@ -42,7 +42,7 @@
     "image": {
       "_template": "/assets/templates/base/common/image",
       "extraAttributes": {
-        
+
         "src": "{{image(1600, 600)}}"
       }
     }
@@ -68,7 +68,7 @@
         "_template": "/assets/templates/base/common/link",
         "cssClass": "related-link",
         "extraAttributes": {
-          
+
           "href": "#"
         },
         "body": {
@@ -127,7 +127,7 @@
             "_template": "/assets/templates/base/common/image",
             "_repeat": 8,
             "extraAttributes": {
-              
+
               "src": "{{image(1200, 600)}}"
             }
           }
@@ -137,7 +137,7 @@
             "_template": "/assets/templates/base/common/image",
             "_repeat": 8,
             "extraAttributes": {
-              
+
               "src": "{{image(250, 150)}}"
             }
           }
@@ -154,10 +154,24 @@
         "align": "left"
       },
       "content": {
-        "_template": "/assets/templates/base/common/image",
-        "extraAttributes": {
-          
-          "src": "{{image([ 200, 300, 10 ], [ 200, 300, 10 ])}}"
+        "_template" : "/assets/templates/base/common/link",
+
+        "extraAttributes" : {
+            "_template" : "/assets/templates/base/common/attributes",
+            "data-bsp-modal-open" : "gallery-fullscreen",
+            "href"  : "#slide-1"
+        },
+
+        "body" : {
+            "_template": "/assets/templates/base/common/figure",
+            "credit": "{{name}}",
+            "image": {
+              "_template": "/assets/templates/base/common/image",
+              "extraAttributes": {
+
+                "src": "{{image([ 200, 300, 10 ], [ 200, 300, 10 ])}}"
+              }
+            }
         }
       }
     },
@@ -186,16 +200,81 @@
         "align": "right"
       },
       "content": {
-        "_template": "/assets/templates/base/common/figure",
-        "credit": "{{name}}",
-        "image": {
-          "_template": "/assets/templates/base/common/image",
-          "extraAttributes": {
-            
-            "src": "{{image([ 200, 300, 10 ], [ 200, 300, 10 ])}}"
-          }
+        "_template" : "/assets/templates/base/common/link",
+
+        "extraAttributes" : {
+            "_template" : "/assets/templates/base/common/attributes",
+            "data-bsp-modal-open" : "gallery-fullscreen",
+            "href"  : "#slide-2"
+        },
+
+        "body" : {
+            "_template": "/assets/templates/base/common/figure",
+            "credit": "{{name}}",
+            "image": {
+              "_template": "/assets/templates/base/common/image",
+              "extraAttributes": {
+
+                "src": "{{image([ 200, 300, 10 ], [ 200, 300, 10 ])}}"
+              }
+            }
         }
       }
+    },
+    {
+        "_template": "/assets/templates/base/elements/modal",
+
+          "id": "gallery-fullscreen",
+
+          "content": {
+            "_template": "/assets/templates/base/components/gallery-full",
+
+            "displayOptions" : {
+                "modifierClass" : "component-inverse-color ratio-16x9",
+                "thumbnails" : true
+            },
+
+            "heading": {
+                "_template" : "/assets/templates/base/common/text",
+                "text" : "{{words(10)}}"
+            },
+
+            "description" : {
+                "_template" : "/assets/templates/base/common/text",
+                "text" : "{{words(20)}}"
+            },
+
+            "slides": [
+                {
+                    "_repeat" : 2,
+                    "_template" : "/assets/templates/base/components/gallery-full-slide-content",
+                    "image" : {
+                        "_template": "/assets/templates/base/common/image",
+                        "extraAttributes": {
+
+                            "src": "{{image(1600, 900)}}"
+                        }
+                    },
+                    "thumbnail": {
+                        "_template": "/assets/templates/base/common/image",
+                        "extraAttributes": {
+
+                            "src": "{{image(100, 100)}}"
+                        }
+                    },
+                    "caption" : [
+                        {
+                            "_template": "/assets/templates/base/common/text",
+                            "text" : "{{words(20)}}"
+                        }
+                    ]
+                }
+            ],
+
+            "sharing" : {
+                "_dataUrl" : "/elements/social-share/share-monochrome.json"
+            }
+          }
     },
     {
       "_template": "/assets/templates/base/common/html",

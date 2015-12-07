@@ -1,12 +1,15 @@
 {
   "_wrapper" : false,
   "_template": "/assets/templates/base/components/gallery-module-slide-content",
-  "content": {
-    "_template": "/assets/templates/base/common/image",
-    "extraAttributes": {
-      
-      "src": "{{image(1200, 400)}}",
-      "title": "slide-neg-1"
-    }
-  }
+
+    "content" : [
+        {
+            "_template": "/assets/templates/base/common/image",
+            "extraAttributes": {
+
+              "src": "{{image(1200, 400)}}",
+              "title": "slide-neg-1"
+            }
+        }
+    ]
 }

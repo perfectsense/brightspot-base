@@ -1,16 +1,18 @@
 {
-  
+
   "_template": "/assets/templates/base/components/gallery-module",
   "heading": {
     "_template": "/assets/templates/base/common/text",
     "text": "5 slides, with captions"
   },
-  "gallerySlides": [
-    {
+  "gallerySlides": {
       "_template": "/assets/templates/base/components/gallery-module-slide-content",
-      "_repeat": 7,
-      "content": {
+
+      "content": [{
+
         "_template": "/assets/templates/base/common/image",
+
+        "_repeat": 7,
 
         "displayOptions" : {
           "metadata" : true
@@ -27,10 +29,10 @@
         },
 
         "extraAttributes": {
-          
+
           "src": "{{image([ 600, 1200, 100 ], 400)}}"
         }
-      }
+      }]
     }
-  ]
+
 }

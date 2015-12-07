@@ -4,7 +4,7 @@
 
     "displayOptions" : {
         "modifierClass" : "component-inverse-color ratio-16x9",
-        "thumbnails" : true
+        "thumbnails" : false
     },
 
     "heading": {
@@ -24,14 +24,14 @@
             "image" : {
                 "_template": "/assets/templates/base/common/image",
                 "extraAttributes": {
-                    
+
                     "src": "{{image(1600, 900)}}"
                 }
             },
             "thumbnail": {
                 "_template": "/assets/templates/base/common/image",
                 "extraAttributes": {
-                    
+
                     "src": "{{image(100, 100)}}"
                 }
             },
@@ -48,14 +48,14 @@
                 "_template": "/assets/templates/base/common/image",
                 "cssClass" : "image-portait",
                 "extraAttributes": {
-                    
+
                     "src": "{{image(500, 900)}}"
                 }
             },
             "thumbnail": {
                 "_template": "/assets/templates/base/common/image",
                 "extraAttributes": {
-                    
+
                     "src": "{{image(100, 100)}}"
                 }
             },
@@ -72,14 +72,14 @@
             "image" : {
                 "_template": "/assets/templates/base/common/image",
                 "extraAttributes": {
-                    
+
                     "src": "{{image(1600, 900)}}"
                 }
             },
             "thumbnail": {
                 "_template": "/assets/templates/base/common/image",
                 "extraAttributes": {
-                    
+
                     "src": "{{image(100, 100)}}"
                 }
             },
@@ -109,14 +109,14 @@
             "image" : {
                 "_template": "/assets/templates/base/common/image",
                 "extraAttributes": {
-                    
+
                     "src": "{{image(1600, 900)}}"
                 }
             },
             "thumbnail": {
                 "_template": "/assets/templates/base/common/image",
                 "extraAttributes": {
-                    
+
                     "src": "{{image(100, 100)}}"
                 }
             },

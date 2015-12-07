@@ -1,5 +1,5 @@
 {
-  
+
   "_template": "/assets/templates/base/components/gallery-module-with-nav",
 
   "displayOptions" : {
@@ -10,24 +10,30 @@
     "_template": "/assets/templates/base/common/text",
     "text": "5 slides with thumbs"
   },
-  "gallerySlides": [
-    {
+  "gallerySlides": {
+    "_template": "/assets/templates/base/components/gallery-module-slide-content",
+
+    "content" : [{
       "_template": "/assets/templates/base/common/image",
       "_repeat": 8,
       "extraAttributes": {
         "src": "{{image(1200, 600)}}",
         "_template": "/assets/templates/base/common/attributes"
       }
-    }
-  ],
-  "galleryNavItems": [
-    {
+    }]
+  },
+
+  "galleryNavItems": {
+    "_template": "/assets/templates/base/components/gallery-module-slide-content",
+
+    "content" : [{
       "_template": "/assets/templates/base/common/image",
       "_repeat": 8,
       "extraAttributes": {
         "src": "{{image(250, 150)}}",
         "_template": "/assets/templates/base/common/attributes"
       }
-    }
-  ]
+    }]
+  }
+
 }
