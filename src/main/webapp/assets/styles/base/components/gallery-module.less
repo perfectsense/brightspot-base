@@ -2,12 +2,40 @@
 // of either "gallery-module-nav" for text nav or "gallery-module-thumbs" for thumb navigation. If it's a
 // horizontal gallery module that has multiple slides visible, it gets the "gallery-module-horizontal" modifier
 
-.gallery-module {
 
-    // on mobile we will hide the arrows (design deemed this so)
+// creating  gallery module wide display rules for arrows and dots
+.gallery-module, .gallery-module-horizontal {
+    margin-bottom: 30px;
+
+    .slick-dots {
+        height: 30px;
+    }
+
     .slick-prev, .slick-next {
         display: none !important;
     }
+
+}
+// for these two types of gallery modules, the slide is inside them, as it's the stage slider
+.gallery-module-nav, .gallery-module-thumbs {
+    margin-bottom: 0;
+
+    .bsp-carousel-stage {
+        margin-bottom: 30px;
+    }
+
+    // do not display nav carousels for mobile
+    .bsp-carousel-nav {
+        display: none;
+
+        // and never arrows in the nav
+        .slick-prev, .slick-next {
+            display: none !important;
+        }
+    }
+}
+
+.gallery-module {
 
     // set this up to support portrait and landscape images. The portrait ones will center themselves horizontally
     .bsp-carousel-slide {
@@ -43,12 +71,6 @@
 
 // these are styles for the hoziontal layout gallery which has 5 slides across
 .gallery-module-horizontal {
-	margin-bottom: 0;
-
-    // on this gallery though, we have arrows always
-    .slick-prev, .slick-next {
-        display: inline-block !important;
-    }
 
 	.slick-list {
 		margin: 0 -@space;
@@ -113,29 +135,34 @@
     }
 }
 
-// for medium and up, we kill the margin and also hide the nav text, as by default the
-// thumbs gallery at that point drops in the thumbnav
-@media @mq-sm {
-
-	.gallery-module-horizontal-slides {
-
-		.bsp-carousel-slide {
-			width: 20%;
-		}
-
-	}
-
-}
-
-
 @media @mq-md {
 
-	.gallery-module {
+    // creating  gallery module wide display rules for arrows and dots
+    .gallery-module, .gallery-module-horizontal {
+        margin-bottom: 0px;
+
+        .slick-dots {
+            display: none
+        }
 
         .slick-prev, .slick-next {
-            // on medium and up, we will show previous and next
             display: inline-block !important;
         }
+
+    }
+    // for these two types of gallery modules, the slide is inside them, as it's the stage slider
+    .gallery-module-nav, .gallery-module-thumbs {
+
+        .bsp-carousel-stage {
+            margin-bottom: 0px;
+        }
+
+        .bsp-carousel-nav {
+            display: block;
+        }
+    }
+
+	.gallery-module {
 
         // for anything past medium, we want the thumbs or text nav, anything before, no thumbs
         .bsp-carousel-nav {
@@ -144,30 +171,6 @@
                 display: block;
             }
 
-            // also in the carousel nav, no arrows
-            .slick-prev, .slick-next {
-                // on medium and up, we will show previous and next
-                display: none !important;
-            }
-
-        }
-
-        // on a stage carousel, we want to make sure there are never dots, even if enabled
-        .bsp-carousel-stage {
-            margin-bottom: 0;
-
-            .slick-track {
-                margin-bottom: 0px;
-            }
-
-            .slick-dots {
-                display: none !important;
-            }
-        }
-
-        // on desktop, we don't need the nav text as we are using the carousel nav
-        .bsp-carousel-slide-nav-text  {
-            display: none;
         }
 
 	}

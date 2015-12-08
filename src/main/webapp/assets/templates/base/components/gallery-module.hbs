@@ -6,13 +6,16 @@
 	<div class="component-content">
 
 		<div class="gallery-module gallery-module-{{#if displayOptions.theme}}{{displayOptions.theme}}{{/if}}" data-bsp-carousel data-bsp-carousel-options='{
-			"theme" : "{{#if displayOptions.theme}}{{displayOptions.theme}}{{else}}{{#if displayOptions.dots}}carousel-dots{{/if}}{{/if}}",
 
-            {{#if dynamicSlideLoad}}"dynamicSlideLoad" : true,{{/if}}
+			"theme" : "{{#if displayOptions.theme}}{{displayOptions.theme}}{{/if}}",
+
+            {{#if displayOptions.dynamicSlideLoad}}"dynamicSlideLoad" : true,{{/if}}
+            {{#if displayOptions.dynamicEndpoint}}"dynamicEndpoint" : "{{displayOptions.dynamicEndpoint}}",{{/if}}
+            {{#if displayOptions.dynamicCount}}"dynamicCount" : "{{displayOptions.dynamicCount}}",{{/if}}
 
 			"themeConfig" : {
 	            "arrows" : {{#if displayOptions.arrows}}{{displayOptions.arrows}}{{else}}true{{/if}},
-	            "dots" : {{#if displayOptions.dots}}true{{else}}false{{/if}}
+	            "dots" : {{#if displayOptions.dots}}{{displayOptions.dots}}{{else}}true{{/if}}
 
 	            {{#if displayOptions.horizontalSlides}},
 

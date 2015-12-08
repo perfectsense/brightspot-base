@@ -22,6 +22,8 @@ export default {
         this.$stage = $el.find('.bsp-carousel-stage');
         this.options = $.extend(true, {}, this.defaults, options);
 
+        console.log(this.options);
+
         // we we have dynamic slide load, we need to pass that onto each instance of the carousel
         if (this.options.dynamicSlideLoad) {
             this.options.nav.dynamicSlideLoad = true;

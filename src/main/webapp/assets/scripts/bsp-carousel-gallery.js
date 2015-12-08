@@ -35,7 +35,7 @@ export default {
         var self = this;
 
         self.$el = $el;
-        self.options = $.extend(self.defaults, options);
+        self.options = $.extend(true, self.defaults, options);
 
         self.saveElements();
         self.buildCarousel();

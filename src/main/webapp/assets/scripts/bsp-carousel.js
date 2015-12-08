@@ -17,15 +17,25 @@ var bsp_carousel = {};
         }
     };
 
+    bsp_carousel.defaults = {
+        'dynamicSlideLoad'  : false,
+        'dynamicCount'      : 1
+    }
+
     bsp_carousel.init = function($el, options) {
         var self = this;
         this.$el = $el;
-        this.options = options;
+
+        console.log(options);
+
+        self.options = $.extend(true, self.defaults, options);
         this.themeOptions = this.mergeOptions(options);
 
         this.addClasses(options);
         this._createSlickMethodsAvailablePromise();
         this.addEvents();
+
+        console.log(self.options);
 
         if(self.options.deepLinking) {
             this.handleDeepLinking();
@@ -235,91 +245,58 @@ var bsp_carousel = {};
 
     /** private methods */
 
+    // helper to get more slides. We make sure we meet the criteria, ajax in, and add slides
+    bsp_carousel._tryToGetMoarSlides = function() {
+        var self = this;
+        var getNext;
+
+        // we want to make sure we stay ahead the correct amount. If we are into the slideshow more than we should be
+        // fetching each time, it means it's time to fetch
+        console.log(self.slideCount());
+        console.log(self.currentSlideAdjustedForInterstitials()+1);
+         console.log(self.options.dynamicCount);
+        if(self.slideCount() - (self.currentSlideAdjustedForInterstitials()+1) < self.options.dynamicCount) {
+
+            self.options.dynamicIndex = self.slideCount();
+
+            getNext = $.get(self.options.dynamicEndpoint + '?i=' + self.options.dynamicIndex + '&n=' + self.options.dynamicCount);
+
+            getNext.done(function(data) {
+                self.add(data);
+            });
+        }
+    },
+
     // TODO: Make this code pretty with more functions and create some APIs to do this dynamically
     // for now, this will work to get the job done
     bsp_carousel._createDynamicSlideLoad = function() {
         var self = this;
 
-        self.bind('init', (event, slick, currentSlide) => {
+        // if we were not provided an endpoint, get out
+        if (!self.options.dynamicEndpoint) {
+            return false;
+        }
 
-            var $currentSlide = $(slick.$slides[0]);
+        self.bind('carousel:init', (event, slick, currentSlide) => {
 
-            var $urlDataElement = $currentSlide.find('[data-next-url],[data-prev-url]');
+            self._tryToGetMoarSlides();
 
-            // there are no URLs to load, so we will not do anything at all
-            if(!$urlDataElement.length) {
-                return false;
-            }
+            self.bind('beforeChange', (event, slick, currentSlide, nextSlide) => {
 
-            var nextSlideUrl = $urlDataElement.attr('data-next-url');
-            var prevSlideUrl = $urlDataElement.attr('data-prev-url');
+                if(nextSlide > currentSlide) {
+                    self.sliderDirection = 'forward';
+                } else {
+                    self.sliderDirection = 'backward';
+                }
 
-            var getNext = $.get(nextSlideUrl);
-            var getPrev = $.get(prevSlideUrl);
+            });
 
-            $.when(getNext, getPrev).done(function(dataNext, dataPrev) {
+            self.bind('afterChange', (event, slick, currentSlide) => {
 
-                slick.slickAdd(dataNext[0]);
-                slick.slickAdd(dataPrev[0], 0, true);
-                slick.goTo(1, true);
+                if(self.sliderDirection === 'forward') {
+                    self._tryToGetMoarSlides();
+                }
 
-                var direction;
-
-                self.bind('beforeChange', (event, slick, currentSlide, nextSlide) => {
-
-                    if(nextSlide > currentSlide) {
-                        direction = 'forward';
-                    } else {
-                        direction = 'backward';
-                    }
-
-                });
-
-                self.bind('afterChange', (event, slick, currentSlide) => {
-
-                    if(direction === 'forward') {
-
-                        if(!slick.$slides[currentSlide+1]) {
-
-                            $currentSlide = $(slick.$slides[currentSlide]);
-
-                            $urlDataElement = $currentSlide.find('[data-next-url],[data-prev-url]');
-
-                            nextSlideUrl = $urlDataElement.attr('data-next-url');
-
-                            if(nextSlideUrl) {
-                                getNext = $.get(nextSlideUrl);
-
-                                getNext.done(function(data) {
-                                    slick.slickAdd(data);
-                                });
-                            }
-                        }
-
-                    } else {
-
-                        if(!slick.$slides[currentSlide-1]) {
-
-                            $currentSlide = $(slick.$slides[currentSlide]);
-
-                            $urlDataElement = $currentSlide.find('[data-next-url],[data-prev-url]');
-
-                            prevSlideUrl = $urlDataElement.attr('data-prev-url');
-
-                            if(prevSlideUrl) {
-
-                                getPrev = $.get(prevSlideUrl);
-
-                                getPrev.done(function(data) {
-                                    slick.slickAdd(data, 0, true);
-                                    slick.goTo(1, true);
-                                });
-                            }
-                        }
-
-                    }
-
-                });
             });
 
         });

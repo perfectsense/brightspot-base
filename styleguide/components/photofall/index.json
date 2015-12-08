@@ -216,8 +216,8 @@
         "_template": "/assets/templates/base/components/gallery-full",
 
         "displayOptions" : {
-            "modifierClass" : "component-inverse-color ratio-16x9",
-            "thumbnails" : true
+            "modifierClass" : "component-inverse-color",
+            "thumbnails" : false
         },
 
         "heading": {
@@ -239,13 +239,6 @@
                     "extraAttributes": {
 
                         "src": "{{image(1600, 900)}}"
-                    }
-                },
-                "thumbnail": {
-                    "_template": "/assets/templates/base/common/image",
-                    "extraAttributes": {
-
-                        "src": "{{image(100, 100)}}"
                     }
                 },
                 "caption" : [

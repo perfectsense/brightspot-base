@@ -3,8 +3,7 @@
     "_template": "/assets/templates/base/components/gallery-full",
 
     "displayOptions" : {
-        "modifierClass" : "component-inverse-color aspect-4x3",
-        "disableDeepLinking" : true,
+        "modifierClass" : "component-inverse-color",
         "thumbnails" : false
     },
 
@@ -20,13 +19,13 @@
 
     "slides": [
         {
-            "_repeat" : 4,
+            "_repeat" : 2,
             "_template" : "/assets/templates/base/components/gallery-full-slide-content",
             "image" : {
                 "_template": "/assets/templates/base/common/image",
                 "extraAttributes": {
 
-                    "src": "{{image(1200, 900)}}"
+                    "src": "{{image(1600, 900)}}"
                 }
             },
             "thumbnail": {
@@ -50,7 +49,7 @@
                 "cssClass" : "image-portait",
                 "extraAttributes": {
 
-                    "src": "{{image(675, 900)}}"
+                    "src": "{{image(500, 900)}}"
                 }
             },
             "thumbnail": {
@@ -68,13 +67,50 @@
             ]
         },
         {
+            "_repeat" : 2,
+            "_template" : "/assets/templates/base/components/gallery-full-slide-content",
+            "image" : {
+                "_template": "/assets/templates/base/common/image",
+                "extraAttributes": {
+
+                    "src": "{{image(1600, 900)}}"
+                }
+            },
+            "thumbnail": {
+                "_template": "/assets/templates/base/common/image",
+                "extraAttributes": {
+
+                    "src": "{{image(100, 100)}}"
+                }
+            },
+            "caption" : [
+                {
+                    "_template": "/assets/templates/base/common/text",
+                    "text" : "{{words(20)}}"
+                }
+            ]
+        },
+        {
+            "_template" : "/assets/templates/base/components/gallery-full-interstitial",
+            "displayOptions" : {
+                "countDisable" : false,
+                "countMessage" : "Advertisement: You may skip in {n} seconds",
+                "countDuration" : 5,
+                "countPosition" : "topRight",
+                "navEnabled" : false,
+                "navVisible" : true,
+                "modifierClass" : "interstitial"
+            },
+            "contentUrl" : "_interstitial.html"
+        },
+        {
             "_repeat" : 5,
             "_template" : "/assets/templates/base/components/gallery-full-slide-content",
             "image" : {
                 "_template": "/assets/templates/base/common/image",
                 "extraAttributes": {
 
-                    "src": "{{image(1200, 900)}}"
+                    "src": "{{image(1600, 900)}}"
                 }
             },
             "thumbnail": {

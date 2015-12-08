@@ -6,7 +6,7 @@
     },
   "heading": {
     "_template": "/assets/templates/base/common/text",
-    "text": "7 slides, with dots, no thumbs"
+    "text": "7 slides"
   },
   "gallerySlides": {
       "_template": "/assets/templates/base/components/gallery-module-slide-content",

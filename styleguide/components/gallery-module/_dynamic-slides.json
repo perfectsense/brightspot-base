@@ -5,6 +5,7 @@
     "content" : [
         {
             "_template": "/assets/templates/base/common/image",
+            "_repeat" : 5,
             "extraAttributes": {
 
               "src": "{{image(1200, 400)}}",
