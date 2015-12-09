@@ -1,9 +1,9 @@
 /* Moved this inside this repo temporarily to develop link pass through and also "auto modal" deep linking */
 
 
-import $ from '../jquery';
+import $ from 'jquery';
 import bsp_utils from 'bsp-utils';
-import vex from '../vex';
+import vex from 'vex';
 
 var bsp_modal = {
 

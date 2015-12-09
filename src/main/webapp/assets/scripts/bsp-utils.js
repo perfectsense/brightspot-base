@@ -1,6 +1,6 @@
 /* Moved this inside this repo temporarily to develop not initializing hidden modules */
 
-import $ from '../jquery';
+import $ from 'jquery';
 
 var bsp_utils = { };
 
