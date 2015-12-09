@@ -49,10 +49,11 @@ export default {
         // we want to manage the history so we replace the browser URL with the URL of the slide itself
         // we also want to remove the thumbs, as it get unwieldly having a possible million thumbnails
         // we can change this behavior to allow for more options or configurations if we need to later
-        if(self.options.dynamicSlideLoad) {
-            self.$el.find('.bsp-carousel-gallery-thumbs').remove();
+        if(self.options.stage.historyManagement) {
             self._manageHistory();
-        } else {
+        }
+
+        if(!self.options.stage.dynamicSlideLoad) {
             self.createCounter();
         }
     },
@@ -128,8 +129,7 @@ export default {
                 }
             });
             if (currentAdjusted == 'interstitial') {
-                $current = $(self.carousel.stage.$el[0].slick.$slides[currentSlide]);
-                $interstitial = $current.find('.bsp-carousel-gallery-interstitial');
+                $interstitial = $(self.carousel.stage.$el[0].slick.$slides[currentSlide]);
                 var options = $interstitial.data().options;
                 self.createInterstitial($interstitial, JSON.parse(options));
             }

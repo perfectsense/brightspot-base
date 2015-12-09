@@ -1,16 +1,14 @@
 {
-  "_wrapper" : false,
-  "_template": "/assets/templates/base/components/gallery-module-slide-content",
+    "_wrapper": false,
+    "_template": "/assets/templates/base/components/gallery-module-slide-content",
 
-    "content" : [
-        {
-            "_template": "/assets/templates/base/common/image",
-            "_repeat" : 5,
-            "extraAttributes": {
-
-              "src": "{{image(1200, 400)}}",
-              "title": "slide-1"
-            }
+    "content": [{
+        "_template": "/assets/templates/base/common/image",
+        "_repeat": 5,
+        "extraAttributes": {
+            "data-url" : "ajaxed-slide",
+            "src": "{{image(1200, 400)}}",
+            "title": "slide-1"
         }
-    ]
+    }]
 }

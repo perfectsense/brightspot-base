@@ -6,17 +6,19 @@
 	<div class="component-content">
 
 		<div class="gallery-module {{#if displayOptions.textNav}}gallery-module-nav{{else}}gallery-module-thumbs{{/if}}" data-bsp-carousel-thumbnav data-bsp-carousel-thumbnav-options='{
-            {{#if displayOptions.dynamicSlideLoad}}"dynamicSlideLoad" : true,{{/if}}
-            {{#if displayOptions.dynamicEndpoint}}"dynamicEndpoint" : "{{displayOptions.dynamicEndpoint}}",{{/if}}
-            {{#if displayOptions.dynamicCount}}"dynamicCount" : "{{displayOptions.dynamicCount}}",{{/if}}
-
             "stage" : {
+                {{#if displayOptions.dynamicSlideLoad}}"dynamicSlideLoad" : true,{{/if}}
+                {{#if displayOptions.dynamicEndpoint}}"dynamicEndpoint" : "{{displayOptions.dynamicEndpoint}}",{{/if}}
+                {{#if displayOptions.dynamicCount}}"dynamicCount" : "{{displayOptions.dynamicCount}}",{{/if}}
                 "themeConfig" : {
                     "dots": true,
                     "arrows" : true
                 }
             },
             "nav": {
+                {{#if displayOptions.dynamicSlideLoad}}"dynamicSlideLoad" : true,{{/if}}
+                {{#if displayOptions.dynamicEndpointNav}}"dynamicEndpoint" : "{{displayOptions.dynamicEndpointNav}}",{{/if}}
+                {{#if displayOptions.dynamicCount}}"dynamicCount" : "{{displayOptions.dynamicCount}}",{{/if}}
                 "themeConfig" : {
                     "slidesToShow" : {{#if displayOptions.thumbnailsToShow}}{{displayOptions.thumbnailsToShow}}{{else}}4{{/if}},
                     "centerMode" : false

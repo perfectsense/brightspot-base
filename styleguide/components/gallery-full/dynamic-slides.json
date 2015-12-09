@@ -4,8 +4,10 @@
 
     "displayOptions" : {
         "modifierClass" : "component-inverse-color",
-        "disableDeepLinking" : true,
-        "thumbnails" : false
+        "historyManagement": true,
+        "dynamicSlideLoad": true,
+        "dynamicEndpoint": "_dynamic-slides",
+        "dynamicCount" : 5
     },
 
     "heading": {
@@ -25,7 +27,7 @@
             "image" : {
                 "_template": "/assets/templates/base/common/image",
                 "extraAttributes": {
-
+                    "data-url" : "initial-slide",
                     "src": "{{image(1200, 900)}}"
                 }
             },

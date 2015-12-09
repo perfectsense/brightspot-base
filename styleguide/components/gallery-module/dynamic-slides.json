@@ -20,7 +20,7 @@
             "_template": "/assets/templates/base/common/image",
 
             "extraAttributes": {
-                "src": "{{image(1200, 400)}}",
+                "src": "{{image(1200, 600)}}",
                 "title": "slide-0"
             }
         }]

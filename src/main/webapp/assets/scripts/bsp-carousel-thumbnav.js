@@ -3,7 +3,7 @@ import bsp_carousel from 'bsp-carousel';
 export default {
     defaults: {
         nav: {
-            themeConfig: {
+            'themeConfig' : {
                 centerMode: true,
                 centerPadding: '0px',
                 focusOnSelect: true,
@@ -12,7 +12,9 @@ export default {
             }
         },
         stage: {
-            themeConfig: {
+            'dynamicSlideLoad' : false,
+            'dynamicCount' : 1,
+            'themeConfig' : {
                 arrows: false
             }
         }
@@ -21,14 +23,6 @@ export default {
         this.$nav = $el.find('.bsp-carousel-nav');
         this.$stage = $el.find('.bsp-carousel-stage');
         this.options = $.extend(true, {}, this.defaults, options);
-
-        console.log(this.options);
-
-        // we we have dynamic slide load, we need to pass that onto each instance of the carousel
-        if (this.options.dynamicSlideLoad) {
-            this.options.nav.dynamicSlideLoad = true;
-            this.options.stage.dynamicSlideLoad = true;
-        }
 
         this.setInstanceId();
         this.buildCarousels();
@@ -41,6 +35,11 @@ export default {
     buildCarousels: function() {
         var navClass;
         var stageClass;
+
+        if(this.options.stage.dynamicSlideLoad) {
+            this.options.nav = 'disable';
+        }
+
         if (this.options.nav != 'disable' && this.options.stage != 'disable' && !this.options.disableAsNavFor) {
             navClass = 'bsp-carousel-nav-' + this.instanceId;
             stageClass = 'bsp-carousel-stage-' + this.instanceId;

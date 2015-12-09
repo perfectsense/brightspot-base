@@ -142,7 +142,7 @@
         margin-bottom: 0px;
 
         .slick-dots {
-            display: none
+            display: none !important;
         }
 
         .slick-prev, .slick-next {
@@ -158,7 +158,9 @@
         }
 
         .bsp-carousel-nav {
-            display: block;
+            &.slick-initialized {
+                display: block;
+            }
         }
     }
 
@@ -166,11 +168,9 @@
 
         // for anything past medium, we want the thumbs or text nav, anything before, no thumbs
         .bsp-carousel-nav {
-
             &.slick-initialized {
                 display: block;
             }
-
         }
 
 	}

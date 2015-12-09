@@ -17,41 +17,29 @@ var bsp_carousel = {};
         }
     };
 
-    bsp_carousel.defaults = {
-        'dynamicSlideLoad'  : false,
-        'dynamicCount'      : 1
-    }
-
     bsp_carousel.init = function($el, options) {
         var self = this;
-        this.$el = $el;
+        self.$el = $el;
 
-        console.log(options);
+        self.options = options;
+        self.themeOptions = self.mergeOptions(options);
 
-        self.options = $.extend(true, self.defaults, options);
-        this.themeOptions = this.mergeOptions(options);
-
-        this.addClasses(options);
-        this._createSlickMethodsAvailablePromise();
-        this.addEvents();
-
-        console.log(self.options);
+        self.addClasses(options);
+        self._createSlickMethodsAvailablePromise();
+        self.addEvents();
 
         if(self.options.deepLinking) {
-            this.handleDeepLinking();
+            self.handleDeepLinking();
         }
 
         // if we are a dynamic slide load, we go ahead and create all the event bindings up front
         // and also make sure that we remove infinite status. Dynamic and infinite do not go together
         if(self.options.dynamicSlideLoad) {
-            this._createDynamicSlideLoad();
-            this.themeOptions.infinite = false;
+            self._createDynamicSlideLoad();
+            self.themeOptions.infinite = false;
         }
 
-        this._interstitialsEnabled = true;
-        this._interstitialClass = 'interstitial'; // wtf, don't know why this doesn't save when passed as an option
-
-        $el.slick(this.themeOptions);
+        $el.slick(self.themeOptions);
         $el.data('bsp_carousel', this);
 
         return this;
@@ -201,7 +189,7 @@ var bsp_carousel = {};
         return this._slickMethod('getSlick').slideCount;
     };
     bsp_carousel.slideCountMinusInterstitials = function() {
-        return this.slideCount() - this.$el.find('.slick-slide.'+this._interstitialClass+':not(.slick-cloned)').length;
+        return this.slideCount() - this.$el.find('.slick-slide.interstitial:not(.slick-cloned)').length;
     };
     bsp_carousel.currentSlideAdjustedForInterstitials = function() {
         var self = this;
@@ -220,7 +208,7 @@ var bsp_carousel = {};
     };
     bsp_carousel.slideIsInterstitial = function(index) {
         var $slide = this.$el.find('[data-slick-index="'+index+'"]');
-        return $slide.hasClass(this._interstitialClass);
+        return $slide.hasClass('interstitial');
     };
     bsp_carousel.disableNav = function() {
         this.setOption('swipe', false);
@@ -252,11 +240,7 @@ var bsp_carousel = {};
 
         // we want to make sure we stay ahead the correct amount. If we are into the slideshow more than we should be
         // fetching each time, it means it's time to fetch
-        console.log(self.slideCount());
-        console.log(self.currentSlideAdjustedForInterstitials()+1);
-         console.log(self.options.dynamicCount);
-        if(self.slideCount() - (self.currentSlideAdjustedForInterstitials()+1) < self.options.dynamicCount) {
-
+        if(self.slideCount() - (self.currentSlideAdjustedForInterstitials()) < self.options.dynamicCount) {
             self.options.dynamicIndex = self.slideCount();
 
             getNext = $.get(self.options.dynamicEndpoint + '?i=' + self.options.dynamicIndex + '&n=' + self.options.dynamicCount);
@@ -281,7 +265,7 @@ var bsp_carousel = {};
 
             self._tryToGetMoarSlides();
 
-            self.bind('beforeChange', (event, slick, currentSlide, nextSlide) => {
+            self.bind('carousel:beforeChange', (event, slick, currentSlide, nextSlide) => {
 
                 if(nextSlide > currentSlide) {
                     self.sliderDirection = 'forward';
@@ -291,7 +275,7 @@ var bsp_carousel = {};
 
             });
 
-            self.bind('afterChange', (event, slick, currentSlide) => {
+            self.bind('carousel:afterChange', (event, slick, currentSlide) => {
 
                 if(self.sliderDirection === 'forward') {
                     self._tryToGetMoarSlides();
