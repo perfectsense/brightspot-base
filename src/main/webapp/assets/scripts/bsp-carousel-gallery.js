@@ -95,14 +95,29 @@ export default {
         var self = this;
 
         self.$el.find('.bsp-carousel-gallery-thumbs').on('click', function() {
-            self.$el.removeClass('captions-visible');
+            self.$el.removeClass('overlay-visible');
             self.$el.toggleClass('thumbs-visible');
             return false;
         });
 
-        self.$el.find('.bsp-carousel-gallery-caption-trigger').on('click', function() {
+        self.$el.find('.bsp-carousel-gallery-overlay-trigger').on('click', function() {
+
+            // this code figures out how big the overlay has to be. Since we are trying to animate it, we need to
+            // animate max-height, so we need to set a max height value. We do not want some giant number, as that makes
+            // the animation janky, so we want to set the max height to the actual height of the content
+            var $currentSlide = self.carousel.$stage.find('.slick-active');
+            var $currentOverlay = $currentSlide.find('.bsp-carousel-gallery-slide-overlay-wrapper');
+            var currentOverlayHeight = $currentSlide.find('.bsp-carousel-gallery-slide-overlay-content').outerHeight();
+
+            if(self.$el.hasClass('overlay-visible')) {
+                $currentOverlay.css('max-height',0);
+            } else {
+                $currentOverlay.css('max-height',currentOverlayHeight);
+            }
+
+
             self.$el.removeClass('thumbs-visible');
-            self.$el.toggleClass('captions-visible');
+            self.$el.toggleClass('overlay-visible');
             return false;
         });
     },
