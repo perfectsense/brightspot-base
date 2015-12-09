@@ -4,7 +4,7 @@
   "_template": "/assets/templates/base/components/article",
 
   "sharing": {
-    "_dataUrl": "/elements/social-share/share-monochrome.json"
+    "_dataUrl": "/elements/social-share/share.json"
   },
 
   "permalink": "/bsp-article/",
@@ -232,25 +232,29 @@
                             "src": "{{image(1600, 900)}}"
                         }
                     },
-                    "thumbnail": {
-                        "_template": "/assets/templates/base/common/image",
-                        "extraAttributes": {
-
-                            "src": "{{image(100, 100)}}"
-                        }
-                    },
                     "caption" : [
                         {
                             "_template": "/assets/templates/base/common/text",
                             "text" : "{{words(20)}}"
                         }
-                    ]
+                    ],
+                    "sharing" : {
+                        "_dataUrl" : "/elements/social-share/share.json"
+                    }
                 }
             ],
 
-            "sharing" : {
-                "_dataUrl" : "/elements/social-share/share-monochrome.json"
+            "showMoreText" : {
+                "_template": "/assets/templates/base/common/text",
+                "text" : "Show More"
+            },
+
+            "showLessText" : {
+                "_template": "/assets/templates/base/common/text",
+                "text" : "Show Less"
             }
+
+
           }
     },
     {

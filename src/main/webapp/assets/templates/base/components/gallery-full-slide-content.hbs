@@ -5,13 +5,25 @@
         {{render this.seoLink cssClass="seo-link"}}
     {{/if}}
 
-    {{#if this.caption}}
-    <div class="bsp-carousel-gallery-slide-caption-wrapper">
-        <div class="bsp-carousel-gallery-slide-caption">
-            {{#each this.caption}}
+
+    <div class="bsp-carousel-gallery-slide-overlay-wrapper">
+        <div class="bsp-carousel-gallery-slide-overlay-content">
+            {{#if this.caption}}
+                <div class="bsp-carousel-gallery-slide-caption">
+                    {{#each this.caption}}
+                        {{render this}}
+                    {{/each}}
+                </div>
+            {{/if}}
+
+            {{#with this.sharing}}
                 {{render this}}
-            {{/each}}
+            {{/with}}
+
+            {{#with this.tags}}
+                {{render this}}
+            {{/with}}
         </div>
     </div>
-    {{/if}}
+
 </div>

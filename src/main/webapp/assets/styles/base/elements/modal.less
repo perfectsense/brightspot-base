@@ -3,7 +3,7 @@
 }
 
 // this our base on the default vex theme
-.modal-theme-default {
+.vex.modal-theme-default {
     .vex-content {
         border-radius: 5px;
         position: relative;
@@ -18,13 +18,22 @@
 }
 
 // gallery fullscreen
-.modal-gallery-fullscreen {
+.vex.modal-gallery-fullscreen {
     .vex-content {
         position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
         width: 100%;
+    }
+
+    .vex-close {
+        top: @space;
+        right: @space;
+
+        &:before {
+            font-size: 40px;
+        }
     }
 }
 

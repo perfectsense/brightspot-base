@@ -1,9 +1,7 @@
 .gallery-full-wrapper {
-    padding-top: @space-double;
-
     .interstitial-showing {
-        .gallery-full-slide-caption-wrapper,
-        .gallery-full-caption-trigger,
+        .gallery-full-slide-overlay-wrapper,
+        .gallery-full-overlay-trigger,
         .gallery-full-thumbs {
             display: none !important;
         }
@@ -11,18 +9,47 @@
 }
 
 .gallery-full-header {
-    margin-bottom: @space-double;
+    background: @color-black;
+    border-bottom: @border-style-7;
+    padding: @space;
 }
 
 .gallery-full-title {
-    &:extend(.section-title all);
+    &:extend(.ts-heading-3 all);
+    height: 45px;
+    margin: 0;
+    overflow: hidden;
+    width: 85%;
+}
+
+.gallery-full-desc {
+    margin-top: @space;
 }
 
 .bsp-carousel-gallery {
-    margin-bottom: @space;
     position: relative;
 
     .bsp-carousel-stage {
+
+        // moves the previous and next underneath the gallery into the bottom bar
+        .slick-prev, .slick-next {
+            bottom: -55px;
+            top: auto;
+
+            &:before {
+                font-size: 20px;
+            }
+        }
+
+        .slick-prev {
+            left: auto;
+            right: 97px;
+        }
+
+        .slick-next {
+            right: @space;
+        }
+
         .bsp-carousel-slide {
             display: flex;
             align-content: center;
@@ -34,8 +61,8 @@
                 height: auto;
                 margin: 0 auto;
                 width: auto;
-
-                max-height: 275px;
+                // arbitrary max height set to make full galleries without full screen experience look ok
+                max-height: 250px;
             }
 
             // seo link that is used for linking to slides for SEO purposes
@@ -46,143 +73,99 @@
         }
     }
 
-    .aspect-4x3 & {
-        .bsp-carousel-stage {
-            .bsp-carousel-slide {
-                img {
-                    max-height: 325px;
-                }
-            }
-        }
-    }
-
-    // gives the overlay look to the 2nd carousel
+    // I'm leaving this code in here in case we ever want to add thumbnail support. Right now, it's disabled
+    // in the .hbs by not having the nav carousel or the thumb trigger in the DOM
+    //
+    // gives the overlay look to the thumbnail carousel
     // it's hidden by default on xs and sm screens and comes into play md and up by default
     // it has a max-height to give it a smooth look/feel when coming in
-    .bsp-carousel-nav {
-        background: rgba(0, 0, 0, 0.7);
-        bottom: 0;
-        max-height: 0;
-        height: auto;
-        position: absolute;
-        overflow: hidden;
-        transition: max-height 0.5s;
-        width: 100%;
+    // .bsp-carousel-nav {
+    //     background: rgba(0, 0, 0, 0.7);
+    //     bottom: 0;
+    //     max-height: 0;
+    //     height: auto;
+    //     position: absolute;
+    //     overflow: hidden;
+    //     transition: max-height 0.5s;
+    //     width: 100%;
 
-        .thumbs-visible & {
-            max-height: 250px;
-        }
+    //     .thumbs-visible & {
+    //         max-height: 250px;
+    //     }
 
-        // TODO: Move these to bsp-carousel or at least to base a regular bsp-carousel-nav thing
-        // we have smaller arrows for the thumbs than default
-        .slick-prev,
-        .slick-next {
+    //     // TODO: Move these to bsp-carousel or at least to base a regular bsp-carousel-nav thing
+    //     // we have smaller arrows for the thumbs than default
+    //     .slick-prev,
+    //     .slick-next {
 
-            height: 20px;
-            width: 20px;
-            margin-top: -10px;
+    //         height: 20px;
+    //         width: 20px;
+    //         margin-top: -10px;
 
-            &:before {
-                font-size: 20px;
-            }
-        }
+    //         &:before {
+    //             font-size: 20px;
+    //         }
+    //     }
 
-        // current thumb gets a pretty accent border
-        .current {
-            &:after {
-                border-top: 4px solid @color-brand-accent;
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-            }
-        }
+    //     // current thumb gets a pretty accent border
+    //     .current {
+    //         &:after {
+    //             border-top: 4px solid @color-brand-accent;
+    //             content: '';
+    //             position: absolute;
+    //             top: 0;
+    //             left: 0;
+    //             bottom: 0;
+    //             right: 0;
+    //         }
+    //     }
 
-        .bsp-carousel-slide {
-            padding: @space-double;
-            position: relative;
+    //     .bsp-carousel-slide {
+    //         padding: @space-double;
+    //         position: relative;
 
-            // make sure that thumb fits the container as much as possible
-            img {
-                height: auto;
-                margin: 0 auto;
-                width: 100%;
-            }
-        }
-    }
+    //         // make sure that thumb fits the container as much as possible
+    //         img {
+    //             height: auto;
+    //             margin: 0 auto;
+    //             width: 100%;
+    //         }
+    //     }
+    // }
 }
 
-// the caption wrapper gets a bottom placement on the slide along with the same max-height transition as the nav carousel
-.bsp-carousel-gallery-slide-caption-wrapper {
+// the overlay wrapper gets a bottom placement on the slide along with the same max-height transition as the nav carousel
+.bsp-carousel-gallery-slide-overlay-wrapper {
+    background: rgba(0, 0, 0, 0.5);
     bottom: 0;
+    left: 0;
     max-height: 0;
     overflow: hidden;
     position: absolute;
-    transition: max-height 0.5s;
+    transition: max-height 0.25s;
     width: 100%;
     z-index: @z-index-base;
 
-    .captions-visible & {
+    // arbitrary value in case the JS doesn't work out
+    .overlay-visible & {
         max-height: 150px;
+    }
+}
+
+.bsp-carousel-gallery-slide-overlay-content {
+    text-align: left;
+    padding: @space-double;
+
+    .share-links-wrapper {
+        display: block;
+        padding-top: @space-double;
     }
 }
 
 .bsp-carousel-gallery-slide-caption {
     &:extend(.ts-neg-1);
 
-    background: rgba(0, 0, 0, 0.5);
     height: auto;
-    padding: @space;
-}
-
-// elements at the bottom of the footer
-.bsp-carousel-gallery-thumbs, .bsp-carousel-gallery-count-wrapper, .bsp-carousel-gallery-caption-trigger {
-    display: inline-block;
-    margin: @space @space-double @space 0;
-    padding: 0 @space;
-}
-
-// we don't want to show the thumbs icon until a bigger screen size
-.bsp-carousel-gallery-thumbs {
-    .icon {
-        display: none;
-    }
-}
-
-// Used to create show and hide text for the caption trigger.
-.bsp-carousel-gallery-caption-trigger {
-    cursor: pointer;
-
-    span.captions-visible {
-        display: none;
-    }
-
-    .captions-visible & {
-         span.captions-visible {
-            display: inline-block;
-        }
-        span.captions-hidden {
-            display: none;
-        }
-    }
-}
-
-.gallery-full-sharing {
-    clear: both;
-    margin: @space 0;
-    padding: 0 @space;
-}
-
-.gallery-full-footer {
-    &:extend(.clearfix all);
-
-    .tags {
-        clear: both;
-        margin: @space-half 0;
-        padding: 0 @space;
-    }
 }
 
 .bsp-carousel-gallery-interstitial {
@@ -221,12 +204,73 @@
         right: 0;
     }
 }
+
 .bsp-carousel-gallery-interstitial-content {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.gallery-full-footer {
+    &:extend(.clearfix all);
+    background: @color-black;
+    padding: 0 @space-double;
+    font-size: @ts-neg-1;
+    text-transform: uppercase;
+}
+
+
+.bsp-carousel-gallery-count-wrapper {
+    float: right;
+    line-height: 70px;
+    padding-right: @space;
+    text-align: center;
+    width: 95px;
+}
+
+// Used to create show and hide text for the caption trigger.
+.bsp-carousel-gallery-overlay-trigger {
+    float: left;
+    line-height: 70px;
+    cursor: pointer;
+
+    .overlay-visible, .overlay-hidden {
+        .icon();
+
+        // to line up bigger arrow evenly with smaller text
+        &:after {
+            font-size: @ts-1;
+            position: relative;
+            top: 1px;
+        }
+    }
+
+    .overlay-visible {
+        &:after {
+            content: @fa-var-angle-down;
+
+        }
+    }
+
+    .overlay-hidden {
+        &:after {
+            content: @fa-var-angle-up;
+        }
+    }
+
+    span.overlay-visible {
+        display: none;
+    }
+
+    .overlay-visible & {
+         span.overlay-visible {
+            display: inline-block;
+        }
+        span.overlay-hidden {
+            display: none;
+        }
+    }
+}
 
 // this gives a fake "fullscreen" experience where the gallery moves with the size of the browser
 .gallery-fullscreen {
@@ -257,15 +301,9 @@
     }
 
     .gallery-full-header {
-        height: 82px;
+        height: 60px;
         margin: 0;
         overflow: hidden;
-        padding-top: @space;
-    }
-
-    .gallery-full-title {
-        padding-left: @space-double;
-        padding-right: @space-double;
     }
 
     .gallery-full-desc {
@@ -273,8 +311,7 @@
     }
 
     .gallery-full-footer {
-        height: 50px;
-        padding: 0 @space; // the footer components already have a bit of space, so we are even with title
+        height: 70px;
         position: absolute;
         overflow: hidden;
         bottom: 0;
@@ -284,9 +321,10 @@
     .bsp-carousel-gallery {
         margin: 0;
         position: absolute;
-        top: 80px;
-        bottom: 60px;
+        top: 60px;
+        bottom: 70px;
         width: 100%;
+        z-index: @z-index-base;
 
         .bsp-carousel-stage {
             height: 100%;
@@ -308,57 +346,32 @@
 
 
 
-@media @mq-md {
+@media @mq-sm {
 
-    .bsp-carousel-gallery {
-        // for anything past medium, we want the thumbs nav, anything before, no thumbs (which is default)
-        .bsp-carousel-nav {
-            &.slick-initialized {
-                display: block;
-            }
-
-            // also in the carousel nav, no arrows
-            .slick-prev, .slick-next {
-                // on medium and up, we will show previous and next
-                display: none !important;
-            }
-        }
+    .gallery-full-header {
+        padding: @space-and-half @space-double;
     }
 
-    .bsp-carousel-gallery-thumbs, .bsp-carousel-gallery-count-wrapper, .bsp-carousel-gallery-caption-trigger {
-        float: left;
+    .gallery-full-title {
+        height: 32px;
+        width: 95%;
     }
 
-    /* commenting this out, as we do not want thumbs anymore, but this can be
-       overrided on a site basis if someone wants to re-enable thumbs
-    bsp-carousel-gallery-thumbs {
-        cursor: pointer;
+    // commented out just in case we want to add thumbnail support back
+    //
+    // .bsp-carousel-gallery {
+    //     .bsp-carousel-nav {
+    //         &.slick-initialized {
+    //             display: block;
+    //         }
 
-        .icon {
-            display: inline-block;
-            margin-right: @space-half;
-        }
-    }*/
-
-    .bsp-carousel-gallery-caption-trigger {
-
-        .icon {
-            margin-right: @space-half;
-        }
-
-    }
-
-    .gallery-full-sharing {
-        clear: none;
-        float: right;
-        margin: @space-half 0;
-    }
-
-    .gallery-fullscreen, .modal-gallery-fullscreen {
-        .gallery-full-header {
-            padding-top: @space-double;
-        }
-    }
+    //         // also in the carousel nav, no arrows
+    //         .slick-prev, .slick-next {
+    //             // on medium and up, we will show previous and next
+    //             display: none !important;
+    //         }
+    //     }
+    // }
 
 }
 
@@ -369,115 +382,27 @@
 
 
 
+// arbitrary max height values to make a stand along gallery full not look bad
+@media @mq-sm {
+    .bsp-carousel-gallery {
+        .bsp-carousel-stage {
+            .bsp-carousel-slide {
+                img {
+                    max-height: 400px;
+                }
+            }
+        }
+    }
+}
 
-// @media @mq-sm {
-//     .bsp-carousel-gallery {
-//         .bsp-carousel-stage {
-//             .bsp-carousel-slide {
-//                 img {
-//                     max-height: 400px;
-//                 }
-//             }
-//         }
-//     }
-
-//     .bsp-carousel-gallery {
-//         .aspect-4x3 & {
-//             .bsp-carousel-stage {
-//                 .bsp-carousel-slide {
-//                     img {
-//                         max-height: 533px;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-// @media @mq-md {
-//     .bsp-carousel-gallery {
-//         .bsp-carousel-stage {
-//             .bsp-carousel-slide {
-//                 img {
-//                     max-height: 525px;
-//                 }
-//             }
-//         }
-//     }
-
-//     .bsp-carousel-gallery {
-//         .aspect-4x3 & {
-//             .bsp-carousel-stage {
-//                 .bsp-carousel-slide {
-//                     img {
-//                         max-height: 698px;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-// @media @mq-lg {
-//     .bsp-carousel-gallery {
-//         .bsp-carousel-stage {
-//             .bsp-carousel-slide {
-//                 img {
-//                     max-height: 636px;
-//                 }
-//             }
-//         }
-//     }
-
-//     .bsp-carousel-gallery {
-//         .aspect-4x3 & {
-//             .bsp-carousel-stage {
-//                 .bsp-carousel-slide {
-//                     img {
-//                         // we make sure at all past (even custom) breakpoints, we override
-//                         max-height: 900px !important;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
-
-
-// // full screen gallery gets a custom media query
-// @media only screen and (min-width: 1400px) {
-//     body.gallery-page {
-//         .grid-container {
-//             width: 85%;
-//             max-width: 1600px;
-//         }
-//     }
-
-//     .bsp-carousel-gallery {
-//         .bsp-carousel-stage {
-//             .bsp-carousel-slide {
-//                 img {
-//                     max-height: 757px;
-//                 }
-//             }
-//         }
-//     }
-
-// }
-
-// @media only screen and (min-width: 1600px) {
-
-//     .bsp-carousel-gallery {
-//         .bsp-carousel-stage {
-//             .bsp-carousel-slide {
-//                 img {
-//                     max-height: 900px;
-//                 }
-//             }
-//         }
-//     }
-
-// }
-
-
-
-
+@media @mq-lg {
+    .bsp-carousel-gallery {
+        .bsp-carousel-stage {
+            .bsp-carousel-slide {
+                img {
+                    max-height: 500px;
+                }
+            }
+        }
+    }
+}

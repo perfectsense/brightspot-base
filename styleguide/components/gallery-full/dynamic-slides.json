@@ -36,15 +36,20 @@
                     "_template": "/assets/templates/base/common/text",
                     "text" : "{{words(20)}}"
                 }
-            ]
+            ],
+            "sharing" : {
+                "_dataUrl" : "/elements/social-share/share.json"
+            }
         }
     ],
 
-    "tags" : {
-        "_dataUrl" : "/elements/tags/tag-list.json"
+    "showMoreText" : {
+        "_template": "/assets/templates/base/common/text",
+        "text" : "Show More"
     },
 
-    "sharing" : {
-        "_dataUrl" : "/elements/social-share/share-monochrome.json"
+    "showLessText" : {
+        "_template": "/assets/templates/base/common/text",
+        "text" : "Show Less"
     }
 }
