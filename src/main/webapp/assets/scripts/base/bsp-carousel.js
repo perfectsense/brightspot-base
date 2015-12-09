@@ -1,7 +1,7 @@
 /* Moved this inside this repo temporarily to develop deep linking for bsp-carousel-gallery. Will move back/version once it's ready */
 
-import $ from 'jquery';
-import slick from './slick';
+import $ from '../jquery';
+import slick from '../slick';
 
 var bsp_carousel = {};
 

@@ -244,7 +244,7 @@
                 "caption" : [
                     {
                         "_template": "/assets/templates/base/common/text",
-                        "text" : "{{words(20, 80)}}"
+                        "text" : "{{words(80)}}"
                     }
                 ],
                 "sharing" : {

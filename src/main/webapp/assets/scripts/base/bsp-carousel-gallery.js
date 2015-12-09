@@ -1,8 +1,8 @@
 /* Moved this inside this repo temporarily to develop deep linking for bsp-carousel-gallery. Will move back/version once it's ready */
 
-import $ from 'jquery';
+import $ from '../jquery';
 import bsp_carousel_thumbnav from 'bsp-carousel-thumbnav';
-import historyAPI from 'native.history';
+import historyAPI from '../native.history';
 
 export default {
 
