@@ -81,28 +81,33 @@ var bsp_utils = { };
         // also filter for things that are not hidden, we do not want to inialize those
         $items = $items.filter(':not(.hidden)');
 
-        if (!$items.parents('.hidden').length) {
-            if ($items.length > 0) {
-                $items.addClass(insertedClassName);
+        // go through each of the items and make sure they are not in a hidden element, get those out of there
+        $items.each(function() {
+            if($(this).parents('.hidden').length) {
+                $items = $items.not($(this));
+            }
+        });
 
-                var callbacks = domInsert.callbacks;
-                var beforeInsert = callbacks.beforeInsert;
-                var insert = callbacks.insert;
-                var afterInsert = callbacks.afterInsert;
+        if ($items.length > 0) {
+            $items.addClass(insertedClassName);
 
-                if (beforeInsert) {
-                    beforeInsert($.makeArray($items));
-                }
+            var callbacks = domInsert.callbacks;
+            var beforeInsert = callbacks.beforeInsert;
+            var insert = callbacks.insert;
+            var afterInsert = callbacks.afterInsert;
 
-                if (insert) {
-                    $items.each(function() {
-                        insert(this);
-                    });
-                }
+            if (beforeInsert) {
+                beforeInsert($.makeArray($items));
+            }
 
-                if (afterInsert) {
-                    afterInsert($.makeArray($items));
-                }
+            if (insert) {
+                $items.each(function() {
+                    insert(this);
+                });
+            }
+
+            if (afterInsert) {
+                afterInsert($.makeArray($items));
             }
         }
     }
@@ -291,8 +296,13 @@ var bsp_utils = { };
                 if (selector) {
                     bsp_utils.onDomInsert($.makeArray($roots), selector, {
                         'insert': function(item) {
-                            var $item = $(item);
+                            var $item = $(item).filter(':not(.hidden)');
                             var rootOptions = plugin.option($item.closest('.' + plugin._rootClassName));
+
+                            // if we are hidden or one of our parent is hidden
+                            if ($item.parents('.hidden').length || !$item.length) {
+                                return;
+                            }
 
                             $item.addClass(plugin._itemClassName);
                             updateOptions($item, rootOptions);
