@@ -1,4 +1,8 @@
-<div class="form-select{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
+<div class="form-select {{#if displayOptions.styledSelect}}styled-select{{/if}}{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
+
+    {{#if displayOptions.styledSelect}}
+    <i class="styled-select-dropdown"></i>
+    {{/if}}
 
     {{#if label}}
         <label {{label}}>
