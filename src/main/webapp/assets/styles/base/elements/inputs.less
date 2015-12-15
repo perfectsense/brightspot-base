@@ -1,0 +1,40 @@
+.styled-select {
+    position: relative;
+
+    select {
+        border: none;
+        background: none;
+        color: @color-black;
+        padding-right: @space-double;
+        position: relative;
+        z-index: @z-index-base+1;
+
+        -moz-appearance: none;
+        -webkit-appearance: none;
+
+        option {
+            border: none;
+            padding: @space;
+        }
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+}
+
+i.styled-select-dropdown {
+    &:extend(.icon all);
+
+    display: inline;
+    position: absolute;
+    top: -2px; // to line up evenly
+    right: 0;
+    font-size: @ts-1;
+    color: @color-brand-primary;
+    z-index: @z-index-base;
+
+    &:before {
+        content: @fa-var-caret-down;
+    }
+}

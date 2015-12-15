@@ -38,6 +38,10 @@
 
                     "autoSubmit" : true,
 
+                    "displayOptions" : {
+                        "styledSelect" : true
+                    },
+
                     "extraAttributes": {
                       "id": "search-results-sort"
                     },
