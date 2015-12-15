@@ -1,9 +1,15 @@
+@import '../globals/borders.vars';
+@import '../globals/colors.vars';
+@import '../globals/spacing.vars';
+@import '../globals/typography.vars';
+
+
 .social-feed-list {
     &:extend(.promo-list all);
 }
 
 .social-feed-item {
-    border: @border-style-7;
+    border: @border-style-gray-light;
     padding-top: @space;
 }
 
@@ -52,7 +58,7 @@
     justify-content: space-between;
     align-items: center;
 
-    border-top: @border-style-7;
+    border-top: @border-style-gray-light;
     height: 35px;
     margin-top: @space-half;
     padding: @space-half;
@@ -79,7 +85,7 @@
         text-transform: uppercase;
 
         a {
-            color: @color-gray-light-2;
+            color: @color-gray-light;
             margin-left: @space-double;
             .icon();
         }

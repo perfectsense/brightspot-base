@@ -1,3 +1,8 @@
+@import '../globals/borders.vars';
+@import '../globals/colors.vars';
+@import '../globals/grid.vars';
+@import '../globals/spacing.vars';
+
 // The super promo has a couple of custom overides, including a custom width
 .promo-super {
     padding-top: 0;
@@ -66,7 +71,7 @@
 .promo-75-25 {
     .promo-list {
         > li {
-            border-top: @border-style-7;
+            border-top: @border-style-gray-light;
             padding-top: @space-double;
             &:extend(.clearfix all);
 
@@ -122,7 +127,7 @@
         }
 
         .promo-section-text {
-            border-top: @border-style-7;
+            border-top: @border-style-gray-light;
             padding-top: @space;
             float: right;
             width: 25%;

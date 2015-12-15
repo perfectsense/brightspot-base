@@ -1,3 +1,12 @@
+@import '../globals/colors.vars';
+@import '../globals/spacing.vars';
+@import '../globals/typography.vars';
+@import '../globals/z-index.vars';
+
+@import '../elements/icons.less';
+
+@import 'site-header-simple.vars';
+
 // wrapper allows us to create the fixed position look/feel
 .site-header-simple-wrapper {
     background: @color-header-background;
@@ -52,7 +61,7 @@
 
 // nav menu is technically an "element" as we are providing non wrapped styles here, and we are also using it in the footer with an override
 .nav-menu-item {
-    background: @color-gray-light-1;
+    background: @color-off-white;
     border-bottom: 1px solid @color-white;
     line-height: @header-site-xs-menu-item-height;
     text-align: center;
@@ -64,7 +73,7 @@
 }
 
 .site-header-simple-search-wrapper {
-    background: @color-gray-light-1;
+    background: @color-off-white;
     height: @header-height;
 }
 
@@ -83,7 +92,7 @@
 }
 
 .site-search-text-input {
-    background: @color-gray-light-1;
+    background: @color-off-white;
     border: none;
     color: @color-text;
     height: 100%;
@@ -94,9 +103,9 @@
 }
 
 .site-search-submit-input {
-    background: @color-gray-light-1;
+    background: @color-off-white;
     border: none;
-    color: @color-gray-light-1;
+    color: @color-off-white;
     height: 25px;
     width: 25px;
     overflow: hidden;
