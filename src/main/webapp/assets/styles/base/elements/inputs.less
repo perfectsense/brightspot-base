@@ -24,7 +24,8 @@
 }
 
 i.styled-select-dropdown {
-    &:extend(.icon all);
+    &:extend(.icon);
+    &:extend(.icon-caret-down all);
 
     display: inline;
     position: absolute;
@@ -33,8 +34,4 @@ i.styled-select-dropdown {
     font-size: @ts-1;
     color: @color-brand-primary;
     z-index: @z-index-base;
-
-    &:before {
-        content: @fa-var-caret-down;
-    }
 }

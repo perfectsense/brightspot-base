@@ -6,7 +6,9 @@ module.exports = function (grunt) {
             styles: {
                 dir: 'assets/styles',
                 less: [ '*.less' ],
-                autoprefixer: true
+                options : {
+                    autoprefixer: true
+                }
             },
 
             scripts: {

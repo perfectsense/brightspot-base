@@ -241,7 +241,7 @@
     cursor: pointer;
 
     .overlay-visible, .overlay-hidden {
-        .icon();
+        &:extend(.icon);
 
         // to line up bigger arrow evenly with smaller text
         &:after {
@@ -252,16 +252,11 @@
     }
 
     .overlay-visible {
-        &:after {
-            content: @fa-var-angle-down;
-
-        }
+        &:extend(.icon-angle-down all);
     }
 
     .overlay-hidden {
-        &:after {
-            content: @fa-var-angle-up;
-        }
+        &:extend(.icon-angle-up all);
     }
 
     span.overlay-visible {

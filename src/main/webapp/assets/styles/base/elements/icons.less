@@ -1,38 +1,16 @@
 /**
- * We have 3 way of doing icons. All 3 are based off of Font Awesome.
+ * We have 2 ways of doing icons.
  *
- * Method 1 - compiles all of FA and uses it out of the box
- * Method 2 - adds a custom icon class (if desired) and you have to manually specify which icons you use (more work, but less CSS size)
- * Method 3 - if we have custom icons, we use FA as the base, and add custom icon definitions on top (most work, most performant)
+ * Method 1 - has a custom icon class (.icon) and you have to manually specify which icons you use
+ * Method 2 - if we have custom icons add your custom font and add custom icon definitions on top (most work, most performant)
  *
- * As our exampe, we use Method 3, as it's the most complex.
- * If you will use Method 1 or 2, delete the icomoon font files in the assets folder and the other code out of this LESS file
  */
-
-
-
 
 
 /**
  * Method #1
  *
- * The first way is very straightfoward as it just includes font awesome
- * Use this if you are using a lot of the Font Awesome icons out of the box. This way you can use the standard
- * FA documentation and create icon classes throughout your html ex: <i class="fa fa-bed">
- */
-
-/*
-@import "../bower/fontawesome/font-awesome.less";
-*/
-
-
-
-
-
-/**
- * Method #2
- *
- * The second way is our custom implementation of font-awesome. Here we will only include the font awesome icons that we
+ * This is our custom implementation of font-awesome. Here we will only include the font awesome icons that we
  * need. This way we can cut down on the amount of CSS compiled in, especially if we are only using a few of the
  * Font Awesome icons in our code. This can cut down on up to 25kb as we are not compiling the FA classes that we will not
  * use. This still pulls in the heavy font file though, but that is heavily cached.
@@ -42,92 +20,95 @@
 // We write out the icons we are using at the top of the LESS file for easy access
 
 // instead of importing fontawesome/icons.less which includes all the icons that can be used, we will manually
-// write out the ones we need here. We can just drop these classes into the DOM
-.@{fa-css-prefix}-twitter {
-    color: @color-twitter;
-    &:before {
-        content: @fa-var-twitter;
-    }
+// write out the ones we need here. We can just drop these classes into the DOM or even better, extend them
+.icon-angle-down:before {
+    content: @fa-var-angle-down;
 }
-.@{fa-css-prefix}-facebook {
+.icon-angle-left:before {
+    content: @fa-var-angle-left;
+}
+.icon-angle-right:before {
+    content: @fa-var-angle-right;
+}
+.icon-angle-up:before {
+    content: @fa-var-angle-up;
+}
+.icon-bars:before {
+    content: @fa-var-bars;
+}
+.icon-caret-down:before {
+    content: @fa-var-caret-down;
+}
+.icon-close:before {
+    content: @fa-var-close;
+}
+.icon-comment:before {
+    content: @fa-var-comment;
+}
+.icon-external-link:before {
+    content: @fa-var-external-link;
+}
+.icon-facebook {
     color: @color-facebook;
     &:before {
         content: @fa-var-facebook;
     }
 }
-.@{fa-css-prefix}-linkedin {
-    color: @color-linkedin;
-    &:before {
-        content: @fa-var-linkedin;
-    }
+.icon-info-circle:before {
+    content: @fa-var-info-circle;
 }
-
-.@{fa-css-prefix}-pinterest {
-    color: @color-pinterest;
-    &:before {
-        content: @fa-var-pinterest;
-    }
-}
-.@{fa-css-prefix}-external-link:before {
-    content: @fa-var-external-link;
-}
-.@{fa-css-prefix}-instagram {
+.icon-instagram {
     color: @color-instagram;
     &:before {
         content: @fa-var-instagram;
     }
 }
-.@{fa-css-prefix}-tumblr {
+.icon-linkedin {
+    color: @color-linkedin;
+    &:before {
+        content: @fa-var-linkedin;
+    }
+}
+.icon-pinterest {
+    color: @color-pinterest;
+    &:before {
+        content: @fa-var-pinterest;
+    }
+}
+.icon-retweet:before {
+    content: @fa-var-retweet;
+}
+.icon-search:before {
+    content: @fa-var-search;
+}
+.icon-share:before {
+    content: @fa-var-share;
+}
+.icon-star:before {
+    content: @fa-var-star;
+}
+.icon-th-large:before {
+    content: @fa-var-th-large;
+}
+.icon-thumbs-up:before {
+    content: @fa-var-thumbs-up;
+}
+.icon-thumbs-down:before {
+    content: @fa-var-thumbs-down;
+}
+.icon-tumblr {
     color: @color-tumblr;
     &:before {
         content: @fa-var-tumblr;
     }
 }
-.@{fa-css-prefix}-search:before {
-    content: @fa-var-search;
+.icon-twitter {
+    color: @color-twitter;
+    &:before {
+        content: @fa-var-twitter;
+    }
 }
-.@{fa-css-prefix}-th-large:before {
-    content: @fa-var-th-large;
-}
-.@{fa-css-prefix}-info-circle:before {
-    content: @fa-var-info-circle;
-}
-.@{fa-css-prefix}-bars:before {
-    content: @fa-var-bars;
-}
-.@{fa-css-prefix}-angle-left:before {
-    content: @fa-var-angle-left;
-}
-.@{fa-css-prefix}-angle-right:before {
-    content: @fa-var-angle-right;
-}
-.@{fa-css-prefix}-angle-up:before {
-    content: @fa-var-angle-up;
-}
-.@{fa-css-prefix}-angle-down:before {
-    content: @fa-var-angle-down;
-}
-.@{fa-css-prefix}-share:before {
-    content: @fa-var-share;
-}
-.@{fa-css-prefix}-retweet:before {
-    content: @fa-var-retweet;
-}
-.@{fa-css-prefix}-thumbs-up:before {
-    content: @fa-var-thumbs-up;
-}
-.@{fa-css-prefix}-thumbs-down:before {
-    content: @fa-var-thumbs-down;
-}
-.@{fa-css-prefix}-star:before {
-    content: @fa-var-star;
-}
-.@{fa-css-prefix}-comment:before {
-    content: @fa-var-comment;
-}
-.@{fa-css-prefix}-caret-down:before {
-    content: @fa-var-caret-down;
-}
+
 
 // we will import the variables and mixins as reference so we can use them
 @import (reference) "../../bower/fontawesome/variables.less";
@@ -165,30 +146,30 @@
 // instead of importing fontawesome/icons.less which includes all the icons that can be used, we will manually
 // write out the ones we need here.
 /*
-.@{fa-css-prefix}-glass:before {
+.icon-glass:before {
     content: @fa-var-glass;
 }
-.@{fa-css-prefix}-futbol-o:before {
+.icon-futbol-o:before {
     content: @fa-var-futbol-o;
 }
-.@{fa-css-prefix}-twitter:before {
+.icon-twitter:before {
     content: @fa-var-twitter-square;
 }
-.@{fa-css-prefix}-facebook:before {
+.icon-facebook:before {
     content: @fa-var-facebook-square;
 }
-.@{fa-css-prefix}-google:before {
+.icon-google:before {
     content: @fa-var-google-plus-square;
 }
-.@{fa-css-prefix}-linkedin:before {
+.icon-linkedin:before {
     content: @fa-var-linkedin-square;
 }
-.@{fa-css-prefix}-pinterest:before {
+.icon-pinterest:before {
     content: @fa-var-pinterest-square;
 }
 
 // for any custom icons, we have to specify the actual content values, since there are no variables for us to use
-.@{fa-css-prefix}-custom-one:before {
+.icon-custom-one:before {
     content: "\f1e3";
 }
 
@@ -216,7 +197,7 @@
 }
 
 // we create our custom font icon declaratio here. Not the "CustomFontName" in the font declaration
-.@{fa-css-prefix} {
+.icon {
   display: inline-block;
   font: normal normal normal @fa-font-size-base/1 icomoon; // shortening font declaration
   font-size: inherit; // can't have font-size inherit on line above, so need to override

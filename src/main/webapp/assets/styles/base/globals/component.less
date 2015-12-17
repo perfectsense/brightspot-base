@@ -79,11 +79,9 @@
         padding: @space-quarter 0;
         text-transform: uppercase;
 
-        .icon();
+        &:extend(.icon);
+        &:extend(.icon-angle-right all);
 
-        &:after {
-            content: @fa-var-angle-right;
-        }
     }
 
     &.component-cta-top-right {

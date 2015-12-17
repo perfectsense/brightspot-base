@@ -172,7 +172,7 @@ body.column-fixed-toggle-in {
 .trigger-fixed-column {
 
 	a {
-        .icon();
+        &:extend(.icon);
 
         background: @color-brand-primary;
         color: @color-white;
@@ -195,18 +195,12 @@ body.column-fixed-toggle-in {
 
 	.toggle-trigger-link-out {
 		display: block;
-
-        &:after {
-            content: @fa-var-angle-up;
-        }
+        &:extend(.icon-angle-up all);
 	}
 
 	.toggle-trigger-link-in {
 		display: none;
-
-        &:after {
-            content: @fa-var-angle-down;
-        }
+        &:extend(.icon-angle-down all);
 	}
 
 	&.toggle-in {

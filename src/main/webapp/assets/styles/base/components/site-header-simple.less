@@ -83,7 +83,23 @@
 }
 
 .site-search-toggle-trigger {
+    cursor: pointer;
     display: none;
+    line-height: @header-height;
+    padding: 0 @space-triple;
+    text-align: center;
+
+    a {
+       color: @color-white;
+       display: block;
+       width: 20px; // used to make sure even if we change icons, it won't change in size
+    }
+
+    &.toggle-in {
+        .icon {
+            &:extend(.icon-close all);
+        }
+    }
 }
 
 .site-search-text {
@@ -113,11 +129,11 @@
     top: calc(~"50% - 12px");
     right: @space-double;
 
-    .icon();
+    &:extend(.icon);
+    &:extend(.icon-search all);
 
     &:before {
         color: @color-text;
-        content: @fa-var-search;
         font-size: @ts-1;
         text-indent: 5000px;
     }
@@ -151,9 +167,7 @@
 
     &.toggle-in {
         .icon {
-            &:before {
-                content: @fa-var-close;
-            }
+            &:extend(.icon-close all);
         }
     }
 }
@@ -212,25 +226,7 @@
     }
 
     .site-search-toggle-trigger {
-        cursor: pointer;
         display: block;
-        line-height: @header-height;
-        padding: 0 @space-triple;
-        text-align: center;
-
-        a {
-           color: @color-white;
-           display: block;
-           width: 20px; // used to make sure even if we change icons, it won't change in size
-        }
-
-        &.toggle-in {
-            .icon {
-                &:before {
-                    content: @fa-var-close;
-                }
-            }
-        }
     }
 
     .site-header-simple-search-wrapper {
