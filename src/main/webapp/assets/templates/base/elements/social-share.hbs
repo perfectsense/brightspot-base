@@ -11,13 +11,20 @@
     			"redirectUrl":"{{redirectUrl}}",
     			"iconClass":"icon",
     			"serviceProps":{
-    				"facebook":{"appId":"{{facebookId}}"}
+					{{#each services}}
+						"{{this.name}}": { {{#if this.publicKey}}"appId": "{{this.publicKey}}"{{/if}} }
+						{{#unless @last}},{{/unless}}
+					{{/each}}
     			},
                 "sharingClass"       : "share-link",
                 "serviceClassBefore" : ""
     		}'>
 		{{#each services}}
-				<li class="{{this}}-share"></li>
+			{{#if ../displayOptions.renderLabel}}
+				{{render this renderLabel=true}}
+			{{else}}
+				{{this}}
+			{{/if}}
 		{{/each}}
 	</ul>
 </span>

@@ -1,6 +1,8 @@
 {
-
   "_template": "/assets/templates/base/elements/social-share",
+  "displayOptions": {
+      "renderLabel": true
+  },
   "title": "Brightspot",
   "description": "A user experience platform, designed and developed to power large scale, highly dynamic, editorially rich and visually stunning experiences.",
   "image": "http://www.brightspot.com/assets/brightspot.png",
