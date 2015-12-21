@@ -2,6 +2,13 @@
     display: none;
 }
 
+// better handling of scroll bars
+body.vex-open {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: fixed;
+}
+
 // this our base on the default vex theme
 .vex.modal-theme-default {
     .vex-content {
