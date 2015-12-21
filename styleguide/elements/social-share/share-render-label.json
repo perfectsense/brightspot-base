@@ -12,7 +12,7 @@
     {
       "_template": "/assets/templates/base/elements/social-share-item",
       "name": "facebook",
-      "publicKey": 12345
+      "publicKey": "123abc"
     },
     {
       "_template": "/assets/templates/base/elements/social-share-item",
