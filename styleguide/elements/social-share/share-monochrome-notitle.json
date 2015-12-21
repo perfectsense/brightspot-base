@@ -1,5 +1,5 @@
 {
-  
+
   "_template": "/assets/templates/base/elements/social-share",
 
   "displayOptions" : {
@@ -8,15 +8,27 @@
 
   "title": "Brightspot",
   "description": "A user experience platform, designed and developed to power large scale, highly dynamic, editorially rich and visually stunning experiences.",
-  "facebookId": 12345,
   "iconClass": "icon",
   "image": "http://www.brightspot.com/assets/brightspot.png",
   "url": "http://www.brightspot.com",
   "redirectUrl": "http://www.brightspot.com",
   "services": [
-    "facebook",
-    "twitter",
-    "pinterest",
-    "linkedin"
+    {
+      "_template": "/assets/templates/base/elements/social-share-item",
+      "name": "facebook",
+      "publicKey": 12345
+    },
+    {
+      "_template": "/assets/templates/base/elements/social-share-item",
+      "name": "twitter"
+    },
+    {
+      "_template": "/assets/templates/base/elements/social-share-item",
+      "name": "pinterest"
+    },
+    {
+      "_template": "/assets/templates/base/elements/social-share-item",
+      "name": "linkedin"
+    }
   ]
 }
