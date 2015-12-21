@@ -62,11 +62,12 @@
             position: relative;
             text-align: center;
 
-            // make sure that image fits the slide as much as possible
+            // make sure that image fits the slide as much as possible while keeping the aspect ratio correct
             img {
                 height: auto;
                 margin: 0 auto;
                 width: auto;
+
                 // arbitrary max height set to make full galleries without full screen experience look ok
                 max-height: 250px;
             }
@@ -273,6 +274,60 @@
     }
 }
 
+@media @mq-sm {
+
+    .gallery-full-header {
+        padding: @space-and-half @space-double;
+    }
+
+    .gallery-full-title {
+        height: 32px;
+        width: 95%;
+    }
+
+    // arbitrary max height values to make a stand along gallery full not look bad
+    .bsp-carousel-gallery {
+        .bsp-carousel-stage {
+            .bsp-carousel-slide {
+                img {
+                    max-height: 400px;
+                }
+            }
+        }
+    }
+
+    // commented out just in case we want to add thumbnail support back
+    //
+    // .bsp-carousel-gallery {
+    //     .bsp-carousel-nav {
+    //         &.slick-initialized {
+    //             display: block;
+    //         }
+
+    //         // also in the carousel nav, no arrows
+    //         .slick-prev, .slick-next {
+    //             // on medium and up, we will show previous and next
+    //             display: none !important;
+    //         }
+    //     }
+    // }
+
+}
+
+// arbitrary max height values to make a stand along gallery full not look bad
+@media @mq-lg {
+    .bsp-carousel-gallery {
+        .bsp-carousel-stage {
+            .bsp-carousel-slide {
+                img {
+                    max-height: 500px;
+                }
+            }
+        }
+    }
+}
+
+
 // this gives a fake "fullscreen" experience where the gallery moves with the size of the browser
 .gallery-fullscreen {
     position: absolute;
@@ -334,75 +389,16 @@
                 height: 100%;
             }
 
-            .bsp-carousel-slide {
-                img {
-                    max-height: none;
-                }
-            }
+            img {
+                max-width: 100%;
+                max-height: 100%;
 
-        }
-    }
-}
-
-
-
-
-@media @mq-sm {
-
-    .gallery-full-header {
-        padding: @space-and-half @space-double;
-    }
-
-    .gallery-full-title {
-        height: 32px;
-        width: 95%;
-    }
-
-    // commented out just in case we want to add thumbnail support back
-    //
-    // .bsp-carousel-gallery {
-    //     .bsp-carousel-nav {
-    //         &.slick-initialized {
-    //             display: block;
-    //         }
-
-    //         // also in the carousel nav, no arrows
-    //         .slick-prev, .slick-next {
-    //             // on medium and up, we will show previous and next
-    //             display: none !important;
-    //         }
-    //     }
-    // }
-
-}
-
-
-
-
-
-
-
-
-// arbitrary max height values to make a stand along gallery full not look bad
-@media @mq-sm {
-    .bsp-carousel-gallery {
-        .bsp-carousel-stage {
-            .bsp-carousel-slide {
-                img {
-                    max-height: 400px;
-                }
-            }
-        }
-    }
-}
-
-@media @mq-lg {
-    .bsp-carousel-gallery {
-        .bsp-carousel-stage {
-            .bsp-carousel-slide {
-                img {
-                    max-height: 500px;
-                }
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                top: 0;
+                bottom: 0;
             }
         }
     }
