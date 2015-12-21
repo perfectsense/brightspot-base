@@ -1,12 +1,10 @@
 {
-  
+
   "_template": "/assets/templates/base/components/site-footer-simple",
   "socialLinks": [
     {
       "_template": "/assets/templates/base/common/link",
-      "displayOptions" : {
-         "icon": "facebook"
-      },
+      "cssClass" : "share-link icon icon-facebook",
       "extraAttributes": {
         "href": "http://www.facebook.com",
         "title": "Facebook",
@@ -16,9 +14,7 @@
     },
     {
       "_template": "/assets/templates/base/common/link",
-      "displayOptions" : {
-        "icon": "twitter"
-      },
+      "cssClass" : "share-link icon icon-twitter",
       "extraAttributes": {
         "href": "http://www.twitter.com",
         "title": "Twitter",
@@ -28,9 +24,7 @@
     },
     {
       "_template": "/assets/templates/base/common/link",
-      "displayOptions" : {
-        "icon": "pinterest"
-        },
+      "cssClass" : "share-link icon icon-pinterest",
       "extraAttributes": {
         "href": "http://www.pinterest.com",
         "title": "Pinterest",
@@ -40,9 +34,7 @@
     },
     {
       "_template": "/assets/templates/base/common/link",
-      "displayOptions" : {
-        "icon": "linkedin"
-        },
+      "cssClass" : "share-link icon icon-linkedin",
       "extraAttributes": {
         "href": "http://www.linkedin.com",
         "title": "LinkedIn",

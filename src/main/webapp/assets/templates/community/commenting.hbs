@@ -1,0 +1,14 @@
+<div class="component commenting-component">
+    <h5 class="component-title">{{render commentTitle}}({{render commentCount}})</h5>
+
+    <div class="component-content">
+        <div class="sign-in">
+            <p>{{render signInText}}</p>
+            <ul class="sign-in-choices">
+                {{#each signInChoices}}
+                    <li>{{render this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
