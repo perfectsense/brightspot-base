@@ -13,11 +13,13 @@
     {
       "_template": "/assets/templates/base/elements/social-share-item",
       "name": "facebook",
-      "publicKey": "123abc"
+      "publicKey": "abc123",
+      "caption": "My custom facebook caption"
     },
     {
       "_template": "/assets/templates/base/elements/social-share-item",
-      "name": "twitter"
+      "name": "twitter",
+      "title": "my custom twitter title"
     },
     {
       "_template": "/assets/templates/base/elements/social-share-item",

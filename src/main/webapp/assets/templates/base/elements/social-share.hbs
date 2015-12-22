@@ -12,7 +12,12 @@
     			"iconClass":"icon",
     			"serviceProps":{
 					{{#each services}}
-						"{{this.name}}": { {{#if this.publicKey}}"appId": "{{this.publicKey}}"{{/if}} }
+						"{{this.name}}": {
+							{{#if this.publicKey}}"appId": "{{this.publicKey}}",{{/if}}
+							"title": "{{this.title}}",
+							"caption": "{{this.caption}}",
+							"description": "{{this.description}}"
+						}
 						{{#unless @last}},{{/unless}}
 					{{/each}}
     			},
