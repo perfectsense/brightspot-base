@@ -2,6 +2,10 @@
 @import '../globals/spacing.vars';
 @import '../globals/typography.vars';
 
+.promo {
+    &:extend(.module all);
+}
+
 .promo-component {
     .component-cta {
         padding-top: @space-double;
@@ -32,30 +36,25 @@
     padding-bottom: @space-half;
 }
 
-.promo-title {
-    &:extend(.ts-heading-3);
+.promo-section-text {
 
-    font-weight: @font-weight-light;
-    margin-bottom: @space-and-half;
+    .promo-title {
+        border: none;
+        margin-bottom: @space;
+        text-align: left;
 
-    a {
-        color: @color-text;
-
-        &:hover {
-            color: @color-link;
-        }
-    }
-
-    .component-inverse-color & {
         a {
-            color: @color-white;
+            color: @color-text;
 
             &:hover {
                 color: @color-link;
             }
         }
     }
+
 }
+
+
 
 .promo-links {
     margin-top: @space-double;

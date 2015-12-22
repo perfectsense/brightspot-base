@@ -1,0 +1,114 @@
+@import 'component.vars';
+
+.module {
+    // padding vs margin allows for cleaner separation between components, especially if things inside of them use margins
+    padding: @space-module-bottom/2 0;
+    position: relative;
+
+    &-inverse-color {
+        background: @color-module-inverse-background;
+        color: @color-module-inverse-text;
+    }
+
+    &-secondary-color {
+        background: @color-module-secondary-background;
+        color: @color-module-secondary-text;
+    }
+
+    &-title {
+        &:extend(.section-title all);
+        text-align: center;
+    }
+
+    &-subtitle {
+        color: @color-text;
+        display: block;
+        font-size: @ts-0;
+        line-height: @line-height-base;
+        margin-top: @space;
+    }
+
+    &-content {
+        overflow: hidden; // making sure things do not go outside of components
+
+        // general rule that we want to center iframes into component content if they are smaller
+        iframe {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &-cta {
+        border-top: 1px solid @color-gray;
+        margin-top: @space;
+        padding-top: @space;
+        text-align: center;
+
+        a {
+            display: block;
+            font-weight: @font-weight-bold;
+            padding: @space-quarter 0;
+            text-transform: uppercase;
+
+            &:extend(.icon);
+            &:extend(.icon-angle-right all);
+        }
+
+        &.cta-top-right {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            a {
+                padding-right: @space;
+            }
+        }
+
+        &.cta-bottom-right {
+            display: inline-block;
+            float: right;
+
+            a {
+                padding-right: @space;
+            }
+        }
+
+        &.cta-bottom-left {
+            display: inline-block;
+            float: left;
+
+            a {
+                padding-right: @space;
+            }
+        }
+
+        &.cta-load-more {
+            a {
+                padding: @space-double !important; // the element we are extending comes in after globals for specificity
+                &:extend(.tag all);
+
+                &:after {
+                    content: '';
+                }
+            }
+        }
+    }
+
+
+    // if we have modules inside of each other. No padding on the inside ones
+    .module {
+        padding: 0;
+    }
+}
+
+@media @mq-sm {
+    .module {
+        padding: @space-component-bottom 0;
+
+        &-cta {
+            border-top: none;
+            margin-top: 0;
+            padding-top: @space-double;
+        }
+    }
+}

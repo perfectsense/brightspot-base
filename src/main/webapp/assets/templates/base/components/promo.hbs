@@ -1,23 +1,23 @@
-<div class="component promo-component{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}" {{#if loadMore}}data-bsp-ajax-links data-bsp-ajax-links-options='{"loadType":"loadMore"}'{{/if}}>
+<div class="promo module{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}" {{#if loadMore}}data-bsp-ajax-links data-bsp-ajax-links-options='{"loadType":"loadMore"}'{{/if}}>
     {{#with heading}}
-        <div class="component-title">{{render this}}</div>
+        <div class="promo-title">{{render this}}</div>
     {{/with}}
 
-    <div class="component-content">
+    <div class="promo-content">
 
-        <div class="promo">
-            <ul class="promo-list {{#if displayOptions.horizontalSplit}}row{{/if}}">
-                {{#each listItems}}
-                    <li class="{{#if ../displayOptions.horizontalSplit}}column-{{../displayOptions.horizontalSplit}}{{/if}}">
-                        {{render this}}
-                    </li>
-                {{/each}}
-            </ul>
-        </div>
+        <ul class="promo-list {{#if displayOptions.horizontalSplit}}row{{/if}}">
+            {{#each listItems}}
+                <li class="{{#if ../displayOptions.horizontalSplit}}column-{{../displayOptions.horizontalSplit}}{{/if}}">
+                    {{render this}}
+                </li>
+            {{/each}}
+        </ul>
 
     </div>
 
-    {{#with cta}}
-        {{render this}}
-    {{/with}}
+    <div class="promo-cta {{#if displayOptions.ctaLocation}}cta-{{displayOptions.ctaLocation}}{{/if}}{{#if loadMore}} cta-load-more{{/if}}">
+        {{#with cta}}
+            {{render this}}
+        {{/with}}
+    </div>
 </div>

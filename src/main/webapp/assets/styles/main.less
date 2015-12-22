@@ -23,10 +23,8 @@
 * other components and elements and have spacing relationships between each other (if wrapper is present)
 * ----------------------------------------------------------------------------
 */
-@import "base/components/article.less";
 @import "base/components/callout.less";
 @import "base/components/gallery-grid.less";
-@import "base/components/photofall.less";
 @import "base/components/promo.less";
 @import "base/components/promo-modifiers.less";
 @import "base/components/search-results.less";
@@ -40,15 +38,17 @@
 @import "base/components/gallery-full.less";
 
 /**
-* Pages
+* Mains
 * ----------------------------------------------------------------------------
-* These are specific overrides for pages only. Use these in emergency situation when one page has a different treatment than the rest of the site
+* These are main pieces of content that really define a page. They are sort of synonymous to "pages".
+* There is CSS in here for the main area of the page, but can also have an override for a component that lives inside
 * ----------------------------------------------------------------------------
 */
-@import "base/pages/gallery.less";
-@import "base/pages/video.less";
+@import "base/mains/article.less";
+@import "base/mains/photofall.less";
 
 
+// This is here temporarily for fast development until we move community to it's own library
 @import "community/commenting.less";
 
 /**

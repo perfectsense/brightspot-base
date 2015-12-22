@@ -2,10 +2,12 @@
 @import '../globals/spacing.vars';
 @import '../globals/typography.vars';
 
-.search-results-component {
+.search-results {
+    &:extend(.module all);
+
     padding-top: @space-triple;
 
-    .component-title {
+    &-title {
         &:extend(.clearfix all);
         font-size: @ts-0;
         text-align: left;
@@ -13,23 +15,24 @@
         .component-group {
             float: left;
         }
-    }
-    .search-term {
-        font-weight: @font-weight-base;
-    }
-}
 
-.search-results-sort {
-    color: @color-text;
-    float: right;
-
-    i {
-        color: @color-link;
+        .search-term {
+            font-weight: @font-weight-base;
+        }
     }
 
-    select {
-        color: @color-link;
-        margin-left: @space-quarter;
-        text-transform: uppercase;
+    &-sort {
+        color: @color-text;
+        float: right;
+
+        i {
+            color: @color-link;
+        }
+
+        select {
+            color: @color-link;
+            margin-left: @space-quarter;
+            text-transform: uppercase;
+        }
     }
 }

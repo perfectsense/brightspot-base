@@ -178,23 +178,15 @@
       ],
 
       "cta": {
-          "_template": "/assets/templates/base/components/component-cta",
+          "_template": "/assets/templates/base/common/link",
+          "extraAttributes": {
+              "href": "index",
 
-          "displayOptions" : {
-            "loadMore" : true
-            },
-
-          "content": {
-              "_template": "/assets/templates/base/common/link",
-              "extraAttributes": {
-                  "href": "index",
-
-                  "data-ajax-link-target" : ".search-results"
-              },
-              "body": {
-                  "_template": "/assets/templates/base/common/text",
-                  "text": "{{words(2)}}"
-              }
+              "data-ajax-link-target" : ".search-results"
+          },
+          "body": {
+              "_template": "/assets/templates/base/common/text",
+              "text": "{{words(2)}}"
           }
       }
   }

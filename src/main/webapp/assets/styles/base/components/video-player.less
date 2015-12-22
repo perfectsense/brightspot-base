@@ -1,5 +1,34 @@
 @import '../globals/spacing.vars';
 
+// This is here to get cleaned up
+// Only onthe video page do we have top padding. All other pages are flush top
+.video-page {
+    .component-group:first-of-type {
+        padding: @space-double 0;
+    }
+}
+
+@media @mq-sm {
+    .video-page {
+        .component-group:first-of-type {
+            padding: @space-quad 0;
+        }
+    }
+}
+
+@media @mq-lg {
+    .video-page {
+        .component-group:first-of-type {
+            padding: 8rem 0; // custom value just for this
+        }
+    }
+}
+
+
+
+
+
+
 .video-player-component.content-aligned {
     // when we have aligned content, we do not want the standard bottom component padding
     padding: 0;
