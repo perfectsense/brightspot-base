@@ -82,8 +82,6 @@
     "searchResults" : {
       "_template" : "/assets/templates/base/components/promo",
 
-      "loadMore" : true,
-
       "displayOptions" : {
         "modifierClass" : "promo-small",
         "horizontalSplit" : "third"
@@ -183,7 +181,7 @@
           "_template": "/assets/templates/base/common/link",
           "extraAttributes": {
               "href": "index",
-              "data-ajax-link-target" : ".search-results"
+              "data-ajax-link-target" : ".search-results-content"
           },
           "body": {
               "_template": "/assets/templates/base/common/text",
