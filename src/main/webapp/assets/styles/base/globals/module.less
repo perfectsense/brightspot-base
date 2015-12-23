@@ -51,7 +51,10 @@
             text-transform: uppercase;
 
             &:extend(.icon);
-            &:extend(.icon-angle-right all);
+
+            &:after {
+                &:extend(.icon-angle-right:before);
+            }
         }
 
         &.cta-top-right {

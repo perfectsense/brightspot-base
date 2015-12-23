@@ -15,9 +15,12 @@
 
     </div>
 
-    <div class="promo-cta {{#if displayOptions.ctaLocation}}cta-{{displayOptions.ctaLocation}}{{/if}}{{#if loadMore}} cta-load-more{{/if}}">
-        {{#with cta}}
-            {{render this}}
-        {{/with}}
-    </div>
+    {{#if cta}}
+        <div class="promo-cta {{#if displayOptions.ctaLocation}}cta-{{displayOptions.ctaLocation}}{{/if}}{{#if loadMore}} cta-load-more{{/if}}">
+            {{#with cta}}
+                {{render this}}
+            {{/with}}
+        </div>
+    {{/if}}
+
 </div>
