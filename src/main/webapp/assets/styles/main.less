@@ -17,16 +17,24 @@
 @import "base/base.less";
 
 /**
-* Components
+* Modules
 * ----------------------------------------------------------------------------
-* Components are synonymous with "modules" and are site components that are surrounded by a component wrapper in most cases. They can containe
-* other components and elements and have spacing relationships between each other (if wrapper is present)
+* Modules are synonymous with "componenents" and are site module that can be used essentially anywhere
+* They should share markup with other modules so when extended through LESS they will share title, cta
+* and have spacing relationships between each other
 * ----------------------------------------------------------------------------
 */
+
+@import "base/modules/search-results.less";
+@import "base/modules/promo.less";
+@import "base/modules/promo-modifiers.less";
+
+
+
+
+
 @import "base/components/callout.less";
 @import "base/components/gallery-grid.less";
-@import "base/components/promo.less";
-@import "base/components/promo-modifiers.less";
 @import "base/components/search-results.less";
 @import "base/components/site-footer-simple.less";
 @import "base/components/site-header-simple.less";

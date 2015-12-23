@@ -6,21 +6,6 @@
     &:extend(.module all);
 }
 
-.promo-component {
-    .component-cta {
-        padding-top: @space-double;
-    }
-
-    // this is to help us with consistent spacing for load more ajax use cases where we double up on content
-    .component-content {
-        padding-top: @space-double;
-
-        &:first-of-type {
-            padding: 0;
-        }
-    }
-}
-
 .promo-list {
     > li {
         padding-bottom: @space-double;
@@ -38,6 +23,8 @@
 
 .promo-section-text {
 
+    // if the promo title comes in inside of the section text, rather than above the module in the markup
+    // we want to provide it some overrides over a regular module title
     .promo-title {
         border: none;
         margin-bottom: @space;
@@ -53,8 +40,6 @@
     }
 
 }
-
-
 
 .promo-links {
     margin-top: @space-double;
@@ -86,6 +71,7 @@
 
 
 @media @mq-sm {
+    // when we actually have columns, we want to make sure that spacing between them works well
     .promo-list {
         .column-half:nth-child(n+3) {
             padding-top: @space-double;

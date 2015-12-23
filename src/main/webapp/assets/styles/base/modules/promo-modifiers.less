@@ -1,3 +1,4 @@
+// Split this out into a separate file as there are a bunch of these now
 @import '../globals/borders.vars';
 @import '../globals/colors.vars';
 @import '../globals/grid.vars';
@@ -20,6 +21,7 @@
 
     .promo-title {
         &:extend(.ts-heading-2 all);
+        text-align: center;
     }
 
     .promo-links {
@@ -45,13 +47,14 @@
 }
 
 // adding a few overrides for left-promo here
-.promo-cta {
+.promo-call-to-action {
 
     .column-half:first-of-type {
         display: none;
     }
 
-    // for this modifier, we make a custom grid
+    // for this modifier, we make a custom grid as we want to show this as a single
+    // column all the way up to md instead of sm like default
     .column-half {
         width: 100%;
     }
@@ -62,7 +65,16 @@
 
     .promo-link {
         a {
-            &:extend(.component-cta a all);
+            display: block;
+            font-weight: @font-weight-bold;
+            padding: @space-quarter 0;
+            text-transform: uppercase;
+
+            &:extend(.icon);
+
+            &:after {
+                &:extend(.icon-angle-right:before);
+            }
         }
     }
 
@@ -142,7 +154,7 @@
 
 @media @mq-md {
 
-    .promo-cta {
+    .promo-call-to-action {
 
         .column-half:first-of-type {
             display: block;

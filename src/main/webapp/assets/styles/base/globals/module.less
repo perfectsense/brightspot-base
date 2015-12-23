@@ -2,7 +2,7 @@
 
 .module {
     // padding vs margin allows for cleaner separation between components, especially if things inside of them use margins
-    padding: @space-module-bottom/2 0;
+    padding: @space-module-outside/2 0;
     position: relative;
 
     &-inverse-color {
@@ -95,7 +95,7 @@
 
 @media @mq-sm {
     .module {
-        padding: @space-component-bottom 0;
+        padding: @space-module-outside 0;
 
         &-cta {
             border-top: none;

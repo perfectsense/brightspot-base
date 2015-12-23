@@ -1,10 +1,10 @@
 {
-    
+
     "_template" : "/assets/templates/base/components/promo",
 
     "displayOptions" : {
         "horizontalSplit" : "half",
-        "modifierClass" : "promo-cta"
+        "modifierClass" : "promo-call-to-action"
     },
 
     "heading" : {

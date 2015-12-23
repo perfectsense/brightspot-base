@@ -1,0 +1,49 @@
+@import '../globals/colors.vars';
+@import '../globals/spacing.vars';
+@import '../globals/typography.vars';
+
+.search-results {
+    &:extend(.module all);
+
+    padding-top: @space-triple;
+
+    &-title {
+        &:extend(.clearfix all);
+        font-size: @ts-0;
+        text-align: left;
+
+        .component-group {
+            float: left;
+        }
+
+        .search-term {
+            font-weight: @font-weight-base;
+        }
+    }
+
+    &-sort {
+        color: @color-text;
+        float: right;
+
+        i {
+            color: @color-link;
+        }
+
+        select {
+            color: @color-link;
+            margin-left: @space-quarter;
+            text-transform: uppercase;
+        }
+    }
+
+    // in search results, the promo cta (which makes up results) should look like a button
+    .promo-cta {
+        a {
+            &:extend(.btn all);
+
+            &:after {
+                content: '';
+            }
+        }
+    }
+}
