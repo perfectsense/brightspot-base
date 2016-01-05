@@ -205,7 +205,7 @@
             "_template": "/assets/templates/base/modules/gallery-full",
 
             "displayOptions" : {
-                "modifierClass" : "component-inverse-color ratio-16x9",
+                "modifierClass" : "module-inverse-color ratio-16x9",
                 "thumbnails" : true
             },
 

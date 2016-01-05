@@ -15,11 +15,11 @@
     },
 
     "mainView": {
-      "_template": "/assets/templates/base/modules/component-group",
+      "_template": "/assets/templates/base/modules/module-group",
 
-      "components": [
+      "modules": [
         {
-          "_dataUrl": "/modules/page-title/page-title.json"
+          "_dataUrl": "/elements/page-title/page-title.json"
         },
         {
           "_template": "/assets/templates/base/layouts/one-col",

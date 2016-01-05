@@ -7,8 +7,8 @@
       "text": "Item 1"
     },
     {
-      "_template": "/assets/templates/base/modules/component-group",
-      "components": [
+      "_template": "/assets/templates/base/modules/module-group",
+      "modules": [
         {
           "_template": "/assets/templates/base/common/text",
           "text": "Item 2"

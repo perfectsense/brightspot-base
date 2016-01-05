@@ -15,11 +15,11 @@
     },
 
     "mainView": {
-      "_template": "/assets/templates/base/modules/component-group",
+      "_template": "/assets/templates/base/modules/module-group",
 
-      "components": [
+      "modules": [
         {
-          "_dataUrl": "/modules/page-title/page-title.json"
+          "_dataUrl": "/elements/page-title/page-title.json"
         },
         {
           "_template": "/assets/templates/base/layouts/full-page",
@@ -108,24 +108,18 @@
               ],
 
               "cta": {
-                  "_template": "/assets/templates/base/modules/component-cta",
+                  "_template": "/assets/templates/base/common/link",
 
-                  "displayOptions" : {
-                    "loadMore" : true
+                  "cssClass" : "load-more",
+
+                  "extraAttributes": {
+                      "href": "index",
+                      "data-ajax-link-target" : ".tag-results"
                   },
 
-                  "content": {
-                      "_template": "/assets/templates/base/common/link",
-
-                      "extraAttributes": {
-                          "href": "index",
-                          "data-ajax-link-target" : ".tag-results"
-                      },
-
-                      "body": {
-                          "_template": "/assets/templates/base/common/text",
-                          "text": "{{words(2)}}"
-                      }
+                  "body": {
+                      "_template": "/assets/templates/base/common/text",
+                      "text": "{{words(2)}}"
                   }
               }
             }

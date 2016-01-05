@@ -6,8 +6,8 @@
       "_template": "/assets/templates/base/elements/modal",
       "id": "foo",
       "content": {
-        "_template": "/assets/templates/base/modules/component-group",
-        "components": [
+        "_template": "/assets/templates/base/modules/module-group",
+        "modules": [
           {
             "_dataUrl": "/modules/gallery-module/7-slides.json"
           },

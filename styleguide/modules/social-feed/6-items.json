@@ -7,9 +7,9 @@
     },
 
     "heading" : {
-        "_template" : "/assets/templates/base/modules/component-group",
+        "_template" : "/assets/templates/base/modules/module-group",
 
-        "components" : [
+        "modules" : [
             {
                 "_template" : "/assets/templates/base/common/link",
 
@@ -28,7 +28,7 @@
                 "_template" : "/assets/templates/base/common/text",
 
                 "displayOptions" : {
-                    "modifierClass" : "component-subtitle"
+                    "modifierClass" : "module-subtitle"
                 },
 
                 "text" : "{{words(20)}}"

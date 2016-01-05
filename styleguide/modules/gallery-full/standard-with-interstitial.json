@@ -3,7 +3,7 @@
     "_template": "/assets/templates/base/modules/gallery-full",
 
     "displayOptions" : {
-        "modifierClass" : "component-inverse-color"
+        "modifierClass" : "module-inverse-color"
     },
 
     "heading": {

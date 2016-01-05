@@ -38,7 +38,6 @@
         margin: 0;
         line-height: @line-height-headings;
         padding: @space-double 0;
-        text-transform: uppercase;
         color: @color-brand-accent;
     }
 
@@ -77,7 +76,7 @@
 
     // when we have a component inside of an article enhancement, we are going to do our
     // own padding/margin instead of letting them decide
-    .component {
+    .module {
         margin: 0;
         padding: 0;
     }
@@ -88,7 +87,7 @@
         text-align: center;
     }
 
-    blockquote.component {
+    blockquote.module {
         margin: 0 @space-double;
     }
 
@@ -100,6 +99,13 @@
         display: block;
         font-size: @ts-1;
         font-weight: @font-weight-bold;
+    }
+
+    // center any iframe components if you are in an article enhancement
+    .iframe-module {
+        iframe {
+            margin: 0 auto;
+        }
     }
 
 }

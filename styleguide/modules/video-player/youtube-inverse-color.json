@@ -1,5 +1,5 @@
 {
-    "modifierClass" : "component-inverse-color",
+    "modifierClass" : "module-inverse-color",
 
     "_template" : "/assets/templates/base/modules/video-player",
 
