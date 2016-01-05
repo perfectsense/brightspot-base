@@ -13,12 +13,12 @@
             "modifierClass": "article-page"
         },
         "headerView": {
-            "_dataUrl": "/components/site-header-simple/index.json"
+            "_dataUrl": "/modules/site-header-simple/index.json"
         },
         "mainView": {
             "_template": "/assets/templates/base/layouts/full-page",
             "main": [{
-                    "_template": "/assets/templates/base/components/article",
+                    "_template": "/assets/templates/base/modules/article",
 
                     "sharing": {
                         "_dataUrl": "/elements/social-share/share.json"
@@ -110,7 +110,7 @@
             ]
         },
         "footerView": {
-            "_dataUrl": "/components/site-footer-simple/index.json"
+            "_dataUrl": "/modules/site-footer-simple/index.json"
         }
     }
 }

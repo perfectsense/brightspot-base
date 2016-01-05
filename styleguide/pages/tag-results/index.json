@@ -11,22 +11,22 @@
     "_template": "/assets/templates/base/common/body",
 
     "headerView": {
-      "_dataUrl": "/components/site-header-simple/index.json"
+      "_dataUrl": "/modules/site-header-simple/index.json"
     },
 
     "mainView": {
-      "_template": "/assets/templates/base/components/component-group",
+      "_template": "/assets/templates/base/modules/component-group",
 
       "components": [
         {
-          "_dataUrl": "/components/page-title/page-title.json"
+          "_dataUrl": "/modules/page-title/page-title.json"
         },
         {
           "_template": "/assets/templates/base/layouts/full-page",
 
           "main" : [
             {
-              "_dataUrl" : "/components/promo/super-promo-no-bullets.json"
+              "_dataUrl" : "/modules/promo/super-promo-no-bullets.json"
             }
           ]
         },
@@ -35,7 +35,7 @@
 
           "main" : [
             {
-              "_template" : "/assets/templates/base/components/promo",
+              "_template" : "/assets/templates/base/modules/promo",
 
               "loadMore" : true,
 
@@ -46,14 +46,14 @@
 
               "listItems" : [
                   {
-                      "_template": "/assets/templates/base/components/promo-item",
+                      "_template": "/assets/templates/base/modules/promo-item",
 
                       "_repeat" : 6,
 
                       "sections" : [
                           {
 
-                              "_template" : "/assets/templates/base/components/promo-section",
+                              "_template" : "/assets/templates/base/modules/promo-section",
 
                               "type" : "image",
 
@@ -78,7 +78,7 @@
                           },
                           {
 
-                              "_template" : "/assets/templates/base/components/promo-section",
+                              "_template" : "/assets/templates/base/modules/promo-section",
 
                               "type" : "text",
 
@@ -108,7 +108,7 @@
               ],
 
               "cta": {
-                  "_template": "/assets/templates/base/components/component-cta",
+                  "_template": "/assets/templates/base/modules/component-cta",
 
                   "displayOptions" : {
                     "loadMore" : true
@@ -136,7 +136,7 @@
     },
 
     "footerView": {
-      "_dataUrl": "/components/site-footer-simple/index.json"
+      "_dataUrl": "/modules/site-footer-simple/index.json"
     }
   }
 }

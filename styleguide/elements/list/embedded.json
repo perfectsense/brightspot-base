@@ -7,7 +7,7 @@
       "text": "Item 1"
     },
     {
-      "_template": "/assets/templates/base/components/component-group",
+      "_template": "/assets/templates/base/modules/component-group",
       "components": [
         {
           "_template": "/assets/templates/base/common/text",

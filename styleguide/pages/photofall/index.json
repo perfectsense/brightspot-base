@@ -15,20 +15,20 @@
     },
 
     "headerView": {
-      "_dataUrl": "/components/site-header-simple/index.json"
+      "_dataUrl": "/modules/site-header-simple/index.json"
     },
 
     "mainView": {
       "_template": "/assets/templates/base/layouts/one-col",
       "main": [
         {
-          "_dataUrl": "/components/photofall/index.json"
+          "_dataUrl": "/modules/photofall/index.json"
         }
       ]
     },
 
     "footerView": {
-      "_dataUrl": "/components/site-footer-simple/index.json"
+      "_dataUrl": "/modules/site-footer-simple/index.json"
     }
   }
 }

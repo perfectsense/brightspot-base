@@ -1,0 +1,53 @@
+{
+
+  "_template": "/assets/templates/base/modules/gallery-module",
+
+  "displayOptions" : {
+      "horizontalSlides": true,
+      "slidesToShowMedium": 7,
+      "slidesToShowSmall": 4,
+      "slidesToScrollMedium": 7,
+      "slidesToScrollSmall": 4,
+      "theme": "horizontal"
+  },
+
+  "heading": {
+    "_template" : "/assets/templates/base/modules/component-group",
+
+        "components" : [
+            {
+                "_template" : "/assets/templates/base/common/link",
+
+                "extraAttributes" : {
+                    "_template" : "/assets/templates/base/common/attributes",
+                    "href"  : "link"
+                },
+
+                "body" : {
+                    "_template" : "/assets/templates/base/common/text",
+                    "text" : "{{words(5)}}"
+                }
+            },
+            {
+
+                "_template" : "/assets/templates/base/common/text",
+
+                "modifierClass" : "component-subtitle",
+
+                "text" : "{{words(20)}}"
+
+            }
+        ]
+  },
+  "gallerySlides": {
+      "_template": "/assets/templates/base/modules/gallery-module-slide-content",
+      "content": [{
+        "_template": "/assets/templates/base/common/image",
+        "_repeat": 7,
+        "extraAttributes": {
+
+          "src": "{{image(200, 200)}}"
+        }
+      }]
+    }
+}

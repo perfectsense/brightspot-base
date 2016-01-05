@@ -13,7 +13,7 @@
             "modifierClass": "video-page"
         },
         "headerView": {
-            "_dataUrl": "/components/site-header-simple/index.json"
+            "_dataUrl": "/modules/site-header-simple/index.json"
         },
         "mainView": {
 
@@ -27,12 +27,12 @@
                 "_template": "/assets/templates/base/layouts/one-col",
 
                 "main": [{
-                    "_dataUrl": "/components/video-player/youtube-inverse-color.json"
+                    "_dataUrl": "/modules/video-player/youtube-inverse-color.json"
                 }]
             }]
         },
         "footerView": {
-            "_dataUrl": "/components/site-footer-simple/index.json"
+            "_dataUrl": "/modules/site-footer-simple/index.json"
         }
     }
 }

@@ -11,11 +11,11 @@
     "_template": "/assets/templates/base/common/body",
 
     "headerView": {
-      "_dataUrl": "/components/site-header-simple/index.json"
+      "_dataUrl": "/modules/site-header-simple/index.json"
     },
 
     "mainView": {
-      "_template": "/assets/templates/base/components/component-group",
+      "_template": "/assets/templates/base/modules/component-group",
 
       "components": [
         {
@@ -23,7 +23,7 @@
 
           "main" : [
             {
-              "_dataUrl": "/components/promo/super-promo-no-inverse.json"
+              "_dataUrl": "/modules/promo/super-promo-no-inverse.json"
             }
           ]
         }
@@ -31,7 +31,7 @@
     },
 
     "footerView": {
-      "_dataUrl": "/components/site-footer-simple/index.json"
+      "_dataUrl": "/modules/site-footer-simple/index.json"
     }
   }
 }

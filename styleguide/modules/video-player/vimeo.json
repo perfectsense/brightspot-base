@@ -1,0 +1,14 @@
+{
+    
+
+    "_template" : "/assets/templates/base/modules/video-player",
+
+    "title" : {
+        "_template" : "/assets/templates/base/common/text",
+        "text" : "{{words(20)}}"
+    },
+
+    "vimeo" : true,
+
+    "src" : "https://player.vimeo.com/video/87031388"
+}

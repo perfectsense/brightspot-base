@@ -1,0 +1,75 @@
+{
+    
+    "_template" : "/assets/templates/base/modules/promo",
+
+    "displayOptions" : {
+        "horizontalSplit" : "third",
+        "modifierClass" : "promo-small"
+    },
+
+    "listItems" : [
+        {
+            "_template": "/assets/templates/base/modules/promo-item",
+
+            "_repeat" : 3,
+
+            "sections" : [
+                {
+
+                    "_template" : "/assets/templates/base/modules/promo-section",
+
+                    "type" : "image",
+
+                    "image" : {
+
+                        "_template" : "/assets/templates/base/common/link",
+
+                        "extraAttributes" : {
+                            "_template" : "/assets/templates/base/common/attributes",
+                            "href"  : "link"
+                        },
+
+                        "body" : {
+
+                            "_template" : "/assets/templates/base/common/image",
+
+                            "extraAttributes" : {
+                                "_template" : "/assets/templates/base/common/attributes",
+                                "alt" : "{{words([ 1, 2 ])}}",
+                                "src" : "{{image(800, 450)}}"
+                            }
+                        }
+                    }
+                },
+                {
+
+                    "_template" : "/assets/templates/base/modules/promo-section",
+
+                    "type" : "text",
+
+                    "title" : {
+                        "_template" : "/assets/templates/base/common/link",
+
+                        "extraAttributes" : {
+                            "_template" : "/assets/templates/base/common/attributes",
+                            "href"  : "#"
+                        },
+
+                        "body" : {
+                            "_template" : "/assets/templates/base/common/text",
+                            "text" : "{{words([ 1, 2 ])}}"
+                        }
+                    },
+
+                    "description" : {
+                        "_template" : "/assets/templates/base/common/text",
+
+                        "text" : "{{words(10)}}"
+                    }
+
+                }
+
+            ]
+        }
+    ]
+}

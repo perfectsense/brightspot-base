@@ -1,0 +1,34 @@
+{
+
+    "_template": "/assets/templates/base/modules/gallery-module-with-nav",
+
+    "displayOptions": {
+        "textNav": true
+    },
+
+    "heading": {
+        "_template": "/assets/templates/base/common/text",
+        "text": "4 Slide with text nav instead of thumbs"
+    },
+    "gallerySlides": {
+        "_template": "/assets/templates/base/modules/gallery-module-slide-content",
+
+        "content": [{
+            "_template": "/assets/templates/base/common/image",
+            "_repeat": 4,
+            "extraAttributes": {
+
+                "src": "{{image(800, 400)}}"
+            }
+        }]
+    },
+    "galleryNavItems": {
+        "_template": "/assets/templates/base/modules/gallery-module-slide-content",
+
+        "content": [{
+            "_template": "/assets/templates/base/common/text",
+            "_repeat": 17,
+            "text": "{{words(10)}}"
+        }]
+    }
+}

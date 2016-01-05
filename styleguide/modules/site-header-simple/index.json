@@ -1,0 +1,82 @@
+{
+
+  "_template": "/assets/templates/base/modules/site-header-simple",
+  "siteName": "Brightspot Base Styleguide",
+  "siteLogo": {
+    "_template": "/assets/templates/base/common/link",
+    "extraAttributes": {
+      "href": "/",
+      "title": "Brightspot Base Styleguide",
+      "_template": "/assets/templates/base/common/attributes"
+    },
+    "body": {
+      "_template": "/assets/templates/base/common/image",
+      "extraAttributes": {
+        "alt": "Brightspot",
+        "src": "/brightspot-base/assets/logo-site.png",
+        "_template": "/assets/templates/base/common/attributes"
+      }
+    }
+  },
+  "navLinks": [
+    {
+    "_repeat" : 5,
+      "_template": "/assets/templates/base/common/link",
+      "extraAttributes": {
+        "href": "link-me",
+        "title": "I are a link",
+        "_template": "/assets/templates/base/common/attributes"
+      },
+      "body": {
+        "_template": "/assets/templates/base/common/text",
+        "text": "Menu Item"
+      }
+    }
+  ],
+
+  "searchForm" : {
+
+        "_template": "/assets/templates/base/common/form",
+
+        "displayOptions" : {
+            "modifierClass": "site-header-simple-search"
+        },
+
+        "extraAttributes" : {
+            "action" : "/modules/bsp-search-results/search-results-ajax-1.html?q=test"
+        },
+
+        "inputs" : [
+            {
+                "_template" : "/assets/templates/base/common/form-input",
+
+                "displayOptions" : {
+                    "modifierClass" : "site-header-simple-search-text"
+                },
+
+                "extraAttributes": {
+                    "autocomplete": "off",
+                    "id" : "q",
+                    "name" : "q",
+                    "required": true,
+                    "type": "text",
+                    "placeholder": "Enter Keyword Search..."
+                }
+            },
+            {
+                "_template" : "/assets/templates/base/common/form-input",
+
+                "displayOptions" : {
+                    "isButton" : true,
+                    "modifierClass" : "site-header-simple-search-submit"
+                },
+
+                "extraAttributes": {
+                    "type": "submit",
+                    "value": "Go"
+                }
+            }
+        ]
+
+    }
+}

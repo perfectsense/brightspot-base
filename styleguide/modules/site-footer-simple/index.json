@@ -1,0 +1,65 @@
+{
+
+  "_template": "/assets/templates/base/modules/site-footer-simple",
+  "socialLinks": [
+    {
+      "_template": "/assets/templates/base/common/link",
+      "cssClass" : "share-link icon icon-facebook",
+      "extraAttributes": {
+        "href": "http://www.facebook.com",
+        "title": "Facebook",
+        "target": "_blank",
+        "_template": "/assets/templates/base/common/attributes"
+      }
+    },
+    {
+      "_template": "/assets/templates/base/common/link",
+      "cssClass" : "share-link icon icon-twitter",
+      "extraAttributes": {
+        "href": "http://www.twitter.com",
+        "title": "Twitter",
+        "target": "_blank",
+        "_template": "/assets/templates/base/common/attributes"
+      }
+    },
+    {
+      "_template": "/assets/templates/base/common/link",
+      "cssClass" : "share-link icon icon-pinterest",
+      "extraAttributes": {
+        "href": "http://www.pinterest.com",
+        "title": "Pinterest",
+        "target": "_blank",
+        "_template": "/assets/templates/base/common/attributes"
+      }
+    },
+    {
+      "_template": "/assets/templates/base/common/link",
+      "cssClass" : "share-link icon icon-linkedin",
+      "extraAttributes": {
+        "href": "http://www.linkedin.com",
+        "title": "LinkedIn",
+        "target": "_blank",
+        "_template": "/assets/templates/base/common/attributes"
+      }
+    }
+  ],
+  "disclaimer": {
+    "_template": "/assets/templates/base/common/text",
+    "text": "Copyright © Brightspot"
+  },
+  "navLinks": [
+    {
+    "_repeat" : 5,
+      "_template": "/assets/templates/base/common/link",
+      "extraAttributes": {
+        "href": "link-me",
+        "title": "I are a link",
+        "_template": "/assets/templates/base/common/attributes"
+      },
+      "body": {
+        "_template": "/assets/templates/base/common/text",
+        "text": "Menu Item"
+      }
+    }
+  ]
+}

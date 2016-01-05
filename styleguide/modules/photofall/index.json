@@ -1,0 +1,268 @@
+{
+
+
+  "_template": "/assets/templates/base/modules/photofall",
+
+  "sharing": {
+    "_dataUrl": "/elements/social-share/share.json"
+  },
+
+  "permalink": "/bsp-article/",
+  "title": "{{words}}",
+  "subTitle": "{{words}}",
+  "metaData": {
+    "_template": "/assets/templates/base/elements/meta-data",
+    "publishDate": "05 Apr 2015",
+    "authors": [
+      {
+        "_template": "/assets/templates/base/common/link",
+        "_repeat": [
+          1,
+          5
+        ],
+        "body": "{{name}}",
+        "extraAttributes": {
+
+          "href": "#",
+          "title": "{{name}}"
+        }
+      }
+    ]
+  },
+  "tags": {
+    "_dataUrl": "/elements/tags/tag-list-no-title.json"
+  },
+  "lead": {
+    "_template": "/assets/templates/base/common/figure",
+    "credit": "{{name}}",
+    "caption": {
+      "_template": "/assets/templates/base/common/text",
+      "text": "{{words}}"
+    },
+    "image": {
+      "_template": "/assets/templates/base/common/image",
+      "extraAttributes": {
+
+        "src": "{{image(1600, 600)}}"
+      }
+    }
+  },
+
+  "photofallBody": [
+    {
+      "_template": "/assets/templates/base/common/html",
+      "text": "{{paragraphs(1)}}"
+    }
+  ],
+
+  "photofallItems" : [
+    {
+
+        "_template" : "/assets/templates/base/modules/promo",
+
+        "displayOptions" : {
+            "modifierClass" : "promo-75-25"
+        },
+
+        "listItems" : [
+            {
+                "_template": "/assets/templates/base/modules/promo-item",
+
+                "sections" : [
+                    {
+
+                        "_template" : "/assets/templates/base/modules/promo-section",
+
+                        "type" : "image",
+
+                        "image" : {
+
+                            "_template" : "/assets/templates/base/common/link",
+
+                            "extraAttributes" : {
+                                "data-bsp-modal-open" : "gallery-fullscreen",
+                                "href"  : "#slide-1"
+                            },
+
+                            "body" : {
+
+                                "_template" : "/assets/templates/base/common/image",
+
+                                "extraAttributes" : {
+                                    "alt" : "{{words([ 1, 2 ])}}",
+                                    "src" : "{{image(800, 450)}}"
+                                }
+                            }
+                        }
+                    },
+                    {
+
+                        "_template" : "/assets/templates/base/modules/promo-section",
+
+                        "type" : "text",
+
+                        "description" : {
+                            "_template" : "/assets/templates/base/common/text",
+                            "text" : "{{words(20,40)}}"
+                        }
+
+                    }
+
+                ]
+            },
+            {
+                "_template": "/assets/templates/base/modules/promo-item",
+
+                "sections" : [
+                    {
+
+                        "_template" : "/assets/templates/base/modules/promo-section",
+
+                        "type" : "image",
+
+                        "image" : {
+
+                            "_template" : "/assets/templates/base/common/link",
+
+                            "extraAttributes" : {
+                                "data-bsp-modal-open" : "gallery-fullscreen",
+                                "href"  : "#slide-2"
+                            },
+
+                            "body" : {
+
+                                "_template" : "/assets/templates/base/common/image",
+
+                                "extraAttributes" : {
+                                    "alt" : "{{words([ 1, 2 ])}}",
+                                    "src" : "{{image(800, 450)}}"
+                                }
+                            }
+                        }
+                    },
+                    {
+
+                        "_template" : "/assets/templates/base/modules/promo-section",
+
+                        "type" : "text",
+
+                        "description" : {
+                            "_template" : "/assets/templates/base/common/text",
+                            "text" : "{{words(20,40)}}"
+                        }
+
+                    }
+
+                ]
+            },
+            {
+                "_template": "/assets/templates/base/modules/promo-item",
+
+                "sections" : [
+                    {
+
+                        "_template" : "/assets/templates/base/modules/promo-section",
+
+                        "type" : "image",
+
+                        "image" : {
+
+                            "_template" : "/assets/templates/base/common/link",
+
+                            "extraAttributes" : {
+                                "_template" : "/assets/templates/base/common/attributes",
+                                "data-bsp-modal-open" : "gallery-fullscreen",
+                                "href"  : "#slide-3"
+                            },
+
+                            "body" : {
+
+                                "_template" : "/assets/templates/base/common/image",
+
+                                "extraAttributes" : {
+                                    "_template" : "/assets/templates/base/common/attributes",
+                                    "alt" : "{{words([ 1, 2 ])}}",
+                                    "src" : "{{image(800, 450)}}"
+                                }
+                            }
+                        }
+                    },
+                    {
+
+                        "_template" : "/assets/templates/base/modules/promo-section",
+
+                        "type" : "text",
+
+                        "description" : {
+                            "_template" : "/assets/templates/base/common/text",
+                            "text" : "{{words(20,40)}}"
+                        }
+
+                    }
+
+                ]
+            }
+        ]
+    }
+  ],
+
+  "modalGallery" : {
+
+      "_template": "/assets/templates/base/elements/modal",
+
+      "id": "gallery-fullscreen",
+
+      "content": {
+        "_template": "/assets/templates/base/modules/gallery-full",
+
+        "displayOptions" : {
+            "modifierClass" : "component-inverse-color",
+            "thumbnails" : false
+        },
+
+        "heading": {
+            "_template" : "/assets/templates/base/common/text",
+            "text" : "{{words(10)}}"
+        },
+
+        "description" : {
+            "_template" : "/assets/templates/base/common/text",
+            "text" : "{{words(20)}}"
+        },
+
+        "slides": [
+            {
+                "_repeat" : 3,
+                "_template" : "/assets/templates/base/modules/gallery-full-slide-content",
+                "image" : {
+                    "_template": "/assets/templates/base/common/image",
+                    "extraAttributes": {
+
+                        "src": "{{image(1600, 900)}}"
+                    }
+                },
+                "caption" : [
+                    {
+                        "_template": "/assets/templates/base/common/text",
+                        "text" : "{{words(80)}}"
+                    }
+                ],
+                "sharing" : {
+                    "_dataUrl" : "/elements/social-share/share.json"
+                }
+            }
+        ],
+
+        "showMoreText" : {
+            "_template": "/assets/templates/base/common/text",
+            "text" : "Show More"
+        },
+
+        "showLessText" : {
+            "_template": "/assets/templates/base/common/text",
+            "text" : "Show Less"
+        }
+      }
+
+  }
+}

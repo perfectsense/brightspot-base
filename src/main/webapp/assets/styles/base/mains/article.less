@@ -33,16 +33,22 @@
     }
 
     .article-title {
-        &:extend(.page-title all);
-        border: none;
+        font-size: @ts-3;
+        font-weight: @font-weight-light;
+        margin: 0;
+        line-height: @line-height-headings;
+        padding: @space-double 0;
+        text-transform: uppercase;
         color: @color-brand-accent;
     }
 
     .article-subtitle {
-        &:extend(.section-title all);
-        border: none;
         color: @color-text;
-        padding-bottom: @space-double;
+        font-size: @ts-2;
+        font-weight: @font-weight-light;
+        line-height: @line-height-headings;
+        margin: 0;
+        padding: 0 0 @space-double;
 
         .component-inverse-color &, .component-secondary-color & {
             color: @color-white;

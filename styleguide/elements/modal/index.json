@@ -6,10 +6,10 @@
       "_template": "/assets/templates/base/elements/modal",
       "id": "foo",
       "content": {
-        "_template": "/assets/templates/base/components/component-group",
+        "_template": "/assets/templates/base/modules/component-group",
         "components": [
           {
-            "_dataUrl": "/components/gallery-module/7-slides.json"
+            "_dataUrl": "/modules/gallery-module/7-slides.json"
           },
           {
             "_template": "/assets/templates/base/common/html",
@@ -22,7 +22,7 @@
       "_template": "/assets/templates/base/elements/modal",
       "id": "bar",
       "content": {
-        "_dataUrl": "/components/gallery-module/7-slides.json"
+        "_dataUrl": "/modules/gallery-module/7-slides.json"
       }
     },
     {

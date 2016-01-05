@@ -1,0 +1,55 @@
+{
+
+    "_template": "/assets/templates/base/modules/gallery-full",
+
+    "displayOptions" : {
+        "modifierClass" : "component-inverse-color",
+        "historyManagement": true,
+        "dynamicSlideLoad": true,
+        "dynamicEndpoint": "_dynamic-slides",
+        "dynamicCount" : 5
+    },
+
+    "heading": {
+        "_template" : "/assets/templates/base/common/text",
+        "text" : "{{words(10)}}"
+    },
+
+    "description" : {
+        "_template" : "/assets/templates/base/common/text",
+        "text" : "{{words(20)}}"
+    },
+
+    "slides": [
+        {
+            "_repeat" : 1,
+            "_template" : "/assets/templates/base/modules/gallery-full-slide-content",
+            "image" : {
+                "_template": "/assets/templates/base/common/image",
+                "extraAttributes": {
+                    "data-url" : "initial-slide",
+                    "src": "{{image(1200, 900)}}"
+                }
+            },
+            "caption" : [
+                {
+                    "_template": "/assets/templates/base/common/text",
+                    "text" : "{{words(20)}}"
+                }
+            ],
+            "sharing" : {
+                "_dataUrl" : "/elements/social-share/share.json"
+            }
+        }
+    ],
+
+    "showMoreText" : {
+        "_template": "/assets/templates/base/common/text",
+        "text" : "Show More"
+    },
+
+    "showLessText" : {
+        "_template": "/assets/templates/base/common/text",
+        "text" : "Show Less"
+    }
+}
