@@ -1,11 +1,12 @@
 {
-    
-    "_template" : "/assets/templates/base/components/page-title",
+
+    "_template" : "/assets/templates/base/elements/page-title",
 
     "pageTitle" : {
       "_template" : "/assets/templates/base/common/text",
 
       "_note" : "The style property below is not required. Only use this propery when overriding the default title text color (or other css properties)",
+
       "style" : "color: #fff",
 
       "text" : "{{words(2)}}"

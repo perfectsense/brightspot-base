@@ -1,11 +1,11 @@
-<div class="component gallery-grid-component{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
+<div class="gallery-grid module{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
     {{#with heading}}
-        <div class="component-title">{{render this}}</div>
+        <div class="gallery-grid-title">{{render this}}</div>
     {{/with}}
 
-    <div class="component-content" data-bsp-toggle-item data-bsp-toggle-item-options='{"toggleItem":".gallery-grid-gallery","toggleTrigger":".gallery-grid"}'>
+    <div class="gallery-grid-content" data-bsp-toggle-item data-bsp-toggle-item-options='{"toggleItem":".gallery-grid-gallery","toggleTrigger":".gallery-grid-grid"}'>
 
-        <div class="gallery-grid">
+        <div class="gallery-grid-grid">
             {{#each grid}}
                 {{render this}}
             {{/each}}
@@ -23,7 +23,12 @@
 
     </div>
 
-    {{#with cta}}
-        {{render this}}
-    {{/with}}
+     {{#if cta}}
+        <div class="gallery-grid-cta {{#if displayOptions.ctaLocation}}cta-{{displayOptions.ctaLocation}}{{/if}}">
+            {{#with cta}}
+                {{render this}}
+            {{/with}}
+        </div>
+    {{/if}}
+
 </div>

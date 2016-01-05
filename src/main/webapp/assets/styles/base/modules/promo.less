@@ -4,99 +4,106 @@
 
 .promo {
     &:extend(.module all);
-}
 
-.promo-list {
-    > li {
-        padding-bottom: @space-double;
+    &-list {
+        > li {
+            padding-bottom: @space-double;
+        }
     }
-}
 
-.promo-section-image {
-    margin-bottom: @space-and-half;
-    position: relative;
-}
+    &-section-image {
+        margin-bottom: @space-and-half;
+        position: relative;
+    }
 
-.promo-section-tags {
-    padding-bottom: @space-half;
-}
+    &-section-overlay {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        display: flex;
 
-.promo-section-text {
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        padding: @space-triple;
+        position: absolute;
+        top: 0;
+        width: 100%;
 
-    // if the promo title comes in inside of the section text, rather than above the module in the markup
-    // we want to provide it some overrides over a regular module title
-    .promo-title {
-        border: none;
-        margin-bottom: @space;
-        text-align: left;
+        .promo-link {
+            padding-top: @space-double;
+        }
+    }
 
-        a {
-            color: @color-text;
+    &-section-tags {
+        padding-bottom: @space-half;
+    }
 
-            &:hover {
-                color: @color-link;
+    &-section-text {
+
+        // if the promo title comes in inside of the section text, rather than above the module in the markup
+        // we want to provide it some overrides over a regular module title
+        .promo-title {
+            border: none;
+            margin-bottom: @space;
+            text-align: left;
+
+            a {
+                color: @color-text;
+
+                .module-inverse-color &, .module-secondary-color & {
+                    color: @color-white;
+                }
+
+                &:hover {
+                    color: @color-link;
+                }
             }
         }
     }
 
-}
-
-.promo-links {
-    margin-top: @space-double;
-
-    > li {
-        margin-bottom: @space;
-    }
-}
-
-.promo-section-overlay {
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
-    display: flex;
-
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    padding: @space-triple;
-    position: absolute;
-    top: 0;
-    width: 100%;
-
-    .promo-link {
-        padding-top: @space-double;
-    }
-}
-
-
-
-@media @mq-sm {
-    // when we actually have columns, we want to make sure that spacing between them works well
-    .promo-list {
-        .column-half:nth-child(n+3) {
-            padding-top: @space-double;
-        }
-        .column-third:nth-child(n+4) {
-            padding-top: @space-double;
-        }
-        .column-fourth:nth-child(n+5) {
-            padding-top: @space-double;
-        }
-        .column-fifth:nth-child(n+5) {
-            padding-top: @space-double;
-        }
+    &-links {
+        margin-top: @space-double;
 
         > li {
-            padding-bottom: 0;
+            margin-bottom: @space;
         }
     }
 
-    .promo-section-overlay {
-        background: rgba(255, 255, 255, 0.85);
+}
 
-        &:hover {
-            opacity: 1;
-            transition: opacity 1s;
+@media @mq-sm {
+
+    .promo {
+
+        // when we actually have columns, we want to make sure that spacing between them works well
+        &-list {
+            .column-half:nth-child(n+3) {
+                padding-top: @space-double;
+            }
+            .column-third:nth-child(n+4) {
+                padding-top: @space-double;
+            }
+            .column-fourth:nth-child(n+5) {
+                padding-top: @space-double;
+            }
+            .column-fifth:nth-child(n+5) {
+                padding-top: @space-double;
+            }
+
+            > li {
+                padding-bottom: 0;
+            }
+        }
+
+        &-section-overlay {
+            background: rgba(255, 255, 255, 0.85);
+
+            &:hover {
+                opacity: 1;
+                transition: opacity 1s;
+            }
         }
     }
+
 }

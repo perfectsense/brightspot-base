@@ -1,0 +1,257 @@
+@import '../globals/colors.vars';
+@import '../globals/spacing.vars';
+@import '../globals/typography.vars';
+@import '../globals/z-index.vars';
+
+@import '../elements/icons.less';
+
+@import 'site-header-simple.vars';
+
+// wrapper allows us to create the fixed position look/feel
+.site-header-simple-wrapper {
+    background: @color-header-background;
+    border-bottom: @header-border-bottom;
+    height: @header-height+@header-border-width;
+    left: 0;
+    position: @header-positioning;
+    top: 0;
+    width: 100%;
+    z-index: @z-index-header;
+
+    // if we are in the styleguide, we want to be relative so we can see this correctly
+    .body-embed & {
+        position: relative;
+    }
+}
+
+.site-header-simple {
+    &:extend(.clearfix all);
+    background: @color-header-background;
+    height: @header-height;
+    width: 100%;
+
+    &-site-logo {
+        display: flex;
+        align-items: center;
+        float: left;
+        position: relative;
+        left: @header-site-logo-xs-left-offset;
+        height: 100%;
+        vertical-align: middle;
+        text-align: left;
+        width: (@header-site-logo-width)*(@header-site-logo-xs-ratio);
+    }
+
+    &-menu-toggle {
+        position: absolute;
+        top: @header-height;
+        left: 0;
+        height: 0;
+        overflow: hidden;
+        transition: height .15s linear;
+        width: 100%;
+        z-index: @z-index-menu;
+
+        &.toggle-in {
+            // the number of items * height + their borders (1px) and the height of theh eader for the search
+            height: (@header-site-xs-menu-item-height * @header-site-xs-menu-items) + @header-site-xs-menu-items + @header-height;
+        }
+    }
+
+    &-nav-menu {
+        li {
+            background: @color-off-white;
+            border-bottom: 1px solid @color-white;
+            line-height: @header-site-xs-menu-item-height;
+            text-align: center;
+            text-transform: uppercase;
+
+            a {
+                color: @color-text;
+            }
+        }
+    }
+
+    &-search-wrapper {
+        background: @color-off-white;
+        height: @header-height;
+    }
+
+    &-search {
+        height: 100%;
+        position: relative;
+    }
+
+    &-search-toggle-trigger {
+        cursor: pointer;
+        display: none;
+        line-height: @header-height;
+        padding: 0 @space-triple;
+        text-align: center;
+
+        a {
+           color: @color-white;
+           display: block;
+           width: 20px; // used to make sure even if we change icons, it won't change in size
+        }
+
+        &.toggle-in {
+            .icon {
+                &:extend(.icon-close all);
+            }
+        }
+    }
+
+    &-search-text {
+        height: 100%;
+        width: 100%;
+    }
+
+    &-search-text-input {
+        background: @color-off-white;
+        border: none;
+        color: @color-text;
+        height: 100%;
+        padding-left: @space-double;
+        text-align: left;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    &-search-submit-input {
+        background: @color-off-white;
+        border: none;
+        color: @color-off-white;
+        height: 25px;
+        width: 25px;
+        overflow: hidden;
+        position: absolute;
+        top: calc(~"50% - 12px");
+        right: @space-double;
+
+        &:extend(.icon);
+        &:extend(.icon-search all);
+
+        &:before {
+            color: @color-text;
+            font-size: @ts-1;
+            text-indent: 5000px;
+        }
+    }
+
+    // mobile display trigger and toggle
+    &-menu-toggle {
+        display: block;
+        float: right;
+    }
+
+    &-menu-trigger {
+        &:extend(.ts-2);
+        background: @color-brand-secondary;
+        cursor: pointer;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        width: 64px;
+
+        a {
+            color: @color-white;
+            height: @header-height;
+            line-height: @header-height;
+
+            .icon {
+                line-height: @header-height;
+            }
+        }
+
+        &.toggle-in {
+            .icon {
+                &:extend(.icon-close all);
+            }
+        }
+    }
+}
+
+@media @mq-sm {
+    .site-header-simple {
+        &-site-logo {
+            left: 0;
+            width: @header-site-logo-width;
+        }
+    }
+}
+
+// additional styles for non mobile view
+@media @mq-md {
+
+    .site-header-simple {
+
+        // hide mobile display trigger
+        &-menu-trigger {
+            display: none;
+        }
+
+        &-menu-toggle {
+            align-items: center;
+            display: flex;
+            justify-content: flex-end;
+            overflow: visible;
+            position: static;
+            top: 0;
+            height: auto;
+            width: calc(100% ~"-" (@header-site-logo-width));
+        }
+
+        &-nav-menu {
+            float: left;
+            width: 100% - @header-site-search-width;
+
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                padding-right: @space-double;
+                text-align: center;
+
+                li {
+                    background: none;
+                    border: none;
+                    display: inline-block; // to make older IE work
+                    font-size: @ts-neg-1;
+                    line-height: @line-height-base;
+                    text-transform: uppercase;
+                    padding: 0 @space;
+
+                    a {
+                        color: @color-white;
+                    }
+                }
+            }
+        }
+
+        &-search-toggle-trigger {
+            display: block;
+        }
+
+        &-search-wrapper {
+            background: @color-header-site-search-trigger;
+            width: auto;
+        }
+
+        &-search {
+            height: 0;
+            margin: 0;
+            opacity: 0.85;
+            overflow: hidden;
+            position: absolute;
+            top: @header-height+@header-border-width;
+            transition: height 0.15s;
+            left: 0;
+            width: 100%;
+
+            &.toggle-in {
+                height: @header-height;
+            }
+        }
+    }
+}

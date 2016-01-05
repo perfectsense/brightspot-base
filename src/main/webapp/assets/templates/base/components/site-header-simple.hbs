@@ -1,31 +1,31 @@
 <header class="site-header-simple-wrapper">
 
 	<div class="site-header-simple">
-		<div class="site-logo">
+		<div class="site-header-simple-site-logo">
 			{{#with siteLogo}}
 				{{this}}
 			{{/with}}
 		</div>
 
-        <div class="site-menu-toggle-wrapper" data-bsp-toggle-item>
-            <div class="site-menu-trigger toggle-trigger">
+        <div class="site-header-simple-menu-toggle-wrapper" data-bsp-toggle-item>
+            <div class="site-header-simple-menu-trigger toggle-trigger">
                 <a href="#"><i class="icon icon-bars"><span class="sr-only">Toggle Menu</span></i></a>
             </div>
 
-            <div class="site-menu-toggle toggle-item">
+            <div class="site-header-simple-menu-toggle toggle-item">
                 {{#with navLinks}}
-                    <nav class="nav-menu">
-                        <ul class="nav-menu-items">
+                    <nav class="site-header-simple-nav-menu">
+                        <ul>
                             {{#each this}}
-                                <li class="nav-menu-item">{{render this }}</li>
+                                <li>{{render this }}</li>
                             {{/each}}
                         </ul>
                     </nav>
                 {{/with}}
 
                 {{#with searchForm}}
-                <div class="site-header-simple-search-wrapper" data-bsp-toggle-item data-bsp-toggle-item-options='{"toggleItem":".site-header-simple-search","toggleTrigger":".site-search-toggle-trigger"}'>
-                    <div class="site-search-toggle-trigger">
+                <div class="site-header-simple-search-wrapper" data-bsp-toggle-item data-bsp-toggle-item-options='{"toggleItem":".site-header-simple-search","toggleTrigger":".site-header-simple-search-toggle-trigger"}'>
+                    <div class="site-header-simple-search-toggle-trigger">
                         <a href="#"><i class="icon icon-search"><span class="sr-only">Toggle Menu</span></i></a>
                     </div>
                     {{this}}

@@ -1,71 +1,71 @@
-<div class="component gallery-module-component{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
+<div class="gallery-module gallery-module-{{#if displayOptions.theme}}{{displayOptions.theme}}{{/if}} module{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
 	{{#if heading}}
-		<h3 class="component-title">{{render heading}}</h3>
+		<h3 class="gallery-module-title">{{render heading}}</h3>
 	{{/if}}
 
-	<div class="component-content">
+	<div class="gallery-module-content" data-bsp-carousel data-bsp-carousel-options='{
 
-		<div class="gallery-module gallery-module-{{#if displayOptions.theme}}{{displayOptions.theme}}{{/if}}" data-bsp-carousel data-bsp-carousel-options='{
+		"theme" : "{{#if displayOptions.theme}}{{displayOptions.theme}}{{/if}}",
 
-			"theme" : "{{#if displayOptions.theme}}{{displayOptions.theme}}{{/if}}",
+        {{#if displayOptions.dynamicSlideLoad}}"dynamicSlideLoad" : true,{{/if}}
+        {{#if displayOptions.dynamicEndpoint}}"dynamicEndpoint" : "{{displayOptions.dynamicEndpoint}}",{{/if}}
+        {{#if displayOptions.dynamicCount}}"dynamicCount" : "{{displayOptions.dynamicCount}}",{{/if}}
 
-            {{#if displayOptions.dynamicSlideLoad}}"dynamicSlideLoad" : true,{{/if}}
-            {{#if displayOptions.dynamicEndpoint}}"dynamicEndpoint" : "{{displayOptions.dynamicEndpoint}}",{{/if}}
-            {{#if displayOptions.dynamicCount}}"dynamicCount" : "{{displayOptions.dynamicCount}}",{{/if}}
+		"themeConfig" : {
+            "arrows" : {{#if displayOptions.arrows}}{{displayOptions.arrows}}{{else}}true{{/if}},
+            "dots" : {{#if displayOptions.dots}}{{displayOptions.dots}}{{else}}true{{/if}}
 
-			"themeConfig" : {
-	            "arrows" : {{#if displayOptions.arrows}}{{displayOptions.arrows}}{{else}}true{{/if}},
-	            "dots" : {{#if displayOptions.dots}}{{displayOptions.dots}}{{else}}true{{/if}}
+            {{#if displayOptions.horizontalSlides}},
 
-	            {{#if displayOptions.horizontalSlides}},
+                {{#if displayOptions.slidesToScrollMedium}}
+                    "slidesToScroll" : {{displayOptions.slidesToScrollMedium}},
+                {{else}}
+                    "slidesToScroll" : 5,
+                {{/if}}
 
-                    {{#if displayOptions.slidesToScrollMedium}}
-                        "slidesToScroll" : {{displayOptions.slidesToScrollMedium}},
+				{{#if displayOptions.slidesToShowMedium}}
+				"slidesToShow" : {{displayOptions.slidesToShowMedium}},
+
+				"responsive": [
+			    {
+			      "breakpoint": 768,
+			      "settings": {
+			        "slidesToShow": {{displayOptions.slidesToShowSmall}},
+                    {{#if displayOptions.slidesToScrollSmall}}
+                        "slidesToScroll" : {{displayOptions.slidesToScrollSmall}}
                     {{else}}
-                        "slidesToScroll" : 5,
+                        "slidesToScroll" : 2
                     {{/if}}
+			      }
+			    }]
+			    {{else}}
 
-					{{#if displayOptions.slidesToShowMedium}}
-					"slidesToShow" : {{displayOptions.slidesToShowMedium}},
-
-					"responsive": [
-				    {
-				      "breakpoint": 768,
-				      "settings": {
-				        "slidesToShow": {{displayOptions.slidesToShowSmall}},
-                        {{#if displayOptions.slidesToScrollSmall}}
-                            "slidesToScroll" : {{displayOptions.slidesToScrollSmall}}
-                        {{else}}
-                            "slidesToScroll" : 2
-                        {{/if}}
-				      }
-				    }]
-				    {{else}}
-
-                    "slidesToShow" : 5,
-					"responsive": [
-				    {
-				      "breakpoint": 768,
-				      "settings": {
-				        "slidesToShow": 2,
-                        {{#if displayOptions.slidesToScrollSmall}}
-                            "slidesToScroll" : {{displayOptions.slidesToScrollSmall}}
-                        {{else}}
-                            "slidesToScroll" : 2
-                        {{/if}}
-				      }
-				    }]
-				    {{/if}}
+                "slidesToShow" : 5,
+				"responsive": [
+			    {
+			      "breakpoint": 768,
+			      "settings": {
+			        "slidesToShow": 2,
+                    {{#if displayOptions.slidesToScrollSmall}}
+                        "slidesToScroll" : {{displayOptions.slidesToScrollSmall}}
+                    {{else}}
+                        "slidesToScroll" : 2
+                    {{/if}}
+			      }
+			    }]
 			    {{/if}}
-			    }
-			}'>
+		    {{/if}}
+		    }
+		}'>
 
-			{{render gallerySlides}}
-		</div>
-
+		{{render gallerySlides}}
 	</div>
 
-	{{#with cta}}
-        {{render this}}
-	{{/with}}
+	{{#if cta}}
+        <div class="gallery-module-cta {{#if displayOptions.ctaLocation}}cta-{{displayOptions.ctaLocation}}{{/if}}">
+            {{#with cta}}
+                {{render this}}
+            {{/with}}
+        </div>
+    {{/if}}
 </div>

@@ -7,9 +7,12 @@
 // of either "gallery-module-nav" for text nav or "gallery-module-thumbs" for thumb navigation. If it's a
 // horizontal gallery module that has multiple slides visible, it gets the "gallery-module-horizontal" modifier
 
+.gallery-module {
+    &:extend(.module all);
+}
 
 // creating  gallery module wide display rules for arrows and dots
-.gallery-module, .gallery-module-horizontal {
+.gallery-module-content {
     margin-bottom: 30px;
 
     .slick-dots {
@@ -23,7 +26,10 @@
 }
 // for these two types of gallery modules, the slide is inside them, as it's the stage slider
 .gallery-module-nav, .gallery-module-thumbs {
-    margin-bottom: 0;
+
+    .gallery-module-content {
+        margin-bottom: 0;
+    }
 
     .bsp-carousel-stage {
         margin-bottom: 30px;
@@ -77,14 +83,14 @@
 // these are styles for the hoziontal layout gallery which has 5 slides across
 .gallery-module-horizontal {
 
-	.slick-list {
-		margin: 0 -@space;
-	}
+    .slick-list {
+        margin: 0 -@space;
+    }
 
-	.bsp-carousel-slide {
-		padding: 0 @space;
-		width: 50%;
-	}
+    .bsp-carousel-slide {
+        padding: 0 @space;
+        width: 50%;
+    }
 
 }
 
@@ -92,23 +98,23 @@
 // this lets us reuse the renderer for thumbs for the text nav and just write css overrides
 .gallery-module-nav {
 
-	// we have a 40px bottom margin for the slide nav text to fit
-	.carousel-stage {
-		.slick-track {
-			margin-bottom: 40px;
-		}
-	}
+    // we have a 40px bottom margin for the slide nav text to fit
+    .carousel-stage {
+        .slick-track {
+            margin-bottom: 40px;
+        }
+    }
 
-	.bsp-carousel-nav {
-		background-color: @color-gallery-module-nav-background;
+    .bsp-carousel-nav {
+        background-color: @color-gallery-module-nav-background;
 
-		.bsp-carousel-slide {
-			color: @color-white;
-			cursor: pointer;
+        .bsp-carousel-slide {
+            color: @color-white;
+            cursor: pointer;
             border-right: 1px solid @color-gray-light;
             height: 100px;
             padding: @space;
-			text-align: center;
+            text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -124,8 +130,8 @@
             &:last-of-type {
                 border: none;
             }
-		}
-	}
+        }
+    }
 
     // this is use for mobile instead of the thumb nav, as xs and sm resolutions, we get rid of the thumb nav
     // as it's too small to make sense
@@ -143,7 +149,7 @@
 @media @mq-md {
 
     // creating  gallery module wide display rules for arrows and dots
-    .gallery-module, .gallery-module-horizontal {
+    .gallery-module-content {
         margin-bottom: 0px;
 
         .slick-dots {
@@ -169,7 +175,7 @@
         }
     }
 
-	.gallery-module {
+    .gallery-module {
 
         // for anything past medium, we want the thumbs or text nav, anything before, no thumbs
         .bsp-carousel-nav {
@@ -178,6 +184,6 @@
             }
         }
 
-	}
+    }
 
 }

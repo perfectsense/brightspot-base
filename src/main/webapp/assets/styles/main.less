@@ -25,25 +25,19 @@
 * ----------------------------------------------------------------------------
 */
 
-@import "base/modules/search-results.less";
+@import "base/modules/callout.less";
+@import "base/modules/gallery-grid.less";
 @import "base/modules/promo.less";
 @import "base/modules/promo-modifiers.less";
+@import "base/modules/search-results.less";
+@import "base/modules/site-footer-simple.less";
+@import "base/modules/site-header-simple.less";
+@import "base/modules/social-feed.less";
+@import "base/modules/video-player.less";
+// The gallery modules go last. They potentially have other components inside, so this lets us do some clean overrides
+@import "base/modules/gallery-full.less";
+@import "base/modules/gallery-module.less";
 
-
-
-
-
-@import "base/components/callout.less";
-@import "base/components/gallery-grid.less";
-@import "base/components/search-results.less";
-@import "base/components/site-footer-simple.less";
-@import "base/components/site-header-simple.less";
-@import "base/components/social-feed.less";
-@import "base/components/video-player.less";
-// The gallery module component goes last. It potentially has other components inside of it, so this lets us do some clean overrides
-@import "base/components/gallery-module.less";
-@import "base/components/page-title.less";
-@import "base/components/gallery-full.less";
 
 /**
 * Mains
@@ -54,7 +48,7 @@
 */
 @import "base/mains/article.less";
 @import "base/mains/photofall.less";
-
+@import "base/mains/video.less";
 
 // This is here temporarily for fast development until we move community to it's own library
 @import "community/commenting.less";

@@ -1,23 +1,23 @@
-<div class="component social-feed-component{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}" {{#if loadMore}}data-bsp-ajax-links data-bsp-ajax-links-options='{"loadType":"loadMore"}'{{/if}}>
+<div class="social-feed module{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}" {{#if loadMore}}data-bsp-ajax-links data-bsp-ajax-links-options='{"loadType":"loadMore"}'{{/if}}>
     {{#with heading}}
-        <div class="component-title">{{render this}}</div>
+        <div class="social-feed-title">{{render this}}</div>
     {{/with}}
 
-    <div class="component-content">
-
-        <div class="social-feed">
-            <ul class="social-feed-list {{#if displayOptions.horizontalSplit}}row{{/if}}">
-                {{#each items}}
-                    <li class="{{#if ../displayOptions.horizontalSplit}}column-{{../displayOptions.horizontalSplit}}{{/if}}">
-                        {{render this}}
-                    </li>
-                {{/each}}
-            </ul>
-        </div>
-
+    <div class="social-feed-content">
+        <ul class="social-feed-list {{#if displayOptions.horizontalSplit}}row{{/if}}">
+            {{#each items}}
+                <li class="{{#if ../displayOptions.horizontalSplit}}column-{{../displayOptions.horizontalSplit}}{{/if}}">
+                    {{render this}}
+                </li>
+            {{/each}}
+        </ul>
     </div>
 
-    {{#with cta}}
-        {{render this}}
-    {{/with}}
+    {{#if cta}}
+        <div class="social-feed-cta {{#if displayOptions.ctaLocation}}cta-{{displayOptions.ctaLocation}}{{/if}}">
+            {{#with cta}}
+                {{render this}}
+            {{/with}}
+        </div>
+    {{/if}}
 </div>

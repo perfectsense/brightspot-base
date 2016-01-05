@@ -3,39 +3,50 @@
 @import '../globals/typography.vars';
 @import '../globals/z-index.vars';
 
-.gallery-full-wrapper {
-    .interstitial-showing {
-        .gallery-full-slide-overlay-wrapper,
-        .gallery-full-overlay-trigger,
-        .gallery-full-thumbs {
-            display: none !important;
+.gallery-full {
+
+    &-wrapper {
+        .interstitial-showing {
+            .gallery-full-slide-overlay-wrapper,
+            .gallery-full-overlay-trigger,
+            .gallery-full-thumbs {
+                display: none !important;
+            }
         }
     }
-}
 
-.gallery-full-header {
-    background: @color-black;
-    border-bottom: 1px solid @color-gray-light;
-    padding: @space;
-}
+    &-header {
+        background: @color-black;
+        border-bottom: 1px solid @color-gray-light;
+        padding: @space;
+    }
 
-.gallery-full-title {
-    &:extend(.ts-heading-3 all);
-    height: 45px;
-    margin: 0;
-    overflow: hidden;
-    width: 85%;
-}
+    &-full-title {
+        font-size: @ts-2;
+        height: 45px;
+        margin: 0;
+        overflow: hidden;
+        width: 85%;
+    }
 
-.gallery-full-desc {
-    margin-top: @space;
+    &-desc {
+        margin-top: @space;
+    }
+
+    &-footer {
+        &:extend(.clearfix all);
+        background: @color-black;
+        padding: 0 @space-double;
+        font-size: @ts-neg-1;
+        text-transform: uppercase;
+    }
+
 }
 
 .bsp-carousel-gallery {
     position: relative;
 
     .bsp-carousel-stage {
-
         // moves the previous and next underneath the gallery into the bottom bar
         .slick-prev, .slick-next {
             bottom: -56px;
@@ -217,15 +228,6 @@
     justify-content: center;
 }
 
-.gallery-full-footer {
-    &:extend(.clearfix all);
-    background: @color-black;
-    padding: 0 @space-double;
-    font-size: @ts-neg-1;
-    text-transform: uppercase;
-}
-
-
 .bsp-carousel-gallery-count-wrapper {
     float: right;
     line-height: 70px;
@@ -275,13 +277,17 @@
 
 @media @mq-sm {
 
-    .gallery-full-header {
-        padding: @space-and-half @space-double;
-    }
+    .gallery-full {
 
-    .gallery-full-title {
-        height: 32px;
-        width: 95%;
+        &-header {
+            padding: @space-and-half @space-double;
+        }
+
+        &-title {
+            height: 32px;
+            width: 95%;
+        }
+
     }
 
     // arbitrary max height values to make a stand along gallery full not look bad
@@ -328,6 +334,8 @@
 
 
 // this gives a fake "fullscreen" experience where the gallery moves with the size of the browser
+
+// this class can be put on the body, which will allow a gallery full module to become a fake fullscreen
 .gallery-fullscreen {
     position: absolute;
     top: 0;
@@ -340,6 +348,7 @@
     }
 }
 
+// this here is used for when the gallery full module is displayed in a modal
 .gallery-fullscreen, .modal-gallery-fullscreen {
 
     .gallery-full-component {

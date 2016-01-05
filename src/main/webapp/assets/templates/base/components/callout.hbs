@@ -1,11 +1,9 @@
-<div class="component callout-component{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
+<div class="callout module{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
     {{#with heading}}
-        <div class="component-title">{{render this}}</div>
+        <div class="callout-title">{{render this}}</div>
     {{/with}}
 
-    <div class="component-content">
-
-        <div class="callout">
+    <div class="callout-content">
             {{#if sections}}
                 {{#each sections}}
                     {{render this}}
@@ -13,11 +11,13 @@
             {{else}}
                 {{render this}}
             {{/if}}
-        </div>
-
     </div>
 
-    {{#with cta}}
-        {{render this}}
-    {{/with}}
+    {{#if cta}}
+        <div class="callout-cta {{#if displayOptions.ctaLocation}}cta-{{displayOptions.ctaLocation}}{{/if}}">
+            {{#with cta}}
+                {{render this}}
+            {{/with}}
+        </div>
+    {{/if}}
 </div>

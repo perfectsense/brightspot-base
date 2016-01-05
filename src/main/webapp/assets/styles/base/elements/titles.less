@@ -1,17 +1,22 @@
 // page title that can live outside of grid in it's parent component, or inside of grid when we need full page titles
 .page-title {
-    &:extend(.ts-heading-2 all);
-
-    margin: @space 0;
-    padding: 0;
+    background-color: @color-gray-dark;
+    border-bottom: 1px solid @color-white;
+    font-size: @ts-3;
+    font-weight: @font-weight-light;
+    margin: 0;
+    line-height: @line-height-headings;
+    padding: @space-double 0;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 // smaller section title that can be used or extended
 .section-title {
-	&:extend(.ts-heading-3 all);
-
     border-bottom: 1px solid @color-gray-light;
     color: @color-brand-accent;
+    font-size: @ts-2;
+    line-height: @line-height-headings;
     margin: 0 0 @space-double;
     padding: 0 0 @space;
 

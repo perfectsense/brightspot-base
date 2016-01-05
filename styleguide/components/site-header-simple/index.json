@@ -51,7 +51,7 @@
                 "_template" : "/assets/templates/base/common/form-input",
 
                 "displayOptions" : {
-                    "modifierClass" : "site-search-text"
+                    "modifierClass" : "site-header-simple-search-text"
                 },
 
                 "extraAttributes": {
@@ -68,7 +68,7 @@
 
                 "displayOptions" : {
                     "isButton" : true,
-                    "modifierClass" : "site-search-submit"
+                    "modifierClass" : "site-header-simple-search-submit"
                 },
 
                 "extraAttributes": {

@@ -1,5 +1,5 @@
 {
-    
+
 
     "_template" : "/assets/templates/base/components/video-player",
 
@@ -13,12 +13,12 @@
         "text" : "{{words(20)}}"
     },
 
-    "aspectRatio" : "4x3",
-
-    "align" : "right",
+    "displayOptions" : {
+        "aspectRatio" : "4x3",
+        "align" : "right"
+    },
 
     "youtube" : true,
-
     "src" : "https://www.youtube.com/embed/dQw4w9WgXcQ",
 
     "tags" : {

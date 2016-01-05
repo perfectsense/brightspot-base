@@ -9,16 +9,16 @@
 	{{/if}}
 
     {{#with navLinks}}
-        <nav class="nav-menu">
-            <ul class="nav-menu-items">
+        <nav class="site-footer-simple-nav-menu">
+            <ul>
                 {{#each this}}
-                    <li class="nav-menu-item">{{render this }}</li>
+                    <li>{{render this }}</li>
                 {{/each}}
             </ul>
         </nav>
     {{/with}}
 
-	<div class="site-copyright">
+	<div class="site-footer-simple-copyright">
 		{{disclaimer}}
 	</div>
 

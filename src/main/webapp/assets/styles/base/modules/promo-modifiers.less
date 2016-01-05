@@ -19,7 +19,7 @@
     }
 
     .promo-title {
-        &:extend(.ts-heading-2 all);
+        font-size: @ts-4;
         text-align: center;
     }
 
@@ -31,7 +31,16 @@
 
     .promo-link {
         a {
-            &:extend(.component-cta a all);
+            display: block;
+            font-weight: @font-weight-bold;
+            padding: @space-quarter 0;
+            text-transform: uppercase;
+
+            &:extend(.icon);
+
+            &:after {
+                &:extend(.icon-angle-right:before);
+            }
         }
     }
 
@@ -143,7 +152,7 @@
             float: right;
             width: 25%;
 
-            .component-inverse-color &, .component-secondary-color & {
+            .module-inverse-color &, .module-secondary-color & {
                 border-top: 1px solid @color-white;
             }
         }
