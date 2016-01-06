@@ -1,9 +1,9 @@
-.commenting-component {
+.commenting {
 
     .component-title {
         border-top: @border-style-gray-light;
         border-bottom: none;
-        color: @color-text;
+        color: @color-brand-accent;
         margin-top: @space-quad;
         padding-top: @space-quad;
     }
@@ -13,23 +13,148 @@
 .sign-in {
     background: @color-off-white;
     padding: @space*3 0;
-    display: flex;
-    justify-content: center;
     text-align: center;
 
     p {
         display: inline-block;
+        font-size: @ts-neg-1;
         margin: 0;
+        text-transform: uppercase;
+    }
+
+    &-choices {
+        &:extend(.share-links all);
+        margin-left: @space*1.25;
+
+        > li {
+            a {
+                &:extend(.share-link);
+            }
+        }
     }
 }
 
-.sign-in-choices {
-    &:extend(.share-links all);
-    margin-left: @space*1.25;
+.comments-list {
+    &-wrapper {
+        padding: 0 @space;
+    }
+}
 
-    > li {
-        a {
-            &:extend(.share-link);
+.comment {
+
+    &:extend(.clearfix all);
+    margin: @space-and-quarter 0;
+
+    .comment {
+        margin-left: 60px;
+    }
+
+    &-avatar {
+        float: left;
+        width: 75px
+    }
+
+    &-body {
+        border: 1px solid @color-gray-light;
+        border-radius: 5px;
+        color: @color-gray;
+        font-size: @ts-neg-1;
+        margin-left: 75px;
+        padding: @space-and-half @space-and-half @space-and-quarter;
+        position: relative;
+    }
+
+    &-authored {
+        &:extend(.clearfix all);
+    }
+
+    &-author {
+        float: left;
+    }
+
+    &-date {
+        float: right;
+    }
+
+    &-text {
+        margin: @space 0 @space-and-half 0;
+    }
+
+    &-flag, &-share, &-reply {
+        &:extend(.icon);
+
+        color: @color-gray-light;
+        font-size: @ts-neg-2;
+        font-weight: bold;
+        line-height: 1.5;
+        text-transform: uppercase;
+
+        span {
+            padding-left: @space-half;
         }
     }
+
+    &-flag {
+        &:extend(.icon-flag all);
+    }
+
+    &-share {
+        &:extend(.icon-share all);
+        padding-left: @space-double;
+    }
+
+    &-reply {
+        color: @color-link;
+        display: block;
+        float: right;
+    }
+
+    &-arrow {
+        // left triangle outside
+        border-color: transparent @color-gray-light transparent transparent;
+        border-style: solid;
+        border-width: 20px;
+        height: 0;
+        width: 0;
+        position: absolute;
+        top: 2px;
+        left: -40px;
+
+        // triangle pointing to bottom right that makes the top flat
+        &:before {
+            content: '';
+            background: @color-white;
+            border-bottom: 1px solid @color-gray-light;
+            position: absolute;
+            top: -19px;
+            left: 1px;
+            width: 19px;
+            height: 19px;
+            z-index: 2;
+            border-right: 1px solid @color-gray-light;
+        }
+
+        // left triangle inside (white so it covers the box border)
+        &:after {
+            content: '';
+            border-color: transparent @color-white transparent transparent;
+            border-style: solid;
+            border-width: 20px;
+            height: 0;
+            width: 0;
+            position: absolute;
+            top: -20px;
+            left: -19px;
+            z-index: 1;
+        }
+    }
+}
+
+
+@media @mq-sm {
+
+    .comments-list-wrapper {
+        padding: 0 @space-quad;
+    }
+
 }

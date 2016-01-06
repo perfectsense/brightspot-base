@@ -1,7 +1,8 @@
-<div class="component commenting-component">
+<div class="commenting component">
     <h5 class="component-title">{{render commentTitle}}({{render commentCount}})</h5>
 
-    <div class="component-content">
+    <div class="commenting-content">
+
         <div class="sign-in">
             <p>{{render signInText}}</p>
             <ul class="sign-in-choices">
@@ -9,6 +10,49 @@
                     <li>{{render this}}</li>
                 {{/each}}
             </ul>
+        </div>
+
+        <div class="comments-list-wrapper">
+
+            <ul class="comments-list">
+                <li class="comment">
+                    <div class="comment-avatar">
+                        <img src="http://d26ua9paks4zq.cloudfront.net/42/16/a66d31c94c6f82ad67505ed07243/image-healthgrades-avatar.png" />
+                    </div>
+                    <div class="comment-body">
+                        <div class="comment-authored">
+                            <div class="comment-author">Angelina</div>
+                            <div class="comment-date">12/23/2015</div>
+                        </div>
+                        <div class="comment-text">haha! I am a comment body haha! I am a comment body haha! I am a comment body haha! I am a comment body haha! I am a comment body haha! I am a comment body haha! I am a comment body haha! I am a comment body haha! I am a comment body</div>
+                        <div class="comment-action">
+                            <a href="#" class="comment-flag"><span>Flag</span></a>
+                            <a href="#" class="comment-share"><span>Share</span></a>
+                            <a href="#" class="comment-reply"><span>Reply</span></a>
+                        </div>
+                        <div class="comment-arrow"></div>
+                    </div>
+                    <ul class="comment-list">
+                        <li class="comment">
+                            <div class="comment-avatar">
+                                <img src="http://d26ua9paks4zq.cloudfront.net/42/16/a66d31c94c6f82ad67505ed07243/image-healthgrades-avatar.png" />
+                            </div>
+                            <div class="comment-body">
+                                <div class="comment-authored">
+                                    <div class="comment-author">Angelina</div>
+                                    <div class="comment-date">12/23/2015</div>
+                                </div>
+                                <div class="comment-text">haha! I am a comment body</div>
+                                <div class="comment-action">
+                                    <a href="#" class="comment-flag"><span>Flag</span></a><a href="#" class="comment-share"><span>Share</span></a><a href="#" class="comment-reply"><span>Reply</span></a>
+                                </div>
+                                <div class="comment-arrow"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
         </div>
     </div>
 </div>

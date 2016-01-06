@@ -1,0 +1,32 @@
+{
+    "_template": "/assets/templates/community/commenting",
+
+    "commentTitle": "Comment",
+    "commentCount": "5",
+    "signInText": "Sign in to post a comment",
+    "signInChoices": [{
+        "_template": "/assets/templates/base/common/link",
+        "cssClass": "icon-facebook",
+        "extraAttributes": {
+            "href": "#"
+        }
+    }, {
+        "_template": "/assets/templates/base/common/link",
+        "cssClass": "icon-twitter",
+        "extraAttributes": {
+            "href": "#"
+        }
+    }, {
+        "_template": "/assets/templates/base/common/link",
+        "cssClass": "icon-google",
+        "extraAttributes": {
+            "href": "#"
+        }
+    }, {
+        "_template": "/assets/templates/base/common/link",
+        "cssClass": "icon-linkedin",
+        "extraAttributes": {
+            "href": "#"
+        }
+    }]
+}
