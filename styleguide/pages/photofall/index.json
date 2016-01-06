@@ -11,7 +11,7 @@
     "_template": "/assets/templates/base/common/body",
 
     "displayOptions" : {
-        "modifierClass" : "layout-inverse-color"
+        "modifierClass" : "color-inverse"
     },
 
     "headerView": {
@@ -22,7 +22,7 @@
       "_template": "/assets/templates/base/layouts/one-col",
       "main": [
         {
-             "_template": "/assets/templates/base/modules/photofall",
+             "_template": "/assets/templates/base/mains/photofall",
 
               "sharing": {
                 "_dataUrl": "/elements/social-share/share.json"
@@ -237,7 +237,7 @@
                     "_template": "/assets/templates/base/modules/gallery-full",
 
                     "displayOptions" : {
-                        "modifierClass" : "module-inverse-color",
+                        "modifierClass" : "color-inverse",
                         "thumbnails" : false
                     },
 

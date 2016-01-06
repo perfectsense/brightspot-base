@@ -18,7 +18,7 @@
         "mainView": {
             "_template": "/assets/templates/base/layouts/full-page",
             "main": [{
-                    "_template": "/assets/templates/base/modules/article",
+                    "_template": "/assets/templates/base/mains/article",
 
                     "sharing": {
                         "_dataUrl": "/elements/social-share/share.json"

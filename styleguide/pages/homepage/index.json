@@ -31,7 +31,7 @@
             "_template": "/assets/templates/base/layouts/full-page",
 
             "displayOptions" : {
-                "modifierClass" : "layout-secondary-color"
+                "modifierClass" : "color-secondary"
             },
 
             "main" : [
@@ -58,7 +58,7 @@
             "_template": "/assets/templates/base/layouts/full-page",
 
             "displayOptions" : {
-                "modifierClass" : "layout-secondary-color"
+                "modifierClass" : "color-secondary"
             },
 
             "main" : [

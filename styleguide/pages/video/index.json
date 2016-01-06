@@ -20,7 +20,7 @@
             "_template": "/assets/templates/base/layouts/full-page",
 
             "displayOptions": {
-                "modifierClass": "layout-inverse-color"
+                "modifierClass": "color-inverse"
             },
 
             "main": [{

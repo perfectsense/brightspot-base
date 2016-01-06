@@ -21,7 +21,7 @@
         {
 
 
-          "_template": "/assets/templates/base/modules/article",
+          "_template": "/assets/templates/base/mains/article",
 
           "sharing": {
             "_dataUrl": "/elements/social-share/share.json"
@@ -73,7 +73,7 @@
               "text": "{{paragraphs(2)}}"
             },
             {
-              "_template": "/assets/templates/base/modules/article-enhancement",
+              "_template": "/assets/templates/base/mains/article-enhancement",
               "content": {
                 "_dataUrl" : "/modules/gallery-grid/index.json"
               }
@@ -83,7 +83,7 @@
               "text": "{{paragraphs(2)}}"
             },
             {
-              "_template": "/assets/templates/base/modules/article-enhancement",
+              "_template": "/assets/templates/base/mains/article-enhancement",
               "content": {
                 "_template": "/assets/templates/base/common/link",
                 "cssClass": "related-link",
@@ -102,7 +102,7 @@
               "text": "{{paragraphs(2)}}"
             },
             {
-              "_template": "/assets/templates/base/modules/article-enhancement",
+              "_template": "/assets/templates/base/mains/article-enhancement",
               "content": {
                 "_template": "/assets/templates/base/elements/blockquote",
                 "author": "{{name}}",
@@ -114,7 +114,7 @@
               "text": "{{paragraphs(2)}}"
             },
             {
-              "_template": "/assets/templates/base/modules/article-enhancement",
+              "_template": "/assets/templates/base/mains/article-enhancement",
 
               "displayOptions" : {
                 "align": "center"
@@ -134,7 +134,7 @@
               "text": "{{paragraphs(2)}}"
             },
             {
-              "_template": "/assets/templates/base/modules/article-enhancement",
+              "_template": "/assets/templates/base/mains/article-enhancement",
               "content": {
                 "_dataUrl" : "/modules/gallery-module/7-slides-horizontal.json"
               }
@@ -144,7 +144,7 @@
               "text": "{{paragraphs}}"
             },
             {
-              "_template": "/assets/templates/base/modules/article-enhancement",
+              "_template": "/assets/templates/base/mains/article-enhancement",
               "displayOptions" : {
                 "align": "left"
               },
@@ -175,7 +175,7 @@
               "text": "{{paragraphs(3)}}"
             },
             {
-              "_template": "/assets/templates/base/modules/article-enhancement",
+              "_template": "/assets/templates/base/mains/article-enhancement",
               "displayOptions" : {
                 "align": "center"
               },
@@ -190,7 +190,7 @@
               "text": "{{paragraphs(2)}}"
             },
             {
-              "_template": "/assets/templates/base/modules/article-enhancement",
+              "_template": "/assets/templates/base/mains/article-enhancement",
               "displayOptions" : {
                 "align": "right"
               },
@@ -225,7 +225,7 @@
                     "_template": "/assets/templates/base/modules/gallery-full",
 
                     "displayOptions" : {
-                        "modifierClass" : "module-inverse-color ratio-16x9",
+                        "modifierClass" : "color-inverse ratio-16x9",
                         "thumbnails" : true
                     },
 
