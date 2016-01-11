@@ -1,8 +1,0 @@
-      {
-        "_template" : "/assets/templates/base/common/style",
-        "extraAttributes": {
-          "rel" : "stylesheet",
-          "type" : "text/css",
-          "href" : "http://fonts.googleapis.com/css?family=Roboto:700,400,300,100"
-        }
-      },
