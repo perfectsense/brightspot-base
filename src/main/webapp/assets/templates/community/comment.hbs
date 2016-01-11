@@ -1,17 +1,17 @@
 <li class="comment">
     <div class="comment-avatar">
-        <img src="http://d26ua9paks4zq.cloudfront.net/42/16/a66d31c94c6f82ad67505ed07243/image-healthgrades-avatar.png" />
+        {{avatar}}
     </div>
     <div class="comment-body">
         <div class="comment-authored">
-            <div class="comment-author">Angelina</div>
-            <div class="comment-date">12/23/2015</div>
+            <div class="comment-author">{{author}}</div>
+            <div class="comment-date">{{date}}</div>
         </div>
-        <div class="comment-text">haha! I am a comment body haha! I am a comment body haha! I am a comment body haha! I am a comment body haha! I am a comment body haha! I am a comment body haha! I am a comment body haha! I am a comment body haha! I am a comment body</div>
+        <div class="comment-text">{{#each commentBody}}{{this}}{{/each}}</div>
         <div class="comment-action">
-            <a href="#" class="comment-flag"><span>Flag</span></a>
-            <a href="#" class="comment-share"><span>Share</span></a>
-            <a href="#" class="comment-reply"><span>Reply</span></a>
+            {{#with flag}}{{render this cssClass="comment-flag"}}{{/with}}
+            {{#with share}}{{render this cssClass="comment-share"}}{{/with}}
+            {{#with reply}}{{render this cssClass="comment-reply"}}{{/with}}
         </div>
         <div class="comment-arrow"></div>
     </div>
