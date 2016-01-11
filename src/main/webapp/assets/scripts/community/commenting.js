@@ -7,43 +7,79 @@ class commenting {
         var self = this;
 
         self.defaults = {
-            'baseClass' : 'comments'
+            'baseParentClass' : 'comments',
+            'baseClass' : 'comment',
+            'commentId' : 'cid'
         };
 
         self.$el = $el;
         self.settings = $.extend(true, self.defaults, options);
 
         self.cacheElements();
-        self.captureFormSubmit();
+        self.captureFormSubmit(self.$form);
+        self.handleCommentReplyAction();
     }
 
     cacheElements() {
-
         var self = this;
 
-        self.$form = self.$el.find('.' + self.settings.baseClass + '-form');
-        self.$submit = self.$form.find('.' + self.settings.baseClass+'-form-submit-input');
+        self.$form = self.$el.find('.' + self.settings.baseParentClass + '-form');
+        self.$submit = self.$form.find('.' + self.settings.baseParentClass+'-form-submit-input');
+        self.$commentsList = self.$el.find('.' + self.settings.baseParentClass + '-list');
     }
 
-    captureFormSubmit() {
+    captureFormSubmit($theForm) {
         var self = this;
 
         // TODO: integration with bsp-form for validation
-        self.$form.on('submit', function(e) {
+        $theForm.on('submit', function(e) {
             e.preventDefault();
 
+            var ajaxUrl = $theForm.attr('action') + '?' + $theForm.serialize();
 
+            $theForm.addClass('loading');
+
+            $.post(ajaxUrl, function(data) {
+                // once we get back the response, if the form is inside the list, just replace it
+                // otherwise, we want to add it to the top of the list
+                if($theForm.parents('.' + self.settings.baseParentClass + '-list').length) {
+                    $theForm.replaceWith(data);
+                } else {
+                    self.$commentsList.prepend(data);
+                    $theForm.remove();
+                }
+
+            }).error(function() {
+                //TODO: figure out how we want to do error messaging
+                console.log('There has been an error submitting your response');
+            });
         });
     }
 
-    captureFormSubmit() {
+    handleCommentReplyAction() {
         var self = this;
 
-        // TODO: integration with bsp-form for validation
-        self.$form.on('submit', function(e) {
+        // we go through every reply in the comments list
+        self.$commentsList.find('.' + self.settings.baseClass + '-reply').on('click.commenting-reply', function(e) {
             e.preventDefault();
 
+            var $currentReply = $(this).closest('.' + self.settings.baseClass);
+            var $currentReplyBody = $currentReply.find('.' + self.settings.baseClass + '-body:first');
+            var $currentReplyForm;
 
+            // if we find a form in there, remove it, as this is someone clicking again on reply
+            if($currentReply.find('.' + self.settings.baseParentClass + '-form').length) {
+                $currentReply.find('.' + self.settings.baseParentClass + '-form').remove();
+            } else {
+                // if we do not, we want to clone the main form and append it after the reply body
+                $currentReplyForm = self.$form.clone().insertAfter($currentReplyBody);
+
+                // we add the current reply id
+                $currentReplyForm.find('input[id="' + self.settings.commentId + '"]').val($currentReply.data(self.settings.commentId));
+
+                // once we have it on the page, we also want to capture this new form's submit
+                self.captureFormSubmit($currentReplyForm);
+            }
         });
     }
 

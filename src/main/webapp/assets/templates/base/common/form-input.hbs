@@ -10,7 +10,7 @@
         <button {{#if displayOptions.modifierClass}} class="{{displayOptions.modifierClass}}-input"{{/if}}{{extraAttributes}}{{#if autoSubmit}} data-bsp-autosubmit{{/if}}>{{extraAttributes.value}}</button>
     {{else}}
         {{#if displayOptions.isTextArea}}
-            <textarea name="comment-content" maxlength="500" class="comment-content" autocomplete="off"></textarea>
+            <textarea {{extraAttributes}}></textarea>
         {{else}}
             <input {{#if displayOptions.modifierClass}} class="{{displayOptions.modifierClass}}-input"{{/if}}{{extraAttributes}}{{#if autoSubmit}} data-bsp-autosubmit{{/if}} />
         {{/if}}

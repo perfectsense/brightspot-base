@@ -42,7 +42,7 @@
         },
 
         "extraAttributes" : {
-            "action" : "testAjax"
+            "action" : "_comment-ajax-response"
         },
 
         "inputs" : [
@@ -76,6 +76,7 @@
 
                 "extraAttributes": {
                     "autocomplete": "off",
+                    "maxlength": "500",
                     "id" : "c",
                     "name" : "c",
                     "required": true,
@@ -95,6 +96,15 @@
                     "type": "submit",
                     "value": "Comment Now"
                 }
+            },
+            {
+                "_template" : "/assets/templates/base/common/form-input",
+
+                "extraAttributes": {
+                    "type": "hidden",
+                    "id" : "cid",
+                    "value": ""
+                }
             }
         ]
     },
@@ -102,6 +112,10 @@
     "comments" : [
         {
             "_template" : "/assets/templates/community/comment",
+
+            "extraAttributes": {
+                "data-cid": "comment-id-goes-here-{{words(1)}}"
+            },
 
             "avatar" : {
                 "_template": "/assets/templates/base/common/image",
@@ -145,6 +159,10 @@
 
                     "_repeat" : 2,
 
+                    "extraAttributes": {
+                        "data-cid": "comment-id-goes-here-{{words(1)}}"
+                    },
+
                     "avatar" : {
                         "_template": "/assets/templates/base/common/image",
                         "extraAttributes": {
@@ -172,13 +190,6 @@
                             "href": "#"
                         },
                         "body" : "Share"
-                    },
-                    "reply" : {
-                        "_template": "/assets/templates/base/common/link",
-                        "extraAttributes": {
-                            "href": "#"
-                        },
-                        "body" : "Reply"
                     }
                 }
             ]
@@ -187,6 +198,10 @@
             "_template" : "/assets/templates/community/comment",
 
             "_repeat" : 3,
+
+            "extraAttributes": {
+                "data-cid": "comment-id-goes-here-{{words(1)}}"
+            },
 
             "avatar" : {
                 "_template": "/assets/templates/base/common/image",
@@ -232,6 +247,10 @@
         {
             "_template" : "/assets/templates/community/comment",
 
+            "extraAttributes": {
+                "data-cid": "comment-id-goes-here-{{words(1)}}"
+            },
+
             "avatar" : {
                 "_template": "/assets/templates/base/common/image",
                 "extraAttributes": {
@@ -272,6 +291,10 @@
                 {
                     "_template" : "/assets/templates/community/comment",
 
+                    "extraAttributes": {
+                        "data-cid": "comment-id-goes-here-{{words(1)}}"
+                    },
+
                     "avatar" : {
                         "_template": "/assets/templates/base/common/image",
                         "extraAttributes": {
@@ -299,13 +322,6 @@
                             "href": "#"
                         },
                         "body" : "Share"
-                    },
-                    "reply" : {
-                        "_template": "/assets/templates/base/common/link",
-                        "extraAttributes": {
-                            "href": "#"
-                        },
-                        "body" : "Reply"
                     }
                 },
                 {
