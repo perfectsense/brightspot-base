@@ -2,8 +2,11 @@
     "_template": "/assets/templates/community/commenting",
 
     "commentTitle": "Comment",
+
     "commentCount": "5",
+
     "signInText": "Sign in to post a comment",
+
     "signInChoices": [{
         "_template": "/assets/templates/base/common/link",
         "cssClass": "icon-facebook",
@@ -28,5 +31,72 @@
         "extraAttributes": {
             "href": "#"
         }
-    }]
+    }],
+
+    "commentForm" : {
+
+        "_template": "/assets/templates/base/common/form",
+
+        "displayOptions" : {
+            "modifierClass": "comments-form"
+        },
+
+        "extraAttributes" : {
+            "action" : "testAjax"
+        },
+
+        "inputs" : [
+            {
+                "_template" : "/assets/templates/base/common/form-input",
+
+                "displayOptions" : {
+                    "modifierClass" : "comments-form-name"
+                },
+
+                "label" : "Name",
+
+                "extraAttributes": {
+                    "autocomplete": "off",
+                    "id" : "n",
+                    "name" : "n",
+                    "required": true,
+                    "type": "text",
+                    "placeholder": ""
+                }
+            },
+            {
+                "_template" : "/assets/templates/base/common/form-input",
+
+                "displayOptions" : {
+                    "isTextArea" : true,
+                    "modifierClass" : "comments-form-comment"
+                },
+
+                "label" : "Comment",
+
+                "extraAttributes": {
+                    "autocomplete": "off",
+                    "id" : "c",
+                    "name" : "c",
+                    "required": true,
+                    "type": "text",
+                    "placeholder": ""
+                }
+            },
+            {
+                "_template" : "/assets/templates/base/common/form-input",
+
+                "displayOptions" : {
+                    "isButton" : true,
+                    "modifierClass" : "comments-form-submit"
+                },
+
+                "extraAttributes": {
+                    "type": "submit",
+                    "value": "Comment Now"
+                }
+            }
+        ]
+
+    }
 }

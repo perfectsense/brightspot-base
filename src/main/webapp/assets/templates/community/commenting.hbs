@@ -1,16 +1,18 @@
-<div class="commenting component">
+<div class="comments component" data-bsp-commenting>
     <h5 class="component-title">{{render commentTitle}}({{render commentCount}})</h5>
 
     <div class="commenting-content">
 
-        <div class="sign-in">
+        <div class="comments-sign-in">
             <p>{{render signInText}}</p>
-            <ul class="sign-in-choices">
+            <ul class="comments-sign-in-choices">
                 {{#each signInChoices}}
                     <li>{{render this}}</li>
                 {{/each}}
             </ul>
         </div>
+
+        {{commentForm}}
 
         <div class="comments-list-wrapper">
 

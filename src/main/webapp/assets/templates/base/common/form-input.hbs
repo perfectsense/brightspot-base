@@ -1,17 +1,26 @@
 <div class="form-input {{#if extraAttributes.type}}form-input-{{extraAttributes.type}}{{/if}}{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
     {{#if label}}
-        <label {{label}}>
-        {{#if labelAfterInput}} {{else}}{{{render labelText}}}{{/if}}
+        {{#if labelAfterInput}}{{else}}
+            <label for="{{extraAttributes.id}}">
+                {{label}}
+            </label>
+        {{/if}}
     {{/if}}
-
     {{#if displayOptions.isButton}}
         <button {{#if displayOptions.modifierClass}} class="{{displayOptions.modifierClass}}-input"{{/if}}{{extraAttributes}}{{#if autoSubmit}} data-bsp-autosubmit{{/if}}>{{extraAttributes.value}}</button>
     {{else}}
-        <input {{#if displayOptions.modifierClass}} class="{{displayOptions.modifierClass}}-input"{{/if}}{{extraAttributes}}{{#if autoSubmit}} data-bsp-autosubmit{{/if}} />
+        {{#if displayOptions.isTextArea}}
+            <textarea name="comment-content" maxlength="500" class="comment-content" autocomplete="off"></textarea>
+        {{else}}
+            <input {{#if displayOptions.modifierClass}} class="{{displayOptions.modifierClass}}-input"{{/if}}{{extraAttributes}}{{#if autoSubmit}} data-bsp-autosubmit{{/if}} />
+        {{/if}}
     {{/if}}
 
     {{#if label}}
-        {{#if labelAfterInput}}{{{render labelText}}}{{else}} {{/if}}
-        </label>
+        {{#if labelAfterInput}}
+            <label for="{{extraAttributes.id}}">
+                {{label}}
+            </label>
+        {{/if}}
     {{/if}}
 </div>

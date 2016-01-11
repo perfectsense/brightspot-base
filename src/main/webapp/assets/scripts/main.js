@@ -28,4 +28,6 @@ import bsp_toggle_plugin from               'bsp-toggle-item-plugin';
 import base_example from              'base/plugins/base-example-plugin';
 
 
+import bsp_commenting from             'community/commenting-plugin';
+
 export default {};
