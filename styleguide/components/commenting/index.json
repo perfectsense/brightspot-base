@@ -1,5 +1,5 @@
 {
-    "_template": "/assets/templates/community/commenting",
+    "_template": "/assets/templates/community/comments",
 
     "commentTitle": "Comment",
 
@@ -97,6 +97,17 @@
                 }
             }
         ]
+    },
 
-    }
+    "comments" : [
+        {
+            "_template" : "/assets/templates/community/comment",
+
+            "comments" : [
+                {
+                    "_template" : "/assets/templates/community/comment"
+                }
+            ]
+        }
+    ]
 }
