@@ -1,4 +1,4 @@
-<div class="component search-results-component{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}" {{#if loadMore}}data-bsp-ajax-links data-bsp-ajax-links-options='{"loadType":"loadMore"}'{{/if}}>
+<div class="component search-results-component{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}" {{#if loadMore}}data-bsp-ajax-links {{#if jsonObject}}data-bsp-ajax-links-options='{{jsonObject}}'{{/if}}{{/if}}>
     {{#with heading}}
         <div class="component-title">
             {{render this}}

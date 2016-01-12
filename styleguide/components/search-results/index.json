@@ -5,6 +5,13 @@
 
     "loadMore" : true,
 
+    "jsonObject" : {
+        "loadType" : "loadMore",
+        "extraParams" : {
+            "_test" : "test"
+        }
+    },
+
     "heading" : {
         "_template" : "/assets/templates/base/components/component-group",
 
