@@ -1,0 +1,40 @@
+.blockquote {
+    &:extend(.module all);
+
+    blockquote {
+        font-size: @ts-1;
+        line-height: 1.75;
+        margin: 0;
+    }
+
+    &-author {
+        color: @color-gray-light;
+        display: block;
+        padding-top: @space;
+
+        &:before {
+            content: "-";
+            display: inline;
+        }
+    }
+
+    &-content {
+        color: @color-brand-accent;
+
+        &:before, &:after {
+            display: inline-block;
+            font-size: @ts-3;
+            font-weight: @font-weight-bold;
+            line-height: 1;
+            vertical-align: top;
+        }
+
+        &:before {
+            content: "“";
+        }
+
+        &:after {
+            content: "”";
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<div class="blockquote module{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
+    {{#with heading}}
+        <div class="blockquote-title">{{render this}}</div>
+    {{/with}}
+    <blockquote>
+        <span class="blockquote-content" style="{{#if displayOptions.contentColor}}color: {{displayOptions.contentColor}}{{/if}}">{{content}}</span>
+        {{#if author}}<span class="blockquote-author" style="{{#if displayOptions.authorColor}}color: {{displayOptions.authorColor}}{{/if}}">{{author}}</span>{{/if}}
+    </blockquote>
+    {{#if cta}}
+        <div class="blockquote-cta {{#if displayOptions.ctaLocation}}cta-{{displayOptions.ctaLocation}}{{/if}}">
+            {{#with cta}}
+                {{render this}}
+            {{/with}}
+        </div>
+    {{/if}}
+</div>

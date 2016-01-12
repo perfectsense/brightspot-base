@@ -104,7 +104,7 @@
             {
               "_template": "/assets/templates/base/mains/article-enhancement",
               "content": {
-                "_template": "/assets/templates/base/elements/blockquote",
+                "_template": "/assets/templates/base/modules/blockquote",
                 "author": "{{name}}",
                 "content": "{{sentences(2)}}"
               }

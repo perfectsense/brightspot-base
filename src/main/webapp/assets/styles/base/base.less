@@ -8,20 +8,33 @@
 */
 @import (reference) "mixins/_mixins.less";
 
-
 /**
-* Globals, utilities, mixins, vars
+* Globals
 * ----------------------------------------------------------------------------
-* Start off with the normalize reset and our scaffolding, then the rest of our globals. Each has their own documentation
+* We have combined global LESS such as colors with the "elemental" LESS such as "icons" and "lists" in the global
+* category/folder. These are all items that apply to either things outside of modules (page containers, etc) or
+* across multiple modules. Some of these items, such as lists or share links, can go directly into page container
+* but most of the time, these will live inside a module
 * ----------------------------------------------------------------------------
 */
+@import "globals/buttons.less";
 @import "globals/colors.vars";
+@import "globals/icons.less";
+@import "globals/images.less";
+@import "globals/inputs.less";
+@import "globals/lists.less";
+@import "globals/loading-icons.less";
+@import "globals/meta-data.less";
+@import "globals/modal.less";
 @import "globals/module.vars";
 @import "globals/module.less";
 @import "globals/grid.less";
 @import "globals/normalize.less";
 @import "globals/scaffolding.less";
+@import "globals/share-links.less";
 @import "globals/spacing.vars";
+@import "globals/tags.less";
+@import "globals/titles.less";
 @import "globals/typography.less";
 @import "globals/utilities-basic.less";
 @import "globals/utilities-responsive.less";
@@ -35,25 +48,3 @@
 */
 @import (inline) "../bsp-carousel.css";
 @import (inline) "../bsp-modal.css";
-
-/**
-* Elements
-* ----------------------------------------------------------------------------
-* These are elements. Some of these correspond to DOM elements, others are small building blocks that components or parts of components can extend
-* The primary difference is that elements do not have a component class wrapper and they are primarily used inside components, meaning that very
-* rarely will you see an element just stand alone inside a page layout without being represented inside a component
-* ----------------------------------------------------------------------------
-*/
-@import "elements/blockquote.less";
-@import "elements/buttons.less";
-@import "elements/icons.less";
-@import "elements/images.less";
-@import "elements/inputs.less";
-@import "elements/lists.less";
-@import "elements/loading-icons.less";
-@import "elements/meta-data.less";
-@import "elements/modal.less";
-@import "elements/share-links.less";
-@import "elements/tags.less";
-@import "elements/titles.less";
-
