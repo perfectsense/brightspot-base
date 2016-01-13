@@ -19,7 +19,7 @@
 
       "modules": [
         {
-          "_dataUrl": "/elements/page-title/page-title.json"
+          "_dataUrl": "/modules/page-title/page-title.json"
         },
         {
           "_template": "/assets/base/layouts/one-col",

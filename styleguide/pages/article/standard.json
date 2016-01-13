@@ -24,7 +24,7 @@
           "_template": "/assets/base/article",
 
           "sharing": {
-            "_dataUrl": "/elements/social-share/share.json"
+            "_dataUrl": "/modules/social-share/share.json"
           },
 
           "permalink": "/bsp-article/",
@@ -50,7 +50,7 @@
             ]
           },
           "tags": {
-            "_dataUrl": "/elements/tags/tag-list-no-title.json"
+            "_dataUrl": "/modules/tags/tag-list-no-title.json"
           },
           "lead": {
             "_template": "/assets/base/globals/figure",
@@ -259,7 +259,7 @@
                                 }
                             ],
                             "sharing" : {
-                                "_dataUrl" : "/elements/social-share/share.json"
+                                "_dataUrl" : "/modules/social-share/share.json"
                             }
                         }
                     ],
