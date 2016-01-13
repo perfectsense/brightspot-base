@@ -1,17 +1,17 @@
 <div class="Gallery-module Gallery-module-{{#if displayOptions.theme}}{{displayOptions.theme}}{{/if}} module{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
-	{{#if heading}}
-		<h3 class="Gallery-module-title">{{render heading}}</h3>
-	{{/if}}
+    {{#if heading}}
+        <h3 class="Gallery-module-title">{{render heading}}</h3>
+    {{/if}}
 
-	<div class="Gallery-module-content" data-bsp-carousel data-bsp-carousel-options='{
+    <div class="Gallery-module-content" data-bsp-carousel data-bsp-carousel-options='{
 
-		"theme" : "{{#if displayOptions.theme}}{{displayOptions.theme}}{{/if}}",
+        "theme" : "{{#if displayOptions.theme}}{{displayOptions.theme}}{{/if}}",
 
         {{#if displayOptions.dynamicSlideLoad}}"dynamicSlideLoad" : true,{{/if}}
         {{#if displayOptions.dynamicEndpoint}}"dynamicEndpoint" : "{{displayOptions.dynamicEndpoint}}",{{/if}}
         {{#if displayOptions.dynamicCount}}"dynamicCount" : "{{displayOptions.dynamicCount}}",{{/if}}
 
-		"themeConfig" : {
+        "themeConfig" : {
             "arrows" : {{#if displayOptions.arrows}}{{displayOptions.arrows}}{{else}}true{{/if}},
             "dots" : {{#if displayOptions.dots}}{{displayOptions.dots}}{{else}}true{{/if}}
 
@@ -23,46 +23,46 @@
                     "slidesToScroll" : 5,
                 {{/if}}
 
-				{{#if displayOptions.slidesToShowMedium}}
-				"slidesToShow" : {{displayOptions.slidesToShowMedium}},
+                {{#if displayOptions.slidesToShowMedium}}
+                "slidesToShow" : {{displayOptions.slidesToShowMedium}},
 
-				"responsive": [
-			    {
-			      "breakpoint": 768,
-			      "settings": {
-			        "slidesToShow": {{displayOptions.slidesToShowSmall}},
+                "responsive": [
+                {
+                  "breakpoint": 768,
+                  "settings": {
+                    "slidesToShow": {{displayOptions.slidesToShowSmall}},
                     {{#if displayOptions.slidesToScrollSmall}}
                         "slidesToScroll" : {{displayOptions.slidesToScrollSmall}}
                     {{else}}
                         "slidesToScroll" : 2
                     {{/if}}
-			      }
-			    }]
-			    {{else}}
+                  }
+                }]
+                {{else}}
 
                 "slidesToShow" : 5,
-				"responsive": [
-			    {
-			      "breakpoint": 768,
-			      "settings": {
-			        "slidesToShow": 2,
+                "responsive": [
+                {
+                  "breakpoint": 768,
+                  "settings": {
+                    "slidesToShow": 2,
                     {{#if displayOptions.slidesToScrollSmall}}
                         "slidesToScroll" : {{displayOptions.slidesToScrollSmall}}
                     {{else}}
                         "slidesToScroll" : 2
                     {{/if}}
-			      }
-			    }]
-			    {{/if}}
-		    {{/if}}
-		    }
-		}'>
+                  }
+                }]
+                {{/if}}
+            {{/if}}
+            }
+        }'>
 
-		{{render gallerySlides}}
-	</div>
+        {{render gallerySlides}}
+    </div>
 
-	{{#if cta}}
-        <div class="Gallery-module-cta {{#if displayOptions.ctaLocation}}cta-{{displayOptions.ctaLocation}}{{/if}}">
+    {{#if cta}}
+        <div class="Gallery-module-cta}">
             {{#with cta}}
                 {{render this}}
             {{/with}}
