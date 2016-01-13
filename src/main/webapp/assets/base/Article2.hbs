@@ -2,7 +2,9 @@
     <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="{{this.canonicalUrl}}"/>
 
     {{#with image}}
-        <img src="{{this}}" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" />
+        <div class="Article-image">
+            <img src="{{this}}" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" />
+        </div>
     {{/with}}
 
     {{#if breadcrumbs}}
