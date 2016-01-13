@@ -1,14 +1,14 @@
 {
     "_wrapper": false,
 
-    "_template": "/assets/templates/base/common/page",
+    "_template": "/assets/base/globals/page",
 
     "head": {
         "_dataUrl": "/common/head.json"
     },
 
     "body": {
-        "_template": "/assets/templates/base/common/body",
+        "_template": "/assets/base/globals/body",
         "displayOptions": {
             "modifierClass": "video-page"
         },
@@ -17,14 +17,14 @@
         },
         "mainView": {
 
-            "_template": "/assets/templates/base/layouts/full-page",
+            "_template": "/assets/base/layouts/full-page",
 
             "displayOptions": {
                 "modifierClass": "color-inverse"
             },
 
             "main": [{
-                "_template": "/assets/templates/base/layouts/one-col",
+                "_template": "/assets/base/layouts/one-col",
 
                 "main": [{
                     "_dataUrl": "/modules/video-player/youtube-inverse-color.json"

@@ -1,28 +1,28 @@
 {
   "_wrapper" : false,
 
-  "_template": "/assets/templates/base/common/page",
+  "_template": "/assets/base/globals/page",
 
   "head" : {
     "_dataUrl": "/common/head.json"
   },
 
   "body" : {
-    "_template": "/assets/templates/base/common/body",
+    "_template": "/assets/base/globals/body",
 
     "headerView": {
       "_dataUrl": "/modules/site-header-simple/index.json"
     },
 
     "mainView": {
-      "_template": "/assets/templates/base/modules/module-group",
+      "_template": "/assets/base/module-group",
 
       "modules": [
         {
           "_dataUrl": "/elements/page-title/page-title.json"
         },
         {
-          "_template": "/assets/templates/base/layouts/full-page",
+          "_template": "/assets/base/layouts/full-page",
 
           "main" : [
             {
@@ -31,11 +31,11 @@
           ]
         },
         {
-          "_template": "/assets/templates/base/layouts/one-col",
+          "_template": "/assets/base/layouts/one-col",
 
           "main" : [
             {
-              "_template" : "/assets/templates/base/modules/promo",
+              "_template" : "/assets/base/promo",
 
               "loadMore" : true,
 
@@ -46,20 +46,20 @@
 
               "listItems" : [
                   {
-                      "_template": "/assets/templates/base/modules/promo-item",
+                      "_template": "/assets/base/promo-item",
 
                       "_repeat" : 6,
 
                       "sections" : [
                           {
 
-                              "_template" : "/assets/templates/base/modules/promo-section",
+                              "_template" : "/assets/base/promo-section",
 
                               "type" : "image",
 
                               "image" : {
 
-                                  "_template" : "/assets/templates/base/common/link",
+                                  "_template" : "/assets/base/globals/link",
 
                                   "extraAttributes" : {
                                       "href"  : "link"
@@ -67,7 +67,7 @@
 
                                   "body" : {
 
-                                      "_template" : "/assets/templates/base/common/image",
+                                      "_template" : "/assets/base/globals/image",
 
                                       "extraAttributes" : {
                                           "alt" : "{{words([ 1, 2 ])}}",
@@ -78,25 +78,25 @@
                           },
                           {
 
-                              "_template" : "/assets/templates/base/modules/promo-section",
+                              "_template" : "/assets/base/promo-section",
 
                               "type" : "text",
 
                               "title" : {
-                                  "_template" : "/assets/templates/base/common/link",
+                                  "_template" : "/assets/base/globals/link",
 
                                   "extraAttributes" : {
                                       "href"  : "#"
                                   },
 
                                   "body" : {
-                                      "_template" : "/assets/templates/base/common/text",
+                                      "_template" : "/assets/base/globals/text",
                                       "text" : "{{words([ 1, 2 ])}}"
                                   }
                               },
 
                               "description" : {
-                                  "_template" : "/assets/templates/base/common/text",
+                                  "_template" : "/assets/base/globals/text",
 
                                   "text" : "{{words(10)}}"
                               }
@@ -108,7 +108,7 @@
               ],
 
               "cta": {
-                  "_template": "/assets/templates/base/common/link",
+                  "_template": "/assets/base/globals/link",
 
                   "cssClass" : "load-more",
 
@@ -118,7 +118,7 @@
                   },
 
                   "body": {
-                      "_template": "/assets/templates/base/common/text",
+                      "_template": "/assets/base/globals/text",
                       "text": "{{words(2)}}"
                   }
               }

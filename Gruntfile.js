@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     require('bsp-grunt')(grunt, {
         bsp: {
             styles: {
-                dir: 'assets/styles',
+                dir: 'assets',
                 less: [ '*.less' ],
                 options : {
                     autoprefixer: true
@@ -12,7 +12,7 @@ module.exports = function (grunt) {
             },
 
             scripts: {
-                dir: 'assets/scripts'
+                dir: 'assets'
             }
         }
     });

@@ -1,9 +1,9 @@
 {
 
-    "_template" : "/assets/templates/base/elements/page-title",
+    "_template" : "/assets/base/page-title",
 
     "pageTitle" : {
-      "_template" : "/assets/templates/base/common/text",
+      "_template" : "/assets/base/globals/text",
 
       "_note" : "The style property below is not required. Only use this propery when overriding the default title text color (or other css properties)",
 

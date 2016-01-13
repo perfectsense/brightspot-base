@@ -1,24 +1,24 @@
 {
 
-  "_template": "/assets/templates/base/modules/gallery-grid",
+  "_template": "/assets/base/gallery-grid",
 
   "heading": {
-    "_template": "/assets/templates/base/common/text",
+    "_template": "/assets/base/globals/text",
     "text": "Gallery Grid"
   },
 
   "description" : {
-    "_template": "/assets/templates/base/common/text",
+    "_template": "/assets/base/globals/text",
     "text": "{{words(40)}}"
   },
 
   "grid" : [
     {
-      "_template": "/assets/templates/base/modules/gallery-grid-column",
+      "_template": "/assets/base/gallery-grid-column",
 
       "rows" : [
         {
-          "_template": "/assets/templates/base/common/image",
+          "_template": "/assets/base/globals/image",
           "_repeat" : 2,
           "extraAttributes": {
 
@@ -28,11 +28,11 @@
       ]
     },
     {
-      "_template": "/assets/templates/base/modules/gallery-grid-column",
+      "_template": "/assets/base/gallery-grid-column",
 
       "rows" : [
         {
-          "_template": "/assets/templates/base/common/image",
+          "_template": "/assets/base/globals/image",
           "extraAttributes": {
 
             "src": "{{image(600,800)}}"
@@ -41,11 +41,11 @@
       ]
     },
     {
-      "_template": "/assets/templates/base/modules/gallery-grid-column",
+      "_template": "/assets/base/gallery-grid-column",
 
       "rows" : [
         {
-          "_template": "/assets/templates/base/common/image",
+          "_template": "/assets/base/globals/image",
           "_repeat" : 2,
           "extraAttributes": {
 
@@ -58,14 +58,14 @@
   ],
 
   "gallery" : {
-    "_template": "/assets/templates/base/modules/gallery-module",
+    "_template": "/assets/base/gallery-module",
 
     "gallerySlides":
       {
-        "_template": "/assets/templates/base/modules/gallery-module-slide-content",
+        "_template": "/assets/base/gallery-module-slide-content",
 
         "content": [{
-          "_template": "/assets/templates/base/common/image",
+          "_template": "/assets/base/globals/image",
           "_repeat": 7,
           "extraAttributes": {
             "src": "{{image(800, 450)}}"

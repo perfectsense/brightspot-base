@@ -1,32 +1,32 @@
 {
 
-  "_template": "/assets/templates/base/layouts/one-col",
+  "_template": "/assets/base/layouts/one-col",
   "main": [
     {
-      "_template": "/assets/templates/base/elements/modal",
+      "_template": "/assets/base/modal",
       "id": "foo",
       "content": {
-        "_template": "/assets/templates/base/modules/module-group",
+        "_template": "/assets/base/module-group",
         "modules": [
           {
             "_dataUrl": "/modules/gallery-module/7-slides.json"
           },
           {
-            "_template": "/assets/templates/base/common/html",
+            "_template": "/assets/base/globals/html",
             "text": "<p><a data-bsp-modal-open=\"bar\" href=\"#\">Open the modal with data-bsp-modal id of \"bar\"</a></p>"
           }
         ]
       }
     },
     {
-      "_template": "/assets/templates/base/elements/modal",
+      "_template": "/assets/base/modal",
       "id": "bar",
       "content": {
         "_dataUrl": "/modules/gallery-module/7-slides.json"
       }
     },
     {
-      "_template": "/assets/templates/base/common/html",
+      "_template": "/assets/base/globals/html",
       "text": "<div style=\"height: 750px;\"><p><a data-bsp-modal-open=\"foo\" href=\"#\">Open the modal with data-bsp-modal id of \"foo\"</a></p></div>"
     }
   ]

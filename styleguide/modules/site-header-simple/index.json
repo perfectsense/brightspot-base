@@ -1,34 +1,34 @@
 {
 
-  "_template": "/assets/templates/base/modules/site-header-simple",
+  "_template": "/assets/base/site-header-simple",
   "siteName": "Brightspot Base Styleguide",
   "siteLogo": {
-    "_template": "/assets/templates/base/common/link",
+    "_template": "/assets/base/globals/link",
     "extraAttributes": {
       "href": "/",
       "title": "Brightspot Base Styleguide",
-      "_template": "/assets/templates/base/common/attributes"
+      "_template": "/assets/base/globals/attributes"
     },
     "body": {
-      "_template": "/assets/templates/base/common/image",
+      "_template": "/assets/base/globals/image",
       "extraAttributes": {
         "alt": "Brightspot",
         "src": "/brightspot-base/assets/logo-site.png",
-        "_template": "/assets/templates/base/common/attributes"
+        "_template": "/assets/base/globals/attributes"
       }
     }
   },
   "navLinks": [
     {
     "_repeat" : 5,
-      "_template": "/assets/templates/base/common/link",
+      "_template": "/assets/base/globals/link",
       "extraAttributes": {
         "href": "link-me",
         "title": "I are a link",
-        "_template": "/assets/templates/base/common/attributes"
+        "_template": "/assets/base/globals/attributes"
       },
       "body": {
-        "_template": "/assets/templates/base/common/text",
+        "_template": "/assets/base/globals/text",
         "text": "Menu Item"
       }
     }
@@ -36,7 +36,7 @@
 
   "searchForm" : {
 
-        "_template": "/assets/templates/base/common/form",
+        "_template": "/assets/base/globals/form",
 
         "displayOptions" : {
             "modifierClass": "site-header-simple-search"
@@ -48,7 +48,7 @@
 
         "inputs" : [
             {
-                "_template" : "/assets/templates/base/common/form-input",
+                "_template" : "/assets/base/globals/form-input",
 
                 "displayOptions" : {
                     "modifierClass" : "site-header-simple-search-text"
@@ -64,7 +64,7 @@
                 }
             },
             {
-                "_template" : "/assets/templates/base/common/form-input",
+                "_template" : "/assets/base/globals/form-input",
 
                 "displayOptions" : {
                     "isButton" : true,

@@ -1,12 +1,12 @@
 {
-  "_template": "/assets/templates/base/common/page",
+  "_template": "/assets/base/globals/page",
 
   "head" : {
         "_dataUrl" : "/common/head.json"
     },
 
   "body": {
-    "_template": "/assets/templates/base/common/body-embed",
+    "_template": "/assets/base/globals/body-embed",
     "content" : {
         "_delegate": true
     }

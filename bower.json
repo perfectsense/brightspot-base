@@ -37,26 +37,26 @@
       {
         "cwd": "src/main/webapp/assets/scripts",
         "src": "base/**",
-        "dest": "",
+        "dest": "base",
         "expand": true
       },
       {
         "cwd": "src/main/webapp/assets/styles",
         "src": "base/**",
-        "dest": "../styles",
+        "dest": "base",
         "expand": true
       },
       {
         "cwd": "src/main/webapp/assets/templates",
         "src": "base/**",
-        "dest": "../templates",
+        "dest": "base",
         "expand": true
       }
     ],
     "fontawesome": [
       {
         "src": "less/*",
-        "dest": "../styles/bower/fontawesome",
+        "dest": "bower/fontawesome",
         "expand": true,
         "flatten": true
       },

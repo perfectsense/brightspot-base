@@ -1,25 +1,25 @@
 {
   "_wrapper" : false,
 
-  "_template": "/assets/templates/base/common/page",
+  "_template": "/assets/base/globals/page",
 
   "head" : {
     "_dataUrl": "/common/head.json"
   },
 
   "body" : {
-    "_template": "/assets/templates/base/common/body",
+    "_template": "/assets/base/globals/body",
 
     "headerView": {
       "_dataUrl": "/modules/site-header-simple/index.json"
     },
 
     "mainView": {
-      "_template": "/assets/templates/base/modules/module-group",
+      "_template": "/assets/base/module-group",
 
       "modules": [
         {
-          "_template": "/assets/templates/base/layouts/full-page",
+          "_template": "/assets/base/layouts/full-page",
 
           "main" : [
             {
@@ -28,7 +28,7 @@
           ]
         },
         {
-            "_template": "/assets/templates/base/layouts/full-page",
+            "_template": "/assets/base/layouts/full-page",
 
             "displayOptions" : {
                 "modifierClass" : "color-secondary"
@@ -36,7 +36,7 @@
 
             "main" : [
                 {
-                    "_template": "/assets/templates/base/layouts/one-col",
+                    "_template": "/assets/base/layouts/one-col",
 
                     "main" : [{
                         "_dataUrl" : "/modules/promo/medium-promo.json"
@@ -45,7 +45,7 @@
             ]
         },
         {
-          "_template": "/assets/templates/base/layouts/one-col",
+          "_template": "/assets/base/layouts/one-col",
 
           "main" : [
             {
@@ -55,7 +55,7 @@
 
         },
         {
-            "_template": "/assets/templates/base/layouts/full-page",
+            "_template": "/assets/base/layouts/full-page",
 
             "displayOptions" : {
                 "modifierClass" : "color-secondary"
@@ -63,7 +63,7 @@
 
             "main" : [
                 {
-                  "_template": "/assets/templates/base/layouts/one-col",
+                  "_template": "/assets/base/layouts/one-col",
 
                   "main" : [
                     {
@@ -74,7 +74,7 @@
             ]
         },
         {
-          "_template": "/assets/templates/base/layouts/one-col",
+          "_template": "/assets/base/layouts/one-col",
 
           "main" : [
             {
@@ -83,7 +83,7 @@
           ]
         },
         {
-          "_template": "/assets/templates/base/layouts/full-page",
+          "_template": "/assets/base/layouts/full-page",
 
           "main" : [
             {

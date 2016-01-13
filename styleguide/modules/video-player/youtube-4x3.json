@@ -1,15 +1,15 @@
 {
 
 
-    "_template" : "/assets/templates/base/modules/video-player",
+    "_template" : "/assets/base/video-player",
 
     "title" : {
-        "_template" : "/assets/templates/base/common/text",
+        "_template" : "/assets/base/globals/text",
         "text" : "{{words(10)}}"
     },
 
     "description" : {
-        "_template" : "/assets/templates/base/common/text",
+        "_template" : "/assets/base/globals/text",
         "text" : "{{words(20)}}"
     },
 

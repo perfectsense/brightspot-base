@@ -1,15 +1,15 @@
 {
     "modifierClass" : "color-inverse",
 
-    "_template" : "/assets/templates/base/modules/video-player",
+    "_template" : "/assets/base/video-player",
 
     "title" : {
-        "_template" : "/assets/templates/base/common/text",
+        "_template" : "/assets/base/globals/text",
         "text" : "{{words(10)}}"
     },
 
     "description" : {
-        "_template" : "/assets/templates/base/common/text",
+        "_template" : "/assets/base/globals/text",
         "text" : "{{words(20)}}"
     },
 
@@ -20,10 +20,10 @@
     "src" : "https://www.youtube.com/embed/dQw4w9WgXcQ",
 
     "primaryTag" : {
-      "_template": "/assets/templates/base/elements/tags",
+      "_template": "/assets/base/tags",
       "tagList": [
         {
-          "_template": "/assets/templates/base/common/link",
+          "_template": "/assets/base/globals/link",
           "body": "{{words([ 1, 2 ])}}",
           "extraAttributes": {
 

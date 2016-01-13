@@ -1,14 +1,14 @@
 {
   "_wrapper" : false,
 
-  "_template": "/assets/templates/base/common/page",
+  "_template": "/assets/base/globals/page",
 
   "head" : {
     "_dataUrl": "/common/head.json"
   },
 
   "body" : {
-    "_template": "/assets/templates/base/common/body",
+    "_template": "/assets/base/globals/body",
     "displayOptions" : {
         "modifierClass": "article-page"
     },
@@ -16,12 +16,12 @@
       "_dataUrl": "/modules/site-header-simple/index.json"
     },
     "mainView": {
-      "_template": "/assets/templates/base/layouts/full-page",
+      "_template": "/assets/base/layouts/full-page",
       "main": [
         {
 
 
-          "_template": "/assets/templates/base/mains/article",
+          "_template": "/assets/base/article",
 
           "sharing": {
             "_dataUrl": "/elements/social-share/share.json"
@@ -31,11 +31,11 @@
           "title": "{{words}}",
           "subTitle": "{{words}}",
           "metaData": {
-            "_template": "/assets/templates/base/elements/meta-data",
+            "_template": "/assets/base/meta-data",
             "publishDate": "05 Apr 2015",
             "authors": [
               {
-                "_template": "/assets/templates/base/common/link",
+                "_template": "/assets/base/globals/link",
                 "_repeat": [
                   1,
                   5
@@ -53,14 +53,14 @@
             "_dataUrl": "/elements/tags/tag-list-no-title.json"
           },
           "lead": {
-            "_template": "/assets/templates/base/common/figure",
+            "_template": "/assets/base/globals/figure",
             "credit": "{{name}}",
             "caption": {
-              "_template": "/assets/templates/base/common/text",
+              "_template": "/assets/base/globals/text",
               "text": "{{words}}"
             },
             "image": {
-              "_template": "/assets/templates/base/common/image",
+              "_template": "/assets/base/globals/image",
               "extraAttributes": {
 
                 "src": "{{image(1600, 600)}}"
@@ -69,59 +69,59 @@
           },
           "articleBody": [
             {
-              "_template": "/assets/templates/base/common/html",
+              "_template": "/assets/base/globals/html",
               "text": "{{paragraphs(2)}}"
             },
             {
-              "_template": "/assets/templates/base/mains/article-enhancement",
+              "_template": "/assets/base/article-enhancement",
               "content": {
                 "_dataUrl" : "/modules/gallery-grid/index.json"
               }
             },
             {
-              "_template": "/assets/templates/base/common/html",
+              "_template": "/assets/base/globals/html",
               "text": "{{paragraphs(2)}}"
             },
             {
-              "_template": "/assets/templates/base/mains/article-enhancement",
+              "_template": "/assets/base/article-enhancement",
               "content": {
-                "_template": "/assets/templates/base/common/link",
+                "_template": "/assets/base/globals/link",
                 "cssClass": "related-link",
                 "extraAttributes": {
 
                   "href": "#"
                 },
                 "body": {
-                  "_template": "/assets/templates/base/common/text",
+                  "_template": "/assets/base/globals/text",
                   "text": "I am a related link as a separate paragraph (via CSS) inside the body of an article as an enhancement"
                 }
               }
             },
             {
-              "_template": "/assets/templates/base/common/html",
+              "_template": "/assets/base/globals/html",
               "text": "{{paragraphs(2)}}"
             },
             {
-              "_template": "/assets/templates/base/mains/article-enhancement",
+              "_template": "/assets/base/article-enhancement",
               "content": {
-                "_template": "/assets/templates/base/modules/blockquote",
+                "_template": "/assets/base/blockquote",
                 "author": "{{name}}",
                 "content": "{{sentences(2)}}"
               }
             },
             {
-              "_template": "/assets/templates/base/common/html",
+              "_template": "/assets/base/globals/html",
               "text": "{{paragraphs(2)}}"
             },
             {
-              "_template": "/assets/templates/base/mains/article-enhancement",
+              "_template": "/assets/base/article-enhancement",
 
               "displayOptions" : {
                 "align": "center"
               },
 
               "content": {
-                "_template" : "/assets/templates/base/common/iframe",
+                "_template" : "/assets/base/globals/iframe",
                 "contentAlign": "center",
                 "contentWidth": "500",
                 "hideMobile": true,
@@ -130,38 +130,38 @@
               }
             },
             {
-              "_template": "/assets/templates/base/common/html",
+              "_template": "/assets/base/globals/html",
               "text": "{{paragraphs(2)}}"
             },
             {
-              "_template": "/assets/templates/base/mains/article-enhancement",
+              "_template": "/assets/base/article-enhancement",
               "content": {
                 "_dataUrl" : "/modules/gallery-module/7-slides-horizontal.json"
               }
             },
             {
-              "_template": "/assets/templates/base/common/html",
+              "_template": "/assets/base/globals/html",
               "text": "{{paragraphs}}"
             },
             {
-              "_template": "/assets/templates/base/mains/article-enhancement",
+              "_template": "/assets/base/article-enhancement",
               "displayOptions" : {
                 "align": "left"
               },
               "content": {
-                "_template" : "/assets/templates/base/common/link",
+                "_template" : "/assets/base/globals/link",
 
                 "extraAttributes" : {
-                    "_template" : "/assets/templates/base/common/attributes",
+                    "_template" : "/assets/base/globals/attributes",
                     "data-bsp-modal-open" : "gallery-fullscreen",
                     "href"  : "#slide-1"
                 },
 
                 "body" : {
-                    "_template": "/assets/templates/base/common/figure",
+                    "_template": "/assets/base/globals/figure",
                     "credit": "{{name}}",
                     "image": {
-                      "_template": "/assets/templates/base/common/image",
+                      "_template": "/assets/base/globals/image",
                       "extraAttributes": {
 
                         "src": "{{image([ 200, 300, 10 ], [ 200, 300, 10 ])}}"
@@ -171,43 +171,43 @@
               }
             },
             {
-              "_template": "/assets/templates/base/common/html",
+              "_template": "/assets/base/globals/html",
               "text": "{{paragraphs(3)}}"
             },
             {
-              "_template": "/assets/templates/base/mains/article-enhancement",
+              "_template": "/assets/base/article-enhancement",
               "displayOptions" : {
                 "align": "center"
               },
               "content": {
-                "_template" : "/assets/templates/base/modules/video-player",
+                "_template" : "/assets/base/video-player",
                 "youtube" : true,
                 "src" : "https://www.youtube.com/embed/i3STjxcuk1Y"
               }
             },
             {
-              "_template": "/assets/templates/base/common/html",
+              "_template": "/assets/base/globals/html",
               "text": "{{paragraphs(2)}}"
             },
             {
-              "_template": "/assets/templates/base/mains/article-enhancement",
+              "_template": "/assets/base/article-enhancement",
               "displayOptions" : {
                 "align": "right"
               },
               "content": {
-                "_template" : "/assets/templates/base/common/link",
+                "_template" : "/assets/base/globals/link",
 
                 "extraAttributes" : {
-                    "_template" : "/assets/templates/base/common/attributes",
+                    "_template" : "/assets/base/globals/attributes",
                     "data-bsp-modal-open" : "gallery-fullscreen",
                     "href"  : "#slide-2"
                 },
 
                 "body" : {
-                    "_template": "/assets/templates/base/common/figure",
+                    "_template": "/assets/base/globals/figure",
                     "credit": "{{name}}",
                     "image": {
-                      "_template": "/assets/templates/base/common/image",
+                      "_template": "/assets/base/globals/image",
                       "extraAttributes": {
 
                         "src": "{{image([ 200, 300, 10 ], [ 200, 300, 10 ])}}"
@@ -217,12 +217,12 @@
               }
             },
             {
-                "_template": "/assets/templates/base/elements/modal",
+                "_template": "/assets/base/modal",
 
                   "id": "gallery-fullscreen",
 
                   "content": {
-                    "_template": "/assets/templates/base/modules/gallery-full",
+                    "_template": "/assets/base/gallery-full",
 
                     "displayOptions" : {
                         "modifierClass" : "color-inverse ratio-16x9",
@@ -230,23 +230,23 @@
                     },
 
                     "heading": {
-                        "_template" : "/assets/templates/base/common/text",
+                        "_template" : "/assets/base/globals/text",
                         "text" : "{{words(10)}}"
                     },
 
                     "description" : {
-                        "_template" : "/assets/templates/base/common/text",
+                        "_template" : "/assets/base/globals/text",
                         "text" : "{{words(20)}}"
                     },
 
                     "slides": [
                         {
-                            "_template" : "/assets/templates/base/modules/gallery-full-slide-content",
+                            "_template" : "/assets/base/gallery-full-slide-content",
 
                             "_repeat" : 2,
 
                             "image" : {
-                                "_template": "/assets/templates/base/common/image",
+                                "_template": "/assets/base/globals/image",
                                 "extraAttributes": {
 
                                     "src": "{{image(1600, 900)}}"
@@ -254,7 +254,7 @@
                             },
                             "caption" : [
                                 {
-                                    "_template": "/assets/templates/base/common/text",
+                                    "_template": "/assets/base/globals/text",
                                     "text" : "{{words(20)}}"
                                 }
                             ],
@@ -265,12 +265,12 @@
                     ],
 
                     "showMoreText" : {
-                        "_template": "/assets/templates/base/common/text",
+                        "_template": "/assets/base/globals/text",
                         "text" : "Show More"
                     },
 
                     "showLessText" : {
-                        "_template": "/assets/templates/base/common/text",
+                        "_template": "/assets/base/globals/text",
                         "text" : "Show Less"
                     }
 
@@ -278,7 +278,7 @@
                   }
             },
             {
-              "_template": "/assets/templates/base/common/html",
+              "_template": "/assets/base/globals/html",
               "text": "{{paragraphs(2)}}"
             }
           ]

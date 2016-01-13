@@ -1,5 +1,5 @@
 {
-    "_template" : "/assets/templates/base/common/head",
+    "_template" : "/assets/base/globals/head",
 
     "title" : "Styleguide",
     "description" : "Inspire Confidence Styleguide",
@@ -8,14 +8,14 @@
 
     "metas" : [
       {
-        "_template": "/assets/templates/base/common/meta",
+        "_template": "/assets/base/globals/meta",
         "extraAttributes": {
           "http-equiv" : "X-UA-Compatible",
           "content" : "IE=edge"
         }
       },
       {
-        "_template": "/assets/templates/base/common/meta",
+        "_template": "/assets/base/globals/meta",
         "extraAttributes": {
           "name" : "viewport",
           "content" : "width=device-width, initial-scale=1"
@@ -25,7 +25,7 @@
 
     "icons" : [
       {
-        "_template": "/assets/templates/base/common/icon",
+        "_template": "/assets/base/globals/icon",
         "extraAttributes": {
           "rel": "shortcut icon",
           "href": "/favicon.ico"
@@ -35,23 +35,23 @@
 
     "styles" : [
       {
-        "_template" : "/assets/templates/base/common/style",
+        "_template" : "/assets/base/globals/style",
         "extraAttributes": {
           "rel" : "stylesheet",
           "type" : "text/css",
-          "href" : "/assets/styles/main.min.css"
+          "href" : "/assets/main.min.css"
         }
       }, {
-        "_template" : "/assets/templates/base/common/style",
+        "_template" : "/assets/base/globals/style",
         "extraAttributes": {
           "rel" : "stylesheet",
           "type" : "text/css",
           "href" : "http://fonts.googleapis.com/css?family=Roboto:700,400,300,100"
         }
       }, {
-        "_template" : "/assets/templates/base/common/style",
+        "_template" : "/assets/base/globals/style",
         "content" : {
-          "_template" : "/assets/templates/base/common/html",
+          "_template" : "/assets/base/globals/html",
           "text" : ".foo { text-align: center; content: 'hello & world' }"
         }
       }
@@ -59,18 +59,18 @@
 
     "scripts" : [
       {
-        "_template" : "/assets/templates/base/common/script",
+        "_template" : "/assets/base/globals/script",
         "extraAttributes": {
           "type" : "text/javascript",
-          "src": "/assets/scripts/main.min.js"
+          "src": "/assets/main.min.js"
         }
       }, {
-        "_template": "/assets/templates/base/common/script",
+        "_template": "/assets/base/globals/script",
         "extraAttributes": {
           "type" : "text/javascript"
         },
         "content" : {
-          "_template" : "/assets/templates/base/common/html",
+          "_template" : "/assets/base/globals/html",
           "text" : "console.log('Hello & World!');"
         }
       }

@@ -1,6 +1,6 @@
 {
 
-    "_template": "/assets/templates/base/modules/gallery-module",
+    "_template": "/assets/base/gallery-module",
 
     "displayOptions": {
         "horizontalSlides": true,
@@ -12,15 +12,15 @@
     },
 
     "heading": {
-        "_template": "/assets/templates/base/common/text",
+        "_template": "/assets/base/globals/text",
         "text": "5 slides at a time, 2 on mobile"
     },
 
     "gallerySlides": {
-        "_template": "/assets/templates/base/modules/gallery-module-slide-content",
+        "_template": "/assets/base/gallery-module-slide-content",
 
         "content": [{
-            "_template": "/assets/templates/base/common/image",
+            "_template": "/assets/base/globals/image",
             "_repeat": 5,
             "extraAttributes": {
 

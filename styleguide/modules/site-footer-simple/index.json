@@ -1,63 +1,63 @@
 {
 
-  "_template": "/assets/templates/base/modules/site-footer-simple",
+  "_template": "/assets/base/site-footer-simple",
   "socialLinks": [
     {
-      "_template": "/assets/templates/base/common/link",
+      "_template": "/assets/base/globals/link",
       "cssClass" : "share-link icon icon-facebook",
       "extraAttributes": {
         "href": "http://www.facebook.com",
         "title": "Facebook",
         "target": "_blank",
-        "_template": "/assets/templates/base/common/attributes"
+        "_template": "/assets/base/globals/attributes"
       }
     },
     {
-      "_template": "/assets/templates/base/common/link",
+      "_template": "/assets/base/globals/link",
       "cssClass" : "share-link icon icon-twitter",
       "extraAttributes": {
         "href": "http://www.twitter.com",
         "title": "Twitter",
         "target": "_blank",
-        "_template": "/assets/templates/base/common/attributes"
+        "_template": "/assets/base/globals/attributes"
       }
     },
     {
-      "_template": "/assets/templates/base/common/link",
+      "_template": "/assets/base/globals/link",
       "cssClass" : "share-link icon icon-pinterest",
       "extraAttributes": {
         "href": "http://www.pinterest.com",
         "title": "Pinterest",
         "target": "_blank",
-        "_template": "/assets/templates/base/common/attributes"
+        "_template": "/assets/base/globals/attributes"
       }
     },
     {
-      "_template": "/assets/templates/base/common/link",
+      "_template": "/assets/base/globals/link",
       "cssClass" : "share-link icon icon-linkedin",
       "extraAttributes": {
         "href": "http://www.linkedin.com",
         "title": "LinkedIn",
         "target": "_blank",
-        "_template": "/assets/templates/base/common/attributes"
+        "_template": "/assets/base/globals/attributes"
       }
     }
   ],
   "disclaimer": {
-    "_template": "/assets/templates/base/common/text",
+    "_template": "/assets/base/globals/text",
     "text": "Copyright © Brightspot"
   },
   "navLinks": [
     {
     "_repeat" : 5,
-      "_template": "/assets/templates/base/common/link",
+      "_template": "/assets/base/globals/link",
       "extraAttributes": {
         "href": "link-me",
         "title": "I are a link",
-        "_template": "/assets/templates/base/common/attributes"
+        "_template": "/assets/base/globals/attributes"
       },
       "body": {
-        "_template": "/assets/templates/base/common/text",
+        "_template": "/assets/base/globals/text",
         "text": "Menu Item"
       }
     }

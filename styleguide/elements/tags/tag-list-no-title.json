@@ -1,8 +1,8 @@
 {
-  "_template": "/assets/templates/base/elements/tags",
+  "_template": "/assets/base/tags",
   "tagList": [
     {
-      "_template": "/assets/templates/base/common/link",
+      "_template": "/assets/base/globals/link",
       "_repeat": [
         3,
         8

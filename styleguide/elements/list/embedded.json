@@ -1,39 +1,39 @@
 {
 
-  "_template": "/assets/templates/base/elements/list",
+  "_template": "/assets/base/list",
   "items": [
     {
-      "_template": "/assets/templates/base/common/text",
+      "_template": "/assets/base/globals/text",
       "text": "Item 1"
     },
     {
-      "_template": "/assets/templates/base/modules/module-group",
+      "_template": "/assets/base/module-group",
       "modules": [
         {
-          "_template": "/assets/templates/base/common/text",
+          "_template": "/assets/base/globals/text",
           "text": "Item 2"
         },
         {
-          "_template": "/assets/templates/base/elements/list",
+          "_template": "/assets/base/list",
           "items": [
             {
-              "_template": "/assets/templates/base/common/text",
+              "_template": "/assets/base/globals/text",
               "text": "Embedded Item 1"
             },
             {
-              "_template": "/assets/templates/base/common/text",
+              "_template": "/assets/base/globals/text",
               "text": "Embedded Item 2"
             },
             {
-              "_template": "/assets/templates/base/common/text",
+              "_template": "/assets/base/globals/text",
               "text": "Embedded Item 3"
             },
             {
-              "_template": "/assets/templates/base/common/text",
+              "_template": "/assets/base/globals/text",
               "text": "Embedded Item 4"
             },
             {
-              "_template": "/assets/templates/base/common/text",
+              "_template": "/assets/base/globals/text",
               "text": "Embedded Item 5"
             }
           ]

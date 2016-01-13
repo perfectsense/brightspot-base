@@ -1,7 +1,7 @@
 {
-  "_template": "/assets/templates/base/elements/social-share",
+  "_template": "/assets/base/social-share",
   "socialTitle": {
-    "_template": "/assets/templates/base/common/text",
+    "_template": "/assets/base/globals/text",
     "text": "Share"
   },
   "title": "Brightspot",
@@ -11,20 +11,20 @@
   "redirectUrl": "http://www.brightspot.com",
   "services": [
     {
-      "_template": "/assets/templates/base/elements/social-share-item",
+      "_template": "/assets/base/social-share-item",
       "name": "facebook",
       "publicKey": 12345
     },
     {
-      "_template": "/assets/templates/base/elements/social-share-item",
+      "_template": "/assets/base/social-share-item",
       "name": "twitter"
     },
     {
-      "_template": "/assets/templates/base/elements/social-share-item",
+      "_template": "/assets/base/social-share-item",
       "name": "pinterest"
     },
     {
-      "_template": "/assets/templates/base/elements/social-share-item",
+      "_template": "/assets/base/social-share-item",
       "name": "linkedin"
     }
   ]

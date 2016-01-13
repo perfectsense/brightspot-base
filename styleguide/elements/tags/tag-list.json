@@ -1,13 +1,13 @@
 {
 
-  "_template": "/assets/templates/base/elements/tags",
+  "_template": "/assets/base/tags",
   "title": {
-    "_template": "/assets/templates/base/common/text",
+    "_template": "/assets/base/globals/text",
     "text": "Related Tags:"
   },
   "tagList": [
     {
-      "_template": "/assets/templates/base/common/link",
+      "_template": "/assets/base/globals/link",
       "_repeat": [
         3,
         8

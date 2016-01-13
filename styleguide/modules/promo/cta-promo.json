@@ -1,6 +1,6 @@
 {
 
-    "_template" : "/assets/templates/base/modules/promo",
+    "_template" : "/assets/base/promo",
 
     "displayOptions" : {
         "horizontalSplit" : "half",
@@ -8,37 +8,37 @@
     },
 
     "heading" : {
-        "_template" : "/assets/templates/base/common/text",
+        "_template" : "/assets/base/globals/text",
 
         "text" : "Call to Action Promo"
     },
 
     "listItems" : [
         {
-            "_template": "/assets/templates/base/modules/promo-item",
+            "_template": "/assets/base/promo-item",
 
             "sections" : [
                 {
 
-                    "_template" : "/assets/templates/base/modules/promo-section",
+                    "_template" : "/assets/base/promo-section",
 
                     "type" : "image",
 
                     "image" : {
 
-                        "_template" : "/assets/templates/base/common/link",
+                        "_template" : "/assets/base/globals/link",
 
                         "extraAttributes" : {
-                            "_template" : "/assets/templates/base/common/attributes",
+                            "_template" : "/assets/base/globals/attributes",
                             "href"  : "link"
                         },
 
                         "body" : {
 
-                            "_template" : "/assets/templates/base/common/image",
+                            "_template" : "/assets/base/globals/image",
 
                             "extraAttributes" : {
-                                "_template" : "/assets/templates/base/common/attributes",
+                                "_template" : "/assets/base/globals/attributes",
                                 "alt" : "{{words([ 1, 2 ])}}",
                                 "src" : "{{image(564, 288)}}"
                             }
@@ -48,25 +48,25 @@
             ]
         },
         {
-           "_template": "/assets/templates/base/modules/promo-item",
+           "_template": "/assets/base/promo-item",
 
            "sections" : [
               {
 
-                "_template" : "/assets/templates/base/modules/promo-section",
+                "_template" : "/assets/base/promo-section",
 
                 "links" : [{
-                  "_template" : "/assets/templates/base/common/link",
+                  "_template" : "/assets/base/globals/link",
 
                   "_repeat" : 5,
 
                   "extraAttributes" : {
-                      "_template" : "/assets/templates/base/common/attributes",
+                      "_template" : "/assets/base/globals/attributes",
                       "href"  : "#"
                   },
 
                   "body" : {
-                      "_template" : "/assets/templates/base/common/text",
+                      "_template" : "/assets/base/globals/text",
                       "text" : "{{words([2, 10 ])}}"
                   }
                 }]

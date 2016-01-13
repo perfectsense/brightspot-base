@@ -1,27 +1,27 @@
 {
 
 
-    "_template" : "/assets/templates/base/modules/search-results",
+    "_template" : "/assets/base/search-results",
 
     "loadMore" : true,
 
     "heading" : {
-        "_template" : "/assets/templates/base/modules/module-group",
+        "_template" : "/assets/base/module-group",
 
         "modules" : [
             {
-                "_template" : "/assets/templates/base/common/text",
+                "_template" : "/assets/base/globals/text",
                 "text" : "{{words(5)}}"
             },
             {
-                "_template" : "/assets/templates/base/common/text",
+                "_template" : "/assets/base/globals/text",
                 "modifierClass" : "search-term",
                 "text" : "\"{{words(1)}}\""
             }
         ],
 
         "searchResultsSort" : {
-            "_template": "/assets/templates/base/common/form",
+            "_template": "/assets/base/globals/form",
 
             "displayOptions" : {
                 "modifierClass": "search-results-sort"
@@ -34,7 +34,7 @@
             "inputs" : [
                 {
 
-                    "_template" : "/assets/templates/base/common/form-select",
+                    "_template" : "/assets/base/globals/form-select",
 
                     "autoSubmit" : true,
 
@@ -47,7 +47,7 @@
                     },
 
                     "label" : {
-                        "_template": "/assets/templates/base/common/form-label-attributes",
+                        "_template": "/assets/base/globals/form-label-attributes",
 
                         "extraAttributes" : {
                             "for": "search-results-sort"
@@ -55,13 +55,13 @@
                     },
 
                     "labelText" : {
-                        "_template" : "/assets/templates/base/common/text",
+                        "_template" : "/assets/base/globals/text",
                         "text": "Sort by:"
                     },
 
                     "optionsData": [
                       {
-                        "_template" : "/assets/templates/base/common/form-select-option",
+                        "_template" : "/assets/base/globals/form-select-option",
 
                         "_repeat" : 3,
 
@@ -69,7 +69,7 @@
                           "value": "{{words(1)}}"
                         },
                         "text": {
-                          "_template": "/assets/templates/base/common/text",
+                          "_template": "/assets/base/globals/text",
                           "text" : "{{words(1)}}"
                         }
                       }
@@ -80,7 +80,7 @@
     },
 
     "searchResults" : {
-      "_template" : "/assets/templates/base/modules/promo",
+      "_template" : "/assets/base/promo",
 
       "displayOptions" : {
         "modifierClass" : "promo-small",
@@ -89,29 +89,29 @@
 
       "listItems" : [
           {
-              "_template": "/assets/templates/base/modules/promo-item",
+              "_template": "/assets/base/promo-item",
 
               "_repeat" : 9,
 
               "sections" : [
                   {
 
-                      "_template" : "/assets/templates/base/modules/promo-section",
+                      "_template" : "/assets/base/promo-section",
 
                       "type" : "tags",
 
                       "tags" : {
 
-                          "_template": "/assets/templates/base/elements/tags",
+                          "_template": "/assets/base/tags",
                           "tagList": [
                               {
-                                  "_template": "/assets/templates/base/common/link",
+                                  "_template": "/assets/base/globals/link",
                                   "extraAttributes": {
                                       "href": "#",
-                                      "_template": "/assets/templates/base/common/attributes"
+                                      "_template": "/assets/base/globals/attributes"
                                   },
                                   "body": {
-                                      "_template": "/assets/templates/base/common/text",
+                                      "_template": "/assets/base/globals/text",
                                       "text": "{{words(2)}}"
                                   }
                               }
@@ -120,25 +120,25 @@
                   },
                   {
 
-                      "_template" : "/assets/templates/base/modules/promo-section",
+                      "_template" : "/assets/base/promo-section",
 
                       "type" : "image",
 
                       "image" : {
 
-                          "_template" : "/assets/templates/base/common/link",
+                          "_template" : "/assets/base/globals/link",
 
                           "extraAttributes" : {
-                              "_template" : "/assets/templates/base/common/attributes",
+                              "_template" : "/assets/base/globals/attributes",
                               "href"  : "link"
                           },
 
                           "body" : {
 
-                              "_template" : "/assets/templates/base/common/image",
+                              "_template" : "/assets/base/globals/image",
 
                               "extraAttributes" : {
-                                  "_template" : "/assets/templates/base/common/attributes",
+                                  "_template" : "/assets/base/globals/attributes",
                                   "alt" : "{{words([ 1, 2 ])}}",
                                   "src" : "{{image(800, 450)}}"
                               }
@@ -147,26 +147,26 @@
                   },
                   {
 
-                      "_template" : "/assets/templates/base/modules/promo-section",
+                      "_template" : "/assets/base/promo-section",
 
                       "type" : "text",
 
                       "title" : {
-                          "_template" : "/assets/templates/base/common/link",
+                          "_template" : "/assets/base/globals/link",
 
                           "extraAttributes" : {
-                              "_template" : "/assets/templates/base/common/attributes",
+                              "_template" : "/assets/base/globals/attributes",
                               "href"  : "#"
                           },
 
                           "body" : {
-                              "_template" : "/assets/templates/base/common/text",
+                              "_template" : "/assets/base/globals/text",
                               "text" : "{{words([ 1, 2 ])}}"
                           }
                       },
 
                       "description" : {
-                          "_template" : "/assets/templates/base/common/text",
+                          "_template" : "/assets/base/globals/text",
 
                           "text" : "{{words(10)}}"
                       }
@@ -178,7 +178,7 @@
       ],
 
       "cta": {
-          "_template": "/assets/templates/base/common/link",
+          "_template": "/assets/base/globals/link",
 
           "cssClass" : "load-more",
 
@@ -188,7 +188,7 @@
           },
 
           "body": {
-              "_template": "/assets/templates/base/common/text",
+              "_template": "/assets/base/globals/text",
               "text": "{{words(2)}}"
           }
       }

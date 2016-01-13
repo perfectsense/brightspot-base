@@ -1,6 +1,6 @@
 {
 
-  "_template": "/assets/templates/base/modules/gallery-module",
+  "_template": "/assets/base/gallery-module",
 
   "displayOptions" : {
       "horizontalSlides": true,
@@ -12,25 +12,25 @@
   },
 
   "heading": {
-    "_template" : "/assets/templates/base/modules/module-group",
+    "_template" : "/assets/base/module-group",
 
         "modules" : [
             {
-                "_template" : "/assets/templates/base/common/link",
+                "_template" : "/assets/base/globals/link",
 
                 "extraAttributes" : {
-                    "_template" : "/assets/templates/base/common/attributes",
+                    "_template" : "/assets/base/globals/attributes",
                     "href"  : "link"
                 },
 
                 "body" : {
-                    "_template" : "/assets/templates/base/common/text",
+                    "_template" : "/assets/base/globals/text",
                     "text" : "{{words(5)}}"
                 }
             },
             {
 
-                "_template" : "/assets/templates/base/common/text",
+                "_template" : "/assets/base/globals/text",
 
                 "modifierClass" : "module-subtitle",
 
@@ -40,9 +40,9 @@
         ]
   },
   "gallerySlides": {
-      "_template": "/assets/templates/base/modules/gallery-module-slide-content",
+      "_template": "/assets/base/gallery-module-slide-content",
       "content": [{
-        "_template": "/assets/templates/base/common/image",
+        "_template": "/assets/base/globals/image",
         "_repeat": 7,
         "extraAttributes": {
 
