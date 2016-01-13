@@ -1,0 +1,42 @@
+{
+  "_wrapper": false,
+  "_template": "/assets/base/globals/page",
+  "head": {
+    "_dataUrl": "/common/head.json"
+  },
+  "body": {
+    "_template": "/assets/base/globals/body",
+    "displayOptions": {
+      "modifierClass": "article-page"
+    },
+    "headerView": {
+      "_dataUrl": "/modules/site-header-simple/index.json"
+    },
+    "mainView": {
+      "_template": "/assets/base/layouts/full-page",
+      "main": [
+        {
+          "_template": "/assets/base/article2",
+          "breadcrumbs": [
+              {
+                  "_repeat": "4",
+                  "title": "{{words(3)}}"
+              }
+          ],
+          "slug": "{{words([4,8])}}",
+          "headline": "{{words([4,8])}}",
+          "subHeadline": "{{sentences(3,4)}}",
+          "author": {
+              "_template": "/assets/base/author",
+              "image": "{{image(50,50)}}",
+              "name": "{{name}}",
+              "publishDate": "{{words(2)}}"
+          }
+        }
+      ]
+    },
+    "footerView": {
+      "_dataUrl": "/modules/site-footer-simple/index.json"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<article{{extraAttributes}} class="Article {{#if displayOptions.modifierClass}}{{displayOptions.modifierClass}}{{/if}}">
+
+    {{#with breadcrumbs}}
+        <div class="Article-breadcrumbs">
+            <ol class="Article-breadcrumbs-list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                {{#each this}}
+                    <li class="Article-breadcrumbs-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        {{this.title}}
+                    </li>
+                {{/each}}
+            </ol>
+        </div>
+    {{/with}}
+
+    {{#with slug}}
+        <div class="Article-slug">
+            {{this}}
+        </div>
+    {{/with}}
+
+    {{#with headline}}
+        <div class="Article-headline">
+            {{this}}
+        </div>
+    {{/with}}
+
+    {{#with subHeadline}}
+        <div class="Article-subHeadline">
+            {{{this}}}
+        </div>
+    {{/with}}
+
+    {{#with author}}
+        <div class="Article-byline">
+            {{this}}
+        </div>
+    {{/with}}
+
+</article>
