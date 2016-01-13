@@ -24,7 +24,7 @@
         {
             "_repeat" : 1,
             "_template" : "/assets/base/gallery-full-slide-content",
-            "image" : {
+            "content" : {
                 "_template": "/assets/base/globals/image",
                 "extraAttributes": {
                     "data-url" : "initial-slide",

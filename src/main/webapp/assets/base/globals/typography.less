@@ -14,3 +14,43 @@
 .text-brand-accent {
     color: @color-brand-accent;
 }
+
+
+// This is our type scale, this should be used as much as possible throughout our code
+// If we need to expand this a few items because design wants more options, we absolutely should per project
+// If we have custom sizes that do not fit the type scale, and we only have a few of them, we should
+// instead hardcode those values in theire respective places rather than making scale items for single use
+.text-size-neg-1 {
+    font-size: @ts-neg-1;
+}
+.text-size-0 {
+    font-size: @ts-0;
+}
+.text-size-1 {
+    font-size: @ts-1;
+}
+.text-size-2 {
+    font-size: @ts-2;
+}
+.text-size-3 {
+    font-size: @ts-3;
+}
+
+
+// Our heading scale is slightly different than type scale. Since headings are typically large font
+// we have a slighty lighter font weight and slightly smaller line height in order to make them look good.
+.heading-size-1 {
+    font-size: @ts-h1;
+    font-weight: @font-weight-light;
+    line-height: @line-height-headings;
+}
+.heading-size-2 {
+    font-size: @ts-h2;
+    font-weight: @font-weight-light;
+    line-height: @line-height-headings;
+}
+.heading-size-3 {
+    font-size: @ts-h1;
+    font-weight: @font-weight-light;
+    line-height: @line-height-headings;
+}

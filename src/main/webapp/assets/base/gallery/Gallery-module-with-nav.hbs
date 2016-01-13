@@ -1,9 +1,9 @@
-<div class="gallery-module {{#if displayOptions.textNav}}gallery-module-nav{{else}}gallery-module-thumbs{{/if}} module{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
+<div class="Gallery-module {{#if displayOptions.textNav}}Gallery-module-nav{{else}}Gallery-module-thumbs{{/if}} module{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
 	{{#if heading}}
-        <h3 class="gallery-module-title">{{render heading}}</h3>
+        <h3 class="Gallery-module-title">{{render heading}}</h3>
     {{/if}}
 
-	<div class="gallery-module-content" data-bsp-carousel-thumbnav data-bsp-carousel-thumbnav-options='{
+	<div class="Gallery-module-content" data-bsp-carousel-thumbnav data-bsp-carousel-thumbnav-options='{
         "stage" : {
             {{#if displayOptions.dynamicSlideLoad}}"dynamicSlideLoad" : true,{{/if}}
             {{#if displayOptions.dynamicEndpoint}}"dynamicEndpoint" : "{{displayOptions.dynamicEndpoint}}",{{/if}}
@@ -35,7 +35,7 @@
 	</div>
 
 	{{#if cta}}
-        <div class="gallery-module-cta {{#if displayOptions.ctaLocation}}cta-{{displayOptions.ctaLocation}}{{/if}}">
+        <div class="Gallery-module-cta {{#if displayOptions.ctaLocation}}cta-{{displayOptions.ctaLocation}}{{/if}}">
             {{#with cta}}
                 {{render this}}
             {{/with}}

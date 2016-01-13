@@ -1,0 +1,24 @@
+<div class="TwoColumn-container{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
+
+    <div class="TwoColumn-aboveColumns">
+        {{#each aboveColumns}}
+            {{render this}}
+        {{/each}}
+    </div>
+
+	<div class="TwoColumn-row">
+
+		<div class="TwoColumn-column-twoThirds">
+            {{#each first}}
+                {{render this}}
+            {{/each}}
+		</div>
+
+		<div class="TwoColumn-column-oneThird">
+            {{#each second}}
+                {{render this}}
+            {{/each}}
+		</div>
+
+	</div>
+</div>

@@ -1,10 +1,5 @@
 @import 'grid.vars';
 
-// site-wrapper is around the entire site includeing header, site, and footer
-.site-wrapper {
-
-}
-
 // site is just around the site other than the header and footer
 .site {
 	padding: @site-top-and-bottom-space 0;
@@ -61,7 +56,6 @@ body {
 //
 // If we need custom widths for a particular component, we can just use the mixin classes to create something
 // custom for that one component. But if they will be reused throughout a site, we should create reusable classes
-
 .column-full {
 	// no styles, this is full on every breakpoint
 	.make-xs-column(12);
@@ -95,7 +89,7 @@ body {
     .make-sm-column(9);
 }
 
-.column-third {
+.column-one-third {
 	.make-sm-column(4);
 
     // grid fix to make sure the 4th, 7th, etc columns wrap correctly
@@ -104,7 +98,7 @@ body {
     }
 }
 
-.column-fourth {
+.column-one-fourth {
 	.make-sm-column(3);
 
     // grid fix to make sure the 5th, 8th, etc columns wrap correctly
@@ -113,7 +107,7 @@ body {
     }
 }
 
-.column-fifth {
+.column-one-fifth {
 	.make-sm-column(2.4);
 
     // grid fix to make sure the 6th, 9th, etc columns wrap correctly

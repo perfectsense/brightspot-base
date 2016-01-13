@@ -22,7 +22,7 @@
           "_dataUrl": "/modules/page-title/page-title.json"
         },
         {
-          "_template": "/assets/base/layouts/one-col",
+          "_template": "/assets/base/layouts/OneColumn",
 
           "main" : [
             {

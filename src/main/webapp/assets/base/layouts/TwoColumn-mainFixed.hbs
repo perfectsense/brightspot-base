@@ -1,21 +1,23 @@
-<div class="grid-container{{#if displayOptions.modifierClass}} {{modifierClass}}{{/if}}">
+<div class="TwoColumn-container{{#if displayOptions.modifierClass}} {{modifierClass}}{{/if}}">
 
-    {{#each aboveColumns}}
-        {{render this}}
-    {{/each}}
+    <div class="TwoColumn-aboveColumns">
+        {{#each aboveColumns}}
+            {{render this}}
+        {{/each}}
+    </div>
 
-	<div class="row">
+	<div class="TwoColumn-row">
 
-		<div class="column-scrolling">
+		<div class="TwoColumn-column-scrolling">
             {{#each main}}
                 {{render this}}
             {{/each}}
 		</div>
 
-		<div class="column-fixed-wrap" data-bsp-toggle-item>
-			<div class="column-fixed toggle-item">
+		<div class="TwoColumn-column-fixed-wrap" data-bsp-toggle-item>
+			<div class="TwoColumn-column-fixed toggle-item">
 
-				<div class="trigger-fixed-column toggle-trigger">
+				<div class="TwoColumn-trigger-fixed toggle-trigger">
 					<a class="toggle-trigger-link-out icon icon-angle-up" href="#">{{#if aside.openText}}{{this}}{{else}}Open{{/if}}</a>
 					<a class="toggle-trigger-link-in  icon icon-angle-down" href="#">{{#if aside.closeText}}{{this}}{{else}}Close{{/if}}</a>
 				</div>

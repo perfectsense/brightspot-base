@@ -17,14 +17,14 @@
         },
         "mainView": {
 
-            "_template": "/assets/base/layouts/full-page",
+            "_template": "/assets/base/layouts/FullPage",
 
             "displayOptions": {
                 "modifierClass": "color-inverse"
             },
 
             "main": [{
-                "_template": "/assets/base/layouts/one-col",
+                "_template": "/assets/base/layouts/OneColumn",
 
                 "main": [{
                     "_dataUrl": "/modules/video-player/youtube-inverse-color.json"

@@ -1,13 +1,21 @@
-@import 'module.vars';
-
 .module {
     // padding vs margin allows for cleaner separation between components, especially if things inside of them use margins
-    padding: @space-module-outside/2 0;
+    padding: @space 0;
     position: relative;
 
     &-title {
-        &:extend(.section-title all);
+        border-bottom: 1px solid @color-gray-light;
+        color: @color-brand-accent;
+        font-size: @ts-2;
+        font-weight: @font-weight-light;
+        line-height: @line-height-headings;
+        margin: 0 0 @space-double;
+        padding: 0 0 @space;
         text-align: center;
+
+        a {
+            color: @color-brand-accent;
+        }
     }
 
     &-subtitle {
@@ -93,7 +101,7 @@
 
 @media @mq-sm {
     .module {
-        padding: @space-module-outside 0;
+        padding: @space-double 0;
 
         &-cta {
             border-top: none;

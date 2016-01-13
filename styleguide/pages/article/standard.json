@@ -16,7 +16,7 @@
       "_dataUrl": "/modules/site-header-simple/index.json"
     },
     "mainView": {
-      "_template": "/assets/base/layouts/full-page",
+      "_template": "/assets/base/layouts/FullPage",
       "main": [
         {
 

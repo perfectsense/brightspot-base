@@ -19,7 +19,7 @@
     },
 
     "mainView": {
-      "_template": "/assets/base/layouts/one-col",
+      "_template": "/assets/base/layouts/OneColumn",
       "main": [
         {
              "_template": "/assets/base/photofall",

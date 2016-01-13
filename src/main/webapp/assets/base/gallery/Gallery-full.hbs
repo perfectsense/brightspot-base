@@ -9,19 +9,17 @@
         "themeConfig":{
             "arrows" : true
                     }
-    }}'
+    }}'>
 
-    {{#if displayOptions.modifierClass}} class="gallery-full-component {{displayOptions.modifierClass}}"{{/if}}>
-
-    <div class="gallery-full-wrapper">
+    <div class="Gallery-full">
 
         {{#if heading}}
-        <div class="gallery-full-header">
-            <h2 class="gallery-full-title">
+        <div class="Gallery-full-header">
+            <h2 class="Gallery-full-title">
                 {{{render heading}}}
             </h2>
             {{#if description}}
-                <div class="gallery-full-desc">
+                <div class="Gallery-full-desc">
                     {{render description}}
                 </div>
             {{/if}}
@@ -34,41 +32,20 @@
                     {{render this}}
                 {{/each}}
             </div>
-
-            {{!-- leaving this here commented out in case we ever want to add thumbnail support back
-            {{#if displayOptions.thumbnails}}
-                <div class="bsp-carousel-nav">
-
-                    {{#each slides}}
-                        {{render this.thumbnail}}
-                    {{/each}}
-
-                </div>
-            {{/if}}
-            --}}
         </div>
 
-        <div class="gallery-full-footer">
+        <div class="Gallery-full-footer">
 
-            {{!-- leaving this here commented out in case we ever want to add thumbnail support back
-            {{#if displayOptions.thumbnails}}
-            <div class="bsp-carousel-gallery-thumbs">
-                <span class="icon icon-th-large" href=""></span>
-                <span class="bsp-carousel-gallery-count"></span>
-            </div>
-            {{else}}
-            --}}
             {{#if displayOptions.dynamicSlideLoad}}
             {{else}}
                 <div class="bsp-carousel-gallery-count-wrapper">
                     <span class="bsp-carousel-gallery-count"></span>
                 </div>
             {{/if}}
-            {{!--{{/if}}--}}
 
             <div class="bsp-carousel-gallery-overlay-trigger">
-                <span class="overlay-visible">{{render showLessText}}</span>
-                <span class="overlay-hidden">{{render showMoreText}}</span>
+                <span class="Gallery-full-overlay-visible">{{render showLessText}}</span>
+                <span class="Gallery-full-overlay-hidden">{{render showMoreText}}</span>
             </div>
 
         </div>

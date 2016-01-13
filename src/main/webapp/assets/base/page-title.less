@@ -1,0 +1,11 @@
+// page title that can live outside of grid in it's parent component, or inside of grid when we need full page titles
+.page-title {
+    &:extend(.heading-size-2 all);
+
+    background-color: @color-gray-dark;
+    border-bottom: 1px solid @color-white;
+    margin: 0;
+    padding: @space 0;
+    text-align: center;
+    text-transform: uppercase;
+}

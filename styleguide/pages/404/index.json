@@ -19,7 +19,7 @@
 
       "modules": [
         {
-          "_template": "/assets/base/layouts/full-page",
+          "_template": "/assets/base/layouts/FullPage",
 
           "main" : [
             {

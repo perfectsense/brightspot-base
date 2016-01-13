@@ -3,7 +3,7 @@
 @import 'globals/typography.vars';
 @import 'globals/z-index.vars';
 
-.gallery-full {
+.Gallery-full {
 
     &-wrapper {
         .interstitial-showing {
@@ -90,66 +90,6 @@
             }
         }
     }
-
-    // I'm leaving this code in here in case we ever want to add thumbnail support. Right now, it's disabled
-    // in the .hbs by not having the nav carousel or the thumb trigger in the DOM
-    //
-    // gives the overlay look to the thumbnail carousel
-    // it's hidden by default on xs and sm screens and comes into play md and up by default
-    // it has a max-height to give it a smooth look/feel when coming in
-    // .bsp-carousel-nav {
-    //     background: rgba(0, 0, 0, 0.7);
-    //     bottom: 0;
-    //     max-height: 0;
-    //     height: auto;
-    //     position: absolute;
-    //     overflow: hidden;
-    //     transition: max-height 0.5s;
-    //     width: 100%;
-
-    //     .thumbs-visible & {
-    //         max-height: 250px;
-    //     }
-
-    //     // TODO: Move these to bsp-carousel or at least to base a regular bsp-carousel-nav thing
-    //     // we have smaller arrows for the thumbs than default
-    //     .slick-prev,
-    //     .slick-next {
-
-    //         height: 20px;
-    //         width: 20px;
-    //         margin-top: -10px;
-
-    //         &:before {
-    //             font-size: 20px;
-    //         }
-    //     }
-
-    //     // current thumb gets a pretty accent border
-    //     .current {
-    //         &:after {
-    //             border-top: 4px solid @color-brand-accent;
-    //             content: '';
-    //             position: absolute;
-    //             top: 0;
-    //             left: 0;
-    //             bottom: 0;
-    //             right: 0;
-    //         }
-    //     }
-
-    //     .bsp-carousel-slide {
-    //         padding: @space-double;
-    //         position: relative;
-
-    //         // make sure that thumb fits the container as much as possible
-    //         img {
-    //             height: auto;
-    //             margin: 0 auto;
-    //             width: 100%;
-    //         }
-    //     }
-    // }
 }
 
 // the overlay wrapper gets a bottom placement on the slide along with the same max-height transition as the nav carousel
@@ -165,7 +105,7 @@
     z-index: @z-index-base;
 
     // arbitrary value in case the JS doesn't work out
-    .overlay-visible & {
+    .gallery-full-overlay-visible & {
         max-height: 150px;
     }
 }
@@ -243,7 +183,7 @@
     line-height: 70px;
     cursor: pointer;
 
-    .overlay-visible, .overlay-hidden {
+    .gallery-full-overlay-visible, .gallery-full-overlay-hidden {
         &:extend(.icon);
 
         // to line up bigger arrow evenly with smaller text
@@ -254,23 +194,23 @@
         }
     }
 
-    .overlay-visible {
+    .gallery-full-overlay-visible {
         &:extend(.icon-angle-down all);
     }
 
-    .overlay-hidden {
+    .gallery-full-overlay-hidden {
         &:extend(.icon-angle-up all);
     }
 
-    span.overlay-visible {
+    span.gallery-full-overlay-visible {
         display: none;
     }
 
-    .overlay-visible & {
-         span.overlay-visible {
+    .gallery-full-overlay-visible & {
+         span.gallery-full-overlay-visible {
             display: inline-block;
         }
-        span.overlay-hidden {
+        span.gallery-full-overlay-hidden {
             display: none;
         }
     }
@@ -301,22 +241,6 @@
             }
         }
     }
-
-    // commented out just in case we want to add thumbnail support back
-    //
-    // .bsp-carousel-gallery {
-    //     .bsp-carousel-nav {
-    //         &.slick-initialized {
-    //             display: block;
-    //         }
-
-    //         // also in the carousel nav, no arrows
-    //         .slick-prev, .slick-next {
-    //             // on medium and up, we will show previous and next
-    //             display: none !important;
-    //         }
-    //     }
-    // }
 
 }
 

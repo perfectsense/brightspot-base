@@ -1,4 +1,4 @@
-.callout {
+.Callout {
     &:extend(.module all);
 
     &-title, &-content {
@@ -9,11 +9,13 @@
 
     &-cta {
         a {
+            // it's a tag in terms of colors and hovers, but has moar space and size
             &:extend(.tag all);
             font-size: 20px;
             font-weight: normal;
             padding: 2rem;
 
+            // the standard module cta has a caret, we remove it here
             &:after {
                 content: '';
             }

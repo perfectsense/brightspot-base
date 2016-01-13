@@ -1,0 +1,30 @@
+<div class="ThreeColumn-container{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
+
+    <div class="ThreeColumn-aboveColumns">
+        {{#each aboveColumns}}
+            {{render this}}
+        {{/each}}
+    </div>
+
+	<div class="ThreeColumn-row">
+
+		<div class="ThreeColumn-column">
+            {{#each first}}
+                {{render this}}
+            {{/each}}
+		</div>
+
+		<div class="ThreeColumn-column">
+            {{#each second}}
+                {{render this}}
+            {{/each}}
+		</div>
+
+		<div class="ThreeColumn-column">
+            {{#each third}}
+                {{render this}}
+            {{/each}}
+		</div>
+
+	</div>
+</div>

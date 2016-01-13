@@ -20,7 +20,7 @@
         {
             "_repeat" : 5,
             "_template" : "/assets/base/gallery-full-slide-content",
-            "image" : {
+            "content" : {
                 "_template": "/assets/base/globals/image",
                 "extraAttributes": {
 
@@ -53,7 +53,7 @@
         {
             "_repeat" : 5,
             "_template" : "/assets/base/gallery-full-slide-content",
-            "image" : {
+            "content" : {
                 "_template": "/assets/base/globals/image",
                 "extraAttributes": {
 

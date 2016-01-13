@@ -1,14 +1,14 @@
-<div class="callout module{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
+<div class="Callout module{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
     {{#with heading}}
-        <div class="callout-title">{{render this}}</div>
+        <div class="Callout-title">{{render this}}</div>
     {{/with}}
 
-    <div class="callout-content">
+    <div class="Callout-content">
         {{render calloutContent}}
     </div>
 
     {{#if cta}}
-        <div class="callout-cta {{#if displayOptions.ctaLocation}}cta-{{displayOptions.ctaLocation}}{{/if}}">
+        <div class="Callout-cta {{#if displayOptions.ctaLocation}}cta-{{displayOptions.ctaLocation}}{{/if}}">
             {{#with cta}}
                 {{render this}}
             {{/with}}

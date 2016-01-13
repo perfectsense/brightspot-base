@@ -13,32 +13,32 @@
 }
 
 .share-links {
-	&:extend(.list-inline all);
+    &:extend(.list-inline all);
     display: inline-block;
     font-size: @ts-1;
     margin: 0;
 
-	li {
-		padding: 0 @space-half;
-	}
+    li {
+        padding: 0 @space-half;
+    }
 }
 
 .share-link {
-	&:extend(.icon);
+    &:extend(.icon);
 
-	background: @color-brand-secondary;
-	color: @color-white;
-	border-radius: 28px;
-	height: 28px;
+    background: @color-brand-secondary;
+    color: @color-white;
+    border-radius: 28px;
+    height: 28px;
     font-size: @ts-neg-1;
-	line-height: 28px;
-	text-align: center;
-	width: 28px;
+    line-height: 28px;
+    text-align: center;
+    width: 28px;
 
-	.icons-monochrome & {
-		background-color: @color-social-icons-monochrome-bg;
-        color: @color-social-icons-monochrome;
-	}
+    .icons-monochrome & {
+        background-color: @color-black;
+        color: @color-white;
+    }
 
     .facebook-share {
         &:extend(.icon-facebook all);
@@ -60,17 +60,17 @@
         &:extend(.icon-tumblr all);
     }
 
-	&:hover {
-		color: @color-social-icons-monochrome;
-	}
+    &:hover {
+        color: @color-white;
+    }
 
 }
 
 
 @media @mq-sm {
 
-	.share-links-centering {
-		display: block;
-	}
+    .share-links-centering {
+        display: block;
+    }
 
 }
