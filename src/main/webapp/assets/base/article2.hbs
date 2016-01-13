@@ -1,16 +1,16 @@
 <article{{extraAttributes}} class="Article {{#if displayOptions.modifierClass}}{{displayOptions.modifierClass}}{{/if}}">
 
-    {{#with breadcrumbs}}
+    {{#if breadcrumbs}}
         <div class="Article-breadcrumbs">
             <ol class="Article-breadcrumbs-list" itemscope itemtype="http://schema.org/BreadcrumbList">
-                {{#each this}}
+                {{#each breadcrumbs as |breadcrumb|}}
                     <li class="Article-breadcrumbs-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                        {{this.title}}
+                        {{breadcrumb.title}}
                     </li>
                 {{/each}}
             </ol>
         </div>
-    {{/with}}
+    {{/if}}
 
     {{#with slug}}
         <div class="Article-slug">
