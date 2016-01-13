@@ -6,7 +6,7 @@
     "loadMore" : true,
 
     "heading" : {
-        "_template" : "/assets/base/module-group",
+        "_template" : "/assets/base/ModuleGroup",
 
         "modules" : [
             {

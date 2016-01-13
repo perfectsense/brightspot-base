@@ -7,7 +7,7 @@
       "text": "Item 1"
     },
     {
-      "_template": "/assets/base/module-group",
+      "_template": "/assets/base/ModuleGroup",
       "modules": [
         {
           "_template": "/assets/base/globals/text",
