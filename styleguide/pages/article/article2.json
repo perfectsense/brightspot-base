@@ -31,6 +31,11 @@
               "image": "{{image(50,50)}}",
               "name": "{{name}}",
               "publishDate": "{{words(2)}}"
+          },
+          "datePublished": {
+              "_template": "/assets/base/datePublished",
+              "text": "Jan 13, 2016",
+              "iso": "2016-01-13T01:11:11+01:00"
           }
         }
       ]

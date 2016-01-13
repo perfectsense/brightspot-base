@@ -1,19 +1,13 @@
-<div class="Author">
+<div class="Author" itemscope="" itemprop="author" itemtype="http://schema.org/Person">
 
     {{#with image}}
         <div class="Author-image">
-            <img src="{{this}}" />
+            <img src="{{this}}" itemprop="image" />
         </div>
     {{/with}}
 
     {{#with name}}
-        <div class="Author-name">
-            {{this}}
-        </div>
-    {{/with}}
-
-    {{#with publishDate}}
-        <div class="Author-publishDate">
+        <div class="Author-name" itemprop="name">
             {{this}}
         </div>
     {{/with}}
