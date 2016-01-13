@@ -1,4 +1,9 @@
 <article{{extraAttributes}} class="Article {{#if displayOptions.modifierClass}}{{displayOptions.modifierClass}}{{/if}}" itemscope="" itemtype="http://schema.org/Article">
+    <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="{{this.canonicalUrl}}"/>
+
+    {{#with image}}
+        <img src="{{this}}" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" />
+    {{/with}}
 
     {{#if breadcrumbs}}
         <div class="Article-breadcrumbs">
@@ -19,7 +24,7 @@
     {{/with}}
 
     {{#with headline}}
-        <div class="Article-headline">
+        <div class="Article-headline" itemprop="headline">
             {{this}}
         </div>
     {{/with}}

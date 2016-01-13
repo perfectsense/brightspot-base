@@ -17,6 +17,8 @@
       "main": [
         {
           "_template": "/assets/base/article2",
+          "canonicalUrl": "http://site.com/articlepage",
+          "image": "{{image(200,200)}}",
           "breadcrumbs": [
               {
                   "_repeat": "4",
