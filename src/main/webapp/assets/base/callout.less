@@ -1,13 +1,22 @@
 .callout {
     &:extend(.module all);
 
-    font-size: @ts-3;
-    font-weight: @font-weight-light;
-    text-align: center;
+    &-title, &-content {
+        font-size: @ts-3;
+        font-weight: @font-weight-light;
+        text-align: center;
+    }
 
-    .tag {
-        font-size: @ts-1;
-        margin-top: @space-double;
-        padding: @space-double;
+    &-cta {
+        a {
+            &:extend(.tag all);
+            font-size: 20px;
+            font-weight: normal;
+            padding: 2rem;
+
+            &:after {
+                content: '';
+            }
+        }
     }
 }

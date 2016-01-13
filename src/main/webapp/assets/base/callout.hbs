@@ -4,13 +4,7 @@
     {{/with}}
 
     <div class="callout-content">
-            {{#if sections}}
-                {{#each sections}}
-                    {{render this}}
-                {{/each}}
-            {{else}}
-                {{render this}}
-            {{/if}}
+        {{render calloutContent}}
     </div>
 
     {{#if cta}}

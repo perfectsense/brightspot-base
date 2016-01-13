@@ -6,39 +6,22 @@
       "modifierClass" : "color-inverse"
     },
 
-    "sections" : [
-        {
-            "_template" : "/assets/base/module-group",
+    "calloutContent" : {
+        "_template" : "/assets/base/globals/text",
+        "text" : "{{words(10)}}"
+    },
 
-            "modules" : [
-                {
-                  "_template" : "/assets/base/globals/text",
-                  "text" : "{{words(4)}}"
-                },
-                {
-                  "_template" : "/assets/base/globals/text",
-                  "modifierClass" : "text-brand-accent",
-                  "text" : "{{words(4)}}"
-                }
+    "cta": {
+        "_template": "/assets/base/globals/link",
 
-            ]
-
+        "extraAttributes": {
+            "_template": "/assets/base/globals/attributes",
+            "href": "link-me"
         },
-        {
-            "_template" : "/assets/base/globals/link",
 
-            "cssClass" : "tag",
-
-            "extraAttributes" : {
-              "_template" : "/assets/base/globals/attributes",
-              "href"  : "link"
-            },
-
-            "body" : {
-              "_template" : "/assets/base/globals/text",
-              "text" : "{{words(4)}}:"
-            }
+        "body": {
+            "_template": "/assets/base/globals/text",
+            "text": "{{words(4)}}"
         }
-    ]
-
+    }
 }
