@@ -1,4 +1,4 @@
-.module {
+.Module {
     // padding vs margin allows for cleaner separation between components, especially if things inside of them use margins
     padding: @space 0;
     position: relative;
@@ -66,13 +66,13 @@
 
 
     // if we have modules inside of each other. No padding on the inside ones
-    .module {
+    .Module {
         padding: 0;
     }
 }
 
 @media @mq-sm {
-    .module {
+    .Module {
         padding: @space-double 0;
 
         &-cta {
