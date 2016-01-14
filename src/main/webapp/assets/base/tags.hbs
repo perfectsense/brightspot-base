@@ -1,8 +1,10 @@
-<div class="tags">
-    {{#if this.title}}<div class="tag-list-title">{{render this.title}}</div>{{/if}}
-    <ul class="tag-list">
-        {{#each this.tagList}}
-            <li>{{render this cssClass="tag"}}</li>
+<div class="Tags">
+    {{#if this.title}}<div class="Tags-title">{{render this.title}}</div>{{/if}}
+    <ol class="Tags-list" itemscope itemtype="http://schema.org/ItemList">
+        {{#each tagList as |tag|}}
+            <li class="Tags-list-item" itemprop="itemListElement">
+                {{tag}}
+            </li>
         {{/each}}
-    </ul>
+    </ol>
 </div>

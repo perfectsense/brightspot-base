@@ -29,11 +29,15 @@
           "headline": "{{words([4,8])}}",
           "subHeadline": "{{sentences(3,4)}}",
           "tagList": {
-              "_template": "/assets/base/Tags2",
-              "tags": [
+              "_template": "/assets/base/Tags",
+              "tagList": [
                   {
-                      "_repeat": 5,
-                      "name": "{{words([1,3])}}"
+                    "_template": "/assets/base/globals/link",
+                    "_repeat": [3,8],
+                    "body": "{{words([ 1, 2 ])}}",
+                    "extraAttributes": {
+                        "href": "#"
+                    }
                   }
               ]
           },

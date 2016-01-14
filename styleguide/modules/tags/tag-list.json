@@ -1,6 +1,6 @@
 {
 
-  "_template": "/assets/base/tags",
+  "_template": "/assets/base/Tags",
   "title": {
     "_template": "/assets/base/globals/text",
     "text": "Related Tags:"

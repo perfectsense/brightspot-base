@@ -102,7 +102,7 @@
 
                       "tags" : {
 
-                          "_template": "/assets/base/tags",
+                          "_template": "/assets/base/Tags",
                           "tagList": [
                               {
                                   "_template": "/assets/base/globals/link",
