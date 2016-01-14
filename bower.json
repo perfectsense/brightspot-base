@@ -51,7 +51,10 @@
       },
       {
         "cwd": "src/main/webapp/assets/templates",
-        "src": "base/**",
+        "src": [
+              "base/**",
+              "community/**"
+        ],
         "dest": "../templates",
         "expand": true
       }
