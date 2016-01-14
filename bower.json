@@ -42,7 +42,10 @@
       },
       {
         "cwd": "src/main/webapp/assets/styles",
-        "src": "base/**",
+        "src": [
+              "base/**",
+              "community/**"
+        ],
         "dest": "../styles",
         "expand": true
       },
