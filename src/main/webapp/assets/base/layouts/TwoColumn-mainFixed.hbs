@@ -10,7 +10,9 @@
 
 		<div class="TwoColumn-column-scrolling">
             {{#each main}}
-                {{render this}}
+                <div class="TwoColumn-item">
+                    {{render this}}
+                </div>
             {{/each}}
 		</div>
 
@@ -23,7 +25,9 @@
 				</div>
 
                 {{#each aside}}
-                    {{render this}}
+                    <div class="TwoColumn-item">
+                        {{render this}}
+                    </div>
                 {{/each}}
 			</div>
 		</div>

@@ -51,6 +51,16 @@ body {
 	margin-right: (@grid-gutter-width-xs / -2);
 }
 
+.column-item {
+    > .Module {
+        padding: @space*2 0;
+    }
+
+    .promo-super {
+        margin-top: -@space*2;
+    }
+}
+
 // With the below columns, we should be able to create most every layout necessary.
 // We can always make more, but because we can make subgrids in columns, we can do a lot with just these
 //
@@ -236,6 +246,16 @@ body.column-fixed-toggle-in {
 }
 
 @media @mq-md {
+
+    .column-item {
+        > .Module {
+            padding: @space*4 0;
+        }
+
+        .promo-super {
+            margin-top: -@space*4;
+        }
+    }
 
 	// styles to create a fixed column that will be stuck on the screen
 	.column-fixed {

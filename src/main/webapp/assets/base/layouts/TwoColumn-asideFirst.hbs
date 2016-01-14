@@ -10,13 +10,17 @@
 
 		<div class="TwoColumn-aside">
             {{#each aside}}
-                {{render this}}
+                <div class="TwoColumn-item">
+                    {{render this}}
+                </div>
             {{/each}}
 		</div>
 
 		<div class="TwoColumn-main">
             {{#each main}}
-                {{render this}}
+                <div class="TwoColumn-item">
+                    {{render this}}
+                </div>
             {{/each}}
 		</div>
 
