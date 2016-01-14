@@ -1,4 +1,4 @@
-<div class="Author" itemscope="" itemprop="author" itemtype="http://schema.org/Person">
+<div class="Author Module" itemscope="" itemprop="author" itemtype="http://schema.org/Person">
 
     {{#with image}}
         <div class="Author-image">
@@ -9,6 +9,12 @@
     {{#with name}}
         <div class="Author-name" itemprop="name">
             {{this}}
+        </div>
+    {{/with}}
+
+    {{#with affiliation}}
+        <div class="Author-affiliation" itemprop="affiliation">
+            , {{this}}
         </div>
     {{/with}}
 

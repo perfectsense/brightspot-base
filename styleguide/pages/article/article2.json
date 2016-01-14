@@ -28,11 +28,21 @@
           "slug": "{{words([4,8])}}",
           "headline": "{{words([4,8])}}",
           "subHeadline": "{{sentences(3,4)}}",
+          "tagList": {
+              "_template": "/assets/base/Tags2",
+              "tags": [
+                  {
+                      "_repeat": 5,
+                      "name": "{{words([1,3])}}"
+                  }
+              ]
+          },
           "author": {
               "_template": "/assets/base/Author",
               "image": "{{image(50,50)}}",
               "name": "{{name}}",
-              "publishDate": "{{words(2)}}"
+              "publishDate": "{{words(2)}}",
+              "affiliation": "Acme"
           },
           "datePublished": {
               "_template": "/assets/base/DatePublished",
