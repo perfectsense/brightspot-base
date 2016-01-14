@@ -43,14 +43,9 @@
         </div>
     {{/with}}
 
-    {{#with author}}
-        <div class="Article-byline">
-            {{this}}
-        </div>
-    {{/with}}
-
-    {{#if datePublished}}
-        <time class="Article-datePublished" itemprop="datePublished" dateTime="{{datePublishedISO}}">{{datePublished}}</time>
-    {{/if}}
+    <div class="Article-byline">
+        {{#if author}}by {{author}}{{/if}}
+        {{#if datePublished}}<time class="Article-datePublished" itemprop="datePublished" dateTime="{{datePublishedISO}}">{{datePublished}}</time>{{/if}}
+    </div>
 
 </article>
