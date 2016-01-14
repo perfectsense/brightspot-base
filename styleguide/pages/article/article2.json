@@ -28,7 +28,7 @@
           "slug": "{{words([4,8])}}",
           "headline": "{{words([4,8])}}",
           "subHeadline": "{{sentences(3,4)}}",
-          "tagList": {
+          "tags": {
               "_template": "/assets/base/Tags",
               "tagList": [
                   {
