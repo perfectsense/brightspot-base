@@ -44,11 +44,8 @@
               "publishDate": "{{words(2)}}",
               "affiliation": "Acme"
           },
-          "datePublished": {
-              "_template": "/assets/base/DatePublished",
-              "text": "Jan 13, 2016",
-              "iso": "2016-01-13T01:11:11+01:00"
-          }
+          "datePublished": "Jan 13, 2016",
+          "datePublishedISO": "2016-01-13T01:11:11+01:00"
         }
       ]
     },

@@ -49,10 +49,8 @@
         </div>
     {{/with}}
 
-    {{#with datePublished}}
-        <div class="Article-datePublished">
-            {{this}}
-        </div>
-    {{/with}}
+    {{#if datePublished}}
+        <time class="Article-datePublished" itemprop="datePublished" dateTime="{{datePublishedISO}}">{{datePublished}}</time>
+    {{/if}}
 
 </article>
