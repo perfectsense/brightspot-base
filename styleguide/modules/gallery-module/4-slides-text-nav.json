@@ -1,6 +1,6 @@
 {
 
-    "_template": "/assets/base/gallery-module-with-nav",
+    "_template": "/assets/base/gallery/gallery-module-with-nav",
 
     "displayOptions": {
         "textNav": true
@@ -11,7 +11,7 @@
         "text": "4 Slide with text nav instead of thumbs"
     },
     "gallerySlides": {
-        "_template": "/assets/base/gallery-module-slide-content",
+        "_template": "/assets/base/gallery/gallery-module-slide-content",
 
         "content": [{
             "_template": "/assets/base/globals/image",
@@ -23,7 +23,7 @@
         }]
     },
     "galleryNavItems": {
-        "_template": "/assets/base/gallery-module-slide-content",
+        "_template": "/assets/base/gallery/gallery-module-slide-content",
 
         "content": [{
             "_template": "/assets/base/globals/text",

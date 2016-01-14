@@ -36,7 +36,7 @@
 
   "searchForm" : {
 
-        "_template": "/assets/base/globals/form",
+        "_template": "/assets/base/forms/form",
 
         "displayOptions" : {
             "modifierClass": "site-header-simple-search"
@@ -48,7 +48,7 @@
 
         "inputs" : [
             {
-                "_template" : "/assets/base/globals/form-input",
+                "_template" : "/assets/base/forms/form-input",
 
                 "displayOptions" : {
                     "modifierClass" : "site-header-simple-search-text"
@@ -64,7 +64,7 @@
                 }
             },
             {
-                "_template" : "/assets/base/globals/form-input",
+                "_template" : "/assets/base/forms/form-input",
 
                 "displayOptions" : {
                     "isButton" : true,

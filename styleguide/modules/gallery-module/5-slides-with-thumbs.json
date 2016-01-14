@@ -1,6 +1,6 @@
 {
 
-  "_template": "/assets/base/gallery-module-with-nav",
+  "_template": "/assets/base/gallery/gallery-module-with-nav",
 
   "displayOptions" : {
     "thumbnailsToShow": "5"
@@ -11,7 +11,7 @@
     "text": "5 slides with thumbs"
   },
   "gallerySlides": {
-    "_template": "/assets/base/gallery-module-slide-content",
+    "_template": "/assets/base/gallery/gallery-module-slide-content",
 
     "content" : [{
       "_template": "/assets/base/globals/image",
@@ -24,7 +24,7 @@
   },
 
   "galleryNavItems": {
-    "_template": "/assets/base/gallery-module-slide-content",
+    "_template": "/assets/base/gallery/gallery-module-slide-content",
 
     "content" : [{
       "_template": "/assets/base/globals/image",

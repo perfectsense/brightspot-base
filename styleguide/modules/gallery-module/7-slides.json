@@ -1,6 +1,6 @@
 {
 
-    "_template": "/assets/base/gallery-module",
+    "_template": "/assets/base/gallery/gallery-module",
     "displayOptions": {
         "dots": true
     },
@@ -9,7 +9,7 @@
         "text": "7 slides"
     },
     "gallerySlides": {
-        "_template": "/assets/base/gallery-module-slide-content",
+        "_template": "/assets/base/gallery/gallery-module-slide-content",
         "content": [{
             "_template": "/assets/base/globals/image",
             "_repeat": 7,

@@ -1,12 +1,12 @@
 {
 
-  "_template": "/assets/base/gallery-module",
+  "_template": "/assets/base/gallery/gallery-module",
   "heading": {
     "_template": "/assets/base/globals/text",
     "text": "5 slides, with captions"
   },
   "gallerySlides": {
-      "_template": "/assets/base/gallery-module-slide-content",
+      "_template": "/assets/base/gallery/gallery-module-slide-content",
 
       "content": [{
 

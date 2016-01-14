@@ -1,6 +1,6 @@
 {
 
-  "_template": "/assets/base/gallery-grid",
+  "_template": "/assets/base/gallery/gallery-grid",
 
   "heading": {
     "_template": "/assets/base/globals/text",
@@ -14,7 +14,7 @@
 
   "grid" : [
     {
-      "_template": "/assets/base/gallery-grid-column",
+      "_template": "/assets/base/gallery/gallery-grid-column",
 
       "rows" : [
         {
@@ -28,7 +28,7 @@
       ]
     },
     {
-      "_template": "/assets/base/gallery-grid-column",
+      "_template": "/assets/base/gallery/gallery-grid-column",
 
       "rows" : [
         {
@@ -41,7 +41,7 @@
       ]
     },
     {
-      "_template": "/assets/base/gallery-grid-column",
+      "_template": "/assets/base/gallery/gallery-grid-column",
 
       "rows" : [
         {
@@ -58,11 +58,11 @@
   ],
 
   "gallery" : {
-    "_template": "/assets/base/gallery-module",
+    "_template": "/assets/base/gallery/gallery-module",
 
     "gallerySlides":
       {
-        "_template": "/assets/base/gallery-module-slide-content",
+        "_template": "/assets/base/gallery/gallery-module-slide-content",
 
         "content": [{
           "_template": "/assets/base/globals/image",

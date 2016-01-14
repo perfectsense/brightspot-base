@@ -21,7 +21,7 @@
         ],
 
         "searchResultsSort" : {
-            "_template": "/assets/base/globals/form",
+            "_template": "/assets/base/forms/form",
 
             "displayOptions" : {
                 "modifierClass": "search-results-sort"
@@ -34,7 +34,7 @@
             "inputs" : [
                 {
 
-                    "_template" : "/assets/base/globals/form-select",
+                    "_template" : "/assets/base/forms/form-select",
 
                     "autoSubmit" : true,
 
@@ -47,7 +47,7 @@
                     },
 
                     "label" : {
-                        "_template": "/assets/base/globals/form-label-attributes",
+                        "_template": "/assets/base/forms/form-label-attributes",
 
                         "extraAttributes" : {
                             "for": "search-results-sort"
@@ -61,7 +61,7 @@
 
                     "optionsData": [
                       {
-                        "_template" : "/assets/base/globals/form-select-option",
+                        "_template" : "/assets/base/forms/form-select-option",
 
                         "_repeat" : 3,
 

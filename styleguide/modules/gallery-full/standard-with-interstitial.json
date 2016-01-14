@@ -1,6 +1,6 @@
 {
 
-    "_template": "/assets/base/gallery-full",
+    "_template": "/assets/base/gallery/gallery-full",
 
     "displayOptions" : {
         "modifierClass" : "color-inverse"
@@ -19,7 +19,7 @@
     "slides": [
         {
             "_repeat" : 5,
-            "_template" : "/assets/base/gallery-full-slide-content",
+            "_template" : "/assets/base/gallery/gallery-full-slide-content",
             "content" : {
                 "_template": "/assets/base/globals/image",
                 "extraAttributes": {
@@ -38,7 +38,7 @@
             }
         },
         {
-            "_template" : "/assets/base/gallery-full-interstitial",
+            "_template" : "/assets/base/gallery/gallery-full-interstitial",
             "displayOptions" : {
                 "countDisable" : false,
                 "countMessage" : "Advertisement: You may skip in {n} seconds",
@@ -52,7 +52,7 @@
         },
         {
             "_repeat" : 5,
-            "_template" : "/assets/base/gallery-full-slide-content",
+            "_template" : "/assets/base/gallery/gallery-full-slide-content",
             "content" : {
                 "_template": "/assets/base/globals/image",
                 "extraAttributes": {

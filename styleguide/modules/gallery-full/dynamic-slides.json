@@ -1,6 +1,6 @@
 {
 
-    "_template": "/assets/base/gallery-full",
+    "_template": "/assets/base/gallery/gallery-full",
 
     "displayOptions" : {
         "modifierClass" : "color-inverse",
@@ -23,7 +23,7 @@
     "slides": [
         {
             "_repeat" : 1,
-            "_template" : "/assets/base/gallery-full-slide-content",
+            "_template" : "/assets/base/gallery/gallery-full-slide-content",
             "content" : {
                 "_template": "/assets/base/globals/image",
                 "extraAttributes": {

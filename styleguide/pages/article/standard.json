@@ -222,7 +222,7 @@
                   "id": "gallery-fullscreen",
 
                   "content": {
-                    "_template": "/assets/base/gallery-full",
+                    "_template": "/assets/base/gallery/gallery-full",
 
                     "displayOptions" : {
                         "modifierClass" : "color-inverse ratio-16x9",
@@ -241,7 +241,7 @@
 
                     "slides": [
                         {
-                            "_template" : "/assets/base/gallery-full-slide-content",
+                            "_template" : "/assets/base/gallery/gallery-full-slide-content",
 
                             "_repeat" : 2,
 
