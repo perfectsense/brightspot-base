@@ -229,12 +229,12 @@
 
               "modalGallery" : {
 
-                  "_template": "/assets/base/modal",
+                  "_template": "/assets/base/Modal",
 
                   "id": "gallery-fullscreen",
 
                   "content": {
-                    "_template": "/assets/base/gallery-full",
+                    "_template": "/assets/base/gallery/gallery-full",
 
                     "displayOptions" : {
                         "modifierClass" : "color-inverse",
@@ -254,7 +254,7 @@
                     "slides": [
                         {
                             "_repeat" : 3,
-                            "_template" : "/assets/base/gallery-full-slide-content",
+                            "_template" : "/assets/base/gallery/gallery-full-slide-content",
                             "image" : {
                                 "_template": "/assets/base/globals/image",
                                 "extraAttributes": {

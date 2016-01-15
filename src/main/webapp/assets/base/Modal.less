@@ -1,5 +1,7 @@
-.modal-data {
-    display: none;
+.Modal {
+    &-data {
+        &:extend(.hidden all);
+    }
 }
 
 // better handling of scroll bars
@@ -9,7 +11,7 @@ body.vex-open {
     position: fixed;
 }
 
-// this our base on the default vex theme
+// this our base code for the default vex theme
 .vex.modal-theme-default {
     .vex-content {
         border-radius: 5px;
