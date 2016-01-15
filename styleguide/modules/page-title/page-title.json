@@ -1,6 +1,6 @@
 {
 
-    "_template" : "/assets/base/page-title",
+    "_template" : "/assets/base/PageTitle",
 
     "pageTitle" : {
       "_template" : "/assets/base/globals/text",
