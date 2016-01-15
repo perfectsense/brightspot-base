@@ -1,6 +1,6 @@
 {
 
-    "_template" : "/assets/base/callout",
+    "_template" : "/assets/base/Callout",
 
     "displayOptions" : {
       "modifierClass" : "color-inverse"
