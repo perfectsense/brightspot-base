@@ -1,18 +1,39 @@
 .Article {
 
-    &-image {}
+    display: flex;
+    flex-direction: column;
 
-    &-breadcrumbs {}
+    &-image {
+        display: none;
+    }
 
-    &-slug {}
+    &-breadcrumbs {
+        display: none;
+    }
 
-    &-tags {}
+    &-slug {
+        order: 1;
+        font-size: 10px;
+    }
 
-    &-headline {}
+    &-tags {
+        order: 5;
+    }
 
-    &-subHeadline {}
+    &-headline {
+        order: 2;
+        font-size: 28px;
+        font-weight: bold;
+    }
 
-    &-byline {}
+    &-subHeadline {
+        order: 3;
+    }
+
+    &-byline {
+        order: 4;
+        &:extend(.Module all);
+    }
 
     &-datePublished {}
 
