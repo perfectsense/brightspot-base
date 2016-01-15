@@ -1,0 +1,66 @@
+.Enhancement {
+    padding: @space-double;
+    margin: @space-double 0;
+
+    // on xsmall, there is only center alignment
+    &--left,
+    &--right,
+    &--center {
+        margin: @space auto;
+        text-align: center;
+    }
+
+    blockquote.module {
+        margin: 0 @space-double;
+    }
+
+    .img-with-meta {
+        margin: 0 auto;
+    }
+
+    .related-link {
+        display: block;
+        font-size: @ts-1;
+        font-weight: @font-weight-bold;
+    }
+
+    // center any iframe components if you are in an article enhancement
+    .iframe-module {
+        iframe {
+            margin: 0 auto;
+        }
+    }
+
+}
+
+@media @mq-sm {
+    .Enhancement {
+
+        &--left {
+            border: none;
+            float: left;
+            margin: 0 @space-double @space 0;
+            max-width: 50%;
+            padding: 0;
+        }
+
+        &--right {
+            border: none;
+            float: right;
+            margin: 0 0 @space @space-double;
+            max-width: 50%;
+            padding: 0;
+        }
+
+        &--center {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        &--full {
+            width: 100%;
+        }
+
+    }
+}
