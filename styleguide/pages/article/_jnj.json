@@ -32,7 +32,10 @@
     "sections": [
         {
             "_template": "/assets/base/globals/html",
-            "text": "{{paragraphs(1)}}"
+            "text": "{{paragraphs(1)}}",
+            "displayOptions": {
+                "align": "left"
+            }
         },
         {
             "_template": "/assets/base/globals/html",
@@ -40,7 +43,10 @@
         },
         {
             "_template": "/assets/base/globals/html",
-            "text": "{{paragraphs(1)}}"
+            "text": "{{paragraphs(1)}}",
+            "displayOptions": {
+                "align": "right"
+            }
         }
     ]
 }

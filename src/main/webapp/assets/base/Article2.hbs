@@ -49,8 +49,8 @@
     </div>
 
     <div class="Article-content">
-        {{#each sections}}
-            <section class="Article-content-section">{{this}}</section>
+        {{#each sections as |section|}}
+            <section class="Article-content-section{{#if section.displayOptions.align}} Article-content-section--{{section.displayOptions.align}}{{/if}}">{{section}}</section>
         {{/each}}
     </div>
 
