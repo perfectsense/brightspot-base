@@ -1,0 +1,57 @@
+@import 'globals/colors.vars';
+@import 'globals/spacing.vars';
+@import 'globals/typography.vars';
+
+.SearchResults {
+    &:extend(.Module all);
+
+    padding-top: @space-triple;
+
+    &-title {
+        border: none;
+        font-size: @ts-0;
+        margin: 0 0 @space;
+        text-align: left;
+    }
+
+    &-term {
+        font-weight: @font-weight-bold;
+    }
+
+    &-filter {
+        margin: 0 0 @space;
+    }
+
+    &-sort {
+        color: @color-text;
+        display: inline-block;
+
+        i {
+            color: @color-link;
+        }
+
+        select {
+            color: @color-link;
+            margin-left: @space-quarter;
+            text-transform: uppercase;
+        }
+    }
+
+    &-content {
+        border-top: 1px solid @color-gray-light;
+        clear:both;
+        padding-top: @space;
+    }
+}
+
+@media @mq-sm {
+    .SearchResults {
+        &-title {
+            float: left;
+        }
+
+        &-filter {
+            float: right;
+        }
+    }
+}

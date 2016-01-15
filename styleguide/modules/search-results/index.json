@@ -1,7 +1,7 @@
 {
 
 
-    "_template" : "/assets/base/search-results",
+    "_template" : "/assets/base/SearchResults",
 
     "loadMore" : true,
 
@@ -15,7 +15,9 @@
             },
             {
                 "_template" : "/assets/base/globals/text",
-                "modifierClass" : "search-term",
+                "displayOptions" : {
+                    "modifierClass" : "SearchResults-term"
+                },
                 "text" : "\"{{words(1)}}\""
             }
         ],
@@ -24,7 +26,7 @@
             "_template": "/assets/base/forms/form",
 
             "displayOptions" : {
-                "modifierClass": "search-results-sort"
+                "modifierClass": "SearchResults-sort"
             },
 
             "extraAttributes" : {
@@ -43,14 +45,14 @@
                     },
 
                     "extraAttributes": {
-                      "id": "search-results-sort"
+                      "id": "SearchResults-sort"
                     },
 
                     "label" : {
                         "_template": "/assets/base/forms/form-label-attributes",
 
                         "extraAttributes" : {
-                            "for": "search-results-sort"
+                            "for": "SearchResults-sort"
                         }
                     },
 
@@ -184,7 +186,7 @@
 
           "extraAttributes": {
               "href": "index",
-              "data-ajax-link-target" : ".search-results-content"
+              "data-ajax-link-target" : ".SearchResults-content"
           },
 
           "body": {
