@@ -73,7 +73,7 @@
               "text": "{{paragraphs(2)}}"
             },
             {
-              "_template": "/assets/base/article-enhancement",
+              "_template": "/assets/base/ArticleEnhancement",
               "content": {
                 "_dataUrl" : "/modules/gallery-grid/index.json"
               }
@@ -83,7 +83,7 @@
               "text": "{{paragraphs(2)}}"
             },
             {
-              "_template": "/assets/base/article-enhancement",
+              "_template": "/assets/base/ArticleEnhancement",
               "content": {
                 "_template": "/assets/base/globals/link",
                 "cssClass": "related-link",
@@ -102,7 +102,7 @@
               "text": "{{paragraphs(2)}}"
             },
             {
-              "_template": "/assets/base/article-enhancement",
+              "_template": "/assets/base/ArticleEnhancement",
               "content": {
                 "_template": "/assets/base/blockquote",
                 "author": "{{name}}",
@@ -114,7 +114,7 @@
               "text": "{{paragraphs(2)}}"
             },
             {
-              "_template": "/assets/base/article-enhancement",
+              "_template": "/assets/base/ArticleEnhancement",
 
               "displayOptions" : {
                 "align": "center"
@@ -134,7 +134,7 @@
               "text": "{{paragraphs(2)}}"
             },
             {
-              "_template": "/assets/base/article-enhancement",
+              "_template": "/assets/base/ArticleEnhancement",
               "content": {
                 "_dataUrl" : "/modules/gallery-module/7-slides-horizontal.json"
               }
@@ -144,7 +144,7 @@
               "text": "{{paragraphs}}"
             },
             {
-              "_template": "/assets/base/article-enhancement",
+              "_template": "/assets/base/ArticleEnhancement",
               "displayOptions" : {
                 "align": "left"
               },
@@ -175,7 +175,7 @@
               "text": "{{paragraphs(3)}}"
             },
             {
-              "_template": "/assets/base/article-enhancement",
+              "_template": "/assets/base/ArticleEnhancement",
               "displayOptions" : {
                 "align": "center"
               },
@@ -190,7 +190,7 @@
               "text": "{{paragraphs(2)}}"
             },
             {
-              "_template": "/assets/base/article-enhancement",
+              "_template": "/assets/base/ArticleEnhancement",
               "displayOptions" : {
                 "align": "right"
               },
