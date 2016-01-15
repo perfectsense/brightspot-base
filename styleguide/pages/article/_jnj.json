@@ -28,5 +28,19 @@
         "affiliation": "Acme"
     },
     "datePublished": "Jan 13, 2016",
-    "datePublishedISO": "2016-01-13T01:11:11+01:00"
+    "datePublishedISO": "2016-01-13T01:11:11+01:00",
+    "sections": [
+        {
+            "_template": "/assets/base/globals/html",
+            "text": "{{paragraphs(1)}}"
+        },
+        {
+            "_template": "/assets/base/globals/html",
+            "text": "{{paragraphs(1)}}"
+        },
+        {
+            "_template": "/assets/base/globals/html",
+            "text": "{{paragraphs(1)}}"
+        }
+    ]
 }

@@ -48,4 +48,10 @@
         {{#if datePublished}}<time class="Article-datePublished" itemprop="datePublished" dateTime="{{datePublishedISO}}">{{datePublished}}</time>{{/if}}
     </div>
 
+    <div class="Article-content">
+        {{#each sections}}
+            <section class="Article-content-section">{{this}}</section>
+        {{/each}}
+    </div>
+
 </article>
