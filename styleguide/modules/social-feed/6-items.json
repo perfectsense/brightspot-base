@@ -1,6 +1,6 @@
 {
 
-    "_template" : "/assets/base/social-feed",
+    "_template" : "/assets/base/SocialFeed",
 
     "displayOptions" : {
         "horizontalSplit" : "third"
@@ -28,7 +28,7 @@
                 "_template" : "/assets/base/globals/text",
 
                 "displayOptions" : {
-                    "modifierClass" : "module-subtitle"
+                    "modifierClass" : "SocialFeed-subtitle"
                 },
 
                 "text" : "{{words(20)}}"
@@ -39,7 +39,7 @@
 
     "items" : [
         {
-            "_template": "/assets/base/social-feed-item",
+            "_template": "/assets/base/SocialFeedItem",
 
             "_repeat" : 3,
 
@@ -138,7 +138,7 @@
             ]
         },
         {
-            "_template": "/assets/base/social-feed-item",
+            "_template": "/assets/base/SocialFeedItem",
 
             "_repeat" : 3,
 

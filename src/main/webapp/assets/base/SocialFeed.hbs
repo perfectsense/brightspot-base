@@ -1,0 +1,19 @@
+<div class="SocialFeed{{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}"{{#if loadMore}} data-bsp-ajax-links data-bsp-ajax-links-options='{"loadType":"loadMore"}'{{/if}}>
+    {{#with heading}}
+        <h2 class="SocialFeed-title">{{this}}</h2>
+    {{/with}}
+
+    <ul class="SocialFeed-content">
+        {{#each items}}
+            <li class="SocialFeed-content-item">
+                {{this}}
+            </li>
+        {{/each}}
+    </ul>
+
+    {{#with cta}}
+        <div class="SocialFeed-cta">
+            {{this}}
+        </div>
+    {{/with}}
+</div>

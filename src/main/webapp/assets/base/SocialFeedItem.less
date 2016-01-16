@@ -1,0 +1,78 @@
+@import 'globals/colors.vars';
+@import 'globals/typography.vars';
+
+.SocialFeedItem {
+    border: 1px solid @color-gray-light;
+    padding-top: @space;
+
+    &-author {
+        .clearfix;
+
+        a {
+            color: @color-text;
+            &:extend(.text-size-neg-1);
+        }
+
+        padding: 0 @space;
+
+        &-photo {
+            float: left;
+            margin-right: @space;
+            width: 50px;
+        }
+
+        &-name {
+            font-weight: @font-weight-bold;
+        }
+    }
+
+    &-body {
+        &:extend(.text-size-neg-1);
+        height: 114px;
+        overflow: hidden;
+        padding: @space;
+
+        img {
+            float: left;
+            margin: 0 @space @space 0;
+        }
+    }
+
+    &-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        border-top: 1px solid @color-gray-light;
+        height: 35px;
+        margin-top: @space/2;
+        padding: @space/2;
+
+        .publish-info {
+            color: @color-gray;
+            float: left;
+            font-size: 12px;
+            text-transform: uppercase;
+
+            .icon {
+                background: none;
+                line-height: 2;
+                margin-right: @space/2;
+            }
+        }
+
+        .publish-links {
+            &:extend(.list-inline all);
+
+            float: right;
+            font-size: 14px;
+            text-transform: uppercase;
+
+            a {
+                color: @color-gray-light;
+                margin-left: @space*2;
+                .icon();
+            }
+        }
+    }
+}

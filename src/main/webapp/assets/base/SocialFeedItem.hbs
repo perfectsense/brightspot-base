@@ -1,0 +1,23 @@
+<div class="SocialFeedItem" itemscope itemtype="http://schema.org/SocialMediaPosting">
+    <div class="SocialFeedItem-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        {{#with profilePhoto}}<div class="SocialFeedItem-author-photo">{{this}}</div>{{/with}}
+        {{#with profileName}}<div class="SocialFeedItem-author-name" itemprop="name">{{this}}</div>{{/with}}
+        {{#with profileUser}}<div class="SocialFeedItem-author-user">{{this}}</div>{{/with}}
+    </div>
+
+    <div class="SocialFeedItem-body">
+        {{#each socialFeedBody}}
+            {{this}}
+        {{/each}}
+    </div>
+
+    <div class="SocialFeedItem-footer">
+        <div class="publish-info"><i class="icon icon-{{feedType}}"></i> {{#if publishDate}}{{publishDate}}{{/if}}</div>
+
+        <ul class="publish-links">
+            {{#each publishLinks}}
+                <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
