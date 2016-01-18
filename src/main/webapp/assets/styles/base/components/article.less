@@ -8,13 +8,13 @@
 }
 
 .article-lead {
+    background: @color-white;
+
     img {
         height: auto;
         max-width: none;
         width: 100%;
     }
-
-    margin-bottom: @space-double;
 }
 
 .article {
@@ -101,6 +101,10 @@
 }
 
 @media @mq-sm {
+    .article-lead {
+        margin-bottom: @space-double;
+    }
+
     .article-enhancement {
 
         &.align-left {

@@ -1,0 +1,61 @@
+@color-green: #79af20;
+
+body.theme-green {
+    background: @color-green;
+
+    .grid-container {
+        background: @color-white;
+    }
+
+    .layout-secondary-color {
+        background: @color-green;
+
+        .grid-container {
+            background: @color-component-secondary-background;
+        }
+    }
+
+    .layout-inverse-color {
+        background: @color-green;
+
+        .grid-container {
+            background: @color-component-inverse-background;;
+        }
+    }
+
+    .page-title-component {
+        background: @color-green;
+        border: none;
+
+        .grid-container {
+            background: @color-green;
+        }
+    }
+
+    .tag {
+        border-color: @color-green;
+        color: @color-green;
+
+        &:hover {
+            background: @color-green !important;
+            border-color: @color-green !important;
+            color: @color-white !important;
+        }
+
+    }
+
+    .component-inverse-color {
+
+        .tag {
+            background: @color-green !important;
+            border-color: @color-green !important;
+            color: @color-white !important;
+        }
+    }
+
+    .article-title, .section-title {
+        color: @color-green !important;
+    }
+
+}
+
