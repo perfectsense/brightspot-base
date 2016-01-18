@@ -32,19 +32,44 @@
 
     &-byline {
         order: 4;
-        &:extend(.Module all);
+        display: flex;
+        font-size: 16px;
+        border-bottom: solid 1px #e1e1e1;
+
+        .Author > * {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .Author-image {
+            order: 1;
+        }
+
+        .Author-text {
+            order: 2;
+        }
+
+        .Author-image {
+            border-radius: 100%;
+            overflow: hidden;
+        }
+
+        .Author-affiliation {
+            display: none;
+        }
     }
 
     &-datePublished {}
 
     &-content {
         order: 6;
+
+        @media @mq-sm {
+            margin-right: 350px;
+        }
     }
 
     &-content-section {
-        padding: @space-double;
-        margin: @space-double 0;
-
         &--left,
         &--right,
         &--center {
@@ -81,5 +106,4 @@
         }
 
     }
-
 }

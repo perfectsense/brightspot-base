@@ -1,9 +1,24 @@
 .Author {
+    &:extend(.Module all);
+    display: flex;
 
-    &-image {}
+    &-text {
+        order: 1;
+    }
 
-    &-name {}
+    &-image {
+        order: 2;
+    }
 
-    &-affiliation {}
+    &-name {
+        order: 3;
+    }
 
+    &-affiliation {
+        order: 4;
+        &:before {
+            content: "|";
+            margin-right: 10px;
+        }
+    }
 }

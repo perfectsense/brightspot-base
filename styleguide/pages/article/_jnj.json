@@ -8,7 +8,7 @@
     }],
     "slug": "{{words([4,8])}}",
     "headline": "{{words([4,8])}}",
-    "subHeadline": "{{sentences(3,4)}}",
+    "subHeadline": "{{sentences(3,12)}}",
     "tags": {
         "_template": "/assets/base/Tags",
         "tagList": [{
@@ -22,8 +22,15 @@
     },
     "author": {
         "_template": "/assets/base/Author",
+        "text": "by",
         "image": "{{image(50,50)}}",
-        "name": "{{name}}",
+        "name": {
+            "_template": "/assets/base/globals/link",
+            "extraAttributes": {
+                "href": "#"
+            },
+            "body": "{{name}}"
+        },
         "publishDate": "{{words(2)}}",
         "affiliation": "Acme"
     },
@@ -32,21 +39,7 @@
     "sections": [
         {
             "_template": "/assets/base/globals/html",
-            "text": "{{paragraphs(1)}}",
-            "displayOptions": {
-                "align": "left"
-            }
-        },
-        {
-            "_template": "/assets/base/globals/html",
-            "text": "{{paragraphs(1)}}"
-        },
-        {
-            "_template": "/assets/base/globals/html",
-            "text": "{{paragraphs(1)}}",
-            "displayOptions": {
-                "align": "right"
-            }
+            "text": "{{paragraphs(3)}}"
         }
     ]
 }
