@@ -1,7 +1,9 @@
 <li class="comment" {{extraAttributes}}>
-    <div class="comment-avatar">
-        {{avatar}}
-    </div>
+    {{#if avatar}}
+        <div class="comment-avatar">
+            {{avatar}}
+        </div>
+    {{/if}}
     <div class="comment-body">
         <div class="comment-authored">
             <div class="comment-author">{{author}}</div>
