@@ -1,7 +1,10 @@
 .Article {
-
     display: flex;
     flex-direction: column;
+
+    > :not(.Article-byline) {
+        margin-bottom: 1.5em;
+    }
 
     &-image {
         display: none;
@@ -14,10 +17,11 @@
     &-slug {
         order: 1;
         font-size: 10px;
+        font-weight: bold;
     }
 
     &-tags {
-        order: 5;
+        order: 6;
     }
 
     &-headline {
@@ -33,7 +37,9 @@
     &-byline {
         order: 4;
         display: flex;
+        align-items: center;
         font-size: 16px;
+        padding-bottom: 1.5em;
         border-bottom: solid 1px #e1e1e1;
 
         .Author > * {
@@ -62,11 +68,8 @@
     &-datePublished {}
 
     &-content {
-        order: 6;
-
-        @media @mq-sm {
-            margin-right: 350px;
-        }
+        order: 5;
+        padding-top: 1.5em;
     }
 
     &-content-section {
@@ -76,8 +79,16 @@
             margin: @space auto;
             text-align: center;
         }
+    }
+}
 
-        @media @mq-sm {
+@media @mq-sm {
+    .Article {
+        &-content {
+            margin-right: 350px;
+        }
+
+        &-content-section {
             &--left {
                 border: none;
                 float: left;
@@ -104,6 +115,5 @@
                 width: 100%;
             }
         }
-
     }
 }
