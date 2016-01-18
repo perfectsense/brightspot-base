@@ -1,0 +1,100 @@
+.comments {
+
+    // will be updated when we &:extend(.module all); when the refactor branch is pulled in
+    .component-title {
+        border-top: 1px solid @color-gray;
+        border-bottom: none;
+        color: @color-brand-accent;
+        margin-top: @space-quad;
+        padding-top: @space-quad;
+    }
+
+    &-sign-in {
+        background: @color-off-white;
+        padding: @space*3 0;
+        text-align: center;
+
+        p {
+            display: inline-block;
+            font-size: @ts-neg-1;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        &-choices {
+            &:extend(.share-links all);
+            margin-left: @space*1.25;
+
+            > li {
+                a {
+                    &:extend(.share-link);
+                }
+            }
+        }
+    }
+
+    &-form {
+        &:extend(.clearfix all);
+        background: @color-off-white;
+        margin-top: @space;
+        padding: @space*3;
+
+        &.loading {
+            * {
+                display: none;
+            }
+            &:after {
+                content: 'TODO: Add Loading Icon';
+                display: block;
+                text-align: center;
+            }
+        }
+
+        label {
+            display: block;
+            float: left;
+            margin-bottom: @space;
+            width: 20%;
+        }
+
+        .form-input {
+           clear: both;
+        }
+
+        input, textarea {
+            float: right;
+            margin-bottom: @space;
+            width: 70%;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        &-submit {
+            text-align: right;
+        }
+
+        &-submit-input {
+            margin-top: @space;
+        }
+    }
+
+    &-list {
+        &-wrapper {
+            padding: 0 @space;
+        }
+    }
+}
+
+@media @mq-sm {
+
+    .comments {
+        &-list {
+            &-wrapper {
+                padding: 0 @space-quad;
+            }
+        }
+    }
+
+}

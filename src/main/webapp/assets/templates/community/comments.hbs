@@ -1,0 +1,32 @@
+<div class="comments component" data-bsp-commenting>
+    {{#if commentTitle}}
+    <h5 class="component-title">{{render commentTitle}}({{render commentCount}})</h5>
+    {{/if}}
+
+    <div class="commenting-content">
+
+        {{#if signInChoices}}
+        <div class="comments-sign-in">
+            <p>{{render signInText}}</p>
+            <ul class="comments-sign-in-choices">
+                {{#each signInChoices}}
+                    <li>{{render this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+        {{/if}}
+
+        {{commentForm}}
+
+        {{#if comments}}
+        <div class="comments-list-wrapper">
+
+            <ul class="comments-list">
+                {{#each comments}}
+                    {{render this}}
+                {{/each}}
+            </ul>
+        </div>
+        {{/if}}
+    </div>
+</div>

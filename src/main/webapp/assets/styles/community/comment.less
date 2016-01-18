@@ -1,0 +1,121 @@
+.comment {
+
+    &:extend(.clearfix all);
+    margin: @space-and-quarter 0;
+
+    // subsequent comments are indented
+    .comment, .comments-form {
+        margin-left: 75px;
+    }
+
+    &-thanks {
+        background: @color-off-white;
+        margin-left: 75px;
+        padding: @space*3 0;
+        text-align: center;
+    }
+
+    &-avatar {
+        float: left;
+        width: 75px;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    &-body {
+        border: 1px solid @color-gray-light;
+        border-radius: 5px;
+        color: @color-gray;
+        font-size: @ts-neg-1;
+        margin-left: 75px;
+        padding: @space-and-half @space-and-half @space-and-quarter;
+        position: relative;
+    }
+
+    &-authored {
+        &:extend(.clearfix all);
+    }
+
+    &-author {
+        float: left;
+    }
+
+    &-date {
+        float: right;
+    }
+
+    &-text {
+        margin: @space 0 @space-and-half 0;
+    }
+
+    &-flag, &-share, &-reply {
+        &:extend(.icon);
+
+        color: @color-gray-light;
+        font-size: @ts-neg-2;
+        font-weight: bold;
+        line-height: 1.5;
+        text-transform: uppercase;
+
+        &:before {
+            padding-right: @space-half;
+        }
+    }
+
+    &-flag {
+        &:extend(.icon-flag all);
+    }
+
+    &-share {
+        &:extend(.icon-share all);
+        padding-left: @space-double;
+    }
+
+    &-reply {
+        color: @color-link;
+        display: block;
+        float: right;
+    }
+
+    &-arrow {
+        // left triangle outside
+        border-color: transparent @color-gray-light transparent transparent;
+        border-style: solid;
+        border-width: 20px;
+        height: 0;
+        width: 0;
+        position: absolute;
+        top: 2px;
+        left: -40px;
+
+        // triangle pointing to bottom right that makes the top flat
+        &:before {
+            content: '';
+            background: @color-white;
+            border-bottom: 1px solid @color-gray-light;
+            position: absolute;
+            top: -19px;
+            left: 1px;
+            width: 19px;
+            height: 19px;
+            z-index: 2;
+            border-right: 1px solid @color-gray-light;
+        }
+
+        // left triangle inside (white so it covers the box border)
+        &:after {
+            content: '';
+            border-color: transparent @color-white transparent transparent;
+            border-style: solid;
+            border-width: 20px;
+            height: 0;
+            width: 0;
+            position: absolute;
+            top: -20px;
+            left: -19px;
+            z-index: 1;
+        }
+    }
+}

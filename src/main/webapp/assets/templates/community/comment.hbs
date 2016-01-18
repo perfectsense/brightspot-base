@@ -1,0 +1,26 @@
+<li class="comment" {{extraAttributes}}>
+    <div class="comment-avatar">
+        {{avatar}}
+    </div>
+    <div class="comment-body">
+        <div class="comment-authored">
+            <div class="comment-author">{{author}}</div>
+            <div class="comment-date">{{date}}</div>
+        </div>
+        <div class="comment-text">{{#each commentBody}}{{this}}{{/each}}</div>
+        <div class="comment-action">
+            {{#with flag}}{{render this cssClass="comment-flag"}}{{/with}}
+            {{#with share}}{{render this cssClass="comment-share"}}{{/with}}
+            {{#with reply}}{{render this cssClass="comment-reply"}}{{/with}}
+        </div>
+        <div class="comment-arrow"></div>
+    </div>
+
+    {{#if comments}}
+        <ul class="comments-list">
+        {{#each comments}}
+            {{render this}}
+        {{/each}}
+        </ul>
+    {{/if}}
+</li>

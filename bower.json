@@ -42,13 +42,19 @@
       },
       {
         "cwd": "src/main/webapp/assets/styles",
-        "src": "base/**",
+        "src": [
+              "base/**",
+              "community/**"
+        ],
         "dest": "../styles",
         "expand": true
       },
       {
         "cwd": "src/main/webapp/assets/templates",
-        "src": "base/**",
+        "src": [
+              "base/**",
+              "community/**"
+        ],
         "dest": "../templates",
         "expand": true
       }

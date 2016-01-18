@@ -1,0 +1,335 @@
+{
+    "_template": "/assets/templates/community/comments",
+
+    "commentTitle": "Comment",
+
+    "commentCount": "5",
+
+    "signInText": "Sign in to post a comment",
+
+    "signInChoices": [{
+        "_template": "/assets/templates/base/common/link",
+        "cssClass": "icon-facebook",
+        "extraAttributes": {
+            "href": "#"
+        }
+    }, {
+        "_template": "/assets/templates/base/common/link",
+        "cssClass": "icon-twitter",
+        "extraAttributes": {
+            "href": "#"
+        }
+    }, {
+        "_template": "/assets/templates/base/common/link",
+        "cssClass": "icon-google",
+        "extraAttributes": {
+            "href": "#"
+        }
+    }, {
+        "_template": "/assets/templates/base/common/link",
+        "cssClass": "icon-linkedin",
+        "extraAttributes": {
+            "href": "#"
+        }
+    }],
+
+    "commentForm" : {
+
+        "_template": "/assets/templates/base/common/form",
+
+        "displayOptions" : {
+            "modifierClass": "comments-form"
+        },
+
+        "extraAttributes" : {
+            "action" : "_comment-ajax-response"
+        },
+
+        "inputs" : [
+            {
+                "_template" : "/assets/templates/base/common/form-input",
+
+                "displayOptions" : {
+                    "modifierClass" : "comments-form-name"
+                },
+
+                "label" : "Name",
+
+                "extraAttributes": {
+                    "autocomplete": "off",
+                    "id" : "n",
+                    "name" : "n",
+                    "required": true,
+                    "type": "text",
+                    "placeholder": ""
+                }
+            },
+            {
+                "_template" : "/assets/templates/base/common/form-input",
+
+                "displayOptions" : {
+                    "isTextArea" : true,
+                    "modifierClass" : "comments-form-comment"
+                },
+
+                "label" : "Comment",
+
+                "extraAttributes": {
+                    "autocomplete": "off",
+                    "maxlength": "500",
+                    "id" : "c",
+                    "name" : "c",
+                    "required": true,
+                    "type": "text",
+                    "placeholder": ""
+                }
+            },
+            {
+                "_template" : "/assets/templates/base/common/form-input",
+
+                "displayOptions" : {
+                    "isButton" : true,
+                    "modifierClass" : "comments-form-submit"
+                },
+
+                "extraAttributes": {
+                    "type": "submit",
+                    "value": "Comment Now"
+                }
+            },
+            {
+                "_template" : "/assets/templates/base/common/form-input",
+
+                "extraAttributes": {
+                    "type": "hidden",
+                    "id" : "cid",
+                    "value": ""
+                }
+            }
+        ]
+    },
+
+    "comments" : [
+        {
+            "_template" : "/assets/templates/community/comment",
+
+            "extraAttributes": {
+                "data-cid": "comment-id-goes-here-{{words(1)}}"
+            },
+
+            "avatar" : {
+                "_template": "/assets/templates/base/common/image",
+                "extraAttributes": {
+                    "src": "{{image(42, 42)}}"
+                }
+            },
+            "author" : "{{name}}",
+            "date" : "05 Apr 2015",
+            "commentBody" : [
+                {
+                    "_template" : "/assets/templates/base/common/text",
+                    "text" : "{{words(30,80)}}"
+                }
+            ],
+            "flag" : {
+                "_template": "/assets/templates/base/common/link",
+                "extraAttributes": {
+                    "href": "#"
+                },
+                "body" : "Flag"
+            },
+            "share" : {
+                "_template": "/assets/templates/base/common/link",
+                "extraAttributes": {
+                    "href": "#"
+                },
+                "body" : "Share"
+            },
+            "reply" : {
+                "_template": "/assets/templates/base/common/link",
+                "extraAttributes": {
+                    "href": "#"
+                },
+                "body" : "Reply"
+            },
+
+            "comments" : [
+                {
+                    "_template" : "/assets/templates/community/comment",
+
+                    "_repeat" : 2,
+
+                    "extraAttributes": {
+                        "data-cid": "comment-id-goes-here-{{words(1)}}"
+                    },
+
+                    "avatar" : {
+                        "_template": "/assets/templates/base/common/image",
+                        "extraAttributes": {
+                            "src": "{{image(42, 42)}}"
+                        }
+                    },
+                    "author" : "{{name}}",
+                    "date" : "05 Apr 2015",
+                    "commentBody" : [
+                        {
+                            "_template" : "/assets/templates/base/common/text",
+                            "text" : "{{words(30,80)}}"
+                        }
+                    ],
+                    "flag" : {
+                        "_template": "/assets/templates/base/common/link",
+                        "extraAttributes": {
+                            "href": "#"
+                        },
+                        "body" : "Flag"
+                    },
+                    "share" : {
+                        "_template": "/assets/templates/base/common/link",
+                        "extraAttributes": {
+                            "href": "#"
+                        },
+                        "body" : "Share"
+                    }
+                }
+            ]
+        },
+        {
+            "_template" : "/assets/templates/community/comment",
+
+            "_repeat" : 3,
+
+            "extraAttributes": {
+                "data-cid": "comment-id-goes-here-{{words(1)}}"
+            },
+
+            "avatar" : {
+                "_template": "/assets/templates/base/common/image",
+                "extraAttributes": {
+                    "src": "{{image(42, 42)}}"
+                }
+            },
+            "author" : "{{name}}",
+            "date" : "05 Apr 2015",
+            "commentBody" : [
+                {
+                    "_template" : "/assets/templates/base/common/text",
+                    "text" : "{{words(30,80)}}"
+                }
+            ],
+            "flag" : {
+                "_template": "/assets/templates/base/common/link",
+                "extraAttributes": {
+                    "href": "#"
+                },
+                "body" : "Flag"
+            },
+            "share" : {
+                "_template": "/assets/templates/base/common/link",
+                "extraAttributes": {
+                    "href": "#"
+                },
+                "body" : "Share"
+            },
+            "reply" : {
+                "_template": "/assets/templates/base/common/link",
+                "extraAttributes": {
+                    "href": "#"
+                },
+                "body" : "Reply"
+            }
+        },
+        {
+            "_template" : "/assets/templates/community/comment-moderated",
+
+            "commentResponse" : "Thank you for submitting your comment! It will be posted once reviewed by our moderation team."
+        },
+        {
+            "_template" : "/assets/templates/community/comment",
+
+            "extraAttributes": {
+                "data-cid": "comment-id-goes-here-{{words(1)}}"
+            },
+
+            "avatar" : {
+                "_template": "/assets/templates/base/common/image",
+                "extraAttributes": {
+                    "src": "{{image(42, 42)}}"
+                }
+            },
+            "author" : "{{name}}",
+            "date" : "05 Apr 2015",
+            "commentBody" : [
+                {
+                    "_template" : "/assets/templates/base/common/text",
+                    "text" : "{{words(30,80)}}"
+                }
+            ],
+            "flag" : {
+                "_template": "/assets/templates/base/common/link",
+                "extraAttributes": {
+                    "href": "#"
+                },
+                "body" : "Flag"
+            },
+            "share" : {
+                "_template": "/assets/templates/base/common/link",
+                "extraAttributes": {
+                    "href": "#"
+                },
+                "body" : "Share"
+            },
+            "reply" : {
+                "_template": "/assets/templates/base/common/link",
+                "extraAttributes": {
+                    "href": "#"
+                },
+                "body" : "Reply"
+            },
+
+            "comments" : [
+                {
+                    "_template" : "/assets/templates/community/comment",
+
+                    "extraAttributes": {
+                        "data-cid": "comment-id-goes-here-{{words(1)}}"
+                    },
+
+                    "avatar" : {
+                        "_template": "/assets/templates/base/common/image",
+                        "extraAttributes": {
+                            "src": "{{image(42, 42)}}"
+                        }
+                    },
+                    "author" : "{{name}}",
+                    "date" : "05 Apr 2015",
+                    "commentBody" : [
+                        {
+                            "_template" : "/assets/templates/base/common/text",
+                            "text" : "{{words(30,80)}}"
+                        }
+                    ],
+                    "flag" : {
+                        "_template": "/assets/templates/base/common/link",
+                        "extraAttributes": {
+                            "href": "#"
+                        },
+                        "body" : "Flag"
+                    },
+                    "share" : {
+                        "_template": "/assets/templates/base/common/link",
+                        "extraAttributes": {
+                            "href": "#"
+                        },
+                        "body" : "Share"
+                    }
+                },
+                {
+                    "_template" : "/assets/templates/community/comment-moderated",
+
+                    "commentResponse" : "Thank you for submitting your comment! It will be posted once reviewed by our moderation team."
+                }
+            ]
+        }
+    ]
+}
