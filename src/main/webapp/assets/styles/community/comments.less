@@ -38,15 +38,17 @@
         background: @color-off-white;
         margin-top: @space;
         padding: @space*3;
+        position: relative;
 
         &.loading {
+            &:extend(.loading-icon all);
+
             * {
-                display: none;
+                visibility: hidden;
             }
+
             &:after {
-                content: 'TODO: Add Loading Icon';
-                display: block;
-                text-align: center;
+
             }
         }
 
@@ -83,6 +85,30 @@
     &-list {
         &-wrapper {
             padding: 0 @space;
+        }
+    }
+
+    &-show-all {
+        position: relative;
+
+        text-align: center;
+
+        a {
+            &:extend(button all);
+            display: inline-block;
+            padding: @space;
+        }
+
+        &.loading {
+            &:extend(.loading-icon all);
+
+            * {
+                visibility: hidden;
+            }
+
+            &:after {
+                top: 0;
+            }
         }
     }
 }

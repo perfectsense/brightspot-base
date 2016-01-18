@@ -18,11 +18,9 @@
         <div class="comment-arrow"></div>
     </div>
 
-    {{#if comments}}
+    {{#if commentList}}
         <ul class="comments-list">
-        {{#each comments}}
-            {{render this}}
-        {{/each}}
+            {{render commentList}}
         </ul>
     {{/if}}
 </li>

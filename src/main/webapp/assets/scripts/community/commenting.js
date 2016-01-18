@@ -18,6 +18,7 @@ class commenting {
         self.cacheElements();
         self.captureFormSubmit(self.$form);
         self.handleCommentReplyAction();
+        self.handleCommentLazyLoad();
     }
 
     cacheElements() {
@@ -26,6 +27,34 @@ class commenting {
         self.$form = self.$el.find('.' + self.settings.baseParentClass + '-form');
         self.$submit = self.$form.find('.' + self.settings.baseParentClass+'-form-submit-input');
         self.$commentsList = self.$el.find('.' + self.settings.baseParentClass + '-list');
+    }
+
+    handleCommentLazyLoad() {
+        var self = this;
+
+        self.$el.find('.' + self.settings.baseParentClass + '-show-all a').on('click', function(e) {
+
+            e.preventDefault();
+
+            var ajaxLink = $(this).attr('href');
+
+            if(ajaxLink) {
+
+                var $showAllContainer = self.$el.find('.' + self.settings.baseParentClass + '-show-all');
+
+                $showAllContainer.addClass('loading');
+
+                $.get(ajaxLink, function(data) {
+                    self.$commentsList.append(data);
+                }).error(function() {
+
+                });
+
+                $showAllContainer.remove();
+
+            }
+
+        });
     }
 
     captureFormSubmit($theForm) {
