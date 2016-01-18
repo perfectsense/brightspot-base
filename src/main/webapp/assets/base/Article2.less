@@ -51,7 +51,7 @@
             order: 1;
         }
 
-        .Author-text {
+        .Author-prefix {
             order: 2;
         }
 
@@ -59,13 +59,14 @@
             border-radius: 100%;
             overflow: hidden;
         }
-
-        .Author-affiliation {
-            display: none;
-        }
     }
 
-    &-datePublished {}
+    &-datePublished {
+        &:before {
+            content: "|";
+            margin-right: 10px;
+        }
+    }
 
     &-content {
         order: 5;
