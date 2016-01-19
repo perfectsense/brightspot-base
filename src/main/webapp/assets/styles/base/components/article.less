@@ -78,6 +78,8 @@
 
 .article-enhancement {
     padding: @space-double;
+    border-bottom: 1px solid @color-gray-light;
+    border-top: 1px solid @color-gray-light;
     margin: @space-double 0;
 
     // when we have a component inside of an article enhancement, we are going to do our
@@ -86,6 +88,10 @@
         margin: 0;
         padding: 0;
         text-align: left;
+
+        &-title {
+            border: none;
+        }
     }
 
     // we want to center iframes that are smaller than our width
@@ -97,8 +103,19 @@
 
     // on xsmall, there is only center alignment
     &.align-left, &.align-right, &.align-center {
-        margin: @space auto;
         text-align: center;
+    }
+
+    // don't want these to take up too much space
+    &.align-left, &.align-right {
+        border-top: none;
+        max-width: 50%;
+    }
+    &.align-left {
+        margin-right: @space;
+    }
+    &.align-right {
+        margin-left: @space;
     }
 
     blockquote.component {
@@ -116,6 +133,12 @@
         text-align: left;
     }
 
+    .gallery-grid-description {
+        color: @color-gray;
+        font-size: @ts-neg-1;
+        padding-top: @space;
+    }
+
 }
 
 @media @mq-sm {
@@ -128,21 +151,17 @@
     }
 
     .article-enhancement {
+        padding: @space-quad @space-double;
+        margin: @space-quad 0;
 
         &.align-left {
-            border: none;
-            float: left;
             margin: 0 @space-double @space 0;
-            max-width: 50%;
-            padding: 0;
+            padding: 0 0 @space-double;
         }
 
         &.align-right {
-            border: none;
-            float: right;
             margin: 0 0 @space @space-double;
-            max-width: 50%;
-            padding: 0;
+            padding: 0 0 @space-double;
         }
 
         &.align-center {
