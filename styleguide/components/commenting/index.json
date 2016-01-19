@@ -69,7 +69,7 @@
         },
 
         "extraAttributes" : {
-            "action" : "_comment-ajax-response"
+            "action" : "_comment-ajax-response?test=asdf"
         },
 
         "inputs" : [

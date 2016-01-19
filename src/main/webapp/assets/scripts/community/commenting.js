@@ -62,18 +62,11 @@ class commenting {
         $theForm.on('submit', function(e) {
             e.preventDefault();
 
-            var querySeparator = '?';
             var ajaxUrl = $theForm.attr('action');
-
-            if(ajaxUrl.indexOf('?') > -1) {
-                querySeparator = '&';
-            }
-
-            ajaxUrl = ajaxUrl + querySeparator + $theForm.serialize();
 
             $theForm.addClass('loading');
 
-            $.post(ajaxUrl, function(data) {
+            $.post(ajaxUrl, $theForm.serialize(), function(data) {
                 // once we get back the response, if the form is inside the list, just replace it
                 // otherwise, we want to add it to the top of the list
                 if($theForm.parents('.' + self.settings.baseParentClass + '-list').length) {
