@@ -1,6 +1,6 @@
 <div class="comments component" data-bsp-commenting>
     {{#if commentTitle}}
-    <h5 class="component-title">{{render commentTitle}}<span class="comments-count">({{render commentCount}})</span></h5>
+    <h5 class="component-title">{{render commentTitle}}{{#if commentCount}}<span class="comments-count">({{render commentCount}})</span>{{/if}}</h5>
     {{/if}}
 
     <div class="commenting-content">
