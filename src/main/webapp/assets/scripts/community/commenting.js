@@ -63,12 +63,13 @@ class commenting {
             e.preventDefault();
 
             var querySeparator = '?';
+            var ajaxUrl = $theForm.attr('action');
 
             if(ajaxUrl.indexOf('?') > -1) {
                 querySeparator = '&';
             }
 
-            var ajaxUrl = $theForm.attr('action') + querySeparator + $theForm.serialize();
+            ajaxUrl = ajaxUrl + querySeparator + $theForm.serialize();
 
             $theForm.addClass('loading');
 
