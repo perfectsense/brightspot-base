@@ -259,6 +259,10 @@
     },
     {
       "_template": "/assets/templates/base/common/html",
+      "text": "<h2>This is an example h2 so I can style it</h2>"
+    },
+    {
+      "_template": "/assets/templates/base/common/html",
       "text": "{{paragraphs(2)}}"
     }
   ]

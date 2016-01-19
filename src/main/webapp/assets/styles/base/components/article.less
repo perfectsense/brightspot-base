@@ -61,6 +61,12 @@
     // custom line height for article content unless it gets overriden
     line-height: 2;
 
+    h2 {
+        &:extend(.section-title all);
+        border: none;
+        margin-top: @space-double;
+    }
+
     p {
         margin: 0 0 @space-and-half 0;
     }
