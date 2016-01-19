@@ -62,7 +62,13 @@ class commenting {
         $theForm.on('submit', function(e) {
             e.preventDefault();
 
-            var ajaxUrl = $theForm.attr('action') + '?' + $theForm.serialize();
+            var querySeparator = '?';
+
+            if(ajaxUrl.indexOf('?') > -1) {
+                querySeparator = '&';
+            }
+
+            var ajaxUrl = $theForm.attr('action') + querySeparator + $theForm.serialize();
 
             $theForm.addClass('loading');
 
