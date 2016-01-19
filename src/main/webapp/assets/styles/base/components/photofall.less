@@ -9,3 +9,15 @@
 .photofall-content {
     &:extend(.article-content all);
 }
+
+// we need to support portrait items
+.photofall-items {
+    .promo-image {
+        text-align: center;
+
+        img {
+            height: 100%;
+            width: auto !important;
+        }
+    }
+}

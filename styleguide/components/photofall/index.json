@@ -135,7 +135,7 @@
 
                                 "extraAttributes" : {
                                     "alt" : "{{words([ 1, 2 ])}}",
-                                    "src" : "{{image(800, 450)}}"
+                                    "src" : "{{image(450, 800)}}"
                                 }
                             }
                         }
@@ -232,7 +232,44 @@
 
         "slides": [
             {
-                "_repeat" : 3,
+                "_template" : "/assets/templates/base/components/gallery-full-slide-content",
+                "image" : {
+                    "_template": "/assets/templates/base/common/image",
+                    "extraAttributes": {
+
+                        "src": "{{image(1600, 900)}}"
+                    }
+                },
+                "caption" : [
+                    {
+                        "_template": "/assets/templates/base/common/text",
+                        "text" : "{{words(80)}}"
+                    }
+                ],
+                "sharing" : {
+                    "_dataUrl" : "/elements/social-share/share.json"
+                }
+            },
+            {
+                "_template" : "/assets/templates/base/components/gallery-full-slide-content",
+                "image" : {
+                    "_template": "/assets/templates/base/common/image",
+                    "extraAttributes": {
+
+                        "src": "{{image(900, 1600)}}"
+                    }
+                },
+                "caption" : [
+                    {
+                        "_template": "/assets/templates/base/common/text",
+                        "text" : "{{words(80)}}"
+                    }
+                ],
+                "sharing" : {
+                    "_dataUrl" : "/elements/social-share/share.json"
+                }
+            },
+            {
                 "_template" : "/assets/templates/base/components/gallery-full-slide-content",
                 "image" : {
                     "_template": "/assets/templates/base/common/image",
@@ -251,6 +288,7 @@
                     "_dataUrl" : "/elements/social-share/share.json"
                 }
             }
+
         ],
 
         "showMoreText" : {
