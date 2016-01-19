@@ -1,60 +1,98 @@
-body.theme-green {
-    background: #79af20
+/* DEV NOTE: We will need to add this link tag BEFORE this CSS to enable this specific Google Font */
+/* <link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'> */
+body.theme-test .site {
+    font-family: 'PT Serif', serif;
 }
 
-body.theme-green .grid-container {
+/**
+ * START - For a color */
+
+body.theme-test {
+    background: #79af20;
+}
+body.theme-test .grid-container {
     background: #fff
 }
-
-body.theme-green .layout-secondary-color {
+body.theme-test .layout-secondary-color {
     background: #79af20
 }
 
-body.theme-green .layout-secondary-color .grid-container {
+body.theme-test .layout-secondary-color .grid-container {
     background: #eee
 }
 
-body.theme-green .layout-inverse-color {
+body.theme-test .layout-inverse-color {
     background: #79af20
 }
 
-body.theme-green .layout-inverse-color .grid-container {
+body.theme-test .layout-inverse-color .grid-container,
+body.theme-test.layout-inverse-color .grid-container {
     background: #333
 }
 
-body.theme-green .page-title-component {
+body.theme-test .page-title-component {
     background: #79af20;
     border: none
 }
 
-body.theme-green .page-title-component .grid-container {
+body.theme-test .page-title-component .grid-container {
     background: #79af20
 }
 
-body.theme-green .tag,
-body.theme-green .component-cta.load-more a {
+/*
+* END - For a color
+*/
+
+
+/**
+ * START - For a background image
+
+body.theme-test {
+    background: url('https://c2.staticflickr.com/6/5651/22177864492_210eb496a2_o.jpg') repeat;
+}
+body.theme-test .grid-container {
+    background: #fff
+}
+body.theme-test .layout-secondary-color {
+    background: transparent;
+}
+body.theme-test .layout-inverse-color .grid-container,
+body.theme-test.layout-inverse-color .grid-container {
+    background: #333
+}
+
+* END - For a background image
+*/
+
+
+
+body.theme-test .tag,
+body.theme-test .component-cta.load-more a {
     border-color: #79af20;
     color: #79af20
 }
 
-body.theme-green .tag:hover,
-body.theme-green .component-cta.load-more a:hover {
+body.theme-test .tag:hover,
+body.theme-test .component-cta.load-more a:hover {
     background: #79af20 !important;
     border-color: #79af20 !important;
     color: #fff !important
 }
 
-body.theme-green .component-inverse-color .tag,
-body.theme-green .component-inverse-color .component-cta.load-more a {
+body.theme-test .component-inverse-color .tag,
+body.theme-test .component-inverse-color .component-cta.load-more a {
     background: #79af20 !important;
     border-color: #79af20 !important;
     color: #fff !important
 }
 
-body.theme-green .article-title,
-body.theme-green .section-title,
-body.theme-green .component-title,
-body.theme-green .article-head .article-subtitle,
-body.theme-green .photofall-head .article-subtitle {
+body.theme-test .article-title,
+body.theme-test .section-title,
+body.theme-test .component-title,
+body.theme-test .component-title a,
+body.theme-test .section-title a,
+body.theme-test .article-head .article-subtitle,
+body.theme-test .photofall-head .article-subtitle,
+body.theme-test .article-content h2 {
     color: #79af20 !important
 }

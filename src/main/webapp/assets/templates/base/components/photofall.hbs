@@ -1,45 +1,37 @@
 <div class="component photofall-component component-inverse-color {{#if displayOptions.modifierClass}} {{displayOptions.modifierClass}}{{/if}}">
 
-    <div class="grid-container">
-        <div class="row">
-            <div class="column-full">
+    <div class="photofall">
 
-                <div class="photofall">
+        <div class="photofall-head">
 
-                    <div class="photofall-head">
+            {{#with tags}}
+                {{render this}}
+            {{/with}}
 
-                        {{#with tags}}
-                            {{render this}}
-                        {{/with}}
+            <h1 class="article-title">{{title}}</h1>
 
-                        <h1 class="article-title">{{title}}</h1>
+            {{#if subTitle}}
+                <h3 class="article-subtitle">{{subTitle}}</h3>
+            {{/if}}
 
-                        {{#if subTitle}}
-                            <h3 class="article-subtitle">{{subTitle}}</h3>
-                        {{/if}}
+            {{#with metaData}}
+                {{render this}}
+            {{/with}}
 
-                        {{#with metaData}}
-                            {{render this}}
-                        {{/with}}
+            {{#if sharing}}{{render sharing }}{{/if}}
 
-                        {{#if sharing}}{{render sharing }}{{/if}}
+        </div>
 
-                    </div>
+        <div class="photofall-content">
+            {{#each photofallBody}}{{this}}{{/each}}
+        </div>
 
-                    <div class="photofall-content">
-                        {{#each photofallBody}}{{this}}{{/each}}
-                    </div>
+        <div class="photofall-items">
+            {{#each photofallItems}}{{this}}{{/each}}
+        </div>
 
-                    <div class="photofall-items">
-                        {{#each photofallItems}}{{this}}{{/each}}
-                    </div>
+        {{modalGallery}}
 
-                    {{modalGallery}}
-
-                </div>{{!-- photofall --}}
-
-            </div>{{!-- column-full --}}
-        </div>{{!-- row --}}
-    </div>{{!-- grid-container --}}
+    </div>{{!-- photofall --}}
 
 </div>{{!-- photofall-wrapper --}}
