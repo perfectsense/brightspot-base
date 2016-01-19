@@ -253,11 +253,17 @@
     }
 
     .overlay-visible {
-        &:extend(.icon-angle-down all);
+        &:extend(.icon-angle-down-after all);
     }
 
     .overlay-hidden {
-        &:extend(.icon-angle-up all);
+        &:extend(.icon-angle-up-after all);
+    }
+
+    span {
+        &:after {
+            padding-left: @space-half;
+        }
     }
 
     span.overlay-visible {
