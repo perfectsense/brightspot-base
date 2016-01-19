@@ -46,12 +46,10 @@ class commenting {
 
                 $.get(ajaxLink, function(data) {
                     self.$commentsList.append(data);
+                    $showAllContainer.remove();
                 }).error(function() {
-
+                    $showAllContainer.remove();
                 });
-
-                $showAllContainer.remove();
-
             }
 
         });
