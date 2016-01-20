@@ -37,7 +37,7 @@
       {
         "cwd": "src/main/webapp/assets",
         "src": "base/**",
-        "dest": "../base",
+        "dest": "../",
         "expand": true
       }
     ],
