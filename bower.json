@@ -37,7 +37,7 @@
       {
         "cwd": "src/main/webapp/assets",
         "src": "base/**",
-        "dest": "../",
+        "dest": "",
         "expand": true
       }
     ],
@@ -50,7 +50,7 @@
       },
       {
         "src": "fonts/*",
-        "dest": "../fonts",
+        "dest": "fonts",
         "expand": true,
         "flatten": true
       }
