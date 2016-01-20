@@ -35,19 +35,7 @@
   "brightspot-copy-overrides": {
     "brightspot-base": [
       {
-        "cwd": "src/main/webapp/assets/scripts",
-        "src": "base/**",
-        "dest": "base",
-        "expand": true
-      },
-      {
-        "cwd": "src/main/webapp/assets/styles",
-        "src": "base/**",
-        "dest": "base",
-        "expand": true
-      },
-      {
-        "cwd": "src/main/webapp/assets/templates",
+        "cwd": "src/main/webapp/assets",
         "src": "base/**",
         "dest": "base",
         "expand": true
