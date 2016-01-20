@@ -6,18 +6,6 @@
 	position: relative;
 }
 
-// fixed positioning offset if applicable
-body {
-	& when (@header-positioning = fixed) {
-    	padding-top: @header-height;
-    }
-
-    // when we are a page that is rendererd embedded inside the styleguide, remove the padding
-    &.body-embed {
-        padding-top: 0;
-    }
-}
-
 .color-inverse {
     background: @color-inverse-background;
     color: @color-inverse-text;
