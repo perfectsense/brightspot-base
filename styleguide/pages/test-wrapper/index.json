@@ -1,0 +1,11 @@
+{
+    "_wrapper" : "/_test-wrapper.json",
+
+    "_template": "/assets/base/layouts/FullPage",
+
+    "main" : [
+    {
+      "_dataUrl" : "/modules/promo/super-promo-no-bullets.json"
+    }
+    ]
+}
