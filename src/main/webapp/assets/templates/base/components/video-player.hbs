@@ -54,8 +54,12 @@
 
                     {{#if kaltura}}
                         <div class="video-player-iframe-wrapper {{#with aspectRatio}}aspect-{{aspectRatio}}{{/with}}">
-                            <iframe src="{{src}}{{#with querystring}}?{{render this}}{{/with}}" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0"></iframe>
+                            <iframe src="{{src}}{{#with querystring}}?{{render this}}{{/with}}" allowfullscreen frameborder="0"></iframe>
                         </div>
+                    {{/if}}
+
+                    {{#if mpx}}
+                        <iframe src="{{src}}" frameBorder="0" seamless="seamless" allowFullScreen></iframe>
                     {{/if}}
 
                 </div> {{!-- end of column --}}
