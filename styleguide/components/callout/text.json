@@ -1,5 +1,5 @@
 {
-    
+
     "_template" : "/assets/templates/base/components/callout",
 
     "displayOptions" : {
@@ -26,8 +26,6 @@
         },
         {
             "_template" : "/assets/templates/base/common/link",
-
-            "cssClass" : "tag",
 
             "extraAttributes" : {
               "_template" : "/assets/templates/base/common/attributes",
