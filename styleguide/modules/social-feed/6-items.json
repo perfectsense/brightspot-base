@@ -1,71 +1,37 @@
 {
+    "_template": "/assets/base/SocialFeed",
 
-    "_template" : "/assets/base/SocialFeed",
+    "title": "{{words}}",
 
-    "displayOptions" : {
-        "horizontalSplit" : "third"
-    },
-
-    "heading" : {
-        "_template" : "/assets/base/ModuleGroup",
-
-        "modules" : [
-            {
-                "_template" : "/assets/base/globals/link",
-
-                "extraAttributes" : {
-                    "_template" : "/assets/base/globals/attributes",
-                    "href"  : "link"
-                },
-
-                "body" : {
-                    "_template" : "/assets/base/globals/text",
-                    "text" : "{{words(5)}}"
-                }
-            },
-            {
-
-                "_template" : "/assets/base/globals/text",
-
-                "displayOptions" : {
-                    "modifierClass" : "SocialFeed-subtitle"
-                },
-
-                "text" : "{{words(20)}}"
-
-            }
-        ]
-    },
-
-    "items" : [
+    "items": [
         {
             "_template": "/assets/base/SocialFeedItem",
 
-            "_repeat" : 3,
+            "_repeat": 3,
 
-            "feedType" : "facebook",
+            "feedType": "facebook",
 
-            "profilePhoto" : {
-                "_template" : "/assets/base/globals/link",
+            "profilePhoto": {
+                "_template": "/assets/base/globals/link",
 
-                "extraAttributes" : {
-                    "_template" : "/assets/base/globals/attributes",
+                "extraAttributes": {
+                    "_template": "/assets/base/globals/attributes",
                     "href"  : "link"
                 },
 
-                "body" : {
+                "body": {
 
-                    "_template" : "/assets/base/globals/image",
+                    "_template": "/assets/base/globals/image",
 
-                    "extraAttributes" : {
-                        "_template" : "/assets/base/globals/attributes",
-                        "alt" : "{{words([ 1, 2 ])}}",
-                        "src" : "{{image(50, 50)}}"
+                    "extraAttributes": {
+                        "_template": "/assets/base/globals/attributes",
+                        "alt": "{{words([ 1, 2 ])}}",
+                        "src": "{{image(50, 50)}}"
                     }
                 }
             },
 
-            "profileName" : {
+            "profileName": {
                 "_template": "/assets/base/globals/link",
                 "extraAttributes": {
                     "href": "link-me",
@@ -77,7 +43,7 @@
                 }
             },
 
-            "profileUser" : {
+            "profileUser": {
                 "_template": "/assets/base/globals/link",
                 "extraAttributes": {
                     "href": "link-me",
@@ -89,14 +55,14 @@
                 }
             },
 
-            "socialFeedBody" : [
+            "socialFeedBody": [
                 {
-                    "_template" : "/assets/base/globals/image",
+                    "_template": "/assets/base/globals/image",
 
-                    "extraAttributes" : {
-                        "_template" : "/assets/base/globals/attributes",
-                        "alt" : "{{words([ 1, 2 ])}}",
-                        "src" : "{{image(80, 80)}}"
+                    "extraAttributes": {
+                        "_template": "/assets/base/globals/attributes",
+                        "alt": "{{words([ 1, 2 ])}}",
+                        "src": "{{image(80, 80)}}"
                     }
                 },
                 {
@@ -105,15 +71,15 @@
                 }
             ],
 
-            "publishDate" : {
+            "publishDate": {
                 "_template": "/assets/base/globals/text",
                 "text": "Oct 24 5:30pm"
             },
 
-            "publishLinks" : [
+            "publishLinks": [
                 {
                     "_template": "/assets/base/globals/link",
-                    "cssClass" : "icon-share",
+                    "cssClass": "icon-share",
                     "extraAttributes": {
                         "href": "share-link",
                         "_template": "/assets/base/globals/attributes"
@@ -121,7 +87,7 @@
                 },
                 {
                     "_template": "/assets/base/globals/link",
-                    "cssClass" : "icon-thumbs-up",
+                    "cssClass": "icon-thumbs-up",
                     "extraAttributes": {
                         "href": "retweet-link",
                         "_template": "/assets/base/globals/attributes"
@@ -129,7 +95,7 @@
                 },
                 {
                     "_template": "/assets/base/globals/link",
-                    "cssClass" : "icon-comment",
+                    "cssClass": "icon-comment",
                     "extraAttributes": {
                         "href": "star-link",
                         "_template": "/assets/base/globals/attributes"
@@ -140,31 +106,31 @@
         {
             "_template": "/assets/base/SocialFeedItem",
 
-            "_repeat" : 3,
+            "_repeat": 3,
 
-            "feedType" : "twitter",
+            "feedType": "twitter",
 
-            "profilePhoto" : {
-                "_template" : "/assets/base/globals/link",
+            "profilePhoto": {
+                "_template": "/assets/base/globals/link",
 
-                "extraAttributes" : {
-                    "_template" : "/assets/base/globals/attributes",
+                "extraAttributes": {
+                    "_template": "/assets/base/globals/attributes",
                     "href"  : "link"
                 },
 
-                "body" : {
+                "body": {
 
-                    "_template" : "/assets/base/globals/image",
+                    "_template": "/assets/base/globals/image",
 
-                    "extraAttributes" : {
-                        "_template" : "/assets/base/globals/attributes",
-                        "alt" : "{{words([ 1, 2 ])}}",
-                        "src" : "{{image(50, 50)}}"
+                    "extraAttributes": {
+                        "_template": "/assets/base/globals/attributes",
+                        "alt": "{{words([ 1, 2 ])}}",
+                        "src": "{{image(50, 50)}}"
                     }
                 }
             },
 
-            "profileName" : {
+            "profileName": {
                 "_template": "/assets/base/globals/link",
                 "extraAttributes": {
                     "href": "link-me",
@@ -176,22 +142,22 @@
                 }
             },
 
-            "socialFeedBody" : [
+            "socialFeedBody": [
                 {
                     "_template": "/assets/base/globals/html",
                     "text": "{{words([ 20, 30 ])}}"
                 }
             ],
 
-            "publishDate" : {
+            "publishDate": {
                 "_template": "/assets/base/globals/text",
                 "text": "Oct 24 5:30pm"
             },
 
-            "publishLinks" : [
+            "publishLinks": [
                 {
                     "_template": "/assets/base/globals/link",
-                    "cssClass" : "icon-share",
+                    "cssClass": "icon-share",
                     "extraAttributes": {
                         "href": "share-link",
                         "_template": "/assets/base/globals/attributes"
@@ -199,7 +165,7 @@
                 },
                 {
                     "_template": "/assets/base/globals/link",
-                    "cssClass" : "icon-retweet",
+                    "cssClass": "icon-retweet",
                     "extraAttributes": {
                         "href": "retweet-link",
                         "_template": "/assets/base/globals/attributes"
@@ -207,7 +173,7 @@
                 },
                 {
                     "_template": "/assets/base/globals/link",
-                    "cssClass" : "icon-star",
+                    "cssClass": "icon-star",
                     "extraAttributes": {
                         "href": "star-link",
                         "_template": "/assets/base/globals/attributes"
@@ -219,13 +185,9 @@
 
     "cta": {
         "_template": "/assets/base/globals/link",
+        "body": "{{words}}",
         "extraAttributes": {
-            "href": "link-me",
-            "_template": "/assets/base/globals/attributes"
-        },
-        "body": {
-            "_template": "/assets/base/globals/text",
-            "text": "{{words(2)}}"
+            "href": "#"
         }
     }
 }

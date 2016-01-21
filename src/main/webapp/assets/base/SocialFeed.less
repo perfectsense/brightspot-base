@@ -2,16 +2,30 @@
     &:extend(.Module all);
 
     &-content {
-        &:extend(.row all);
         list-style: none;
 
         &-item {
-            &:extend(.column-one-third all);
-            padding-bottom: 20px;
+            margin-bottom: 20px;
         }
     }
 
     &-cta {
         padding-top: 0;
+    }
+}
+
+@media @mq-sm {
+    .SocialFeed {
+        &-content {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -10px -10px 10px -10px;
+
+            &-item {
+                flex: 0 0 (100% / 3);
+                margin-bottom: 0;
+                padding: 10px;
+            }
+        }
     }
 }
