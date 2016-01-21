@@ -20,7 +20,7 @@
   },
   "navLinks": [
     {
-    "_repeat" : 5,
+    "_repeat" : 4,
       "_template": "/assets/templates/base/common/link",
       "extraAttributes": {
         "href": "link-me",
