@@ -1,4 +1,7 @@
-### ThePlatform's MPX player.
+### ThePlatform's MPX player
+
+[PDK Docs](http://help.theplatform.com/display/pdk/)
+
 ### Dev Note:
 In order to render a video player that can be scaled to the size of its container, the `src` must contain `/embed/select/` between the "PlayerPID" and the video's "assetID"
 So, a URL like this:
