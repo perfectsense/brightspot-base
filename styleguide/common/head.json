@@ -28,7 +28,7 @@
         "_template": "/assets/templates/base/common/icon",
         "extraAttributes": {
           "rel": "shortcut icon",
-          "href": "/favicon.ico"
+          "href": "/assets/images/favicon.ico"
         }
       }
     ],
