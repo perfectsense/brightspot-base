@@ -22,11 +22,11 @@
     "src" : "https://www.youtube.com/embed/dQw4w9WgXcQ",
 
     "tags" : {
-        "_dataUrl": "/elements/tags/tag-list.json"
+        "_dataUrl": "/modules/tags/tag-list.json"
     },
 
     "sharing" : {
-        "_dataUrl": "/elements/social-share/share-monochrome.json"
+        "_dataUrl": "/modules/social-share/share.json"
     }
 
 }

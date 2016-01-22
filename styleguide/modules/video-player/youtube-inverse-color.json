@@ -34,7 +34,7 @@
     },
 
     "sharing" : {
-        "_dataUrl": "/elements/social-share/share-monochrome.json"
+        "_dataUrl": "/modules/social-share/share.json"
     }
 
 }

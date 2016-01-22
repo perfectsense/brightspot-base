@@ -38,7 +38,7 @@
                 }
             ],
             "sharing" : {
-                "_dataUrl" : "/elements/social-share/share.json"
+                "_dataUrl" : "/modules/social-share/share.json"
             }
         }
     ],
