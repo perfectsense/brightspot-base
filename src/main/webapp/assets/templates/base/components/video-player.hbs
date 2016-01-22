@@ -53,8 +53,14 @@
                     {{/if}}
 
                     {{#if kaltura}}
-                        <div class="video-player-iframe-wrapper {{#with aspectRatio}}aspect-{{aspectRatio}}{{/with}}">
-                            <iframe src="{{src}}{{#with querystring}}?{{render this}}{{/with}}" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0"></iframe>
+                        <div class="video-player-iframe-wrapper {{#with aspectRatio}}aspect-{{this}}{{/with}}">
+                            <iframe src="{{src}}{{#with querystring}}?{{render this}}{{/with}}" allowfullscreen frameborder="0"></iframe>
+                        </div>
+                    {{/if}}
+
+                    {{#if mpx}}
+                        <div class="video-player-iframe-wrapper {{#with aspectRatio}}aspect-{{this}}{{/with}}">
+                            <iframe src="{{src}}" seamless="true" allowfullscreen frameborder="0"></iframe>
                         </div>
                     {{/if}}
 

@@ -1,0 +1,6 @@
+{
+  "_template": "/assets/templates/base/components/video-player",
+  "mpx": true,
+  "aspectRatio" : "16x9",
+  "src": "http://player.theplatform.com/p/1X3jUC/yh5o5S5hrJ4c/embed/select/vxF7_26USdi6?form=html"
+}
