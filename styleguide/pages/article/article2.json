@@ -21,6 +21,7 @@
           "image": "{{image(200,200)}}",
           "breadcrumbs": [
               {
+                  "_template": "/assets/base/globals/text",
                   "_repeat": "4",
                   "title": "{{words(3)}}"
               }
