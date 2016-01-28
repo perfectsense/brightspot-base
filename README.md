@@ -45,9 +45,9 @@ Run `npm run styleguide` from the root directory
 
 The styleguide will then be accessible at http://localhost:3000. You can pass options to the styleguide to change host or port for running multiple styleguides.
 
-`--port=XXXX` allows you to run multiple styleguides on your localhost
+`npm run styleguide -- --port=XXXX` allows you to run multiple styleguides on your localhost
 
-`--host=YOUR IP` allows you to access the styleguide via your http://YOURIP:3000 which can be accessed by others on the network or via a virtual machine for localized IE testing
+`npm run styleguide -- --host=YOUR IP` allows you to access the styleguide via your http://YOURIP:3000 which can be accessed by others on the network or via a virtual machine for localized IE testing
 
 System requirements
 -------------------
