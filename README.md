@@ -20,8 +20,16 @@ Writing Handlebar Templates
 
 Building
 --------
+In most projects, you can run `mvn clean install` to generate a target directory. The target directory is needed by the styleguide server, as it combines files from Bower, Brightspot Base and your project source.
+
+
 Front End
-*   To run and see Base itsef, run `npm install` and then `grunt`. This will install any node dependencies and then grunt will pull down any bower dependencies and compile CSS and transpile JS
+*  To run and see Base itself, run `mvn clean install` at the root directory. This will install any node dependencies and then grunt will pull down any bower dependencies and compile LESS and transpile JS. Maven will only need to run again if new Bower or NPM dependencies are added.
+*  To start the styleguide, run `npm run styleguide` and view it at http://localhost:3000. (See also 'Running the local styleguide server' below)
+*  To administer the default build task, run `npm run grunt`
+*  To automatically run a new build when changes are detected, run `npm run grunt watch`
+
+
 
 How to use it in projects
 -------------
