@@ -33,7 +33,7 @@ Run `karma start spec/karma.conf.js`
 
 Running the local styleguide server
 -----------------------------------
-Run `styleguide` from the root directory
+Run `npm run styleguide` from the root directory
 
 The styleguide will then be accessible at http://localhost:3000. You can pass options to the styleguide to change host or port for running multiple styleguides.
 
