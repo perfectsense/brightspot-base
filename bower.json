@@ -7,7 +7,7 @@
     "bsp-autosubmit" : "perfectsense/brightspot-js-autosubmit#^2.0.0",
     "bsp-carousel": "perfectsense/brightspot-js-carousel#^1.2.0",
     "bsp-feature-detect": "perfectsense/brightspot-js-feature-detect#^1.0.0",
-    "bsp-infinite-content": "perfectsense/brightspot-js-infinite-content#0.0.6",
+    "bsp-infinite-content": "perfectsense/brightspot-js-infinite-content#^1.0.1",
     "bsp-lazyimage": "perfectsense/brightspot-js-lazyimage#^1.0.1",
     "bsp-modal": "perfectsense/brightspot-js-modal#0.0.1",
     "bsp-share": "perfectsense/brightspot-js-share#^3.0.2",
