@@ -1,14 +1,3 @@
 {
-  "_template": "/assets/base/globals/page",
-
-  "head" : {
-        "_dataUrl" : "/common/head.json"
-    },
-
-  "body": {
-    "_template": "/assets/base/globals/body-embed",
-    "content" : {
-        "_delegate": true
-    }
-  }
+  "_template": "/assets/base/globals/page"
 }
