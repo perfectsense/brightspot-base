@@ -19,7 +19,7 @@
     "vex": "2.3.2",
     "normalize-css": "necolas/normalize.css#^3.0.3"
   },
-  "main": "",
+  "main": "src/main/webapp/assets/main.js",
   "ignore": [
     "**/.*",
     "node_modules",
