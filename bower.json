@@ -1,6 +1,6 @@
 {
   "name": "brightspot-base",
-  "version": "1.0.2",
+  "version": "3.0.0",
   "homepage": "https://github.com/perfectsense/brightspot-base",
   "dependencies": {
     "bsp-ajax-links": "perfectsense/brightspot-js-ajax-links#0.0.5",
