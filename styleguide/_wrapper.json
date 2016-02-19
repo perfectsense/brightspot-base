@@ -1,3 +1,9 @@
 {
-  "_template": "/assets/base/globals/page"
+  "_template": "/assets/base/globals/Page",
+  "head": {
+    "_dataUrl": "/_head.json"
+  },
+  "body": {
+    "_delegate": true
+  }
 }

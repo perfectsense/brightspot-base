@@ -1,0 +1,34 @@
+{
+  "_template": "/assets/base/Article",
+  "imageUrl": "{{image(400,300)}}",
+  "imageTitle": "{{words(3)}}",
+  "slug": "{{words([4,10])}}",
+  "headline": "{{words([4,10])}}",
+  "subHeadline": "{{words([6,12])}}",
+  "authors": [
+    {
+      "_dataUrl": "/components/author/author-image.json"
+    },
+    {
+      "_dataUrl": "/components/author/author-linked.json"
+    }
+  ],
+  "datePublished": "February 19, 2016",
+  "datePublishedISO": "2016-02-19T16:43:22+00:00",
+  "sections": [
+    {
+      "_repeat": 3,
+      "_template": "/assets/base/globals/Html",
+      "text": "{{paragraphs([3,10])}}"
+    }
+  ],
+  "navigation": [
+    {
+        "_dataUrl": "/components/reading-list/reading-list.json"
+    }
+  ],
+  "relatedContent": "",
+  "breadcrumbs": [],
+  "tags": [],
+  "comments": ""
+}

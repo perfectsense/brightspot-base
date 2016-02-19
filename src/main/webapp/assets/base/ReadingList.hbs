@@ -1,0 +1,10 @@
+<nav class="ReadingList">
+  {{#with headline}}
+    <div class="ReadingList-headline">{{this}}</div>
+  {{/with}}
+  <ol class="ReadingList-items">
+    {{#each items}}
+        {{this}}
+    {{/each}}
+  </ol>
+</nav>

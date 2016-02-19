@@ -1,0 +1,80 @@
+<article class="Article" itemscope="" itemtype="http://schema.org/Article"{{extraAttributes}}>
+    <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="{{this.canonicalUrl}}"/>
+
+    {{#if imageUrl}}
+        <div class="Article-image">
+            <img src="{{imageUrl}}" title="{{imageTitle}}" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" />
+        </div>
+    {{/if}}
+
+    {{#if breadcrumbs}}
+        <div class="Article-breadcrumbs">
+            <ol class="Article-breadcrumbs-list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                {{#each breadcrumbs}}
+                    <li class="Article-breadcrumbs-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        {{this.title}}
+                    </li>
+                {{/each}}
+            </ol>
+        </div>
+    {{/if}}
+
+    {{#with slug}}
+        <div class="Article-slug">
+            {{this}}
+        </div>
+    {{/with}}
+
+    {{#with headline}}
+        <div class="Article-headline" itemprop="headline">
+            {{this}}
+        </div>
+    {{/with}}
+
+    {{#with subHeadline}}
+        <div class="Article-subHeadline">
+            {{{this}}}
+        </div>
+    {{/with}}
+
+    <div class="Article-byline">
+        {{#if authors}}
+            <div class="Article-byline-authors">
+                {{#each authors}}{{this}}{{/each}}
+            </div>
+        {{/if}}
+        {{#if datePublished}}<time class="Article-datePublished" itemprop="datePublished" dateTime="{{datePublishedISO}}">{{datePublished}}</time>{{/if}}
+    </div>
+
+    <div class="Article-body">
+        {{#each sections}}
+            <section class="Article-body-section">{{this}}</section>
+        {{/each}}
+    </div>
+
+    {{#with tags}}
+        <div class="Article-tags">
+            {{this}}
+        </div>
+    {{/with}}
+
+    {{!-- Also referred to as "ReadingList"--}}
+    {{#with navigation}}
+        <div class="Article-navigation">
+            {{this}}
+        </div>
+    {{/with}}
+
+    {{#with relatedContent}}
+        <section class="Article-related-content">
+            {{this}}
+        </section>
+    {{/with}}
+
+    {{#with comments}}
+        <section class="Article-comments">
+            {{this}}
+        </section>
+    {{/with}}
+
+</article>

@@ -1,0 +1,33 @@
+<div class="Author" itemscope="" itemprop="author" itemtype="http://schema.org/Person">
+
+    {{#with prefix}}
+        <div class="Author-prefix">{{this}}</div>
+    {{/with}}
+
+    {{#with image}}
+        <div class="Author-image">
+            {{#if ../url}}<a href="{{../url}}" target="{{../linkTarget}}">{{/if}}
+              <img src="{{this}}" itemprop="image" />
+            {{#if ../url}}</a>{{/if}}
+        </div>
+    {{/with}}
+
+    {{#with name}}
+        <div class="Author-name" itemprop="name">
+            {{#if ../url}}<a href="{{../url}}" target="{{../linkTarget}}">{{/if}}
+              {{this}}{{#if ../affiliation}},{{/if}}
+            {{#if ../url}}</a>{{/if}}
+        </div>
+    {{/with}}
+
+    {{#with affiliation}}
+        <div class="Author-affiliation" itemprop="affiliation">
+            {{#if ../affiliationUrl}}<a href="{{../affiliationUrl}}" target="{{../affiliationLinkTarget}}">{{/if}}{{this}}{{#if ../affiliationUrl}}</a>{{/if}}
+        </div>
+    {{/with}}
+
+    {{#with suffix}}
+        <div class="Author-suffix">{{this}}</div>
+    {{/with}}
+
+</div>
