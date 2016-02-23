@@ -17,7 +17,7 @@
   ],
   "styles": [
     {
-      "_template": "/assets/base/globals/Style",
+      "_template": "/assets/base/globals/ExternalStyle",
       "href": "/assets/main.min.css"
     }
   ]
