@@ -1,11 +1,11 @@
 <article class="Article" itemscope="" itemtype="http://schema.org/Article"{{extraAttributes}}>
     <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="{{this.canonicalUrl}}"/>
 
-    {{#if imageUrl}}
-        <div class="Article-image">
-            <img src="{{imageUrl}}" title="{{imageTitle}}" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" />
+    {{#each lead}}
+        <div class="Article-lead">
+            {{this}}
         </div>
-    {{/if}}
+    {{/each}}
 
     {{#if breadcrumbs}}
         <div class="Article-breadcrumbs">

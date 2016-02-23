@@ -1,5 +1,10 @@
 {
   "_template": "/assets/base/Article",
+  "lead": [
+      {
+          "_dataUrl": "/components/article/lead-image.json"
+      }
+  ],
   "imageUrl": "{{image(400,300)}}",
   "imageTitle": "{{words(3)}}",
   "slug": "{{words([4,10])}}",
