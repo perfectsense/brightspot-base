@@ -27,11 +27,6 @@
       "text": "{{paragraphs([3,10])}}"
     }
   ],
-  "navigation": [
-    {
-        "_dataUrl": "/components/reading-list/reading-list.json"
-    }
-  ],
   "relatedContent": "",
   "breadcrumbs": [],
   "tags": [],
