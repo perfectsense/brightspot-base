@@ -43,8 +43,9 @@
                 {{#each authors}}{{this}}{{/each}}
             </div>
         {{/if}}
-        {{#if datePublished}}<time class="Article-datePublished" itemprop="datePublished" dateTime="{{datePublishedISO}}">{{datePublished}}</time>{{/if}}
     </div>
+
+    {{#if datePublished}}<time class="Article-datePublished" itemprop="datePublished" dateTime="{{datePublishedISO}}">{{datePublished}}</time>{{/if}}
 
     <div class="Article-body">
         {{#each sections}}
