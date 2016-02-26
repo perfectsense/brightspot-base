@@ -1,12 +1,6 @@
 <article class="Article" itemscope="" itemtype="http://schema.org/Article"{{extraAttributes}}>
     <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="{{this.canonicalUrl}}"/>
 
-    {{#each lead}}
-        <div class="Article-lead">
-            {{this}}
-        </div>
-    {{/each}}
-
     {{#if breadcrumbs}}
         <div class="Article-breadcrumbs">
             <ol class="Article-breadcrumbs-list" itemscope itemtype="http://schema.org/BreadcrumbList">
@@ -46,6 +40,18 @@
     </div>
 
     {{#if datePublished}}<time class="Article-datePublished" itemprop="datePublished" dateTime="{{datePublishedISO}}">{{datePublished}}</time>{{/if}}
+
+    {{#each socialSharing}}
+        <div class="Article-socialSharing">
+            {{this}}
+        </div>
+    {{/each}}
+
+    {{#each lead}}
+        <div class="Article-lead">
+            {{this}}
+        </div>
+    {{/each}}
 
     <div class="Article-body">
         {{#each sections}}

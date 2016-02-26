@@ -1,9 +1,10 @@
 {
   "_template": "/assets/base/Article",
   "lead": [
-      {
-          "_dataUrl": "/components/article/lead-image.json"
-      }
+    {
+      "_template": "/assets/base/globals/Image",
+      "sourceUrl": "{{image(900,450)}}"
+    }
   ],
   "imageUrl": "{{image(400,300)}}",
   "imageTitle": "{{words(3)}}",
@@ -12,10 +13,11 @@
   "subHeadline": "{{words([6,12])}}",
   "authors": [
     {
-      "_dataUrl": "/components/author/author-image.json"
-    },
-    {
-      "_dataUrl": "/components/author/author-linked.json"
+      "_template": "/assets/base/Author",
+      "prefix": "by",
+      "url": "http://www.perfectsensedigital.com",
+      "image": "{{image(70,70)}}",
+      "name": "{{name}}"
     }
   ],
   "datePublished": "February 19, 2016",
@@ -30,5 +32,6 @@
   "relatedContent": "",
   "breadcrumbs": [],
   "tags": [],
-  "comments": ""
+  "comments": "",
+  "socialSharing": []
 }

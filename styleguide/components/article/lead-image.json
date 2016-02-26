@@ -1,6 +1,0 @@
-{
-  "_template": "/assets/base/LeadImage",
-  "url": "{{image(200,100)}}",
-  "title": "{{words(3)}}",
-  "headline": "{{words([3,12])}}"
-}
