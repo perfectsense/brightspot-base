@@ -31,15 +31,11 @@
         </div>
     {{/with}}
 
-    <div class="Article-byline">
-        {{#if authors}}
-            <div class="Article-byline-authors">
-                {{#each authors}}{{this}}{{/each}}
-            </div>
-        {{/if}}
-    </div>
-
-    {{#if datePublished}}<time class="Article-datePublished" itemprop="datePublished" dateTime="{{datePublishedISO}}">{{datePublished}}</time>{{/if}}
+    {{#with byline}}
+        <div class="Article-byline">
+            {{this}}
+        </div>
+    {{/with}}
 
     {{#each socialSharing}}
         <div class="Article-socialSharing">
@@ -47,11 +43,11 @@
         </div>
     {{/each}}
 
-    {{#each lead}}
+    {{#with lead}}
         <div class="Article-lead">
             {{this}}
         </div>
-    {{/each}}
+    {{/with}}
 
     <div class="Article-body">
         {{#each sections}}
@@ -65,20 +61,14 @@
         </div>
     {{/with}}
 
-    {{#with relatedContent}}
-        <section class="Article-related-content">
-            {{this}}
-        </section>
-    {{/with}}
-
-    {{#with promotedContent}}
-        <section class="Article-promoted-content">
-            {{this}}
-        </section>
-    {{/with}}
-
     {{#with comments}}
         <section class="Article-comments">
+            {{this}}
+        </section>
+    {{/with}}
+
+    {{#with relatedContent}}
+        <section class="Article-related-content">
             {{this}}
         </section>
     {{/with}}
