@@ -1,8 +1,8 @@
 // Article
-@space-right-rail-width: 340px;
-@space-body-copy-offset: 120px;
-
 .Article {
+    @space-right-rail-width: 340px;
+    @space-body-copy-offset: 120px;
+
     position: relative;
     display: flex;
     flex-flow: column;
@@ -43,18 +43,6 @@
         }
     }
 
-    &-breadcrumbs {
-        order: 6;
-    }
-
-    &-breadcrumbs-list {
-        order: 7;
-    }
-
-    &-breadcrumbs-list-item {
-
-    }
-
     &-body {
         order: 8;
         font-size: 16px;
@@ -63,6 +51,12 @@
 
     &-body-section {
         margin: 2rem 0;
+
+        .Enhancement {
+            &[data-alignment = "right"]{
+                margin-right: -@space-body-copy-offset;
+            }
+        }
     }
 
     &-tags {
