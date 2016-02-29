@@ -4,30 +4,44 @@
   "datePublishedISO": "2016-02-19T16:43:22+00:00",
   "lead": {
     "_template": "/assets/base/globals/Image",
-    "sourceUrl": "{{image(900,450)}}"
+    "srcAttr": "{{image(900,450)}}"
   },
   "imageUrl": "{{image(400,300)}}",
   "imageTitle": "{{words(3)}}",
   "slug": "{{words([4,10])}}",
-  "headline": "{{words([4,10])}}",
-  "subHeadline": "{{words([6,12])}}",
+  "headline": "{{words([10,15])}}",
+  "subHeadline": "{{paragraphs(1)}}",
   "byline": [
-      {
-        "_template": "/assets/base/Author",
-        "prefix": "by",
-        "url": "http://www.perfectsensedigital.com",
-        "image": "{{image(70,70)}}",
-        "name": "{{name}}"
+    {
+      "_template": "/assets/base/Author",
+      "prefix": "by",
+      "url": "http://www.perfectsensedigital.com",
+      "image": "{{image(36,36)}}",
+      "name": "{{name}}"
     },
     {
-        "_template": "/assets/base/PublishDate",
-        "readableFormat": "March 10, 2009",
-        "isoFormat": ""
+      "_template": "/assets/base/PublishDate",
+      "readableFormat": "March 10, 2009",
+      "isoFormat": ""
     }
   ],
   "sections": [
     {
-      "_repeat": 3,
+      "_template": "/assets/base/globals/Html",
+      "text": "{{paragraphs([3,10])}}"
+    },
+    {
+      "_template": "/assets/base/Enhancement",
+      "content": {
+          "_template": "/assets/base/globals/Image",
+          "srcAttr": "{{image(260,360)}}"
+      }
+    },
+    {
+      "_template": "/assets/base/globals/Html",
+      "text": "{{paragraphs([3,10])}}"
+    },
+    {
       "_template": "/assets/base/globals/Html",
       "text": "{{paragraphs([3,10])}}"
     }

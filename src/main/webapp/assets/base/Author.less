@@ -1,21 +1,28 @@
-.Author {
-    &-prefix {
+@space-between: 1rem;
 
+.Author {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &-prefix {
+        order: 1;
     }
 
     &-image {
-
+        border-radius: 100%;
+        margin-right: @space-between;
     }
 
     &-name {
-
+        order: 2;
     }
 
     &-affiliation {
-
+        order: 3;
     }
 
     &-suffix {
-
+        order: 4;
     }
 }
