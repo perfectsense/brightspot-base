@@ -1,0 +1,12 @@
+<div class="PromoList">
+    {{#with headline}}
+        <div class="PromoList-headline">{{this}}</div>
+    {{/with}}
+    <ul class="PromoList-items">
+        {{#each promos}}
+        <li class="PromoList-items-item">
+            {{this}}
+        </li>
+        {{/each}}
+    </ul>
+</div>

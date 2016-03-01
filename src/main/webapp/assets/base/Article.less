@@ -1,6 +1,6 @@
 // Article
 .Article {
-    @space-right-rail-width: 340px;
+    @space-rightRail-width: 340px;
     @space-body-copy-offset: 120px;
 
     position: relative;
@@ -22,7 +22,7 @@
     &-subHeadline {
         order: 3;
         &:extend(.SubHeadline all);
-        margin-right: @space-right-rail-width;
+        margin-right: @space-rightRail-width;
     }
 
     &-byline {
@@ -46,7 +46,7 @@
     &-body {
         order: 8;
         font-size: 16px;
-        margin-right: @space-right-rail-width + @space-body-copy-offset;
+        margin-right: @space-rightRail-width + @space-body-copy-offset;
     }
 
     &-body-section {
@@ -69,5 +69,25 @@
 
     &-relatedContent {
         order: 11;
+        margin: 1rem 0;
+        padding-top: 1rem;
+        border-top: solid 1px #DDD;
+        display: flex;
+        flex-direction: row;
+
+        .PromoList {
+            width: 25%;
+
+            &:first-child {
+                width: 75%;
+                &-headline {
+                    width: 100%;
+                }
+                .PromoList-items-item {
+                    width: 50%;
+                    float: left;
+                }
+            }
+        }
     }
 }
