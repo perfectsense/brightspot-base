@@ -1,95 +1,95 @@
 {
-  "_template": "/assets/base/main/Article",
-  "datePublished": "February 19, 2016",
-  "datePublishedISO": "2016-02-19T16:43:22+00:00",
-  "lead": {
-    "_template": "/assets/base/globals/Image",
-    "srcAttr": "{{image(900,450)}}"
-  },
-  "imageUrl": "{{image(400,300)}}",
-  "imageTitle": "{{words(3)}}",
-  "slug": "{{words([4,10])}}",
-  "headline": "{{words([10,15])}}",
-  "subHeadline": "{{paragraphs(1)}}",
-  "byline": [
-    {
-      "_template": "/assets/base/Author",
-      "prefix": "by",
-      "url": "http://www.perfectsensedigital.com",
-      "image": "{{image(36,36)}}",
-      "name": "{{name}}"
-    },
-    {
-      "_template": "/assets/base/PublishDate",
-      "readableFormat": "March 10, 2009",
-      "isoFormat": ""
-    }
-  ],
-  "sections": [
-    {
-      "_template": "/assets/base/globals/Html",
-      "text": "{{paragraphs([3,10])}}"
-    },
-    {
-      "_template": "/assets/base/Enhancement",
-      "alignment": "left",
-      "content": {
+    "_template": "/assets/base/main/Article",
+    "datePublished": "February 19, 2016",
+    "datePublishedISO": "2016-02-19T16:43:22+00:00",
+    "lead": {
         "_template": "/assets/base/globals/Image",
-        "srcAttr": "{{image(260,360)}}"
-      }
+        "srcAttr": "{{image(900,450)}}"
     },
-    {
-      "_template": "/assets/base/globals/Html",
-      "text": "<h3>Subheadline</h3>"
-    },
-    {
-      "_template": "/assets/base/globals/Html",
-      "text": "{{paragraphs([3,10])}}"
-    },
-    {
-      "_template": "/assets/base/Enhancement",
-      "alignment": "right",
-      "content": {
-        "_template": "/assets/base/globals/Image",
-        "srcAttr": "{{image(260,360)}}"
-      }
-    },
-    {
-      "_template": "/assets/base/globals/Html",
-      "text": "{{paragraphs([3,10])}}"
-    },
-    {
-      "_template": "/assets/base/globals/Html",
-      "text": "{{paragraphs([3,10])}}"
-    }
-  ],
-  "tags": "",
-  "comments": "",
-  "relatedContent": [
-      {
-          "_template": "/assets/base/promos/PromoList",
-          "headline": "Related Content",
-          "promos": [
-              {
-                  "_repeat": 4,
-                  "_template": "/assets/base/promos/Promo",
-                  "headline": "{{words([8,12])}}",
-                  "imageUrl": "{{image(40,40)}}"
-              }
-          ]
-      },
-      {
-          "_template": "/assets/base/promos/PromoList",
-          "headline": "Promoted Content",
-          "promos": [
-              {
-                  "_repeat": 2,
-                  "_template": "/assets/base/promos/Promo",
-                  "headline": "{{words([8,12])}}",
-                  "imageUrl": "{{image(40,40)}}"
-              }
-          ]
-      }
-  ],
-  "socialSharing": ""
+    "imageUrl": "{{image(400,300)}}",
+    "imageTitle": "{{words(3)}}",
+    "slug": "{{words([4,10])}}",
+    "headline": "{{words([10,15])}}",
+    "subHeadline": "{{paragraphs(1)}}",
+    "byline": [
+        {
+            "_template": "/assets/base/Author",
+            "prefix": "by",
+            "url": "http://www.perfectsensedigital.com",
+            "image": "{{image(36,36)}}",
+            "name": "{{name}}"
+        },
+        {
+            "_template": "/assets/base/PublishDate",
+            "readableFormat": "March 10, 2009",
+            "isoFormat": ""
+        }
+    ],
+    "sections": [
+        {
+            "_template": "/assets/base/globals/Html",
+            "text": "{{paragraphs([3,10])}}"
+        },
+        {
+            "_template": "/assets/base/Enhancement",
+            "alignment": "left",
+            "content": {
+                "_template": "/assets/base/globals/Image",
+                "srcAttr": "{{image(260,360)}}"
+            }
+        },
+        {
+            "_template": "/assets/base/globals/Html",
+            "text": "<h3>Subheadline</h3>"
+        },
+        {
+            "_template": "/assets/base/globals/Html",
+            "text": "{{paragraphs([3,10])}}"
+        },
+        {
+            "_template": "/assets/base/Enhancement",
+            "alignment": "right",
+            "content": {
+                "_template": "/assets/base/globals/Image",
+                "srcAttr": "{{image(260,360)}}"
+            }
+        },
+        {
+            "_template": "/assets/base/globals/Html",
+            "text": "{{paragraphs([3,10])}}"
+        },
+        {
+            "_template": "/assets/base/globals/Html",
+            "text": "{{paragraphs([3,10])}}"
+        }
+    ],
+    "tags": "",
+    "comments": "",
+    "relatedContent": [
+        {
+            "_template": "/assets/base/promos/PromoList",
+            "headline": "Related Content",
+            "promos": [
+                {
+                    "_repeat": 4,
+                    "_template": "/assets/base/promos/Promo",
+                    "headline": "{{words([8,12])}}",
+                    "imageUrl": "{{image(40,40)}}"
+                }
+            ]
+        },
+        {
+            "_template": "/assets/base/promos/PromoList",
+            "headline": "Promoted Content",
+            "promos": [
+                {
+                    "_repeat": 2,
+                    "_template": "/assets/base/promos/Promo",
+                    "headline": "{{words([8,12])}}",
+                    "imageUrl": "{{image(40,40)}}"
+                }
+            ]
+        }
+    ],
+    "socialSharing": ""
 }
