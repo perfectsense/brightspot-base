@@ -1,32 +1,65 @@
 .Main {
+    display: flex;
+    flex-flow: column;
+
+    > *:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    &-breadcrumbs {
+        &:extend(.Main-breadcrumbs all);
+
+        order: 10000;
+    }
+
+    &-slug {
+        &:extend(.Main-slug all);
+
+        font-size: .5rem;
+        font-weight: bold;
+        order: 20000;
+    }
+
     &-headline {
         &:extend(.Main-headline all);
 
         font-size: 2rem;
-        line-height: 1.2;
+        order: 30000;
     }
 
     &-subHeadline {
         &:extend(.Main-subHeadline all);
 
-        font-size: 1rem;
-        line-height: 1.2;
+        order: 40000;
     }
 
     &-byline {
         &:extend(.Main-byline all);
 
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        order: 50000;
+    }
 
-        .PublishDate {
-            // render a separator when there's another component before the publish-date
-            &:not(:first-child) {
-                margin-left: .5rem;
-                padding-left: .5rem;
-                border-left: 1px solid #DDD;
-            }
-        }
+    &-tags {
+        &:extend(.Main-tags all);
+
+        order: 60000;
+    }
+
+    &-socialSharing {
+        &:extend(.Main-socialSharing all);
+
+        order: 70000;
+    }
+
+    &-comments {
+        &:extend(.Main-comments all);
+
+        order: 80000;
+    }
+
+    &-relatedContent {
+        &:extend(.Main-relatedContent all);
+
+        order: 90000;
     }
 }

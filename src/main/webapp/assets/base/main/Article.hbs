@@ -37,12 +37,6 @@
         </div>
     {{/with}}
 
-    {{#each socialSharing}}
-        <div class="Article-socialSharing">
-            {{this}}
-        </div>
-    {{/each}}
-
     {{#with lead}}
         <div class="Article-lead">
             {{this}}
@@ -60,6 +54,12 @@
             {{this}}
         </div>
     {{/with}}
+
+    {{#each socialSharing}}
+        <div class="Article-socialSharing">
+            {{this}}
+        </div>
+    {{/each}}
 
     {{#with comments}}
         <section class="Article-comments">
