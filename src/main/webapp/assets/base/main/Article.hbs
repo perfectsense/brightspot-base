@@ -1,5 +1,13 @@
 <article class="Article" itemprop="mainEntity" itemscope itemtype="http://schema.org/Article"{{extraAttributes}}>
 
+    {{#with datePublished}}
+        <meta itemprop="datePublished" content="{{this}}">
+    {{/with}}
+
+    {{#with dateModified}}
+        <meta itemprop="dateModified" content="{{this}}">
+    {{/with}}
+
     {{#with breadcrumbs}}
         <div class="Article-breadcrumbs">
             {{this}}
