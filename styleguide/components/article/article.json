@@ -38,8 +38,8 @@
 
     "sections": [
         {
-            "_template": "/assets/base/globals/Html",
-            "text": "{{paragraphs([3,10])}}"
+            "_template": "/assets/base/util/RawHtml",
+            "html": "{{paragraphs([3,10])}}"
         },
         {
             "_template": "/assets/base/Enhancement",
@@ -50,12 +50,12 @@
             }
         },
         {
-            "_template": "/assets/base/globals/Html",
-            "text": "<h3>Subheadline</h3>"
+            "_template": "/assets/base/util/RawHtml",
+            "html": "<h3>Subheadline</h3>"
         },
         {
-            "_template": "/assets/base/globals/Html",
-            "text": "{{paragraphs([3,10])}}"
+            "_template": "/assets/base/util/RawHtml",
+            "html": "{{paragraphs([3,10])}}"
         },
         {
             "_template": "/assets/base/Enhancement",
@@ -66,12 +66,12 @@
             }
         },
         {
-            "_template": "/assets/base/globals/Html",
-            "text": "{{paragraphs([3,10])}}"
+            "_template": "/assets/base/util/RawHtml",
+            "html": "{{paragraphs([3,10])}}"
         },
         {
-            "_template": "/assets/base/globals/Html",
-            "text": "{{paragraphs([3,10])}}"
+            "_template": "/assets/base/util/RawHtml",
+            "html": "{{paragraphs([3,10])}}"
         }
     ],
 

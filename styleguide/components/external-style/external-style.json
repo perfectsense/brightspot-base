@@ -16,7 +16,7 @@
     },
 
     "body": {
-        "_template": "/assets/base/globals/Html",
-        "text": "{{paragraphs}}"
+        "_template": "/assets/base/util/RawHtml",
+        "html": "{{paragraphs}}"
     }
 }
