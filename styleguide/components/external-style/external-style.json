@@ -1,0 +1,22 @@
+{
+    "_wrapper": false,
+    "_template": "/assets/base/page/StandardPage",
+
+    "head": {
+        "_template": "/assets/base/page/StandardHead",
+        "styles": [
+            {
+                "_template": "/assets/base/page/ExternalStyle",
+                "rel": "stylesheet",
+                "type": "text/css",
+                "media": "screen",
+                "href": "/assets/main.min.css"
+            }
+        ]
+    },
+
+    "body": {
+        "_template": "/assets/base/globals/Html",
+        "text": "{{paragraphs}}"
+    }
+}

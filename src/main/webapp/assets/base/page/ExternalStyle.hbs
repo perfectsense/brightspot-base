@@ -1,1 +1,1 @@
-<link media="{{media}}" rel="stylesheet" type="text/css" href="{{href}}">
+<link rel="{{#with rel}}{{this}}{{else}}stylesheet{{/with}}" type="{{#with type}}{{this}}{{else}}text/css{{/with}}"{{#with media}} media="{{this}}"{{/with}} href="{{href}}"{{extraAttributes}}>
