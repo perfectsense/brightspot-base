@@ -1,0 +1,25 @@
+{
+    "_wrapper": false,
+    "_template": "/assets/base/page/StandardPage",
+
+    "head": {
+        "_template": "/assets/base/page/StandardHead",
+        "metas": [
+            {
+                "_template": "/assets/base/page/Meta",
+                "httpEquiv": "Content-Language",
+                "content": "en"
+            },
+            {
+                "_template": "/assets/base/page/Meta",
+                "name": "description",
+                "content": "{{words}}"
+            }
+        ]
+    },
+
+    "body": {
+        "_template": "/assets/base/globals/Html",
+        "text": "{{paragraphs}}"
+    }
+}
