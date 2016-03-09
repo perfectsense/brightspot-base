@@ -4,12 +4,6 @@
     "datePublished": "2016-02-19T16:43:22+00:00",
     "dateModified": "2016-02-19T17:44:23+00:00",
 
-    "lead": {
-        "_template": "/assets/base/globals/Image",
-        "srcAttr": "{{image(900,450)}}"
-    },
-    "imageUrl": "{{image(400,300)}}",
-    "imageTitle": "{{words(3)}}",
     "breadcrumbs": {
         "_template": "/assets/base/Breadcrumbs",
         "items": [
@@ -21,6 +15,7 @@
     "slug": "{{words([4,10])}}",
     "headline": "{{words([10,15])}}",
     "subHeadline": "{{paragraphs(1)}}",
+
     "byline": [
         {
             "_template": "/assets/base/Author",
@@ -35,6 +30,12 @@
             "isoFormat": ""
         }
     ],
+
+    "lead": {
+        "_template": "/assets/base/globals/Image",
+        "srcAttr": "{{image(900,450)}}"
+    },
+
     "sections": [
         {
             "_template": "/assets/base/globals/Html",
@@ -73,8 +74,11 @@
             "text": "{{paragraphs([3,10])}}"
         }
     ],
+
     "tags": "",
+    "socialSharing": "",
     "comments": "",
+
     "relatedContent": [
         {
             "_template": "/assets/base/promos/PromoList",
@@ -100,6 +104,5 @@
                 }
             ]
         }
-    ],
-    "socialSharing": ""
+    ]
 }
