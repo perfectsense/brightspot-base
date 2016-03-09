@@ -1,5 +1,4 @@
-<article class="Article" itemscope="" itemtype="http://schema.org/Article"{{extraAttributes}}>
-    <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="{{this.canonicalUrl}}"/>
+<article class="Article" itemprop="mainEntity" itemscope itemtype="http://schema.org/Article"{{extraAttributes}}>
 
     {{#with breadcrumbs}}
         <div class="Article-breadcrumbs">
@@ -20,13 +19,13 @@
     {{/with}}
 
     {{#with subHeadline}}
-        <div class="Article-subHeadline">
+        <div class="Article-subHeadline" itemprop="alternativeHeadline">
             {{{this}}}
         </div>
     {{/with}}
 
     {{#with byline}}
-        <div class="Article-byline">
+        <div class="Article-byline" itemprop="author">
             {{this}}
         </div>
     {{/with}}
@@ -37,14 +36,14 @@
         </div>
     {{/with}}
 
-    <div class="Article-body">
+    <div class="Article-body" itemprop="articleBody">
         {{#each sections}}
-            <section class="Article-body-section">{{this}}</section>
+            <div class="Article-body-section">{{this}}</div>
         {{/each}}
     </div>
 
     {{#with tags}}
-        <div class="Article-tags">
+        <div class="Article-tags" itemprop="keywords">
             {{this}}
         </div>
     {{/with}}
@@ -56,15 +55,15 @@
     {{/each}}
 
     {{#with comments}}
-        <section class="Article-comments">
+        <div class="Article-comments">
             {{this}}
-        </section>
+        </div>
     {{/with}}
 
     {{#with relatedContent}}
-        <section class="Article-relatedContent">
+        <div class="Article-relatedContent">
             {{this}}
-        </section>
+        </div>
     {{/with}}
 
 </article>
