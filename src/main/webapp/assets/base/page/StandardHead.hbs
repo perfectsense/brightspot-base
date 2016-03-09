@@ -5,7 +5,6 @@
 {{#if description}}<meta name="description" content="{{description}}" />{{/if}}
 {{#if keywords}}<meta name="news_keywords" content="{{keywords}}" />{{/if}}
 
-{{#each metas}}{{this}}{{/each}}
-{{#each icons}}{{this}}{{/each}}
-{{#each styles}}{{this}}{{/each}}
-{{#each scripts}}{{this}}{{/each}}
+{{#each items}}
+    {{this}}
+{{/each}}
