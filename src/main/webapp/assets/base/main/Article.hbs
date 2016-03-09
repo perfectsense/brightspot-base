@@ -1,17 +1,11 @@
 <article class="Article" itemscope="" itemtype="http://schema.org/Article"{{extraAttributes}}>
     <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="{{this.canonicalUrl}}"/>
 
-    {{#if breadcrumbs}}
+    {{#with breadcrumbs}}
         <div class="Article-breadcrumbs">
-            <ol class="Article-breadcrumbs-list" itemscope itemtype="http://schema.org/BreadcrumbList">
-                {{#each breadcrumbs}}
-                    <li class="Article-breadcrumbs-list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                        {{this.title}}
-                    </li>
-                {{/each}}
-            </ol>
+            {{this}}
         </div>
-    {{/if}}
+    {{/with}}
 
     {{#with slug}}
         <div class="Article-slug">
