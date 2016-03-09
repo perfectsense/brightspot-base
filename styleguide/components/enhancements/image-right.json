@@ -2,7 +2,7 @@
   "_template": "/assets/base/Enhancement",
   "alignment": "right",
   "content": {
-      "_template": "/assets/base/globals/Image",
-      "srcAttr": "{{image(260,360)}}"
+      "_template": "/assets/base/util/Image",
+      "src": "{{image(260,360)}}"
   }
 }

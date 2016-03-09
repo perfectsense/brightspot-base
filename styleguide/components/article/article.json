@@ -32,8 +32,8 @@
     ],
 
     "lead": {
-        "_template": "/assets/base/globals/Image",
-        "srcAttr": "{{image(900,450)}}"
+        "_template": "/assets/base/util/Image",
+        "src": "{{image(900,450)}}"
     },
 
     "sections": [
@@ -45,8 +45,8 @@
             "_template": "/assets/base/Enhancement",
             "alignment": "left",
             "content": {
-                "_template": "/assets/base/globals/Image",
-                "srcAttr": "{{image(260,360)}}"
+                "_template": "/assets/base/util/Image",
+                "src": "{{image(260,360)}}"
             }
         },
         {
@@ -61,8 +61,8 @@
             "_template": "/assets/base/Enhancement",
             "alignment": "right",
             "content": {
-                "_template": "/assets/base/globals/Image",
-                "srcAttr": "{{image(260,360)}}"
+                "_template": "/assets/base/util/Image",
+                "src": "{{image(260,360)}}"
             }
         },
         {
