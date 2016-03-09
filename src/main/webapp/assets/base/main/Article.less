@@ -1,5 +1,8 @@
-// Article
+@import '../Main.less';
+
 .Article {
+    &:extend(.Main all);
+
     @space-rightRail-width: 340px;
     @space-body-copy-offset: 120px;
 
@@ -16,19 +19,16 @@
 
     &-headline {
         order: 2;
-        &:extend(.Headline all);
     }
 
     &-subHeadline {
         order: 3;
-        &:extend(.SubHeadline all);
         margin-right: @space-rightRail-width;
     }
 
     &-byline {
         order: 4;
         margin: 1rem 0;
-        &:extend(.Byline all);
         padding-bottom: 1rem;
         border-bottom: solid 1px #DDD;
     }

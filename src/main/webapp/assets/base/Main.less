@@ -1,0 +1,32 @@
+.Main {
+    &-headline {
+        &:extend(.Main-headline all);
+
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    &-subHeadline {
+        &:extend(.Main-subHeadline all);
+
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+
+    &-byline {
+        &:extend(.Main-byline all);
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .PublishDate {
+            // render a separator when there's another component before the publish-date
+            &:not(:first-child) {
+                margin-left: .5rem;
+                padding-left: .5rem;
+                border-left: 1px solid #DDD;
+            }
+        }
+    }
+}
