@@ -19,7 +19,7 @@
             },
             {
                 "_template": "/assets/base/page/ExternalStyle",
-                "href": "/assets/main.min.css"
+                "href": "{{stylesheet}}"
             }
         ]
     },
