@@ -1,4 +1,4 @@
-<article class="Article" itemprop="mainEntity" itemscope itemtype="http://schema.org/Article"{{extraAttributes}}>
+<article class="ArticleMain" itemprop="mainEntity" itemscope itemtype="http://schema.org/Article"{{extraAttributes}}>
 
     {{#with datePublished}}
         <meta itemprop="datePublished" content="{{this}}">
@@ -9,67 +9,67 @@
     {{/with}}
 
     {{#with breadcrumbs}}
-        <div class="Article-breadcrumbs">
+        <div class="ArticleMain-breadcrumbs">
             {{this}}
         </div>
     {{/with}}
 
     {{#with slug}}
-        <div class="Article-slug">
+        <div class="ArticleMain-slug">
             {{this}}
         </div>
     {{/with}}
 
     {{#with headline}}
-        <div class="Article-headline" itemprop="headline">
+        <div class="ArticleMain-headline" itemprop="headline">
             {{this}}
         </div>
     {{/with}}
 
     {{#with subHeadline}}
-        <div class="Article-subHeadline" itemprop="alternativeHeadline">
+        <div class="ArticleMain-subHeadline" itemprop="alternativeHeadline">
             {{{this}}}
         </div>
     {{/with}}
 
     {{#with byline}}
-        <div class="Article-byline">
+        <div class="ArticleMain-byline">
             {{this}}
         </div>
     {{/with}}
 
     {{#with lead}}
-        <div class="Article-lead">
+        <div class="ArticleMain-lead">
             {{this}}
         </div>
     {{/with}}
 
     {{#with body}}
-        <div class="Article-body" itemprop="articleBody">
+        <div class="ArticleMain-body" itemprop="articleBody">
             {{this}}
         </div>
     {{/with}}
 
     {{#with tags}}
-        <div class="Article-tags">
+        <div class="ArticleMain-tags">
             {{this}}
         </div>
     {{/with}}
 
     {{#each socialSharing}}
-        <div class="Article-socialSharing">
+        <div class="ArticleMain-socialSharing">
             {{this}}
         </div>
     {{/each}}
 
     {{#with comments}}
-        <div class="Article-comments">
+        <div class="ArticleMain-comments">
             {{this}}
         </div>
     {{/with}}
 
     {{#with relatedContent}}
-        <div class="Article-relatedContent">
+        <div class="ArticleMain-relatedContent">
             {{this}}
         </div>
     {{/with}}
