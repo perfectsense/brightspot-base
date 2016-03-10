@@ -1,6 +1,0 @@
-{
-    "_template": "/assets/base/Author",
-    "name": "{{name()}}",
-    "url": "http://perfectsensedigital.com",
-    "prefix": "Author:"
-}
