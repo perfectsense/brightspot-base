@@ -12,22 +12,20 @@
             "{{words([1, 3])}}"
         ]
     },
+
     "slug": "{{words([4,10])}}",
     "headline": "{{words([10,15])}}",
-    "subHeadline": "{{paragraphs(1)}}",
+    "subHeadline": "{{words}}",
 
     "byline": [
         {
             "_template": "/assets/base/Author",
-            "prefix": "by",
-            "url": "http://www.perfectsensedigital.com",
-            "image": "{{image(36,36)}}",
-            "name": "{{name}}"
-        },
-        {
-            "_template": "/assets/base/PublishDate",
-            "readableFormat": "March 10, 2009",
-            "isoFormat": ""
+            "image": {
+                "_template": "/assets/base/util/Image",
+                "src": "{{image(36,36)}}"
+            },
+            "name": "{{name}}",
+            "affiliation": "{{words([1, 5])}}"
         }
     ],
 
