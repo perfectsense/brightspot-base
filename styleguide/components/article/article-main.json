@@ -79,26 +79,36 @@
 
     "relatedContent": [
         {
-            "_template": "/assets/base/promos/PromoList",
-            "headline": "Related Content",
-            "promos": [
+            "_template": "/assets/base/promo/ListPromo",
+            "title": "Related Content",
+            "items": [
                 {
                     "_repeat": 4,
-                    "_template": "/assets/base/promos/Promo",
-                    "headline": "{{words([8,12])}}",
-                    "imageUrl": "{{image(40,40)}}"
+                    "_template": "/assets/base/promo/ListPromoItem",
+
+                    "image": {
+                        "_template": "/assets/base/util/Image",
+                        "src": "{{image(40,40)}}"
+                    },
+
+                    "content": "{{words([8,12])}}"
                 }
             ]
         },
         {
-            "_template": "/assets/base/promos/PromoList",
-            "headline": "Promoted Content",
-            "promos": [
+            "_template": "/assets/base/promo/ListPromo",
+            "title": "Promoted Content",
+            "items": [
                 {
                     "_repeat": 2,
-                    "_template": "/assets/base/promos/Promo",
-                    "headline": "{{words([8,12])}}",
-                    "imageUrl": "{{image(40,40)}}"
+                    "_template": "/assets/base/promo/ListPromoItem",
+
+                    "image": {
+                        "_template": "/assets/base/util/Image",
+                        "src": "{{image(40,40)}}"
+                    },
+
+                    "content": "{{words([8,12])}}"
                 }
             ]
         }
