@@ -44,11 +44,11 @@
         </div>
     {{/with}}
 
-    <div class="Article-body" itemprop="articleBody">
-        {{#each sections}}
-            <div class="Article-body-section">{{this}}</div>
-        {{/each}}
-    </div>
+    {{#with body}}
+        <div class="Article-body" itemprop="articleBody">
+            {{this}}
+        </div>
+    {{/with}}
 
     {{#with tags}}
         <div class="Article-tags">

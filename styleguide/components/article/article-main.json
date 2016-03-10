@@ -32,44 +32,47 @@
         "src": "{{image(900,450)}}"
     },
 
-    "sections": [
-        {
-            "_template": "/assets/base/util/RawHtml",
-            "html": "{{paragraphs([3,10])}}"
-        },
-        {
-            "_template": "/assets/base/Enhancement",
-            "alignment": "left",
-            "content": {
-                "_template": "/assets/base/util/Image",
-                "src": "{{image(260,360)}}"
+    "body": {
+        "_template": "/assets/base/util/Concatenated",
+        "items": [
+            {
+                "_template": "/assets/base/util/RawHtml",
+                "html": "{{paragraphs([3,10])}}"
+            },
+            {
+                "_template": "/assets/base/Enhancement",
+                "alignment": "left",
+                "content": {
+                    "_template": "/assets/base/util/Image",
+                    "src": "{{image(260,360)}}"
+                }
+            },
+            {
+                "_template": "/assets/base/util/RawHtml",
+                "html": "<h3>Subheadline</h3>"
+            },
+            {
+                "_template": "/assets/base/util/RawHtml",
+                "html": "{{paragraphs([3,10])}}"
+            },
+            {
+                "_template": "/assets/base/Enhancement",
+                "alignment": "right",
+                "content": {
+                    "_template": "/assets/base/util/Image",
+                    "src": "{{image(260,360)}}"
+                }
+            },
+            {
+                "_template": "/assets/base/util/RawHtml",
+                "html": "{{paragraphs([3,10])}}"
+            },
+            {
+                "_template": "/assets/base/util/RawHtml",
+                "html": "{{paragraphs([3,10])}}"
             }
-        },
-        {
-            "_template": "/assets/base/util/RawHtml",
-            "html": "<h3>Subheadline</h3>"
-        },
-        {
-            "_template": "/assets/base/util/RawHtml",
-            "html": "{{paragraphs([3,10])}}"
-        },
-        {
-            "_template": "/assets/base/Enhancement",
-            "alignment": "right",
-            "content": {
-                "_template": "/assets/base/util/Image",
-                "src": "{{image(260,360)}}"
-            }
-        },
-        {
-            "_template": "/assets/base/util/RawHtml",
-            "html": "{{paragraphs([3,10])}}"
-        },
-        {
-            "_template": "/assets/base/util/RawHtml",
-            "html": "{{paragraphs([3,10])}}"
-        }
-    ],
+        ]
+    },
 
     "tags": "",
     "socialSharing": "",
