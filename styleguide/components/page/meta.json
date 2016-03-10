@@ -1,9 +1,9 @@
 {
     "_wrapper": false,
-    "_template": "/assets/base/page/StandardPage",
+    "_template": "/assets/base/page/Page",
 
     "head": {
-        "_template": "/assets/base/page/StandardHead",
+        "_template": "/assets/base/page/Head",
         "items": [
             {
                 "_template": "/assets/base/page/Meta",
