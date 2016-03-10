@@ -17,17 +17,15 @@
     "headline": "{{words([10,15])}}",
     "subHeadline": "{{words}}",
 
-    "byline": [
-        {
-            "_template": "/assets/base/Author",
-            "image": {
-                "_template": "/assets/base/util/Image",
-                "src": "{{image(36,36)}}"
-            },
-            "name": "{{name}}",
-            "affiliation": "{{words([1, 5])}}"
-        }
-    ],
+    "byline": {
+        "_template": "/assets/base/util/Concatenated",
+        "delimiter": ", ",
+        "items": [
+            "{{name}}",
+            "{{name}}",
+            "{{name}}"
+        ]
+    },
 
     "lead": {
         "_template": "/assets/base/util/Image",
@@ -77,40 +75,39 @@
     "socialSharing": "",
     "comments": "",
 
-    "relatedContent": [
-        {
-            "_template": "/assets/base/promo/ListPromo",
-            "title": "Related Content",
-            "items": [
-                {
-                    "_repeat": 4,
-                    "_template": "/assets/base/promo/ListPromoItem",
-
-                    "image": {
-                        "_template": "/assets/base/util/Image",
-                        "src": "{{image(40,40)}}"
-                    },
-
-                    "content": "{{words([8,12])}}"
-                }
-            ]
-        },
-        {
-            "_template": "/assets/base/promo/ListPromo",
-            "title": "Promoted Content",
-            "items": [
-                {
-                    "_repeat": 2,
-                    "_template": "/assets/base/promo/ListPromoItem",
-
-                    "image": {
-                        "_template": "/assets/base/util/Image",
-                        "src": "{{image(40,40)}}"
-                    },
-
-                    "content": "{{words([8,12])}}"
-                }
-            ]
-        }
-    ]
+    "relatedContent": {
+        "_template": "/assets/base/util/Concatenated",
+        "items": [
+            {
+                "_template": "/assets/base/promo/ListPromo",
+                "title": "Related Content",
+                "items": [
+                    {
+                        "_repeat": 4,
+                        "_template": "/assets/base/promo/ListPromoItem",
+                        "image": {
+                            "_template": "/assets/base/util/Image",
+                            "src": "{{image(40,40)}}"
+                        },
+                        "content": "{{words([8,12])}}"
+                    }
+                ]
+            },
+            {
+                "_template": "/assets/base/promo/ListPromo",
+                "title": "Promoted Content",
+                "items": [
+                    {
+                        "_repeat": 2,
+                        "_template": "/assets/base/promo/ListPromoItem",
+                        "image": {
+                            "_template": "/assets/base/util/Image",
+                            "src": "{{image(40,40)}}"
+                        },
+                        "content": "{{words([8,12])}}"
+                    }
+                ]
+            }
+        ]
+    }
 }
