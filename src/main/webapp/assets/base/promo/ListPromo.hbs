@@ -1,15 +1,23 @@
-<div class="ListPromo">
-    {{#with title}}
-        <div class="ListPromo-title">{{this}}</div>
-    {{/with}}
+{{#replace "title"}}
+    <div class="ListPromo-title">{{this}}</div>
+{{/replace}}
 
+{{#replace "items"}}
     <ul class="ListPromo-items">
-        {{#each items}}
+        {{#each this}}
             <li class="ListPromo-items-item">{{this}}</li>
         {{/each}}
     </ul>
+{{/replace}}
 
-    {{#with cta}}
-        <div class="ListPromo-cta">{{this}}</div>
-    {{/with}}
+{{#replace "cta"}}
+    <div class="ListPromo-cta">{{this}}</div>
+{{/replace}}
+
+<div class="ListPromo">
+    {{#overridable}}
+        {{title}}
+        {{items}}
+        {{cta}}
+    {{/overridable}}
 </div>

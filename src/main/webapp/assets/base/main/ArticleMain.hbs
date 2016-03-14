@@ -1,5 +1,48 @@
-<article class="ArticleMain" itemprop="mainEntity" itemscope itemtype="http://schema.org/Article"{{extraAttributes}}>
+{{#replace "breadcrumbs"}}
+    <div class="ArticleMain-breadcrumbs">{{this}}</div>
+{{/replace}}
 
+{{#replace "slug"}}
+    <div class="ArticleMain-slug">{{this}}</div>
+{{/replace}}
+
+{{#replace "headline"}}
+    <div class="ArticleMain-headline" itemprop="headline">{{this}}</div>
+{{/replace}}
+
+{{#replace "subHeadline"}}
+    <div class="ArticleMain-subHeadline" itemprop="alternativeHeadline">{{this}}</div>
+{{/replace}}
+
+{{#replace "byline"}}
+    <div class="ArticleMain-byline">{{this}}</div>
+{{/replace}}
+
+{{#replace "lead"}}
+    <div class="ArticleMain-lead">{{this}}</div>
+{{/replace}}
+
+{{#replace "body"}}
+    <div class="ArticleMain-body" itemprop="articleBody">{{this}}</div>
+{{/replace}}
+
+{{#replace "tags"}}
+    <div class="ArticleMain-tags">{{this}}</div>
+{{/replace}}
+
+{{#replace "socialSharing"}}
+    <div class="ArticleMain-socialSharing">{{this}}</div>
+{{/replace}}
+
+{{#replace "comments"}}
+    <div class="ArticleMain-comments">{{this}}</div>
+{{/replace}}
+
+{{#replace "relatedContent"}}
+    <div class="ArticleMain-relatedContent">{{this}}</div>
+{{/replace}}
+
+<article class="ArticleMain" itemprop="mainEntity" itemscope itemtype="http://schema.org/Article"{{extraAttributes}}>
     {{#with datePublished}}
         <meta itemprop="datePublished" content="{{this}}">
     {{/with}}
@@ -8,70 +51,17 @@
         <meta itemprop="dateModified" content="{{this}}">
     {{/with}}
 
-    {{#with breadcrumbs}}
-        <div class="ArticleMain-breadcrumbs">
-            {{this}}
-        </div>
-    {{/with}}
-
-    {{#with slug}}
-        <div class="ArticleMain-slug">
-            {{this}}
-        </div>
-    {{/with}}
-
-    {{#with headline}}
-        <div class="ArticleMain-headline" itemprop="headline">
-            {{this}}
-        </div>
-    {{/with}}
-
-    {{#with subHeadline}}
-        <div class="ArticleMain-subHeadline" itemprop="alternativeHeadline">
-            {{{this}}}
-        </div>
-    {{/with}}
-
-    {{#with byline}}
-        <div class="ArticleMain-byline">
-            {{this}}
-        </div>
-    {{/with}}
-
-    {{#with lead}}
-        <div class="ArticleMain-lead">
-            {{this}}
-        </div>
-    {{/with}}
-
-    {{#with body}}
-        <div class="ArticleMain-body" itemprop="articleBody">
-            {{this}}
-        </div>
-    {{/with}}
-
-    {{#with tags}}
-        <div class="ArticleMain-tags">
-            {{this}}
-        </div>
-    {{/with}}
-
-    {{#each socialSharing}}
-        <div class="ArticleMain-socialSharing">
-            {{this}}
-        </div>
-    {{/each}}
-
-    {{#with comments}}
-        <div class="ArticleMain-comments">
-            {{this}}
-        </div>
-    {{/with}}
-
-    {{#with relatedContent}}
-        <div class="ArticleMain-relatedContent">
-            {{this}}
-        </div>
-    {{/with}}
-
+    {{#overridable}}
+        {{breadcrumbs}}
+        {{slug}}
+        {{headline}}
+        {{subHeadline}}
+        {{byline}}
+        {{lead}}
+        {{body}}
+        {{tags}}
+        {{socialSharing}}
+        {{comments}}
+        {{relatedContent}}
+    {{/overridable}}
 </article>
