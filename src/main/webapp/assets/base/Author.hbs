@@ -1,0 +1,19 @@
+{{#replace "image"}}
+    <div class="Author-image" itemprop="image">{{this}}</div>
+{{/replace}}
+
+{{#replace "name"}}
+    <div class="Author-name" itemprop="name">{{this}}</div>
+{{/replace}}
+
+{{#replace "affiliation"}}
+    <div class="Author-affiliation" itemprop="affiliation">{{this}}</div>
+{{/replace}}
+
+<div class="Author" itemprop="author" itemscope itemtype="http://schema.org/Person"{{extraAttributes}}>
+    {{#overridable}}
+        {{image}}
+        {{name}}
+        {{affiliation}}
+    {{/overridable}}
+</div>

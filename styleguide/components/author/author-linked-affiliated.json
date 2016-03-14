@@ -1,0 +1,7 @@
+{
+    "_template": "/assets/base/Author",
+    "name": "{{name()}}",
+    "url": "http://www.perfectsensedigital.com",
+    "affiliation": "Perfect Sense",
+    "affiliationUrl": "http://www.perfectsensedigital.com"
+}

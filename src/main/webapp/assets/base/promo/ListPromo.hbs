@@ -1,0 +1,23 @@
+{{#replace "title"}}
+    <div class="ListPromo-title">{{this}}</div>
+{{/replace}}
+
+{{#replace "items"}}
+    <ul class="ListPromo-items">
+        {{#each this}}
+            <li class="ListPromo-items-item">{{this}}</li>
+        {{/each}}
+    </ul>
+{{/replace}}
+
+{{#replace "cta"}}
+    <div class="ListPromo-cta">{{this}}</div>
+{{/replace}}
+
+<div class="ListPromo">
+    {{#overridable}}
+        {{title}}
+        {{items}}
+        {{cta}}
+    {{/overridable}}
+</div>

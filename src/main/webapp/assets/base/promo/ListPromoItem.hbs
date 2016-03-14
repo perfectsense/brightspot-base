@@ -1,0 +1,14 @@
+{{#replace "image"}}
+    <div class="ListPromoItem-image">{{this}}</div>
+{{/replace}}
+
+{{#replace "content"}}
+    <div class="ListPromoItem-content">{{this}}</div>
+{{/replace}}
+
+<div class="ListPromoItem">
+    {{#overridable}}
+        {{image}}
+        {{content}}
+    {{/overridable}}
+</div>

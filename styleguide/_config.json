@@ -1,0 +1,12 @@
+{
+    "stylesheets": [
+        {
+            "name": "Base",
+            "href": "/assets/base/All.min.css"
+        },
+        {
+            "name": "Theme: Inspire Confidence",
+            "href": "/assets/theme/inspire-confidence/All.min.css"
+        }
+    ]
+}

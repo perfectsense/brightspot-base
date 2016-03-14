@@ -1,0 +1,21 @@
+.Author {
+    align-items: center;
+    display: flex;
+
+    &-image {
+        margin-right: 1rem;
+        order: 50100;
+    }
+
+    &-name {
+        order: 50200;
+    }
+
+    &-affiliation {
+        order: 50300;
+
+        &:before {
+            content: ', ';
+        }
+    }
+}

@@ -15,7 +15,10 @@ module.exports = function (grunt) {
 
             styles: {
                 dir: 'assets',
-                less: [ '*.less' ],
+                less: [
+                    'base/All.less',
+                    'theme/inspire-confidence/All.less'
+                ],
                 options : {
                     autoprefixer: true
                 }

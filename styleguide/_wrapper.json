@@ -1,3 +1,30 @@
 {
-  "_template": "/assets/base/globals/page"
+    "_template": "/assets/base/page/Page",
+
+    "head": {
+        "_template": "/assets/base/page/Head",
+        "title": "Styleguide",
+        "description": "Brightspot Base Styleguide",
+        "keywords": "Brightspot Base, Styleguide, Inspire Confidence",
+        "items": [
+            {
+                "_template": "/assets/base/page/Meta",
+                "httpEquiv": "X-UA-Compatible",
+                "content": "IE=edge"
+            },
+            {
+                "_template": "/assets/base/page/Meta",
+                "name": "viewport",
+                "content": "width=device-width, initial-scale=1"
+            },
+            {
+                "_template": "/assets/base/page/ExternalStylesheet",
+                "href": "{{stylesheet}}"
+            }
+        ]
+    },
+
+    "body": {
+        "_delegate": true
+    }
 }

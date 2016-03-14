@@ -1,0 +1,13 @@
+.ListPromo {
+    &:extend(.Promo all);
+
+    &-items {
+        list-style: none;
+        order: 10100;
+        padding: 0;
+
+        &-item:not(:first-child) {
+            margin-top: .5rem;
+        }
+    }
+}
