@@ -14,10 +14,10 @@ module.exports = function (grunt) {
             },
 
             styles: {
-                dir: 'assets',
+                dir: '',
                 less: [
                     'base/All.less',
-                    'theme/inspire-confidence/All.less'
+                    'base/theme/inspire-confidence/All.less'
                 ],
                 options : {
                     autoprefixer: true
@@ -25,7 +25,7 @@ module.exports = function (grunt) {
             },
 
             scripts: {
-                dir: 'assets'
+                dir: ''
             }
         }
     });

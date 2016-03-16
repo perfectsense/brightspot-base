@@ -1,4 +1,4 @@
 {
-    "_template": "/assets/base/Author",
+    "_template": "/base/Author",
     "name": "{{name()}}"
 }

@@ -7,7 +7,7 @@
     "jquery": "^2.1.4",
     "normalize-css": "necolas/normalize.css#^3.0.3"
   },
-  "main": "src/main/webapp/assets/main.js",
+  "main": "src/main/webapp/main.js",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -16,14 +16,14 @@
     "tests"
   ],
   "brightspot-library-files": [
-    "src/main/webapp/assets/scripts/config.js",
-    "src/main/webapp/assets/scripts/main.js",
-    "src/main/webapp/assets/styles/main.less"
+    "src/main/webapp/scripts/config.js",
+    "src/main/webapp/scripts/main.js",
+    "src/main/webapp/styles/main.less"
   ],
   "brightspot-copy-overrides": {
     "brightspot-base": [
       {
-        "cwd": "src/main/webapp/assets",
+        "cwd": "src/main/webapp",
         "src": "base/**",
         "dest": "",
         "expand": true

@@ -1,5 +1,5 @@
 {
-    "_template": "/assets/base/Author",
+    "_template": "/base/Author",
     "name": "{{name()}}",
     "url": "http://perfectsensedigital.com"
 }

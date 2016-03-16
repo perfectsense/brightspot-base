@@ -1,8 +1,8 @@
 {
-  "_template": "/assets/base/Enhancement",
+  "_template": "/base/Enhancement",
   "alignment": "right",
   "content": {
-      "_template": "/assets/base/util/Image",
+      "_template": "/base/util/Image",
       "src": "{{image(260,360)}}"
   }
 }

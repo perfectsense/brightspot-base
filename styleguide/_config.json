@@ -2,11 +2,11 @@
     "stylesheets": [
         {
             "name": "Base",
-            "href": "/assets/base/All.min.css"
+            "href": "/base/All.min.css"
         },
         {
             "name": "Theme: Inspire Confidence",
-            "href": "/assets/theme/inspire-confidence/All.min.css"
+            "href": "/base/theme/inspire-confidence/All.min.css"
         }
     ]
 }

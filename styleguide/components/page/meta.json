@@ -1,17 +1,17 @@
 {
     "_wrapper": false,
-    "_template": "/assets/base/page/Page",
+    "_template": "/base/page/Page",
 
     "head": {
-        "_template": "/assets/base/page/Head",
+        "_template": "/base/page/Head",
         "items": [
             {
-                "_template": "/assets/base/page/Meta",
+                "_template": "/base/page/Meta",
                 "httpEquiv": "Content-Language",
                 "content": "en"
             },
             {
-                "_template": "/assets/base/page/Meta",
+                "_template": "/base/page/Meta",
                 "name": "description",
                 "content": "{{words}}"
             }
@@ -19,7 +19,7 @@
     },
 
     "body": {
-        "_template": "/assets/base/util/RawHtml",
+        "_template": "/base/util/RawHtml",
         "html": "{{paragraphs}}"
     }
 }
