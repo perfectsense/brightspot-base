@@ -24,7 +24,3 @@ cache:
     - bower_components
     - node
     - node_modules
-
-after_success:
-  - git clone https://github.com/perfectsense/travis-maven-deploy.git && travis-maven-deploy/deploy.sh
-
