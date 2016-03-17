@@ -1,46 +1,46 @@
-{{#replace "breadcrumbs"}}
+{{#defineElement "breadcrumbs"}}
     <div class="ArticleMain-breadcrumbs">{{this}}</div>
-{{/replace}}
+{{/defineElement}}
 
-{{#replace "slug"}}
+{{#defineElement "slug"}}
     <div class="ArticleMain-slug">{{this}}</div>
-{{/replace}}
+{{/defineElement}}
 
-{{#replace "headline"}}
+{{#defineElement "headline"}}
     <div class="ArticleMain-headline" itemprop="headline">{{this}}</div>
-{{/replace}}
+{{/defineElement}}
 
-{{#replace "subHeadline"}}
+{{#defineElement "subHeadline"}}
     <div class="ArticleMain-subHeadline" itemprop="alternativeHeadline">{{this}}</div>
-{{/replace}}
+{{/defineElement}}
 
-{{#replace "byline"}}
+{{#defineElement "byline"}}
     <div class="ArticleMain-byline">{{this}}</div>
-{{/replace}}
+{{/defineElement}}
 
-{{#replace "lead"}}
+{{#defineElement "lead"}}
     <div class="ArticleMain-lead">{{this}}</div>
-{{/replace}}
+{{/defineElement}}
 
-{{#replace "body"}}
+{{#defineElement "body"}}
     <div class="ArticleMain-body" itemprop="articleBody">{{this}}</div>
-{{/replace}}
+{{/defineElement}}
 
-{{#replace "tags"}}
+{{#defineElement "tags"}}
     <div class="ArticleMain-tags">{{this}}</div>
-{{/replace}}
+{{/defineElement}}
 
-{{#replace "socialSharing"}}
+{{#defineElement "socialSharing"}}
     <div class="ArticleMain-socialSharing">{{this}}</div>
-{{/replace}}
+{{/defineElement}}
 
-{{#replace "comments"}}
+{{#defineElement "comments"}}
     <div class="ArticleMain-comments">{{this}}</div>
-{{/replace}}
+{{/defineElement}}
 
-{{#replace "relatedContent"}}
+{{#defineElement "relatedContent"}}
     <div class="ArticleMain-relatedContent">{{this}}</div>
-{{/replace}}
+{{/defineElement}}
 
 <article class="ArticleMain" itemprop="mainEntity" itemscope itemtype="http://schema.org/Article"{{extraAttributes}}>
     {{#with datePublished}}
@@ -52,16 +52,16 @@
     {{/with}}
 
     {{#overridable}}
-        {{breadcrumbs}}
-        {{slug}}
-        {{headline}}
-        {{subHeadline}}
-        {{byline}}
-        {{lead}}
-        {{body}}
-        {{tags}}
-        {{socialSharing}}
-        {{comments}}
-        {{relatedContent}}
+        {{element "breadcrumbs"}}
+        {{element "slug"}}
+        {{element "headline"}}
+        {{element "subHeadline"}}
+        {{element "byline"}}
+        {{element "lead"}}
+        {{element "body"}}
+        {{element "tags"}}
+        {{element "socialSharing"}}
+        {{element "comments"}}
+        {{element "relatedContent"}}
     {{/overridable}}
 </article>

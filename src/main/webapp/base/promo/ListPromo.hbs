@@ -1,23 +1,23 @@
-{{#replace "title"}}
+{{#defineElement "title"}}
     <div class="ListPromo-title">{{this}}</div>
-{{/replace}}
+{{/defineElement}}
 
-{{#replace "items"}}
+{{#defineElement "items"}}
     <ul class="ListPromo-items">
         {{#each this}}
             <li class="ListPromo-items-item">{{this}}</li>
         {{/each}}
     </ul>
-{{/replace}}
+{{/defineElement}}
 
-{{#replace "cta"}}
+{{#defineElement "cta"}}
     <div class="ListPromo-cta">{{this}}</div>
-{{/replace}}
+{{/defineElement}}
 
 <div class="ListPromo">
     {{#overridable}}
-        {{title}}
-        {{items}}
-        {{cta}}
+        {{element "title"}}
+        {{element "items"}}
+        {{element "cta"}}
     {{/overridable}}
 </div>

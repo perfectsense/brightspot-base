@@ -1,14 +1,14 @@
-{{#replace "image"}}
+{{#defineElement "image"}}
     <div class="ListPromoItem-image">{{this}}</div>
-{{/replace}}
+{{/defineElement}}
 
-{{#replace "content"}}
+{{#defineElement "content"}}
     <div class="ListPromoItem-content">{{this}}</div>
-{{/replace}}
+{{/defineElement}}
 
 <div class="ListPromoItem">
     {{#overridable}}
-        {{image}}
-        {{content}}
+        {{element "image"}}
+        {{element "content"}}
     {{/overridable}}
 </div>
