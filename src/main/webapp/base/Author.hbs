@@ -1,19 +1,19 @@
-{{#replace "image"}}
+{{#defineElement "image"}}
     <div class="Author-image" itemprop="image">{{this}}</div>
-{{/replace}}
+{{/defineElement}}
 
-{{#replace "name"}}
+{{#defineElement "name"}}
     <div class="Author-name" itemprop="name">{{this}}</div>
-{{/replace}}
+{{/defineElement}}
 
-{{#replace "affiliation"}}
+{{#defineElement "affiliation"}}
     <div class="Author-affiliation" itemprop="affiliation">{{this}}</div>
-{{/replace}}
+{{/defineElement}}
 
 <div class="Author" itemprop="author" itemscope itemtype="http://schema.org/Person"{{extraAttributes}}>
     {{#overridable}}
-        {{image}}
-        {{name}}
-        {{affiliation}}
+        {{element "image"}}
+        {{element "name"}}
+        {{element "affiliation"}}
     {{/overridable}}
 </div>
