@@ -20,6 +20,10 @@
             {
                 "_template": "/base/page/ExternalStylesheet",
                 "href": "{{stylesheet}}"
+            },
+            {
+                "_template": "/base/page/ExternalScript",
+                "href": "{{script}}"
             }
         ]
     },

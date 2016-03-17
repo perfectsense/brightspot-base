@@ -1,0 +1,20 @@
+{
+    "_wrapper": false,
+    "_template": "/base/page/Page",
+
+    "head": {
+        "_template": "/base/page/Head",
+        "items": [
+            {
+                "_template": "/base/page/ExternalScript",
+                "type": "text/javascript",
+                "href": "/main.js"
+            }
+        ]
+    },
+
+    "body": {
+        "_template": "/base/util/RawHtml",
+        "html": "{{paragraphs}}"
+    }
+}
