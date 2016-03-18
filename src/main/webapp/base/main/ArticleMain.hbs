@@ -39,10 +39,6 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "relatedContent"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
-
     <article class="{{blockName}}" itemprop="mainEntity" itemscope itemtype="http://schema.org/Article"{{extraAttributes}}>
         {{#with datePublished}}
             <meta itemprop="datePublished" content="{{this}}">
@@ -63,7 +59,6 @@
             {{element "tags"}}
             {{element "socialSharing"}}
             {{element "comments"}}
-            {{element "relatedContent"}}
         {{/defaultBlockBody}}
     </article>
 {{/defineBlock}}
