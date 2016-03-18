@@ -8,7 +8,9 @@
             {
                 "_template": "/base/page/ExternalScript",
                 "type": "text/javascript",
-                "href": "/main.js"
+                "href": "/main.js",
+                "async": false,
+                "defer": false
             }
         ]
     },
