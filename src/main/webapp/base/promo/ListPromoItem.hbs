@@ -1,14 +1,16 @@
-{{#defineElement "image"}}
-    <div class="ListPromoItem-image">{{this}}</div>
-{{/defineElement}}
+{{#defineBlock "ListPromoItem"}}
+    {{#defineElement "image"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
 
-{{#defineElement "content"}}
-    <div class="ListPromoItem-content">{{this}}</div>
-{{/defineElement}}
+    {{#defineElement "content"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
 
-<div class="ListPromoItem">
-    {{#overridable}}
-        {{element "image"}}
-        {{element "content"}}
-    {{/overridable}}
-</div>
+    <div class="{{blockName}}"{{extraAttributes}}>
+        {{#defaultBlockBody}}
+            {{element "image"}}
+            {{element "content"}}
+        {{/defaultBlockBody}}
+    </div>
+{{/defineBlock}}

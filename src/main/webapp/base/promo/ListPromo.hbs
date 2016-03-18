@@ -1,23 +1,25 @@
-{{#defineElement "title"}}
-    <div class="ListPromo-title">{{this}}</div>
-{{/defineElement}}
+{{#defineBlock "ListPromo"}}
+    {{#defineElement "title"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
 
-{{#defineElement "items"}}
-    <ul class="ListPromo-items">
-        {{#each this}}
-            <li class="ListPromo-items-item">{{this}}</li>
-        {{/each}}
-    </ul>
-{{/defineElement}}
+    {{#defineElement "items"}}
+        <ul class="{{elementName}}">
+            {{#each this}}
+                <li class="{{elementName}}-item">{{this}}</li>
+            {{/each}}
+        </ul>
+    {{/defineElement}}
 
-{{#defineElement "cta"}}
-    <div class="ListPromo-cta">{{this}}</div>
-{{/defineElement}}
+    {{#defineElement "cta"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
 
-<div class="ListPromo">
-    {{#overridable}}
-        {{element "title"}}
-        {{element "items"}}
-        {{element "cta"}}
-    {{/overridable}}
-</div>
+    <div class="{{blockName}}"{{extraAttributes}}>
+        {{#defaultBlockBody}}
+            {{element "title"}}
+            {{element "items"}}
+            {{element "cta"}}
+        {{/defaultBlockBody}}
+    </div>
+{{/defineBlock}}

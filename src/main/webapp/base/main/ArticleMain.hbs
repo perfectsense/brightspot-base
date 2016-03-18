@@ -1,67 +1,64 @@
-{{#defineElement "breadcrumbs"}}
-    <div class="ArticleMain-breadcrumbs">{{this}}</div>
-{{/defineElement}}
+{{#defineBlock "ArticleMain"}}
+    {{#defineElement "breadcrumbs"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
 
-{{#defineElement "slug"}}
-    <div class="ArticleMain-slug">{{this}}</div>
-{{/defineElement}}
+    {{#defineElement "preHeadline"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
 
-{{#defineElement "headline"}}
-    <div class="ArticleMain-headline" itemprop="headline">{{this}}</div>
-{{/defineElement}}
+    {{#defineElement "headline"}}
+        <div class="{{elementName}}" itemprop="headline">{{this}}</div>
+    {{/defineElement}}
 
-{{#defineElement "subHeadline"}}
-    <div class="ArticleMain-subHeadline" itemprop="alternativeHeadline">{{this}}</div>
-{{/defineElement}}
+    {{#defineElement "subHeadline"}}
+        <div class="{{elementName}}" itemprop="alternativeHeadline">{{this}}</div>
+    {{/defineElement}}
 
-{{#defineElement "byline"}}
-    <div class="ArticleMain-byline">{{this}}</div>
-{{/defineElement}}
+    {{#defineElement "byline"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
 
-{{#defineElement "lead"}}
-    <div class="ArticleMain-lead">{{this}}</div>
-{{/defineElement}}
+    {{#defineElement "lead"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
 
-{{#defineElement "body"}}
-    <div class="ArticleMain-body" itemprop="articleBody">{{this}}</div>
-{{/defineElement}}
+    {{#defineElement "body"}}
+        <div class="{{elementName}}" itemprop="articleBody">{{this}}</div>
+    {{/defineElement}}
 
-{{#defineElement "tags"}}
-    <div class="ArticleMain-tags">{{this}}</div>
-{{/defineElement}}
+    {{#defineElement "tags"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
 
-{{#defineElement "socialSharing"}}
-    <div class="ArticleMain-socialSharing">{{this}}</div>
-{{/defineElement}}
+    {{#defineElement "sharebar"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
 
-{{#defineElement "comments"}}
-    <div class="ArticleMain-comments">{{this}}</div>
-{{/defineElement}}
+    {{#defineElement "comments"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
 
-{{#defineElement "relatedContent"}}
-    <div class="ArticleMain-relatedContent">{{this}}</div>
-{{/defineElement}}
+    <article class="{{blockName}}" itemprop="mainEntity" itemscope itemtype="http://schema.org/Article"{{extraAttributes}}>
+        {{#with datePublished}}
+            <meta itemprop="datePublished" content="{{this}}">
+        {{/with}}
 
-<article class="ArticleMain" itemprop="mainEntity" itemscope itemtype="http://schema.org/Article"{{extraAttributes}}>
-    {{#with datePublished}}
-        <meta itemprop="datePublished" content="{{this}}">
-    {{/with}}
+        {{#with dateModified}}
+            <meta itemprop="dateModified" content="{{this}}">
+        {{/with}}
 
-    {{#with dateModified}}
-        <meta itemprop="dateModified" content="{{this}}">
-    {{/with}}
-
-    {{#overridable}}
-        {{element "breadcrumbs"}}
-        {{element "slug"}}
-        {{element "headline"}}
-        {{element "subHeadline"}}
-        {{element "byline"}}
-        {{element "lead"}}
-        {{element "body"}}
-        {{element "tags"}}
-        {{element "socialSharing"}}
-        {{element "comments"}}
-        {{element "relatedContent"}}
-    {{/overridable}}
-</article>
+        {{#defaultBlockBody}}
+            {{element "breadcrumbs"}}
+            {{element "preHeadline"}}
+            {{element "headline"}}
+            {{element "subHeadline"}}
+            {{element "byline"}}
+            {{element "lead"}}
+            {{element "body"}}
+            {{element "tags"}}
+            {{element "sharebar"}}
+            {{element "comments"}}
+        {{/defaultBlockBody}}
+    </article>
+{{/defineBlock}}

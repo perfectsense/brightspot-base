@@ -1,65 +1,42 @@
 .Main {
-    display: flex;
-    flex-flow: column;
-
     > * {
         margin: 0 0 1em 0;
     }
 
     &-breadcrumbs {
         &:extend(.Main-breadcrumbs all);
-
-        order: 10000;
     }
 
-    &-slug {
-        &:extend(.Main-slug all);
+    &-preHeadline {
+        &:extend(.Main-preHeadline all);
 
         font-size: .8rem;
         font-weight: bold;
-        order: 20000;
     }
 
     &-headline {
         &:extend(.Main-headline all);
 
         font-size: 2rem;
-        order: 30000;
     }
 
     &-subHeadline {
         &:extend(.Main-subHeadline all);
-
-        order: 40000;
     }
 
     &-byline {
         &:extend(.Main-byline all);
-
-        order: 50000;
     }
 
     &-tags {
         &:extend(.Main-tags all);
-
-        order: 60000;
     }
 
-    &-socialSharing {
-        &:extend(.Main-socialSharing all);
-
-        order: 70000;
+    &-sharebar {
+        &:extend(.Main-sharebar all);
     }
 
     &-comments {
         &:extend(.Main-comments all);
-
-        order: 80000;
-    }
-
-    &-relatedContent {
-        &:extend(.Main-relatedContent all);
-
-        order: 90000;
     }
 }

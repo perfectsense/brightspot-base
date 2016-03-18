@@ -13,7 +13,7 @@
         ]
     },
 
-    "slug": "{{words([4,10])}}",
+    "preHeadline": "{{words([4,10])}}",
     "headline": "{{words([10,15])}}",
     "subHeadline": "{{words}}",
 
@@ -75,42 +75,6 @@
     },
 
     "tags": "",
-    "socialSharing": "",
-    "comments": "",
-
-    "relatedContent": {
-        "_template": "/base/util/Concatenated",
-        "items": [
-            {
-                "_template": "/base/promo/ListPromo",
-                "title": "Related Content",
-                "items": [
-                    {
-                        "_repeat": 4,
-                        "_template": "/base/promo/ListPromoItem",
-                        "image": {
-                            "_template": "/base/util/Image",
-                            "src": "{{image(40,40)}}"
-                        },
-                        "content": "{{words([8,12])}}"
-                    }
-                ]
-            },
-            {
-                "_template": "/base/promo/ListPromo",
-                "title": "Promoted Content",
-                "items": [
-                    {
-                        "_repeat": 2,
-                        "_template": "/base/promo/ListPromoItem",
-                        "image": {
-                            "_template": "/base/util/Image",
-                            "src": "{{image(40,40)}}"
-                        },
-                        "content": "{{words([8,12])}}"
-                    }
-                ]
-            }
-        ]
-    }
+    "sharebar": "",
+    "comments": ""
 }
