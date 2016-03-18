@@ -13,7 +13,7 @@
         ]
     },
 
-    "slug": "{{words([4,10])}}",
+    "preHeadline": "{{words([4,10])}}",
     "headline": "{{words([10,15])}}",
     "subHeadline": "{{words}}",
 
