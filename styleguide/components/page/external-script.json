@@ -8,7 +8,7 @@
             {
                 "_template": "/base/page/ExternalScript",
                 "type": "text/javascript",
-                "href": "/main.js",
+                "src": "/main.js",
                 "async": false,
                 "defer": false
             }
