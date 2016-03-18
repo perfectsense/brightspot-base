@@ -178,7 +178,7 @@ To add `subTitle` below `title`:
     }
     
     &-cta {
-        &:extend(.Promo-title all);
+        &:extend(.Promo-cta all);
         border: 5px solid black;
     }
 }
