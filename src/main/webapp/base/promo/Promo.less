@@ -1,20 +1,13 @@
 .Promo {
-    display: flex;
-    flex-flow: column;
-
     > * {
         margin: 0 0 1em 0;
     }
 
     &-title {
         &:extend(.Promo-title all);
-
-        order: 10000;
     }
 
     &-cta {
         &:extend(.Promo-cta all);
-
-        order: 20000;
     }
 }
