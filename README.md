@@ -1,48 +1,230 @@
-Brightspot Base
-===============
+# Brightspot Base
 
-A pattern, boilerplate, and collection of reusable components to jump-start user interface development for [Brightspot CMS](http://brightspot.com) projects.
+---
 
-What's included
----------------
-*	Reusable [LESS CSS](http://lesscss.org/) (based on [Twitter Bootstrap](http://getbootstrap.com/)) and Javascript components with accompanying [Handlebars templates](http://handlebarsjs.com)
-*	Preconfigured Grunt build which compiles LESS and transpiles Javascript [ECMAScript 6 modules](http://www.2ality.com/2014/09/es6-modules-final.html) using [SystemJS](https://github.com/systemjs/systemjs) and [Babel](https://babeljs.io/)
-*	Preconfigured [Karma](http://karma-runner.github.io/)/[Jasmine](http://jasmine.github.io/) test runner
-*	[Preconfigured component style guide](styleguide/) with a local [Express](http://expressjs.com) server which allows development of front end components without a running Brightspot instance
+### Stack
 
-Writing Handlebar Templates
----------------------------
-*   These notes should move into a "how to develop for Base" piece of documentation that we will get to soon. For now, please direct any questions at Tom Hoppe
-*   We are including the handlebar templates that should transform a specific piece of JSON in the root of the object with a `_template` key. This allows the front and and back end "parent" renderers to render any kinds of children inside of themselves without have that information be hardcoded as a partial in the parent renderer. Best example is the bsp-gallery-module, where you'll note, we can include via JSON any component we want into a gallery slide
-*   The above handlebar partial handling is done via the {{render this}} helper. This helper exists in our front end as well as back end handlebar code. It passes the JSON into the helper, which then picks out the `_template` value and uses it for rendering
-*   It's important to note that the JAVA implementation of handlebars uses the mustache spec for lookups (https://github.com/jknack/handlebars.java#differences-between-handlebarsjava-and-handlebarsjs). This means that if we want to support null or empty values, we need to be explicit in specifying the scope of an attribute with `this.`. If you do NOT specify a `this.`, the JAVA handlebar renderer will look up the context stack for an attribute with the same name and use it instead.
-*   Each handlebar template also has an options map `displayOptions` that can be used to provide information and keys from the JSON to the template. This map doesn't get treated with any `_template` and is available for use in conditionals or directly in the .hbs
+* HTML: [Handlebars](http://handlebarsjs.com/)
+* CSS: [Less](http://lesscss.org/)
 
-Building
---------
-Front End
-*   To run and see Base itsef, run `npm install` and then `grunt`. This will install any node dependencies and then grunt will pull down any bower dependencies and compile CSS and transpile JS
+---
 
-How to use it in projects
--------------
-*
+### Naming
 
-Test runner
------------
-Run `karma start spec/karma.conf.js`
+* Based on [BEM](https://en.bem.info/).
+* PascaleCase _block_ names, e.g. `ListPromo`.
+* Suffix _block_ names with their parent names, e.g. `ListPromo` which extends `Promo`.
+* camelCase _element_ names, e.g. `title`.
+* Prefix _element_ names with their _block_ names, e.g. `ListPromo-title`.
 
-Running the local styleguide server
------------------------------------
-Run `styleguide` from the root directory
+---
 
-The styleguide will then be accessible at http://localhost:3000. You can pass options to the styleguide to change host or port for running multiple styleguides.
+### Naming Examples
 
-`--port=XXXX` allows you to run multiple styleguides on your localhost
+Handlebars (typically automated via BEM helpers explained later):
 
-`--host=YOUR IP` allows you to access the styleguide via your http://YOURIP:3000 which can be accessed by others on the network or via a virtual machine for localized IE testing
+```hbs
+<div class="ListPromo">
+    <div class="ListPromo-title">{{title}}</div>
+</div>
+```
 
-System requirements
--------------------
-*	[Java](https://java.com) and [Maven](https://maven.apache.org/). See [Brightspot documentation](http://www.brightspot.com/docs/3.0/overview/installation) for more specific information about which versions to install.
-*	[NodeJS](https://nodejs.org)
-*	Karma test runner (run `npm install -g karma` after NodeJS is installed)
+Less:
+
+```less
+.ListPromo {
+    &-title {
+        font-size: 2em;
+    }
+}
+```
+
+---
+
+### Files
+
+* Handlebars, Less, and JavaScript files mixed in together.
+* One _block_ per file.
+* Flat as possible.
+* Logically group _blocks_, e.g. all promo _blocks_ in [`promo`](src/main/webapp/base/promo).
+
+---
+
+### Handlebars
+
+BEM helpers available:
+
+* `defineBlock`: Defines a _block_.
+* `blockName`: Returns the current _block_ name.
+* `defaultBlockBody`: Marks the template as the default _block_ body.
+* `block`: Renders the named _block_.
+* `defineElement`: Defines an _element_ within a _block_.
+* `elementName`: Returns the current _element_ name.
+* `element`: Renders the named _element_.
+  
+---
+
+### Handlebars Example
+
+This template can be used directly.
+
+```hbs
+{{#defineBlock "ListPromo"}}
+    {{#defineElement "title"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+    
+    {{#defineElement "items"}}
+        <ul class="{{elementName}}">
+            {{#each this}}
+                <li class="{{elementName}}-item">{{this}}</li>
+            {{/each}}
+        </ul>
+    {{/defineElement}}
+    
+    {{#defineElement "cta"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+    
+    <div class="{{blockName}}">
+        {{#defaultBlockBody}}
+            {{element "title"}}
+            {{element "items"}}
+            {{element "cta"}}
+        {{/defaultBlockBody}}
+    </div>
+{{/defineBlock}}
+```
+
+---
+
+### Handlebars Example - Reuse
+
+To create two versions of `ListPromo`, wide and narrow:
+
+`WideListPromo`:
+
+```hbs
+{{block "base/promo/ListPromo" name="WideListPromo"}}
+```
+
+```less
+.WideListPromo {
+    &-title { ... }
+}
+```
+
+`NarrowListPromo`:
+
+```hbs
+{{block "base/promo/ListPromo" name="NarrowListPromo"}}
+```
+
+```less
+.NarrowListPromo {
+    &-title { ... }
+}
+```
+
+---
+
+### Handlebars Example - Reorder
+
+To move `cta` in between `title` and `items`:
+
+```hbs
+{{#block "base/promo/ListPromo" name="MyListPromo"}}
+    {{element "title"}}
+    {{element "cta"}}
+    {{element "items"}}
+{{/block}}
+```
+
+---
+
+### Handlebars Example - Add
+
+To add `subTitle` below `title`:
+
+```hbs
+{{#block "base/promo/ListPromo" name="MyListPromo"}}
+    {{element "title"}}
+   
+    {{#with subTitle}}
+        <div class="MyListPromo-subTitle">{{this}}</div>
+    {{/with}}
+    
+    {{element "items"}}
+    {{element "cta"}}
+{{/block}}
+```
+
+---
+
+### Less
+
+* One class per HTML element.
+* Data attributes as _modifiers_, e.g. `<div class="ListPromo" data-theme="special">`
+
+---
+
+### Less Example
+
+```less
+.Promo {
+    &-title {
+        &:extend(.Promo-title all);
+        font-size: 2em;
+    }
+    
+    &-cta {
+        &:extend(.Promo-title all);
+        border: 5px solid black;
+    }
+}
+```
+
+```less
+.ImagePromo {
+    &:extends(.Promo all);
+}
+```
+
+```less
+.ListPromo {
+    &:extends(.Promo all);
+    
+    &-items {
+        list-style: none;
+        padding: 0;
+        
+        &-item {
+            margin-top: .5em;
+        }
+    }
+}
+```
+
+---
+
+### Less Example - Change All
+
+Change all promo titles to `3em`:
+
+```less
+.Promo-title {
+    font-size: 3em;
+}
+```
+
+---
+
+### Less Example - Change One
+
+Change just list promo titles to `3em`:
+
+```less
+.ListPromo-title {
+    font-size: 3em;
+}
+```
