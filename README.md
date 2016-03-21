@@ -61,7 +61,7 @@ BEM helpers available:
 * `defineElement`: Defines an _element_ within a _block_.
 * `elementName`: Returns the current _element_ name.
 * `element`: Renders the named _element_.
-  
+
 ---
 
 ### Handlebars Example
@@ -73,7 +73,7 @@ This template can be used directly.
     {{#defineElement "title"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
-    
+
     {{#defineElement "items"}}
         <ul class="{{elementName}}">
             {{#each this}}
@@ -81,11 +81,11 @@ This template can be used directly.
             {{/each}}
         </ul>
     {{/defineElement}}
-    
+
     {{#defineElement "cta"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
-    
+
     <div class="{{blockName}}">
         {{#defaultBlockBody}}
             {{element "title"}}
@@ -149,11 +149,11 @@ To add `subTitle` below `title`:
 ```hbs
 {{#block "base/promo/ListPromo" name="MyListPromo"}}
     {{element "title"}}
-   
+
     {{#with subTitle}}
         <div class="MyListPromo-subTitle">{{this}}</div>
     {{/with}}
-    
+
     {{element "items"}}
     {{element "cta"}}
 {{/block}}
@@ -176,7 +176,7 @@ To add `subTitle` below `title`:
         &:extend(.Promo-title all);
         font-size: 2em;
     }
-    
+
     &-cta {
         &:extend(.Promo-cta all);
         border: 5px solid black;
@@ -186,18 +186,18 @@ To add `subTitle` below `title`:
 
 ```less
 .ImagePromo {
-    &:extends(.Promo all);
+    &:extend(.Promo all);
 }
 ```
 
 ```less
 .ListPromo {
-    &:extends(.Promo all);
-    
+    &:extend(.Promo all);
+
     &-items {
         list-style: none;
         padding: 0;
-        
+
         &-item {
             margin-top: .5em;
         }
