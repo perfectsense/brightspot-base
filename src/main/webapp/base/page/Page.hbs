@@ -1,9 +1,21 @@
-<!DOCTYPE html>
-<html class="Page" itemscope itemtype="http://schema.org/WebPage"{{extraAttributes}}>
-    <head>
-        {{head}}
-    </head>
-    <body class="Page-body">
-        {{body}}
-    </body>
-</html>
+{{#defineBlock "Page"}}
+    {{#defineElement "head"}}
+        <head>
+            {{this}}
+        </head>
+    {{/defineElement}}
+
+    {{#defineElement "body"}}
+        <body class="{{elementName}}">
+            {{this}}
+        </body>
+    {{/defineElement}}
+
+    <!DOCTYPE html>
+    <html class="{{blockName}}" itemscope itemtype="http://schema.org/WebPage"{{extraAttributes}}>
+        {{#defaultBlockBody}}
+            {{element "head"}}
+            {{element "body"}}
+        {{/defaultBlockBody}}
+    </html>
+{{/defineBlock}}
