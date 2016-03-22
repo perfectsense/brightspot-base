@@ -117,10 +117,10 @@ Styleguide example JSON:
 
 ```json
 {
-    "_template": "ListPromo"
-    "title": ...,
-    "items": [ ... ],
-    "cta": ...
+    "_template": "ListPromo",
+    "title": "foo", 
+    "items": [ "bar" ],
+    "cta": "qux"
 }
 ```
 
@@ -128,9 +128,11 @@ HTML output:
 
 ```html
 <div class="ListPromo">
-    <div class="ListPromo-title">...</div>
-    <ul class="ListPromo-items">...</ul>
-    <div class="ListPromo-cta">...</div>
+    <div class="ListPromo-title">foo</div>
+    <ul class="ListPromo-items">
+        <li>bar</li>
+    </ul>
+    <div class="ListPromo-cta">qux</div>
 </div>
 ```
 
