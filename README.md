@@ -11,7 +11,19 @@
 
 ### Naming
 
-* Based on [BEM](https://en.bem.info/).
+Based on [BEM](https://en.bem.info/):
+
+* Block: "A logically and functionally independent page component, the
+  equivalent of a component in Web Components. A block encapsulates behavior
+  (JavaScript), templates, styles (CSS), and other implementation technologies.
+  Blocks being independent allows for their re-use, as well as facilitating the
+  project development and support process."
+* Element: "A constituent part of a block that can't be used outside of it."
+
+---
+
+### Naming Rules
+
 * PascaleCase _block_ names, e.g. `ListPromo`.
 * Suffix _block_ names with their parent names, e.g. `ListPromo` which extends `Promo`.
 * camelCase _element_ names, e.g. `title`.
@@ -43,7 +55,8 @@ Less:
 
 ### Files
 
-* Handlebars, Less, and JavaScript files mixed in together.
+* Handlebars, Less, and JavaScript files all together in the same directory,
+  e.g. `ArticleMain` files in [`main`](src/main/webapp/base/main).
 * One _block_ per file.
 * Flat as possible.
 * Logically group _blocks_, e.g. all promo _blocks_ in [`promo`](src/main/webapp/base/promo).
@@ -65,8 +78,6 @@ BEM helpers available:
 ---
 
 ### Handlebars Example
-
-This template can be used directly.
 
 ```hbs
 {{#defineBlock "ListPromo"}}
@@ -98,27 +109,79 @@ This template can be used directly.
 
 ---
 
+### Handlebars Example - Use
+
+To use `ListPromo` as is:
+
+Styleguide example JSON:
+
+```json
+{
+    "_template": "ListPromo"
+    "title": ...,
+    "items": [ ... ],
+    "cta": ...
+}
+```
+
+HTML output:
+
+```html
+<div class="ListPromo">
+    <div class="ListPromo-title">...</div>
+    <ul class="ListPromo-items">...</ul>
+    <div class="ListPromo-cta">...</div>
+</div>
+```
+
+---
+
 ### Handlebars Example - Reuse
 
 To create two versions of `ListPromo`, wide and narrow:
 
-`WideListPromo`:
+`WideListPromo.hbs`:
 
 ```hbs
 {{block "base/promo/ListPromo" name="WideListPromo"}}
 ```
 
+HTML output:
+
+```html
+<div class="WideListPromo">
+    <div class="WideListPromo-title">...</div>
+    <ul class="WideListPromo-items">...</ul>
+    <div class="WideListPromo-cta">...</div>
+</div>
+```
+
+`WideListPromo.less`:
+
 ```less
 .WideListPromo {
+    &:extend(.ListPromo all);
     &-title { ... }
 }
 ```
 
-`NarrowListPromo`:
+`NarrowListPromo.hbs`:
 
 ```hbs
 {{block "base/promo/ListPromo" name="NarrowListPromo"}}
 ```
+
+HTML output:
+
+```html
+<div class="NarrowListPromo">
+    <div class="NarrowListPromo-title">...</div>
+    <ul class="NarrowListPromo-items">...</ul>
+    <div class="NarrowListPromo-cta">...</div>
+</div>
+```
+
+`NarrowListPromo.less`:
 
 ```less
 .NarrowListPromo {
@@ -132,6 +195,8 @@ To create two versions of `ListPromo`, wide and narrow:
 
 To move `cta` in between `title` and `items`:
 
+`MyListPromo.hbs`:
+
 ```hbs
 {{#block "base/promo/ListPromo" name="MyListPromo"}}
     {{element "title"}}
@@ -140,11 +205,23 @@ To move `cta` in between `title` and `items`:
 {{/block}}
 ```
 
+HTML output:
+
+```html
+<div class="MyListPromo">
+    <div class="MyListPromo-title">...</div>
+    <div class="MyListPromo-cta">...</div>
+    <ul class="MyListPromo-items">...</ul>
+</div>
+```
+
 ---
 
 ### Handlebars Example - Add
 
 To add `subTitle` below `title`:
+
+`MyListPromo.hbs`:
 
 ```hbs
 {{#block "base/promo/ListPromo" name="MyListPromo"}}
@@ -157,6 +234,17 @@ To add `subTitle` below `title`:
     {{element "items"}}
     {{element "cta"}}
 {{/block}}
+```
+
+HTML output:
+
+```html
+<div class="MyListPromo">
+    <div class="MyListPromo-title">...</div>
+    <div class="MyListPromo-subTitle">...</div>
+    <ul class="MyListPromo-items">...</ul>
+    <div class="MyListPromo-cta">...</div>
+</div>
 ```
 
 ---
