@@ -1,0 +1,6 @@
+{
+    "_template": "base/util/Link",
+    "href": "https://www.google.com",
+    "target": "_blank",
+    "body": "Open Google in a new tab or window"
+}
