@@ -2,11 +2,17 @@
     &:extend(.Promo all);
 
     &-items {
+        &:extend(.ListPromo-items all);
+
         list-style: none;
         padding: 0;
 
-        &-item:not(:first-child) {
-            margin-top: .5em;
+        &-item {
+            &:extend(.ListPromo-items-item all);
+
+            &:not(:first-child) {
+                margin-top: .5em;
+            }
         }
     }
 }
