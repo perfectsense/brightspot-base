@@ -1,6 +1,0 @@
-{
-    "_template": "/base/Author",
-    "name": "{{name()}}",
-    "url": "http://www.perfectsensedigital.com",
-    "authorLinkTarget": "_blank"
-}
