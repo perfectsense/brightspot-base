@@ -57,21 +57,21 @@ explained later.
 
 ---
 
-### Naming Example - Less 
+### Naming Example - Less
 
 ```less
 .ListPromo {
     border: solid 1px black;
     padding: 1em;
-    
+
     &-title {
         font-size: 2em;
     }
-    
+
     &-items {
         list-style: none;
         padding: 0;
-        
+
         &-item {
             margin-top: .5em;
         }
@@ -130,7 +130,7 @@ it directly in the Styleguide example JSON:
 ```json
 {
     "_template": "base/promo/ListPromo",
-    "title": "foo", 
+    "title": "foo",
     "items": [ "bar" ],
     "cta": "qux"
 }
@@ -210,12 +210,14 @@ To add the `subTitle` _element_ below the `title` _element_:
 {{#block "base/promo/ListPromo" name="SubTitledListPromo"}}
     {{element "title"}}
     {{#with subTitle}}
-        <div class="{{blockName}}-subTitle">{{this}}</div>
+        <div class="SubTitledListPromo-subTitle">{{this}}</div>
     {{/with}}
     {{element "items"}}
     {{element "cta"}}
 {{/block}}
 ```
+
+_note_: Until fixed, you cannot use the `{{blockName}}` syntax inside the `block` helper. To work around this, just manually prefix your elements with the scoped block name.
 
 HTML output:
 
