@@ -1,0 +1,26 @@
+{{#defineBlock "Comment"}}
+    {{#defineElement "author"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "date"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "body"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "footer"}}
+        <footer class="{{elementName}}">{{this}}</footer>
+    {{/defineElement}}
+
+    <div class="{{blockName}}">
+        {{#defaultBlockBody}}
+            {{element "author"}}
+            {{element "date"}}
+            {{element "body"}}
+            {{element "footer"}}
+        {{/defaultBlockBody}}
+    </div>
+{{/defineBlock}}

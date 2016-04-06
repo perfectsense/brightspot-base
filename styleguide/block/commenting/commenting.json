@@ -1,0 +1,30 @@
+{
+    "_template": "base/Commenting",
+    "header": {
+        "_template": "base/util/Concatenated",
+        "items": [
+            {
+                "_dataUrl": "/block/commenting/sign-in.json"
+            }
+        ]
+    },
+    "body": {
+        "_template": "base/util/Concatenated",
+        "items": [
+            {
+                "_repeat": 3,
+                "_dataUrl": "/block/commenting/comment.json"
+            }
+        ]
+    },
+    "footer": {
+        "_template": "base/util/Concatenated",
+        "items": [
+            {
+                "_template": "base/util/Link",
+                "body": "Show Comments (3)",
+                "href": "#"
+            }
+        ]
+    }
+}

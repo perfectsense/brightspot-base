@@ -1,0 +1,15 @@
+{{#defineBlock "CommentingSignIn"}}
+    {{#defineElement "headline"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+    {{#defineElement "providers"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    <div class="{{blockName}}">
+        {{#defaultBlockBody}}
+            {{element "headline"}}
+            {{element "providers"}}
+        {{/defaultBlockBody}}
+    </div>
+{{/defineBlock}}

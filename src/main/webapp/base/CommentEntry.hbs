@@ -1,0 +1,26 @@
+{{#defineBlock "CommentEntry"}}
+    {{#defineElement "author"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "footer"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "input" noWith="true"}}
+        <textarea class="{{elementName}}" placeholder="comment">{{comment}}</textarea>
+    {{/defineElement}}
+
+    {{#defineElement "characterCounter" noWith="true"}}
+        <div class="{{elementName}}">nnn characters remaining</div>
+    {{/defineElement}}
+
+    <div class="{{blockName}}">
+        {{#defaultBlockBody}}
+            {{element "author"}}
+            {{element "input"}}
+            {{element "characterCounter"}}
+            {{element "footer"}}
+        {{/defaultBlockBody}}
+    </div>
+{{/defineBlock}}

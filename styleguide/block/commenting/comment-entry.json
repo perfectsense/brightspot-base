@@ -1,0 +1,15 @@
+{
+    "_template": "base/CommentEntry",
+    "author": {
+        "_dataUrl": "/block/author/author.json"
+    },
+    "footer": {
+        "_template": "base/util/Concatenated",
+        "items": [
+            {
+                "_template": "base/util/Link",
+                "body": "Submit"
+            }
+        ]
+    }
+}

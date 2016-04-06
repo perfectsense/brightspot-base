@@ -1,0 +1,21 @@
+{
+    "_template": "base/Comment",
+    "author": {
+        "_dataUrl": "/block/author/author.json"
+    },
+    "date": "{{date()}}",
+    "body": {
+        "_template": "base/util/RawHtml",
+        "html": "{{paragraphs(1)}}"
+    },
+    "footer": {
+        "_template": "base/util/Concatenated",
+        "items": [
+            {
+                "_template": "base/util/Link",
+                "body": "Reply",
+                "href": "#"
+            }
+        ]
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "_template": "base/CommentingSignIn",
+    "headline": "Sign in to post a comment",
+    "providers": {
+        "_template": "base/util/Concatenated",
+        "items": [
+            {
+                "_template": "base/util/Link",
+                "href": "#",
+                "extraAttributes": {
+                    "data-provider": "facebook"
+                }
+            },
+            {
+                "_template": "base/util/Link",
+                "href": "#",
+                "extraAttributes": {
+                    "data-provider": "twitter"
+                }
+            },
+            {
+                "_template": "base/util/Link",
+                "href": "#",
+                "extraAttributes": {
+                    "data-provider": "googleplus"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,21 @@
+{{#defineBlock "Commenting"}}
+    {{#defineElement "header"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "body"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "footer"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+    
+    <div class="{{blockName}}">
+        {{#defaultBlockBody}}
+            {{element "header"}}
+            {{element "body"}}
+            {{element "footer"}}
+        {{/defaultBlockBody}}
+    </div>
+{{/defineBlock}}
