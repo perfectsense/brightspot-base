@@ -19,11 +19,6 @@
                 "_template": "base/util/Link",
                 "body": "Reply",
                 "href": "#"
-            },
-            {
-                "_template": "base/util/Link",
-                "body": "Foo",
-                "href": "#"
             }
         ]
     },
@@ -31,8 +26,12 @@
         "_template": "base/util/Concatenated",
         "items": [
             {
-                "_repeat": [1,3],
-                "_dataUrl": "/block/commenting/_base-replies.json"
+                "_repeat": [0,1],
+                "_dataUrl": "/block/commenting/_base-comment.json",
+                "actionBar": {
+                    "_template": "base/util/Concatenated",
+                    "items": []
+                }
             }
         ]
     }

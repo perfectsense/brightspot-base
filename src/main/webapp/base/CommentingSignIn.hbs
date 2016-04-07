@@ -2,14 +2,14 @@
     {{#defineElement "headline"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
-    {{#defineElement "providers"}}
+    {{#defineElement "services"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
     <div class="{{blockName}}">
         {{#defaultBlockBody}}
             {{element "headline"}}
-            {{element "providers"}}
+            {{element "services"}}
         {{/defaultBlockBody}}
     </div>
 {{/defineBlock}}

@@ -1,28 +1,28 @@
 {
     "_template": "base/CommentingSignIn",
     "headline": "Sign in to post a comment",
-    "providers": {
+    "services": {
         "_template": "base/util/Concatenated",
         "items": [
             {
                 "_template": "base/util/Link",
                 "href": "#",
                 "extraAttributes": {
-                    "data-provider": "facebook"
+                    "data-auth-service": "facebook"
                 }
             },
             {
                 "_template": "base/util/Link",
                 "href": "#",
                 "extraAttributes": {
-                    "data-provider": "twitter"
+                    "data-auth-service": "twitter"
                 }
             },
             {
                 "_template": "base/util/Link",
                 "href": "#",
                 "extraAttributes": {
-                    "data-provider": "googleplus"
+                    "data-auth-service": "googleplus"
                 }
             }
         ]

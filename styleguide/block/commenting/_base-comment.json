@@ -26,14 +26,5 @@
                 "href": "#"
             }
         ]
-    },
-    "replies": {
-        "_template": "base/util/Concatenated",
-        "items": [
-            {
-                "_repeat": [1,3],
-                "_dataUrl": "/block/commenting/_base-replies.json"
-            }
-        ]
     }
 }

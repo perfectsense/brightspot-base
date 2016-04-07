@@ -3,7 +3,7 @@
         <div class="{{elementName}}" itemprop="author">{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "date"}}
+    {{#defineElement "time"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
@@ -11,16 +11,21 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "footer"}}
+    {{#defineElement "actionBar"}}
         <footer class="{{elementName}}">{{this}}</footer>
+    {{/defineElement}}
+
+    {{#defineElement "replies"}}
+        <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
     <div class="{{blockName}}" itemscope itemtype="http://schema.org/Comment">
         {{#defaultBlockBody}}
             {{element "author"}}
-            {{element "date"}}
+            {{element "time"}}
             {{element "body"}}
-            {{element "footer"}}
+            {{element "actionBar"}}
+            {{element "replies"}}
         {{/defaultBlockBody}}
     </div>
 {{/defineBlock}}
