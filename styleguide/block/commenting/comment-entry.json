@@ -3,12 +3,21 @@
     "author": {
         "_dataUrl": "/block/author/author.json"
     },
+    "input": {
+        "_template": "base/util/TextArea",
+        "body": "",
+        "placeholder": "Comment",
+        "maxlength": 500,
+        "maxlengthCountdown": true,
+        "maxlengthMessage": "Characters remaining"
+    },
     "footer": {
         "_template": "base/util/Concatenated",
         "items": [
             {
                 "_template": "base/util/Link",
-                "body": "Submit"
+                "body": "Submit",
+                "href": "#"
             }
         ]
     }
