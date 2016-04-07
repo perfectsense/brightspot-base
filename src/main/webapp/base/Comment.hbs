@@ -1,6 +1,6 @@
 {{#defineBlock "Comment"}}
     {{#defineElement "author"}}
-        <div class="{{elementName}}">{{this}}</div>
+        <div class="{{elementName}}" itemprop="author">{{this}}</div>
     {{/defineElement}}
 
     {{#defineElement "date"}}
@@ -15,7 +15,7 @@
         <footer class="{{elementName}}">{{this}}</footer>
     {{/defineElement}}
 
-    <div class="{{blockName}}">
+    <div class="{{blockName}}" itemscope itemtype="http://schema.org/Comment">
         {{#defaultBlockBody}}
             {{element "author"}}
             {{element "date"}}

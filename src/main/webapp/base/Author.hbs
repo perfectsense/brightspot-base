@@ -4,14 +4,14 @@
     {{/defineElement}}
 
     {{#defineElement "name"}}
-        <div class="{{elementName}}" itemprop="name">{{this}}</div>
+        <div class="{{elementName}}" itemprop="name" rel="author">{{this}}</div>
     {{/defineElement}}
 
     {{#defineElement "affiliation"}}
         <div class="{{elementName}}" itemprop="affiliation">{{this}}</div>
     {{/defineElement}}
 
-    <div class="{{blockName}}" itemprop="author" itemscope itemtype="http://schema.org/Person"{{extraAttributes}}>
+    <div class="{{blockName}}" itemscope itemtype="http://schema.org/Person"{{extraAttributes}}>
         {{#defaultBlockBody}}
             {{element "image"}}
             {{element "name"}}
