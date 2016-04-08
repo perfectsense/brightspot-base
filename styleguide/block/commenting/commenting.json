@@ -1,5 +1,6 @@
 {
     "_template": "base/Commenting",
+    "showCommentsInitially": false,
     "header": {
         "_template": "base/util/Concatenated",
         "items": [

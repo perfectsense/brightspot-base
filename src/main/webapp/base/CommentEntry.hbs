@@ -1,5 +1,13 @@
 {{#defineBlock "CommentEntry"}}
-    {{#defineElement "author"}}
+    {{#defineElement "user"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "headline"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "subheadline"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
@@ -13,7 +21,9 @@
 
     <div class="{{blockName}}">
         {{#defaultBlockBody}}
-            {{element "author"}}
+            {{element "user"}}
+            {{element "headline"}}
+            {{element "subheadline"}}
             {{element "input"}}
             {{element "footer"}}
         {{/defaultBlockBody}}

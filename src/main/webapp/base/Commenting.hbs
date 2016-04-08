@@ -11,7 +11,9 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    <div class="{{blockName}}" data-bsp-community-commenting{{extraAttributes}} data-bsp-community-commenting-options='{}'>
+    <div class="{{blockName}}"
+        data-bsp-community-commenting{{extraAttributes}}
+        data-bsp-community-commenting-options='{ {{#if showCommentsInitially}}"showCommentsInitially":{{showCommentsInitially}}{{/if}} }'>
         {{#defaultBlockBody}}
             {{element "header"}}
             {{element "body"}}
