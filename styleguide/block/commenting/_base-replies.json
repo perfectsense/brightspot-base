@@ -12,7 +12,7 @@
         "_template": "base/util/RawHtml",
         "html": "{{paragraphs(1)}}"
     },
-    "actionBar": {
+    "footer": {
         "_template": "base/util/Concatenated",
         "items": [
             {
@@ -28,7 +28,7 @@
             {
                 "_repeat": [0,1],
                 "_dataUrl": "/block/commenting/_base-comment.json",
-                "actionBar": {
+                "footer": {
                     "_template": "base/util/Concatenated",
                     "items": []
                 }

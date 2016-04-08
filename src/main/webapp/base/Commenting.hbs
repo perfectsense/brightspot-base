@@ -10,8 +10,8 @@
     {{#defineElement "footer"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
-    
-    <div class="{{blockName}}">
+
+    <div class="{{blockName}}" data-bsp-community-commenting{{extraAttributes}}>
         {{#defaultBlockBody}}
             {{element "header"}}
             {{element "body"}}

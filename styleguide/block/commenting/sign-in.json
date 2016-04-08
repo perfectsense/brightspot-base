@@ -17,13 +17,6 @@
                 "extraAttributes": {
                     "data-auth-service": "twitter"
                 }
-            },
-            {
-                "_template": "base/util/Link",
-                "href": "#",
-                "extraAttributes": {
-                    "data-auth-service": "googleplus"
-                }
             }
         ]
     }

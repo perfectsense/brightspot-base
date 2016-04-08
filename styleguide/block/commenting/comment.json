@@ -12,17 +12,12 @@
         "_template": "base/util/RawHtml",
         "html": "{{paragraphs(1)}}"
     },
-    "actionBar": {
+    "footer": {
         "_template": "base/util/Concatenated",
         "items": [
             {
                 "_template": "base/util/Link",
                 "body": "Reply",
-                "href": "#"
-            },
-            {
-                "_template": "base/util/Link",
-                "body": "Foo",
                 "href": "#"
             }
         ]
