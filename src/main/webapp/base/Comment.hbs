@@ -19,7 +19,7 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    <div class="{{blockName}}" itemscope itemtype="http://schema.org/Comment">
+    <div class="{{blockName}}" {{#if isStaff}}data-by-staff{{/if}} itemscope itemtype="http://schema.org/Comment"{{extraAttributes}}>
         {{#defaultBlockBody}}
             {{element "author"}}
             {{element "time"}}

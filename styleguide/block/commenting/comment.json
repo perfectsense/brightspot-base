@@ -1,5 +1,6 @@
 {
     "_template": "base/Comment",
+    "isStaff": false,
     "author": {
         "_dataUrl": "/block/author/author.json"
     },
