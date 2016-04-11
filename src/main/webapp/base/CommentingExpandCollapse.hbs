@@ -1,0 +1,16 @@
+{{#defineBlock "CommentingExpandCollapse"}}
+    {{#defineElement "textWhenCollapsed"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "textWhenExpanded"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defaultBlockBody}}
+        <div class="{{blockName}}">
+            {{element "textWhenExpanded"}}
+            {{element "textWhenCollapsed"}}
+        </div>
+    {{/defaultBlockBody}}
+{{/defineBlock}}

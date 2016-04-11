@@ -1,10 +1,10 @@
 {{#defineBlock "Commenting"}}
     {{#defineElement "header"}}
-        <div class="{{elementName}}">{{this}}</div>
+        <header class="{{elementName}}">{{this}}</header>
     {{/defineElement}}
 
     {{#defineElement "body"}}
-        <div class="{{elementName}}">{{this}}</div>
+        <div class="{{elementName}}" data-comments-expanded={{#if ../expandComments}}true{{else}}false{{/if}}>{{this}}</div>
     {{/defineElement}}
 
     {{#defineElement "footer"}}
@@ -13,7 +13,7 @@
 
     <div class="{{blockName}}"
         data-bsp-community-commenting{{extraAttributes}}
-        data-bsp-community-commenting-options='{ {{#if showCommentsInitially}}"showCommentsInitially":{{showCommentsInitially}}{{/if}} }'>
+        data-bsp-community-commenting-options='{ {{#if expandComments}}"expandComments":{{expandComments}}{{/if}} }'>
         {{#defaultBlockBody}}
             {{element "header"}}
             {{element "body"}}
