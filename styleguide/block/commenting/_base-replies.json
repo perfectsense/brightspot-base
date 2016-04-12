@@ -4,7 +4,7 @@
         "_dataUrl": "/block/author/author.json"
     },
     "time": {
-        "_template": "base/util/Time",
+        "_template": "base/util/DateTime",
         "iso": "{{date('iso')}}",
         "body": "{{date()}}"
     },
