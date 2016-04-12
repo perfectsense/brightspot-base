@@ -26,7 +26,7 @@
     "items": [
       {
         "_template": "base/CommentSubmitButton",
-        "ajaxTarget": "/ajax/saveComment",
+        "ajaxTarget": "_ajax-submit-response.json",
         "link": {
           "_template": "base/util/Link",
           "body": "Post",
