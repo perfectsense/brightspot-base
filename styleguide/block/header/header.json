@@ -5,6 +5,6 @@
         "src": "{{image(300, 80)}}"
     },
     "navigation": {
-        "_dataUrl": "/page/navigation.json"
+        "_dataUrl": "/block/navigation/navigation.json"
     }
 }
