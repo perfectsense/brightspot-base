@@ -1,0 +1,38 @@
+{
+  "_template": "base/CommentEntry",
+  "user": {
+    "_template": "base/Author",
+    "image": {
+      "_template": "base/util/Image",
+      "src": "{{image(50, 50)}}"
+    }
+  },
+  "headline": "{{name}}",
+  "subheadline": {
+    "_template": "base/util/Link",
+    "href": "#",
+    "body": "Logout"
+  },
+  "input": {
+    "_template": "base/util/TextArea",
+    "body": "",
+    "placeholder": "Comment",
+    "maxlength": 500,
+    "maxlengthCountdown": true,
+    "maxlengthMessage": "Characters remaining"
+  },
+  "footer": {
+    "_template": "base/util/Concatenated",
+    "items": [
+      {
+        "_template": "base/CommentSubmitButton",
+        "ajaxTarget": "/ajax/saveComment",
+        "link": {
+          "_template": "base/util/Link",
+          "body": "Post",
+          "href": "#"
+        }
+      }
+    ]
+  }
+}

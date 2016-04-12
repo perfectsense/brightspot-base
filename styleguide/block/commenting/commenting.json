@@ -5,7 +5,7 @@
         "_template": "base/util/Concatenated",
         "items": [
             {
-                "_dataUrl": "/block/commenting/sign-in.json"
+                "_dataUrl": "/block/commenting/comment-submit.json"
             },
             {
                 "_template": "base/CommentingExpandCollapse",

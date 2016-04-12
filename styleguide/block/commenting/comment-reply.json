@@ -25,9 +25,13 @@
     "_template": "base/util/Concatenated",
     "items": [
       {
-        "_template": "base/util/Link",
-        "body": "Submit",
-        "href": "#"
+        "_template": "base/CommentReplyButton",
+        "ajaxTarget": "/ajax/replyComment",
+        "link": {
+          "_template": "base/util/Link",
+          "body": "Reply",
+          "href": "#"
+        }
       }
     ]
   }

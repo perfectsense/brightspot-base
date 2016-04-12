@@ -1,0 +1,11 @@
+{{#defineBlock "CommentSubmit"}}
+    {{#defineElement "link"}}
+        <div data-ajax-target="{{../ajaxTarget}}" class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defaultBlockBody}}
+        <div class="{{blockName}}">
+            {{element "link"}}
+        </div>
+    {{/defaultBlockBody}}
+{{/defineBlock}}
