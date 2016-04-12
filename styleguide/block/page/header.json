@@ -3,5 +3,8 @@
     "logo": {
         "_template": "/base/util/Image",
         "src": "{{image(300, 80)}}"
+    },
+    "navigation": {
+        "_dataUrl": "/page/navigation.json"
     }
 }
