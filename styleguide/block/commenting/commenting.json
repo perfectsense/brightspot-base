@@ -18,8 +18,7 @@
         "_template": "base/util/Concatenated",
         "items": [
             {
-                "_repeat": 3,
-                "_dataUrl": "/block/commenting/comment.json"
+                "_dataUrl": "/block/commenting/comments-section.json"
             }
         ]
     },

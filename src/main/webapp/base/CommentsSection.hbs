@@ -1,0 +1,15 @@
+{{#defineBlock "CommentsSection"}}
+    {{#defineElement "comments"}}
+        <div class="{{elementName}}">
+            {{#each this}}
+                <div class="{{elementName}}-comment">{{this}}</div>
+            {{/each}}
+        </div>
+    {{/defineElement}}
+
+    {{#defaultBlockBody}}
+        <section class="{{blockName}}"{{extraAttributes}}>
+            {{element "comments"}}
+        </section>
+    {{/defaultBlockBody}}
+{{/defineBlock}}

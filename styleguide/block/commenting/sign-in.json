@@ -1,23 +1,23 @@
 {
-    "_template": "base/CommentingSignIn",
-    "headline": "Sign in to post a comment",
-    "services": {
-        "_template": "base/util/Concatenated",
-        "items": [
-            {
-                "_template": "base/util/Link",
-                "href": "#",
-                "extraAttributes": {
-                    "data-auth-service": "facebook"
-                }
-            },
-            {
-                "_template": "base/util/Link",
-                "href": "#",
-                "extraAttributes": {
-                    "data-auth-service": "twitter"
-                }
-            }
-        ]
-    }
+  "_template": "base/CommentingSignIn",
+  "headline": "Sign in to post a comment",
+  "services": {
+    "_template": "base/util/Concatenated",
+    "items": [
+      {
+        "_template": "base/util/Link",
+        "href": "#",
+        "extraAttributes": {
+          "data-auth-service": "facebook"
+        }
+      },
+      {
+        "_template": "base/util/Link",
+        "href": "#",
+        "extraAttributes": {
+          "data-auth-service": "twitter"
+        }
+      }
+    ]
+  }
 }
