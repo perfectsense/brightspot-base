@@ -1,5 +1,5 @@
 {
-    "_template": "/base/page/Navigation",
+    "_template": "/base/page/PageNavigation",
     "items": [
         {
             "_repeat": 6,

@@ -1,11 +1,11 @@
 {
-    "_template": "/base/page/Header",
+    "_template": "/base/page/PageHeader",
     "logo": {
         "_template": "/base/util/Image",
         "src": "{{image(300, 80)}}"
     },
     "navigation": {
-        "_dataUrl": "/block/navigation/navigation.json"
+        "_dataUrl": "/block/page-navigation/page-navigation.json"
     },
     "search": {
         "_template": "/base/util/RawHtml",
