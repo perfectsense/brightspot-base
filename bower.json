@@ -28,6 +28,12 @@
         "dest": "",
         "expand": true
       }
+    ],
+    "normalize-css": [
+        {
+            "src": "normalize.css",
+            "dest": "bower/normalize-css/normalize.css"
+        }
     ]
   }
 }
