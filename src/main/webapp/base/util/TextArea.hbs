@@ -1,1 +1,14 @@
-<textarea {{#with placeholder}}placeholder="{{this}}"{{/with}} {{#with autofocus}}autofocus="{{this}}"{{/with}} {{#with maxlength}}maxlength="{{this}}"{{/with}} {{#if maxlengthMessage}}data-maxlength-message="{{maxlengthMessage}}"{{/if}}{{extraAttributes}}>{{body}}</textarea>
+{{#defineBlock "TextArea"}}
+    {{#defineElement "characterCountdown"}}
+        <div class="{{elementName}}">{{../maxlength}} {{this}}</div>
+    {{/defineElement}}
+
+    {{#defaultBlockBody}}
+        <div class="{{blockName}}"{{extraAttributes}}>
+            <textarea class="{{blockName}}-input" {{#with placeholder}}placeholder="{{this}}"{{/with}} {{#with autofocus}}autofocus="{{this}}"{{/with}} {{#with maxlength}}maxlength="{{this}}"{{/with}}>{{value}}</textarea>
+            {{#if maxlength}}
+                {{element "characterCountdown"}}
+            {{/if}}
+        </div>
+    {{/defaultBlockBody}}
+{{/defineBlock}}

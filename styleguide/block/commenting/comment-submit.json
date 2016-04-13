@@ -15,11 +15,13 @@
   },
   "input": {
     "_template": "base/util/TextArea",
-    "body": "",
+    "value": "",
     "placeholder": "Comment",
     "maxlength": 500,
-    "maxlengthCountdown": true,
-    "maxlengthMessage": "Characters remaining"
+    "characterCountdown": {
+        "_template": "base/util/RawHtml",
+        "html": "characters remaining"
+    }
   },
   "footer": {
     "_template": "base/util/Concatenated",
