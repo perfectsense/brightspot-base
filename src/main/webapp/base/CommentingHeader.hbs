@@ -1,0 +1,9 @@
+{{#defineBlock "CommentingHeader"}}
+    {{#defineElement "title"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defaultBlockBody}}
+        {{element "title"}}
+    {{/defaultBlockBody}}
+{{/defineBlock}}

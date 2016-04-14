@@ -2,17 +2,8 @@
     "_template": "base/Commenting",
     "expandComments": true,
     "header": {
-        "_template": "base/util/Concatenated",
-        "items": [
-            {
-                "_dataUrl": "/block/commenting/comment-submit.json"
-            },
-            {
-                "_template": "base/CommentingExpandCollapse",
-                "textWhenCollapsed": "View 1,000 Comments",
-                "textWhenExpanded": "Hide 1,000 Comments"
-            }
-        ]
+        "_template": "base/CommentingHeader",
+        "title": "1 comment"
     },
     "body": {
         "_template": "base/util/Concatenated",
