@@ -12,8 +12,8 @@
     {{/defineElement}}
 
     <div class="{{blockName}}"
-        data-bsp-community-commenting{{extraAttributes}}
-        data-bsp-community-commenting-options='{ {{#if expandComments}}"expandComments":{{expandComments}}{{/if}} }'>
+        data-bsp-community-commenting
+        data-bsp-community-commenting-options='{ {{#if expandComments}}"expandComments":{{expandComments}}{{/if}} }'{{extraAttributes}}>
         {{#defaultBlockBody}}
             {{element "header"}}
             {{element "body"}}
