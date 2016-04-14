@@ -23,7 +23,7 @@
         "html": "characters remaining"
     }
   },
-  "footer": {
+  "actions": {
     "_template": "base/util/Concatenated",
     "items": [
       {

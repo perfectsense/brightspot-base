@@ -11,12 +11,8 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "footer"}}
+    {{#defineElement "actions"}}
         <footer class="{{elementName}}">{{this}}</footer>
-    {{/defineElement}}
-
-    {{#defineElement "replies"}}
-        <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
     <div class="{{blockName}}" {{#if isStaff}}data-by-staff{{/if}} itemscope itemtype="http://schema.org/Comment"{{extraAttributes}}>
@@ -24,8 +20,7 @@
             {{element "author"}}
             {{element "time"}}
             {{element "body"}}
-            {{element "footer"}}
-            {{element "replies"}}
+            {{element "actions"}}
         {{/defaultBlockBody}}
     </div>
 {{/defineBlock}}

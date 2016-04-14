@@ -12,7 +12,7 @@
         "_template": "base/util/RawHtml",
         "html": "{{paragraphs(1)}}"
     },
-    "footer": {
+    "actions": {
         "_template": "base/util/Concatenated",
         "items": [
             {

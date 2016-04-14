@@ -7,7 +7,7 @@
         <div class="{{elementName}}" data-comments-expanded={{#if ../expandComments}}true{{else}}false{{/if}}>{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "footer"}}
+    {{#defineElement "actions"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
@@ -17,7 +17,7 @@
         {{#defaultBlockBody}}
             {{element "header"}}
             {{element "body"}}
-            {{element "footer"}}
+            {{element "actions"}}
         {{/defaultBlockBody}}
     </div>
 {{/defineBlock}}

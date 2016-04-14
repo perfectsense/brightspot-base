@@ -13,7 +13,7 @@
         "_template": "base/util/RawHtml",
         "html": "{{paragraphs(1)}}"
     },
-    "footer": {
+    "actions": {
         "_template": "base/util/Concatenated",
         "items": [
             {
@@ -25,42 +25,6 @@
                     "href": "#"
                 }
             }
-        ]
-    },
-    "replies": {
-        "_template": "base/CommentsSection",
-        "comments": [
-            {
-                "_template": "base/Comment",
-                "isStaff": false,
-                "author": {
-                    "_dataUrl": "/block/author/author.json"
-                },
-                "time": {
-                    "_template": "base/util/DateTime",
-                    "iso": "{{date('iso')}}",
-                    "body": "{{date()}}"
-                },
-                "body": {
-                    "_template": "base/util/RawHtml",
-                    "html": "{{paragraphs(1)}}"
-                },
-                "footer": {
-                    "_template": "base/util/Concatenated",
-                    "items": [
-                        {
-                            "_template": "base/CommentReplyButton",
-                            "ajaxTarget": "/ajax/replyComment",
-                            "link": {
-                                "_template": "base/util/Link",
-                                "body": "Reply",
-                                "href": "#"
-                            }
-                        }
-                    ]
-                }
-            }
-
         ]
     }
 }

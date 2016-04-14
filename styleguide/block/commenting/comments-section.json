@@ -1,9 +1,0 @@
-{
-    "_template": "base/CommentsSection",
-    "comments": [
-        {
-            "_repeat": 3,
-            "_dataUrl": "/block/commenting/comment.json"
-        }
-    ]
-}
