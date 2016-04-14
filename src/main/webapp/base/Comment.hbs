@@ -15,7 +15,11 @@
         <footer class="{{elementName}}">{{this}}</footer>
     {{/defineElement}}
 
-    <div class="{{blockName}}" {{#if isStaff}}data-by-staff{{/if}} itemscope itemtype="http://schema.org/Comment"{{extraAttributes}}>
+    <div class="{{blockName}}"
+        {{#if threadDepth}}data-thread-depth="{{threadDepth}}"{{/if}}
+        {{#if isStaff}}data-by-staff{{/if}}
+        itemscope itemtype="http://schema.org/Comment"
+        {{extraAttributes}}>
         {{#defaultBlockBody}}
             {{element "author"}}
             {{element "time"}}

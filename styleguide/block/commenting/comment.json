@@ -1,6 +1,7 @@
 {
     "_template": "base/Comment",
     "isStaff": false,
+    "threadDepth": "0",
     "author": {
         "_dataUrl": "/block/author/author.json"
     },
