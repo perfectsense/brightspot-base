@@ -1,0 +1,11 @@
+{{#defineBlock "CommentingShowMore"}}
+    {{#defineElement "link"}}
+        <div {{#if ../ajaxTarget}}data-ajax-target="{{../ajaxTarget}}"{{/if}} class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defaultBlockBody}}
+    <div class="{{blockName}}">
+        {{element "link"}}
+    </div>
+    {{/defaultBlockBody}}
+{{/defineBlock}}
