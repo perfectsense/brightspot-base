@@ -1,8 +1,8 @@
 {
     "_template": "base/Comment",
-    "id": "sdf43235dwf3dsfsd4",
-    "isStaff": true,
-    "threadDepth": "0",
+    "id": "435lkjf34lkjdsflsdjfjl",
+    "parentId": "sdf43235dwf3dsfsd4",
+    "threadDepth": "1",
     "author": {
         "_dataUrl": "/block/author/author.json"
     },
