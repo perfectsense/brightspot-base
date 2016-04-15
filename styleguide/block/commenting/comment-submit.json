@@ -45,11 +45,7 @@
       {
         "_template": "base/CommentSubmitButton",
         "ajaxTarget": "_ajax-submit-response.json",
-        "link": {
-          "_template": "base/util/Link",
-          "body": "Post",
-          "href": "#"
-        }
+        "body": "Post"
       }
     ]
   }

@@ -46,13 +46,9 @@
         "_dataUrl": "comment-submit.json"
       },
       {
-        "_template": "base/CommentingShowMore",
+        "_template": "base/CommentingShowMoreButton",
         "ajaxTarget": "_ajax-show-more-response.html",
-        "link": {
-          "_template": "base/util/Link",
-          "body": "Show More Comments",
-          "href": "#"
-        }
+        "body": "Show More Comments"
       }
     ]
   }

@@ -1,11 +1,7 @@
 {{#defineBlock "CommentSubmitButton"}}
-    {{#defineElement "link"}}
-        <div data-ajax-target="{{../ajaxTarget}}" class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
-
     {{#defaultBlockBody}}
         <div class="{{blockName}}">
-            {{element "link"}}
+            <button type="button" class="{{blockName}}-button" {{#if ajaxTarget}}data-ajax-target="{{ajaxTarget}}"{{/if}}>{{body}}</button>
         </div>
     {{/defaultBlockBody}}
 {{/defineBlock}}
