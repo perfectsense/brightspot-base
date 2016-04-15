@@ -1,0 +1,22 @@
+{{#defineBlock "PageHeader"}}
+
+    {{#defineElement "logo"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "navigation"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "search"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    <header class="{{blockName}}" itemscope itemtype="http://schema.org/WPHeader"{{extraAttributes}}>
+        {{#defaultBlockBody}}
+            {{element "logo"}}
+            {{element "navigation"}}
+            {{element "search"}}
+        {{/defaultBlockBody}}
+    </header>
+{{/defineBlock}}

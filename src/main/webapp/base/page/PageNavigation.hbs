@@ -1,0 +1,16 @@
+{{#defineBlock "PageNavigation"}}
+
+    {{#defineElement "items"}}
+        <ul class="{{elementName}}">
+            {{#each this}}
+                <li class="{{elementName}}-item">{{this}}</li>
+            {{/each}}
+        </ul>
+    {{/defineElement}}
+
+    <nav class="{{blockName}}" itemscope itemtype="http://schema.org/SiteNavigationElement"{{extraAttributes}}>
+        {{#defaultBlockBody}}
+            {{element "items"}}
+        {{/defaultBlockBody}}
+    </nav>
+{{/defineBlock}}
