@@ -14,7 +14,6 @@
         "html": "{{paragraphs(1)}}"
     },
     "actions": {
-        "_template": "base/util/Concatenated",
-        "items": []
+        "_template": "base/util/Concatenated"
     }
 }

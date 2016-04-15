@@ -19,7 +19,9 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    <div class="{{blockName}}">
+    <div class="{{blockName}}"
+        {{#if replaceWithResponse}}data-replace-with-response{{/if}}
+        {{extraAttributes}}>
         {{#defaultBlockBody}}
             {{element "user"}}
             {{element "headline"}}

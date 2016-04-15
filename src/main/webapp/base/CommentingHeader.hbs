@@ -4,6 +4,8 @@
     {{/defineElement}}
 
     {{#defaultBlockBody}}
-        {{element "title"}}
+        <div class="{{blockName}}"{{extraAttributes}}>
+            {{element "title"}}
+        </div>
     {{/defaultBlockBody}}
 {{/defineBlock}}
