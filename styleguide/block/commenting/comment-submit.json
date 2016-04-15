@@ -20,8 +20,23 @@
     "placeholder": "Comment",
     "maxlength": 500,
     "characterCountdown": {
-        "_template": "base/util/RawHtml",
-        "html": "characters remaining"
+      "_template": "base/util/RawHtml",
+      "html": "characters remaining"
+    }
+  },
+  "validation": {
+    "_template": "base/CommentEntryValidation",
+    "serverErrorMessage": {
+      "_template": "base/util/RawHtml",
+      "html": "Sorry! Something went wrong on our end. Please try again later."
+    },
+    "commentIsBlankMessage": {
+      "_template": "base/util/RawHtml",
+      "html": "Please provide a comment."
+    },
+    "commentIsTooLongMessage": {
+      "_template": "base/util/RawHtml",
+      "html": "Your comment was too long. Please stay within 500 characters."
     }
   },
   "actions": {

@@ -15,6 +15,10 @@
         <div class="{{elementName}}">{{input}}</div>
     {{/defineElement}}
 
+    {{#defineElement "validation"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
     {{#defineElement "actions"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
@@ -27,6 +31,7 @@
             {{element "headline"}}
             {{element "subheadline"}}
             {{element "input"}}
+            {{element "validation"}}
             {{element "actions"}}
         {{/defaultBlockBody}}
     </div>
