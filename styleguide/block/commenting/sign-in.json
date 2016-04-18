@@ -5,18 +5,22 @@
     "_template": "base/util/Concatenated",
     "items": [
       {
-        "_template": "base/util/Link",
+        "_template": "base/util/SocialLink",
         "href": "#",
-        "extraAttributes": {
-          "data-auth-service": "facebook"
-        }
+        "socialService": "facebook",
+        "body": "Facebook"
       },
       {
-        "_template": "base/util/Link",
+        "_template": "base/util/SocialLink",
         "href": "#",
-        "extraAttributes": {
-          "data-auth-service": "twitter"
-        }
+        "socialService": "twitter",
+        "body": "Twitter"
+      },
+      {
+        "_template": "base/util/SocialLink",
+        "href": "#",
+        "socialService": "google",
+        "body": "Google"
       }
     ]
   }
