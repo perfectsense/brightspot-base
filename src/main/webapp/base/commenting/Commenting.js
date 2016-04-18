@@ -197,6 +197,7 @@ let Commenting = {
     let self = this;
     $el.on('click', function(e) {
       e.preventDefault();
+      $(this).css({'opacity':'0.4', 'pointer-events':'none'});
       self.getCommentEntry($(this));
     });
   },
@@ -221,6 +222,9 @@ let Commenting = {
 
       // replacing an inline comment entry?
       if (data.$elToReplace){
+        data.$elToReplace.siblings(self.selectors.commentBlock)
+            .find(self.selectors.commentReplyButton)
+            .css({'opacity': 1, 'pointer-events':'auto'});
         data.$elToReplace.replaceWith($html);
       }
       // appending comment to body
@@ -248,6 +252,7 @@ let Commenting = {
       $html = $(data.commentEntry);
       this.initCommentEntry($html);
       $html.insertAfter(data.$parentComment);
+      $html.find('textarea').focus();
     }
 
     // show more button?
