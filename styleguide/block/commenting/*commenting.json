@@ -1,12 +1,13 @@
 {
   "_template": "base/commenting/Commenting",
+  "id": "324kldsjlj34",
+  "expandComments": true,
   "extraAttributes": {
     "data-bsp-community-commenting-ajaxMethod": "GET"
   },
-  "expandComments": true,
   "header": {
     "_template": "base/commenting/CommentingHeader",
-    "title": "25 comments"
+    "title": "30 Comments"
   },
   "body": {
     "_template": "base/util/Concatenated",
@@ -26,7 +27,8 @@
         "_dataUrl": "/block/commenting/comment.json",
         "threadDepth": "1",
         "parentId": "1",
-        "id": "{{number([2,20])}}"
+        "id": "{{number([2,20])}}",
+        "isStaff": true
       },
       {
         "_repeat": [

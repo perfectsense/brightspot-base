@@ -1,7 +1,7 @@
 {
   "_template": "base/commenting/Comment",
   "id": "sdf43235dwf3dsfsd4",
-  "isStaff": true,
+  "isStaff": false,
   "threadDepth": "0",
   "author": {
     "_dataUrl": "/block/author/author.json"
