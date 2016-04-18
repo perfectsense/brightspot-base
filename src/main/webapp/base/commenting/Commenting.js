@@ -178,10 +178,7 @@ let Commenting = {
       }
 
       $(this).siblings(self.selectors.commentEntryCharacterCountdown).text(text);
-    })
-    .on('blur', function(e){
-      // remove validation messages?
-    })
+    });
   },
 
   initLoginLinks($el) {
@@ -196,9 +193,14 @@ let Commenting = {
   initCommentReplyButton($el) {
     let self = this;
     $el.on('click', function(e) {
-      e.preventDefault();
-      $(this).css({'opacity':'0.4', 'pointer-events':'none'});
-      self.getCommentEntry($(this));
+        e.preventDefault();
+        // cancel any previous/visible inline comment entry UIs
+        $(`${self.selectors.commentingBody} ${self.selectors.commentEntryBlock}`).each(function(){
+            self.cancelCommentReply($(this));
+        });
+        // disable the reply button UI
+        $(this).css({'opacity':'0.4', 'pointer-events':'none'});
+        self.getCommentEntry($(this));
     });
   },
 
@@ -264,9 +266,16 @@ let Commenting = {
   },
 
   resetEntryInput($commentBlock) {
-    // triggering the keyup event
-    // signals the counter logic to reset the countdown
+    // triggering the keyup event,
+    // signals the counter to reset the countdown
     $commentBlock.find('textarea').val('').trigger('keyup');
+  },
+
+  cancelCommentReply($commentEntry) {
+    $commentEntry.siblings(this.selectors.commentBlock)
+      .find(this.selectors.commentReplyButton)
+      .css({'opacity': 1, 'pointer-events':'auto'});
+    $commentEntry.remove();
   },
 
   expandComments() {
