@@ -1,5 +1,6 @@
 {
     "_template": "base/Commenting",
+    "id": "324kldsjlj34",
     "expandComments": true,
     "header": {
         "_template": "base/CommentingHeader",
