@@ -1,24 +1,4 @@
-{{#defineBlock "ArticleMain"}}
-    {{#defineElement "breadcrumbs"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
-
-    {{#defineElement "preHeadline"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
-
-    {{#defineElement "headline"}}
-        <div class="{{elementName}}" itemprop="headline">{{this}}</div>
-    {{/defineElement}}
-
-    {{#defineElement "subHeadline"}}
-        <div class="{{elementName}}" itemprop="alternativeHeadline">{{this}}</div>
-    {{/defineElement}}
-
-    {{#defineElement "byline"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
-
+{{#defineBlock "ArticleMain" extend="base/main/Main"}}
     {{#defineElement "lead"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
@@ -27,38 +7,22 @@
         <div class="{{elementName}}" itemprop="articleBody">{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "tags"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+    {{#defineBlockContainer}}
+        <article class="{{blockName}}" itemprop="mainEntity" itemscope itemtype="http://schema.org/Article"{{extraAttributes}}>
+            {{element "meta"}}
 
-    {{#defineElement "sharebar"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
-
-    {{#defineElement "comments"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
-
-    <article class="{{blockName}}" itemprop="mainEntity" itemscope itemtype="http://schema.org/Article"{{extraAttributes}}>
-        {{#with datePublished}}
-            <meta itemprop="datePublished" content="{{this}}">
-        {{/with}}
-
-        {{#with dateModified}}
-            <meta itemprop="dateModified" content="{{this}}">
-        {{/with}}
-
-        {{#defaultBlockBody}}
-            {{element "breadcrumbs"}}
-            {{element "preHeadline"}}
-            {{element "headline"}}
-            {{element "subHeadline"}}
-            {{element "byline"}}
-            {{element "lead"}}
-            {{element "body"}}
-            {{element "tags"}}
-            {{element "sharebar"}}
-            {{element "comments"}}
-        {{/defaultBlockBody}}
-    </article>
+            {{#defineBlockBody}}
+                {{element "breadcrumbs"}}
+                {{element "preHeadline"}}
+                {{element "headline"}}
+                {{element "subHeadline"}}
+                {{element "byline"}}
+                {{element "lead"}}
+                {{element "body"}}
+                {{element "tags"}}
+                {{element "sharebar"}}
+                {{element "comments"}}
+            {{/defineBlockBody}}
+        </article>
+    {{/defineBlockContainer}}
 {{/defineBlock}}
