@@ -1,5 +1,5 @@
 {
-  "_template": "base/CommentEntry",
+  "_template": "base/commenting/CommentEntry",
   "replaceWithResponse": false,
   "user": {
     "_template": "base/Author",
@@ -25,7 +25,7 @@
     }
   },
   "validation": {
-    "_template": "base/CommentEntryValidation",
+    "_template": "base/commenting/CommentEntryValidation",
     "serverErrorMessage": {
       "_template": "base/util/RawHtml",
       "html": "Sorry! Something went wrong on our end. Please try again later."
@@ -43,8 +43,8 @@
     "_template": "base/util/Concatenated",
     "items": [
       {
-        "_template": "base/CommentSubmitButton",
-        "ajaxTarget": "_ajax-submit-response.json",
+        "_template": "base/commenting/CommentSubmitButton",
+        "ajaxTarget": "/block/commenting/_ajax-submit-response.json",
         "body": "Post"
       }
     ]

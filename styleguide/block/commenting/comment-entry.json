@@ -1,5 +1,5 @@
 {
-  "_template": "base/CommentEntry",
+  "_template": "base/commenting/CommentEntry",
   "user": {
     "_template": "base/Author",
     "image": {
@@ -27,7 +27,7 @@
     "_template": "base/util/Concatenated",
     "items": [
       {
-        "_template": "base/CommentReplyButton",
+        "_template": "base/commenting/CommentReplyButton",
         "ajaxTarget": "/ajax/replyComment",
         "link": {
           "_template": "base/util/Link",

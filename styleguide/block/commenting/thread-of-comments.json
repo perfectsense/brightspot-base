@@ -1,11 +1,11 @@
 {
-  "_template": "base/Commenting",
+  "_template": "base/commenting/Commenting",
   "extraAttributes": {
     "data-bsp-community-commenting-ajaxMethod": "GET"
   },
   "expandComments": true,
   "header": {
-    "_template": "base/CommentingHeader",
+    "_template": "base/commenting/CommentingHeader",
     "title": "25 comments"
   },
   "body": {
@@ -46,7 +46,7 @@
         "_dataUrl": "/block/commenting/comment-submit.json"
       },
       {
-        "_template": "base/CommentingShowMoreButton",
+        "_template": "base/commenting/CommentingShowMoreButton",
         "ajaxTarget": "_ajax-show-more-response.html",
         "body": "Show More Comments"
       }

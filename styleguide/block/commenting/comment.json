@@ -1,5 +1,5 @@
 {
-  "_template": "base/Comment",
+  "_template": "base/commenting/Comment",
   "id": "sdf43235dwf3dsfsd4",
   "isStaff": true,
   "threadDepth": "0",
@@ -19,7 +19,7 @@
     "_template": "base/util/Concatenated",
     "items": [
       {
-        "_template": "base/CommentReplyButton",
+        "_template": "base/commenting/CommentReplyButton",
         "ajaxTarget": "/ajax/replyComment",
         "link": {
           "_template": "base/util/Link",

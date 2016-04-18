@@ -1,5 +1,5 @@
 {
-    "_template": "base/Comment",
+    "_template": "base/commenting/Comment",
     "id": "435lkjf34lkjdsflsdjfjl",
     "parentId": "sdf43235dwf3dsfsd4",
     "threadDepth": "1",
@@ -19,7 +19,7 @@
         "_template": "base/util/Concatenated",
         "items": [
             {
-                "_template": "base/CommentReplyButton",
+                "_template": "base/commenting/CommentReplyButton",
                 "ajaxTarget": "/ajax/replyComment",
                 "link": {
                     "_template": "base/util/Link",

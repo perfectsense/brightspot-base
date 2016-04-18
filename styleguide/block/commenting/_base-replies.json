@@ -1,5 +1,5 @@
 {
-    "_template": "base/Comment",
+    "_template": "base/commenting/Comment",
     "author": {
         "_dataUrl": "/block/author/author.json"
     },
@@ -16,7 +16,7 @@
         "_template": "base/util/Concatenated",
         "items": [
             {
-              "_template": "base/CommentReplyButton",
+              "_template": "base/commenting/CommentReplyButton",
               "ajaxTarget": "/ajax/replyComment",
               "link": {
                 "_template": "base/util/Link",
