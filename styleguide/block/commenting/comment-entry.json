@@ -1,5 +1,6 @@
 {
   "_template": "base/commenting/CommentEntry",
+  "replaceWithResponse": false,
   "user": {
     "_template": "base/Author",
     "image": {
@@ -19,21 +20,32 @@
     "placeholder": "Comment",
     "maxlength": 500,
     "characterCountdown": {
-        "_template": "base/util/RawHtml",
-        "html": "characters remaining"
+      "_template": "base/util/RawHtml",
+      "html": "characters remaining"
+    }
+  },
+  "validation": {
+    "_template": "base/commenting/CommentEntryValidation",
+    "serverErrorMessage": {
+      "_template": "base/util/RawHtml",
+      "html": "Sorry! Something went wrong on our end. Please try again later."
+    },
+    "commentIsBlankMessage": {
+      "_template": "base/util/RawHtml",
+      "html": "Please provide a comment."
+    },
+    "commentIsTooLongMessage": {
+      "_template": "base/util/RawHtml",
+      "html": "Your comment was too long. Please stay within 500 characters."
     }
   },
   "actions": {
     "_template": "base/util/Concatenated",
     "items": [
       {
-        "_template": "base/commenting/CommentReplyButton",
-        "ajaxTarget": "/ajax/replyComment",
-        "link": {
-          "_template": "base/util/Link",
-          "body": "Reply",
-          "href": "#"
-        }
+        "_template": "base/commenting/CommentSubmitButton",
+        "ajaxTarget": "/block/commenting/_ajax-submit-response.json",
+        "body": "Post"
       }
     ]
   }
