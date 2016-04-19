@@ -1,0 +1,32 @@
+{
+  "_template": "community/commenting/Comment",
+  "id": "sdf43235dwf3dsfsd4",
+  "isStaff": false,
+  "threadDepth": "0",
+  "author": {
+    "_dataUrl": "/block/author/author.json"
+  },
+  "time": {
+    "_template": "base/util/DateTime",
+    "iso": "{{date('iso')}}",
+    "body": "{{date()}}"
+  },
+  "body": {
+    "_template": "base/util/RawHtml",
+    "html": "{{paragraphs(1)}}"
+  },
+  "actions": {
+    "_template": "base/util/Concatenated",
+    "items": [
+      {
+        "_template": "community/commenting/CommentReply",
+        "ajaxHref": "/ajax/replyComment",
+        "button": {
+          "_template": "base/util/Link",
+          "body": "Reply",
+          "href": "#"
+        }
+      }
+    ]
+  }
+}

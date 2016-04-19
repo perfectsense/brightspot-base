@@ -1,0 +1,27 @@
+{
+  "_template": "community/commenting/CommentingSignIn",
+  "title": "Sign in to post a comment",
+  "services": {
+    "_template": "base/util/Concatenated",
+    "items": [
+      {
+        "_template": "base/util/SocialLink",
+        "href": "#",
+        "socialService": "facebook",
+        "body": "Facebook"
+      },
+      {
+        "_template": "base/util/SocialLink",
+        "href": "#",
+        "socialService": "twitter",
+        "body": "Twitter"
+      },
+      {
+        "_template": "base/util/SocialLink",
+        "href": "#",
+        "socialService": "google",
+        "body": "Google"
+      }
+    ]
+  }
+}

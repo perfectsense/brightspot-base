@@ -1,0 +1,52 @@
+{
+  "_template": "community/commenting/CommentEntry",
+  "replaceWithResponse": false,
+  "user": {
+    "_template": "base/Author",
+    "image": {
+      "_template": "base/util/Image",
+      "src": "{{image(50, 50)}}"
+    }
+  },
+  "title": "{{name}}",
+  "subtitle": {
+    "_template": "base/util/Link",
+    "href": "#",
+    "body": "Logout"
+  },
+  "input": {
+    "_template": "base/form/TextArea",
+    "value": "",
+    "placeholder": "Comment",
+    "maxlength": 500,
+    "characterCountdown": {
+      "_template": "base/util/RawHtml",
+      "html": "characters remaining"
+    }
+  },
+  "validation": {
+    "_template": "base/form/ValidationMessages",
+    "serverError": {
+      "_template": "base/util/RawHtml",
+      "html": "Sorry! Something went wrong on our end. Please try again later."
+    },
+    "blank": {
+      "_template": "base/util/RawHtml",
+      "html": "Please provide a comment."
+    },
+    "tooLong": {
+      "_template": "base/util/RawHtml",
+      "html": "Your comment was too long. Please stay within 500 characters."
+    }
+  },
+  "actions": {
+    "_template": "base/util/Concatenated",
+    "items": [
+      {
+        "_template": "community/commenting/CommentSubmit",
+        "ajaxHref": "your-ajax-url-here",
+        "button": "Post"
+      }
+    ]
+  }
+}

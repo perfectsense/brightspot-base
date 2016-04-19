@@ -1,0 +1,34 @@
+{{#defineBlock "Comment"}}
+    {{#defineElement "author"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "time"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "body"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "actions"}}
+        <footer class="{{elementName}}">{{this}}</footer>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}"
+            id="{{id}}"
+            {{#if parentId}}data-in-reply-to="{{parentId}}"{{/if}}
+            {{#if threadDepth}}data-thread-depth="{{threadDepth}}"{{/if}}
+            {{#if isStaff}}data-by-staff{{/if}}
+            itemscope itemtype="http://schema.org/Comment"
+            {{extraAttributes}}>
+            {{#defineBlockBody}}
+                {{element "author"}}
+                {{element "time"}}
+                {{element "body"}}
+                {{element "actions"}}
+            {{/defineBlockBody}}
+        </div>
+    {{/defineBlockContainer}}
+{{/defineBlock}}

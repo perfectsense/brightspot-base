@@ -1,0 +1,20 @@
+{{#defineBlock "TextArea"}}
+    {{#defineElement "characterCountdown"}}
+        <div class="{{elementName}}">{{../maxlength}} {{this}}</div>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}"{{extraAttributes}}>
+            {{#defineBlockBody}}
+                <textarea class="{{blockName}}-input"
+                    {{#with placeholder}}placeholder="{{this}}"{{/with}}
+                    {{#with autofocus}}autofocus="{{this}}"{{/with}}
+                    {{#with maxlength}}maxlength="{{this}}"{{/with}}
+                    aria-invalid="false">{{value}}</textarea>
+                {{#if maxlength}}
+                    {{element "characterCountdown"}}
+                {{/if}}
+            {{/defineBlockBody}}
+        </div>
+    {{/defineBlockContainer}}
+{{/defineBlock}}

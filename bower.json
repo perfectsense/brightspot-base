@@ -27,6 +27,12 @@
         "src": "base/**",
         "dest": "",
         "expand": true
+      },
+      {
+        "cwd": "src/main/webapp",
+        "src": "community/**",
+        "dest": "",
+        "expand": true
       }
     ]
   }

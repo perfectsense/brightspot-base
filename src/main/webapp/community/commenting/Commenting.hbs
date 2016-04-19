@@ -1,0 +1,26 @@
+{{#defineBlock "Commenting"}}
+    {{#defineElement "header"}}
+        <header class="{{elementName}}">{{this}}</header>
+    {{/defineElement}}
+
+    {{#defineElement "body"}}
+        <div class="{{elementName}}" data-comments-expanded={{#if ../expandComments}}true{{else}}false{{/if}}>{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "actions"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}"
+            id="{{id}}"
+            data-bsp-community-commenting
+            data-bsp-community-commenting-options='{ {{#if expandComments}}"expandComments":{{expandComments}}{{/if}} }'{{extraAttributes}}>
+            {{#defineBlockBody}}
+                {{element "header"}}
+                {{element "body"}}
+                {{element "actions"}}
+            {{/defineBlockBody}}
+        </div>
+    {{/defineBlockContainer}}
+{{/defineBlock}}
