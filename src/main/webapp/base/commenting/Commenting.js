@@ -24,8 +24,8 @@ let Commenting = {
         commentEntryBlock: ".CommentEntry",
         commentEntryCharacterCountdown: ".TextArea-characterCountdown",
         commentReplyButton: ".CommentReply",
-        commentValidationCommentTooLongMessage: ".ValidationMessages-serverError-tooLong",
-        commentValidationCommentBlankMessage: ".ValidationMessages-serverError-blank",
+        commentValidationCommentTooLongMessage: ".ValidationMessages-tooLong",
+        commentValidationCommentBlankMessage: ".ValidationMessages-blank",
         commentValidationServerErrorMessage: ".ValidationMessages-serverError",
         commentingShowMoreButton: ".CommentingShowMore"
     },
