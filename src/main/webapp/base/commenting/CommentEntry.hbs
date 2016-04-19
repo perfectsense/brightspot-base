@@ -3,11 +3,11 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "headline"}}
+    {{#defineElement "title"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "subheadline"}}
+    {{#defineElement "subtitle"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
@@ -29,8 +29,8 @@
             {{extraAttributes}}>
             {{#defineBlockBody}}
                 {{element "user"}}
-                {{element "headline"}}
-                {{element "subheadline"}}
+                {{element "title"}}
+                {{element "subtitle"}}
                 {{element "input"}}
                 {{element "validation"}}
                 {{element "actions"}}

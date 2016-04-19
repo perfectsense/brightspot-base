@@ -20,7 +20,7 @@
     "items": [
       {
         "_template": "base/commenting/CommentReply",
-        "ajaxTarget": "/ajax/replyComment",
+        "ajaxHref": "/ajax/replyComment",
         "button": {
           "_template": "base/util/Link",
           "body": "Reply",

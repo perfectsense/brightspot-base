@@ -49,7 +49,7 @@
       },
       {
         "_template": "base/commenting/CommentingShowMore",
-        "ajaxTarget": "_ajax-show-more-response.html",
+        "ajaxHref": "_ajax-show-more-response.html",
         "button": "Show More Comments"
       }
     ]

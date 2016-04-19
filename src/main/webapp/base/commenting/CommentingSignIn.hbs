@@ -1,5 +1,5 @@
 {{#defineBlock "CommentingSignIn"}}
-    {{#defineElement "headline"}}
+    {{#defineElement "title"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
@@ -10,7 +10,7 @@
     {{#defineBlockContainer}}
         <div class="{{blockName}}"{{extraAttributes}}>
             {{#defineBlockBody}}
-                {{element "headline"}}
+                {{element "title"}}
                 {{element "services"}}
             {{/defineBlockBody}}
         </div>

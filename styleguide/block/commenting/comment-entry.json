@@ -44,7 +44,7 @@
     "items": [
       {
         "_template": "base/commenting/CommentSubmit",
-        "ajaxTarget": "your-ajax-url-here",
+        "ajaxHref": "your-ajax-url-here",
         "button": "Post"
       }
     ]

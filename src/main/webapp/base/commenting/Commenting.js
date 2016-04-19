@@ -73,7 +73,7 @@ let Commenting = {
     submitComment($commentBlock) {
         let self = this;
         let $textarea = $commentBlock.find('.TextArea-input');
-        let url = $commentBlock.find(self.selectors.commentSubmitButton).attr('data-ajax-target');
+        let url = $commentBlock.find(self.selectors.commentSubmitButton).attr('data-ajax-href');
 
         $textarea.attr('disabled', '');
 
@@ -102,7 +102,7 @@ let Commenting = {
         let self = this;
 
         // the `ajax-target` attribute should already have the parentId as a query param
-        let url = $el.find('[data-ajax-target]').attr('data-ajax-target');
+        let url = $el.find('[data-ajax-href]').attr('data-ajax-href');
 
         $.ajax({
                 method: 'GET',
@@ -124,7 +124,7 @@ let Commenting = {
         let self = this;
 
         // the `ajax-target` attribute should already have the offset & limit as query params
-        let url = $el.find('[data-ajax-target]').attr('data-ajax-target');
+        let url = $el.find('[data-ajax-href]').attr('data-ajax-href');
 
         $.ajax({
             method: 'GET',

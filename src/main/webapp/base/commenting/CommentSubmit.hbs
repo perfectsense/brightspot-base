@@ -1,6 +1,6 @@
 {{#defineBlock "CommentSubmit"}}
     {{#defineElement "button"}}
-        <button type="button" class="{{elementName}}" {{#if ../ajaxTarget}}data-ajax-target="{{../ajaxTarget}}"{{/if}}>{{this}}</button>
+        <button type="button" class="{{elementName}}" {{#if ../ajaxHref}}data-ajax-href="{{../ajaxHref}}"{{/if}}>{{this}}</button>
     {{/defineElement}}
 
     {{#defineBlockContainer}}
