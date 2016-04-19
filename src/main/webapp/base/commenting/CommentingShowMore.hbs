@@ -1,8 +1,12 @@
 {{#defineBlock "CommentingShowMore"}}
+    {{#defineElement "button"}}
+        <button type="button" {{#if ../ajaxTarget}}data-ajax-target="{{../ajaxTarget}}"{{/if}} class="{{elementName}}">{{this}}</button>
+    {{/defineElement}}
+
     {{#defineBlockContainer}}
         <div class="{{blockName}}"{{extraAttributes}}>
             {{#defineBlockBody}}
-                <button type="button" {{#if ajaxTarget}}data-ajax-target="{{ajaxTarget}}"{{/if}} class="{{blockName}}-button">{{body}}</button>
+                {{element "button"}}
             {{/defineBlockBody}}
         </div>
     {{/defineBlockContainer}}

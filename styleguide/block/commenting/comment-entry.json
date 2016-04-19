@@ -45,7 +45,7 @@
       {
         "_template": "base/commenting/CommentSubmit",
         "ajaxTarget": "your-ajax-url-here",
-        "body": "Post"
+        "button": "Post"
       }
     ]
   }

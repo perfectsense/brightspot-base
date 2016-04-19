@@ -21,7 +21,7 @@
       {
         "_template": "base/commenting/CommentReply",
         "ajaxTarget": "/ajax/replyComment",
-        "link": {
+        "button": {
           "_template": "base/util/Link",
           "body": "Reply",
           "href": "#"

@@ -50,7 +50,7 @@
       {
         "_template": "base/commenting/CommentingShowMore",
         "ajaxTarget": "_ajax-show-more-response.html",
-        "body": "Show More Comments"
+        "button": "Show More Comments"
       }
     ]
   }
