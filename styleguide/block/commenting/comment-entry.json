@@ -8,8 +8,8 @@
       "src": "{{image(50, 50)}}"
     }
   },
-  "headline": "{{name}}",
-  "subheadline": {
+  "title": "{{name}}",
+  "subtitle": {
     "_template": "base/util/Link",
     "href": "#",
     "body": "Logout"
