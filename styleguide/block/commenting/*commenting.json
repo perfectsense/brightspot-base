@@ -1,12 +1,12 @@
 {
-  "_template": "base/commenting/Commenting",
+  "_template": "community/commenting/Commenting",
   "id": "324kldsjlj34",
   "expandComments": true,
   "extraAttributes": {
     "data-bsp-community-commenting-ajaxMethod": "GET"
   },
   "header": {
-    "_template": "base/commenting/CommentingHeader",
+    "_template": "community/commenting/CommentingHeader",
     "title": "30 Comments"
   },
   "body": {
@@ -48,7 +48,7 @@
         "_dataUrl": "/block/commenting/comment-entry.json"
       },
       {
-        "_template": "base/commenting/CommentingShowMore",
+        "_template": "community/commenting/CommentingShowMore",
         "ajaxHref": "_ajax-show-more-response.html",
         "button": "Show More Comments"
       }

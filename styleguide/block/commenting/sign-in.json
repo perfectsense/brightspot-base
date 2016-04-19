@@ -1,5 +1,5 @@
 {
-  "_template": "base/commenting/CommentingSignIn",
+  "_template": "community/commenting/CommentingSignIn",
   "title": "Sign in to post a comment",
   "services": {
     "_template": "base/util/Concatenated",

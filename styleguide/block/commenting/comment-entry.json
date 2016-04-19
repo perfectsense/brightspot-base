@@ -1,5 +1,5 @@
 {
-  "_template": "base/commenting/CommentEntry",
+  "_template": "community/commenting/CommentEntry",
   "replaceWithResponse": false,
   "user": {
     "_template": "base/Author",
@@ -43,7 +43,7 @@
     "_template": "base/util/Concatenated",
     "items": [
       {
-        "_template": "base/commenting/CommentSubmit",
+        "_template": "community/commenting/CommentSubmit",
         "ajaxHref": "your-ajax-url-here",
         "button": "Post"
       }
