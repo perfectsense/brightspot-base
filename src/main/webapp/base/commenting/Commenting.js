@@ -19,15 +19,15 @@ let Commenting = {
     loginLinks: ".CommentingSignIn-services > a",
     commentingHeaderTitle: ".CommentingHeader-title",
     commentingBody: ".Commenting-body",
-    commentSubmitButton: ".CommentSubmitButton-button",
+    commentSubmitButton: ".CommentSubmit-button",
     commentBlock: ".Comment",
     commentEntryBlock: ".CommentEntry",
     commentEntryCharacterCountdown: ".TextArea-characterCountdown",
-    commentReplyButton: ".CommentReplyButton",
+    commentReplyButton: ".CommentReply",
     commentValidationCommentTooLongMessage: ".CommentEntryValidation-commentIsTooLongMessage",
     commentValidationCommentBlankMessage: ".CommentEntryValidation-commentIsBlankMessage",
     commentValidationServerErrorMessage: ".CommentEntryValidation-serverErrorMessage",
-    commentingShowMoreButton: ".CommentingShowMoreButton"
+    commentingShowMoreButton: ".CommentingShowMore"
   },
 
   init($el, options) {
@@ -68,7 +68,7 @@ let Commenting = {
 
     this.initCommentEntry(self.$el.find(self.selectors.commentEntryBlock));
     this.initLoginLinks(self.$el.find(self.selectors.loginLinks));
-    this.initCommentReplyButton(self.$el.find(self.selectors.commentReplyButton));
+    this.initCommentReply(self.$el.find(self.selectors.commentReplyButton));
     this.initShowMoreButton(self.$el.find(self.selectors.commentingShowMoreButton));
   },
 
@@ -190,7 +190,7 @@ let Commenting = {
     });
   },
 
-  initCommentReplyButton($el) {
+  initCommentReply($el) {
     let self = this;
     $el.on('click', function(e) {
         e.preventDefault();
@@ -220,7 +220,7 @@ let Commenting = {
     // comment block?
     if (data.comment) {
       $html = $(data.comment);
-      this.initCommentReplyButton($html.find(this.selectors.commentReplyButton));
+      this.initCommentReply($html.find(this.selectors.commentReplyButton));
 
       // replacing an inline comment entry?
       if (data.$elToReplace){
@@ -239,7 +239,7 @@ let Commenting = {
     if (data.comments) {
       $html = $(data.comments);
       $html.each(function(){
-        self.initCommentReplyButton($(this).find(self.selectors.commentReplyButton));
+        self.initCommentReply($(this).find(self.selectors.commentReplyButton));
         self.$commentingBody.append($(this));
       });
     }

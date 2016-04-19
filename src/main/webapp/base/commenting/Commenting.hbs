@@ -11,14 +11,16 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    <div class="{{blockName}}"
-        id="{{id}}"
-        data-bsp-community-commenting
-        data-bsp-community-commenting-options='{ {{#if expandComments}}"expandComments":{{expandComments}}{{/if}} }'{{extraAttributes}}>
-        {{#defaultBlockBody}}
-            {{element "header"}}
-            {{element "body"}}
-            {{element "actions"}}
-        {{/defaultBlockBody}}
-    </div>
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}"
+            id="{{id}}"
+            data-bsp-community-commenting
+            data-bsp-community-commenting-options='{ {{#if expandComments}}"expandComments":{{expandComments}}{{/if}} }'{{extraAttributes}}>
+            {{#defineBlockBody}}
+                {{element "header"}}
+                {{element "body"}}
+                {{element "actions"}}
+            {{/defineBlockBody}}
+        </div>
+    {{/defineBlockContainer}}
 {{/defineBlock}}

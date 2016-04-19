@@ -19,7 +19,7 @@
     "_template": "base/util/Concatenated",
     "items": [
       {
-        "_template": "base/commenting/CommentReplyButton",
+        "_template": "base/commenting/CommentReply",
         "ajaxTarget": "/ajax/replyComment",
         "link": {
           "_template": "base/util/Link",

@@ -43,7 +43,7 @@
     "_template": "base/util/Concatenated",
     "items": [
       {
-        "_template": "base/commenting/CommentSubmitButton",
+        "_template": "base/commenting/CommentSubmit",
         "ajaxTarget": "your-ajax-url-here",
         "body": "Post"
       }

@@ -48,7 +48,7 @@
         "_dataUrl": "/block/commenting/comment-entry.json"
       },
       {
-        "_template": "base/commenting/CommentingShowMoreButton",
+        "_template": "base/commenting/CommentingShowMore",
         "ajaxTarget": "_ajax-show-more-response.html",
         "body": "Show More Comments"
       }

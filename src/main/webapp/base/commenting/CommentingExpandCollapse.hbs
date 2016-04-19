@@ -7,10 +7,12 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    {{#defaultBlockBody}}
+    {{#defineBlockContainer}}
         <div class="{{blockName}}"{{extraAttributes}}>
-            {{element "textWhenExpanded"}}
-            {{element "textWhenCollapsed"}}
+            {{#defineBlockBody}}
+                {{element "textWhenExpanded"}}
+                {{element "textWhenCollapsed"}}
+            {{/defineBlockBody}}
         </div>
-    {{/defaultBlockBody}}
+    {{/defineBlockContainer}}
 {{/defineBlock}}

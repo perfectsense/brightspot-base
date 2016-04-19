@@ -23,16 +23,18 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    <div class="{{blockName}}"
-        {{#if replaceWithResponse}}data-replace-with-response{{/if}}
-        {{extraAttributes}}>
-        {{#defaultBlockBody}}
-            {{element "user"}}
-            {{element "headline"}}
-            {{element "subheadline"}}
-            {{element "input"}}
-            {{element "validation"}}
-            {{element "actions"}}
-        {{/defaultBlockBody}}
-    </div>
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}"
+            {{#if replaceWithResponse}}data-replace-with-response{{/if}}
+            {{extraAttributes}}>
+            {{#defineBlockBody}}
+                {{element "user"}}
+                {{element "headline"}}
+                {{element "subheadline"}}
+                {{element "input"}}
+                {{element "validation"}}
+                {{element "actions"}}
+            {{/defineBlockBody}}
+        </div>
+    {{/defineBlockContainer}}
 {{/defineBlock}}

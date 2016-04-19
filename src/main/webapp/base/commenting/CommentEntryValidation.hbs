@@ -11,11 +11,13 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    {{#defaultBlockBody}}
+    {{#defineBlockContainer}}
         <div class="{{blockName}}"{{extraAttributes}}>
-            {{element "serverErrorMessage"}}
-            {{element "commentIsBlankMessage"}}
-            {{element "commentIsTooLongMessage"}}
+            {{#defineBlockBody}}
+                {{element "serverErrorMessage"}}
+                {{element "commentIsBlankMessage"}}
+                {{element "commentIsTooLongMessage"}}
+            {{/defineBlockBody}}
         </div>
-    {{/defaultBlockBody}}
+    {{/defineBlockContainer}}
 {{/defineBlock}}

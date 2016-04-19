@@ -3,16 +3,18 @@
         <div class="{{elementName}}">{{../maxlength}} {{this}}</div>
     {{/defineElement}}
 
-    {{#defaultBlockBody}}
+    {{#defineBlockContainer}}
         <div class="{{blockName}}"{{extraAttributes}}>
-            <textarea class="{{blockName}}-input"
-                {{#with placeholder}}placeholder="{{this}}"{{/with}}
-                {{#with autofocus}}autofocus="{{this}}"{{/with}}
-                {{#with maxlength}}maxlength="{{this}}"{{/with}}
-                aria-invalid="false">{{value}}</textarea>
-            {{#if maxlength}}
-                {{element "characterCountdown"}}
-            {{/if}}
+            {{#defineBlockBody}}
+                <textarea class="{{blockName}}-input"
+                    {{#with placeholder}}placeholder="{{this}}"{{/with}}
+                    {{#with autofocus}}autofocus="{{this}}"{{/with}}
+                    {{#with maxlength}}maxlength="{{this}}"{{/with}}
+                    aria-invalid="false">{{value}}</textarea>
+                {{#if maxlength}}
+                    {{element "characterCountdown"}}
+                {{/if}}
+            {{/defineBlockBody}}
         </div>
-    {{/defaultBlockBody}}
+    {{/defineBlockContainer}}
 {{/defineBlock}}

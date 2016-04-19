@@ -2,14 +2,17 @@
     {{#defineElement "headline"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
+
     {{#defineElement "services"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    <div class="{{blockName}}"{{extraAttributes}}>
-        {{#defaultBlockBody}}
-            {{element "headline"}}
-            {{element "services"}}
-        {{/defaultBlockBody}}
-    </div>
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}"{{extraAttributes}}>
+            {{#defineBlockBody}}
+                {{element "headline"}}
+                {{element "services"}}
+            {{/defineBlockBody}}
+        </div>
+    {{/defineBlockContainer}}
 {{/defineBlock}}
