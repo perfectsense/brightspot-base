@@ -15,7 +15,7 @@
     "body": "Logout"
   },
   "input": {
-    "_template": "base/util/TextArea",
+    "_template": "base/form/TextArea",
     "value": "",
     "placeholder": "Comment",
     "maxlength": 500,
@@ -25,16 +25,16 @@
     }
   },
   "validation": {
-    "_template": "base/commenting/CommentEntryValidation",
-    "serverErrorMessage": {
+    "_template": "base/form/ValidationMessages",
+    "serverError": {
       "_template": "base/util/RawHtml",
       "html": "Sorry! Something went wrong on our end. Please try again later."
     },
-    "commentIsBlankMessage": {
+    "blank": {
       "_template": "base/util/RawHtml",
       "html": "Please provide a comment."
     },
-    "commentIsTooLongMessage": {
+    "tooLong": {
       "_template": "base/util/RawHtml",
       "html": "Your comment was too long. Please stay within 500 characters."
     }

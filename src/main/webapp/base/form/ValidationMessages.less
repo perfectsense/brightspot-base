@@ -1,0 +1,15 @@
+.ValidationMessages {
+    &:extend(.ValidationMessages all);
+
+    &-serverError {
+        &:extend(.ValidationMessages-serverError all);
+    }
+
+    &-blank {
+        &:extend(.ValidationMessages-blank all);
+    }
+
+    &-tooLong {
+        &:extend(.ValidationMessages-tooLong all);
+    }
+}

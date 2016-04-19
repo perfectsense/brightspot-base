@@ -1,22 +1,22 @@
-{{#defineBlock "CommentEntryValidation"}}
-    {{#defineElement "serverErrorMessage"}}
+{{#defineBlock "ValidationMessages"}}
+    {{#defineElement "serverError"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "commentIsBlankMessage"}}
+    {{#defineElement "blank"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "commentIsTooLongMessage"}}
+    {{#defineElement "tooLong"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
     {{#defineBlockContainer}}
         <div class="{{blockName}}"{{extraAttributes}}>
             {{#defineBlockBody}}
-                {{element "serverErrorMessage"}}
-                {{element "commentIsBlankMessage"}}
-                {{element "commentIsTooLongMessage"}}
+                {{element "serverError"}}
+                {{element "blank"}}
+                {{element "tooLong"}}
             {{/defineBlockBody}}
         </div>
     {{/defineBlockContainer}}

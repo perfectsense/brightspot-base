@@ -24,9 +24,9 @@ let Commenting = {
         commentEntryBlock: ".CommentEntry",
         commentEntryCharacterCountdown: ".TextArea-characterCountdown",
         commentReplyButton: ".CommentReply",
-        commentValidationCommentTooLongMessage: ".CommentEntryValidation-commentIsTooLongMessage",
-        commentValidationCommentBlankMessage: ".CommentEntryValidation-commentIsBlankMessage",
-        commentValidationServerErrorMessage: ".CommentEntryValidation-serverErrorMessage",
+        commentValidationCommentTooLongMessage: ".ValidationMessages-serverError-tooLong",
+        commentValidationCommentBlankMessage: ".ValidationMessages-serverError-blank",
+        commentValidationServerErrorMessage: ".ValidationMessages-serverError",
         commentingShowMoreButton: ".CommentingShowMore"
     },
 
@@ -101,7 +101,7 @@ let Commenting = {
     getCommentEntry($el) {
         let self = this;
 
-        // the `ajax-target` attribute should already have the parentId as a query param
+        // the `ajax-href` attribute should already have the parentId as a query param
         let url = $el.find('[data-ajax-href]').attr('data-ajax-href');
 
         $.ajax({
@@ -123,7 +123,7 @@ let Commenting = {
     getPaginatedComments($el) {
         let self = this;
 
-        // the `ajax-target` attribute should already have the offset & limit as query params
+        // the `ajax-href` attribute should already have the offset & limit as query params
         let url = $el.find('[data-ajax-href]').attr('data-ajax-href');
 
         $.ajax({
