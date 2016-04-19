@@ -7,10 +7,12 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    <div class="{{blockName}}"{{extraAttributes}}>
-        {{#defaultBlockBody}}
-            {{element "image"}}
-            {{element "content"}}
-        {{/defaultBlockBody}}
-    </div>
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}"{{extraAttributes}}>
+            {{#defineBlockBody}}
+                {{element "image"}}
+                {{element "content"}}
+            {{/defineBlockBody}}
+        </div>
+    {{/defineBlockContainer}}
 {{/defineBlock}}

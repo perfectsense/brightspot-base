@@ -15,11 +15,13 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    <div class="{{blockName}}"{{extraAttributes}}>
-        {{#defaultBlockBody}}
-            {{element "title"}}
-            {{element "items"}}
-            {{element "cta"}}
-        {{/defaultBlockBody}}
-    </div>
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}"{{extraAttributes}}>
+            {{#defineBlockBody}}
+                {{element "title"}}
+                {{element "items"}}
+                {{element "cta"}}
+            {{/defineBlockBody}}
+        </div>
+    {{/defineBlockContainer}}
 {{/defineBlock}}

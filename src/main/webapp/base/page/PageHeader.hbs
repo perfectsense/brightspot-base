@@ -12,11 +12,13 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    <header class="{{blockName}}" itemscope itemtype="http://schema.org/WPHeader"{{extraAttributes}}>
-        {{#defaultBlockBody}}
-            {{element "logo"}}
-            {{element "navigation"}}
-            {{element "search"}}
-        {{/defaultBlockBody}}
-    </header>
+    {{#defineBlockContainer}}
+        <header class="{{blockName}}" itemscope itemtype="http://schema.org/WPHeader"{{extraAttributes}}>
+            {{#defineBlockBody}}
+                {{element "logo"}}
+                {{element "navigation"}}
+                {{element "search"}}
+            {{/defineBlockBody}}
+        </header>
+    {{/defineBlockContainer}}
 {{/defineBlock}}

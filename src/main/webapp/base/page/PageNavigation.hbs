@@ -8,9 +8,11 @@
         </ul>
     {{/defineElement}}
 
-    <nav class="{{blockName}}" itemscope itemtype="http://schema.org/SiteNavigationElement"{{extraAttributes}}>
-        {{#defaultBlockBody}}
-            {{element "items"}}
-        {{/defaultBlockBody}}
-    </nav>
+    {{#defineBlockContainer}}
+        <nav class="{{blockName}}" itemscope itemtype="http://schema.org/SiteNavigationElement"{{extraAttributes}}>
+            {{#defineBlockBody}}
+                {{element "items"}}
+            {{/defineBlockBody}}
+        </nav>
+    {{/defineBlockContainer}}
 {{/defineBlock}}
