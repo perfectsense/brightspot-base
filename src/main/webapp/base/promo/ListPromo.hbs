@@ -1,12 +1,4 @@
-{{#defineBlock "TitledList"}}
-    {{#defineElement "title"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
-
-    {{#defineElement "subTitle"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
-
+{{#defineBlock "ListPromo" extend="base/promo/Promo"}}
     {{#defineElement "items"}}
         <ul class="{{elementName}}">
             {{#each this}}
@@ -16,11 +8,13 @@
     {{/defineElement}}
 
     {{#defineBlockContainer}}
-        <div class="{{blockName}}"{{extraAttributes}}">
+        <div class="{{blockName}}"{{extraAttributes}}>
             {{#defineBlockBody}}
+                {{element "category"}}
                 {{element "title"}}
-                {{element "subTitle"}}
+                {{element "description"}}
                 {{element "items"}}
+                {{element "cta"}}
             {{/defineBlockBody}}
         </div>
     {{/defineBlockContainer}}

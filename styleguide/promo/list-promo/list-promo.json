@@ -1,0 +1,15 @@
+{
+    "_template": "/base/promo/ListPromo",
+    "category": "{{words(1)}}",
+    "title": "{{words}}",
+    "description": "{{words}}",
+    "items": [
+        {
+            "_dataUrl": "../media-promo/media-promo.json",
+            "_repeat": [ 3, 6 ]
+        }
+    ],
+    "cta": {
+        "_dataUrl": "../../block/util/link.json"
+    }
+}
