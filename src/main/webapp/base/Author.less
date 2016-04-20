@@ -1,14 +1,14 @@
 .Author {
-    align-items: center;
-    display: flex;
 
     &-image {
-        margin-right: .5em;
+        &:extend(.Author-image all);
+    }
+
+    &-name {
+        &:extend(.Author-name all);
     }
 
     &-affiliation {
-        &:before {
-            content: ', ';
-        }
+        &:extend(.Author-affiliation all);
     }
 }

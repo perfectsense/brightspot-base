@@ -11,11 +11,13 @@
         <div class="{{elementName}}" itemprop="affiliation">{{this}}</div>
     {{/defineElement}}
 
-    <div class="{{blockName}}" itemprop="author" itemscope itemtype="http://schema.org/Person"{{extraAttributes}}>
-        {{#defaultBlockBody}}
-            {{element "image"}}
-            {{element "name"}}
-            {{element "affiliation"}}
-        {{/defaultBlockBody}}
-    </div>
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}" itemprop="author" itemscope itemtype="http://schema.org/Person"{{extraAttributes}}>
+            {{#defineBlockBody}}
+                {{element "image"}}
+                {{element "name"}}
+                {{element "affiliation"}}
+            {{/defineBlockBody}}
+        </div>
+    {{/defineBlockContainer}}
 {{/defineBlock}}

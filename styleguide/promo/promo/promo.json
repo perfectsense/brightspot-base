@@ -1,0 +1,9 @@
+{
+    "_template": "/base/promo/MediaPromo",
+    "category": "{{words(1)}}",
+    "title": "{{words}}",
+    "description": "{{words}}",
+    "cta": {
+        "_dataUrl": "../../block/util/link.json"
+    }
+}

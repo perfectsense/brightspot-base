@@ -1,14 +1,9 @@
+@import 'Promo.less';
+
 .ListPromo {
     &:extend(.Promo all);
 
     &-items {
         &:extend(.ListPromo-items all);
-
-        list-style: none;
-        padding: 0;
-
-        &-item {
-            &:extend(.ListPromo-items-item all);
-        }
     }
 }

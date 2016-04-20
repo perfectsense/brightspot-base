@@ -1,10 +1,6 @@
-{{#defineBlock "ListPromo" extend="base/promo/Promo"}}
-    {{#defineElement "items"}}
-        <ul class="{{elementName}}">
-            {{#each this}}
-                <li class="{{elementName}}-item">{{this}}</li>
-            {{/each}}
-        </ul>
+{{#defineBlock "MediaPromo" extend="base/promo/Promo"}}
+    {{#defineElement "media"}}
+        <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
     {{#defineBlockContainer}}
@@ -12,8 +8,8 @@
             {{#defineBlockBody}}
                 {{element "category"}}
                 {{element "title"}}
+                {{element "media"}}
                 {{element "description"}}
-                {{element "items"}}
                 {{element "cta"}}
             {{/defineBlockBody}}
         </div>

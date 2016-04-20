@@ -1,10 +1,15 @@
 .Promo {
-    > * {
-        margin: 0 0 1em 0;
+
+    &-category {
+        &:extend(.Promo-category all);
     }
 
     &-title {
         &:extend(.Promo-title all);
+    }
+
+    &-description {
+        &:extend(.Promo-description all);
     }
 
     &-cta {

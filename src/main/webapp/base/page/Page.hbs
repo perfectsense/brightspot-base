@@ -11,11 +11,13 @@
         </body>
     {{/defineElement}}
 
-    <!DOCTYPE html>
-    <html class="{{blockName}}" itemscope itemtype="http://schema.org/WebPage"{{extraAttributes}}>
-        {{#defaultBlockBody}}
-            {{element "head"}}
-            {{element "body"}}
-        {{/defaultBlockBody}}
-    </html>
+    {{#defineBlockContainer}}
+        <!DOCTYPE html>
+        <html class="{{blockName}}" itemscope itemtype="http://schema.org/WebPage"{{extraAttributes}}>
+            {{#defineBlockBody}}
+                {{element "head"}}
+                {{element "body"}}
+            {{/defineBlockBody}}
+        </html>
+    {{/defineBlockContainer}}
 {{/defineBlock}}

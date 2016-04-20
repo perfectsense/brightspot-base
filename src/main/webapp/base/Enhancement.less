@@ -1,13 +1,10 @@
 .Enhancement {
-    margin: 2rem 0;
 
     &[data-alignment='left'] {
-        float: left;
-        margin-right: 2rem;
+        &:extend(.Enhancement[data-alignment='left'] all);
     }
 
     &[data-alignment='right'] {
-        float: right;
-        margin-left: 2rem;
+        &:extend(.Enhancement[data-alignment='right'] all);
     }
 }
