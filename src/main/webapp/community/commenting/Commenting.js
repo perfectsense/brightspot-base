@@ -16,7 +16,8 @@ let Commenting = {
     selectors: {
         expandCommentsToggle: ".CommentingExpandCollapse-textWhenCollapsed",
         collapseCommentsToggle: ".CommentingExpandCollapse-textWhenExpanded",
-        loginLinks: ".CommentingSignIn-services > a",
+        signIn: ".CommentingSignIn",
+        signInLinks: ".CommentingSignIn-services > a",
         commentingHeaderTitle: ".CommentingHeader-title",
         commentingBody: ".Commenting-body",
         commentSubmitButton: ".CommentSubmit-button",
@@ -64,8 +65,8 @@ let Commenting = {
             }
         });
 
+        this.initSignIn(self.$el.find(self.selectors.signIn));
         this.initCommentEntry(self.$el.find(self.selectors.commentEntryBlock));
-        this.initLoginLinks(self.$el.find(self.selectors.loginLinks));
         this.initCommentReply(self.$el.find(self.selectors.commentReplyButton));
         this.initShowMoreButton(self.$el.find(self.selectors.commentingShowMoreButton));
     },
@@ -178,9 +179,9 @@ let Commenting = {
             });
     },
 
-    initLoginLinks($el) {
-        // clicking on social login
-        $el.on('click', function(e) {
+    initSignIn($el) {
+        // clicking on social login links
+        $el.find(this.selectors.signInLinks).on('click', function(e) {
             e.preventDefault();
             let url = $(this).attr('href');
             window.open(url, '_blank');
@@ -247,8 +248,10 @@ let Commenting = {
         }
 
         // show sign-in?
-        if (data.result === "unauthenticated" && data.signIn){
-            debugger
+        if (data.result === "unauthenticated" && data.signIn && data.$parentComment){
+            $html = $(data.signIn);
+            this.initSignIn($html);
+            $html.insertAfter(data.$parentComment);
         }
 
         // inline (reply-to) comment entry?
