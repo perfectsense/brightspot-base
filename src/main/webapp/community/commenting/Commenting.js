@@ -246,6 +246,11 @@ let Commenting = {
             this.$el.find(this.selectors.commentingHeaderTitle).replaceWith(data.commentingHeaderTitle);
         }
 
+        // show sign-in?
+        if (data.result === "unauthenticated" && data.signIn){
+            debugger
+        }
+
         // inline (reply-to) comment entry?
         if (data.commentEntry && data.$parentComment) {
             $html = $(data.commentEntry);
