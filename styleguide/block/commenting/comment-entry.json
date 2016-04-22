@@ -44,7 +44,7 @@
     "items": [
       {
         "_template": "community/commenting/CommentSubmit",
-        "ajaxHref": "your-ajax-url-here",
+        "ajaxHref": "/block/commenting/_comment-entry-response",
         "button": "Post"
       }
     ]

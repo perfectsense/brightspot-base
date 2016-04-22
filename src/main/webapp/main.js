@@ -11,4 +11,6 @@
  * own bower.json and copy them into the scripts/bower folder via a Gruntfile entry
  */
 
+import Commenting from "community/commenting/Commenting.js";
+
 export default {};

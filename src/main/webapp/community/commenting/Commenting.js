@@ -23,6 +23,7 @@ let Commenting = {
         commentSubmitButton: ".CommentSubmit-button",
         commentBlock: ".Comment",
         commentEntryBlock: ".CommentEntry",
+        commentEntryResponseBlock: ".CommentEntryResponse",
         commentEntryCharacterCountdown: ".TextArea-characterCountdown",
         commentReplyButton: ".CommentReply",
         commentValidationCommentTooLongMessage: ".ValidationMessages-tooLong",
@@ -80,17 +81,51 @@ let Commenting = {
 
         $.ajax({
                 method: self.settings.ajaxMethod,
-                dataType: "json",
                 url: url,
                 data: { "comment": $textarea.val() }
             })
             .done(function(data) {
+                /*
                 // is this an in-line reply?
                 if ($commentBlock.get(0).hasAttribute('data-replace-with-response')) {
                     data.$elToReplace = $commentBlock;
                 }
                 $textarea.removeAttr('disabled');
-                self.updateWith(data);
+                */
+
+                let $html = $(data);
+                let $comment = $html.find(self.selectors.commentBlock);
+
+                // update the comments list block
+                self.initCommentReply($comment.find(self.selectors.commentReplyButton));
+                self.$commentingBody.append($comment);
+
+                // update the title block?
+                let $title = $html.find('.CommentEntryResponse-title');
+                self.$el.find(self.selectors.commentingHeaderTitle).replaceWith($title);
+
+                /*
+                // comment block?
+                if (data.comment) {
+                    $html = $(data.comment);
+
+
+                    // replacing an inline comment entry?
+                    if (data.$elToReplace) {
+                        data.$elToReplace.siblings(self.selectors.commentBlock)
+                            .find(self.selectors.commentReplyButton)
+                            .css({ 'opacity': 1, 'pointer-events': 'auto' });
+                        data.$elToReplace.replaceWith($html);
+                    }
+                    // appending comment to body
+                    else {
+
+                    }
+                }
+                */
+
+                //self.updateWith(data);
+                $textarea.removeAttr('disabled');
                 self.resetEntryInput($commentBlock);
             })
             .fail(function() {
@@ -214,24 +249,6 @@ let Commenting = {
     updateWith(data) {
         let self = this;
         let $html;
-
-        // comment block?
-        if (data.comment) {
-            $html = $(data.comment);
-            this.initCommentReply($html.find(this.selectors.commentReplyButton));
-
-            // replacing an inline comment entry?
-            if (data.$elToReplace) {
-                data.$elToReplace.siblings(self.selectors.commentBlock)
-                    .find(self.selectors.commentReplyButton)
-                    .css({ 'opacity': 1, 'pointer-events': 'auto' });
-                data.$elToReplace.replaceWith($html);
-            }
-            // appending comment to body
-            else {
-                this.$commentingBody.append($html);
-            }
-        }
 
         // multiple comment blocks?
         if (data.comments) {
