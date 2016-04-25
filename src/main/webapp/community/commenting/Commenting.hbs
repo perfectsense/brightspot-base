@@ -3,19 +3,28 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "body"}}
-        <div class="{{elementName}}" data-comments-expanded={{#if ../expandComments}}true{{else}}false{{/if}}>{{this}}</div>
+    {{#defineElement "hideToggle" noWith=true}}
+        <div class="{{elementName}}">
+            <div class="{{elementName}}-hideButton">{{textWhenVisible}}</div>
+            <div class="{{elementName}}-showButton">{{textWhenHidden}}</div>
+        </div>
     {{/defineElement}}
 
-    {{#defineElement "actions"}}
-        <div class="{{elementName}}">{{this}}</div>
+    {{#defineElement "body"}}
+        <div class="{{elementName}}" data-comments-hidden={{#if ../hideComments}}true{{else}}false{{/if}}>{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "actions" noWith=true}}
+        <div class="{{elementName}}">
+            {{element "hideToggle"}}
+        </div>
     {{/defineElement}}
 
     {{#defineBlockContainer}}
         <div class="{{blockName}}"
             id="{{id}}"
             data-bsp-community-commenting
-            data-bsp-community-commenting-options='{ {{#if expandComments}}"expandComments":{{expandComments}}{{/if}} }'{{extraAttributes}}>
+            data-bsp-community-commenting-options='{ {{#if hideComments}}"hideComments":{{hideComments}}{{/if}} }'{{extraAttributes}}>
             {{#defineBlockBody}}
                 {{element "title"}}
                 {{element "body"}}

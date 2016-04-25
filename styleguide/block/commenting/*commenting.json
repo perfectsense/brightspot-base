@@ -1,7 +1,11 @@
 {
   "_template": "community/commenting/Commenting",
   "id": "324kldsjlj34",
-  "expandComments": true,
+
+  "hideComments": true,
+  "textWhenHidden": "View Comments",
+  "textWhenVisible": "Hide Comments",
+
   "extraAttributes": {
     "data-bsp-community-commenting-ajaxMethod": "GET"
   },
