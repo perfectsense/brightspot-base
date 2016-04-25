@@ -1,0 +1,19 @@
+{{#defineBlock "TextInput" extend="base/form/InputMain"}}
+
+    {{#defineElement "characterCountdown"}}
+        <div class="{{elementName}}">{{../maxlength}} {{this}}</div>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}" data-bsp-form-textInput>
+
+            {{#defineBlockBody}}
+                {{element "input"}}
+                {{element "label"}}
+                {{#if maxlength}}{{element "characterCountdown"}}{{/if}}
+            {{/defineBlockBody}}
+
+        </div>
+    {{/defineBlockContainer}}
+
+{{/defineBlock}}

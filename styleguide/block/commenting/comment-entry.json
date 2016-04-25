@@ -12,21 +12,16 @@
 
   "title": "{{name}}",
 
-  "subtitle": {
-    "_template": "base/util/Link",
-    "href": "#",
-    "body": "Logout"
-  },
+  "logoutButton": "Logout",
+  "logoutAction": "/block/user/_logout-response",
 
   "input": {
-    "_template": "base/form/TextArea",
-    "value": "",
+    "_template": "base/form/TextAreaInput",
+    "id": "34dvpcoxiv34ktgj",
+    "required": true,
     "placeholder": "Comment",
     "maxlength": 500,
-    "characterCountdown": {
-      "_template": "base/util/RawHtml",
-      "html": "characters remaining"
-    }
+    "characterCountdown": "characters remaining"
   },
 
   "validation": {

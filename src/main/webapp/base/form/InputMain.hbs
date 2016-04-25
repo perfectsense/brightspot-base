@@ -1,0 +1,31 @@
+{{#defineBlock "InputMain"}}
+
+    {{#defineElement "input" noWith=true}}
+        <input id="{{id}}"
+            type="text"
+            class="{{elementName}}"
+            {{#with placeholder}}placeholder="{{this}}"{{/with}}
+            {{#with autofocus}}autofocus="{{this}}"{{/with}}
+            {{#with minlength}}minlength="{{this}}"{{/with}}
+            {{#with maxlength}}maxlength="{{this}}"{{/with}}
+            aria-invalid={{#if invalid}}"true"{{else}}"false"{{/if}}
+            {{#if required}}required{{/if}}
+            value="{{value}}">
+    {{/defineElement}}
+
+    {{#defineElement "label"}}
+        <label for="{{../id}}" class="{{elementName}}">{{this}}</label>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}"{{extraAttributes}}>
+
+            {{#defineBlockBody}}
+                {{element "input"}}
+                {{element "label"}}
+            {{/defineBlockBody}}
+
+        </div>
+    {{/defineBlockContainer}}
+
+{{/defineBlock}}
