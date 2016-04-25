@@ -7,11 +7,13 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "subtitle"}}
-        <div class="{{elementName}}">{{this}}</div>
+    {{#defineElement "logout" noWith=true}}
+        <form class="{{elementName}}" action="{{logoutAction}}">
+            <button class="{{elementName}}-button">{{logoutButton}}</button>
+        </form>
     {{/defineElement}}
 
-    {{#defineElement "input" noWith="true"}}
+    {{#defineElement "input" noWith=true}}
         <div class="{{elementName}}">{{input}}</div>
     {{/defineElement}}
 
@@ -20,15 +22,24 @@
     {{/defineElement}}
 
     {{#defineElement "submit" noWith=true}}
-        <form class="CommentEntryAction-submit" method="post" action="{{submitAction}}">
-            <button class="CommentEntryAction-submit-button">{{submitButton}}</button>
-        </form>
+        <button formaction="{{submitAction}}" class="{{elementName}}-button">{{submitButton}}</button>
     {{/defineElement}}
 
     {{#defineElement "actions" noWith=true}}
         <footer class="{{elementName}}">
             {{element "submit"}}
         </footer>
+    {{/defineElement}}
+
+    {{#defineElement "form" noWith=true}}
+        <form
+            method="post"
+            class="{{elementName}}"
+            action="{{submitAction}}">
+            {{element "input"}}
+            {{element "validation"}}
+            {{element "actions"}}
+        </form>
     {{/defineElement}}
 
     {{#defineBlockContainer}}
@@ -38,10 +49,8 @@
             {{#defineBlockBody}}
                 {{element "user"}}
                 {{element "title"}}
-                {{element "subtitle"}}
-                {{element "input"}}
-                {{element "validation"}}
-                {{element "actions"}}
+                {{element "logout"}}
+                {{element "form"}}
             {{/defineBlockBody}}
         </div>
     {{/defineBlockContainer}}
