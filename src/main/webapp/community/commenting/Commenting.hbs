@@ -1,6 +1,6 @@
 {{#defineBlock "Commenting"}}
-    {{#defineElement "header"}}
-        <header class="{{elementName}}">{{this}}</header>
+    {{#defineElement "title"}}
+        <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
     {{#defineElement "body"}}
@@ -17,7 +17,7 @@
             data-bsp-community-commenting
             data-bsp-community-commenting-options='{ {{#if expandComments}}"expandComments":{{expandComments}}{{/if}} }'{{extraAttributes}}>
             {{#defineBlockBody}}
-                {{element "header"}}
+                {{element "title"}}
                 {{element "body"}}
                 {{element "actions"}}
             {{/defineBlockBody}}
