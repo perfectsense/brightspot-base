@@ -13,8 +13,8 @@
 
     {{#defineElement "like" noWith=true}}
         {{#if likeButton}}
-            <form class="CommentAction-like" method="post" action="{{likeAction}}">
-                <button class="CommentAction-like-button">{{likeButton}}</button>
+            <form class="{{elementName}}" method="post" action="{{likeAction}}">
+                <button class="{{elementName}}-button">{{likeButton}}</button>
             </form>
         {{/if}}
     {{/defineElement}}
