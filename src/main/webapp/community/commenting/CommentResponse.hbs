@@ -1,15 +1,20 @@
-{{#defineBlock "CommentEntryResponse"}}
+{{#defineBlock "CommentResponse"}}
 
-    {{#defineElement "entry"}}
+    {{#defineElement "title"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "comment"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
     {{#defineBlockContainer}}
         <div class="{{blockName}}">
             {{#defineBlockBody}}
-                {{element "entry"}}
+                {{element "title"}}
+                {{element "comment"}}
             {{/defineBlockBody}}
         </div>
     {{/defineBlockContainer}}
-    
+
 {{/defineBlock}}

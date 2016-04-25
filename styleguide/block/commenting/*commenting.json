@@ -5,10 +5,12 @@
   "extraAttributes": {
     "data-bsp-community-commenting-ajaxMethod": "GET"
   },
+
   "header": {
     "_template": "community/commenting/CommentingHeader",
     "title": "30 Comments"
   },
+
   "body": {
     "_template": "base/util/Concatenated",
     "items": [
@@ -41,6 +43,7 @@
       }
     ]
   },
+  
   "actions": {
     "_template": "base/util/Concatenated",
     "items": [

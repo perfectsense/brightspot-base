@@ -19,8 +19,16 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "actions"}}
-        <div class="{{elementName}}">{{this}}</div>
+    {{#defineElement "submit" noWith=true}}
+        <form class="CommentEntryAction-submit" method="post" action="{{submitAction}}">
+            <button class="CommentEntryAction-submit-button">{{submitButton}}</button>
+        </form>
+    {{/defineElement}}
+
+    {{#defineElement "actions" noWith=true}}
+        <footer class="{{elementName}}">
+            {{element "submit"}}
+        </footer>
     {{/defineElement}}
 
     {{#defineBlockContainer}}

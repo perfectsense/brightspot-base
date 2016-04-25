@@ -12,21 +12,27 @@
     {{/defineElement}}
 
     {{#defineElement "like" noWith=true}}
-        <form class="CommentAction-like" method="post" action="{{likeAction}}">
-            <button class="{{elementName}}-button">{{likeButton}}</button>
-        </form>
+        {{#if likeButton}}
+            <form class="CommentAction-like" method="post" action="{{likeAction}}">
+                <button class="CommentAction-like-button">{{likeButton}}</button>
+            </form>
+        {{/if}}
     {{/defineElement}}
 
     {{#defineElement "dislike" noWith=true}}
-        <form class="CommentAction-dislike" method="post" action="{{dislikeAction}}">
-            <button class="{{elementName}}-button">{{dislikeButton}}</button>
-        </form>
+        {{#if dislikeButton}}
+            <form class="CommentAction-dislike" method="post" action="{{dislikeAction}}">
+                <button class="CommentAction-dislike-button">{{dislikeButton}}</button>
+            </form>
+        {{/if}}
     {{/defineElement}}
 
     {{#defineElement "reply" noWith=true}}
-        <form class="CommentAction-reply" method="get" action="{{replyAction}}">
-            <button class="{{elementName}}-button">{{replyButton}}</button>
-        </form>
+        {{#if replyButton}}
+            <form class="CommentAction-reply" method="get" action="{{replyAction}}">
+                <button class="CommentAction-reply-button">{{replyButton}}</button>
+            </form>
+        {{/if}}
     {{/defineElement}}
 
     {{#defineElement "actions" noWith=true}}
