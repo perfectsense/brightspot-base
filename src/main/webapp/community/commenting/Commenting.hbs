@@ -16,6 +16,10 @@
         </div>
     {{/defineElement}}
 
+    {{#defineElement "commentEntry"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
     {{#defineElement "body"}}
         <div class="{{elementName}}" data-comments-hidden={{#if ../hideComments}}true{{else}}false{{/if}}>{{this}}</div>
     {{/defineElement}}
@@ -34,6 +38,7 @@
             data-bsp-community-commenting-options='{ {{#if hideComments}}"hideComments":{{hideComments}}{{/if}} }'{{extraAttributes}}>
             {{#defineBlockBody}}
                 {{element "title"}}
+                {{element "commentEntry"}}
                 {{element "body"}}
                 {{element "actions"}}
             {{/defineBlockBody}}

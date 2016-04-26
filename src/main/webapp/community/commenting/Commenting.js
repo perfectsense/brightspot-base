@@ -39,7 +39,9 @@ let Commenting = {
 
         $(document).on({
             'CommentEntry:onNewComment': (event)=> {
-                debugger
+                if (event.$comment){
+                    self.renderComment(event.$comment);
+                }
             }
         });
 
@@ -72,11 +74,17 @@ let Commenting = {
             }
         });
 
-        this.initSignIn(self.$el.find(self.selectors.signIn));
-        this.initCommentEntry(self.$el.find(self.selectors.commentEntryBlock));
-        this.initCommentReply(self.$el.find(self.selectors.commentReplyButton));
+        //this.initSignIn(self.$el.find(self.selectors.signIn));
+        //this.initCommentEntry(self.$el.find(self.selectors.commentEntryBlock));
+        //this.initCommentReply(self.$el.find(self.selectors.commentReplyButton));
         this.initShowMoreButton(self.$el.find(self.selectors.commentingShowMoreButton));
     },
+
+
+    renderComment($comment) {
+        this.$commentingBody.prepend($comment);
+    },
+
 
     submitComment($commentBlock) {
         let self = this;
@@ -193,39 +201,6 @@ let Commenting = {
             } else {
                 $textarea.attr('aria-invalid', 'true');
             }
-        });
-
-        $textarea.on('keypress', function(e) {
-                // disable line-break/feed
-                // so it wont count against the users remaining characters
-                if (e.which == 13) {
-                    e.preventDefault();
-                }
-            })
-            .on('keyup', function(e) {
-                let text = $(this).siblings(self.selectors.commentEntryCharacterCountdown).text();
-                let length = $(this).val().length;
-                let int = text.match(/[0-9 , \.]+/g);
-
-                length = $(this).attr('maxlength') - length;
-                if (length < 0) length = 0; // just in case :)
-
-                if (int[0] && int[0].length) {
-                    text = text.replace(int[0].trim(), length);
-                } else {
-                    text = length;
-                }
-
-                $(this).siblings(self.selectors.commentEntryCharacterCountdown).text(text);
-            });
-    },
-
-    initSignIn($el) {
-        // clicking on social login links
-        $el.find(this.selectors.signInLinks).on('click', function(e) {
-            e.preventDefault();
-            let url = $(this).attr('href');
-            window.open(url, '_blank');
         });
     },
 

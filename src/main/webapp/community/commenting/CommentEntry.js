@@ -32,6 +32,7 @@ class CommentEntry {
             data: this.$form.serialize()
         })
         .done((response)=> {
+            this.reset();
             this.renderComment(response);
         })
         .fail((data)=> {
@@ -40,7 +41,7 @@ class CommentEntry {
     }
 
     onError(data) {
-
+        // todo
     }
 
     renderComment(data) {
@@ -51,6 +52,7 @@ class CommentEntry {
         if (this.$context.get(0).hasAttribute('data-replace-with-response')){
             this.$context.replaceWith($comment);
         }
+        // bubble the event
         else {
             $.event.trigger({
                 type: 'CommentEntry:onNewComment',
@@ -60,6 +62,11 @@ class CommentEntry {
 
         // broadcast title update
         // todo
+    }
+
+    reset() {
+        this.$form.get(0).reset();
+        this.$context.find(`${this.settings.selectors.prefix}-input textarea`).val('').trigger('keyup');
     }
 }
 
