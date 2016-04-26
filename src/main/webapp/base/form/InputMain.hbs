@@ -3,6 +3,7 @@
     {{#defineElement "input" noWith=true}}
         <input id="{{id}}"
             type="text"
+            name="{{elementName}}"
             class="{{elementName}}"
             {{#with placeholder}}placeholder="{{this}}"{{/with}}
             {{#with autofocus}}autofocus="{{this}}"{{/with}}
