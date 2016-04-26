@@ -50,11 +50,6 @@
     "items": [
       {
         "_dataUrl": "/block/commenting/comment-entry.json"
-      },
-      {
-        "_template": "community/commenting/CommentingShowMore",
-        "ajaxHref": "_ajax-show-more-response.html",
-        "button": "Show More Comments"
       }
     ]
   }
