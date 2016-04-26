@@ -1,8 +1,6 @@
 {
   "_template": "community/commenting/Comment",
-  "id": "sdf43235dwf3dsfsd4",
-  "isStaff": false,
-  "threadDepth": "0",
+  "id": "123abc",
 
   "author": {
     "_dataUrl": "/block/author/author.json"
@@ -18,6 +16,10 @@
     "_template": "base/util/RawHtml",
     "html": "{{paragraphs(1)}}"
   },
+
+  "replies": [
+      
+  ],
 
   "replyButton": "Reply",
   "replyAction": "/block/commenting/_comment-entry-response",

@@ -11,6 +11,14 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
+    {{#defineElement "replies" noWith=true}}
+        <section class="{{elementName}}">
+            {{#each replies}}
+                {{this}}
+            {{/each}}
+        </section>
+    {{/defineElement}}
+
     {{#defineElement "like" noWith=true}}
         {{#if likeButton}}
             <form class="{{elementName}}" method="post" action="{{likeAction}}">
@@ -57,6 +65,7 @@
                 {{element "author"}}
                 {{element "time"}}
                 {{element "body"}}
+                {{element "replies"}}
                 {{element "actions"}}
             {{/defineBlockBody}}
 

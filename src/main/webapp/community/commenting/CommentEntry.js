@@ -14,7 +14,7 @@ class CommentEntry {
         this.$form.submit((event)=> {
             event.preventDefault();
             this.onSubmit();
-        })
+        });
     }
 
     get $submitButton() {
@@ -32,8 +32,7 @@ class CommentEntry {
             data: this.$form.serialize()
         })
         .done((response)=> {
-            this.reset();
-            this.renderComment(response);
+            this.renderResponse(response);
         })
         .fail((data)=> {
             this.onError(data);
@@ -44,9 +43,12 @@ class CommentEntry {
         // todo
     }
 
-    renderComment(data) {
+    renderResponse(data) {
         let $html = $(data);
         let $comment = $html.find(this.settings.selectors.commentBlock);
+
+        // reset the form
+        this.reset();
 
         // replace the entry component with the comment?
         if (this.$context.get(0).hasAttribute('data-replace-with-response')){

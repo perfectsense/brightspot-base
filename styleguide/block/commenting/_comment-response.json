@@ -26,6 +26,6 @@
     },
 
     "replyButton": "Reply",
-    "replyAction": "/block/commenting/reply"
+    "replyAction": "/block/commenting/_comment-entry-response"
   }
 }
