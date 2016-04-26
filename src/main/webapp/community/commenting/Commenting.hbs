@@ -5,8 +5,14 @@
 
     {{#defineElement "hideToggle" noWith=true}}
         <div class="{{elementName}}">
-            <div class="{{elementName}}-hideButton">{{textWhenVisible}}</div>
-            <div class="{{elementName}}-showButton">{{textWhenHidden}}</div>
+            <button class="{{elementName}}-hideButton">{{textWhenVisible}}</button>
+            <button class="{{elementName}}-showButton">{{textWhenHidden}}</button>
+        </div>
+    {{/defineElement}}
+
+    {{#defineElement "loadMore" noWith=true}}
+        <div class="{{elementName}}">
+            <button class="{{elementName}}-button">{{loadMoreButton}}</button>
         </div>
     {{/defineElement}}
 
@@ -17,6 +23,7 @@
     {{#defineElement "actions" noWith=true}}
         <div class="{{elementName}}">
             {{element "hideToggle"}}
+            {{element "loadMore"}}
         </div>
     {{/defineElement}}
 
