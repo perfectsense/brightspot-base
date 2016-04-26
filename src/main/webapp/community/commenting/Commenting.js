@@ -37,6 +37,12 @@ let Commenting = {
         self.$el = $el;
         self.settings = $.extend({}, self.defaults, options);
 
+        $(document).on({
+            'CommentEntry:onNewComment': (event)=> {
+                debugger
+            }
+        });
+
         // for debugging
         if (self.$el.attr('data-bsp-community-commenting-ajaxMethod')) {
             self.settings.ajaxMethod = self.$el.attr('data-bsp-community-commenting-ajaxMethod');

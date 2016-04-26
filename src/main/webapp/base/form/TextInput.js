@@ -3,13 +3,13 @@ import bspUtils from 'bsp-utils';
 
 export default class TextInput {
 
-    constructor($el, options) {
+    constructor($context, options) {
         this.selectors = $.extend({}, {
             prefix: '.TextInput',
             characterCountdown: 'characterCountdown'
         }, options);
 
-        this.$context = $el;
+        this.$context = $context;
 
         this.$input.on('keyup', (e)=> {
             this.onKeyUp(e);
