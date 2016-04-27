@@ -47,10 +47,10 @@ class CommentEntry {
         let $html = $(data);
         let $comment = $html.find(this.settings.selectors.commentBlock);
 
-        // reset the form
+        // reset the UI
         this.reset();
 
-        // replace the entry component with the comment?
+        // replace the entry block with the comment?
         if (this.$context.get(0).hasAttribute('data-replace-with-response')){
             this.$context.replaceWith($comment);
         }

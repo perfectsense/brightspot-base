@@ -13,9 +13,7 @@
 
     {{#defineElement "replies" noWith=true}}
         <section class="{{elementName}}">
-            {{#each replies}}
-                {{this}}
-            {{/each}}
+            {{#each replies}}{{this}}{{/each}}
         </section>
     {{/defineElement}}
 
@@ -64,8 +62,8 @@
                 {{element "author"}}
                 {{element "time"}}
                 {{element "body"}}
-                {{element "replies"}}
                 {{element "actions"}}
+                {{element "replies"}}
             {{/defineBlockBody}}
 
         </div>

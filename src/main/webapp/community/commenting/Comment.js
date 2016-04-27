@@ -48,7 +48,6 @@ class Comment {
 
         this.$context.children(`${this.settings.selectors.prefix}-replies`).prepend($commentEntry);
         $commentEntry.find('textarea').focus();
-        this.$replyButton.prop('disabled', false);
     }
 
     onError(data) {

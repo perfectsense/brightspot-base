@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import bspUtils from 'bsp-utils';
 
-export default bspUtils.plugin(false, 'bsp', 'community-commenting', {
+export default bspUtils.plugin(false, 'bsp-community', 'commenting', {
     '_each': function(item) {
         Object.create(Commenting).init($(item), this.option(item));
     }
@@ -37,7 +37,6 @@ let Commenting = {
         self.$el = $el;
         self.settings = $.extend({}, self.defaults, options);
 
-        // cached element queries
         self.$commentingBody = self.$el.find(self.selectors.commentingBody);
         self.$expandCollapseCommentsToggles = self.$el.find(`${self.selectors.expandCommentsToggle}, ${self.selectors.collapseCommentsToggle}`);
         self.$expandCommentsToggles = self.$el.find(self.selectors.expandCommentsToggle);
@@ -51,7 +50,7 @@ let Commenting = {
             },
             'Comment:onBeforeReply': (event)=> {
                 if (event.$comment){
-                    // before a new reply UI is rendered, remove all existing ones
+                    // before a new comment entry block is rendered, remove any existing ones
                     self.$commentingBody.find(`${self.selectors.commentEntryBlock}`).each(function(){
                         $(this).data('bsp-community-commentEntry').remove();
                     });
@@ -81,88 +80,6 @@ let Commenting = {
 
     renderComment($comment) {
         this.$commentingBody.prepend($comment);
-    },
-
-    submitComment($commentBlock) {
-        let self = this;
-        let $textarea = $commentBlock.find('.TextArea-input');
-        let url = $commentBlock.find(self.selectors.commentSubmitButton).attr('data-ajax-href');
-
-        $textarea.attr('disabled', '');
-
-        $.ajax({
-                url: url,
-                data: { "comment": $textarea.val() }
-            })
-            .done(function(data) {
-                /*
-                // is this an in-line reply?
-                if ($commentBlock.get(0).hasAttribute('data-replace-with-response')) {
-                    data.$elToReplace = $commentBlock;
-                }
-                $textarea.removeAttr('disabled');
-                */
-
-                let $html = $(data);
-                let $comment = $html.find(self.selectors.commentBlock);
-
-                // update the comments list block
-                self.initCommentReply($comment.find(self.selectors.commentReplyButton));
-                self.$commentingBody.append($comment);
-
-                // update the title block?
-                let $title = $html.find('.CommentEntryResponse-title');
-                self.$el.find(self.selectors.commentingHeaderTitle).replaceWith($title);
-
-                /*
-                // comment block?
-                if (data.comment) {
-                    $html = $(data.comment);
-
-
-                    // replacing an inline comment entry?
-                    if (data.$elToReplace) {
-                        data.$elToReplace.siblings(self.selectors.commentBlock)
-                            .find(self.selectors.commentReplyButton)
-                            .css({ 'opacity': 1, 'pointer-events': 'auto' });
-                        data.$elToReplace.replaceWith($html);
-                    }
-                    // appending comment to body
-                    else {
-
-                    }
-                }
-                */
-
-                //self.updateWith(data);
-                $textarea.removeAttr('disabled');
-                self.resetEntryInput($commentBlock);
-            })
-            .fail(function() {
-                $textarea.removeAttr('disabled');
-                self.showServerError($commentBlock);
-            });
-    },
-
-    getCommentEntry($el) {
-        let self = this;
-
-        // the `ajax-href` attribute should already have the parentId as a query param
-        let url = $el.find('[data-ajax-href]').attr('data-ajax-href');
-
-        $.ajax({
-                dataType: "json",
-                url: url
-            })
-            .done(function(data) {
-                // is this a reply?
-                let $parentComment = $el.parents('.Comment');
-                data.$parentComment = ($parentComment.length > 0) ? $parentComment : null;
-                self.updateWith(data);
-            })
-            .fail(function() {
-                self.showServerError($el);
-            });
     },
 
     getPaginatedComments($el) {
@@ -233,27 +150,12 @@ let Commenting = {
             $html.insertAfter(data.$parentComment);
         }
 
-        // inline (reply-to) comment entry?
-        if (data.commentEntry && data.$parentComment) {
-            $html = $(data.commentEntry);
-            this.initCommentEntry($html);
-            $html.insertAfter(data.$parentComment);
-            $html.find('textarea').focus();
-        }
-
         // show more button?
         if (data.showMoreButton) {
             $html = $(data.showMoreButton);
             this.initShowMoreButton($html);
             this.$el.find(this.selectors.commentingShowMoreButton).replaceWith($html);
         }
-    },
-
-    cancelCommentReply($commentEntry) {
-        $commentEntry.siblings(this.selectors.commentBlock)
-            .find(this.selectors.commentReplyButton)
-            .css({ 'opacity': 1, 'pointer-events': 'auto' });
-        $commentEntry.remove();
     },
 
     expandComments() {
