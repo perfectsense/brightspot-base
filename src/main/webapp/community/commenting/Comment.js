@@ -18,6 +18,12 @@ class Comment {
         this.$replyForm.submit((event)=> {
             event.preventDefault();
             this.$replyButton.prop('disabled', true);
+
+            $.event.trigger({
+                type: 'Comment:onBeforeReply',
+                $comment: this.$context
+            });
+
             this.onSubmit();
         });
     }
@@ -50,8 +56,8 @@ class Comment {
     }
 }
 
-export default bspUtils.plugin(false, 'bsp', 'community-comment', {
+export default bspUtils.plugin(false, 'bsp-community', 'comment', {
     '_each': function(item) {
-        new Comment($(item), this.option(item));
+        $(item).data('bsp-community-comment', new Comment($(item), this.option(item)));
     }
 });

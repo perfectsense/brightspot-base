@@ -18,7 +18,11 @@
   },
 
   "replies": [
-      
+      {
+          "_repeat": [1,3],
+          "_dataUrl": "/block/commenting/comment.json",
+          "id": "123abc-child"
+      }
   ],
 
   "replyButton": "Reply",

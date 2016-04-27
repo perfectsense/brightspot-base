@@ -9,13 +9,13 @@ export default bspUtils.plugin(false, 'bsp', 'community-commenting', {
 
 let Commenting = {
     defaults: {
-        ajaxMethod: "POST",
         expandComments: false
     },
 
     selectors: {
-        expandCommentsToggle: ".CommentingExpandCollapse-textWhenCollapsed",
-        collapseCommentsToggle: ".CommentingExpandCollapse-textWhenExpanded",
+        expandCommentsToggle: ".Commenting-hideToggle-showButton",
+        collapseCommentsToggle: ".Commenting-hideToggle-hideButton",
+
         signIn: ".CommentingSignIn",
         signInLinks: ".CommentingSignIn-services > a",
         commentingHeaderTitle: ".CommentingHeader-title",
@@ -37,24 +37,27 @@ let Commenting = {
         self.$el = $el;
         self.settings = $.extend({}, self.defaults, options);
 
-        $(document).on({
-            'CommentEntry:onNewComment': (event)=> {
-                if (event.$comment){
-                    self.renderComment(event.$comment);
-                }
-            }
-        });
-
-        // for debugging
-        if (self.$el.attr('data-bsp-community-commenting-ajaxMethod')) {
-            self.settings.ajaxMethod = self.$el.attr('data-bsp-community-commenting-ajaxMethod');
-        }
-
         // cached element queries
         self.$commentingBody = self.$el.find(self.selectors.commentingBody);
         self.$expandCollapseCommentsToggles = self.$el.find(`${self.selectors.expandCommentsToggle}, ${self.selectors.collapseCommentsToggle}`);
         self.$expandCommentsToggles = self.$el.find(self.selectors.expandCommentsToggle);
         self.$collapseCommentsToggles = self.$el.find(self.selectors.collapseCommentsToggle);
+
+        $(document).on({
+            'CommentEntry:onNewComment': (event)=> {
+                if (event.$comment){
+                    self.renderComment(event.$comment);
+                }
+            },
+            'Comment:onBeforeReply': (event)=> {
+                if (event.$comment){
+                    // before a new reply UI is rendered, remove all existing ones
+                    self.$commentingBody.find(`${self.selectors.commentEntryBlock}`).each(function(){
+                        $(this).data('bsp-community-commentEntry').remove();
+                    });
+                }
+            }
+        });
 
         if (self.settings.expandComments) {
             self.$expandCommentsToggles.css({ 'display': 'none' });
@@ -64,7 +67,6 @@ let Commenting = {
             self.$collapseCommentsToggles.css({ 'display': 'none' });
         }
 
-        // event handlers
         self.$expandCollapseCommentsToggles.on('click', (e) => {
             e.preventDefault();
             if (self.$el.find(self.selectors.commentingBody).attr('data-comments-expanded') === "true") {
@@ -74,17 +76,12 @@ let Commenting = {
             }
         });
 
-        //this.initSignIn(self.$el.find(self.selectors.signIn));
-        //this.initCommentEntry(self.$el.find(self.selectors.commentEntryBlock));
-        //this.initCommentReply(self.$el.find(self.selectors.commentReplyButton));
         this.initShowMoreButton(self.$el.find(self.selectors.commentingShowMoreButton));
     },
-
 
     renderComment($comment) {
         this.$commentingBody.prepend($comment);
     },
-
 
     submitComment($commentBlock) {
         let self = this;
@@ -94,7 +91,6 @@ let Commenting = {
         $textarea.attr('disabled', '');
 
         $.ajax({
-                method: self.settings.ajaxMethod,
                 url: url,
                 data: { "comment": $textarea.val() }
             })
@@ -155,7 +151,6 @@ let Commenting = {
         let url = $el.find('[data-ajax-href]').attr('data-ajax-href');
 
         $.ajax({
-                method: 'GET',
                 dataType: "json",
                 url: url
             })
@@ -201,20 +196,6 @@ let Commenting = {
             } else {
                 $textarea.attr('aria-invalid', 'true');
             }
-        });
-    },
-
-    initCommentReply($el) {
-        let self = this;
-        $el.on('click', function(e) {
-            e.preventDefault();
-            // cancel any previous/visible inline comment entry UIs
-            $(`${self.selectors.commentingBody} ${self.selectors.commentEntryBlock}`).each(function() {
-                self.cancelCommentReply($(this));
-            });
-            // disable the reply button UI
-            $(this).css({ 'opacity': '0.4', 'pointer-events': 'none' });
-            self.getCommentEntry($(this));
         });
     },
 
@@ -266,12 +247,6 @@ let Commenting = {
             this.initShowMoreButton($html);
             this.$el.find(this.selectors.commentingShowMoreButton).replaceWith($html);
         }
-    },
-
-    resetEntryInput($commentBlock) {
-        // triggering the keyup event,
-        // signals the counter to reset the countdown
-        $commentBlock.find('textarea').val('').trigger('keyup');
     },
 
     cancelCommentReply($commentEntry) {

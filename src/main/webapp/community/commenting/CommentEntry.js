@@ -61,19 +61,20 @@ class CommentEntry {
                 $comment: $comment
             });
         }
-
-        // broadcast title update
-        // todo
     }
 
     reset() {
         this.$form.get(0).reset();
         this.$context.find(`${this.settings.selectors.prefix}-input textarea`).val('').trigger('keyup');
     }
+
+    remove() {
+        this.$context.remove();
+    }
 }
 
-export default bspUtils.plugin(false, 'bsp', 'community-commentEntry', {
+export default bspUtils.plugin(false, 'bsp-community', 'commentEntry', {
     '_each': function(item) {
-        new CommentEntry($(item), this.option(item));
+        $(item).data('bsp-community-commentEntry', new CommentEntry($(item), this.option(item)));
     }
 });
