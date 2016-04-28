@@ -46,21 +46,23 @@ class CommentEntry {
     renderResponse(data) {
         let $html = $(data);
         let $comment = $html.find(this.settings.selectors.commentBlock);
+        let replaceWithResponse = this.$context.get(0).hasAttribute('data-replace-with-response');
 
         // reset the UI
         this.reset();
 
         // replace the entry block with the comment?
-        if (this.$context.get(0).hasAttribute('data-replace-with-response')){
+        if (replaceWithResponse){
             this.$context.replaceWith($comment);
         }
+
         // bubble the event
-        else {
-            $.event.trigger({
-                type: 'CommentEntry:onNewComment',
-                $comment: $comment
-            });
-        }
+        $.event.trigger({
+            type: 'CommentEntry:onNewComment',
+            $comment: $comment,
+            $html: $html,
+            prependComment: !replaceWithResponse
+        });
     }
 
     reset() {

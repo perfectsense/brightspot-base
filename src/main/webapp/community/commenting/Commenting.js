@@ -1,12 +1,6 @@
 import $ from 'jquery';
 import bspUtils from 'bsp-utils';
 
-export default bspUtils.plugin(false, 'bsp-community', 'commenting', {
-    '_each': function(item) {
-        Object.create(Commenting).init($(item), this.option(item));
-    }
-});
-
 let Commenting = {
     defaults: {
         expandComments: false,
@@ -18,18 +12,9 @@ let Commenting = {
             commentBlock: ".Comment",
 
             // deprecating...
-            signIn: ".CommentingSignIn",
-            signInLinks: ".CommentingSignIn-services > a",
-            commentingHeaderTitle: ".CommentingHeader-title",
-            commentSubmitButton: ".CommentSubmit-button",
-
-            commentEntryResponseBlock: ".CommentEntryResponse",
-            commentEntryCharacterCountdown: ".TextArea-characterCountdown",
-            commentReplyButton: ".CommentReply",
             commentValidationCommentTooLongMessage: ".ValidationMessages-tooLong",
             commentValidationCommentBlankMessage: ".ValidationMessages-blank",
-            commentValidationServerErrorMessage: ".ValidationMessages-serverError",
-            commentingShowMoreButton: ".CommentingShowMore"
+            commentValidationServerErrorMessage: ".ValidationMessages-serverError"
         }
     },
 
@@ -46,8 +31,12 @@ let Commenting = {
 
         $(document).on({
             'CommentEntry:onNewComment': (event)=> {
-                if (event.$comment){
+                if (event.prependComment && event.$comment){
                     self.renderComment(event.$comment);
+                }
+
+                if (event.$html){
+                    self.renderTitle(event.$html.find(`${self.settings.selectors.prefix}-title`));
                 }
             },
             'Comment:onBeforeReply': (event)=> {
@@ -68,6 +57,7 @@ let Commenting = {
 
         self.$expandCollapseCommentsToggles.on('click', (event)=> {
             event.preventDefault();
+            
             if (self.$el.find(self.settings.selectors.commentingBody).attr('data-comments-hidden') === "false") {
                 this.collapseComments();
             } else {
@@ -85,6 +75,10 @@ let Commenting = {
             this.loadMore();
         });
 
+    },
+
+    renderTitle($title) {
+        this.$el.find(`${this.settings.selectors.prefix}-title`).replaceWith($title);
     },
 
     renderComment($comment) {
@@ -111,7 +105,7 @@ let Commenting = {
         let $loadMoreButton = $html.find('.Commenting-loadMore-button');
         let formAction = $loadMoreButton.attr('formaction');
 
-        // replace the existing form action with current load more action?
+        // replace the existing form action with current load more formaction?
         if (formAction){
             this.$el.find('.Commenting-loadMore').append($loadMoreButton);
             $loadMoreButton.parents('form').attr('action', formAction);
@@ -158,3 +152,9 @@ let Commenting = {
         return true;
     }
 }
+
+export default bspUtils.plugin(false, 'bsp-community', 'commenting', {
+    '_each': function(item) {
+        Object.create(Commenting).init($(item), this.option(item));
+    }
+});
