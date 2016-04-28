@@ -22,7 +22,9 @@
     {{/defineElement}}
 
     {{#defineElement "submit" noWith=true}}
-        <button formaction="{{submitAction}}" class="{{elementName}}-button">{{submitButton}}</button>
+        <div class="{{elementName}}">
+            <button formaction="{{submitAction}}" class="{{elementName}}-button">{{submitButton}}</button>
+        </div>
     {{/defineElement}}
 
     {{#defineElement "actions" noWith=true}}
