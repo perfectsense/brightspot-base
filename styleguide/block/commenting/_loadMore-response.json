@@ -6,28 +6,8 @@
     "_template": "base/util/Concatenated",
     "items": [
       {
-        "_repeat": [
-          1,
-          5
-        ],
-        "_template": "community/commenting/Comment",
-        "id": "sdf43235dwf3dsfsd4",
-        "isStaff": false,
-        "threadDepth": "0",
-        "author": {
-          "_dataUrl": "/block/author/author.json"
-        },
-        "time": {
-          "_template": "base/util/DateTime",
-          "iso": "{{date('iso')}}",
-          "body": "{{date()}}"
-        },
-        "body": {
-          "_template": "base/util/RawHtml",
-          "html": "{{paragraphs(1)}}"
-        },
-        "replyButton": "Reply",
-        "replyAction": "/block/commenting/_comment-entry-response"
+        "_repeat": [1,5],
+        "_dataUrl": "/block/commenting/comment.json"
       }
     ]
   },

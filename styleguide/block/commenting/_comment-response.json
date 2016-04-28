@@ -2,30 +2,9 @@
   "_wrapper": false,
   "_template": "community/commenting/CommentResponse",
 
-  "title": "2 comments",
-
+  "title": "{{number([2,100])}} comments",
+  
   "comment": {
-    "_template": "community/commenting/Comment",
-    "id": "sdf43235dwf3dsfsd4",
-    "isStaff": false,
-    "threadDepth": "0",
-
-    "author": {
-      "_dataUrl": "/block/author/author.json"
-    },
-
-    "time": {
-      "_template": "base/util/DateTime",
-      "iso": "{{date('iso')}}",
-      "body": "{{date()}}"
-    },
-
-    "body": {
-      "_template": "base/util/RawHtml",
-      "html": "{{paragraphs(1)}}"
-    },
-
-    "replyButton": "Reply",
-    "replyAction": "/block/commenting/_comment-entry-response"
+    "_dataUrl": "/block/commenting/comment.json"
   }
 }

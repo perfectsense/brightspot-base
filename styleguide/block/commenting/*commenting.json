@@ -31,7 +31,6 @@
           3
         ],
         "_dataUrl": "/block/commenting/comment.json",
-        "threadDepth": "1",
         "parentId": "1",
         "id": "{{number([2,20])}}",
         "isStaff": true
@@ -42,7 +41,6 @@
           3
         ],
         "_dataUrl": "/block/commenting/comment.json",
-        "threadDepth": "0",
         "id": "{{number([30,40])}}"
       }
     ]
