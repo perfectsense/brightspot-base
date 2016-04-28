@@ -5,8 +5,10 @@
   "hideComments": true,
   "textWhenHidden": "View Comments",
   "textWhenVisible": "Hide Comments",
-  "loadMoreButton": "Show More",
   "title": "30 Comments",
+
+  "loadMoreButton": "Show More",
+  "loadMoreAction": "/block/commenting/_loadMore-response",
 
   "commentEntry": {
       "_dataUrl": "/block/commenting/comment-entry.json",

@@ -9,27 +9,28 @@ export default bspUtils.plugin(false, 'bsp-community', 'commenting', {
 
 let Commenting = {
     defaults: {
-        expandComments: false
-    },
+        expandComments: false,
 
-    selectors: {
-        expandCommentsToggle: ".Commenting-hideToggle-showButton",
-        collapseCommentsToggle: ".Commenting-hideToggle-hideButton",
+        selectors: {
+            prefix: ".Commenting",
+            commentingBody: ".Commenting-body",
+            commentEntryBlock: ".CommentEntry",
+            commentBlock: ".Comment",
 
-        signIn: ".CommentingSignIn",
-        signInLinks: ".CommentingSignIn-services > a",
-        commentingHeaderTitle: ".CommentingHeader-title",
-        commentingBody: ".Commenting-body",
-        commentSubmitButton: ".CommentSubmit-button",
-        commentBlock: ".Comment",
-        commentEntryBlock: ".CommentEntry",
-        commentEntryResponseBlock: ".CommentEntryResponse",
-        commentEntryCharacterCountdown: ".TextArea-characterCountdown",
-        commentReplyButton: ".CommentReply",
-        commentValidationCommentTooLongMessage: ".ValidationMessages-tooLong",
-        commentValidationCommentBlankMessage: ".ValidationMessages-blank",
-        commentValidationServerErrorMessage: ".ValidationMessages-serverError",
-        commentingShowMoreButton: ".CommentingShowMore"
+            // deprecating...
+            signIn: ".CommentingSignIn",
+            signInLinks: ".CommentingSignIn-services > a",
+            commentingHeaderTitle: ".CommentingHeader-title",
+            commentSubmitButton: ".CommentSubmit-button",
+
+            commentEntryResponseBlock: ".CommentEntryResponse",
+            commentEntryCharacterCountdown: ".TextArea-characterCountdown",
+            commentReplyButton: ".CommentReply",
+            commentValidationCommentTooLongMessage: ".ValidationMessages-tooLong",
+            commentValidationCommentBlankMessage: ".ValidationMessages-blank",
+            commentValidationServerErrorMessage: ".ValidationMessages-serverError",
+            commentingShowMoreButton: ".CommentingShowMore"
+        }
     },
 
     init($el, options) {
@@ -37,10 +38,11 @@ let Commenting = {
         self.$el = $el;
         self.settings = $.extend({}, self.defaults, options);
 
-        self.$commentingBody = self.$el.find(self.selectors.commentingBody);
-        self.$expandCollapseCommentsToggles = self.$el.find(`${self.selectors.expandCommentsToggle}, ${self.selectors.collapseCommentsToggle}`);
-        self.$expandCommentsToggles = self.$el.find(self.selectors.expandCommentsToggle);
-        self.$collapseCommentsToggles = self.$el.find(self.selectors.collapseCommentsToggle);
+        self.$commentingBody = self.$el.find(self.settings.selectors.commentingBody);
+        self.$expandCollapseCommentsToggles = self.$el.find(`${self.settings.selectors.prefix}-hideToggle-showButton, ${self.settings.selectors.prefix}-hideToggle-hideButton`);
+        self.$expandCommentsToggles = self.$el.find(`${self.settings.selectors.prefix}-hideToggle-showButton`);
+        self.$collapseCommentsToggles = self.$el.find(`${self.settings.selectors.prefix}-hideToggle-hideButton`);
+        self.$loadMoreForm = self.$el.find(`${self.settings.selectors.prefix}-loadMore`);
 
         $(document).on({
             'CommentEntry:onNewComment': (event)=> {
@@ -51,7 +53,7 @@ let Commenting = {
             'Comment:onBeforeReply': (event)=> {
                 if (event.$comment){
                     // before a new comment entry block is rendered, remove any existing ones
-                    self.$commentingBody.find(`${self.selectors.commentEntryBlock}`).each(function(){
+                    self.$commentingBody.find(`${self.settings.selectors.commentEntryBlock}`).each(function(){
                         $(this).data('bsp-community-commentEntry').remove();
                     });
                 }
@@ -66,96 +68,58 @@ let Commenting = {
             self.$collapseCommentsToggles.css({ 'display': 'none' });
         }
 
-        self.$expandCollapseCommentsToggles.on('click', (e) => {
-            e.preventDefault();
-            if (self.$el.find(self.selectors.commentingBody).attr('data-comments-expanded') === "true") {
+        self.$expandCollapseCommentsToggles.on('click', (event)=> {
+            event.preventDefault();
+            if (self.$el.find(self.settings.selectors.commentingBody).attr('data-comments-expanded') === "true") {
                 this.collapseComments();
             } else {
                 this.expandComments();
             }
         });
 
-        this.initShowMoreButton(self.$el.find(self.selectors.commentingShowMoreButton));
+        self.$loadMoreForm.submit((event)=> {
+            event.preventDefault();
+
+            $.event.trigger({
+                type: 'Comment:onBeforeLoadMore'
+            });
+
+            this.loadMore();
+        });
+
     },
 
     renderComment($comment) {
         this.$commentingBody.prepend($comment);
     },
 
-    getPaginatedComments($el) {
-        let self = this;
-
-        // the `ajax-href` attribute should already have the offset & limit as query params
-        let url = $el.find('[data-ajax-href]').attr('data-ajax-href');
-
+    loadMore() {
         $.ajax({
-            method: 'GET',
-            dataType: "json",
-            url: url
+            url: this.$loadMoreForm.attr('action'),
+            method: this.settings.ajaxMethod
         })
-        .done(function(data) {
-            self.updateWith(data);
+        .done((response)=> {
+            this.$loadMoreForm.empty();
+            this.renderResponse(response);
         })
-        .fail(function() {
-            self.showServerError($el);
+        .fail((data)=> {
+            this.onError(data);
         });
     },
 
-    initCommentEntry($block) {
-        let self = this;
-        let $textarea = $block.find('textarea');
+    renderResponse(data) {
+        let $html = $(data);
+        let $comments = $html.find(this.settings.selectors.commentBlock);
+        let $loadMoreButton = $html.find('.Commenting-loadMore-button');
+        let formAction = $loadMoreButton.attr('formaction');
 
-        $block.find(self.selectors.commentSubmitButton).on('click', function(e) {
-            e.preventDefault();
-            if (self.validateInput($textarea)) {
-                $textarea.attr('aria-invalid', 'false');
-                self.submitComment($block);
-            } else {
-                $textarea.attr('aria-invalid', 'true');
-            }
-        });
-    },
-
-    initShowMoreButton($el) {
-        let self = this;
-        $el.on('click', function(e) {
-            e.preventDefault();
-            self.getPaginatedComments($(this));
-            $(this).empty();
-        });
-    },
-
-    updateWith(data) {
-        let self = this;
-        let $html;
-
-        // multiple comment blocks?
-        if (data.comments) {
-            $html = $(data.comments);
-            $html.each(function() {
-                self.initCommentReply($(this).find(self.selectors.commentReplyButton));
-                self.$commentingBody.append($(this));
-            });
+        // replace the existing form action with current load more action?
+        if (formAction){
+            this.$el.find('.Commenting-loadMore').append($loadMoreButton);
+            $loadMoreButton.parents('form').attr('action', formAction);
         }
 
-        // header-title block?
-        if (data.commentingHeaderTitle) {
-            this.$el.find(this.selectors.commentingHeaderTitle).replaceWith(data.commentingHeaderTitle);
-        }
-
-        // show sign-in?
-        if (data.result === "unauthenticated" && data.signIn && data.$parentComment){
-            $html = $(data.signIn);
-            this.initSignIn($html);
-            $html.insertAfter(data.$parentComment);
-        }
-
-        // show more button?
-        if (data.showMoreButton) {
-            $html = $(data.showMoreButton);
-            this.initShowMoreButton($html);
-            this.$el.find(this.selectors.commentingShowMoreButton).replaceWith($html);
-        }
+        this.$commentingBody.append($comments);
     },
 
     expandComments() {
@@ -173,22 +137,22 @@ let Commenting = {
     },
 
     showBlankCommentError($block) {
-        $block.find(this.selectors.commentValidationCommentBlankMessage).attr('data-visible', '');
+        $block.find(this.settings.selectors.commentValidationCommentBlankMessage).attr('data-visible', '');
     },
 
     showServerError($block) {
-        $block.find(this.selectors.commentValidationServerErrorMessage).attr('data-visible', '');
+        $block.find(this.settings.selectors.commentValidationServerErrorMessage).attr('data-visible', '');
     },
 
     hideValidationMessages($context) {
-        $context.find(this.selectors.commentValidationServerErrorMessage).removeAttr('data-visible');
-        $context.find(this.selectors.commentValidationCommentBlankMessage).removeAttr('data-visible');
-        $context.find(this.selectors.commentValidationCommentTooLongMessage).removeAttr('data-visible');
+        $context.find(this.settings.selectors.commentValidationServerErrorMessage).removeAttr('data-visible');
+        $context.find(this.settings.selectors.commentValidationCommentBlankMessage).removeAttr('data-visible');
+        $context.find(this.settings.selectors.commentValidationCommentTooLongMessage).removeAttr('data-visible');
     },
 
     validateInput($input) {
         if (!$input || $input.length <= 0) return false;
-        let $block = $input.parents(this.selectors.commentEntryBlock);
+        let $block = $input.parents(this.settings.selectors.commentEntryBlock);
         let value = $input.val();
         if (value === "") {
             this.showBlankCommentError($block);
