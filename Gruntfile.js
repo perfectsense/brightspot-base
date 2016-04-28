@@ -7,8 +7,7 @@ module.exports = function (grunt) {
             styles: {
                 dir: '',
                 less: [
-                    'base/All.less',
-                    'base/theme/inspire-confidence/All.less'
+                    'base/All.less'
                 ],
                 options : {
                     autoprefixer: true
