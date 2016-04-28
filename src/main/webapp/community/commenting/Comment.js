@@ -12,8 +12,8 @@ class Comment {
             }
         }, options);
 
-        this.$replyButton = this.$context.children(`${this.settings.selectors.commentActions}`).find(`${this.settings.selectors.prefix}Action-reply-button`);
-        this.$replyForm = this.$context.children(`${this.settings.selectors.commentActions}`).find(`${this.settings.selectors.prefix}Action-reply`);
+        this.$replyButton = this.$context.children(`${this.settings.selectors.commentActions}`).find(`${this.settings.selectors.prefix}-reply-button`);
+        this.$replyForm = this.$context.children(`${this.settings.selectors.commentActions}`).find(`${this.settings.selectors.prefix}-reply`);
 
         this.$replyForm.submit((event)=> {
             event.preventDefault();
@@ -47,6 +47,7 @@ class Comment {
         let $commentEntry = $html.find(this.settings.selectors.commentEntryBlock);
 
         this.$context.children(`${this.settings.selectors.prefix}-replies`).prepend($commentEntry);
+        this.$replyButton.prop('disabled', false);
         $commentEntry.find('textarea').focus();
     }
 

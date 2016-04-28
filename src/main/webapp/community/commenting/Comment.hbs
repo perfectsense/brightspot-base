@@ -27,26 +27,42 @@
 
     {{#defineElement "dislike" noWith=true}}
         {{#if dislikeButton}}
-            <form class="CommentAction-dislike" method="post" action="{{dislikeAction}}">
-                <button class="CommentAction-dislike-button">{{dislikeButton}}</button>
+            <form class="{{elementName}}" method="post" action="{{dislikeAction}}">
+                <button class="{{elementName}}-button">{{dislikeButton}}</button>
+            </form>
+        {{/if}}
+    {{/defineElement}}
+
+    {{#defineElement "flag" noWith=true}}
+        {{#if flagButton}}
+            <form class="{{elementName}}" method="post" action="{{flagAction}}">
+                <button class="{{elementName}}-button">{{flagButton}}</button>
+            </form>
+        {{/if}}
+    {{/defineElement}}
+
+    {{#defineElement "share" noWith=true}}
+        {{#if shareButton}}
+            <form class="{{elementName}}" method="post" action="{{shareAction}}">
+                <button class="{{elementName}}-button">{{shareButton}}</button>
             </form>
         {{/if}}
     {{/defineElement}}
 
     {{#defineElement "reply" noWith=true}}
         {{#if replyButton}}
-            <form class="CommentAction-reply" method="get" action="{{replyAction}}">
-                <button class="CommentAction-reply-button">{{replyButton}}</button>
+            <form class="{{elementName}}" method="get" action="{{replyAction}}">
+                <button class="{{elementName}}-button">{{replyButton}}</button>
             </form>
         {{/if}}
     {{/defineElement}}
 
     {{#defineElement "actions" noWith=true}}
-        <footer class="{{elementName}}">
+        <div class="{{elementName}}">
             {{element "like"}}
             {{element "dislike"}}
             {{element "reply"}}
-        </footer>
+        </div>
     {{/defineElement}}
 
     {{#defineBlockContainer}}
