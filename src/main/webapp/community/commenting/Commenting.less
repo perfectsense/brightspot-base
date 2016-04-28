@@ -6,6 +6,16 @@
 
     &-body {
         &:extend(.Commenting-body all);
+
+        &[data-comments-hidden="false"] {
+            height: auto;
+            overflow: visible;
+        }
+
+        &[data-comments-hidden="true"] {
+            height: 0;
+            overflow: hidden;
+        }
     }
 
     &-actions {

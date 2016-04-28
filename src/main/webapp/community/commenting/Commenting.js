@@ -61,16 +61,14 @@ let Commenting = {
         });
 
         if (self.settings.expandComments) {
-            self.$expandCommentsToggles.css({ 'display': 'none' });
-            self.$collapseCommentsToggles.css({ 'display': 'block' });
+            this.expandComments();
         } else {
-            self.$expandCommentsToggles.css({ 'display': 'block' });
-            self.$collapseCommentsToggles.css({ 'display': 'none' });
+            this.collapseComments();
         }
 
         self.$expandCollapseCommentsToggles.on('click', (event)=> {
             event.preventDefault();
-            if (self.$el.find(self.settings.selectors.commentingBody).attr('data-comments-expanded') === "true") {
+            if (self.$el.find(self.settings.selectors.commentingBody).attr('data-comments-hidden') === "false") {
                 this.collapseComments();
             } else {
                 this.expandComments();
@@ -123,17 +121,15 @@ let Commenting = {
     },
 
     expandComments() {
-        this.$el.data('commentsExpanded', true);
-        this.$expandCommentsToggles.css({ 'display': 'none' });
-        this.$collapseCommentsToggles.css({ 'display': 'block' });
-        this.$commentingBody.attr('data-comments-expanded', true);
+        this.$expandCommentsToggles.prop('disabled', true);
+        this.$collapseCommentsToggles.prop('disabled', false);
+        this.$commentingBody.attr('data-comments-hidden', false);
     },
 
     collapseComments() {
-        this.$el.data('commentsExpanded', false);
-        this.$collapseCommentsToggles.css({ 'display': 'none' });
-        this.$expandCommentsToggles.css({ 'display': 'block' });
-        this.$commentingBody.attr('data-comments-expanded', false);
+        this.$collapseCommentsToggles.prop('disabled', true);
+        this.$expandCommentsToggles.prop('disabled', false);
+        this.$commentingBody.attr('data-comments-hidden', true);
     },
 
     showBlankCommentError($block) {
