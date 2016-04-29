@@ -1,7 +1,6 @@
 {
   "_template": "community/commenting/CommentEntry",
-  "replaceWithResponse": true,
-
+  
   "user": {
     "_template": "base/Author",
     "image": {

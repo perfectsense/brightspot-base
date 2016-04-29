@@ -11,8 +11,7 @@
   "loadMoreAction": "/block/commenting/_loadMore-response",
 
   "commentEntry": {
-      "_dataUrl": "/block/commenting/comment-entry.json",
-      "replaceWithResponse": false
+      "_dataUrl": "/block/commenting/comment-entry.json"
   },
 
   "body": {
