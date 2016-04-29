@@ -58,14 +58,16 @@ class CommentEntry {
         let $html = $(data);
         let $comment = $html.find(this.settings.selectors.commentBlock);
 
-        // is the comment entry block a child of the replies section of a comment?
-        let isReply = this.$context.parents('.Comment-replies').length > 0;
+        // if this block is not a child of a commenting block
+        // or is rendered within the replies section, we should replace it with the response
+        let replaceWithResponse = this.$context.parents('.Commenting').length == 0 ||
+                                this.$context.parents('.Comment-replies').length > 0;
 
         // reset the UI
         this.reset();
 
         // replace the entry block with the comment block?
-        if (isReply){
+        if (replaceWithResponse){
             this.$context.replaceWith($comment);
         }
 
@@ -74,7 +76,7 @@ class CommentEntry {
             commentingId: this.commentingId,
             $comment: $comment,
             $html: $html,
-            alreadyRendered: isReply
+            alreadyRendered: replaceWithResponse
         });
     }
 
