@@ -11,9 +11,11 @@
     {{/defineElement}}
 
     {{#defineElement "loadMore" noWith=true}}
-        <form class="{{elementName}}" action="{{loadMoreAction}}">
-            <button class="{{elementName}}-button">{{loadMoreButton}}</button>
-        </form>
+        {{#if loadMoreAction}}
+            <form class="{{elementName}}" action="{{loadMoreAction}}">
+                <button class="{{elementName}}-button">{{loadMoreButton}}</button>
+            </form>
+        {{/if}}
     {{/defineElement}}
 
     {{#defineElement "commentEntry"}}

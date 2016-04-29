@@ -8,9 +8,11 @@
     {{/defineElement}}
 
     {{#defineElement "logout" noWith=true}}
-        <form class="{{elementName}}" action="{{logoutAction}}">
-            <button class="{{elementName}}-button">{{logoutButton}}</button>
-        </form>
+        {{#if logoutAction}}
+            <form class="{{elementName}}" action="{{logoutAction}}">
+                <button class="{{elementName}}-button">{{logoutButton}}</button>
+            </form>
+        {{/if}}
     {{/defineElement}}
 
     {{#defineElement "input" noWith=true}}
@@ -22,9 +24,11 @@
     {{/defineElement}}
 
     {{#defineElement "submit" noWith=true}}
-        <div class="{{elementName}}">
-            <button formaction="{{submitAction}}" class="{{elementName}}-button">{{submitButton}}</button>
-        </div>
+        {{#if submitAction}}
+            <div class="{{elementName}}">
+                <button formaction="{{submitAction}}" class="{{elementName}}-button">{{submitButton}}</button>
+            </div>
+        {{/if}}
     {{/defineElement}}
 
     {{#defineElement "actions" noWith=true}}
