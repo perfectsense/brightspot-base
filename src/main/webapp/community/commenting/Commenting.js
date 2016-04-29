@@ -3,7 +3,7 @@ import bspUtils from 'bsp-utils';
 
 let Commenting = {
     defaults: {
-        hideComments: true,
+        showComments: false,
 
         selectors: {
             prefix: ".Commenting",
@@ -55,16 +55,16 @@ let Commenting = {
             }
         });
 
-        if (self.settings.hideComments) {
-            this.hideComments();
-        } else {
+        if (self.settings.showComments) {
             this.showComments();
+        } else {
+            this.hideComments();
         }
 
         self.$hideShowCommentsToggles.on('click', (event)=> {
             event.preventDefault();
 
-            if (self.$el.find(self.settings.selectors.commentingBody).attr('data-comments-hidden') === "false") {
+            if (self.$el.find(self.settings.selectors.commentingBody).attr('data-comments-shown') === "true") {
                 this.hideComments();
             } else {
                 this.showComments();
@@ -126,7 +126,7 @@ let Commenting = {
 
         this.$showCommentsToggle.prop('disabled', true);
         this.$hideCommentsToggle.prop('disabled', false);
-        this.$commentingBody.attr('data-comments-hidden', false);
+        this.$commentingBody.attr('data-comments-shown', true);
 
         this.$el.trigger('Commenting:onAfterShowComments');
     },
@@ -136,7 +136,7 @@ let Commenting = {
 
         this.$hideCommentsToggle.prop('disabled', true);
         this.$showCommentsToggle.prop('disabled', false);
-        this.$commentingBody.attr('data-comments-hidden', true);
+        this.$commentingBody.attr('data-comments-shown', false);
 
         this.$el.trigger('Commenting:onAfterHideComments');
     },

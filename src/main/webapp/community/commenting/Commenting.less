@@ -22,12 +22,12 @@
     &-body {
         &:extend(.Commenting-body all);
 
-        &[data-comments-hidden="false"] {
+        &[data-comments-shown="true"] {
             height: auto;
             overflow: visible;
         }
 
-        &[data-comments-hidden="true"] {
+        &[data-comments-shown="false"] {
             height: 0;
             overflow: hidden;
         }
