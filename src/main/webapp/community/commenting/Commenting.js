@@ -22,7 +22,7 @@ let Commenting = {
         let self = this;
         self.$el = $el;
         self.settings = $.extend({}, self.defaults, options);
-
+        self.id = self.$el.attr('id');
         self.$commentingBody = self.$el.find(self.settings.selectors.commentingBody);
         self.$expandCollapseCommentsToggles = self.$el.find(`${self.settings.selectors.prefix}-hideToggle-showButton, ${self.settings.selectors.prefix}-hideToggle-hideButton`);
         self.$expandCommentsToggles = self.$el.find(`${self.settings.selectors.prefix}-hideToggle-showButton`);
@@ -30,8 +30,11 @@ let Commenting = {
         self.$loadMoreForm = self.$el.find(`${self.settings.selectors.prefix}-loadMore`);
 
         $(document).on({
-            'CommentEntry:onNewComment': (event)=> {
-                if (event.prependComment && event.$comment){
+            'CommentEntry:onComment-Saved': (event)=> {
+                // exit early if this commenting instance shouldn't handle this event.
+                if (this.id !== event.commentingId) return;
+
+                if (!event.alreadyRendered && event.$comment){
                     self.renderComment(event.$comment);
                 }
 
@@ -39,7 +42,10 @@ let Commenting = {
                     self.renderTitle(event.$html.find(`${self.settings.selectors.prefix}-title`));
                 }
             },
-            'Comment:onBeforeReply': (event)=> {
+            'Comment:onReplyUI-Requested': (event)=> {
+                // exit early if this commenting instance shouldn't handle this event.
+                if (this.id !== event.commentingId) return;
+
                 if (event.$comment){
                     // before a new comment entry block is rendered, remove any existing ones
                     self.$commentingBody.find(`${self.settings.selectors.commentEntryBlock}`).each(function(){
@@ -57,7 +63,7 @@ let Commenting = {
 
         self.$expandCollapseCommentsToggles.on('click', (event)=> {
             event.preventDefault();
-            
+
             if (self.$el.find(self.settings.selectors.commentingBody).attr('data-comments-hidden') === "false") {
                 this.collapseComments();
             } else {

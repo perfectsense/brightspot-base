@@ -16,15 +16,13 @@ class Comment {
         this.$replyForm = this.$context.children(`${this.settings.selectors.commentActions}`).find(`${this.settings.selectors.prefix}-reply`);
 
         this.$replyForm.submit((event)=> {
-            event.preventDefault();
             this.$replyButton.prop('disabled', true);
-
+            event.preventDefault();
+            this.onSubmit();
             $.event.trigger({
-                type: 'Comment:onBeforeReply',
+                type: 'Comment:onReplyUI-Requested',
                 $comment: this.$context
             });
-
-            this.onSubmit();
         });
     }
 
@@ -49,10 +47,19 @@ class Comment {
         this.$context.children(`${this.settings.selectors.prefix}-replies`).prepend($commentEntry);
         this.$replyButton.prop('disabled', false);
         $commentEntry.find('textarea').focus();
+
+        $.event.trigger({
+            type: 'Comment:onReplyUI-Rendered',
+            $comment: this.$context
+        });
     }
 
     onError(data) {
-        // todo
+        $.event.trigger({
+            type: 'Comment:onReplyUI-RequestError',
+            $comment: this.$context,
+            error: data
+        });
     }
 }
 

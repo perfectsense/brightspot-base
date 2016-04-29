@@ -11,9 +11,16 @@ class CommentEntry {
             }
         }, options);
 
+        this.commentingId = this.$context.attr('data-commenting-id') ||
+                            this.$context.parents('.Commenting').attr('id');
+
         this.$form.submit((event)=> {
             event.preventDefault();
             this.onSubmit();
+            $.event.trigger({
+                type: 'CommentEntry:onComment-Submitted',
+                $comment: this.$context
+            });
         });
     }
 
@@ -40,7 +47,11 @@ class CommentEntry {
     }
 
     onError(data) {
-        // todo
+        $.event.trigger({
+            type: 'CommentEntry:onComment-RequestError',
+            $comment: this.$context,
+            error: data
+        });
     }
 
     renderResponse(data) {
@@ -51,17 +62,17 @@ class CommentEntry {
         // reset the UI
         this.reset();
 
-        // replace the entry block with the comment?
+        // replace the entry block with the comment block?
         if (replaceWithResponse){
             this.$context.replaceWith($comment);
         }
 
-        // bubble the event
         $.event.trigger({
-            type: 'CommentEntry:onNewComment',
+            type: 'CommentEntry:onComment-Saved',
+            commentingId: this.commentingId,
             $comment: $comment,
             $html: $html,
-            prependComment: !replaceWithResponse
+            alreadyRendered: replaceWithResponse
         });
     }
 
