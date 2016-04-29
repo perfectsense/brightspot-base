@@ -1,8 +1,6 @@
 {
   "_template": "community/commenting/Comment",
 
-  "isStaff": false,
-
   "author": {
     "_dataUrl": "/block/author/author.json"
   },

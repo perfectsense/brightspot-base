@@ -31,7 +31,9 @@
         ],
         "_dataUrl": "/block/commenting/comment.json",
         "id": "{{number([2,20])}}",
-        "isStaff": true
+        "extraAttributes": {
+           "data-is-staff": true
+        }
       },
       {
         "_repeat": [
