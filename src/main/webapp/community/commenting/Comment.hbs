@@ -17,40 +17,16 @@
         </section>
     {{/defineElement}}
 
-    {{#defineElement "like" noWith=true}}
-        {{#if likeButton}}
-            <form class="{{elementName}}" method="post" action="{{likeAction}}">
-                <button class="{{elementName}}-button">{{likeButton}}</button>
-            </form>
-        {{/if}}
-    {{/defineElement}}
-
-    {{#defineElement "dislike" noWith=true}}
-        {{#if dislikeButton}}
-            <form class="{{elementName}}" method="post" action="{{dislikeAction}}">
-                <button class="{{elementName}}-button">{{dislikeButton}}</button>
-            </form>
-        {{/if}}
-    {{/defineElement}}
-
     {{#defineElement "flag" noWith=true}}
-        {{#if flagButton}}
+        {{#if flagAction}}
             <form class="{{elementName}}" method="post" action="{{flagAction}}">
                 <button class="{{elementName}}-button">{{flagButton}}</button>
             </form>
         {{/if}}
     {{/defineElement}}
 
-    {{#defineElement "share" noWith=true}}
-        {{#if shareButton}}
-            <form class="{{elementName}}" method="post" action="{{shareAction}}">
-                <button class="{{elementName}}-button">{{shareButton}}</button>
-            </form>
-        {{/if}}
-    {{/defineElement}}
-
     {{#defineElement "reply" noWith=true}}
-        {{#if replyButton}}
+        {{#if replyAction}}
             <form class="{{elementName}}" method="get" action="{{replyAction}}">
                 <button class="{{elementName}}-button">{{replyButton}}</button>
             </form>
@@ -60,9 +36,6 @@
     {{#defineElement "actions" noWith=true}}
         <div class="{{elementName}}">
             {{element "flag"}}
-            {{element "share"}}
-            {{element "like"}}
-            {{element "dislike"}}
             {{element "reply"}}
         </div>
     {{/defineElement}}

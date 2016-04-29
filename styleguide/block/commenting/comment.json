@@ -19,15 +19,6 @@
   "replyButton": "reply",
   "replyAction": "/block/commenting/_comment-entry-response",
 
-  "likeButton": "like",
-  "likeAction": "/block/commenting/like",
-
-  "dislikeButton": "dislike",
-  "dislikeAction": "/block/commenting/dislike",
-
   "flagButton": "flag",
-  "flagAction": "/block/commenting/flag",
-
-  "shareButton": "share",
-  "shareAction": "/block/commenting/share"
+  "flagAction": "/block/commenting/flag"
 }
