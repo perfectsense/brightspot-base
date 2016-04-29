@@ -1,6 +1,8 @@
 {
   "_template": "community/user/UserSignIn",
+
   "title": "Sign in to post a comment",
+  
   "services": {
     "_template": "base/util/Concatenated",
     "items": [

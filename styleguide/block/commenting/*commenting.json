@@ -31,7 +31,6 @@
           3
         ],
         "_dataUrl": "/block/commenting/comment.json",
-        "parentId": "1",
         "id": "{{number([2,20])}}",
         "isStaff": true
       },
@@ -42,15 +41,6 @@
         ],
         "_dataUrl": "/block/commenting/comment.json",
         "id": "{{number([30,40])}}"
-      }
-    ]
-  },
-
-  "actions": {
-    "_template": "base/util/Concatenated",
-    "items": [
-      {
-        "_dataUrl": "/block/commenting/comment-entry.json"
       }
     ]
   },

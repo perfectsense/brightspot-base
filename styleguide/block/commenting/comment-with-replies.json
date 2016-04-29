@@ -1,6 +1,5 @@
 {
   "_template": "community/commenting/Comment",
-  "id": "123abc",
 
   "author": {
     "_dataUrl": "/block/author/author.json"
@@ -20,8 +19,7 @@
   "replies": [
       {
           "_repeat": [1,3],
-          "_dataUrl": "/block/commenting/comment.json",
-          "id": "123abc-child"
+          "_dataUrl": "/block/commenting/comment.json"
       }
   ],
 

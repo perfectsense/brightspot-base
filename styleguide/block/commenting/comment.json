@@ -1,8 +1,7 @@
 {
   "_template": "community/commenting/Comment",
-  "id": "sdf43235dwf3dsfsd4",
   "isStaff": false,
-  
+
   "author": {
     "_dataUrl": "/block/author/author.json"
   },
