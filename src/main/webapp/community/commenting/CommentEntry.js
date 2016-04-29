@@ -17,10 +17,7 @@ class CommentEntry {
         this.$form.submit((event)=> {
             event.preventDefault();
             this.onSubmit();
-            $.event.trigger({
-                type: 'CommentEntry:onComment-Submitted',
-                $comment: this.$context
-            });
+            this.$context.trigger('CommentEntry:onSubmitComment');
         });
     }
 
@@ -47,11 +44,7 @@ class CommentEntry {
     }
 
     onError(data) {
-        $.event.trigger({
-            type: 'CommentEntry:onComment-RequestError',
-            $comment: this.$context,
-            error: data
-        });
+        this.$context.trigger('CommentEntry:onSubmitCommentError', { error: data });
     }
 
     renderResponse(data) {
@@ -71,8 +64,7 @@ class CommentEntry {
             this.$context.replaceWith($comment);
         }
 
-        $.event.trigger({
-            type: 'CommentEntry:onComment-Saved',
+        this.$context.trigger('CommentEntry:onSubmitCommentSuccess', {
             commentingId: this.commentingId,
             $comment: $comment,
             $html: $html,

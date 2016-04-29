@@ -3,7 +3,7 @@ import bspUtils from 'bsp-utils';
 
 let Commenting = {
     defaults: {
-        expandComments: false,
+        hideComments: true,
 
         selectors: {
             prefix: ".Commenting",
@@ -24,29 +24,29 @@ let Commenting = {
         self.settings = $.extend({}, self.defaults, options);
         self.id = self.$el.attr('id');
         self.$commentingBody = self.$el.find(self.settings.selectors.commentingBody);
-        self.$expandCollapseCommentsToggles = self.$el.find(`${self.settings.selectors.prefix}-hideToggle-showButton, ${self.settings.selectors.prefix}-hideToggle-hideButton`);
-        self.$expandCommentsToggles = self.$el.find(`${self.settings.selectors.prefix}-hideToggle-showButton`);
-        self.$collapseCommentsToggles = self.$el.find(`${self.settings.selectors.prefix}-hideToggle-hideButton`);
+        self.$hideShowCommentsToggles = self.$el.find(`${self.settings.selectors.prefix}-hideToggle-showButton, ${self.settings.selectors.prefix}-hideToggle-hideButton`);
+        self.$showCommentsToggle = self.$el.find(`${self.settings.selectors.prefix}-hideToggle-showButton`);
+        self.$hideCommentsToggle = self.$el.find(`${self.settings.selectors.prefix}-hideToggle-hideButton`);
         self.$loadMoreForm = self.$el.find(`${self.settings.selectors.prefix}-loadMore`);
 
-        $(document).on({
-            'CommentEntry:onComment-Saved': (event)=> {
+        self.$el.on({
+            'CommentEntry:onSubmitCommentSuccess': (event, data)=> {
                 // exit early if this commenting instance shouldn't handle this event.
-                if (this.id !== event.commentingId) return;
+                if (!data || self.id !== data.commentingId) return;
 
-                if (!event.alreadyRendered && event.$comment){
-                    self.renderComment(event.$comment);
+                if (!data.alreadyRendered && data.$comment){
+                    self.renderComment(data.$comment);
                 }
 
-                if (event.$html){
-                    self.renderTitle(event.$html.find(`${self.settings.selectors.prefix}-title`));
+                if (data.$html){
+                    self.renderTitle(data.$html.find(`${self.settings.selectors.prefix}-title`));
                 }
             },
-            'Comment:onReplyUI-Requested': (event)=> {
+            'Comment:onRequestReplyUI': (event, data)=> {
                 // exit early if this commenting instance shouldn't handle this event.
-                if (this.id !== event.commentingId) return;
+                if (!data || self.id !== data.commentingId) return;
 
-                if (event.$comment){
+                if (data.$comment){
                     // before a new comment entry block is rendered, remove any existing ones
                     self.$commentingBody.find(`${self.settings.selectors.commentEntryBlock}`).each(function(){
                         $(this).data('bsp-community-commentEntry').remove();
@@ -55,29 +55,25 @@ let Commenting = {
             }
         });
 
-        if (self.settings.expandComments) {
-            this.expandComments();
+        if (self.settings.hideComments) {
+            this.hideComments();
         } else {
-            this.collapseComments();
+            this.showComments();
         }
 
-        self.$expandCollapseCommentsToggles.on('click', (event)=> {
+        self.$hideShowCommentsToggles.on('click', (event)=> {
             event.preventDefault();
 
             if (self.$el.find(self.settings.selectors.commentingBody).attr('data-comments-hidden') === "false") {
-                this.collapseComments();
+                this.hideComments();
             } else {
-                this.expandComments();
+                this.showComments();
             }
         });
 
         self.$loadMoreForm.submit((event)=> {
             event.preventDefault();
-
-            $.event.trigger({
-                type: 'Comment:onBeforeLoadMore'
-            });
-
+            self.$el.trigger('Commenting:onRequestLoadMore');
             this.loadMore();
         });
 
@@ -98,14 +94,19 @@ let Commenting = {
         })
         .done((response)=> {
             this.$loadMoreForm.empty();
-            this.renderResponse(response);
+            this.renderMoreComments(response);
+            this.$el.trigger('Commenting:onRequestLoadMoreSuccess');
         })
         .fail((data)=> {
             this.onError(data);
         });
     },
 
-    renderResponse(data) {
+    onError(data) {
+        self.$el.trigger('Commenting:onRequestLoadMoreError');
+    },
+
+    renderMoreComments(data) {
         let $html = $(data);
         let $comments = $html.find(this.settings.selectors.commentBlock);
         let $loadMoreButton = $html.find('.Commenting-loadMore-button');
@@ -120,16 +121,24 @@ let Commenting = {
         this.$commentingBody.append($comments);
     },
 
-    expandComments() {
-        this.$expandCommentsToggles.prop('disabled', true);
-        this.$collapseCommentsToggles.prop('disabled', false);
+    showComments() {
+        this.$el.trigger('Commenting:onBeforeShowComments');
+
+        this.$showCommentsToggle.prop('disabled', true);
+        this.$hideCommentsToggle.prop('disabled', false);
         this.$commentingBody.attr('data-comments-hidden', false);
+
+        this.$el.trigger('Commenting:onAfterShowComments');
     },
 
-    collapseComments() {
-        this.$collapseCommentsToggles.prop('disabled', true);
-        this.$expandCommentsToggles.prop('disabled', false);
+    hideComments() {
+        this.$el.trigger('Commenting:onBeforeHideComments');
+
+        this.$hideCommentsToggle.prop('disabled', true);
+        this.$showCommentsToggle.prop('disabled', false);
         this.$commentingBody.attr('data-comments-hidden', true);
+
+        this.$el.trigger('Commenting:onAfterHideComments');
     },
 
     showBlankCommentError($block) {
