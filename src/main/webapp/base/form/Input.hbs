@@ -2,7 +2,7 @@
 
     {{#defineElement "input" noWith=true}}
         <input id="{{id}}"
-            type="text"
+            type="{{#if type}}{{type}}{{else}}text{{/if}}"
             name="{{elementName}}"
             class="{{elementName}}"
             {{#with placeholder}}placeholder="{{this}}"{{/with}}
