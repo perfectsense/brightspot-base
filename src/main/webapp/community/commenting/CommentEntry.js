@@ -36,7 +36,7 @@ class CommentEntry {
             data: this.$form.serialize()
         })
         .done((response)=> {
-            this.renderResponse(response);
+            this.renderComment(response);
         })
         .fail((data)=> {
             this.onError(data);
@@ -47,7 +47,7 @@ class CommentEntry {
         this.$context.trigger('CommentEntry:onSubmitCommentError', { error: data });
     }
 
-    renderResponse(data) {
+    renderComment(data) {
         let $html = $(data);
         let $comment = $html.find(this.settings.selectors.commentBlock);
 

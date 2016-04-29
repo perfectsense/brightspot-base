@@ -1,0 +1,8 @@
+{
+  "_wrapper": false,
+  "_template": "community/user/UserSignInResponse",
+
+  "signIn": {
+    "_dataUrl": "/block/user/sign-in.json"
+  }
+}

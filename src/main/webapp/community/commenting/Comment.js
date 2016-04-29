@@ -8,7 +8,8 @@ class Comment {
             selectors: {
                 prefix: '.Comment',
                 commentActions: '.Comment-actions',
-                commentEntryBlock: '.CommentEntry'
+                commentEntryBlock: '.CommentEntry',
+                signInBlock: '.UserSignIn'
             }
         }, options);
 
@@ -24,27 +25,41 @@ class Comment {
     }
 
     onSubmit() {
-        $.ajax({
+        let req = $.ajax({
             url: this.$replyForm.attr('action'),
             method: this.settings.ajaxMethod,
             data: this.$replyForm.serialize()
         })
         .done((response)=> {
-            this.renderResponse(response);
+            let $html = $(response);
+            let $commentEntry = $html.find(this.settings.selectors.commentEntryBlocks);
+            let $signIn = $html.find(this.settings.selectors.signInBlocks);
+
+            if ($commentEntry.length > 0){
+                this.renderCommentEntry($commentEntry);
+            }
+            else if ($signIn.length > 0) {
+                this.renderSignIn($signIn);
+            }
+            else {
+                this.onError();
+            }
         })
         .fail((data)=> {
             this.onError(data);
         });
     }
 
-    renderResponse(data) {
-        let $html = $(data);
-        let $commentEntry = $html.find(this.settings.selectors.commentEntryBlock);
-
-        this.$context.children(`${this.settings.selectors.prefix}-replies`).prepend($commentEntry);
+    renderCommentEntry($html) {
+        this.$context.children(`${this.settings.selectors.prefix}-replies`).prepend($html);
         this.$replyButton.prop('disabled', false);
-        $commentEntry.find('textarea').focus();
+        $html.find('textarea').focus();
+        this.$context.trigger('Comment:onRequestReplyUISuccess');
+    }
 
+    renderSignIn($html) {
+        this.$context.children(`${this.settings.selectors.prefix}-replies`).prepend($html);
+        this.$replyButton.prop('disabled', false);
         this.$context.trigger('Comment:onRequestReplyUISuccess');
     }
 

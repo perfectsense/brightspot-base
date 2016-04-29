@@ -1,0 +1,34 @@
+{
+  "_template": "community/commenting/Commenting",
+
+  "id": "324kldsjlj34",
+  "hideComments": true,
+  "textWhenHidden": "View Comments",
+  "textWhenVisible": "Hide Comments",
+  "title": "30 Comments",
+
+  "loadMoreButton": "Show More",
+  "loadMoreAction": "/block/commenting/_loadMore-response",
+
+  "commentEntry": {
+      "_dataUrl": "/block/user/sign-in.json"
+  },
+
+  "body": {
+    "_template": "base/util/Concatenated",
+    "items": [
+      {
+        "_repeat": [
+          1,
+          3
+        ],
+        "_dataUrl": "/block/commenting/comment.json",
+        "replyAction": "/block/commenting/_unauthenticated-response"
+      }
+    ]
+  },
+
+  "extraAttributes": {
+    "data-bsp-community-commenting-ajaxMethod": "GET"
+  }
+}

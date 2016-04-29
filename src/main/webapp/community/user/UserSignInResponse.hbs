@@ -1,0 +1,15 @@
+{{#defineBlock "UserSignInResponse"}}
+
+    {{#defineElement "signIn"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}">
+            {{#defineBlockBody}}
+                {{element "signIn"}}
+            {{/defineBlockBody}}
+        </div>
+    {{/defineBlockContainer}}
+
+{{/defineBlock}}
