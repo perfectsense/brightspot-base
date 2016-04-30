@@ -59,17 +59,17 @@ class CommentEntry {
         // reset the UI
         this.reset();
 
-        // replace the entry block with the comment block?
-        if (replaceWithResponse){
-            this.$context.replaceWith($comment);
-        }
-
         this.$context.trigger('CommentEntry:onSubmitCommentSuccess', {
             commentingId: this.commentingId,
             $comment: $comment,
             $html: $html,
             alreadyRendered: replaceWithResponse
         });
+
+        // replace the entry block with the comment block?
+        if (replaceWithResponse){
+            this.$context.replaceWith($comment);
+        }
     }
 
     reset() {

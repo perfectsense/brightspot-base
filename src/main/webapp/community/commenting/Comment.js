@@ -18,7 +18,7 @@ class Comment {
 
         this.$replyForm.submit((event)=> {
             event.preventDefault();
-            this.$replyButton.prop('disabled', true);
+            this.disableReply();
             this.onSubmit();
             this.$context.trigger('Comment:onRequestReplyUI');
         });
@@ -52,7 +52,6 @@ class Comment {
 
     renderCommentEntry($html) {
         this.$context.children(`${this.settings.selectors.prefix}-replies`).prepend($html);
-        this.$replyButton.prop('disabled', false);
         $html.find('textarea').focus();
         this.$context.trigger('Comment:onRequestReplyUISuccess');
     }
@@ -64,6 +63,14 @@ class Comment {
 
     onError(data) {
         this.$context.trigger('Comment:onRequestReplyUIError', { error: data });
+    }
+
+    disableReply() {
+        this.$replyButton.prop('disabled', true);
+    }
+
+    enableReply() {
+        this.$replyButton.prop('disabled', false);
     }
 }
 
