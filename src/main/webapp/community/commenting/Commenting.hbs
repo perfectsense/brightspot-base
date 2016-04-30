@@ -4,10 +4,12 @@
     {{/defineElement}}
 
     {{#defineElement "hideToggle" noWith=true}}
-        <div class="{{elementName}}">
-            <button class="{{elementName}}-hideButton">{{textWhenVisible}}</button>
-            <button class="{{elementName}}-showButton">{{textWhenHidden}}</button>
-        </div>
+        {{#if textWhenVisible}}
+            <div class="{{elementName}}">
+                <button class="{{elementName}}-hideButton">{{textWhenVisible}}</button>
+                <button class="{{elementName}}-showButton">{{textWhenHidden}}</button>
+            </div>
+        {{/if}}
     {{/defineElement}}
 
     {{#defineElement "loadMore" noWith=true}}
