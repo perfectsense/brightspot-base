@@ -32,8 +32,8 @@ class Comment {
         })
         .done((response)=> {
             let $html = $(response);
-            let $commentEntry = $html.find(this.settings.selectors.commentEntryBlocks);
-            let $signIn = $html.find(this.settings.selectors.signInBlocks);
+            let $commentEntry = $html.find(this.settings.selectors.commentEntryBlock);
+            let $signIn = $html.find(this.settings.selectors.signInBlock);
 
             if ($commentEntry.length > 0){
                 this.renderCommentEntry($commentEntry);
@@ -59,7 +59,6 @@ class Comment {
 
     renderSignIn($html) {
         this.$context.children(`${this.settings.selectors.prefix}-replies`).prepend($html);
-        this.$replyButton.prop('disabled', false);
         this.$context.trigger('Comment:onRequestReplyUISuccess');
     }
 
