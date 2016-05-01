@@ -65,7 +65,7 @@ class CommentEntry {
         this.$context.trigger('CommentEntry:onSubmitCommentSuccess', {
             commentingId: this.commentingId,
             $comment: $comment,
-            $html: $html,
+            $title: $html,
             alreadyRendered: replaceWithResponse
         });
 

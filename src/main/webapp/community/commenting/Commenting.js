@@ -30,18 +30,19 @@ let Commenting = {
                 // exit early if this commenting instance shouldn't handle this event.
                 if (!data || self.id !== data.commentingId) return;
 
-                self.$el.find('.Comment-reply-button[disabled]').parents(`${self.settings.selectors.commentBlock}`).each(function(){
-                    $(this).data('bsp-community-comment').enableReply();
-                })
-
                 // comment wasn't previously rendered?
                 if (!data.alreadyRendered && data.$comment){
                     self.renderComment(data.$comment);
                 }
 
-                if (data.$html){
-                    self.renderTitle(data.$html.find(`${self.settings.selectors.prefix}-title`));
+                if (data.$title){
+                    self.renderTitle(data.$title.find(`${self.settings.selectors.prefix}-title`));
                 }
+
+                // re-enable any disabled reply
+                self.$el.find('.Comment-reply-button[disabled]').parents(`${self.settings.selectors.commentBlock}`).each(function(){
+                    $(this).data('bsp-community-comment').enableReply();
+                })
             },
             'Comment:onRequestReplyUI': (event, data)=> {
                 // exit early if this commenting instance shouldn't handle this event.
