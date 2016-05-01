@@ -35,6 +35,10 @@
         </div>
     {{/defineElement}}
 
+    {{#defineElement "validation"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
     {{#defineBlockContainer}}
         <div class="{{blockName}}"
             id="{{id}}"
@@ -45,6 +49,7 @@
                 {{element "commentEntry"}}
                 {{element "body"}}
                 {{element "actions"}}
+                {{element "validation"}}
             {{/defineBlockBody}}
         </div>
     {{/defineBlockContainer}}

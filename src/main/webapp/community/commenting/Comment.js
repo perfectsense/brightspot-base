@@ -9,7 +9,8 @@ class Comment {
                 prefix: '.Comment',
                 commentActions: '.Comment-actions',
                 commentEntryBlock: '.CommentEntry',
-                signInBlock: '.UserSignIn'
+                signInBlock: '.UserSignIn',
+                validationBlock: '.ValidationMessages'
             }
         }, options);
 
@@ -46,7 +47,7 @@ class Comment {
             }
         })
         .fail((data)=> {
-            this.onError(data);
+            this.onRequestError(data);
         });
     }
 
@@ -61,7 +62,9 @@ class Comment {
         this.$context.trigger('Comment:onRequestReplyUISuccess');
     }
 
-    onError(data) {
+    onRequestError(data) {
+        let $errorMessage = this.$context.find(`${this.settings.selectors.validationBlock}-serverError`);
+        $errorMessage.attr('data-visible', '');
         this.$context.trigger('Comment:onRequestReplyUIError', { error: data });
     }
 

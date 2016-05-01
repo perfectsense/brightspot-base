@@ -16,6 +16,14 @@
     "html": "{{paragraphs(1)}}"
   },
 
+  "validation": {
+    "_template": "base/form/ValidationMessages",
+    "serverError": {
+      "_template": "base/util/RawHtml",
+      "html": "Sorry! Something went wrong on our end. Please try again later."
+    }
+  },
+
   "replyButton": "reply",
   "replyAction": "/block/commenting/_comment-entry-response",
 

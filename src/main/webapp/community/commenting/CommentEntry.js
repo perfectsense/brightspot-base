@@ -7,7 +7,8 @@ class CommentEntry {
         this.settings = $.extend({}, {
             selectors: {
                 prefix: '.CommentEntry',
-                commentBlock: '.Comment'
+                commentBlock: '.Comment',
+                validationBlock: '.ValidationMessages'
             }
         }, options);
 
@@ -39,11 +40,13 @@ class CommentEntry {
             this.renderComment(response);
         })
         .fail((data)=> {
-            this.onError(data);
+            this.onRequestError(data);
         });
     }
 
-    onError(data) {
+    onRequestError(data) {
+        let $errorMessage = this.$context.find(`${this.settings.selectors.validationBlock}-serverError`);
+        $errorMessage.attr('data-visible', '');
         this.$context.trigger('CommentEntry:onSubmitCommentError', { error: data });
     }
 

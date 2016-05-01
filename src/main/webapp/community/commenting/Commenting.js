@@ -10,11 +10,7 @@ let Commenting = {
             commentingBody: ".Commenting-body",
             commentEntryBlock: ".CommentEntry",
             commentBlock: ".Comment",
-
-            // deprecating...
-            commentValidationCommentTooLongMessage: ".ValidationMessages-tooLong",
-            commentValidationCommentBlankMessage: ".ValidationMessages-blank",
-            commentValidationServerErrorMessage: ".ValidationMessages-serverError"
+            validationBlock: '.ValidationMessages'
         }
     },
 
@@ -38,6 +34,7 @@ let Commenting = {
                     $(this).data('bsp-community-comment').enableReply();
                 })
 
+                // comment wasn't previously rendered?
                 if (!data.alreadyRendered && data.$comment){
                     self.renderComment(data.$comment);
                 }
@@ -80,7 +77,6 @@ let Commenting = {
             self.$el.trigger('Commenting:onRequestLoadMore');
             this.loadMore();
         });
-
     },
 
     renderTitle($title) {
@@ -102,12 +98,10 @@ let Commenting = {
             this.$el.trigger('Commenting:onRequestLoadMoreSuccess');
         })
         .fail((data)=> {
-            this.onError(data);
+            let $errorMessage = this.$el.find(`${this.settings.selectors.prefix}-validation ${this.settings.selectors.validationBlock}-serverError`);
+            $errorMessage.attr('data-visible', '');
+            this.$el.trigger('Commenting:onRequestLoadMoreError', { data: data });
         });
-    },
-
-    onError(data) {
-        self.$el.trigger('Commenting:onRequestLoadMoreError');
     },
 
     renderMoreComments(data) {
@@ -143,32 +137,6 @@ let Commenting = {
         this.$commentingBody.attr('data-comments-shown', false);
 
         this.$el.trigger('Commenting:onAfterHideComments');
-    },
-
-    showBlankCommentError($block) {
-        $block.find(this.settings.selectors.commentValidationCommentBlankMessage).attr('data-visible', '');
-    },
-
-    showServerError($block) {
-        $block.find(this.settings.selectors.commentValidationServerErrorMessage).attr('data-visible', '');
-    },
-
-    hideValidationMessages($context) {
-        $context.find(this.settings.selectors.commentValidationServerErrorMessage).removeAttr('data-visible');
-        $context.find(this.settings.selectors.commentValidationCommentBlankMessage).removeAttr('data-visible');
-        $context.find(this.settings.selectors.commentValidationCommentTooLongMessage).removeAttr('data-visible');
-    },
-
-    validateInput($input) {
-        if (!$input || $input.length <= 0) return false;
-        let $block = $input.parents(this.settings.selectors.commentEntryBlock);
-        let value = $input.val();
-        if (value === "") {
-            this.showBlankCommentError($block);
-            return false;
-        }
-        this.hideValidationMessages($block);
-        return true;
     }
 }
 
