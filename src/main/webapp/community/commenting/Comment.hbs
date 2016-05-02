@@ -17,14 +17,6 @@
         </section>
     {{/defineElement}}
 
-    {{#defineElement "flag" noWith=true}}
-        {{#if flagAction}}
-            <form class="{{elementName}}" method="post" action="{{flagAction}}">
-                <button class="{{elementName}}-button">{{flagButton}}</button>
-            </form>
-        {{/if}}
-    {{/defineElement}}
-
     {{#defineElement "reply" noWith=true}}
         {{#if replyAction}}
             <form class="{{elementName}}" method="get" action="{{replyAction}}">
@@ -35,7 +27,6 @@
 
     {{#defineElement "actions" noWith=true}}
         <div class="{{elementName}}">
-            {{element "flag"}}
             {{element "reply"}}
         </div>
     {{/defineElement}}
