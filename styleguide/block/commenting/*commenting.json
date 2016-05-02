@@ -2,7 +2,6 @@
   "_template": "community/commenting/Commenting",
 
   "id": "324kldsjlj34",
-  "showComments": true,
   "textWhenHidden": "View Comments",
   "textWhenVisible": "Hide Comments",
   "title": "30 Comments",

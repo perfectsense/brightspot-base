@@ -26,6 +26,7 @@ let Commenting = {
 
         this.$showCommentsToggle.prop('disabled', self.settings.showComments);
         this.$hideCommentsToggle.prop('disabled', !self.settings.showComments);
+        this.$loadMoreForm.attr('data-visible', self.settings.showComments);
         this.$commentingBody.attr('data-comments-shown', self.settings.showComments);
 
         self.$showCommentsToggle.on('click', (event)=> {
@@ -92,7 +93,6 @@ let Commenting = {
         .done((response)=> {
             this.$loadMoreForm.empty();
             this.renderComments(response);
-            this.showComments();
             this.$el.trigger('Commenting:onRequestLoadMoreSuccess');
         })
         .fail((data)=> {
@@ -123,6 +123,7 @@ let Commenting = {
         this.$showCommentsToggle.prop('disabled', true);
         this.$hideCommentsToggle.prop('disabled', false);
         this.$commentingBody.attr('data-comments-shown', true);
+        this.$el.find(`${this.settings.selectors.prefix}-loadMore`).attr('data-visible', true);
 
         this.$el.trigger('Commenting:onAfterShowComments');
     },
@@ -133,6 +134,7 @@ let Commenting = {
         this.$hideCommentsToggle.prop('disabled', true);
         this.$showCommentsToggle.prop('disabled', false);
         this.$commentingBody.attr('data-comments-shown', false);
+        this.$el.find(`${this.settings.selectors.prefix}-loadMore`).attr('data-visible', false);
 
         this.$el.trigger('Commenting:onAfterHideComments');
     }
