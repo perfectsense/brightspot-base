@@ -4,7 +4,11 @@ import TextInput from './TextInput.js';
 
 class TextAreaInput extends TextInput {
     constructor($el, options) {
-        super($el, {prefix: '.TextAreaInput'});
+        super($el, {
+            selectors: {
+                prefix: '.TextAreaInput'
+            }
+        });
 
         this.$input.on('keypress', (e)=> {
             this.onKeyPress(e);

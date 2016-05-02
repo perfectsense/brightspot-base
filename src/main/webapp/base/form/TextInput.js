@@ -4,16 +4,20 @@ import bspUtils from 'bsp-utils';
 export default class TextInput {
 
     constructor($context, options) {
-        this.selectors = $.extend({}, {
-            prefix: '.TextInput',
-            characterCountdown: 'characterCountdown'
+        this.settings = $.extend({}, {
+            countdown: true,
+            selectors: {
+                prefix: '.TextInput'
+            }
         }, options);
 
         this.$context = $context;
 
-        this.$input.on('keyup', (e)=> {
-            this.onKeyUp(e);
-        });
+        if (this.settings.countdown){
+            this.$input.on('keyup', (e)=> {
+                this.onKeyUp(e);
+            });
+        }
     }
 
     get $input() {
@@ -21,7 +25,7 @@ export default class TextInput {
     }
 
     get $countDown() {
-        return this.$context.find(`${this.selectors.prefix}-${this.selectors.characterCountdown}`);
+        return this.$context.find(`${this.settings.selectors.prefix}-characterCountdown`);
     }
 
     get previousLength() {

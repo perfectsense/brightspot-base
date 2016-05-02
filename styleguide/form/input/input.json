@@ -1,0 +1,10 @@
+{
+    "_template": "base/form/input",
+
+    "id": "{{number}}",
+    "name": "foo",
+    "placeholder": "Type here",
+    "autofocus": true,
+    "maxlength": 100,
+    "required": true
+}
