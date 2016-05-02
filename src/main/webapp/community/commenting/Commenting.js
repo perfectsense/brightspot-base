@@ -7,7 +7,6 @@ let Commenting = {
 
         selectors: {
             prefix: ".Commenting",
-            commentingBody: ".Commenting-body",
             commentEntryBlock: ".CommentEntry",
             commentBlock: ".Comment",
             validationBlock: '.ValidationMessages'
@@ -19,7 +18,7 @@ let Commenting = {
         self.$el = $el;
         self.settings = $.extend({}, self.defaults, options);
         self.id = self.$el.attr('id');
-        self.$commentingBody = self.$el.find(self.settings.selectors.commentingBody);
+        self.$commentingBody = self.$el.find(`${self.settings.selectors.prefix}-body`);
         self.$hideShowCommentsToggles = self.$el.find(`${self.settings.selectors.prefix}-hideToggle-showButton, ${self.settings.selectors.prefix}-hideToggle-hideButton`);
         self.$showCommentsToggle = self.$el.find(`${self.settings.selectors.prefix}-hideToggle-showButton`);
         self.$hideCommentsToggle = self.$el.find(`${self.settings.selectors.prefix}-hideToggle-hideButton`);
@@ -48,12 +47,10 @@ let Commenting = {
                 // exit early if this commenting instance shouldn't handle this event.
                 if (!data || self.id !== data.commentingId) return;
 
-                if (data.$comment){
-                    // before a new comment entry block is rendered, remove any existing ones
-                    self.$commentingBody.find(`${self.settings.selectors.commentEntryBlock}`).each(function(){
-                        $(this).data('bsp-community-commentEntry').remove();
-                    });
-                }
+                // before a new comment entry block is rendered, remove any existing ones
+                self.$commentingBody.find(`${self.settings.selectors.commentEntryBlock}`).each(function(){
+                    $(this).data('bsp-community-commentEntry').remove();
+                });
             }
         });
 
@@ -66,7 +63,7 @@ let Commenting = {
         self.$hideShowCommentsToggles.on('click', (event)=> {
             event.preventDefault();
 
-            if (self.$el.find(self.settings.selectors.commentingBody).attr('data-comments-shown') === "true") {
+            if (self.$el.find(`${self.settings.selectors.prefix}-body`).attr('data-comments-shown') === "true") {
                 this.hideComments();
             } else {
                 this.showComments();

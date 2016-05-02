@@ -7,21 +7,25 @@ class Comment {
         this.settings = $.extend({}, {
             selectors: {
                 prefix: '.Comment',
-                commentActions: '.Comment-actions',
                 commentEntryBlock: '.CommentEntry',
                 signInBlock: '.UserSignIn',
                 validationBlock: '.ValidationMessages'
             }
         }, options);
 
-        this.$replyButton = this.$context.children(`${this.settings.selectors.commentActions}`).find(`${this.settings.selectors.prefix}-reply-button`);
-        this.$replyForm = this.$context.children(`${this.settings.selectors.commentActions}`).find(`${this.settings.selectors.prefix}-reply`);
+        this.commentingId = this.$context.attr('data-commenting-id') ||
+                            this.$context.parents('.Commenting').attr('id');
+
+        this.$replyButton = this.$context.children(`${this.settings.selectors.prefix}-actions`).find(`${this.settings.selectors.prefix}-reply-button`);
+        this.$replyForm = this.$context.children(`${this.settings.selectors.prefix}-actions`).find(`${this.settings.selectors.prefix}-reply`);
 
         this.$replyForm.submit((event)=> {
             event.preventDefault();
             this.disableReply();
             this.onSubmit();
-            this.$context.trigger('Comment:onRequestReplyUI');
+            this.$context.trigger('Comment:onRequestReplyUI', {
+                commentingId: this.commentingId
+            });
         });
     }
 
@@ -54,7 +58,10 @@ class Comment {
     renderCommentEntry($html) {
         this.$context.children(`${this.settings.selectors.prefix}-replies`).prepend($html);
         $html.find('textarea').focus();
-        this.$context.trigger('Comment:onRequestReplyUISuccess');
+        this.$context.trigger('Comment:onRequestReplyUISuccess', {
+            commentingId: this.commentingId,
+            $comment: this.$context
+        });
     }
 
     renderSignIn($html) {
