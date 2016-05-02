@@ -24,6 +24,26 @@ let Commenting = {
         self.$hideCommentsToggle = self.$el.find(`${self.settings.selectors.prefix}-hideToggle-hideButton`);
         self.$loadMoreForm = self.$el.find(`${self.settings.selectors.prefix}-loadMore`);
 
+        this.$showCommentsToggle.prop('disabled', self.settings.showComments);
+        this.$hideCommentsToggle.prop('disabled', !self.settings.showComments);
+        this.$commentingBody.attr('data-comments-shown', self.settings.showComments);
+
+        self.$showCommentsToggle.on('click', (event)=> {
+            event.preventDefault();
+            this.showComments();
+        });
+
+        self.$hideCommentsToggle.on('click', (event)=> {
+            event.preventDefault();
+            this.hideComments();
+        });
+
+        self.$loadMoreForm.submit((event)=> {
+            event.preventDefault();
+            self.$el.trigger('Commenting:onRequestLoadMore');
+            this.loadMore();
+        });
+
         self.$el.on({
             'CommentEntry:onSubmitCommentSuccess': (event, data)=> {
                 // exit early if this commenting instance shouldn't handle this event.
@@ -53,28 +73,6 @@ let Commenting = {
                 });
             }
         });
-
-        if (self.settings.showComments) {
-            this.showComments();
-        } else {
-            this.hideComments();
-        }
-
-        self.$hideShowCommentsToggles.on('click', (event)=> {
-            event.preventDefault();
-
-            if (self.$el.find(`${self.settings.selectors.prefix}-body`).attr('data-comments-shown') === "true") {
-                this.hideComments();
-            } else {
-                this.showComments();
-            }
-        });
-
-        self.$loadMoreForm.submit((event)=> {
-            event.preventDefault();
-            self.$el.trigger('Commenting:onRequestLoadMore');
-            this.loadMore();
-        });
     },
 
     renderTitle($title) {
@@ -82,6 +80,7 @@ let Commenting = {
     },
 
     renderComment($comment) {
+        this.showComments();
         this.$commentingBody.prepend($comment);
     },
 
@@ -92,7 +91,8 @@ let Commenting = {
         })
         .done((response)=> {
             this.$loadMoreForm.empty();
-            this.renderMoreComments(response);
+            this.renderComments(response);
+            this.showComments();
             this.$el.trigger('Commenting:onRequestLoadMoreSuccess');
         })
         .fail((data)=> {
@@ -102,7 +102,7 @@ let Commenting = {
         });
     },
 
-    renderMoreComments(data) {
+    renderComments(data) {
         let $html = $(data);
         let $comments = $html.find(this.settings.selectors.commentBlock);
         let $loadMoreButton = $html.find('.Commenting-loadMore-button');
