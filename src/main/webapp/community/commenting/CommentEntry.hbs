@@ -7,12 +7,8 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "logout" noWith=true}}
-        {{#if logoutAction}}
-            <form class="{{elementName}}" action="{{logoutAction}}">
-                <button class="{{elementName}}-button">{{logoutButton}}</button>
-            </form>
-        {{/if}}
+    {{#defineElement "logout"}}
+        <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
     {{#defineElement "input" noWith=true}}

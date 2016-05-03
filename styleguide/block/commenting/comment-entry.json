@@ -11,8 +11,12 @@
 
   "title": "{{name}}",
 
-  "logoutButton": "Logout",
-  "logoutAction": "/block/user/_logout-response",
+  "logout": {
+    "_template": "community/user/UserSignOut",
+    "button": "Logout",
+    "action": "/block/user/_logout-response",
+    "target": "_blank"
+  },
 
   "input": {
     "_template": "base/form/TextAreaInput",
