@@ -88,7 +88,7 @@ let Commenting = {
     loadMore() {
         $.ajax({
             url: this.$loadMoreForm.attr('action'),
-            method: this.settings.ajaxMethod
+            method: this.$loadMoreForm.attr('method')
         })
         .done((response)=> {
             this.$loadMoreForm.empty();

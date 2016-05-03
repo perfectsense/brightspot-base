@@ -25,9 +25,5 @@
         "replyAction": "/block/commenting/_unauthenticated-response"
       }
     ]
-  },
-
-  "extraAttributes": {
-    "data-bsp-community-commenting-ajaxMethod": "GET"
   }
 }

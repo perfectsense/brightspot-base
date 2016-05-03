@@ -51,9 +51,5 @@
       "_template": "base/util/RawHtml",
       "html": "Sorry! Something went wrong on our end. Please try again later."
     }
-  },
-
-  "extraAttributes": {
-    "data-bsp-community-commenting-ajaxMethod": "GET"
   }
 }

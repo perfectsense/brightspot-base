@@ -14,7 +14,7 @@
 
     {{#defineElement "loadMore" noWith=true}}
         {{#if loadMoreAction}}
-            <form class="{{elementName}}" action="{{loadMoreAction}}">
+            <form class="{{elementName}}" method="get" action="{{loadMoreAction}}">
                 <button class="{{elementName}}-button">{{loadMoreButton}}</button>
             </form>
         {{/if}}

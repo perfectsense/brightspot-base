@@ -32,7 +32,7 @@ class Comment {
     onSubmit() {
         let req = $.ajax({
             url: this.$replyForm.attr('action'),
-            method: this.settings.ajaxMethod,
+            method: this.$replyForm.attr('method'),
             data: this.$replyForm.serialize()
         })
         .done((response)=> {

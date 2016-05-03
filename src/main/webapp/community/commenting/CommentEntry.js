@@ -33,7 +33,7 @@ class CommentEntry {
     onSubmit() {
         $.ajax({
             url: this.$form.attr('action'),
-            method: this.settings.ajaxMethod,
+            method: this.$form.attr('method'),
             data: this.$form.serialize()
         })
         .done((response)=> {
