@@ -16,6 +16,8 @@
     "html": "{{paragraphs(1)}}"
   },
 
+  "replies": [ ],
+
   "validation": {
     "_template": "base/form/ValidationMessages",
     "serverError": {

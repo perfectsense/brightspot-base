@@ -55,11 +55,12 @@ let Commenting = {
                     self.renderComment(data.$comment);
                 }
 
+                // update the title?
                 if (data.$title){
-                    self.renderTitle(data.$title.find(`${self.settings.selectors.prefix}-title`));
+                    self.renderTitle(data.$title);
                 }
 
-                // re-enable any disabled reply
+                // re-enable any disabled reply buttons
                 self.$el.find('.Comment-reply-button[disabled]').parents(`${self.settings.selectors.commentBlock}`).each(function(){
                     $(this).data('bsp-community-comment').enableReply();
                 })
@@ -91,7 +92,7 @@ let Commenting = {
             method: this.$loadMoreForm.attr('method')
         })
         .done((response)=> {
-            this.$loadMoreForm.empty();
+            this.reset();
             this.renderComments(response);
             this.$el.trigger('Commenting:onRequestLoadMoreSuccess');
         })
@@ -137,6 +138,11 @@ let Commenting = {
         this.$el.find(`${this.settings.selectors.prefix}-loadMore`).attr('data-visible', false);
 
         this.$el.trigger('Commenting:onAfterHideComments');
+    },
+
+    reset() {
+        this.$loadMoreForm.empty();
+        this.$el.find(`${this.settings.selectors.validationBlock} [data-visible]`).removeAttr('data-visible');
     }
 }
 

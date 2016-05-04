@@ -22,14 +22,18 @@ class Comment {
         this.$replyForm.submit((event)=> {
             event.preventDefault();
             this.disableReply();
-            this.onSubmit();
+            this.onReply();
             this.$context.trigger('Comment:onRequestReplyUI', {
                 commentingId: this.commentingId
             });
         });
     }
 
-    onSubmit() {
+    get selectors() {
+        return this.settings.selectors;
+    }
+
+    onReply() {
         let req = $.ajax({
             url: this.$replyForm.attr('action'),
             method: this.$replyForm.attr('method'),
@@ -40,6 +44,8 @@ class Comment {
             let $commentEntry = $html.find(this.settings.selectors.commentEntryBlock);
             let $signIn = $html.find(this.settings.selectors.signInBlock);
 
+            this.reset();
+
             if ($commentEntry.length > 0){
                 this.renderCommentEntry($commentEntry);
             }
@@ -47,7 +53,7 @@ class Comment {
                 this.renderSignIn($signIn);
             }
             else {
-                this.onError();
+                this.onRequestError($html);
             }
         })
         .fail((data)=> {
@@ -81,6 +87,10 @@ class Comment {
 
     enableReply() {
         this.$replyButton.prop('disabled', false);
+    }
+
+    reset() {
+        this.$context.find(`${this.selectors.validationBlock} [data-visible]`).removeAttr('data-visible');
     }
 }
 

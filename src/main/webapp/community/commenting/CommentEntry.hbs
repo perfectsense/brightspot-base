@@ -19,6 +19,10 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
+    {{#defineElement "validationError"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
     {{#defineElement "submit" noWith=true}}
         {{#if submitAction}}
             <div class="{{elementName}}">
@@ -40,6 +44,7 @@
             action="{{submitAction}}">
             {{element "input"}}
             {{element "validation"}}
+            {{element "validationError"}}
             {{element "actions"}}
         </form>
     {{/defineElement}}
