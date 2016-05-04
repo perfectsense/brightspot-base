@@ -7,7 +7,7 @@
   "title": "30 Comments",
 
   "loadMoreButton": "Show More",
-  "loadMoreAction": "/block/commenting/_loadMore-response",
+  "loadMoreAction": "/block/commenting/_response-with-more-comments",
 
   "commentEntry": {
       "_dataUrl": "/block/commenting/comment-entry.json"

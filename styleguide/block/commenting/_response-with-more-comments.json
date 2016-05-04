@@ -13,5 +13,5 @@
   },
 
   "loadMoreButton": "Show More",
-  "loadMoreAction": "/block/commenting/_loadMore-response?page=2"
+  "loadMoreAction": "/block/commenting/_response-with-more-comments?page=2"
 }

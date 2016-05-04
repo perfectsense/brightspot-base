@@ -9,7 +9,9 @@ class CommentEntry {
                 prefix: '.CommentEntry',
                 commentBlock: '.Comment',
                 commentingBlock: '.Commenting',
-                validationBlock: '.ValidationMessages'
+                signInBlock: '.UserSignIn',
+                validationBlock: '.ValidationMessages',
+                responseBlock: '.CommentActionResponse'
             }
         }, options);
 
@@ -42,7 +44,7 @@ class CommentEntry {
             data: this.$form.serialize()
         })
         .done((response)=> {
-            this.renderComment(response);
+            this.render(response);
         })
         .fail((data)=> {
             this.onRequestError(data);
@@ -55,24 +57,18 @@ class CommentEntry {
         this.$context.trigger('CommentEntry:onSubmitCommentError', { error: data });
     }
 
-    renderComment(data) {
+    render(data) {
         let $html = $(data);
         let $comment = $html.find(this.selectors.commentBlock);
-        let $title = $html.find(`${this.selectors.commentingBlock}-title`);
+        let $title = $html.find(`${this.selectors.responseBlock}-title`);
         let $commentEntry = $html.find(this.selectors.prefix);
+        let $signIn = $html.find(this.selectors.signInBlock);
         let $validationError = $html.find(`${this.selectors.prefix}-validationError`);
         let replaceWithResponse = true;
 
-        // validation error?
-        if ($validationError.length > 0) {
-            $html = $commentEntry;
-            this.$context.trigger('CommentEntry:onSubmitCommentError', { data: $html });
-        }
-        // was a comment created?
-        else if ($comment.length > 0) {
+        // render a comment?
+        if ($comment.length > 0){
             $html = $comment;
-            // reset the UI
-            this.reset();
 
             // if this block is not a child of a commenting block
             // or is rendered within the replies section, we should replace it with the response
@@ -85,10 +81,20 @@ class CommentEntry {
                 $title: $title,
                 alreadyRendered: replaceWithResponse
             });
+
+            this.reset();
         }
-        else {
+
+        // render comment entry form?
+        if ($commentEntry.length > 0) {
+            $html = $commentEntry;
             this.$context.trigger('CommentEntry:onSubmitCommentError', { data: $html });
-            return;
+        }
+
+        // render sign-in?
+        if ($signIn.length > 0){
+            $html = $signIn;
+            this.$context.trigger('CommentEntry:onSubmitCommentError', { data: $html });
         }
 
         // replace the entry block with the comment block?

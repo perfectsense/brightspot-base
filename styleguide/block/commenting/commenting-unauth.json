@@ -7,7 +7,7 @@
   "title": "30 Comments",
 
   "loadMoreButton": "Show More",
-  "loadMoreAction": "/block/commenting/_loadMore-response",
+  "loadMoreAction": "/block/commenting/_response-with-more-comments",
 
   "commentEntry": {
       "_dataUrl": "/block/user/sign-in.json"
@@ -22,7 +22,7 @@
           3
         ],
         "_dataUrl": "/block/commenting/comment.json",
-        "replyAction": "/block/commenting/_unauthenticated-response"
+        "replyAction": "/block/commenting/_response-with-sign-in"
       }
     ]
   }

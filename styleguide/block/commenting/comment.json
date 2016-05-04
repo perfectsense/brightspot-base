@@ -27,5 +27,5 @@
   },
 
   "replyButton": "reply",
-  "replyAction": "/block/commenting/_comment-entry-response"
+  "replyAction": "/block/commenting/_response-with-comment-entry"
 }

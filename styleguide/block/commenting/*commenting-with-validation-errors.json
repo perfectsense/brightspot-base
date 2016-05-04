@@ -11,7 +11,7 @@
 
   "commentEntry": {
       "_dataUrl": "/block/commenting/comment-entry.json",
-      "submitAction": "/block/commenting/_comment-entry-response-with-validation-error"
+      "submitAction": "/block/commenting/_response-with-invalid-comment-entry"
   },
 
   "body": {

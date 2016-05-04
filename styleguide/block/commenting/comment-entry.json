@@ -45,5 +45,5 @@
   },
 
   "submitButton": "Post",
-  "submitAction": "/block/commenting/_comment-response"
+  "submitAction": "/block/commenting/_response-with-comment"
 }

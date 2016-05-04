@@ -78,7 +78,7 @@ let Commenting = {
     },
 
     renderTitle($title) {
-        this.$el.find(`${this.settings.selectors.prefix}-title`).replaceWith($title);
+        this.$el.find(`${this.settings.selectors.prefix}-title`).html($title.html());
     },
 
     renderComment($comment) {
