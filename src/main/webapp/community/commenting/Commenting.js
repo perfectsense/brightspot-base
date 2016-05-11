@@ -63,11 +63,19 @@ let Commenting = {
                 // re-enable any disabled reply buttons
                 self.$el.find('.Comment-reply-button[disabled]').parents(`${self.settings.selectors.commentBlock}`).each(function(){
                     $(this).data('bsp-community-comment').enableReply();
-                })
+                });
             },
             'Comment:onRequestReplyUI': (event, data)=> {
                 // exit early if this commenting instance shouldn't handle this event.
                 if (!data || self.id !== data.commentingId) return;
+
+                // re-enable any other disabled reply buttons
+                self.$el.find('.Comment-reply-button[disabled]').parents(`${self.settings.selectors.commentBlock}`).each(function(){
+                    // enable reply buttons other than the one belonging to the current comment
+                    if (!$(event.target).is($(this))) {
+                        $(this).data('bsp-community-comment').enableReply();
+                    }
+                });
 
                 // before a new comment entry block is rendered, remove any existing ones
                 self.$commentingBody.find(`${self.settings.selectors.commentEntryBlock}`).each(function(){
