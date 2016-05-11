@@ -113,7 +113,7 @@ let Commenting = {
 
     renderComments(data) {
         let $html = $(data);
-        let $comments = $html.find(this.settings.selectors.commentBlock);
+        let $comments = $html.find('.CommentLoadMoreResponse-comments').children(this.settings.selectors.commentBlock);
         let $loadMoreButton = $html.find('.Commenting-loadMore-button');
         let formAction = $loadMoreButton.attr('formaction');
 
