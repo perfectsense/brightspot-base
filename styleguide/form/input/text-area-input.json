@@ -7,6 +7,7 @@
     "autofocus": true,
     "maxlength": 100,
     "required": true,
+    "value": "Hello World",
 
     "characterCountdown": "characters remain"
 }
