@@ -1,5 +1,5 @@
 {
-    "_template": "base/form/input",
+    "_template": "base/form/Input",
 
     "id": "{{number}}",
     "name": "foo",
