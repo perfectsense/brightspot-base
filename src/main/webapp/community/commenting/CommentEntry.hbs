@@ -7,11 +7,11 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "subtitle"}}
+    {{#defineElement "logout"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "input" noWith="true"}}
+    {{#defineElement "input" noWith=true}}
         <div class="{{elementName}}">{{input}}</div>
     {{/defineElement}}
 
@@ -19,21 +19,46 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "actions"}}
+    {{#defineElement "validationError"}}
         <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "submit" noWith=true}}
+        {{#if submitAction}}
+            <div class="{{elementName}}">
+                <button formaction="{{submitAction}}" class="{{elementName}}-button">{{submitButton}}</button>
+            </div>
+        {{/if}}
+    {{/defineElement}}
+
+    {{#defineElement "actions" noWith=true}}
+        <footer class="{{elementName}}">
+            {{element "submit"}}
+        </footer>
+    {{/defineElement}}
+
+    {{#defineElement "form" noWith=true}}
+        <form
+            method="post"
+            class="{{elementName}}"
+            action="{{submitAction}}">
+            {{element "input"}}
+            {{element "validation"}}
+            {{element "validationError"}}
+            {{element "actions"}}
+        </form>
     {{/defineElement}}
 
     {{#defineBlockContainer}}
         <div class="{{blockName}}"
-            {{#if replaceWithResponse}}data-replace-with-response{{/if}}
+            data-bsp-community-commentEntry
+            data-commenting-id="{{commentingId}}"
             {{extraAttributes}}>
             {{#defineBlockBody}}
                 {{element "user"}}
                 {{element "title"}}
-                {{element "subtitle"}}
-                {{element "input"}}
-                {{element "validation"}}
-                {{element "actions"}}
+                {{element "logout"}}
+                {{element "form"}}
             {{/defineBlockBody}}
         </div>
     {{/defineBlockContainer}}

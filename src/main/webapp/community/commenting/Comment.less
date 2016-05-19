@@ -12,7 +12,20 @@
         &:extend(.Comment-body all);
     }
 
+    &-replies {
+        &:extend(.Comment-replies all);
+    }
+
+    &-reply {
+        &:extend(.Comment-reply all);
+        &-button { }
+    }
+
     &-actions {
         &:extend(.Comment-actions all);
+    }
+
+    &-validation {
+        &:extend(.Comment-validation all);
     }
 }

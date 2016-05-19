@@ -1,6 +1,6 @@
 {
   "_template": "community/commenting/CommentEntry",
-  "replaceWithResponse": false,
+
   "user": {
     "_template": "base/Author",
     "image": {
@@ -8,22 +8,26 @@
       "src": "{{image(50, 50)}}"
     }
   },
+
   "title": "{{name}}",
-  "subtitle": {
-    "_template": "base/util/Link",
-    "href": "#",
-    "body": "Logout"
+
+  "logout": {
+    "_template": "community/user/UserSignOut",
+    "button": "Logout",
+    "action": "/block/user/_logout-response",
+    "target": "_blank"
   },
+
   "input": {
-    "_template": "base/form/TextArea",
-    "value": "",
+    "_template": "base/form/TextAreaInput",
+    "name": "entry-input",
+    "id": "34dvpcoxiv34ktgj",
+    "required": true,
     "placeholder": "Comment",
     "maxlength": 500,
-    "characterCountdown": {
-      "_template": "base/util/RawHtml",
-      "html": "characters remaining"
-    }
+    "characterCountdown": "characters remaining"
   },
+
   "validation": {
     "_template": "base/form/ValidationMessages",
     "serverError": {
@@ -39,14 +43,7 @@
       "html": "Your comment was too long. Please stay within 500 characters."
     }
   },
-  "actions": {
-    "_template": "base/util/Concatenated",
-    "items": [
-      {
-        "_template": "community/commenting/CommentSubmit",
-        "ajaxHref": "your-ajax-url-here",
-        "button": "Post"
-      }
-    ]
-  }
+
+  "submitButton": "Post",
+  "submitAction": "/block/commenting/_response-with-comment"
 }

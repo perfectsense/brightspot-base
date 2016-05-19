@@ -1,0 +1,31 @@
+{{#defineBlock "TextAreaInput" extend="base/form/Input"}}
+
+    {{#defineElement "input" noWith=true}}
+        <textarea
+            name="{{name}}"
+            class="{{elementName}}"
+            {{#with placeholder}}placeholder="{{this}}"{{/with}}
+            {{#with autofocus}}autofocus="{{this}}"{{/with}}
+            {{#with minlength}}minlength="{{this}}"{{/with}}
+            {{#with maxlength}}maxlength="{{this}}"{{/with}}
+            aria-invalid={{#if invalid}}"true"{{else}}"false"{{/if}}
+            {{#if required}}required{{/if}}>{{value}}</textarea>
+    {{/defineElement}}
+
+    {{#defineElement "characterCountdown"}}
+        <div class="{{elementName}}">{{../maxlength}} {{this}}</div>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}" data-bsp-form-textAreaInput>
+
+            {{#defineBlockBody}}
+                {{element "input"}}
+                {{element "label"}}
+                {{#if maxlength}}{{element "characterCountdown"}}{{/if}}
+            {{/defineBlockBody}}
+
+        </div>
+    {{/defineBlockContainer}}
+
+{{/defineBlock}}

@@ -1,0 +1,17 @@
+{
+  "_wrapper": false,
+  "_template": "community/commenting/CommentLoadMoreResponse",
+
+  "comments": {
+    "_template": "base/util/Concatenated",
+    "items": [
+      {
+        "_repeat": [1,5],
+        "_dataUrl": "/block/commenting/comment.json"
+      }
+    ]
+  },
+
+  "loadMoreButton": "Show More",
+  "loadMoreAction": "/block/commenting/_response-with-more-comments?page=2"
+}

@@ -1,0 +1,10 @@
+{
+  "_wrapper": false,
+  "_template": "community/commenting/CommentActionResponse",
+
+  "title": "{{number([2,100])}} comments",
+
+  "comment": {
+    "_dataUrl": "/block/commenting/comment.json"
+  }
+}

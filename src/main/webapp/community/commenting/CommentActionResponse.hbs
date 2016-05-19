@@ -1,0 +1,30 @@
+{{#defineBlock "CommentActionResponse"}}
+
+    {{#defineElement "title"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "comment"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "entry"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "signIn"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}">
+            {{#defineBlockBody}}
+                {{element "title"}}
+                {{element "comment"}}
+                {{element "entry"}}
+                {{element "signIn"}}
+            {{/defineBlockBody}}
+        </div>
+    {{/defineBlockContainer}}
+
+{{/defineBlock}}

@@ -8,8 +8,13 @@
         &:extend(.CommentEntry-title all);
     }
 
-    &-subtitle {
-        &:extend(.CommentEntry-subtitle all);
+    &-logout {
+        &:extend(.CommentEntry-logout all);
+        &-button { }
+    }
+
+    &-form {
+        &:extend(.CommentEntry-form all);
     }
 
     &-input {
@@ -20,7 +25,13 @@
         &:extend(.CommentEntry-validation all);
     }
 
+    &-submit {
+        &:extend(.CommentEntry-submit-button all);
+        &-button { }
+    }
+
     &-actions {
         &:extend(.CommentEntry-actions all);
     }
+
 }
