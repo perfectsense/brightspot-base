@@ -153,12 +153,12 @@ HTML output:
 ### Usage Example - Copy
 
 To create a wide version of `ListPromo` named `WideListPromo`, use the
-`{{block}}` helper and pass the `name` argument:
+`{{#defineBlock}}` helper and reference the template you want to extend:
 
 `WideListPromo.hbs`
 
 ```hbs
-{{block "base/promo/ListPromo" name="WideListPromo"}}
+{{#defineBlock "WideListPromo" extend="base/promo/ListPromo"}}
 ```
 
 HTML output:
@@ -181,11 +181,11 @@ _element_, use the `{{element}}` helper:
 `CtaFirstListPromo.hbs`
 
 ```hbs
-{{#block "base/promo/ListPromo" name="CtaFirstListPromo"}}
+{{#defineBlock "CtaFirstListPromo" extend="base/promo/ListPromo"}}
     {{element "title"}}
     {{element "cta"}}
     {{element "items"}}
-{{/block}}
+{{/defineBlock}}
 ```
 
 HTML output:
@@ -207,17 +207,15 @@ To add the `subTitle` _element_ below the `title` _element_:
 `SubTitledListPromo.hbs`
 
 ```hbs
-{{#block "base/promo/ListPromo" name="SubTitledListPromo"}}
+{{#defineBlock "SubTitledListPromo" extend="base/promo/ListPromo"}}
     {{element "title"}}
     {{#with subTitle}}
         <div class="SubTitledListPromo-subTitle">{{this}}</div>
     {{/with}}
     {{element "items"}}
     {{element "cta"}}
-{{/block}}
+{{/defineBlock}}
 ```
-
-_note_: Until fixed, you cannot use the `{{blockName}}` syntax inside the `block` helper. To work around this, just manually prefix your elements with the scoped block name.
 
 HTML output:
 
@@ -304,8 +302,8 @@ BEM helpers:
 
 * `defineBlock`: Defines a _block_.
 * `blockName`: Returns the current _block_ name.
-* `defaultBlockBody`: Marks the template as the default _block_ body.
-* `block`: Renders the named _block_.
+* `defineBlockContainer`: Marks the template as the _block_ container.
+* `defineBlockBody`: Marks the template as the _block_ body.
 * `defineElement`: Defines an _element_ within a _block_.
 * `elementName`: Returns the current _element_ name.
 * `element`: Renders the named _element_.
@@ -332,13 +330,15 @@ BEM helpers:
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    <div class="{{blockName}}">
-        {{#defaultBlockBody}}
-            {{element "title"}}
-            {{element "items"}}
-            {{element "cta"}}
-        {{/defaultBlockBody}}
-    </div>
+    {{#defineBlockContainer}}
+        {{#defineBlockBody}}
+            <div class="{{blockName}}">
+                {{element "title"}}
+                {{element "items"}}
+                {{element "cta"}}
+            </div>
+        {{/defineBlockBody}}
+    {{/defineBlockContainer}}
 {{/defineBlock}}
 ```
 
