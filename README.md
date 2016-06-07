@@ -396,3 +396,12 @@ BEM helpers:
     }
 }
 ```
+
+---
+
+# Bonus
+
+---
+
+Save yourself time and keystrokes by adding the following to your favorite editor:
+* Atom: [snippet](https://gist.github.com/jpencola/663af50e4e3f41c5b368e16519c5add9)
