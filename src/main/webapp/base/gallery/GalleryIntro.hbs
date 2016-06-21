@@ -1,0 +1,21 @@
+{{#defineBlock "GalleryIntro"}}
+
+    {{#defineElement "title"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+    
+    {{#defineElement "description"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+    
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}" {{extraAttributes}}>
+
+            {{#defineBlockBody}}
+                {{element "title"}}
+                {{element "description"}}
+            {{/defineBlockBody}}
+            
+        </div>
+    {{/defineBlockContainer}}
+{{/defineBlock}}

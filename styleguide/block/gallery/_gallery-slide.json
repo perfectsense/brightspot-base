@@ -1,0 +1,18 @@
+{
+    "_template": "base/gallery/GallerySlide",
+    
+    "slideImage": {
+        "_template": "base/util/Image",
+        "src": "{{image(640, 400)}}"
+    },
+    
+    "slideInfo": {
+        "_template": "base/gallery/GallerySlideInfo",
+        "title": "{{words(8,12)}}",
+        "description": {
+                "_template": "base/util/RawHtml",
+                "html": "{{words(60,120)}}"
+        },
+        "attribution": "Photo by {{words(6,10)}}"
+    }
+}

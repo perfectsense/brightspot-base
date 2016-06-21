@@ -1,0 +1,23 @@
+{{#defineBlock "Gallery"}}
+
+    {{#defineElement "intro"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "slides" noWith=true}}
+        <section class="{{elementName}}">
+            {{#each slides}}{{this}}{{/each}}
+        </section>
+    {{/defineElement}}
+    
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}" data-gallery-image="{{introBackgroundImage}}" {{extraAttributes}}>
+
+            {{#defineBlockBody}}
+                {{element "intro"}}
+                {{element "slides"}}
+            {{/defineBlockBody}}
+            
+        </div>
+    {{/defineBlockContainer}}
+{{/defineBlock}}

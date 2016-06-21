@@ -1,0 +1,21 @@
+{{#defineBlock "GallerySlide"}}
+
+    {{#defineElement "slideImage"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "slideInfo"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}" {{extraAttributes}}>
+
+            {{#defineBlockBody}}
+                {{element "slideImage"}}
+                {{element "slideInfo"}}
+            {{/defineBlockBody}}
+            
+        </div>
+    {{/defineBlockContainer}}
+{{/defineBlock}}
