@@ -14,6 +14,11 @@
                 "_template": "/base/page/Meta",
                 "name": "description",
                 "content": "{{words}}"
+            },
+            {
+                "_template": "/base/page/Meta",
+                "property": "og:type",
+                "content": "website"
             }
         ]
     },
