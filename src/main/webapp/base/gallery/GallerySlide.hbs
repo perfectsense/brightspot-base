@@ -1,19 +1,35 @@
 {{#defineBlock "GallerySlide"}}
 
-    {{#defineElement "slideImage"}}
+    {{#defineElement "image"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "slideInfo"}}
+    {{#defineElement "infoTitle"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
+    {{#defineElement "infoDescription"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "infoAttribution"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+    
+    {{#defineElement "info" noWith=true}}
+        <div class="{{elementName}}">
+            {{element "infoTitle"}}
+            {{element "infoDescription"}}
+            {{element "infoAttribution"}}
+        </div>
+    {{/defineElement}}
+    
     {{#defineBlockContainer}}
         <div class="{{blockName}}" {{extraAttributes}}>
 
             {{#defineBlockBody}}
-                {{element "slideImage"}}
-                {{element "slideInfo"}}
+                {{element "image"}}
+                {{element "info"}}
             {{/defineBlockBody}}
             
         </div>

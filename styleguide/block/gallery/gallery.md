@@ -7,17 +7,17 @@
 
 ### Blocks and properties
 * `Gallery`:
-    * intro: (Block) See the `GalleryIntro` block.
+    * intro: (Block) A single `GalleryIntro` block.
     * introBackgroundImage: (URL/Optional) By default, the gallery displays a randomized "matrix" of images
-      as a background. However, you can specify a single image here to use as the background.
+      as a background. However, you can specify a single image here to use as the background. This URL will
+      be placed in the `data-gallery-intro-background-image` HTML parameter and used by the JavaScript.
     * slides: (Array) List of `GallerySlide` blocks.
 * `GalleryIntro`: Introductory content for the gallery.
     * title (String|HTML)
     * description (HTML)
 * `GallerySlide`: A single slide for the gallery.
-    * slideImage: (Image Element)
-    * slideInfo: (Block) See the `GallerySlideInfo` block.
-* `GallerySlideInfo`: Extra info that describes the slide image.
-    * title (HTML)
-    * description (HTML)
-    * attribution (HTML)
+    * image: (Image Element)
+    * info: (HTML) Descriptive content for the image. By default contains infoTitle, infoDescription, infoAttribution.
+    * infoTitle (HTML) Title for the image.
+    * infoDescription (HTML) Description for the image.
+    * infoAttribution (HTML) Attribution for the image.
