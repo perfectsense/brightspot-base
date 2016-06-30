@@ -1,4 +1,56 @@
 .Gallery {
 
+    &-intro {
+        &:extend(.Gallery-intro all);
+        
+        &-background { // Optional element added by javascript
+            &:extend(.Gallery-intro-background all);
+        }
+        
+        &-background-single {  // Optional element added by javascript
+            &:extend(.Gallery-intro-background-single all);
+        }
+        
+        &-background-montage {  // Optional element added by javascript
+            &:extend(.Gallery-intro-background-montage all);
+        }
+    }
+    
+    &-controls { // Elements added by javascript
+        &:extend(.Gallery-controls all);
+        
+        &-count {
+            
+        }
+        
+        &-buttons {
+            
+            // List button
+            &-list {
+                
+            }
+            
+            // Tiles button
+            &-tiles {
+                
+            }
+            
+            // Make button appear selected
+            .active {
+                
+            }
+        }
+    }
+    
+    &-slides {
+        &:extend(.Gallery-slides all);
+    }
 
+    &-view-list { // Elements added by javascript
+        
+    }
+    
+    &-view-tiles { // Elements added by javascript
+        
+    }
 }

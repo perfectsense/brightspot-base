@@ -11,7 +11,7 @@
     {{/defineElement}}
     
     {{#defineBlockContainer}}
-        <div class="{{blockName}}" data-gallery-intro-background-image="{{introBackgroundImage}}" {{extraAttributes}}>
+        <div class="{{blockName}}" data-bsp-gallery-list data-bsp-gallery-list-options="{ {{#if introBackgroundImage}}&quot;introBackgroundImage&quot;:&quot;{{introBackgroundImage}}&quot;{{/if}} }" {{extraAttributes}}>
 
             {{#defineBlockBody}}
                 {{element "intro"}}
