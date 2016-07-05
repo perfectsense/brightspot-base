@@ -4,20 +4,31 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
+    {{#defineElement "controls" noWith=true}}
+        <div class="{{elementName}}">
+            <span class="{{elementName}}-count"></span>
+            <span class="{{elementName}}-buttons">
+                <a href="#" class="{{elementName}}-buttons-list">List</a>
+                <a href="#" class="{{elementName}}-buttons-tiles">Tiles</a>
+            </span>
+        </div>
+    {{/defineElement}}
+
     {{#defineElement "slides" noWith=true}}
-        <section class="{{elementName}}">
+        <div class="{{elementName}}">
             {{#each slides}}{{this}}{{/each}}
-        </section>
+        </div>
     {{/defineElement}}
     
     {{#defineBlockContainer}}
-        <div class="{{blockName}}" data-bsp-gallery-list data-bsp-gallery-list-options="{ {{#if introBackgroundImage}}&quot;introBackgroundImage&quot;:&quot;{{introBackgroundImage}}&quot;{{/if}} }" {{extraAttributes}}>
+        <section class="{{blockName}}" data-bsp-gallery-list data-bsp-gallery-list-options="{ {{#if introBackgroundImage}}&quot;introBackgroundImage&quot;:&quot;{{introBackgroundImage}}&quot;{{/if}} }" {{extraAttributes}}>
 
             {{#defineBlockBody}}
                 {{element "intro"}}
+                {{element "controls"}}
                 {{element "slides"}}
             {{/defineBlockBody}}
             
-        </div>
+        </section>
     {{/defineBlockContainer}}
 {{/defineBlock}}

@@ -45,19 +45,18 @@ class Gallery {
             slidesContainer: '.Gallery-slides',
             slide: '.GallerySlide',
             slideImage: '.GallerySlide-image',
-            slideInfo: '.GallerySlide-info'
+            slideInfo: '.GallerySlide-info',
+            controls: '.Gallery-controls',
+            controlsCount: '.Gallery-controls-count',
+            controlsButtonsList: '.Gallery-controls-buttons-list',
+            controlsButtonsTiles: '.Gallery-controls-buttons-tiles'
         };
         
         this.classNames = {
             introBackground: 'Gallery-intro-background',
             introBackgroundSingle: 'Gallery-intro-background-single',
             introBackgroundMontage: 'Gallery-intro-background-montage',
-            controls: 'Gallery-controls',
-            controlsCount: 'Gallery-controls-count',
-            controlsButtons: 'Gallery-controls-buttons',
-            controlsButtonList: 'Gallery-controls-buttons-list',
-            controlsButtonTiles: 'Gallery-controls-buttons-tiles',
-            controlsButtonActive: 'active',
+            controlsButtonsActive: 'active',
             viewList: 'Gallery-view-list',
             viewTiles: 'Gallery-view-tiles'
         };
@@ -185,6 +184,7 @@ class Gallery {
         }
     }
 
+
     /**
      * Initialize the gallery controls to switch from list to tile mode.
      * The gallery controls consist of the following parts:
@@ -192,57 +192,38 @@ class Gallery {
      * Button to switch to List view
      * Button to switch to Tile view
      * 
-     * The HTML looks like this:
+     * The HTML is expected to look like this:
      * <div class="Gallery-controls">
      *   <div class="Gallery-controls-count">64 Photos</div>
      *   <div class="Gallery-controls-buttons">
-     *     <a href="" class="Gallery-controls-button-list">List</a>
-     *     <a href="" class="Gallery-controls-button-tiles">Tiles</a>
+     *     <a href="" class="Gallery-controls-buttons-list">List</a>
+     *     <a href="" class="Gallery-controls-buttons-tiles">Tiles</a>
      *   </div>
      * </div>
      */
     initControls() {
-        let $controls;
-        let $controlsCount;
-        let $controlsButtons;
-        let $controlsButtonList;
-        let $controlsButtonTiles;
         
-        $controls = $('<div>', {'class':this.classNames.controls}).insertBefore( this.$slidesContainer );
-
-        $controlsCount = $('<span>', {'class':this.classNames.controlsCount}).appendTo($controls);
-        $controlsButtons = $('<span>', {'class':this.classNames.controlsButtons}).appendTo($controls);
+        // Find the control hooks within the DOM
+        this.$controls = this.$el.find(this.selectors.controls);
+        this.$controlsCount = this.$el.find(this.selectors.controlsCount);
+        this.$controlsButtonsList = this.$el.find(this.selectors.controlsButtonsList);
+        this.$controlsButtonsTiles = this.$el.find(this.selectors.controlsButtonsTiles);
         
-        $controlsButtonList = $('<a>', {
-            'class': this.classNames.controlsButtonList,
-            href: '#',
-            text: 'List'
-        }).on('click', event => {
+        // Set up click events for the buttons
+        this.$controlsButtonsList.on('click', event => {
             this.modeSetList();
             return false;
-        }).appendTo($controlsButtons);
-
-        $controlsButtonTiles = $('<a>', {
-            'class': this.classNames.controlsButtonTiles,
-            href: '#',
-            text: 'Tiles'
-        }).on('click', event => {
+        });
+        this.$controlsButtonsTiles.on('click', event => {
             this.modeSetTiles();
             return false;
-        }).appendTo($controlsButtons);
-
-        // Cache for later use
-        this.$controls = $controls;
-        this.$controlsCount = $controlsCount;
-        this.$controlsButtons = $controlsButtons;
-        this.$controlsButtonList = $controlsButtonList;
-        this.$controlsButtonTiles = $controlsButtonTiles;
-        
-        // Update the slide count
-        this.controlsUpdateCount();
+        });
         
         // Set the initial mode to "List"
         this.modeSetList();
+
+        // Update the slide count
+        this.controlsUpdateCount();
     }
 
     
@@ -313,7 +294,7 @@ class Gallery {
      */
     modeSetList() {
         this._modeClear();
-        this.$controlsButtonList.addClass(this.classNames.controlsButtonActive);
+        this.$controlsButtonsList.addClass(this.classNames.controlsButtonsActive);
         this.$viewList.show();
     }
 
@@ -324,7 +305,7 @@ class Gallery {
      */
     modeSetTiles() {
         this._modeClear();
-        this.$controlsButtonTiles.addClass(this.classNames.controlsButtonActive);
+        this.$controlsButtonsTiles.addClass(this.classNames.controlsButtonsActive);
         this.$viewTiles.show();
     }
 
@@ -334,10 +315,10 @@ class Gallery {
      */
     _modeClear() {
         
-        this.$controlsButtonTiles.removeClass(this.classNames.controlsButtonActive);
+        this.$controlsButtonsTiles.removeClass(this.classNames.controlsButtonsActive);
         this.$viewTiles.hide();
         
-        this.$controlsButtonList.removeClass(this.classNames.controlsButtonActive);
+        this.$controlsButtonsList.removeClass(this.classNames.controlsButtonsActive);
         this.$viewList.hide();
     }
 
