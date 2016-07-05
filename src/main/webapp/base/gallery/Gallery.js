@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import bspUtils from 'bsp-utils';
+import Masonry from 'masonry';
 
 class Gallery {
 
