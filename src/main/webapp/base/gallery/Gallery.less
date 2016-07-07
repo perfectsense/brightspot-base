@@ -1,5 +1,10 @@
 .Gallery {
 
+    //---------------
+    // Gallery-intro
+    // Javascript also adds either Gallery-intro-background-single or Gallery-intro-background-montage
+    // to display images as a background behind the intro content.
+    //--------------- 
     &-intro {
         &:extend(.Gallery-intro all);
         
@@ -16,41 +21,66 @@
         }
     }
     
-    &-controls { // Elements added by javascript
+    //------------------
+    // Gallery-controls
+    // Contains a photo count, plus buttons to switch between list and tiles views.
+    //------------------
+    &-controls {
         &:extend(.Gallery-controls all);
         
         &-count {
-            
+            &:extend(.Gallery-controls-count all);
         }
         
         &-buttons {
+            &:extend(.Gallery-controls-buttons all);
             
             // List button
             &-list {
-                
+                &:extend(.Gallery-controls-buttons-list all);
             }
             
             // Tiles button
             &-tiles {
-                
+                &:extend(.Gallery-controls-buttons-tiles all);
             }
             
-            // Make button appear selected
-            .active {
-                
+            // Make a button appear selected
+            &-active {
+                &:extend(.Gallery-controls-buttons-active all);
             }
         }
     }
     
+    //----------------
+    // Gallery-slides
+    // Container for the gallery slides.
+    // However note that this is hidden because=, but the javascript duplicates the content
+    // into Gallery-view-list and Gallery-view-tiles
+    // Contains GallerySlide blocks.
+    // ---------------
     &-slides {
         &:extend(.Gallery-slides all);
+        // Refer to GallerySlide.less
     }
 
+    //-------------------
+    // Gallery-view-list
+    // Added by javascript to represent slides in a list view.
+    // Contains GallerySlide blocks.
+    //-------------------
     &-view-list { // Elements added by javascript
-        
+        &:extend(.Gallery-view-list all);
+        // Refer to GallerySlide.less
     }
     
+    //-------------------
+    // Gallery-view-tiles
+    // Added by javascript to represent slides in a tile view.
+    // Contains GallerySlide blocks.
+    //-------------------
     &-view-tiles { // Elements added by javascript
-        
+        &:extend(.Gallery-view-tiles all);
+        // Refer to GallerySlide.less
     }
 }

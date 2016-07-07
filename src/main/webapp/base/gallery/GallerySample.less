@@ -1,0 +1,211 @@
+// Sample styles for Gallery
+
+// Mixin to clear floats
+.clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Mobile first styles
+// Starting with @mq-xs (320px)
+
+
+
+
+// Styles for 568px
+@media @mq-sm {
+  
+}
+
+// Styles for 768px
+@media @mq-md {
+  
+}
+
+// Styles for 1024px
+@media @mq-lg {
+  
+}
+
+// Styles for 1440px
+@media @mq-xl {
+  
+  .Gallery {
+    width: 1440px;
+    
+    &-intro {
+      position: relative;
+      width: 1440px;
+      height: 810px;
+      
+      // Center the GalleryIntro block
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      // The intro box that sits above the background images
+      .GalleryIntro {
+        z-index: 1; // Needs a z-index so it will sit on top of Gallery-background
+        width: 1024px - (212px * 2);
+        padding: 50px 212px;
+        background:white;
+      }
+      
+      &-background {
+        height:810px;
+      }
+      
+      &-background-single {
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          object-fit: cover;
+        }
+      }
+      
+      &-background-montage {
+        
+        img {
+          position: absolute;
+          width: 280px;
+          height: 260px;
+          object-fit: cover;
+          
+          // First column
+          &:nth-child(1) {
+            left: 0;
+            top: 0;
+          }
+          &:nth-child(2) {
+            left: 290px;
+            top: 0;
+          }
+          &:nth-child(3) {
+            width: 570px;
+            height: 540px;
+            left: 0;
+            top: 270px;
+          }
+          // Second column
+          &:nth-child(4) {
+            width: 860px;
+            height: 540px;
+            left: 580px;
+            top: 0;
+          }
+          &:nth-child(5) {
+            left: 580px;
+            top: 550px;
+          }
+          &:nth-child(6) {
+            left: 580px + 280px + 10px;
+            top: 550px;
+          }
+          &:nth-child(7) {
+            left: 580px + 280px + 10px + 280px + 10px;
+            top: 550px;
+          }
+          // Hide anything past seven images
+          &:nth-child(n+8) {
+            display:none;
+          }
+        }
+      }
+    }
+    
+    &-controls {
+      
+      .clearfix;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      
+      &-count {
+        float:left;
+      }
+      
+      &-buttons {
+        
+        float:right;
+        
+        &-list {
+          
+        }
+        &-tiles {
+          
+        }
+        &-active {
+          font-weight:bold;
+          text-decoration:none;
+          pointer-events: none;
+          color:inherit;
+        }
+      }
+    }
+    
+    /* List View */
+    
+    &-view-list {
+      
+      .GallerySlide {
+        
+        border-top: 1px solid black;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        
+        .clearfix;
+        
+        &-image {
+          float:right;
+          margin-right:98px;
+          width:1024px;
+          img {
+            display:block;
+            width:100%;
+            height: auto;
+          }
+        }
+        &-info {
+          float: left;
+          width: 200px;
+          margin-left: 98px;
+          margin-right: 20px;
+        }
+      }
+    }
+    
+    &-view-tiles {
+      
+      padding-left: 100px;
+      padding-right:100px;
+      border-top: 1px solid black;
+      padding-top: 40px;
+      
+      .GallerySlide {
+        
+        width: 400px;
+        margin-bottom: 30px;
+        
+        &-image {
+          width:100%;
+          img {
+            width:100%;
+            height: auto;
+          }
+        }
+        &-info {
+          margin-top:10px;
+        }
+      }
+      
+    }
+  }
+}

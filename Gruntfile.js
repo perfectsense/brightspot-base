@@ -47,7 +47,8 @@ module.exports = function (grunt) {
             styles: {
                 dir: '',
                 less: [
-                    'base/All.less'
+                    'base/All.less',
+                    'base/Gallery.less'
                 ],
                 options : {
                     autoprefixer: true

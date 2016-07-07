@@ -49,14 +49,15 @@ class Gallery {
             controls: '.Gallery-controls',
             controlsCount: '.Gallery-controls-count',
             controlsButtonsList: '.Gallery-controls-buttons-list',
-            controlsButtonsTiles: '.Gallery-controls-buttons-tiles'
+            controlsButtonsTiles: '.Gallery-controls-buttons-tiles',
+            masonryItem: '.GallerySlide'
         };
         
         this.classNames = {
             introBackground: 'Gallery-intro-background',
             introBackgroundSingle: 'Gallery-intro-background-single',
             introBackgroundMontage: 'Gallery-intro-background-montage',
-            controlsButtonsActive: 'active',
+            controlsButtonsActive: 'Gallery-controls-buttons-active',
             viewList: 'Gallery-view-list',
             viewTiles: 'Gallery-view-tiles'
         };
@@ -93,7 +94,7 @@ class Gallery {
      * @return {jQuery Object} A jQuery object containing all the slides.
      */
     get $slides() {
-        return this.$el.find(this.selectors.slide);
+        return this.$slidesContainer.find(this.selectors.slide);
     }
 
 
@@ -250,6 +251,19 @@ class Gallery {
 
         // Cache for later use
         this.$viewTiles = $viewTiles;
+        
+        // Set up masonry layout
+        this.masonry = new Masonry($viewTiles[0], {
+            
+            itemSelector: this.selectors.masonryItem,
+            
+            // Turn off animations
+            transitionDuration: 0,
+            
+            // The left-right gutter between masonry tiles can only be set in the javascript.
+            // Hardcoded for now but should be some kind of option.
+            gutter: 20
+        });
     }
 
     
@@ -307,6 +321,7 @@ class Gallery {
         this._modeClear();
         this.$controlsButtonsTiles.addClass(this.classNames.controlsButtonsActive);
         this.$viewTiles.show();
+        this.masonry.layout();
     }
 
 
