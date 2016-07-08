@@ -12,113 +12,269 @@
   }
 }
 
+// Mixin to clear absolute position
+.clearpos() {
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+}
+
 // Mobile first styles
 // Starting with @mq-xs (320px)
 
+.Gallery {
+  
+  background-color: black;
+  color: white;
+  
+  &-intro {
+    // Gallery-background images to be positioned absolutely
+    position: relative;
+    
+    // Set a minimum height but allow it to expand if the GalleryIntro content goes long
+    min-height: 540px;
+    
+    // Center the GalleryIntro block
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    // The intro box that sits above the background images
+    .GalleryIntro {
+      z-index: 1; // Needs a z-index so it will sit on top of Gallery-background
+      width: 240px - (20px * 2);
+      padding: 30px 20px;
+      margin: 1em 0; // in case the intro gets larger than the 
+      background-color: white;
+      color: black;
+    }
+    
+    &-background {
+    }
+    
+    &-background-single {
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+      }
+    }
+    
+    &-background-montage {
+      
+      img {
+        position: absolute;
+        object-fit: cover;
+        
+        // Image grid:
+        // 
+        // 111 2
+        // 111 3
+        // 4 777
+        // 5 777
+        // 6 777
+        
+        &:nth-child(1) {
+          top: 0;
+          left: 0;
+          width:65%; // let width expand
+          height:40%;
+        }
+        &:nth-child(2) {
+          top: 0;
+          right: 0;
+          width: 32%;
+          height: 19%;
+        }
+        &:nth-child(3) {
+          top: 21%;
+          right:0;
+          width: 32%;
+          height: 19%;
+        }
+        &:nth-child(4) {
+          width: 32%;
+          height: 18%;
+          left: 0;
+          top: 42%;
+        }
+        &:nth-child(5) {
+          width: 32%;
+          height: 18%;
+          left: 0;
+          top: 62%;
+        }
+        &:nth-child(6) {
+          width: 32%;
+          height: 18%;
+          left: 0;
+          bottom: 0;
+        }
+        &:nth-child(7) {
+          width: 65%;
+          height: 58%;
+          right: 0;
+          bottom: 0;
+        }
+        
+        // Hide anything past seven images
+        &:nth-child(n+8) {
+          display:none;
+        }
+      }
+    }
+  }
+  
+  &-controls {
+    
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    
+    &-count {
+    }
+    
+    &-buttons {
+      // Hide control buttons for small screens
+      display:none;
+    }
+  }
+
+  // Slides are cloned into List and Tiles views, so hide the original slides
+  &-slides {
+    display: none;
+  }
+
+  /* List View */
+  &-view-list {
+    
+    display:block;
+    
+    .GallerySlide {
+      
+      border-top: 1px solid white;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      
+      .clearfix;
+      
+      &-image {
+        width:100%;
+        img {
+          display:block;
+          width:100%;
+          height: auto;
+        }
+      }
+      &-info {
+        margin: 10px 20px;
+      }
+    }
+  }
+  
+  &-view-tiles {
+    // No tiles until window is wide enough
+    display: none;
+  }
+}
 
 
 
 // Styles for 568px
 @media @mq-sm {
   
-}
-
-// Styles for 768px
-@media @mq-md {
-  
-}
-
-// Styles for 1024px
-@media @mq-lg {
-  
-}
-
-// Styles for 1440px
-@media @mq-xl {
-  
   .Gallery {
-    width: 1440px;
     
     &-intro {
-      position: relative;
-      width: 1440px;
-      height: 810px;
       
-      // Center the GalleryIntro block
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      
-      // The intro box that sits above the background images
+      min-height: 326px;
+
       .GalleryIntro {
-        z-index: 1; // Needs a z-index so it will sit on top of Gallery-background
-        width: 1024px - (212px * 2);
-        padding: 50px 212px;
-        background:white;
-      }
-      
-      &-background {
-        height:810px;
-      }
-      
-      &-background-single {
-        img {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          left: 0;
-          top: 0;
-          object-fit: cover;
-        }
+        width: 460px - (40px * 2);
+        padding: 30px 40px;
       }
       
       &-background-montage {
         
         img {
-          position: absolute;
-          width: 280px;
-          height: 260px;
-          object-fit: cover;
           
-          // First column
+          // Different image grid:
+          // 
+          // 1 2 44444
+          // 333 44444
+          // 333 5 6 7
+          
           &:nth-child(1) {
-            left: 0;
+            .clearpos;
             top: 0;
+            left: 0;
+            width: 19%;
+            height: 32%;
           }
           &:nth-child(2) {
-            left: 290px;
+            .clearpos;
             top: 0;
+            left: 20%;
+            width: 19%;
+            height: 32%;
           }
           &:nth-child(3) {
-            width: 570px;
-            height: 540px;
+            .clearpos;
+            bottom: 0;
             left: 0;
-            top: 270px;
+            width: 39%;
+            height: 66%;
           }
-          // Second column
           &:nth-child(4) {
-            width: 860px;
-            height: 540px;
-            left: 580px;
+            .clearpos;
+            right: 0;
             top: 0;
+            width: 60%;
+            height: 66%;
           }
           &:nth-child(5) {
-            left: 580px;
-            top: 550px;
+            .clearpos;
+            left: 40%;
+            bottom: 0;
+            width: 19%;
+            height: 32%;
           }
           &:nth-child(6) {
-            left: 580px + 280px + 10px;
-            top: 550px;
+            .clearpos;
+            left: 60%;
+            bottom: 0;
+            width: 20%;
+            height: 32%;
           }
           &:nth-child(7) {
-            left: 580px + 280px + 10px + 280px + 10px;
-            top: 550px;
-          }
-          // Hide anything past seven images
-          &:nth-child(n+8) {
-            display:none;
+            .clearpos;
+            right: 0;
+            bottom: 0;
+            width: 19%;
+            height: 32%;
           }
         }
+      }    
+    }
+  }
+}
+
+// Styles for 768px
+@media @mq-md {
+
+  .Gallery {
+    
+    &-intro {
+      
+      min-height: 432px;
+
+      .GalleryIntro {
+        width: 568px - (40px * 2);
+        padding: 40px;
       }
     }
     
@@ -133,15 +289,19 @@
       }
       
       &-buttons {
-        
+
+        // Start displaying control buttons at this breakpoint
+        display:block;
         float:right;
         
         &-list {
-          
+            // Replace control buttons with icons if desired
         }
+        
         &-tiles {
-          
+          // Replace control buttons with icons if desired
         }
+        
         &-active {
           font-weight:bold;
           text-decoration:none;
@@ -151,22 +311,22 @@
       }
     }
     
-    /* List View */
-    
     &-view-list {
+      
+      display: none;
       
       .GallerySlide {
         
-        border-top: 1px solid black;
-        padding-top: 40px;
-        padding-bottom: 40px;
+        border-top: 1px solid white;
+        padding-top: 20px;
+        padding-bottom: 20px;
         
         .clearfix;
         
         &-image {
           float:right;
-          margin-right:98px;
-          width:1024px;
+          margin-right:20px;
+          width:72%;
           img {
             display:block;
             width:100%;
@@ -175,23 +335,22 @@
         }
         &-info {
           float: left;
-          width: 200px;
-          margin-left: 98px;
-          margin-right: 20px;
+          width: 20%;
+          margin-left: 20px;
+          margin-right: 10px;
         }
       }
     }
     
     &-view-tiles {
       
-      padding-left: 100px;
-      padding-right:100px;
-      border-top: 1px solid black;
-      padding-top: 40px;
+      display: none;
+      border-top: 1px solid white;
+      padding: 20px;
       
       .GallerySlide {
         
-        width: 400px;
+        width: 45%;
         margin-bottom: 30px;
         
         &-image {
@@ -205,7 +364,86 @@
           margin-top:10px;
         }
       }
+    }
+    
+    &-view-active {
+      display:block;
+    }
+  }
+}
+
+// Styles for 1024px
+@media @mq-lg {
+  
+  .Gallery {
+    
+    &-intro {
+      min-height: 576px;
+      .GalleryIntro {
+        width: 768px - (84px * 2);
+        padding: 40px 84px;
+      }
+    }
+        
+    &-view-list {
+      .GallerySlide {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+    }
+    
+    &-view-tiles {
+      padding: 30px 20px;
+      .GallerySlide {
+        width: 30%;
+      }
+    }
+  }
+}
+
+// Styles for 1440px
+@media @mq-xl {
+  
+  .Gallery {
+    
+    // Set a fixed width so gallery doesn't get any larger than this
+    width: @screen-xl-min;
+    
+    &-intro {
+      min-height: 810px;
+      .GalleryIntro {
+        width: 1024px - (212px * 2);
+        padding: 50px 212px;
+      }
+    }
+        
+    &-view-list {
       
+      .GallerySlide {
+        
+        padding-top: 40px;
+        padding-bottom: 40px;
+        
+        &-image {
+          // Since we're not letting gallery expand beyond this size, using px width instead of %
+          width: 1024px;
+          margin-right:98px;
+        }
+        
+        &-info {
+          // Since we're not letting gallery expand beyond this size, using px width instead of %
+          width:200px;
+          margin-left: 98px;
+          margin-right: 20px;
+        }
+      }
+    }
+    
+    &-view-tiles {
+      padding: 40px 100px;
+      .GallerySlide {
+        width: 400px;
+      }
     }
   }
 }

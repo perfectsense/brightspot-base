@@ -1,9 +1,8 @@
 ## Gallery
 
 ### Requirements
-* [Zeplin](https://zpl.io/Z11ulFh)
-* [PNGs](https://www.dropbox.com/sh/n1ljua526dyo6l3/AAB43ovSiTFXz4LxKuIARrGfa?dl=0)
-* [Sketch](https://www.dropbox.com/s/bz9w6u8mn742rjt/Base%20Photo%20Gallery.sketch?dl=0)
+* [Jira Ticket and Requirements](https://perfectsense.atlassian.net/browse/BSP-1571)
+* Designs: [Zeplin](https://zpl.io/Z11ulFh), [PNG](https://www.dropbox.com/sh/n1ljua526dyo6l3/AAB43ovSiTFXz4LxKuIARrGfa?dl=0), [Sketch](https://www.dropbox.com/s/bz9w6u8mn742rjt/Base%20Photo%20Gallery.sketch?dl=0)
 
 ### Blocks and properties
 * `Gallery`:

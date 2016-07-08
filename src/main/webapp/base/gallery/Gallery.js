@@ -59,7 +59,8 @@ class Gallery {
             introBackgroundMontage: 'Gallery-intro-background-montage',
             controlsButtonsActive: 'Gallery-controls-buttons-active',
             viewList: 'Gallery-view-list',
-            viewTiles: 'Gallery-view-tiles'
+            viewTiles: 'Gallery-view-tiles',
+            viewActive: 'Gallery-view-active'
         };
         
         // After contructing the object, run init() to set up the gallery
@@ -82,7 +83,7 @@ class Gallery {
      * Initizlize the gallery slides.
      */
     initSlides() {
-        this.$slidesContainer = this.$el.find(this.selectors.slidesContainer).hide();
+        this.$slidesContainer = this.$el.find(this.selectors.slidesContainer);
     }
 
 
@@ -205,7 +206,6 @@ class Gallery {
     initControls() {
         
         // Find the control hooks within the DOM
-        this.$controls = this.$el.find(this.selectors.controls);
         this.$controlsCount = this.$el.find(this.selectors.controlsCount);
         this.$controlsButtonsList = this.$el.find(this.selectors.controlsButtonsList);
         this.$controlsButtonsTiles = this.$el.find(this.selectors.controlsButtonsTiles);
@@ -232,7 +232,8 @@ class Gallery {
         let $viewList;
         
         // Duplicate the slide container
-        $viewList = this.$slidesContainer.clone().hide()
+        // Note: must use CSS to show and hide the list!
+        $viewList = this.$slidesContainer.clone()
             .addClass(this.classNames.viewList)
             .insertAfter(this.$slidesContainer);
 
@@ -245,7 +246,8 @@ class Gallery {
         let $viewTiles;
         
         // Duplicate the slide container
-        $viewTiles = this.$slidesContainer.clone().hide()
+        // Note: must use CSS to show and hide the tiles!
+        $viewTiles = this.$slidesContainer.clone()
             .addClass(this.classNames.viewTiles)
             .insertAfter(this.$slidesContainer);
 
@@ -298,6 +300,8 @@ class Gallery {
 
 
     controlsUpdateCount() {
+        // Template "13 Photos" is hardcoded.
+        // Should probably make an option to configure the template.
         this.$controlsCount.html(`${this.count} Photos`);
     }
 
@@ -309,7 +313,7 @@ class Gallery {
     modeSetList() {
         this._modeClear();
         this.$controlsButtonsList.addClass(this.classNames.controlsButtonsActive);
-        this.$viewList.show();
+        this.$viewList.addClass(this.classNames.viewActive);
     }
 
     
@@ -320,7 +324,7 @@ class Gallery {
     modeSetTiles() {
         this._modeClear();
         this.$controlsButtonsTiles.addClass(this.classNames.controlsButtonsActive);
-        this.$viewTiles.show();
+        this.$viewTiles.addClass(this.classNames.viewActive);
         this.masonry.layout();
     }
 
@@ -331,10 +335,10 @@ class Gallery {
     _modeClear() {
         
         this.$controlsButtonsTiles.removeClass(this.classNames.controlsButtonsActive);
-        this.$viewTiles.hide();
+        this.$viewTiles.removeClass(this.classNames.viewActive);
         
         this.$controlsButtonsList.removeClass(this.classNames.controlsButtonsActive);
-        this.$viewList.hide();
+        this.$viewList.removeClass(this.classNames.viewActive);
     }
 
 
