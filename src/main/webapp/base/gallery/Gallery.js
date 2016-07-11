@@ -45,6 +45,8 @@ class Gallery {
             slidesContainer: '.Gallery-slides',
             slide: '.GallerySlide',
             slideImage: '.GallerySlide-image',
+            slideImageImg: '.GallerySlide-image > img',
+            slideImageZoom: '.GallerySlide-image-zoom',
             slideInfo: '.GallerySlide-info',
             controls: '.Gallery-controls',
             controlsCount: '.Gallery-controls-count',
@@ -75,7 +77,8 @@ class Gallery {
         this.initIntro();
         this.initViewList();
         this.initViewTiles();
-        this.initControls();
+        this.initViewControls();
+        this.initZoom();
     }
 
 
@@ -203,7 +206,7 @@ class Gallery {
      *   </div>
      * </div>
      */
-    initControls() {
+    initViewControls() {
         
         // Find the control hooks within the DOM
         this.$controlsCount = this.$el.find(this.selectors.controlsCount);
@@ -268,6 +271,45 @@ class Gallery {
         });
     }
 
+
+    /**
+     * Initialize the event handlers to provide zoom when user clicks image.
+     */
+    initZoom() {
+        
+        // Create single event handler for all clicks on slideImage containers.
+        // This container contains the zoom control, the slide image, and possibly other
+        // things like social media share buttons.
+        this.$el.on('click', this.selectors.slideImage, (event) => {
+            
+            let $target = $(event.target);
+                        
+            // Only do something if clicking on the slide image or the zoom control
+            // Do not do anything if clicking on other things on the image container
+            // (like social media share buttons)
+            if ($target.is(this.selectors.slideImageImg) || $target.is(this.selectors.slideImageZoom)) {
+                // Get the start of the slide that was clicked
+                let $slide = $target.closest(this.selectors.slide);
+                let $siblings = $slide.parent().find(this.selectors.slide);
+                let slideIndex = $siblings.index($slide);
+                
+                // Zoom in on the slide that was clicked
+                this.zoom(slideIndex);
+            }
+            return false;
+        });
+    }
+    
+    
+    /**
+     * Zoom the image for a slides.
+     * @param  {Number} index
+     * The index of the slide to zoom (0=first slide, n-1=last slide)
+     */
+    zoom(index) {
+        alert(`Zoom not yet implemented (slide #${index})`);
+    }
+    
     
     reset() {
     }
