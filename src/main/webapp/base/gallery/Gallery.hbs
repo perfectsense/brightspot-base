@@ -19,6 +19,27 @@
             {{#each slides}}{{this}}{{/each}}
         </div>
     {{/defineElement}}
+
+    {{#defineElement "zoomControls" noWith=true}}
+        <div class="{{elementName}}">
+            <a href="#" class="{{elementName}}-close">Close</a>
+            <a href="#" class="{{elementName}}-prev">Previous</a>
+            <span class="{{elementName}}-count"></span>
+            <a href="#" class="{{elementName}}-next">Next</a>
+            <a href="#" class="{{elementName}}-info">Info</a>
+        </div>
+    {{/defineElement}}
+    
+    {{#defineElement "zoomCarousel" noWith=true}}
+        <div class="{{elementName}}"></div>
+    {{/defineElement}}
+    
+    {{#defineElement "zoom" noWith=true}}
+        <div class="{{elementName}}">
+            {{element "zoomControls"}}
+            {{element "zoomCarousel"}}
+        </div>
+    {{/defineElement}}
     
     {{#defineBlockContainer}}
         <section class="{{blockName}}" data-bsp-gallery-list data-bsp-gallery-list-options="{ {{#if introBackgroundImage}}&quot;introBackgroundImage&quot;:&quot;{{introBackgroundImage}}&quot;{{/if}} }" {{extraAttributes}}>
@@ -27,6 +48,7 @@
                 {{element "intro"}}
                 {{element "controls"}}
                 {{element "slides"}}
+                {{element "zoom"}}
             {{/defineBlockBody}}
             
         </section>

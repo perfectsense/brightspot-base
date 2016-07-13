@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import bspUtils from 'bsp-utils';
 import Masonry from 'masonry';
+import bspModal from 'bsp-modal';
+import bspCarousel from 'bsp-carousel';
 
 class Gallery {
 
@@ -36,7 +38,10 @@ class Gallery {
             introBackgroundImage: '',
             
              // Max images to include in intro montage
-            introBackgroundMontageCount: 7
+            introBackgroundMontageCount: 7,
+            
+            // When zooming images, attempt to go fullscreen immediately
+            fullscreen: false
             
         }, options);
 
@@ -52,7 +57,15 @@ class Gallery {
             controlsCount: '.Gallery-controls-count',
             controlsButtonsList: '.Gallery-controls-buttons-list',
             controlsButtonsTiles: '.Gallery-controls-buttons-tiles',
-            masonryItem: '.GallerySlide'
+            masonryItem: '.GallerySlide',
+            zoom: '.Gallery-zoom',
+            zoomClose: '.Gallery-zoomControls-close',
+            zoomPrev: '.Gallery-zoomControls-prev',
+            zoomNext: '.Gallery-zoomControls-next',
+            zoomInfo: '.Gallery-zoomControls-info',
+            zoomCount: '.Gallery-zoomControls-count',
+            zoomFullscreen: '.Gallery-zoomControls-fullscreen',
+            zoomCarousel: '.Gallery-zoomCarousel'
         };
         
         this.classNames = {
@@ -62,7 +75,8 @@ class Gallery {
             controlsButtonsActive: 'Gallery-controls-buttons-active',
             viewList: 'Gallery-view-list',
             viewTiles: 'Gallery-view-tiles',
-            viewActive: 'Gallery-view-active'
+            viewActive: 'Gallery-view-active',
+            viewZoom: 'Gallery-view-zoom'
         };
         
         // After contructing the object, run init() to set up the gallery
@@ -273,11 +287,26 @@ class Gallery {
 
 
     /**
-     * Initialize the event handlers to provide zoom when user clicks image.
+     * Initialize the event handlers to provide zoom when user clicks image,
+     * plus set up the modal window.
      */
     initZoom() {
+                
+        // Find the zoom container
+        this.$zoom = this.$el.find(this.selectors.zoom);
+        if (!this.$zoom.length) {
+            // If we can't find the zoom container don't bother continuing
+            // because we cannot support zooming
+            return;
+        }
+        this.$zoom.detach();
+
+        // Turn the zoom container into a modal but don't open it.
+        // Note this will remove the zoom container from the DOM.
+        this.modal = Object.create(bspModal);
+        this.modal.init(this.$zoom, {theme: 'Gallery', id: 'Gallery'});
         
-        // Create single event handler for all clicks on slideImage containers.
+        // Create a single event handler for all clicks on slideImage containers.
         // This container contains the zoom control, the slide image, and possibly other
         // things like social media share buttons.
         this.$el.on('click', this.selectors.slideImage, (event) => {
@@ -285,7 +314,7 @@ class Gallery {
             let $target = $(event.target);
                         
             // Only do something if clicking on the slide image or the zoom control
-            // Do not do anything if clicking on other things on the image container
+            // Do not do anything if clicking on other things in the image container
             // (like social media share buttons)
             if ($target.is(this.selectors.slideImageImg) || $target.is(this.selectors.slideImageZoom)) {
                 // Get the start of the slide that was clicked
@@ -302,23 +331,186 @@ class Gallery {
     
     
     /**
-     * Zoom the image for a slides.
+     * Zoom the image for a slide.
+     * 
      * @param  {Number} index
      * The index of the slide to zoom (0=first slide, n-1=last slide)
      */
     zoom(index) {
-        alert(`Zoom not yet implemented (slide #${index})`);
+
+        let $zoomCarousel;
+        let $zoomSlides;
+        
+        // Because the vex modal calls jQuery.remove() when the modal is closed,
+        // all the jQuery events are destroyed, so we need to create the events
+        // each time we open the modal.
+        this.$zoom.find(this.selectors.zoomClose).on('click', event => {
+            this.zoomClose();
+            return false;
+        });
+        this.$zoom.find(this.selectors.zoomPrev).on('click', event => {
+            this.zoomPrev();
+            return false;
+        });
+        this.$zoom.find(this.selectors.zoomNext).on('click', event => {
+            this.zoomNext();
+            return false;
+        });
+        this.$zoom.find(this.selectors.zoomInfo).on('click', event => {
+            this.zoomInfoToggle();
+            return false;
+        });
+        this.$zoom.find(this.selectors.zoomFullscreen).on('click', event => {
+            this.zoomFullscreen();
+            return false;
+        });
+
+        // Open the modal, using class 'modal-theme-gallery'
+        this.modal.open(this.$zoom, {theme: 'gallery', id: 'gallery'});
+        
+        // Because the vex modal calls jQuery.remove() when the modal is closed,
+        // all the jQuery events are destroyed, so we need to recreate the carousel.
+        $zoomCarousel = this.$zoom.find(this.selectors.zoomCarousel);
+        $zoomCarousel.empty();
+        $zoomSlides = this.$slidesContainer.clone().addClass(this.classNames.viewZoom).appendTo($zoomCarousel);
+
+        // Whenever the carousel slide changes update the count
+        $zoomCarousel.on('afterChange', event => {
+            this.zoomUpdateCount();
+        });
+        
+        // Create the carousel within the modal
+        this.carousel = Object.create(bspCarousel);
+        this.carousel.init($zoomSlides, {
+            // theme: '',
+            themeConfig: {
+                initialSlide: index,
+                arrows: false
+            }
+        });
+        
+        // Intialize the count so it shows the initial slide number
+        this.zoomUpdateCount();
+        
+        // Optionally go to full screen mode
+        if (this.settings.fullscreen) {
+            this.zoomFullscreen();
+        }
     }
     
     
-    reset() {
+    /**
+     * When in zoomed mode, close the modal and return to the gallery.
+     */
+    zoomClose() {
+        if (this.modal) {
+            this.modal.close();
+        }
     }
 
-
-    remove() {
+    
+    /**
+     * When in zoomed mode, go to the next slide in the carousel.
+     */
+    zoomNext() {
+        if (this.carousel) {
+            this.carousel.next();
+        }
+    }
+    
+    
+    /**
+     * When in zoomed mode, go to the previous slide in the carousel.
+     */
+    zoomPrev() {
+        if (this.carousel) {
+            this.carousel.prev();
+        }
+    }
+    
+    
+    /**
+     * Toggle show or hide the slide info in the zoomed view.
+     * @param  {Boolean} [show=toggle]
+     * Use true to show the info, or false to hide the info.
+     * If not specied, the default is to toggle the current state.
+     */
+    zoomInfoToggle(flag) {
+        let show;
+        show = (flag === undefined) ? !this.zoomInfoIsShowing() : flag;
+        if (show) {
+            this.zoomInfoShow();
+        } else {
+            this.zoomInfoHide();
+        }
+    }
+    
+    
+    /**
+     * Show the slide info when in zoomed mode.
+     */
+    zoomInfoShow() {
+        
+    }
+    
+    
+    /**
+     * Hide the slide info when in zoomed mode.
+     */
+    zoomInfoHide() {
+        
+    }
+    
+    
+    /**
+     * Determine if the slide info is currently showing in zoomed mode.
+     * @return {Boolean} Returns true if the info is currently showing.
+     */
+    zoomInfoIsShowing() {
+        
+    }
+    
+    
+    /**
+     * When in zoomed mode, update the slide count (current slide and total number of slides).
+     */
+    zoomUpdateCount() {
+        let $count;
+        let currentSlide;
+        if (this.carousel) {
+            $count = this.$zoom.find(this.selectors.zoomCount);
+            currentSlide = this.carousel.currentSlide() + 1;
+            $count.text(currentSlide + '/' + this.carousel.slideCount());
+        }
+    }
+    
+    
+    /**
+     * Take the zoom view to full screen width.
+     * 
+     * Note this can be called only from a user-intiated event (like a click event handler)
+     * and may not work in all browsers or in other situations (like when running in an iframe).
+     */
+    zoomFullscreen() {
+        
+        let el = this.$zoom[0];
+        
+        if (!el) {
+            return;
+        }
+                
+        if (el.requestFullscreen) {
+            el.requestFullscreen();
+        } else if (el.webkitRequestFullscreen) {
+            el.webkitRequestFullscreen();
+        } else if (el.mozRequestFullScreen) {
+            el.mozRequestFullScreen();
+        } else if (el.msRequestFullscreen) {
+            el.msRequestFullscreen();
+        }
     }
 
-
+    
     /**
      * Get a list of slide images.
      * @return {Array of Strings} Array of slide image urls.
@@ -336,11 +528,18 @@ class Gallery {
     }
     
     
+    /**
+     * Return the number of slides in the gallery.
+     * @return {Number} Number of slides in the gallery.
+     */
     get count() {
         return this.$slides.length;
     }
 
 
+    /**
+     * Set the gallery count display ("13 Photos").
+     */
     controlsUpdateCount() {
         // Template "13 Photos" is hardcoded.
         // Should probably make an option to configure the template.
@@ -372,7 +571,7 @@ class Gallery {
 
 
     /**
-     * Clear the mode - unset the active button and hide all modes.
+     * Clear the mode display (list or tile mode). This unsets the active button and hides all modes.
      */
     _modeClear() {
         
@@ -411,6 +610,7 @@ class Gallery {
     }
 }
 
+
 // Set up a bspUtils.plugin so an element with data-bsp-gallery-list
 // will automatically create a Gallery list
 export default bspUtils.plugin(false, 'bsp-gallery', 'list', {
@@ -424,7 +624,7 @@ export default bspUtils.plugin(false, 'bsp-gallery', 'list', {
         let gallery = new Gallery(item, options);
                 
         // Save the Gallery object on the element so it can be accessed later if necessary
-        $(item).data('bsp-gallery-list', gallery);
+        $(item).data('bsp-gallery', gallery);
         
         // Run it!
         gallery.init();

@@ -168,6 +168,7 @@
       }
     }
   }
+  
   /* List View */
   &-view-list {
     
@@ -195,12 +196,82 @@
     }
   }
   
+  /* Tile view */
   &-view-tiles {
     // No tiles until window is wide enough
     display: none;
   }
 }
 
+// Gallery modal used for zoomed view
+.modal-theme-gallery {
+  .vex-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  // Hide the default close button for the modal since we will provide our own
+  .vex-close {
+    display:none;
+  }
+}
+
+// Modal is outside of the main Gallery element
+.Gallery-zoom {
+  width: 100vw;
+  height: 100vh;
+  position:relative;
+}
+
+// Extra controls that appear when zoomed (Close, Prev, Next, Count, Info)
+.Gallery-zoomControls {
+    position: absolute;
+    // Give a z-index so it sits on top of image
+    z-index:1;
+    
+    &-count {
+      color: white;
+    }
+}
+
+// Slides within the zoom modal / carousel
+.Gallery-view-zoom {
+
+  // We hide the Gallery-slides initially, so we need to override that and display them
+  // In addition we'll set to flex so we can center the image.
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color:black;
+
+  .GallerySlide {
+    width: 100vw;
+    height: 100vh;
+    
+    &-image {
+      width: 100%;
+      height: 100%;
+      img {
+        display: block;
+        width: 100%;
+        height:100%;
+        
+        // If the image gets stretched, add space so the image stays at same aspect ratio.
+        object-fit: contain;
+      }
+      &-zoom {
+        // Since we're already zoomed, hide the zoom control on the image
+        display: none !important;
+      }
+    }
+    &-info {
+      display: none;
+    }
+  }
+}
 
 
 // Styles for 568px
