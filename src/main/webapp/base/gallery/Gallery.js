@@ -76,7 +76,8 @@ class Gallery {
             viewList: 'Gallery-view-list',
             viewTiles: 'Gallery-view-tiles',
             viewActive: 'Gallery-view-active',
-            viewZoom: 'Gallery-view-zoom'
+            viewZoom: 'Gallery-view-zoom',
+            viewZoomShowInfo: 'Gallery-view-zoom-showinfo'
         };
         
         // After contructing the object, run init() to set up the gallery
@@ -392,6 +393,9 @@ class Gallery {
         // Intialize the count so it shows the initial slide number
         this.zoomUpdateCount();
         
+        // Hide the info by default
+        this.zoomInfoHide();
+        
         // Optionally go to full screen mode
         if (this.settings.fullscreen) {
             this.zoomFullscreen();
@@ -450,7 +454,7 @@ class Gallery {
      * Show the slide info when in zoomed mode.
      */
     zoomInfoShow() {
-        
+        this.$zoom.addClass(this.classNames.viewZoomShowInfo);
     }
     
     
@@ -458,7 +462,7 @@ class Gallery {
      * Hide the slide info when in zoomed mode.
      */
     zoomInfoHide() {
-        
+        this.$zoom.removeClass(this.classNames.viewZoomShowInfo);        
     }
     
     
@@ -467,7 +471,7 @@ class Gallery {
      * @return {Boolean} Returns true if the info is currently showing.
      */
     zoomInfoIsShowing() {
-        
+        return this.$zoom.hasClass(this.classNames.viewZoomShowInfo);
     }
     
     

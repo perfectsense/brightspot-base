@@ -228,51 +228,118 @@
 // Extra controls that appear when zoomed (Close, Prev, Next, Count, Info)
 .Gallery-zoomControls {
     position: absolute;
+    
     // Give a z-index so it sits on top of image
     z-index:1;
     
+    &-close {
+      position: fixed;
+      right:15px;
+      top:10px;
+    }
+    &-prev {
+      display:none;
+    }
+    &-next {
+      display:none;
+    }
+    &-info {
+      position: fixed;
+      right: 15px;
+      bottom: 10px;
+    }
     &-count {
+      // Hidden for mobile view but displayed when info button is clicked
+      display:none;
       color: white;
+      position: fixed;
+      right: 60px;
+      bottom: 10px;
     }
 }
 
 // Slides within the zoom modal / carousel
 .Gallery-view-zoom {
 
-  // We hide the Gallery-slides initially, so we need to override that and display them
-  // In addition we'll set to flex so we can center the image.
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  // The Gallery-slides are hidden initially, so we need to override that and display them.
+  display: block;
   background-color:black;
 
   .GallerySlide {
+
+    // Set up a flex columns so the image and info can expand / contract to fill available space
+    display: flex;
+    flex-direction: column;
+
     width: 100vw;
     height: 100vh;
     
     &-image {
+      
+      display: flex;
+      flex-direction:column;
+      justify-content:center;
+
       width: 100%;
       height: 100%;
+      
+      min-height: 40%;
+      
       img {
+        // Make the image fill the available space
         display: block;
-        width: 100%;
-        height:100%;
+        min-width: 100%;
+        min-height:100%;
         
         // If the image gets stretched, add space so the image stays at same aspect ratio.
         object-fit: contain;
       }
+      
       &-zoom {
         // Since we're already zoomed, hide the zoom control on the image
         display: none !important;
       }
     }
+    
     &-info {
+      
+      // Hide the info by default
       display: none;
+      
+      z-index:1;
+      background-color: #1b1b1b;
+      color: white;
+      padding: 20px;
+      font-size:80%;
     }
   }
 }
 
+// A class is added to indicate when the info should be displayed within the zoomed view
+.Gallery-view-zoom-showinfo {
+    .GallerySlide {
+      &-image {
+        // Make the image take up any remaining space not used by the info
+        flex-grow: 1;
+        flex-shrink: 99;
+      }
+      &-info {
+        display:block;
+        overflow: auto;
+        
+        // A little extra padding so the text can scroll up past the "Info" button
+        // to ensure the text is not obscured.
+        padding-bottom: 40px;
+
+        flex-shrink: 1;
+      }
+    }
+    .Gallery-zoomControls {
+      &-count {
+        display:block;
+      }
+    }
+}
 
 // Styles for 568px
 @media @mq-sm {
