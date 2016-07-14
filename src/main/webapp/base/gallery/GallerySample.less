@@ -317,6 +317,7 @@
 
 // A class is added to indicate when the info should be displayed within the zoomed view
 .Gallery-view-zoom-showinfo {
+  
     .GallerySlide {
       &-image {
         // Make the image take up any remaining space not used by the info
@@ -337,6 +338,10 @@
     .Gallery-zoomControls {
       &-count {
         display:block;
+      }
+      &-info {
+        // Make the "Info" button appear selected
+        font-weight: bold;
       }
     }
 }
