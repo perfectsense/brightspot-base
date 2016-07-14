@@ -51,79 +51,79 @@
     }
     
     &-background {
-    }
-    
-    &-background-single {
-      img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        object-fit: cover;
-      }
-    }
-    
-    &-background-montage {
       
-      img {
-        position: absolute;
-        object-fit: cover;
-        
-        // Image grid:
-        // 
-        // 111 2
-        // 111 3
-        // 4 777
-        // 5 777
-        // 6 777
-        
-        &:nth-child(1) {
+      &[data-gallery-intro-background="single"] {
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
           top: 0;
-          left: 0;
-          width:65%; // let width expand
-          height:40%;
+          object-fit: cover;
         }
-        &:nth-child(2) {
-          top: 0;
-          right: 0;
-          width: 32%;
-          height: 19%;
-        }
-        &:nth-child(3) {
-          top: 21%;
-          right:0;
-          width: 32%;
-          height: 19%;
-        }
-        &:nth-child(4) {
-          width: 32%;
-          height: 18%;
-          left: 0;
-          top: 42%;
-        }
-        &:nth-child(5) {
-          width: 32%;
-          height: 18%;
-          left: 0;
-          top: 62%;
-        }
-        &:nth-child(6) {
-          width: 32%;
-          height: 18%;
-          left: 0;
-          bottom: 0;
-        }
-        &:nth-child(7) {
-          width: 65%;
-          height: 58%;
-          right: 0;
-          bottom: 0;
-        }
+      }
+      
+      &[data-gallery-intro-background="montage"] {
         
-        // Hide anything past seven images
-        &:nth-child(n+8) {
-          display:none;
+        img {
+          position: absolute;
+          object-fit: cover;
+          
+          // Image grid:
+          // 
+          // 111 2
+          // 111 3
+          // 4 777
+          // 5 777
+          // 6 777
+          
+          &:nth-child(1) {
+            top: 0;
+            left: 0;
+            width:65%; // let width expand
+            height:40%;
+          }
+          &:nth-child(2) {
+            top: 0;
+            right: 0;
+            width: 32%;
+            height: 19%;
+          }
+          &:nth-child(3) {
+            top: 21%;
+            right:0;
+            width: 32%;
+            height: 19%;
+          }
+          &:nth-child(4) {
+            width: 32%;
+            height: 18%;
+            left: 0;
+            top: 42%;
+          }
+          &:nth-child(5) {
+            width: 32%;
+            height: 18%;
+            left: 0;
+            top: 62%;
+          }
+          &:nth-child(6) {
+            width: 32%;
+            height: 18%;
+            left: 0;
+            bottom: 0;
+          }
+          &:nth-child(7) {
+            width: 65%;
+            height: 58%;
+            right: 0;
+            bottom: 0;
+          }
+          
+          // Hide anything past seven images
+          &:nth-child(n+8) {
+            display:none;
+          }
         }
       }
     }
@@ -170,7 +170,7 @@
   }
   
   /* List View */
-  &-view-list {
+  &-slides[data-gallery-view="list"] {
     
     display:block;
     
@@ -197,7 +197,7 @@
   }
   
   /* Tile view */
-  &-view-tiles {
+  &-slides[data-gallery-view="tiles"] {
     // No tiles until window is wide enough
     display: none;
   }
@@ -258,8 +258,8 @@
     }
 }
 
-// Slides within the modal / carousel
-.Gallery-view-modal {
+// Slides within the modal
+.Gallery-slides[data-gallery-view="modal"] {
 
   // The Gallery-slides are hidden initially, so we need to override that and display them.
   display: block;
@@ -315,8 +315,8 @@
   }
 }
 
-// A class is added to indicate when the info should be displayed within modal view
-.Gallery-view-modal-showinfo {
+// An attribute is added to indicate when the info should be displayed within modal view
+.Gallery-modal[data-gallery-showinfo] {
   
     .GallerySlide {
       &-image {
@@ -335,10 +335,13 @@
         flex-shrink: 1;
       }
     }
+    
     .Gallery-modalControls {
+      
       &-count {
         display:inline-block;
       }
+      
       &-info {
         // Make the "Info" button appear selected
         font-weight: bold;
@@ -360,7 +363,7 @@
         padding: 30px 40px;
       }
       
-      &-background-montage {
+      &-background[data-gallery-intro-background="montage"] {
         
         img {
           
@@ -464,7 +467,7 @@
           // Replace control buttons with icons if desired
         }
         
-        &-active {
+        [data-gallery-button-active] {
           font-weight:bold;
           text-decoration:none;
           pointer-events: none;
@@ -473,7 +476,7 @@
       }
     }
     
-    &-view-list {
+    &-slides[data-gallery-view="list"] {
       
       display: none;
       
@@ -504,7 +507,7 @@
       }
     }
     
-    &-view-tiles {
+    &-slides[data-gallery-view="tiles"] {
       
       display: none;
       border-top: 1px solid white;
@@ -528,7 +531,7 @@
       }
     }
     
-    &-view-active {
+    &-slides[data-gallery-view-active] {
       display:block;
     }
   }
@@ -547,14 +550,14 @@
       }
     }
         
-    &-view-list {
+    &-slides[data-gallery-view="list"] {
       .GallerySlide {
         padding-top: 30px;
         padding-bottom: 30px;
       }
     }
     
-    &-view-tiles {
+    &-slides[data-gallery-view="tiles"] {
       padding: 30px 20px;
       .GallerySlide {
         width: 30%;
@@ -579,7 +582,7 @@
       }
     }
         
-    &-view-list {
+    &-slides[data-gallery-view="list"] {
       
       .GallerySlide {
         
@@ -601,7 +604,7 @@
       }
     }
     
-    &-view-tiles {
+    &-slides[data-gallery-view="tiles"] {
       padding: 40px 100px;
       .GallerySlide {
         width: 400px;

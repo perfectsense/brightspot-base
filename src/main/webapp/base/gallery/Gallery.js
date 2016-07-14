@@ -45,6 +45,7 @@ class Gallery {
             
         }, options);
 
+        // Selectors used to find various elements within the gallery HTML
         this.selectors = {
             intro: '.Gallery-intro',
             slidesContainer: '.Gallery-slides',
@@ -52,8 +53,6 @@ class Gallery {
             slideImage: '.GallerySlide-image',
             slideImageImg: '.GallerySlide-image > img',
             slideImageZoom: '.GallerySlide-image-zoom',
-            slideInfo: '.GallerySlide-info',
-            controls: '.Gallery-controls',
             controlsCount: '.Gallery-controls-count',
             controlsButtonsList: '.Gallery-controls-buttons-list',
             controlsButtonsTiles: '.Gallery-controls-buttons-tiles',
@@ -68,18 +67,33 @@ class Gallery {
             modalCarousel: '.Gallery-modalCarousel'
         };
         
+        // Class names for elements added by the javascript
         this.classNames = {
-            introBackground: 'Gallery-intro-background',
-            introBackgroundSingle: 'Gallery-intro-background-single',
-            introBackgroundMontage: 'Gallery-intro-background-montage',
-            controlsButtonsActive: 'Gallery-controls-buttons-active',
-            viewList: 'Gallery-view-list',
-            viewTiles: 'Gallery-view-tiles',
-            viewActive: 'Gallery-view-active',
-            viewModal: 'Gallery-view-modal',
-            viewModalShowInfo: 'Gallery-view-modal-showinfo'
+            // A background div is added behind the gallery info so we can display
+            // a single image or a montage of images
+            introBackground: 'Gallery-intro-background'
         };
-        
+
+        // Attributes added to certain elements to affect the layout
+        this.attr = {
+            
+            // The gallery background can be 'single' or 'montage'
+            introBackground: 'data-gallery-intro-background',
+                        
+            // The gallery view can be "list" or "tiles" or "modal"
+            view: 'data-gallery-view',
+            
+            // When a view is active, this attribute is added so the view can be shown
+            viewActive: 'data-gallery-view-active',
+            
+            // When a button is active this attribute is added so the button can be styled differently
+            buttonActive: 'data-gallery-button-active',
+            
+            // In modal view, the info can be toggled.
+            // This attribute is added when the info is toggled on.
+            showInfo: 'data-gallery-showinfo'
+        };
+
         // After contructing the object, run init() to set up the gallery
     }
 
@@ -106,6 +120,8 @@ class Gallery {
 
 
     /**
+     * Get a jQuery Object containing all the slides.
+     * 
      * Though we do not currently support adding or removing slides,
      * making this a dynamic function that finds the slides each time
      * just in case we add functionality in the future.
@@ -155,7 +171,7 @@ class Gallery {
      */
     initIntroBackground() {
         
-        // Only add a background if introBackground is true
+        // Only add a background if settings.introBackground is true
         if (!this.settings.introBackground) {
             return;
         }
@@ -177,8 +193,8 @@ class Gallery {
      */
     initIntroBackgroundSingle() {
         
-        // Add a class so the image can be styled
-        this.$introBackground.addClass(this.classNames.introBackgroundSingle);
+        // Add an attribute so the image can be styled
+        this.$introBackground.attr(this.attr.introBackground, 'single');
         
         // Add a single image to the background
         $('<img>', {src:this.settings.introBackgroundImage, alt:''}).appendTo(this.$introBackground);
@@ -192,9 +208,9 @@ class Gallery {
         
         // Maybe use CSS like this?
         // https://css-tricks.com/seamless-responsive-photo-grid/
-        
-        // Add a class so the images can be styled
-        this.$introBackground.addClass(this.classNames.introBackgroundMontage);
+         
+        // Add an attribute so the images can be styled
+        this.$introBackground.attr(this.attr.introBackground, 'montage');
         
         // Add all the slide images to the background so they can be styled in a montage
         let urls = this.slideImages;
@@ -252,7 +268,7 @@ class Gallery {
         // Duplicate the slide container
         // Note: must use CSS to show and hide the list!
         $viewList = this.$slidesContainer.clone()
-            .addClass(this.classNames.viewList)
+            .attr(this.attr.view, 'list')
             .insertAfter(this.$slidesContainer);
 
         // Cache for later use
@@ -266,7 +282,7 @@ class Gallery {
         // Duplicate the slide container
         // Note: must use CSS to show and hide the tiles!
         $viewTiles = this.$slidesContainer.clone()
-            .addClass(this.classNames.viewTiles)
+            .attr(this.attr.view, 'tiles')
             .insertAfter(this.$slidesContainer);
 
         // Cache for later use
@@ -373,7 +389,7 @@ class Gallery {
         // all the jQuery events are destroyed, so we need to recreate the carousel.
         $modalCarousel = this.$modal.find(this.selectors.modalCarousel);
         $modalCarousel.empty();
-        $modalSlides = this.$slidesContainer.clone().addClass(this.classNames.viewModal).appendTo($modalCarousel);
+        $modalSlides = this.$slidesContainer.clone().attr(this.attr.view, 'modal').appendTo($modalCarousel);
 
         // Whenever the carousel slide changes update the count
         $modalCarousel.on('afterChange', event => {
@@ -454,7 +470,7 @@ class Gallery {
      * Show the slide info when in modal mode.
      */
     modalInfoShow() {
-        this.$modal.addClass(this.classNames.viewModalShowInfo);
+        this.$modal.attr(this.attr.showInfo, '');
     }
     
     
@@ -462,7 +478,7 @@ class Gallery {
      * Hide the slide info when in modal view.
      */
     modalInfoHide() {
-        this.$modal.removeClass(this.classNames.viewModalShowInfo);        
+        this.$modal.removeAttr(this.attr.showInfo);        
     }
     
     
@@ -471,7 +487,7 @@ class Gallery {
      * @return {Boolean} Returns true if the info is currently showing.
      */
     modalInfoIsShowing() {
-        return this.$modal.hasClass(this.classNames.viewModalShowInfo);
+        return this.$modal[0].hasAttribute(this.attr.showInfo);
     }
     
     
@@ -557,8 +573,8 @@ class Gallery {
      */
     modeSetList() {
         this._modeClear();
-        this.$controlsButtonsList.addClass(this.classNames.controlsButtonsActive);
-        this.$viewList.addClass(this.classNames.viewActive);
+        this.$controlsButtonsList.attr(this.attr.buttonActive, '');
+        this.$viewList.attr(this.attr.viewActive, '');
     }
 
     
@@ -568,8 +584,8 @@ class Gallery {
      */
     modeSetTiles() {
         this._modeClear();
-        this.$controlsButtonsTiles.addClass(this.classNames.controlsButtonsActive);
-        this.$viewTiles.addClass(this.classNames.viewActive);
+        this.$controlsButtonsTiles.attr(this.attr.buttonActive, '');
+        this.$viewTiles.attr(this.attr.viewActive, '');
         this.masonry.layout();
     }
 
@@ -579,11 +595,11 @@ class Gallery {
      */
     _modeClear() {
         
-        this.$controlsButtonsTiles.removeClass(this.classNames.controlsButtonsActive);
-        this.$viewTiles.removeClass(this.classNames.viewActive);
+        this.$controlsButtonsTiles.removeAttr(this.attr.buttonActive);
+        this.$viewTiles.removeAttr(this.attr.viewActive);
         
-        this.$controlsButtonsList.removeClass(this.classNames.controlsButtonsActive);
-        this.$viewList.removeClass(this.classNames.viewActive);
+        this.$controlsButtonsList.removeAttr(this.attr.buttonActive);
+        this.$viewList.removeAttr(this.attr.viewActive);
     }
 
 
