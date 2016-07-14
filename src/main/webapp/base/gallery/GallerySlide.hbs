@@ -21,12 +21,14 @@
         </div>
     {{/defineElement}}
 
-    {{#defineElement "infoTitle"}}
-        <div class="{{elementName}}">{{this}}</div>
+    {{#defineElement "infoTitleShort"}}data-shorttext="{{this}}"{{/defineElement}}
+    {{#defineElement "infoTitle" noWith=true}}
+        <div class="{{elementName}}" {{element "infoTitleShort"}}><span>{{infoTitle}}</span></div>
     {{/defineElement}}
 
-    {{#defineElement "infoDescription"}}
-        <div class="{{elementName}}">{{this}}</div>
+    {{#defineElement "infoDescriptionShort"}}data-shorttext="{{this}}"{{/defineElement}}
+    {{#defineElement "infoDescription" noWith=true}}
+        <div class="{{elementName}}" {{element "infoDescriptionShort"}}><span>{{infoDescription}}</span></div>
     {{/defineElement}}
 
     {{#defineElement "infoAttribution"}}

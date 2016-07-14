@@ -364,6 +364,19 @@
     }
 }
 
+// For certain sizes show the alternate short text if it is defined
+@media only screen and (max-width: 767px) { 
+  .GallerySlide-info {
+    [data-shorttext] {
+      > span { font-size: 0; }
+      &:after {
+        font-size: inherit;
+        content: attr(data-shortText);
+      }
+    }
+  }
+}
+
 // Styles for 568px
 @media @mq-sm {
   
