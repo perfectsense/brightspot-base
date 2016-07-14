@@ -40,7 +40,7 @@ class Gallery {
              // Max images to include in intro montage
             introBackgroundMontageCount: 7,
             
-            // When zooming images, attempt to go fullscreen immediately
+            // When in modal view, attempt to go fullscreen immediately
             fullscreen: false
             
         }, options);
@@ -58,14 +58,14 @@ class Gallery {
             controlsButtonsList: '.Gallery-controls-buttons-list',
             controlsButtonsTiles: '.Gallery-controls-buttons-tiles',
             masonryItem: '.GallerySlide',
-            zoom: '.Gallery-zoom',
-            zoomClose: '.Gallery-zoomControls-close',
-            zoomPrev: '.Gallery-zoomControls-prev',
-            zoomNext: '.Gallery-zoomControls-next',
-            zoomInfo: '.Gallery-zoomControls-info',
-            zoomCount: '.Gallery-zoomControls-count',
-            zoomFullscreen: '.Gallery-zoomControls-fullscreen',
-            zoomCarousel: '.Gallery-zoomCarousel'
+            modal: '.Gallery-modal',
+            modalClose: '.Gallery-modalControls-close',
+            modalPrev: '.Gallery-modalControls-prev',
+            modalNext: '.Gallery-modalControls-next',
+            modalInfo: '.Gallery-modalControls-info',
+            modalCount: '.Gallery-modalControls-count',
+            modalFullscreen: '.Gallery-modalControls-fullscreen',
+            modalCarousel: '.Gallery-modalCarousel'
         };
         
         this.classNames = {
@@ -76,8 +76,8 @@ class Gallery {
             viewList: 'Gallery-view-list',
             viewTiles: 'Gallery-view-tiles',
             viewActive: 'Gallery-view-active',
-            viewZoom: 'Gallery-view-zoom',
-            viewZoomShowInfo: 'Gallery-view-zoom-showinfo'
+            viewModal: 'Gallery-view-modal',
+            viewModalShowInfo: 'Gallery-view-modal-showinfo'
         };
         
         // After contructing the object, run init() to set up the gallery
@@ -93,7 +93,7 @@ class Gallery {
         this.initViewList();
         this.initViewTiles();
         this.initViewControls();
-        this.initZoom();
+        this.initModal();
     }
 
 
@@ -288,33 +288,33 @@ class Gallery {
 
 
     /**
-     * Initialize the event handlers to provide zoom when user clicks image,
-     * plus set up the modal window.
+     * Initialize the event handlers to show modal view when user clicks image,
+     * plus set up the modal popup.
      */
-    initZoom() {
+    initModal() {
                 
-        // Find the zoom container
-        this.$zoom = this.$el.find(this.selectors.zoom);
-        if (!this.$zoom.length) {
-            // If we can't find the zoom container don't bother continuing
+        // Find the modal container
+        this.$modal = this.$el.find(this.selectors.modal);
+        if (!this.$modal.length) {
+            // If we can't find the modal container don't bother continuing
             // because we cannot support zooming
             return;
         }
-        this.$zoom.detach();
+        this.$modal.detach();
 
-        // Turn the zoom container into a modal but don't open it.
-        // Note this will remove the zoom container from the DOM.
+        // Turn the modal container into a modal but don't open it.
+        // Note this will remove the modal container from the DOM.
         this.modal = Object.create(bspModal);
-        this.modal.init(this.$zoom, {theme: 'Gallery', id: 'Gallery'});
+        this.modal.init(this.$modal, {theme: 'Gallery', id: 'Gallery'});
         
         // Create a single event handler for all clicks on slideImage containers.
-        // This container contains the zoom control, the slide image, and possibly other
+        // This container contains the modal controls, the slide image, and possibly other
         // things like social media share buttons.
         this.$el.on('click', this.selectors.slideImage, (event) => {
             
             let $target = $(event.target);
                         
-            // Only do something if clicking on the slide image or the zoom control
+            // Only do something if clicking on the slide image or the modal control
             // Do not do anything if clicking on other things in the image container
             // (like social media share buttons)
             if ($target.is(this.selectors.slideImageImg) || $target.is(this.selectors.slideImageZoom)) {
@@ -323,8 +323,8 @@ class Gallery {
                 let $siblings = $slide.parent().find(this.selectors.slide);
                 let slideIndex = $siblings.index($slide);
                 
-                // Zoom in on the slide that was clicked
-                this.zoom(slideIndex);
+                // Display the modal and start on the slide that was clicked
+                this.modalOpen(slideIndex);
             }
             return false;
         });
@@ -332,57 +332,57 @@ class Gallery {
     
     
     /**
-     * Zoom the image for a slide.
+     * Open the modal to display a slide carousel.
      * 
      * @param  {Number} index
      * The index of the slide to zoom (0=first slide, n-1=last slide)
      */
-    zoom(index) {
+    modalOpen(index) {
 
-        let $zoomCarousel;
-        let $zoomSlides;
+        let $modalCarousel;
+        let $modalSlides;
         
         // Because the vex modal calls jQuery.remove() when the modal is closed,
         // all the jQuery events are destroyed, so we need to create the events
         // each time we open the modal.
-        this.$zoom.find(this.selectors.zoomClose).on('click', event => {
-            this.zoomClose();
+        this.$modal.find(this.selectors.modalClose).on('click', event => {
+            this.modalClose();
             return false;
         });
-        this.$zoom.find(this.selectors.zoomPrev).on('click', event => {
-            this.zoomPrev();
+        this.$modal.find(this.selectors.modalPrev).on('click', event => {
+            this.modalPrev();
             return false;
         });
-        this.$zoom.find(this.selectors.zoomNext).on('click', event => {
-            this.zoomNext();
+        this.$modal.find(this.selectors.modalNext).on('click', event => {
+            this.modalNext();
             return false;
         });
-        this.$zoom.find(this.selectors.zoomInfo).on('click', event => {
-            this.zoomInfoToggle();
+        this.$modal.find(this.selectors.modalInfo).on('click', event => {
+            this.modalInfoToggle();
             return false;
         });
-        this.$zoom.find(this.selectors.zoomFullscreen).on('click', event => {
-            this.zoomFullscreen();
+        this.$modal.find(this.selectors.modalFullscreen).on('click', event => {
+            this.modalFullscreen();
             return false;
         });
 
         // Open the modal, using class 'modal-theme-gallery'
-        this.modal.open(this.$zoom, {theme: 'gallery', id: 'gallery'});
+        this.modal.open(this.$modal, {theme: 'gallery', id: 'gallery'});
         
         // Because the vex modal calls jQuery.remove() when the modal is closed,
         // all the jQuery events are destroyed, so we need to recreate the carousel.
-        $zoomCarousel = this.$zoom.find(this.selectors.zoomCarousel);
-        $zoomCarousel.empty();
-        $zoomSlides = this.$slidesContainer.clone().addClass(this.classNames.viewZoom).appendTo($zoomCarousel);
+        $modalCarousel = this.$modal.find(this.selectors.modalCarousel);
+        $modalCarousel.empty();
+        $modalSlides = this.$slidesContainer.clone().addClass(this.classNames.viewModal).appendTo($modalCarousel);
 
         // Whenever the carousel slide changes update the count
-        $zoomCarousel.on('afterChange', event => {
-            this.zoomUpdateCount();
+        $modalCarousel.on('afterChange', event => {
+            this.modalUpdateCount();
         });
         
         // Create the carousel within the modal
         this.carousel = Object.create(bspCarousel);
-        this.carousel.init($zoomSlides, {
+        this.carousel.init($modalSlides, {
             // theme: '',
             themeConfig: {
                 initialSlide: index,
@@ -391,22 +391,22 @@ class Gallery {
         });
         
         // Intialize the count so it shows the initial slide number
-        this.zoomUpdateCount();
+        this.modalUpdateCount();
         
         // Hide the info by default
-        this.zoomInfoHide();
+        this.modalInfoHide();
         
         // Optionally go to full screen mode
         if (this.settings.fullscreen) {
-            this.zoomFullscreen();
+            this.modalFullscreen();
         }
     }
     
     
     /**
-     * When in zoomed mode, close the modal and return to the gallery.
+     * When in modal view, close the modal and return to the gallery.
      */
-    zoomClose() {
+    modalClose() {
         if (this.modal) {
             this.modal.close();
         }
@@ -414,9 +414,9 @@ class Gallery {
 
     
     /**
-     * When in zoomed mode, go to the next slide in the carousel.
+     * When in modal view, go to the next slide in the carousel.
      */
-    zoomNext() {
+    modalNext() {
         if (this.carousel) {
             this.carousel.next();
         }
@@ -424,9 +424,9 @@ class Gallery {
     
     
     /**
-     * When in zoomed mode, go to the previous slide in the carousel.
+     * When in modal view, go to the previous slide in the carousel.
      */
-    zoomPrev() {
+    modalPrev() {
         if (this.carousel) {
             this.carousel.prev();
         }
@@ -434,55 +434,55 @@ class Gallery {
     
     
     /**
-     * Toggle show or hide the slide info in the zoomed view.
+     * Toggle show or hide the slide info in the modal view.
      * @param  {Boolean} [show=toggle]
      * Use true to show the info, or false to hide the info.
      * If not specied, the default is to toggle the current state.
      */
-    zoomInfoToggle(flag) {
+    modalInfoToggle(flag) {
         let show;
-        show = (flag === undefined) ? !this.zoomInfoIsShowing() : flag;
+        show = (flag === undefined) ? !this.modalInfoIsShowing() : flag;
         if (show) {
-            this.zoomInfoShow();
+            this.modalInfoShow();
         } else {
-            this.zoomInfoHide();
+            this.modalInfoHide();
         }
     }
     
     
     /**
-     * Show the slide info when in zoomed mode.
+     * Show the slide info when in modal mode.
      */
-    zoomInfoShow() {
-        this.$zoom.addClass(this.classNames.viewZoomShowInfo);
+    modalInfoShow() {
+        this.$modal.addClass(this.classNames.viewModalShowInfo);
     }
     
     
     /**
-     * Hide the slide info when in zoomed mode.
+     * Hide the slide info when in modal view.
      */
-    zoomInfoHide() {
-        this.$zoom.removeClass(this.classNames.viewZoomShowInfo);        
+    modalInfoHide() {
+        this.$modal.removeClass(this.classNames.viewModalShowInfo);        
     }
     
     
     /**
-     * Determine if the slide info is currently showing in zoomed mode.
+     * Determine if the slide info is currently showing in modal view.
      * @return {Boolean} Returns true if the info is currently showing.
      */
-    zoomInfoIsShowing() {
-        return this.$zoom.hasClass(this.classNames.viewZoomShowInfo);
+    modalInfoIsShowing() {
+        return this.$modal.hasClass(this.classNames.viewModalShowInfo);
     }
     
     
     /**
-     * When in zoomed mode, update the slide count (current slide and total number of slides).
+     * When in modal view, update the slide count (current slide and total number of slides).
      */
-    zoomUpdateCount() {
+    modalUpdateCount() {
         let $count;
         let currentSlide;
         if (this.carousel) {
-            $count = this.$zoom.find(this.selectors.zoomCount);
+            $count = this.$modal.find(this.selectors.modalCount);
             currentSlide = this.carousel.currentSlide() + 1;
             $count.text(currentSlide + '/' + this.carousel.slideCount());
         }
@@ -490,14 +490,14 @@ class Gallery {
     
     
     /**
-     * Take the zoom view to full screen width.
+     * Take the modal view to full screen width.
      * 
      * Note this can be called only from a user-intiated event (like a click event handler)
      * and may not work in all browsers or in other situations (like when running in an iframe).
      */
-    zoomFullscreen() {
+    modalFullscreen() {
         
-        let el = this.$zoom[0];
+        let el = this.$modal[0];
         
         if (!el) {
             return;

@@ -219,14 +219,14 @@
 }
 
 // Modal is outside of the main Gallery element
-.Gallery-zoom {
+.Gallery-modal {
   width: 100vw;
   height: 100vh;
   position:relative;
 }
 
-// Extra controls that appear when zoomed (Close, Prev, Next, Count, Info)
-.Gallery-zoomControls {
+// Extra controls that appear in the modal (Close, Prev, Next, Count, Info)
+.Gallery-modalControls {
     position: absolute;
     
     // Give a z-index so it sits on top of image
@@ -258,8 +258,8 @@
     }
 }
 
-// Slides within the zoom modal / carousel
-.Gallery-view-zoom {
+// Slides within the modal / carousel
+.Gallery-view-modal {
 
   // The Gallery-slides are hidden initially, so we need to override that and display them.
   display: block;
@@ -296,7 +296,7 @@
       }
       
       &-zoom {
-        // Since we're already zoomed, hide the zoom control on the image
+        // Since we're already in the modal, hide the zoom control on the image
         display: none !important;
       }
     }
@@ -315,8 +315,8 @@
   }
 }
 
-// A class is added to indicate when the info should be displayed within the zoomed view
-.Gallery-view-zoom-showinfo {
+// A class is added to indicate when the info should be displayed within modal view
+.Gallery-view-modal-showinfo {
   
     .GallerySlide {
       &-image {
@@ -335,9 +335,9 @@
         flex-shrink: 1;
       }
     }
-    .Gallery-zoomControls {
+    .Gallery-modalControls {
       &-count {
-        display:block;
+        display:inline-block;
       }
       &-info {
         // Make the "Info" button appear selected

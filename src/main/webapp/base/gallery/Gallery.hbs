@@ -20,7 +20,7 @@
         </div>
     {{/defineElement}}
 
-    {{#defineElement "zoomControls" noWith=true}}
+    {{#defineElement "modalControls" noWith=true}}
         <div class="{{elementName}}">
             <a href="#" class="{{elementName}}-close">Close</a>
             <a href="#" class="{{elementName}}-prev">Previous</a>
@@ -30,14 +30,14 @@
         </div>
     {{/defineElement}}
     
-    {{#defineElement "zoomCarousel" noWith=true}}
+    {{#defineElement "modalCarousel" noWith=true}}
         <div class="{{elementName}}"></div>
     {{/defineElement}}
     
-    {{#defineElement "zoom" noWith=true}}
+    {{#defineElement "modal" noWith=true}}
         <div class="{{elementName}}">
-            {{element "zoomControls"}}
-            {{element "zoomCarousel"}}
+            {{element "modalControls"}}
+            {{element "modalCarousel"}}
         </div>
     {{/defineElement}}
     
@@ -48,7 +48,7 @@
                 {{element "intro"}}
                 {{element "controls"}}
                 {{element "slides"}}
-                {{element "zoom"}}
+                {{element "modal"}}
             {{/defineBlockBody}}
             
         </section>
