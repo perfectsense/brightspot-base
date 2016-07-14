@@ -3,7 +3,7 @@
     
     "image": {
         "_template": "base/util/Image",
-        "src": "{{image([640, 800], [200, 640])}}"
+        "src": "{{image([200, 800], [200, 640])}}"
     },
 
     "infoTitle": "{{words(8,12)}}",
