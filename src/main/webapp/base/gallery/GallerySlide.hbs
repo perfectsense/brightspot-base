@@ -1,6 +1,6 @@
 {{#defineBlock "GallerySlide"}}
 
-    {{#defineElement "image"}}
+    {{#defineElement "media"}}
         <div class="{{elementName}}">
             <button title="Increase image size" class="{{elementName}}-zoom">Zoom</button>
             {{this}}
@@ -31,7 +31,7 @@
         <div class="{{blockName}}" {{extraAttributes}}>
 
             {{#defineBlockBody}}
-                {{element "image"}}
+                {{element "media"}}
                 {{element "info"}}
             {{/defineBlockBody}}
             

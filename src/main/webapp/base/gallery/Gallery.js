@@ -50,9 +50,9 @@ class Gallery {
             intro: '.Gallery-intro',
             slidesContainer: '.Gallery-slides',
             slide: '.GallerySlide',
-            slideImage: '.GallerySlide-image',
-            slideImageImg: '.GallerySlide-image > img',
-            slideImageZoom: '.GallerySlide-image-zoom',
+            slideMedia: '.GallerySlide-media',
+            slideMediaImg: '.GallerySlide-media > img',
+            slideMediaZoom: '.GallerySlide-media-zoom',
             controlsCount: '.Gallery-controls-count',
             controlsButtonsList: '.Gallery-controls-buttons-list',
             controlsButtonsTiles: '.Gallery-controls-buttons-tiles',
@@ -112,7 +112,7 @@ class Gallery {
 
 
     /**
-     * Initizlize the gallery slides.
+     * Initialize the gallery slides.
      */
     initSlides() {
         this.$slidesContainer = this.$el.find(this.selectors.slidesContainer);
@@ -323,17 +323,17 @@ class Gallery {
         this.modal = Object.create(bspModal);
         this.modal.init(this.$modal, {theme: 'Gallery', id: 'Gallery'});
         
-        // Create a single event handler for all clicks on slideImage containers.
+        // Create a single event handler for all clicks on slideMedia containers.
         // This container contains the modal controls, the slide image, and possibly other
         // things like social media share buttons.
-        this.$el.on('click', this.selectors.slideImage, (event) => {
+        this.$el.on('click', this.selectors.slideMedia, (event) => {
             
             let $target = $(event.target);
                         
             // Only do something if clicking on the slide image or the modal control
             // Do not do anything if clicking on other things in the image container
             // (like social media share buttons)
-            if ($target.is(this.selectors.slideImageImg) || $target.is(this.selectors.slideImageZoom)) {
+            if ($target.is(this.selectors.slideMediaImg) || $target.is(this.selectors.slideMediaZoom)) {
                 // Get the start of the slide that was clicked
                 let $slide = $target.closest(this.selectors.slide);
                 let $siblings = $slide.parent().find(this.selectors.slide);
@@ -537,8 +537,8 @@ class Gallery {
      */
     get slideImages() {
         let urls = [];
-        this.$el.find(this.selectors.slideImage).each((i, el) => {
-            // Find the first img element within the slideImage block
+        this.$el.find(this.selectors.slideMedia).each((i, el) => {
+            // Find the first img element within the slideMedia block
             let src = $(el).find('img').attr('src');
             if (src) {
                 urls.push(src)

@@ -151,7 +151,7 @@
 
   .GallerySlide {
     
-    &-image {
+    &-media {
       position:relative;
       cursor: pointer;
       
@@ -162,7 +162,7 @@
         top: 26px;
       }
       &:hover {
-        .GallerySlide-image-zoom {
+        .GallerySlide-media-zoom {
           display: block;
         }
       }
@@ -182,7 +182,7 @@
       
       .clearfix;
       
-      &-image {
+      &-media {
         width:100%;
         img {
           display:block;
@@ -274,7 +274,7 @@
     width: 100vw;
     height: 100vh;
     
-    &-image {
+    &-media {
       
       display: flex;
       flex-direction:column;
@@ -319,7 +319,7 @@
 .Gallery-modal[data-gallery-showinfo] {
   
     .GallerySlide {
-      &-image {
+      &-media {
         // Make the image take up any remaining space not used by the info
         flex-grow: 1;
         flex-shrink: 99;
@@ -488,7 +488,7 @@
         
         .clearfix;
         
-        &-image {
+        &-media {
           float:right;
           margin-right:20px;
           width:72%;
@@ -518,7 +518,7 @@
         width: 45%;
         margin-bottom: 30px;
         
-        &-image {
+        &-media {
           width:100%;
           img {
             width:100%;
@@ -589,7 +589,7 @@
         padding-top: 40px;
         padding-bottom: 40px;
         
-        &-image {
+        &-media {
           // Since we're not letting gallery expand beyond this size, using px width instead of %
           width: 1024px;
           margin-right:98px;
