@@ -155,17 +155,19 @@
       position:relative;
       cursor: pointer;
       
-      &-zoom {
-        display: none;
-        position: absolute;
-        right: 26px;
-        top: 26px;
-      }
       &:hover {
-        .GallerySlide-media-zoom {
+        .GallerySlide-mediaControlsZoom {
           display: block;
         }
       }
+    }
+    
+    &-mediaControlsZoom {
+      // Hide by default, show on :hover
+      display: none;
+      position: absolute;
+      right: 26px;
+      top: 26px;
     }
   }
   
@@ -184,6 +186,8 @@
       
       &-media {
         width:100%;
+      }
+      &-mediaContent {
         img {
           display:block;
           width:100%;
@@ -253,7 +257,7 @@
       display:none;
       color: white;
       position: fixed;
-      right: 60px;
+      right: 70px;
       bottom: 10px;
     }
 }
@@ -277,8 +281,19 @@
     &-media {
       
       display: flex;
-      flex-direction:column;
-      justify-content:center;
+      // flex-direction:column;
+      // justify-content:center;
+      
+      width: 100%;
+      height: 100%;
+    }
+    
+    &-mediaContent {
+
+      // Set up flex display so the image scales to available space
+      display: flex;
+      // flex-direction:column;
+      // justify-content:center;
 
       width: 100%;
       height: 100%;
@@ -294,11 +309,11 @@
         // If the image gets stretched, add space so the image stays at same aspect ratio.
         object-fit: contain;
       }
-      
-      &-zoom {
-        // Since we're already in the modal, hide the zoom control on the image
-        display: none !important;
-      }
+    }
+    
+    &-mediaControlsZoom {
+      // Since we're already in the modal, hide the zoom control on the image
+      display: none !important;
     }
     
     &-info {
@@ -520,6 +535,8 @@
         
         &-media {
           width:100%;
+        }
+        &-mediaContent {
           img {
             width:100%;
             height: auto;

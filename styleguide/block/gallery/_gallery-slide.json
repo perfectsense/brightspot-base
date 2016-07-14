@@ -1,7 +1,7 @@
 {
     "_template": "base/gallery/GallerySlide",
     
-    "media": {
+    "mediaContent": {
         "_template": "base/util/Image",
         "src": "{{image([200, 800], [200, 640])}}"
     },
