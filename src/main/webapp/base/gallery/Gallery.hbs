@@ -20,13 +20,33 @@
         </div>
     {{/defineElement}}
 
+    {{#defineElement "modalControlsClose" noWith=true}}
+        <button class="{{elementName}}"><span>Close</span></button>
+    {{/defineElement}}
+    
+    {{#defineElement "modalControlsPrev" noWith=true}}
+        <button class="{{elementName}}"><span>Previous</span></button>
+    {{/defineElement}}
+    
+    {{#defineElement "modalControlsNext" noWith=true}}
+        <button class="{{elementName}}"><span>Next</span></button>
+    {{/defineElement}}
+    
+    {{#defineElement "modalControlsCount" noWith=true}}
+        <span class="{{elementName}}"></span>
+    {{/defineElement}}
+    
+    {{#defineElement "modalControlsInfo" noWith=true}}
+        <button class="{{elementName}}"><span>Info</span></button>
+    {{/defineElement}}
+
     {{#defineElement "modalControls" noWith=true}}
         <div class="{{elementName}}">
-            <button class="{{elementName}}-close"><span>Close</span></button>
-            <button class="{{elementName}}-prev"><span>Previous</span></button>
-            <span class="{{elementName}}-count"></span>
-            <button class="{{elementName}}-next"><span>Next</span></button>
-            <button class="{{elementName}}-info"><span>Info</span></button>
+            {{element "modalControlsClose"}}
+            {{element "modalControlsPrev"}}
+            {{element "modalControlsCount"}}
+            {{element "modalControlsNext"}}
+            {{element "modalControlsInfo"}}
         </div>
     {{/defineElement}}
     

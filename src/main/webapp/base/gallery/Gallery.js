@@ -58,12 +58,11 @@ class Gallery {
             controlsButtonsTiles: '.Gallery-controls-buttons-tiles',
             masonryItem: '.GallerySlide',
             modal: '.Gallery-modal',
-            modalClose: '.Gallery-modalControls-close',
-            modalPrev: '.Gallery-modalControls-prev',
-            modalNext: '.Gallery-modalControls-next',
-            modalInfo: '.Gallery-modalControls-info',
-            modalCount: '.Gallery-modalControls-count',
-            modalFullscreen: '.Gallery-modalControls-fullscreen',
+            modalClose: '.Gallery-modalControlsClose',
+            modalPrev: '.Gallery-modalControlsPrev',
+            modalNext: '.Gallery-modalControlsNext',
+            modalInfo: '.Gallery-modalControlsInfo',
+            modalCount: '.Gallery-modalControlsCount',
             modalCarousel: '.Gallery-modalCarousel'
         };
         
