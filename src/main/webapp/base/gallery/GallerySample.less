@@ -368,7 +368,7 @@
 }
 
 // For certain sizes show the alternate short text if it is defined
-@media only screen and (max-width: 767px) { 
+@media only screen and (max-width: 567px) { 
   .Gallery, .Gallery-modal {
     [data-shorttext] {
       > span { font-size: 0; }
@@ -455,6 +455,24 @@
           }
         }
       }    
+    }
+  }
+  
+  // Modal 568px
+  // Move the slide info to the right instead of the bottom
+  .Gallery-modal[data-gallery-showinfo] {
+    .GallerySlide {
+      flex-direction: row;
+      &-media {
+        width: 65%;
+      }
+      &-info {
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        padding-top: 40px;
+        width: 35%;
+      }
     }
   }
 }
@@ -565,6 +583,22 @@
     
     &-slides[data-gallery-view-active] {
       display:block;
+    }
+  }
+
+  // Modal 768px
+  // Goes back to putting the info below the image
+  .Gallery-modal[data-gallery-showinfo] {
+    .GallerySlide {
+      flex-direction: column;
+      &-media {
+        width: 100vw;
+      }
+      &-info {
+        display:block;
+        padding-top: 20px;
+        width: 100vw;
+      }
     }
   }
 }
