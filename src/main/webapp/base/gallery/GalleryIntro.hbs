@@ -1,11 +1,13 @@
 {{#defineBlock "GalleryIntro"}}
 
-    {{#defineElement "title"}}
-        <div class="{{elementName}}">{{this}}</div>
+    {{#defineElement "titleShort"}}data-shorttext="{{this}}"{{/defineElement}}
+    {{#defineElement "title" noWith=true}}
+        <div class="{{elementName}}" {{element "titleShort"}}><span>{{title}}</span></div>
     {{/defineElement}}
     
-    {{#defineElement "description"}}
-        <div class="{{elementName}}">{{this}}</div>
+    {{#defineElement "descriptionShort"}}data-shorttext="{{this}}"{{/defineElement}}
+    {{#defineElement "description" noWith=true}}
+        <div class="{{elementName}}" {{element "descriptionShort"}}><span>{{description}}</span></div>
     {{/defineElement}}
     
     {{#defineBlockContainer}}

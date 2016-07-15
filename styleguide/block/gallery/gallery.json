@@ -4,7 +4,9 @@
     "intro": {
         "_template": "base/gallery/GalleryIntro",
         "title": "{{words(8,12)}}",
-        "description": "{{words(60,120)}}"
+        "titleShort": "{{words(4,8)}}",
+        "description": "{{words(60,80)}}",
+        "descriptionShort": "{{words(20,50)}}"
     },
     
     "introBackgroundImage": "",
