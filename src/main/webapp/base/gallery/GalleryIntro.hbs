@@ -2,12 +2,16 @@
 
     {{#defineElement "titleShort"}}data-shorttext="{{this}}"{{/defineElement}}
     {{#defineElement "title" noWith=true}}
-        <div class="{{elementName}}" {{element "titleShort"}}><span>{{title}}</span></div>
+        <div class="{{elementName}}" {{element "titleShort"}} itemprop="headline">
+            <span>{{title}}</span>
+        </div>
     {{/defineElement}}
     
     {{#defineElement "descriptionShort"}}data-shorttext="{{this}}"{{/defineElement}}
     {{#defineElement "description" noWith=true}}
-        <div class="{{elementName}}" {{element "descriptionShort"}}><span>{{description}}</span></div>
+        <div class="{{elementName}}" {{element "descriptionShort"}} itemprop="description">
+            <span>{{description}}</span>
+        </div>
     {{/defineElement}}
     
     {{#defineBlockContainer}}

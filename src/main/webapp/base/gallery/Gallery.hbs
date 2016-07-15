@@ -62,7 +62,10 @@
     {{/defineElement}}
     
     {{#defineBlockContainer}}
-        <section class="{{blockName}}" data-bsp-gallery-list data-bsp-gallery-list-options="{ {{#if introBackgroundImage}}&quot;introBackgroundImage&quot;:&quot;{{introBackgroundImage}}&quot;{{/if}} }" {{extraAttributes}}>
+        <section class="{{blockName}}"
+            itemscope itemtype="https://schema.org/ImageGallery"
+            data-bsp-gallery-list
+            data-bsp-gallery-list-options="{ {{#if introBackgroundImage}}&quot;introBackgroundImage&quot;:&quot;{{introBackgroundImage}}&quot;{{/if}} }" {{extraAttributes}}>
 
             {{#defineBlockBody}}
                 {{element "intro"}}

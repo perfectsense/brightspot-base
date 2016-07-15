@@ -23,12 +23,16 @@
 
     {{#defineElement "infoTitleShort"}}data-shorttext="{{this}}"{{/defineElement}}
     {{#defineElement "infoTitle" noWith=true}}
-        <div class="{{elementName}}" {{element "infoTitleShort"}}><span>{{infoTitle}}</span></div>
+        <div class="{{elementName}}" {{element "infoTitleShort"}} itemprop="name">
+            <span>{{infoTitle}}</span>
+        </div>
     {{/defineElement}}
 
     {{#defineElement "infoDescriptionShort"}}data-shorttext="{{this}}"{{/defineElement}}
     {{#defineElement "infoDescription" noWith=true}}
-        <div class="{{elementName}}" {{element "infoDescriptionShort"}}><span>{{infoDescription}}</span></div>
+        <div class="{{elementName}}" {{element "infoDescriptionShort"}} itemprop="description">
+            <span>{{infoDescription}}</span>
+        </div>
     {{/defineElement}}
 
     {{#defineElement "infoAttribution"}}
@@ -44,7 +48,7 @@
     {{/defineElement}}
     
     {{#defineBlockContainer}}
-        <div class="{{blockName}}" {{extraAttributes}}>
+        <div class="{{blockName}}" itemprop="image" itemtype="http://schema.org/ImageObject" {{extraAttributes}}>
 
             {{#defineBlockBody}}
                 {{element "media"}}
