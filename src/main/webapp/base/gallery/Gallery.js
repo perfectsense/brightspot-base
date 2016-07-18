@@ -30,6 +30,10 @@ class Gallery {
         
         this.settings = Object.assign({}, {
             
+            // Allow classnames to be overridden easily
+            classNameMain: 'Gallery',
+            classNameSlide: 'GallerySlide',
+            
             // Make a background from the intro block?
             // Set to false if you don't want to add a background.
             introBackground: true,
@@ -46,31 +50,33 @@ class Gallery {
         }, options);
 
         // Selectors used to find various elements within the gallery HTML
+        let cn = this.settings.classNameMain;
+        let cnSlide = this.settings.classNameSlide;
         this.selectors = {
-            intro: '.Gallery-intro',
-            slidesContainer: '.Gallery-slides',
-            slide: '.GallerySlide',
-            slideMedia: '.GallerySlide-media',
-            slideMediaImg: '.GallerySlide-mediaContent > img',
-            slideMediaZoom: '.GallerySlide-mediaControlsZoom',
-            controlsCount: '.Gallery-controls-count',
-            controlsButtonsList: '.Gallery-controls-buttons-list',
-            controlsButtonsTiles: '.Gallery-controls-buttons-tiles',
-            masonryItem: '.GallerySlide',
-            modal: '.Gallery-modal',
-            modalClose: '.Gallery-modalControlsClose',
-            modalPrev: '.Gallery-modalControlsPrev',
-            modalNext: '.Gallery-modalControlsNext',
-            modalInfo: '.Gallery-modalControlsInfo',
-            modalCount: '.Gallery-modalControlsCount',
-            modalCarousel: '.Gallery-modalCarousel'
+            intro: `.${cn}-intro`,
+            slidesContainer: `.${cn}-slides`,
+            slide: `.${cnSlide}`,
+            slideMedia: `.${cnSlide}-media`,
+            slideMediaImg: `.${cnSlide}-mediaContent > img`,
+            slideMediaZoom: `.${cnSlide}-mediaControlsZoom`,
+            controlsCount: `.${cn}-controls-count`,
+            controlsButtonsList: `.${cn}-controls-buttons-list`,
+            controlsButtonsTiles: `.${cn}-controls-buttons-tiles`,
+            masonryItem: `.${cnSlide}`,
+            modal: `.${cn}-modal`,
+            modalClose: `.${cn}-modalControlsClose`,
+            modalPrev: `.${cn}-modalControlsPrev`,
+            modalNext: `.${cn}-modalControlsNext`,
+            modalInfo: `.${cn}-modalControlsInfo`,
+            modalCount: `.${cn}-modalControlsCount`,
+            modalCarousel: `.${cn}-modalCarousel`
         };
         
         // Class names for elements added by the javascript
         this.classNames = {
             // A background div is added behind the gallery info so we can display
             // a single image or a montage of images
-            introBackground: 'Gallery-intro-background'
+            introBackground: `${cn}-intro-background`
         };
 
         // Attributes added to certain elements to affect the layout
