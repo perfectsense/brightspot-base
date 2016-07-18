@@ -588,15 +588,75 @@
 
   // Modal 768px
   // Goes back to putting the info below the image
+  // Also puts controls at the bottom and adds next/previous buttons
+  // Modal controls appear at the bottom of the screen
+  .Gallery-modalControls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60px;
+    background-color: #1b1b1b;
+    
+    &Close {
+      .clearpos;
+      position: fixed;
+      left: 15px;
+      bottom: 20px;
+    }
+    
+    &Count {
+      .clearpos;
+      position: fixed;
+      left: 0;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      display: inline-block;
+      z-index: -1;
+    }
+    
+    &Info {
+      bottom: 20px;
+    }
+    
+    &Prev {
+      display: inline-block;
+      position: fixed;
+      right: 55%;
+      bottom: 20px;
+    }
+    &Next {
+      display: inline-block;
+      position: fixed;
+      left: 55%;
+      bottom: 20px;
+    }
+  }
+
+  .Gallery-modalCarousel {
+    .GallerySlide {
+      &-media {
+        // Leave space for modal controls
+        margin-bottom: 60px;
+      }
+    }
+  }
   .Gallery-modal[data-gallery-showinfo] {
+    .Gallery-modalControls {
+      background-color: transparent;
+    }
     .GallerySlide {
       flex-direction: column;
       &-media {
+        margin-bottom: 0;
         width: 100vw;
       }
       &-info {
         display:block;
         padding-top: 20px;
+        padding-bottom: 60px;
         width: 100vw;
       }
     }
