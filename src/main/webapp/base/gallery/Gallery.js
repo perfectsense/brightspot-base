@@ -99,7 +99,7 @@ class Gallery {
             showInfo: 'data-gallery-showinfo'
         };
 
-        // After contructing the object, run init() to set up the gallery
+        // After constructing the object, run init() to set up the gallery
     }
 
 
@@ -112,7 +112,7 @@ class Gallery {
         this.initViewList();
         this.initViewTiles();
         this.initViewControls();
-        this.initModal();
+        this.modalInit();
     }
 
 
@@ -312,7 +312,7 @@ class Gallery {
      * Initialize the event handlers to show modal view when user clicks image,
      * plus set up the modal popup.
      */
-    initModal() {
+    modalInit() {
                 
         // Find the modal container
         this.$modal = this.$el.find(this.selectors.modal);
