@@ -690,6 +690,83 @@
       }
     }
   }
+
+  // Modal 1024
+  // Goes back to putting the info to the right of the image
+  // Also puts controls at the rigth of the image.
+  .Gallery-modalControls {
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    height: 100vh;
+    
+    &Close {
+      .clearpos;
+      position: fixed;
+      top: 20px;
+      right: 15px;
+    }
+    
+    &Count {
+      .clearpos;
+      position: fixed;
+      top: 50%;
+      right: 0;
+      text-align: center;
+      vertical-align: middle;
+      color: white;
+      display: inline-block;
+      z-index: auto;
+      width: 60px;
+    }
+    
+    &Info {
+      bottom: 20px;
+    }
+    
+    &Prev {
+      .clearpos;
+      display: inline-block;
+      position: fixed;
+      right: 0;
+      top: 46%;
+    }
+    &Next {
+      .clearpos;
+      display: inline-block;
+      position: fixed;
+      right: 0;
+      top: 54%;
+    }
+  }
+
+  .Gallery-modalCarousel {
+    .GallerySlide {
+      &-media {
+        // Remove space for modal controls at bottom since they are now on right
+        margin-bottom: 0;
+      }
+    }
+  }
+  .Gallery-modal[data-gallery-showinfo] {
+    .Gallery-modalControls {
+      background-color: #3c3c3c;
+    }
+    .GallerySlide {
+      flex-direction: row;
+      &-media {
+        width: 75%;
+      }
+      &-info {
+        display:flex;
+        padding: 0 80px 0 20px; // leave extra room on right for controls
+        width: 25%;
+      }
+    }
+  }
 }
 
 // Styles for 1440px
