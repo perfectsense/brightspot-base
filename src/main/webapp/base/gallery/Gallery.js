@@ -33,6 +33,7 @@ class Gallery {
             // Allow classnames to be overridden easily
             classNameMain: 'Gallery',
             classNameSlide: 'GallerySlide',
+            attrNameMain: 'data-gallery',
             
             // Make a background from the intro block?
             // Set to false if you don't want to add a background.
@@ -80,23 +81,24 @@ class Gallery {
         };
 
         // Attributes added to certain elements to affect the layout
+        let attr = this.settings.attrNameMain; // "data-gallery" by default
         this.attr = {
             
             // The gallery background can be 'single' or 'montage'
-            introBackground: 'data-gallery-intro-background',
+            introBackground: `${attr}-intro-background`,
                         
             // The gallery view can be "list" or "tiles" or "modal"
-            view: 'data-gallery-view',
+            view: `${attr}-view`,
             
             // When a view is active, this attribute is added so the view can be shown
-            viewActive: 'data-gallery-view-active',
+            viewActive: `${attr}-view-active`,
             
             // When a button is active this attribute is added so the button can be styled differently
-            buttonActive: 'data-gallery-button-active',
+            buttonActive: `${attr}-button-active`,
             
             // In modal view, the info can be toggled.
             // This attribute is added when the info is toggled on.
-            showInfo: 'data-gallery-showinfo'
+            showInfo: `${attr}-showinfo`
         };
 
         // After constructing the object, run init() to set up the gallery
