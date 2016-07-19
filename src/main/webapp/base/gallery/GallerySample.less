@@ -31,6 +31,10 @@
     color:black;
   }
   
+  &[data-gallery-singleton] {
+    // If the gallery is in singleton mode
+  }
+  
   &-intro {
     // Gallery-background images to be positioned absolutely
     position: relative;
@@ -148,10 +152,11 @@
   }
 
   // Slides are cloned into List and Tiles views, so hide the original slides
+  // unless we're in "singleton" mode. In that case there are not list or tiles views.
   &-slides {
     display: none;
   }
-
+  
   .GallerySlide {
     
     &-media {
@@ -202,7 +207,35 @@
       }
     }
   }
-  
+
+  /* Singleton view */
+  &[data-gallery-singleton] &-slides {
+    
+    display: block;
+    
+    .GallerySlide {
+      
+      padding-top: 0;
+      padding-bottom: 10px;
+      
+      .clearfix;
+      
+      &-media {
+        width:100%;
+      }
+      &-mediaContent {
+        img {
+          display:block;
+          width:100%;
+          height: auto;
+        }
+      }
+      &-info {
+        margin: 10px 20px;
+      }
+    }
+  }
+
   /* Tile view */
   &-slides[data-gallery-view="tiles"] {
     // No tiles until window is wide enough
@@ -333,6 +366,16 @@
   }
 }
 
+// An attribute is added to indicate when the carousel navigation should be hidden within modal view
+// (if there is only a single slide to show in the carousel)
+.Gallery-modal[data-gallery-hidenav] {
+  .Gallery-modalControls {
+    &Prev, &Count, &Next {
+      display: none !important;
+    }
+  }
+}
+
 // An attribute is added to indicate when the info should be displayed within modal view
 .Gallery-modal[data-gallery-showinfo] {
   
@@ -371,7 +414,7 @@
 @media only screen and (max-width: 567px) { 
   .Gallery, .Gallery-modal {
     [data-shorttext] {
-      > span { font-size: 0; }
+      > span { font-size: 0; display:table; }
       &:after {
         font-size: inherit;
         content: attr(data-shortText);

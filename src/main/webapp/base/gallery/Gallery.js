@@ -54,6 +54,7 @@ class Gallery {
         let cn = this.settings.classNameMain;
         let cnSlide = this.settings.classNameSlide;
         this.selectors = {
+            main: `.${cn}`,
             intro: `.${cn}-intro`,
             slidesContainer: `.${cn}-slides`,
             slide: `.${cnSlide}`,
@@ -84,6 +85,9 @@ class Gallery {
         let attr = this.settings.attrNameMain; // "data-gallery" by default
         this.attr = {
             
+            // If this is a "singleton" gallery set an attribute
+            singleton: `${attr}-singleton`,
+            
             // The gallery background can be 'single' or 'montage'
             introBackground: `${attr}-intro-background`,
                         
@@ -98,7 +102,10 @@ class Gallery {
             
             // In modal view, the info can be toggled.
             // This attribute is added when the info is toggled on.
-            showInfo: `${attr}-showinfo`
+            showInfo: `${attr}-showinfo`,
+            
+            // In modal view, the navigation should be displayed only if there are multiple slides
+            hideNav: `${attr}-hidenav`
         };
 
         // After constructing the object, run init() to set up the gallery
@@ -110,10 +117,14 @@ class Gallery {
      */
     init() {
         this.initSlides();
-        this.initIntro();
-        this.initViewList();
-        this.initViewTiles();
-        this.initViewControls();
+        if (this.settings.singleton) {
+            this.initSingleton();
+        } else {
+            this.initIntro();
+            this.initViewList();
+            this.initViewTiles();
+            this.initViewControls();
+        }
         this.modalInit();
     }
 
@@ -126,6 +137,20 @@ class Gallery {
     }
 
 
+    /**
+     * Initialize the gallery in "singleton" mode where this is only one slide,
+     * but there could be multiple singleton galleries on the page tied together
+     * by a common id.
+     */
+    initSingleton() {
+        // Set an attribute 'data-gallery-singleton' to the gallery can be styled differently.
+        // Also set it to the optional id for the singleton, so if the user opens the modal
+        // we can gather up all the slides that have the same id and let the user navigate
+        // between them all.
+        this.$el.attr(this.attr.singleton, this.settings.id || '');
+    }
+    
+    
     /**
      * Get a jQuery Object containing all the slides.
      * 
@@ -396,7 +421,32 @@ class Gallery {
         // all the jQuery events are destroyed, so we need to recreate the carousel.
         $modalCarousel = this.$modal.find(this.selectors.modalCarousel);
         $modalCarousel.empty();
-        $modalSlides = this.$slidesContainer.clone().attr(this.attr.view, 'modal').appendTo($modalCarousel);
+        
+        // If this is a singleton gallery, and it has an id that will be used to tie multiple galleries together,
+        // grab all the slides on the page that share the same id.
+        if (this.settings.singleton && this.settings.id) {
+
+            $modalSlides = this.$slidesContainer.clone().empty().attr(this.attr.view, 'modal').appendTo($modalCarousel);
+            
+            // Find all the galleries that match our gallery id
+            let $galleries = $(this.selectors.main).filter((index, el) => {
+                let id = $(el).attr(this.attr.singleton) || '';
+                return id === this.settings.id;
+            });
+            
+            // Get all the slides within the matching galleries
+            let $slides = $galleries.find(this.selectors.slide);
+
+            // Update the index number for the slide we want to show first
+            index = $slides.index( this.$slides[0] ) || 0;
+
+            // Clone the slides and add them to the modal
+            $slides.clone().appendTo($modalSlides);
+            
+        } else {
+            // This is not a singleton gallery with an id, so just get the slides from this gallery
+            $modalSlides = this.$slidesContainer.clone().attr(this.attr.view, 'modal').appendTo($modalCarousel);
+        }
 
         // Whenever the carousel slide changes update the count
         $modalCarousel.on('afterChange', event => {
@@ -499,15 +549,40 @@ class Gallery {
     
     
     /**
+     * Show the slide navigation when in modal mode.
+     */
+    modalNavShow() {
+        this.$modal.removeAttr(this.attr.hideNav);        
+    }
+    
+    
+    /**
+     * Hide the slide navigation when in modal view.
+     */
+    modalNavHide() {
+        this.$modal.attr(this.attr.hideNav, '');
+    }
+
+
+    /**
      * When in modal view, update the slide count (current slide and total number of slides).
      */
     modalUpdateCount() {
         let $count;
         let currentSlide;
+        let total;
         if (this.carousel) {
             $count = this.$modal.find(this.selectors.modalCount);
             currentSlide = this.carousel.currentSlide() + 1;
-            $count.text(currentSlide + '/' + this.carousel.slideCount());
+            total = this.carousel.slideCount();
+            $count.text(currentSlide + '/' + total);
+
+            // Add an attribute so the navigation can be hidden if there is only one slide
+            if (total > 1) {
+                this.modalNavShow();
+            } else {
+                this.modalNavHide();
+            }
         }
     }
     

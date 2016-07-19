@@ -65,11 +65,13 @@
         <section class="{{blockName}}"
             itemscope itemtype="https://schema.org/ImageGallery"
             data-bsp-gallery-list
-            data-bsp-gallery-list-options="{ {{#if introBackgroundImage}}&quot;introBackgroundImage&quot;:&quot;{{introBackgroundImage}}&quot;{{/if}} }" {{extraAttributes}}>
+            data-bsp-gallery-list-options="{ &quot;singleton&quot;:&quot;{{singleton}}&quot;, &quot;id&quot;:&quot;{{id}}&quot;, &quot;introBackgroundImage&quot;:&quot;{{introBackgroundImage}}&quot; }" {{extraAttributes}}>
 
             {{#defineBlockBody}}
-                {{element "intro"}}
-                {{element "controls"}}
+                {{#unless singleton}}
+                    {{element "intro"}}
+                    {{element "controls"}}
+                {{/unless}}
                 {{element "slides"}}
                 {{element "modal"}}
             {{/defineBlockBody}}
