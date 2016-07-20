@@ -1,8 +1,9 @@
-## Gallery from singleton images
+## Gallery singleton image
 
 You can also display a single image embedded in other content (for example, an image in an article).
 Clicking the image opens the modal carousel as usual. You can display just a single image, or you can associate multiple
-images to be displayed in the same modal carousel.
+images to be displayed in the same modal carousel. In this demonstration, the first image opens by itself.
+The second and third images are associated, so if you open the modal carousel you can navigate between those two slides.
 
 ### Blocks and properties
 The singleton gallery uses the same properties as the normal gallery, but it does not display the intro block

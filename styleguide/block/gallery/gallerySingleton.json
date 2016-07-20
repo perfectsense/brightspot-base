@@ -8,7 +8,6 @@
         {
             "_template": "base/gallery/Gallery",
             "singleton": true,
-            "id": "my-singleton-unique-id-1",
             "slides": [
                 {
                     "_dataUrl": "/block/gallery/_gallery-slide.json"
