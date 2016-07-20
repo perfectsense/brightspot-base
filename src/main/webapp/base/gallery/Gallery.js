@@ -67,6 +67,7 @@ class Gallery {
             masonryItem: `.${cnSlide}`,
             modal: `.${cn}-modal`,
             modalClose: `.${cn}-modalControlsClose`,
+            modalFullscreen: `.${cn}-modalControlsFullscreen`,
             modalPrev: `.${cn}-modalControlsPrev`,
             modalNext: `.${cn}-modalControlsNext`,
             modalInfo: `.${cn}-modalControlsInfo`,
@@ -105,7 +106,10 @@ class Gallery {
             showInfo: `${attr}-showinfo`,
             
             // In modal view, the navigation should be displayed only if there are multiple slides
-            hideNav: `${attr}-hidenav`
+            hideNav: `${attr}-hidenav`,
+            
+            // In modal view, the fullscreen icon should be displayed only if fullscreen is supported by the browser
+            fullscreenIsSupported: `${attr}-fullscreen-is-supported`
         };
 
         // After constructing the object, run init() to set up the gallery
@@ -350,6 +354,12 @@ class Gallery {
         }
         this.$modal.detach();
 
+        // Add an attribute to the modal to indicate if fullscreen mode is supported
+        // so we can use CSS to display or hide the fullscreen icons
+        if (this.fullscreenIsSupported()) {
+            this.$modal.attr(this.attr.fullscreenIsSupported, '');
+        }
+        
         // Turn the modal container into a modal but don't open it.
         // Note this will remove the modal container from the DOM.
         this.modal = Object.create(bspModal);
@@ -597,19 +607,9 @@ class Gallery {
         
         let el = this.$modal[0];
         
-        if (!el) {
-            return;
-        }
-                
-        if (el.requestFullscreen) {
-            el.requestFullscreen();
-        } else if (el.webkitRequestFullscreen) {
-            el.webkitRequestFullscreen();
-        } else if (el.mozRequestFullScreen) {
-            el.mozRequestFullScreen();
-        } else if (el.msRequestFullscreen) {
-            el.msRequestFullscreen();
-        }
+        if (el) {
+            this.fullscreenElement(el);
+        }        
     }
 
     
@@ -685,6 +685,54 @@ class Gallery {
     }
 
 
+    /**
+     * Determine if fullscreen is supported in this browser, and if so add an attribute to the
+     * modal so we can use CSS to style and display a fullscreen icon.
+     */
+    fullscreenInit() {
+        if (this.fullscreenIsSupported()) {
+            this.$modal.attr(this.attr.fullscreenIsSupported, '');
+        }
+    }
+    
+    
+    /**
+     * Determine if this browser supports full screen mode.
+     * @return {Boolean}
+     */
+    fullscreenIsSupported() {
+        let el = this.$el[0];
+        return Boolean(
+            el.requestFullscreen
+            || el.webkitRequestFullscreen
+            || el.mozRequestFullScreen
+            || el.msRequestFullscreen
+        );
+    }
+    
+    
+    /**
+     * Set an element to fullscreen mode.
+     * 
+     * Note this can be called only from a user-intiated event (like a click event handler)
+     * and may not work in all browsers or in other situations (like when running in an iframe).
+     * 
+     * @param  {Element} el
+     */
+    fullscreenElement(el) {
+        
+        if (el.requestFullscreen) {
+            el.requestFullscreen();
+        } else if (el.webkitRequestFullscreen) {
+            el.webkitRequestFullscreen();
+        } else if (el.mozRequestFullScreen) {
+            el.mozRequestFullScreen();
+        } else if (el.msRequestFullscreen) {
+            el.msRequestFullscreen();
+        }
+    }
+    
+    
     /**
      * Randomly shuffle an array in place.
      * @param  {Array} array

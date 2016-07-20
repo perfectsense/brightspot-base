@@ -23,6 +23,9 @@
     {{#defineElement "modalControlsClose" noWith=true}}
         <button class="{{elementName}}"><span>Close</span></button>
     {{/defineElement}}
+    {{#defineElement "modalControlsFullscreen" noWith=true}}
+        <button class="{{elementName}}"><span>Fullscreen</span></button>
+    {{/defineElement}}
     
     {{#defineElement "modalControlsPrev" noWith=true}}
         <button class="{{elementName}}"><span>Previous</span></button>
@@ -43,6 +46,7 @@
     {{#defineElement "modalControls" noWith=true}}
         <div class="{{elementName}}">
             {{element "modalControlsClose"}}
+            {{element "modalControlsFullscreen"}}
             {{element "modalControlsPrev"}}
             {{element "modalControlsCount"}}
             {{element "modalControlsNext"}}

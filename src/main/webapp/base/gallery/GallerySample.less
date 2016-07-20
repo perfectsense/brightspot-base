@@ -277,6 +277,12 @@
       right:15px;
       top:10px;
     }
+    &Fullscreen {
+      display: none;
+      position: fixed;
+      right:15px;
+      top:60px;
+    }
     &Prev {
       display:none;
     }
@@ -371,6 +377,16 @@
 .Gallery-modal[data-gallery-hidenav] {
   .Gallery-modalControls {
     &Prev, &Count, &Next {
+      display: none !important;
+    }
+  }
+}
+
+// Hide the "Fullscreen" button if the modal is already in fullscreen,
+// or if fullscreen mode is not supported
+.Gallery-modal:fullscreen, .Gallery-modal:not([data-gallery-fullscreen-is-supported]) {
+  .Gallery-modalControls {
+    &Fullscreen {
       display: none !important;
     }
   }
@@ -647,6 +663,16 @@
       left: 15px;
       bottom: 20px;
     }
+    &Fullscreen {
+      .clearpos;
+      position: fixed;
+      left: 80px;
+      bottom: 20px;
+      
+      // For demo purposes we are not displaying the fullscreeen button.
+      // Change this to display:inline to use the fullscreen button
+      display: none;
+    }
     
     &Count {
       .clearpos;
@@ -750,6 +776,13 @@
       .clearpos;
       position: fixed;
       top: 20px;
+      right: 15px;
+    }
+    
+    &Fullscreen {
+      .clearpos;
+      position: fixed;
+      top: 60px;
       right: 15px;
     }
     
