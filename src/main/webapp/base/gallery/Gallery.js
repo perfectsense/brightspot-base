@@ -241,16 +241,22 @@ class Gallery {
      * Initialize the intro background with a montage of images randomly chosen from the slides.
      */
     initIntroBackgroundMontage() {
+
+        // Get the image urls from the slides and randomize the order
+        let urls = this.slideImages;
+        urls = this.shuffle(urls);
+
+        // If there are not enough images for the montage, switch to single image with a random image
+        if (urls.length && urls.length < this.settings.introBackgroundMontageCount) {
+            this.settings.introBackgroundImage = urls[0];
+            this.initIntroBackgroundSingle();
+            return;
+        }
         
-        // Maybe use CSS like this?
-        // https://css-tricks.com/seamless-responsive-photo-grid/
-         
         // Add an attribute so the images can be styled
         this.$introBackground.attr(this.attr.introBackground, 'montage');
         
         // Add all the slide images to the background so they can be styled in a montage
-        let urls = this.slideImages;
-        urls = this.shuffle(urls);
         for (let i=0; i < urls.length && i < this.settings.introBackgroundMontageCount; i++) {
             $('<img>', {src:urls[i], alt:''}).appendTo(this.$introBackground);
         }
