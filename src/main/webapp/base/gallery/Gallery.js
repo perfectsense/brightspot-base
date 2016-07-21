@@ -479,6 +479,9 @@ class Gallery {
             }
         });
         
+        // Focus on the carousel the keyboard navigation will work
+        this.$modal.find('.slick-list').focus();
+        
         // Intialize the count so it shows the initial slide number
         this.modalUpdateCount();
         
