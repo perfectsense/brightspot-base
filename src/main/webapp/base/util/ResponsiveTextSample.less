@@ -1,0 +1,18 @@
+/*
+An example media-query that shows how you can control when
+the short-text is displayed.
+*/
+
+@media only screen and (max-width: 767px) {
+    .ResponsiveText {
+        // reveals the short text
+        &[data-shortText] {
+            &:after {
+                font-size: inherit;
+                content: attr(data-shortText);
+            }
+        }
+        // hides the original text
+        &-text { font-size: 0; }
+    }
+}

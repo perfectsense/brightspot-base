@@ -1,0 +1,11 @@
+{{#defineBlock "ResponsiveText"}}
+    {{#defineElement "text"}}
+        <span class="{{elementName}}">{{this}}</span>
+    {{/defineElement}}
+
+    {{#defineElement "shortText"}}data-shortText="{{this}}"{{/defineElement}}
+
+    {{~#defineBlockContainer}}
+        <div class="{{blockName}}" {{element "shortText"}}>{{~#defineBlockBody}}{{element "text"}}{{~/defineBlockBody}}</div>
+    {{~/defineBlockContainer}}
+{{/defineBlock}}
