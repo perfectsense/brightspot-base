@@ -8,7 +8,7 @@ module.exports = function (grunt) {
                 dir: '',
                 less: [
                     'base/All.less',
-                    'base/sample/All.less'
+                    'sample/All.less'
                 ],
                 options : {
                     autoprefixer: true
