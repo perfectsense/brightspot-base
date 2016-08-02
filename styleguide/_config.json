@@ -3,6 +3,10 @@
         {
             "name": "Base",
             "href": "/base/All.min.css"
+        },
+        {
+            "name": "Samples",
+            "href": "/base/sample/All.min.css"
         }
     ]
 }
