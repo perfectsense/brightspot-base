@@ -4,6 +4,6 @@
     "title": "{{words}}",
     "description": "{{words}}",
     "cta": {
-        "_dataUrl": "/block/util/link.json"
+        "_dataUrl": "../../block/util/link.json"
     }
 }

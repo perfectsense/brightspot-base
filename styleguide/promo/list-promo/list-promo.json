@@ -5,11 +5,11 @@
     "description": "{{words}}",
     "items": [
         {
-            "_dataUrl": "/promo/media-promo/media-promo.json",
+            "_dataUrl": "../media-promo/media-promo.json",
             "_repeat": [ 3, 6 ]
         }
     ],
     "cta": {
-        "_dataUrl": "/block/util/link.json"
+        "_dataUrl": "../../block/util/link.json"
     }
 }
