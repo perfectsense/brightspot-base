@@ -1,0 +1,17 @@
+{
+    "_template": "base/page/PageFooter",
+
+    "logo": {
+        "_template": "/base/util/Image",
+        "src": "{{image(300, 80)}}"
+    },
+
+    "navigation": {
+        "_dataUrl": "/block/page-navigation/page-navigation.json"
+    },
+
+    "copyright": {
+        "_template": "/base/util/RawHtml",
+        "html": "&copy; 2016"
+    }
+}
