@@ -43,12 +43,12 @@ module.exports = function (grunt) {
                 ]
                 // END dependencies for Masonry
             },
-            
+
             styles: {
                 dir: '',
                 less: [
                     'base/All.less',
-                    'base/Gallery.less'
+                    'sample/All.less'
                 ],
                 options : {
                     autoprefixer: true

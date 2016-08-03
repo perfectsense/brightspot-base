@@ -5,8 +5,8 @@
             "href": "/base/All.min.css"
         },
         {
-            "name": "Gallery",
-            "href": "/base/Gallery.min.css"
+            "name": "Samples",
+            "href": "/sample/All.min.css"
         }
     ]
 }
