@@ -6,11 +6,11 @@
             "html": "{{paragraphs(1)}}"
         },
         {
-            "_template": "base/gallery/Gallery",
+            "_template": "/base/main/Gallery",
             "singleton": true,
             "slides": [
                 {
-                    "_dataUrl": "/block/gallery/_gallery-slide.json"
+                    "_dataUrl": "/block/_gallery-slide.json"
                 }
             ]
         },
@@ -19,12 +19,12 @@
             "html": "{{paragraphs(1)}}"
         },    
         {
-            "_template": "base/gallery/Gallery",
+            "_template": "/base/main/Gallery",
             "singleton": true,
             "id": "my-singleton-unique-id-2",
             "slides": [
                 {
-                    "_dataUrl": "/block/gallery/_gallery-slide.json"
+                    "_dataUrl": "/block/_gallery-slide.json"
                 }
             ]
         },
@@ -33,12 +33,12 @@
             "html": "{{paragraphs(1)}}"
         },
         {
-            "_template": "base/gallery/Gallery",
+            "_template": "/base/main/Gallery",
             "singleton": true,
             "id": "my-singleton-unique-id-2",
             "slides": [
                 {
-                    "_dataUrl": "/block/gallery/_gallery-slide.json"
+                    "_dataUrl": "/block/_gallery-slide.json"
                 }
             ]
         },

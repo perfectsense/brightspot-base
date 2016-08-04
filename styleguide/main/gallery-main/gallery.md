@@ -1,6 +1,4 @@
-## Gallery
-
-For the styleguide, choose the "Gallery" theme in the theme dropdown (top right of the page) to view sample styles.
+## Gallery with random image montage
 
 ### Requirements
 * [Jira Ticket and Requirements](https://perfectsense.atlassian.net/browse/BSP-1571)

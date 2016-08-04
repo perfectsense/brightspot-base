@@ -1,8 +1,8 @@
 {
-    "_template": "base/gallery/Gallery",
+    "_template": "/base/main/Gallery",
     
     "intro": {
-        "_template": "base/gallery/GalleryIntro",
+        "_template": "/base/GalleryIntro",
         "title": "{{words(8,12)}}",
         "description": "{{words(60,120)}}"
     },
@@ -11,7 +11,7 @@
     
     "slides": [
         {
-            "_dataUrl": "/block/gallery/_gallery-slide.json",
+            "_dataUrl": "/block/_gallery-slide.json",
             "_repeat": [8,20]
         }
     ]
