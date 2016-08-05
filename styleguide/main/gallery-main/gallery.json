@@ -1,5 +1,5 @@
 {
-    "_template": "/base/main/Gallery",
+    "_template": "/base/main/GalleryMain",
     
     "intro": {
         "_template": "/base/GalleryIntro",
