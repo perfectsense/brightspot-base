@@ -1,0 +1,50 @@
+{
+    "_template": "/base/util/Concatenated",
+    "items" : [
+        {
+            "_template": "/base/util/RawHtml",
+            "html": "{{paragraphs(1)}}"
+        },
+        {
+            "_template": "/base/main/Gallery",
+            "singleton": true,
+            "slides": [
+                {
+                    "_dataUrl": "/block/_gallery-slide.json"
+                }
+            ]
+        },
+        {
+            "_template": "/base/util/RawHtml",
+            "html": "{{paragraphs(1)}}"
+        },    
+        {
+            "_template": "/base/main/Gallery",
+            "singleton": true,
+            "id": "my-singleton-unique-id-2",
+            "slides": [
+                {
+                    "_dataUrl": "/block/_gallery-slide.json"
+                }
+            ]
+        },
+        {
+            "_template": "/base/util/RawHtml",
+            "html": "{{paragraphs(1)}}"
+        },
+        {
+            "_template": "/base/main/Gallery",
+            "singleton": true,
+            "id": "my-singleton-unique-id-2",
+            "slides": [
+                {
+                    "_dataUrl": "/block/_gallery-slide.json"
+                }
+            ]
+        },
+        {
+            "_template": "/base/util/RawHtml",
+            "html": "{{paragraphs(1)}}"
+        }
+    ]
+}

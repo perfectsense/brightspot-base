@@ -1,0 +1,18 @@
+{
+    "_template": "/base/main/GalleryMain",
+    
+    "intro": {
+        "_template": "/base/GalleryIntro",
+        "title": "{{words(8,12)}}",
+        "description": "{{words(60,120)}}"
+    },
+    
+    "introBackgroundImage": "{{image(640, 400)}}",
+    
+    "slides": [
+        {
+            "_dataUrl": "/block/_gallery-slide.json",
+            "_repeat": [8,20]
+        }
+    ]
+}
