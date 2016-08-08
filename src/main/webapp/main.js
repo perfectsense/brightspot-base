@@ -18,6 +18,4 @@ import Comment from "community/commenting/Comment.js";
 import CommentEntry from "community/commenting/CommentEntry.js";
 import Commenting from "community/commenting/Commenting.js";
 
-import Gallery from "base/main/GalleryMain.js";
-
 export default {};

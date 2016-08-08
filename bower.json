@@ -5,11 +5,7 @@
   "dependencies": {
     "bsp-utils": "perfectsense/brightspot-js-utils#^3.1.0",
     "jquery": "^2.1.4",
-    "normalize-css": "necolas/normalize.css#^3.0.3",
-    "masonry": "masonry#^4.0.0",
-    "bsp-modal": "perfectsense/brightspot-js-modal#^1.0.2",
-    "bsp-carousel": "perfectsense/brightspot-js-carousel#^1.2.0",
-    "vex" : "2.3.2"
+    "normalize-css": "necolas/normalize.css#^3.0.3"
   },
   "main": "src/main/webapp/main.js",
   "ignore": [
