@@ -1,0 +1,15 @@
+/*
+ResponsiveText is meant to be used for text strings only.
+It is not recommended to be used with strings that contain HTML entities since they won't properly be unescaped.
+For implementation examples, please reference the styles within "base/util/ResponsiveTextSample.less".
+*/
+
+.ResponsiveText {
+    &:extend(.ResponsiveText all);
+    position: relative;
+
+    &-text {
+        &:extend(.ResponsiveText-title all);
+        width: 100%;
+    }
+}
