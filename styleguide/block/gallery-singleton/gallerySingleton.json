@@ -6,7 +6,7 @@
             "html": "{{paragraphs(1)}}"
         },
         {
-            "_template": "/base/main/Gallery",
+            "_template": "/base/main/GalleryMain",
             "singleton": true,
             "slides": [
                 {
@@ -17,9 +17,9 @@
         {
             "_template": "/base/util/RawHtml",
             "html": "{{paragraphs(1)}}"
-        },    
+        },
         {
-            "_template": "/base/main/Gallery",
+            "_template": "/base/main/GalleryMain",
             "singleton": true,
             "id": "my-singleton-unique-id-2",
             "slides": [
@@ -33,7 +33,7 @@
             "html": "{{paragraphs(1)}}"
         },
         {
-            "_template": "/base/main/Gallery",
+            "_template": "/base/main/GalleryMain",
             "singleton": true,
             "id": "my-singleton-unique-id-2",
             "slides": [
