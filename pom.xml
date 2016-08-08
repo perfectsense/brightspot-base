@@ -45,7 +45,7 @@
         <dependency>
             <groupId>com.psddev</groupId>
             <artifactId>handlebars</artifactId>
-            <version>1.2-SNAPSHOT</version>
+            <version>1.2.101-12aba4</version>
         </dependency>
 
         <dependency>
