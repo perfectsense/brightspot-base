@@ -121,7 +121,7 @@ class Gallery {
      */
     init() {
         this.initSlides();
-        if (this.settings.singleton) {
+        if (this.$slides.length < 2) {
             this.initSingleton();
         } else {
             this.initIntro();
@@ -151,6 +151,7 @@ class Gallery {
         // Also set it to the optional id for the singleton, so if the user opens the modal
         // we can gather up all the slides that have the same id and let the user navigate
         // between them all.
+        this.settings.singleton = true;
         this.$el.attr(this.attr.singleton, this.settings.id || '');
     }
     

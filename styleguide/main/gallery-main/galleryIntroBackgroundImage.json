@@ -11,7 +11,7 @@
     
     "slides": [
         {
-            "_dataUrl": "/block/_gallery-slide.json",
+            "_dataUrl": "/main/gallery-main/_gallery-slide.json",
             "_repeat": [8,20]
         }
     ]

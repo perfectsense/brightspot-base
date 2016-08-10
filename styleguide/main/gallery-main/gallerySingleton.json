@@ -7,10 +7,9 @@
         },
         {
             "_template": "/base/main/GalleryMain",
-            "singleton": true,
             "slides": [
                 {
-                    "_dataUrl": "/block/_gallery-slide.json"
+                    "_dataUrl": "/main/gallery-main/_gallery-slide.json"
                 }
             ]
         },
@@ -20,11 +19,10 @@
         },
         {
             "_template": "/base/main/GalleryMain",
-            "singleton": true,
             "id": "my-singleton-unique-id-2",
             "slides": [
                 {
-                    "_dataUrl": "/block/_gallery-slide.json"
+                    "_dataUrl": "/main/gallery-main/_gallery-slide.json"
                 }
             ]
         },
@@ -34,11 +32,10 @@
         },
         {
             "_template": "/base/main/GalleryMain",
-            "singleton": true,
             "id": "my-singleton-unique-id-2",
             "slides": [
                 {
-                    "_dataUrl": "/block/_gallery-slide.json"
+                    "_dataUrl": "/main/gallery-main/_gallery-slide.json"
                 }
             ]
         },
