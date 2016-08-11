@@ -1,0 +1,60 @@
+{{#defineBlock "GallerySlide"}}
+
+    {{#defineElement "mediaContent"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "mediaControlsZoom" noWith=true}}
+        <button title="Increase image size" class="{{elementName}}">Zoom</button>
+    {{/defineElement}}
+
+    {{#defineElement "mediaControls" noWith=true}}
+        <div class="{{elementName}}">
+            {{element "mediaControlsZoom"}}
+        </div>
+    {{/defineElement}}
+
+    {{#defineElement "media" noWith=true}}
+        <div class="{{elementName}}">
+            {{element "mediaControls"}}
+            {{element "mediaContent"}}
+        </div>
+    {{/defineElement}}
+
+    {{#defineElement "infoTitleShort"}}data-shorttext="{{this}}"{{/defineElement}}
+    {{#defineElement "infoTitle" noWith=true}}
+        <div class="{{elementName}}" {{element "infoTitleShort"}} itemprop="name">
+            <span>{{infoTitle}}</span>
+        </div>
+    {{/defineElement}}
+
+    {{#defineElement "infoDescriptionShort"}}data-shorttext="{{this}}"{{/defineElement}}
+    {{#defineElement "infoDescription" noWith=true}}
+        <div class="{{elementName}}" {{element "infoDescriptionShort"}} itemprop="description">
+            <span>{{infoDescription}}</span>
+        </div>
+    {{/defineElement}}
+
+    {{#defineElement "infoAttribution"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "info" noWith=true}}
+        <div class="{{elementName}}">
+            {{element "infoTitle"}}
+            {{element "infoDescription"}}
+            {{element "infoAttribution"}}
+        </div>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}" itemprop="image" itemtype="http://schema.org/ImageObject" {{extraAttributes}}>
+
+            {{#defineBlockBody}}
+                {{element "media"}}
+                {{element "info"}}
+            {{/defineBlockBody}}
+
+        </div>
+    {{/defineBlockContainer}}
+{{/defineBlock}}
