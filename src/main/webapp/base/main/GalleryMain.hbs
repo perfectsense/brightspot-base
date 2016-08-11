@@ -26,19 +26,19 @@
     {{#defineElement "modalControlsFullscreen" noWith=true}}
         <button class="{{elementName}}"><span>Fullscreen</span></button>
     {{/defineElement}}
-    
+
     {{#defineElement "modalControlsPrev" noWith=true}}
         <button class="{{elementName}}"><span>Previous</span></button>
     {{/defineElement}}
-    
+
     {{#defineElement "modalControlsNext" noWith=true}}
         <button class="{{elementName}}"><span>Next</span></button>
     {{/defineElement}}
-    
+
     {{#defineElement "modalControlsCount" noWith=true}}
         <span class="{{elementName}}"></span>
     {{/defineElement}}
-    
+
     {{#defineElement "modalControlsInfo" noWith=true}}
         <button class="{{elementName}}"><span>Info</span></button>
     {{/defineElement}}
@@ -53,18 +53,18 @@
             {{element "modalControlsInfo"}}
         </div>
     {{/defineElement}}
-    
+
     {{#defineElement "modalCarousel" noWith=true}}
         <div class="{{elementName}}"></div>
     {{/defineElement}}
-    
+
     {{#defineElement "modal" noWith=true}}
         <div class="{{elementName}}">
             {{element "modalControls"}}
             {{element "modalCarousel"}}
         </div>
     {{/defineElement}}
-    
+
     {{#defineBlockContainer}}
         <section class="{{blockName}}"
             itemscope itemtype="https://schema.org/ImageGallery"
@@ -79,7 +79,7 @@
                 {{element "slides"}}
                 {{element "modal"}}
             {{/defineBlockBody}}
-            
+
         </section>
     {{/defineBlockContainer}}
 {{/defineBlock}}

@@ -4,54 +4,54 @@
     // Gallery-intro
     // Javascript also adds either Gallery-intro-background-single or Gallery-intro-background-montage
     // to display images as a background behind the intro content.
-    //--------------- 
+    //---------------
     &-intro {
         &:extend(.Gallery-intro all);
-        
+
         &-background { // Optional element added by javascript
             &:extend(.Gallery-intro-background all);
         }
-        
+
         &-background-single {  // Optional element added by javascript
             &:extend(.Gallery-intro-background-single all);
         }
-        
+
         &-background-montage {  // Optional element added by javascript
             &:extend(.Gallery-intro-background-montage all);
         }
     }
-    
+
     //------------------
     // Gallery-controls
     // Contains a photo count, plus buttons to switch between list and tiles views.
     //------------------
     &-controls {
         &:extend(.Gallery-controls all);
-        
+
         &-count {
             &:extend(.Gallery-controls-count all);
         }
-        
+
         &-buttons {
             &:extend(.Gallery-controls-buttons all);
-            
+
             // List button
             &-list {
                 &:extend(.Gallery-controls-buttons-list all);
             }
-            
+
             // Tiles button
             &-tiles {
                 &:extend(.Gallery-controls-buttons-tiles all);
             }
-            
+
             // Make a button appear selected
             &-active {
                 &:extend(.Gallery-controls-buttons-active all);
             }
         }
     }
-    
+
     //----------------
     // Gallery-slides
     // Container for the gallery slides.
@@ -73,7 +73,7 @@
         &:extend(.Gallery-view-list all);
         // Refer to GallerySlide.less
     }
-    
+
     //-------------------
     // Gallery-view-tiles
     // Added by javascript to represent slides in a tile view.

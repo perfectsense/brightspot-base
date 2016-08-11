@@ -3,17 +3,17 @@
     {{#defineElement "mediaContent"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
-    
+
     {{#defineElement "mediaControlsZoom" noWith=true}}
         <button title="Increase image size" class="{{elementName}}">Zoom</button>
     {{/defineElement}}
-    
+
     {{#defineElement "mediaControls" noWith=true}}
         <div class="{{elementName}}">
             {{element "mediaControlsZoom"}}
         </div>
     {{/defineElement}}
-    
+
     {{#defineElement "media" noWith=true}}
         <div class="{{elementName}}">
             {{element "mediaControls"}}
@@ -38,7 +38,7 @@
     {{#defineElement "infoAttribution"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
-    
+
     {{#defineElement "info" noWith=true}}
         <div class="{{elementName}}">
             {{element "infoTitle"}}
@@ -46,7 +46,7 @@
             {{element "infoAttribution"}}
         </div>
     {{/defineElement}}
-    
+
     {{#defineBlockContainer}}
         <div class="{{blockName}}" itemprop="image" itemtype="http://schema.org/ImageObject" {{extraAttributes}}>
 
@@ -54,7 +54,7 @@
                 {{element "media"}}
                 {{element "info"}}
             {{/defineBlockBody}}
-            
+
         </div>
     {{/defineBlockContainer}}
 {{/defineBlock}}
