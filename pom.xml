@@ -9,15 +9,16 @@
     <parent>
         <groupId>com.psddev</groupId>
         <artifactId>dari-parent</artifactId>
-        <version>3.1.2007-15acd0</version>
+        <version>3.2.2293-ef1dd2</version>
     </parent>
 
     <properties>
         <maven.generate.views.skip>false</maven.generate.views.skip>
     </properties>
 
+    <groupId>com.psddev</groupId>
     <artifactId>base</artifactId>
-    <version>2.0-SNAPSHOT</version>
+    <version>3.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Brightspot Base</name>
@@ -26,25 +27,25 @@
         <dependency>
             <groupId>com.psddev</groupId>
             <artifactId>cms-db</artifactId>
-            <version>3.1.4531-709f34</version>
+            <version>3.2.6393-d097ab</version>
         </dependency>
 
         <dependency>
             <groupId>com.psddev</groupId>
             <artifactId>dari-db</artifactId>
-            <version>3.1.2007-15acd0</version>
+            <version>3.2.2293-ef1dd2</version>
         </dependency>
 
         <dependency>
             <groupId>com.psddev</groupId>
             <artifactId>dari-util</artifactId>
-            <version>3.1.2007-15acd0</version>
+            <version>3.2.2293-ef1dd2</version>
         </dependency>
 
         <dependency>
             <groupId>com.psddev</groupId>
             <artifactId>handlebars</artifactId>
-            <version>1.2-SNAPSHOT</version>
+            <version>1.2.101-12aba4</version>
         </dependency>
 
         <dependency>
@@ -102,7 +103,7 @@
                     <dependency>
                         <groupId>com.psddev</groupId>
                         <artifactId>styleguide</artifactId>
-                        <version>1.0-SNAPSHOT</version>
+                        <version>1.0.316-9c8fea</version>
                     </dependency>
                 </dependencies>
 
