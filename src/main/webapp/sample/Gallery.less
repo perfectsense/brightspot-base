@@ -236,6 +236,13 @@
               display: block;
             }
           }
+          
+          // Always display the zoom controls when device does not support hover
+          @media (hover:none) {
+              .GallerySlide-mediaControlsZoom {
+                display: block;
+              }  
+          }
         }
 
         &-mediaControlsZoom {
