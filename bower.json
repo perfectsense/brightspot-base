@@ -3,9 +3,13 @@
   "version": "3.0.0",
   "homepage": "https://github.com/perfectsense/brightspot-base",
   "dependencies": {
-    "bsp-utils": "perfectsense/brightspot-js-utils#^3.1.0",
-    "jquery": "^2.1.4",
-    "normalize-css": "necolas/normalize.css#^3.0.3"
+    "bsp-utils": "perfectsense/brightspot-js-utils#3.1.0",
+    "jquery": "2.1.4",
+    "normalize-css": "necolas/normalize.css#3.0.3",
+    "masonry": "masonry#4.1.0",
+    "bsp-modal": "perfectsense/brightspot-js-modal#1.0.2",
+    "bsp-carousel": "perfectsense/brightspot-js-carousel#1.4.1",
+    "vex": "2.3.2"
   },
   "main": "src/main/webapp/main.js",
   "ignore": [
@@ -36,10 +40,10 @@
       }
     ],
     "normalize-css": [
-        {
-            "src": "normalize.css",
-            "dest": "bower/normalize-css/normalize.css"
-        }
+      {
+        "src": "normalize.css",
+        "dest": "bower/normalize-css/normalize.css"
+      }
     ]
   }
 }
