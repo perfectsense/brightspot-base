@@ -1,0 +1,85 @@
+{{#defineBlock "Gallery"}}
+
+    {{#defineElement "intro"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "controls" noWith=true}}
+        <div class="{{elementName}}">
+            <span class="{{elementName}}-count"></span>
+            <span class="{{elementName}}-buttons">
+                <button class="{{elementName}}-buttons-list"><span>List</span></button>
+                <button class="{{elementName}}-buttons-tiles"><span>Tiles<span></button>
+            </span>
+        </div>
+    {{/defineElement}}
+
+    {{#defineElement "slides" noWith=true}}
+        <div class="{{elementName}}">
+            {{#each slides}}{{this}}{{/each}}
+        </div>
+    {{/defineElement}}
+
+    {{#defineElement "modalControlsClose" noWith=true}}
+        <button class="{{elementName}}"><span>Close</span></button>
+    {{/defineElement}}
+    {{#defineElement "modalControlsFullscreen" noWith=true}}
+        <button class="{{elementName}}"><span>Fullscreen</span></button>
+    {{/defineElement}}
+
+    {{#defineElement "modalControlsPrev" noWith=true}}
+        <button class="{{elementName}}"><span>Previous</span></button>
+    {{/defineElement}}
+
+    {{#defineElement "modalControlsNext" noWith=true}}
+        <button class="{{elementName}}"><span>Next</span></button>
+    {{/defineElement}}
+
+    {{#defineElement "modalControlsCount" noWith=true}}
+        <span class="{{elementName}}"></span>
+    {{/defineElement}}
+
+    {{#defineElement "modalControlsInfo" noWith=true}}
+        <button class="{{elementName}}"><span>Info</span></button>
+    {{/defineElement}}
+
+    {{#defineElement "modalControls" noWith=true}}
+        <div class="{{elementName}}">
+            {{element "modalControlsClose"}}
+            {{element "modalControlsFullscreen"}}
+            {{element "modalControlsPrev"}}
+            {{element "modalControlsCount"}}
+            {{element "modalControlsNext"}}
+            {{element "modalControlsInfo"}}
+        </div>
+    {{/defineElement}}
+
+    {{#defineElement "modalCarousel" noWith=true}}
+        <div class="{{elementName}}"></div>
+    {{/defineElement}}
+
+    {{#defineElement "modal" noWith=true}}
+        <div class="{{elementName}}">
+            {{element "modalControls"}}
+            {{element "modalCarousel"}}
+        </div>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <section class="{{blockName}}"
+            itemscope itemtype="https://schema.org/ImageGallery"
+            data-bsp-gallery-list
+            data-bsp-gallery-list-options="{ &quot;singleton&quot;:&quot;{{singleton}}&quot;, &quot;id&quot;:&quot;{{id}}&quot;, &quot;introBackgroundImage&quot;:&quot;{{introBackgroundImage}}&quot; }" {{extraAttributes}}>
+
+            {{#defineBlockBody}}
+                {{#unless singleton}}
+                    {{element "intro"}}
+                    {{element "controls"}}
+                {{/unless}}
+                {{element "slides"}}
+                {{element "modal"}}
+            {{/defineBlockBody}}
+
+        </section>
+    {{/defineBlockContainer}}
+{{/defineBlock}}

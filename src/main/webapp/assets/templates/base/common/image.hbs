@@ -1,8 +1,0 @@
-{{#if this.caption}}<figure class="img-with-meta">{{else}}{{#if this.credit}}<figure class="img-with-meta">{{/if}}{{/if}}
-<img {{#if extraAttributes.data-lazy}}data-bsp-lazyimage src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="{{/if}}{{#if cssClass}} class="{{cssClass}}"{{/if}}{{extraAttributes}} />
-{{#if this.caption}}
-    <figcaption><span class="img-caption">{{render this.caption}}{{#if this.credit}}<span class="img-credit"> ({{render this.credit}})</span>{{/if}}</span></figcaption>
-{{else}}
-    {{#if this.credit}}<figcaption><span class="img-credit">{{render this.credit}}</span></figcaption>{{/if}}
-{{/if}}
-{{#if this.caption}}</figure>{{else}}{{#if this.credit}}</figure>{{/if}}{{/if}}

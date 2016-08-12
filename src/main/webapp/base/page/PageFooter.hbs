@@ -1,0 +1,25 @@
+{{#defineBlock "PageFooter"}}
+
+    {{#defineElement "logo"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "navigation"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "copyright"}}
+        <small class="{{elementName}}">{{this}}</small>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <footer class="{{blockName}}" itemscope itemtype="https://schema.org/WPFooter"{{extraAttributes}}>
+            {{#defineBlockBody}}
+                {{element "logo"}}
+                {{element "navigation"}}
+                {{element "copyright"}}
+            {{/defineBlockBody}}
+        </footer>
+    {{/defineBlockContainer}}
+
+{{/defineBlock}}

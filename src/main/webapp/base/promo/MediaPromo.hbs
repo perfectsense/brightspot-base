@@ -1,0 +1,17 @@
+{{#defineBlock "MediaPromo" extend="base/promo/Promo"}}
+    {{#defineElement "media"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}"{{extraAttributes}}>
+            {{#defineBlockBody}}
+                {{element "category"}}
+                {{element "title"}}
+                {{element "media"}}
+                {{element "description"}}
+                {{element "cta"}}
+            {{/defineBlockBody}}
+        </div>
+    {{/defineBlockContainer}}
+{{/defineBlock}}

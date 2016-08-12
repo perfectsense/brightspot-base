@@ -1,0 +1,6 @@
+{
+    "_template": "base/form/ValidationError",
+
+    "message": "Please sign in first",
+    "type": "unauthenticated"
+}

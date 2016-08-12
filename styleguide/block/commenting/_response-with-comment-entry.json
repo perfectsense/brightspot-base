@@ -1,0 +1,9 @@
+{
+  "_wrapper": false,
+  "_template": "community/commenting/CommentActionResponse",
+
+  "entry": {
+    "_dataUrl": "/block/commenting/comment-entry.json",
+    "commentingId": "324kldsjlj34"
+  }
+}

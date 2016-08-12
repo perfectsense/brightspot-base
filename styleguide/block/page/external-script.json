@@ -1,0 +1,22 @@
+{
+    "_wrapper": false,
+    "_template": "/base/page/Page",
+
+    "head": {
+        "_template": "/base/page/Head",
+        "items": [
+            {
+                "_template": "/base/page/ExternalScript",
+                "type": "text/javascript",
+                "src": "/main.js",
+                "async": false,
+                "defer": false
+            }
+        ]
+    },
+
+    "body": {
+        "_template": "/base/util/RawHtml",
+        "html": "{{paragraphs}}"
+    }
+}

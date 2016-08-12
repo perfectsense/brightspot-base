@@ -1,0 +1,21 @@
+{
+    "_wrapper": false,
+    "_template": "/base/page/Page",
+
+    "head": {
+        "_template": "/base/page/Head",
+        "items": [
+            {
+                "_template": "/base/page/InlineStylesheet",
+                "type": "text/css",
+                "media": "screen",
+                "css": "body { color: red; }"
+            }
+        ]
+    },
+
+    "body": {
+        "_template": "/base/util/RawHtml",
+        "html": "{{paragraphs}}"
+    }
+}

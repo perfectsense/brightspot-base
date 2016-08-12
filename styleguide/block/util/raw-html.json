@@ -1,0 +1,4 @@
+{
+    "_template": "/base/util/RawHtml",
+    "html": "<p style=\"background:black;color:white;padding:1em;\">{{words}}</p>"
+}

@@ -1,0 +1,27 @@
+.ValidationMessages {
+
+    &-serverError {
+        &:extend(.ValidationMessages-serverError all);
+        display: none;
+        &[data-visible] {
+            display: block;
+        }
+    }
+
+    &-tooLong {
+        &:extend(.ValidationMessages-tooLong all);
+        display: none;
+        &[data-visible] {
+            display: block;
+        }
+    }
+
+    &-blank {
+        &:extend(.ValidationMessages-blank all);
+        display: none;
+        &[data-visible] {
+            display: block;
+        }
+    }
+
+}

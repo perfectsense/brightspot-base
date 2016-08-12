@@ -1,0 +1,13 @@
+@import 'CreativeWorkMain.less';
+
+.ArticleMain {
+    &:extend(.Main all);
+
+    &-lead {
+        &:extend(.ArticleMain-lead all);
+    }
+
+    &-body {
+        &:extend(.ArticleMain-body all);
+    }
+}

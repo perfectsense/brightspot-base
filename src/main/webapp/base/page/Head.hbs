@@ -1,0 +1,10 @@
+<meta charset="UTF-8">
+
+{{#if title}}<title>{{title}}</title>{{/if}}
+{{#if canonicalLink}}<link rel="canonical" href="{{canonicalLink}}">{{/if}}
+{{#if description}}<meta name="description" content="{{description}}" />{{/if}}
+{{#if keywords}}<meta name="news_keywords" content="{{keywords}}" />{{/if}}
+
+{{#each items}}
+    {{this}}
+{{/each}}

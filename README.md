@@ -1,56 +1,407 @@
-Brightspot Base
-===============
+---
 
-A pattern, boilerplate, and collection of reusable components to jump-start user interface development for [Brightspot CMS](http://brightspot.com) projects.
+# Brightspot Base
 
-What's included
----------------
-*	Reusable [LESS CSS](http://lesscss.org/) (based on [Twitter Bootstrap](http://getbootstrap.com/)) and Javascript components with accompanying [Handlebars templates](http://handlebarsjs.com)
-*	Preconfigured Grunt build which compiles LESS and transpiles Javascript [ECMAScript 6 modules](http://www.2ality.com/2014/09/es6-modules-final.html) using [SystemJS](https://github.com/systemjs/systemjs) and [Babel](https://babeljs.io/)
-*	Preconfigured [Karma](http://karma-runner.github.io/)/[Jasmine](http://jasmine.github.io/) test runner
-*	[Preconfigured component style guide](styleguide/) with a local [Express](http://expressjs.com) server which allows development of front end components without a running Brightspot instance
+---
 
-Writing Handlebar Templates
----------------------------
-*   These notes should move into a "how to develop for Base" piece of documentation that we will get to soon. For now, please direct any questions at Tom Hoppe
-*   We are including the handlebar templates that should transform a specific piece of JSON in the root of the object with a `_template` key. This allows the front and and back end "parent" renderers to render any kinds of children inside of themselves without have that information be hardcoded as a partial in the parent renderer. Best example is the bsp-gallery-module, where you'll note, we can include via JSON any component we want into a gallery slide
-*   The above handlebar partial handling is done via the {{render this}} helper. This helper exists in our front end as well as back end handlebar code. It passes the JSON into the helper, which then picks out the `_template` value and uses it for rendering
-*   It's important to note that the JAVA implementation of handlebars uses the mustache spec for lookups (https://github.com/jknack/handlebars.java#differences-between-handlebarsjava-and-handlebarsjs). This means that if we want to support null or empty values, we need to be explicit in specifying the scope of an attribute with `this.`. If you do NOT specify a `this.`, the JAVA handlebar renderer will look up the context stack for an attribute with the same name and use it instead.
-*   Each handlebar template also has an options map `displayOptions` that can be used to provide information and keys from the JSON to the template. This map doesn't get treated with any `_template` and is available for use in conditionals or directly in the .hbs
+### Stack
 
-Building
---------
-In most projects, you can run `mvn clean install` to generate a target directory. The target directory is needed by the styleguide server, as it combines files from Bower, Brightspot Base and your project source.
+* [Brightspot Styleguide](https://github.com/perfectsense/brightspot-styleguide)
+* HTML: [Handlebars](http://handlebarsjs.com/)
+* CSS: [Less](http://lesscss.org/)
 
+---
 
-Front End
-*  To run and see Base itself, run `mvn clean install` at the root directory. This will install any node dependencies and then grunt will pull down any bower dependencies and compile LESS and transpile JS. Maven will only need to run again if new Bower or NPM dependencies are added.
-*  To start the styleguide, run `npm run styleguide` and view it at http://localhost:3000. (See also 'Running the local styleguide server' below)
-*  To administer the default build task, run `npm run grunt`
-*  To automatically run a new build when changes are detected, run `npm run grunt watch`
+### Naming
 
+Based on [BEM](https://en.bem.info/):
 
+* Block: "A logically and functionally independent page component, the
+  equivalent of a component in Web Components. A block encapsulates behavior
+  (JavaScript), templates, styles (CSS), and other implementation technologies.
+  Blocks being independent allows for their re-use, as well as facilitating the
+  project development and support process."
+* Element: "A constituent part of a block that can't be used outside of it."
 
-How to use it in projects
--------------
-*
+---
 
-Test runner
------------
-Run `karma start spec/karma.conf.js`
+### Naming Rules
 
-Running the local styleguide server
------------------------------------
-Run `npm run styleguide` from the root directory
+Java-like:
 
-The styleguide will then be accessible at http://localhost:3000. You can pass options to the styleguide to change host or port for running multiple styleguides.
+* PascaleCase _block_ names, e.g. `ListPromo`.
+* Suffix _block_ names with their parent names, e.g. `ListPromo` which extends
+  `Promo`.
+* camelCase _element_ names, e.g. `title`.
+* Prefix _element_ names with their parent names (_blocks_ and _elements_),
+  separated by a dash, e.g. `ListPromo-title`, `ListPromo-items-item`.
 
-`npm run styleguide -- --port=XXXX` allows you to run multiple styleguides on your localhost
+---
 
-`npm run styleguide -- --host=YOUR IP` allows you to access the styleguide via your http://YOURIP:3000 which can be accessed by others on the network or via a virtual machine for localized IE testing
+### Naming Example - Handlebars
 
-System requirements
--------------------
-*	[Java](https://java.com) and [Maven](https://maven.apache.org/). See [Brightspot documentation](http://www.brightspot.com/docs/3.0/overview/installation) for more specific information about which versions to install.
-*	[NodeJS](https://nodejs.org)
-*	Karma test runner (run `npm install -g karma` after NodeJS is installed)
+```hbs
+<div class="ListPromo">
+    <div class="ListPromo-title">{{title}}</div>
+    <ul class="ListPromo-items">
+        {{#each items}}
+            <li class="ListPromo-items-item">{{this}}</li>
+        {{/each}}
+    </ul>
+    <div class="ListPromo-cta">{{cta}}</div>
+</div>
+```
+
+Names can be generated automatically via BEM helpers, which are
+explained later.
+
+---
+
+### Naming Example - Less
+
+```less
+.ListPromo {
+    border: solid 1px black;
+    padding: 1em;
+
+    &-title {
+        font-size: 2em;
+    }
+
+    &-items {
+        list-style: none;
+        padding: 0;
+
+        &-item {
+            margin-top: .5em;
+        }
+    }
+}
+```
+
+---
+
+### Naming Example - Less Alternative
+
+```less
+.ListPromo {
+    border: solid 1px black;
+    padding: 1em;
+}
+
+.ListPromo-title {
+    font-size: 2em;
+}
+
+.ListPromo-items {
+    list-style: none;
+    padding: 0;
+}
+
+.ListPromo-items-item {
+    margin-top: .5em;
+}
+```
+
+Only use this style when using Base blocks, not when creating them.
+
+---
+
+### Organization
+
+* Handlebars, Less, and JavaScript files all together in the same directory,
+  e.g. `ArticleMain` files in [`main`](src/main/webapp/base/main).
+* One _block_ per file.
+* Flat as possible by minimizing the number of nested directories.
+* Logically group _blocks_, e.g. all promo _blocks_ in
+  [`promo`](src/main/webapp/base/promo).
+
+---
+
+# Usage
+
+---
+
+### Usage Example
+
+To use [`ListPromo`](src/main/webapp/base/promo/ListPromo.hbs) as is, specify
+it directly in the Styleguide example JSON:
+
+```json
+{
+    "_template": "base/promo/ListPromo",
+    "title": "foo",
+    "items": [ "bar" ],
+    "cta": "qux"
+}
+```
+
+HTML output:
+
+```html
+<div class="ListPromo">
+    <div class="ListPromo-title">foo</div>
+    <ul class="ListPromo-items">
+        <li>bar</li>
+    </ul>
+    <div class="ListPromo-cta">qux</div>
+</div>
+```
+
+---
+
+### Usage Example - Copy
+
+To create a wide version of `ListPromo` named `WideListPromo`, use the
+`{{#defineBlock}}` helper and reference the template you want to extend:
+
+`WideListPromo.hbs`
+
+```hbs
+{{#defineBlock "WideListPromo" extend="base/promo/ListPromo"}}
+```
+
+HTML output:
+
+```html
+<div class="WideListPromo">
+    <div class="WideListPromo-title">...</div>
+    <ul class="WideListPromo-items">...</ul>
+    <div class="WideListPromo-cta">...</div>
+</div>
+```
+
+---
+
+### Usage Example - Reorder
+
+To move the `cta` _element_ in between the `title` _element_ and the `items`
+_element_, use the `{{element}}` helper:
+
+`CtaFirstListPromo.hbs`
+
+```hbs
+{{#defineBlock "CtaFirstListPromo" extend="base/promo/ListPromo"}}
+    {{element "title"}}
+    {{element "cta"}}
+    {{element "items"}}
+{{/defineBlock}}
+```
+
+HTML output:
+
+```html
+<div class="CtaFirstListPromo">
+    <div class="CtaFirstListPromo-title">...</div>
+    <div class="CtaFirstListPromo-cta">...</div>
+    <ul class="CtaFirstListPromo-items">...</ul>
+</div>
+```
+
+---
+
+### Usage Example - Add
+
+To add the `subTitle` _element_ below the `title` _element_:
+
+`SubTitledListPromo.hbs`
+
+```hbs
+{{#defineBlock "SubTitledListPromo" extend="base/promo/ListPromo"}}
+    {{element "title"}}
+    {{#with subTitle}}
+        <div class="SubTitledListPromo-subTitle">{{this}}</div>
+    {{/with}}
+    {{element "items"}}
+    {{element "cta"}}
+{{/defineBlock}}
+```
+
+HTML output:
+
+```html
+<div class="SubTitledListPromo">
+    <div class="SubTitledListPromo-title">...</div>
+    <div class="SubTitledListPromo-subTitle">...</div>
+    <ul class="SubTitledListPromo-items">...</ul>
+    <div class="SubTitledListPromo-cta">...</div>
+</div>
+```
+
+---
+
+### Usage Example - Style All
+
+Change all promo titles to `3em`:
+
+`All.less`
+
+```less
+@import 'base/promo/Promo';
+@import 'promo/Promo';
+@import 'base/promo/ImagePromo';
+@import 'base/promo/ListPromo';
+```
+
+`promo/Promo.less`
+
+```less
+.Promo-title {
+    font-size: 3em;
+}
+
+```
+
+---
+
+### Usage Example - Style One
+
+Change just list promo titles to `3em`:
+
+`All.less`
+
+```less
+@import 'base/promo/Promo';
+@import 'base/promo/ImagePromo';
+@import 'base/promo/ListPromo';
+@import 'promo/ListPromo';
+```
+
+`promo/ListPromo.less`
+
+```less
+.ListPromo-title {
+    font-size: 3em;
+}
+```
+
+---
+
+# Creating Base Blocks
+
+---
+
+### Handlebars Example - Not Reusable
+
+```hbs
+<div class="ListPromo">
+    <div class="ListPromo-title">{{title}}</div>
+    <ul class="ListPromo-items">
+        {{#each items}}
+            <li class="ListPromo-items-item">{{this}}</li>
+        {{/each}}
+    </ul>
+    <div class="ListPromo-cta">{{cta}}</div>
+</div>
+```
+---
+
+### Handlebars - Reusability
+
+BEM helpers:
+
+* `defineBlock`: Defines a _block_.
+* `blockName`: Returns the current _block_ name.
+* `defineBlockContainer`: Marks the template as the _block_ container.
+* `defineBlockBody`: Marks the template as the _block_ body.
+* `defineElement`: Defines an _element_ within a _block_.
+* `elementName`: Returns the current _element_ name.
+* `element`: Renders the named _element_.
+
+---
+
+### Handlebars Example - Reusable
+
+```hbs
+{{#defineBlock "ListPromo"}}
+    {{#defineElement "title"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "items"}}
+        <ul class="{{elementName}}">
+            {{#each this}}
+                <li class="{{elementName}}-item">{{this}}</li>
+            {{/each}}
+        </ul>
+    {{/defineElement}}
+
+    {{#defineElement "cta"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        {{#defineBlockBody}}
+            <div class="{{blockName}}">
+                {{element "title"}}
+                {{element "items"}}
+                {{element "cta"}}
+            </div>
+        {{/defineBlockBody}}
+    {{/defineBlockContainer}}
+{{/defineBlock}}
+```
+
+---
+
+### Less Example - Parent
+
+`Promo.less`
+
+```less
+.Promo {
+    &-title {
+        &:extend(.Promo-title all);
+        font-size: 2em;
+    }
+
+    &-cta {
+        &:extend(.Promo-cta all);
+        border: 5px solid black;
+    }
+}
+```
+
+---
+
+### Less Example - Simple Extend
+
+`ImagePromo.less`
+
+```less
+.ImagePromo {
+    &:extend(.Promo all);
+}
+```
+
+---
+
+### Less Example - Extend & Add
+
+`ListPromo.less`
+
+```less
+.ListPromo {
+    &:extend(.Promo all);
+
+    &-items {
+        &:extend(.ListPromo-items all);
+        list-style: none;
+        padding: 0;
+
+        &-item {
+            &:extend(.ListPromo-items-item all);
+            margin-top: .5em;
+        }
+    }
+}
+```
+
+---
+
+# Bonus
+
+---
+
+Save yourself time and keystrokes by adding the following to your favorite editor:
+* Atom: [snippet](https://gist.github.com/jpencola/663af50e4e3f41c5b368e16519c5add9)

@@ -1,0 +1,11 @@
+{
+    "_template": "/base/page/PageNavigation",
+    "items": [
+        {
+            "_repeat": 6,
+            "_template": "/base/util/Link",
+            "href": "#",
+            "body": "{{words(1)}}"
+        }
+    ]
+}

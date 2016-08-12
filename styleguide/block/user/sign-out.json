@@ -1,0 +1,7 @@
+{
+  "_template": "community/user/UserSignOut",
+
+  "button": "Logout",
+  "action": ".",
+  "target": "_blank"
+}

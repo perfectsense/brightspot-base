@@ -1,0 +1,38 @@
+{
+  "_template": "community/commenting/Commenting",
+
+  "id": "324kldsjlj34",
+  "textWhenHidden": "View Comments",
+  "textWhenVisible": "Hide Comments",
+  "title": "3 Comments",
+
+  "loadMoreButton": "Show More",
+  "loadMoreAction": "/SERVERERROR",
+
+  "commentEntry": {
+      "_dataUrl": "/block/commenting/comment-entry.json",
+      "submitAction": "/block/commenting/_response-with-invalid-comment-entry"
+  },
+
+  "body": {
+    "_template": "base/util/Concatenated",
+    "items": [
+      {
+        "_repeat": [
+          1,
+          2
+        ],
+        "_dataUrl": "/block/commenting/comment.json",
+        "replyAction": "/SERVERERROR"
+      }
+    ]
+  },
+
+  "validation": {
+    "_template": "base/form/ValidationMessages",
+    "serverError": {
+      "_template": "base/util/RawHtml",
+      "html": "Sorry! Something went wrong on our end. Please try again later."
+    }
+  }
+}

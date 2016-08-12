@@ -1,0 +1,8 @@
+{
+  "_template": "/base/Enhancement",
+  "alignment": "left",
+  "content": {
+      "_template": "/base/util/Image",
+      "src": "{{image(260,360)}}"
+  }
+}

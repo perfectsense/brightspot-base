@@ -1,0 +1,10 @@
+.Enhancement {
+
+    &[data-alignment='left'] {
+        &:extend(.Enhancement[data-alignment='left'] all);
+    }
+
+    &[data-alignment='right'] {
+        &:extend(.Enhancement[data-alignment='right'] all);
+    }
+}

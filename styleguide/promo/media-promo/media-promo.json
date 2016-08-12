@@ -1,0 +1,13 @@
+{
+    "_template": "/base/promo/MediaPromo",
+    "category": "{{words(1)}}",
+    "title": "{{words}}",
+    "media": {
+        "_template": "/base/util/Image",
+        "src": "{{image(40,40)}}"
+    },
+    "description": "{{words}}",
+    "cta": {
+        "_dataUrl": "../../block/util/link.json"
+    }
+}

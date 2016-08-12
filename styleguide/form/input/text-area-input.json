@@ -1,0 +1,13 @@
+{
+    "_template": "base/form/TextAreaInput",
+
+    "id": "{{number}}",
+    "name": "foo",
+    "placeholder": "Type here",
+    "autofocus": true,
+    "maxlength": 100,
+    "required": true,
+    "value": "Hello World",
+
+    "characterCountdown": "characters remain"
+}

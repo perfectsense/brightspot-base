@@ -1,0 +1,8 @@
+{
+    "stylesheets": [
+        {
+            "name": "Base",
+            "href": "/base/All.min.css"
+        }
+    ]
+}

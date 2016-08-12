@@ -1,0 +1,30 @@
+{
+    "_wrapper": false,
+    "_template": "/base/page/Page",
+
+    "head": {
+        "_template": "/base/page/Head",
+        "items": [
+            {
+                "_template": "/base/page/Meta",
+                "httpEquiv": "Content-Language",
+                "content": "en"
+            },
+            {
+                "_template": "/base/page/Meta",
+                "name": "description",
+                "content": "{{words}}"
+            },
+            {
+                "_template": "/base/page/Meta",
+                "property": "og:type",
+                "content": "website"
+            }
+        ]
+    },
+
+    "body": {
+        "_template": "/base/util/RawHtml",
+        "html": "{{paragraphs}}"
+    }
+}
