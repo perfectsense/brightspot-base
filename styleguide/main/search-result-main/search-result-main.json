@@ -1,0 +1,53 @@
+{
+    "_template": "base/main/SearchResultMain",
+
+    "headline": "{{words(4)}}",
+    "byline": "{{number(10)}} results",
+    "submitAction": "goo",
+
+    "filter": {
+        "_template": "base/form/Select",
+
+        "id": "filter-123",
+        "label": "filter",
+        "options": [
+            {
+                "_repeat": [2,10],
+                "_template": "base/form/Option",
+
+                "text": "{{words(2)}}",
+                "value": "{{words(2)}}"
+            }
+        ]
+    },
+
+    "sort": {
+        "_template": "base/form/Select",
+
+        "id": "sort-123",
+        "label": "sort",
+        "options": [
+            {
+                "_repeat": [2,10],
+                "_template": "base/form/Option",
+
+                "text": "{{words(2)}}",
+                "value": "{{words(2)}}"
+            }
+        ]
+    },
+
+    "results": {
+        "_template": "base/util/Concatenated",
+        "items": [
+            {
+                "_repeat": 9,
+                "_template": "base/util/RawHtml",
+                "html": "<div>{{words(3)}}</div>"
+            }
+        ]
+    },
+
+    "loadMoreAction": "loadmore",
+    "loadMoreLabel": "Load More"
+}

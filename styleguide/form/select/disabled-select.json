@@ -1,0 +1,17 @@
+{
+    "_template": "base/form/Select",
+
+    "id": "selectId-123",
+    "label": "Choose an option",
+    "required": true,
+    "disabled": true,
+    "options": [
+        {
+            "_repeat": [2,10],
+            "_template": "base/form/Option",
+
+            "text": "{{words(2)}}",
+            "value": "{{words(1)}}"
+        }
+    ]
+}
