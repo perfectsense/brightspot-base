@@ -1,6 +1,6 @@
 @import 'CreativeWorkMain.less';
 
-.SearchResultMain {
+.SearchMain {
     &:extend(.CreativeWorkMain all);
 
     &-headline {
@@ -12,18 +12,14 @@
     }
 
     &-filter {
-        &:extend(.SearchResultMain-filter all);
+        &:extend(.SearchMain-filter all);
     }
 
     &-sort {
-        &:extend(.SearchResultMain-sort all);
+        &:extend(.SearchMain-sort all);
     }
 
-    &-results {
-        &:extend(.SearchResultMain-results all);
-    }
-
-    &-loadMore {
-        &:extend(.SearchResultMain-loadMore all);
+    &-body {
+        &:extend(.SearchMain-body all);
     }
 }

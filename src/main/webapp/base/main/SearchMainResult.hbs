@@ -1,0 +1,24 @@
+{{#defineBlock "SearchMainResult"}}
+
+    {{#defineElement "items"}}
+        <section class="{{elementName}}">{{this}}</section>
+    {{/defineElement}}
+
+    {{#defineElement "loadMore"}}
+        <div class="{{elementName}}">
+            <button class="{{elementName}}-button" {{#if ../loadMoreAction}}formaction="{{../loadMoreAction}}"{{/if}}>{{#if ../loadMoreLabel}}{{../loadMoreLabel}}{{/if}}</button>
+        </div>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+
+        <div class="{{blockName}}">
+            {{#defineBlockBody}}
+                {{element "items"}}
+                {{element "loadMore"}}
+            {{/defineBlockBody}}
+        </div>
+
+    {{/defineBlockContainer}}
+
+{{/defineBlock}}

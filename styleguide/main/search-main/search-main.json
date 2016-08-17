@@ -1,15 +1,16 @@
 {
-    "_template": "base/main/SearchResultMain",
+    "_template": "base/main/SearchMain",
 
     "headline": "{{words(4)}}",
     "byline": "{{number(10)}} results",
-    "submitAction": "goo",
+    "submitAction": ".?q=keywords&offset=0&limit=3",
 
     "filter": {
         "_template": "base/form/Select",
 
         "id": "filter-123",
         "label": "filter",
+        "autosubmit": true,
         "options": [
             {
                 "_repeat": [2,10],
@@ -26,6 +27,7 @@
 
         "id": "sort-123",
         "label": "sort",
+        "autosubmit": true,
         "options": [
             {
                 "_repeat": [2,10],
@@ -37,17 +39,24 @@
         ]
     },
 
-    "results": {
-        "_template": "base/util/Concatenated",
-        "items": [
-            {
-                "_repeat": 9,
-                "_template": "base/util/RawHtml",
-                "html": "<div>{{words(3)}}</div>"
-            }
-        ]
-    },
+    "body": {
+        "_template": "base/main/SearchMainResult",
 
-    "loadMoreAction": "loadmore",
-    "loadMoreLabel": "Load More"
+        "items": {
+            "_template": "base/util/Concatenated",
+
+            "items": [
+                {
+                    "_repeat": 9,
+                    "_template": "base/util/RawHtml",
+
+                    "html": "<div>{{words(3)}}</div>"
+                }
+            ]
+        },
+
+        "loadMore": true,
+        "loadMoreAction": "_search-main-result-response?q=keywords&offset={{number([1,10])}}&limit=3",
+        "loadMoreLabel": "Load More"
+    }
 }

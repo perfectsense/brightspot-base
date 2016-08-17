@@ -1,4 +1,4 @@
-{{#defineBlock "SearchResultMain" extend="base/main/CreativeWorkMain"}}
+{{#defineBlock "SearchMain" extend="base/main/CreativeWorkMain"}}
 
     {{#defineElement "filter"}}
         <div class="{{elementName}}">{{this}}</div>
@@ -8,14 +8,8 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "results"}}
-        <section class="{{elementName}}">{{this}}</section>
-    {{/defineElement}}
-
-    {{#defineElement "loadMore" noWith=true}}
-        <div class="{{elementName}}">
-            <button class="{{elementName}}-button" {{#if loadMoreAction}}formaction="{{loadMoreAction}}"{{/if}}>{{#if loadMoreLabel}}{{loadMoreLabel}}{{/if}}</button>
-        </div>
+    {{#defineElement "body"}}
+        <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
     {{#defineBlockContainer}}
@@ -30,8 +24,7 @@
                 {{element "byline"}}
                 {{element "filter"}}
                 {{element "sort"}}
-                {{element "results"}}
-                {{element "loadMore"}}
+                {{element "body"}}
             {{/defineBlockBody}}
         </form>
     {{/defineBlockContainer}}

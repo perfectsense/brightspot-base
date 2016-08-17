@@ -19,5 +19,16 @@ import CommentEntry from "community/commenting/CommentEntry.js";
 import Commenting from "community/commenting/Commenting.js";
 
 import Gallery from "base/main/GalleryMain.js";
+import { SearchMain } from "base/main/SearchMain.js";
+
+$( document ).ready(function() {
+
+    // Search Results Main
+    let $searchMain = $('.SearchMain')
+    if ($searchMain.length) {
+        new SearchMain($searchMain, { })
+    }
+
+})
 
 export default {};
