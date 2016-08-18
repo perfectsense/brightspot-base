@@ -1,10 +1,12 @@
-import $ from 'jquery';
-import bspUtils from 'bsp-utils';
+import $ from 'jquery'
+import bspUtils from 'bsp-utils'
+
+/*
+
+*/
 
 export class SearchMain {
     constructor(_$ctx, options = { }) {
-        this.$context = _$ctx
-
         this.settings = $.extend({ }, {
             disableTransition: false,   // prevents the delayed data-attribute addition/removal for transitioning the result items
             selectors: {
@@ -13,8 +15,7 @@ export class SearchMain {
             }
         }, options)
 
-        this.initForm()
-        this.initLoadMoreButton()
+        this.initContext(_$ctx)
     }
 
     get $items() {
@@ -23,6 +24,14 @@ export class SearchMain {
 
     get $form() {
         return this.$context
+    }
+
+    get $context() {
+        return this.$_context
+    }
+
+    set $context($el) {
+        this.$_context = $el
     }
 
     get $loadMoreButton() {
@@ -40,14 +49,20 @@ export class SearchMain {
     set busy(toggleOn) {
         if (toggleOn) {
             this._busy = true
-            this.$context.attr('data-searching', '')
+            this.$context.attr('data-in-progress', '')
             this.$loadMoreButton.attr('disabled', '')
         }
         else {
             this._busy = false
-            this.$context.removeAttr('data-searching')
+            this.$context.removeAttr('data-in-progress')
             this.$loadMoreButton.removeAttr('disabled')
         }
+    }
+
+    initContext($ctx) {
+        this.$context = $ctx
+        this.initForm()
+        this.initLoadMoreButton()
     }
 
     initForm() {
@@ -68,8 +83,8 @@ export class SearchMain {
         this.$loadMoreButton
             .off('click')
             .on('click', (event)=> {
-                // was a specific formaction provided on the <button>?
-                // otherwise, this bubbles up to use the <form> action
+                // is a formaction provided on the <button>?
+                // otherwise, defaults to use the <form> action
                 let formAction = this.$loadMoreButton.attr('formaction')
                 if (formAction) {
                     event.preventDefault()
@@ -82,8 +97,9 @@ export class SearchMain {
             })
     }
 
-    onSubmit(action, callback) {
+    onSubmit(action) {
         this.busy = true
+
         return $.ajax({
             url: action || this.$form.attr('action'),
             method: this.$form.attr('method'),
@@ -100,6 +116,7 @@ export class SearchMain {
 
     onSubmitSuccess(response) {
         let $html = $(response)
+        this.updateContext($html)
     }
 
     onLoadMoreSuccess(response) {
@@ -127,10 +144,15 @@ export class SearchMain {
         }
     }
 
-    updateLoadMoreButton($button) {
+    updateContext($newContext) {
+        this.$context.replaceWith($newContext)
+        this.initContext($newContext)
+    }
+
+    updateLoadMoreButton($newButton) {
         // new load-more button?
-        if ($button.length > 0){
-            this.$loadMoreButton.replaceWith($button)
+        if ($newButton.length > 0){
+            this.$loadMoreButton.replaceWith($newButton)
             this.initLoadMoreButton()
         }
         else {
