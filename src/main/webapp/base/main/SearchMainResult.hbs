@@ -1,7 +1,7 @@
 {{#defineBlock "SearchMainResult"}}
 
     {{#defineElement "items"}}
-        <section class="{{elementName}}">{{this}}</section>
+        <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
     {{#defineElement "loadMore"}}
@@ -12,12 +12,12 @@
 
     {{#defineBlockContainer}}
 
-        <div class="{{blockName}}">
+        <section class="{{blockName}}">
             {{#defineBlockBody}}
                 {{element "items"}}
                 {{element "loadMore"}}
             {{/defineBlockBody}}
-        </div>
+        </section>
 
     {{/defineBlockContainer}}
 
