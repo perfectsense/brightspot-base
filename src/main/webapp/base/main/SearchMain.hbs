@@ -1,5 +1,13 @@
 {{#defineBlock "SearchMain" extend="base/main/CreativeWorkMain"}}
 
+    {{#defineElement "header" noWith=true}}
+        <header class="{{elementName}}">
+            {{element "byline"}}
+            {{element "filter"}}
+            {{element "sort"}}
+        </header>
+    {{/defineElement}}
+
     {{#defineElement "filter"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
@@ -21,9 +29,7 @@
             {{extraAttributes}}>
             {{#defineBlockBody}}
                 {{element "headline"}}
-                {{element "byline"}}
-                {{element "filter"}}
-                {{element "sort"}}
+                {{element "header"}}
                 {{element "body"}}
             {{/defineBlockBody}}
         </form>
