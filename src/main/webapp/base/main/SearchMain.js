@@ -7,11 +7,12 @@ import bspUtils from 'bsp-utils'
 
 export class SearchMain {
     constructor(_$ctx, options = { }) {
-        this.settings = $.extend({ }, {
+        this.settings = $.extend(true, { }, {
             disableTransition: false,   // prevents the delayed data-attribute addition/removal for transitioning the result items
             selectors: {
                 prefix: '.SearchMain',
                 resultBlock: '.SearchMainResult',
+                itemsFilter: ''         // if you need to get more specific about which elements within the SearchMainResult-items you want to append
             }
         }, options)
 
@@ -121,7 +122,7 @@ export class SearchMain {
 
     onLoadMoreSuccess(response) {
         let $html = $(response)
-        this.appendResults($html.find(`${this.selectors.resultBlock}-items`))
+        this.appendResults($html.find(`${this.selectors.resultBlock}-items ${this.settings.selectors.itemsFilter}`))
         this.updateLoadMoreButton($html.find(`${this.selectors.resultBlock}-loadMore-button`))
         this.$context.trigger('SearchMain:afterLoadMore')
     }
