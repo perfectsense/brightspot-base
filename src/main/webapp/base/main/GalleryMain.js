@@ -23,6 +23,18 @@ class Gallery {
      * If not specified, the gallery uses a randomly-selected montage of images as a background.
      * @param {Number} [options.introBackgroundMontageCount=7]
      * Maximum number of images to use for the montage background.
+     *
+     * *** EVENTS ***
+     * Events are triggered on the main element for the gallery. The following events are available.
+     * Gallery-modal-open, Gallery-modal-close, Gallery-carousel-after-change
+     *
+     * Each event handler receives the following arguments: (event, galleryObject, ...other)
+     * 
+     * For example, to listen for the modal-open event:
+     * $('#mygallery').on('Gallery-modal-open', function(event, galleryObj) { ...});
+     * 
+     * Or to listen for carousel changes:
+     * $('#mygallery').on('Gallery-carousel-after-change', function(event, galleryObj, carouselObj, index) { ...});
      */
     constructor(el, options) {
         
@@ -34,6 +46,11 @@ class Gallery {
             classNameMain: 'Gallery',
             classNameSlide: 'GallerySlide',
             attrNameMain: 'data-gallery',
+            
+            // Allow event name to be overridden.
+            // Events are like eventName + "-" + name
+            // For example: "Gallery-modal-open"
+            eventName: 'Gallery',
             
             // Make a background from the intro block?
             // Set to false if you don't want to add a background.
@@ -393,6 +410,11 @@ class Gallery {
             }
             return false;
         });
+        
+        // When the modal closes trigger an event on the gallery
+        this.$modal.on('bsp-modal:close', (event, ...eventArgs) => {
+            this.trigger('modal-close');
+        });
     }
     
     
@@ -465,9 +487,14 @@ class Gallery {
             $modalSlides = this.$slidesContainer.clone().attr(this.attr.view, 'modal').appendTo($modalCarousel);
         }
 
-        // Whenever the carousel slide changes update the count
-        $modalCarousel.on('afterChange', event => {
+        // Whenever the carousel slide changes update the count, and trigger an event
+        $modalCarousel.on('afterChange', (event, ...eventArgs) => {
+            
             this.modalUpdateCount();
+            
+            // Trigger a gallery event, and pass along all the data from the carousel event.
+            // In this case, eventArgs would include the carousel object, plus the slide index (0..n)
+            this.trigger('carousel-after-change', ...eventArgs);
         });
         
         // Create the carousel within the modal
@@ -493,6 +520,9 @@ class Gallery {
         if (this.settings.fullscreen) {
             this.modalFullscreen();
         }
+        
+        // When the modal opens trigger an event on the gallery
+        this.trigger('modal-open');
     }
     
     
@@ -767,6 +797,25 @@ class Gallery {
         }
         
         return array;
+    }
+    
+    
+    /**
+     * Trigger an event for the gallery.
+     * 
+     * @param  {String} eventName
+     * The name of the event. This will be prepended by "Gallery-" (or the value of this.settings.eventName).
+     * For example: "modal-open" to trigger event "Gallery-modal-open"
+     * 
+     * @param  {Anything} ...eventArgs
+     * Arguments to be passed to the triggered event. Note the "this" object will be sent as the first argument,
+     * then the eventArgs after that. For example, if you call:
+     * gallery.trigger('my-event', foo, bar)
+     * Then the event handler would be something like this:
+     * $('#mygallery').on('Gallery-my-event', function(event, galleryObj, foo, bar) { ... } );
+     */
+    trigger(eventName, ...eventArgs) {
+        this.$el.trigger(this.settings.eventName + '-' + eventName, [this].concat(eventArgs));
     }
 }
 
