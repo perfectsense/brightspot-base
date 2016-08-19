@@ -1,10 +1,6 @@
 import $ from 'jquery'
 import bspUtils from 'bsp-utils'
 
-/*
-
-*/
-
 export class SearchMain {
     constructor(_$ctx, options = { }) {
         this.settings = $.extend(true, { }, {
