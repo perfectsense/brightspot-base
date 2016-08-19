@@ -159,6 +159,10 @@ To create a wide version of `ListPromo` named `WideListPromo`, use the
 
 ```hbs
 {{#defineBlock "WideListPromo" extend="base/promo/ListPromo"}}
+    {{element "title"}}
+    {{element "items"}}
+    {{element "cta"}}
+{{/defineBlock}}
 ```
 
 HTML output:
