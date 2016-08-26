@@ -19,6 +19,7 @@
     "test",
     "tests"
   ],
+  "brightspot-jsdoc-enable": true,
   "brightspot-library-files": [
     "src/main/webapp/scripts/config.js",
     "src/main/webapp/scripts/main.js",
