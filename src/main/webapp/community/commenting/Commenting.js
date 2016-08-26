@@ -1,6 +1,10 @@
 import $ from 'jquery';
 import bspUtils from 'bsp-utils';
 
+/**
+ * Commenting module.
+ * @exports community/commenting/Commenting
+ */
 let Commenting = {
     defaults: {
         showComments: false,
@@ -13,6 +17,16 @@ let Commenting = {
         }
     },
 
+    /**
+     * Initializes the Commenting module
+     *
+     * @param  {Element|jQuery} el
+     * Context element for the commenting block.
+     *
+     * @param  {Object} [options]
+     * Optional list of key:value pairs to set options.
+     *
+     */
     init($el, options) {
         let self = this;
         self.$el = $el;
@@ -111,6 +125,12 @@ let Commenting = {
         });
     },
 
+    /**
+     * Renders comment data.
+     *
+     * @param  {Object} data
+     * The JSON data of the comments to render
+     */
     renderComments(data) {
         let $html = $(data);
         let $comments = $html.find('.CommentLoadMoreResponse-comments').children(this.settings.selectors.commentBlock);
