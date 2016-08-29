@@ -4,10 +4,10 @@
         <div class="{{elementName}}"
             data-aspect-ratio="{{#if aspectRatio}}{{aspectRatio}}{{else}}4x3{{/if}}">
             <iframe id="{{id}}"
-                    src="{{{src}}}?form=html"
-                    onload="$pdk.bind(this, true); $pdk.controller.setIFrame(this, true);"
-                    allowfullscreen
-                    frameborder="0">
+                src="{{{src}}}?form=html"
+                onload="$pdk.bind(this, true); $pdk.controller.setIFrame(this, true);"
+                allowfullscreen
+                frameborder="0">
             </iframe>
         </div>
     {{/defineElement}}
