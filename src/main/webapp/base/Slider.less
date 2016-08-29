@@ -1,0 +1,21 @@
+.Slider {
+
+    &:extend(.Slider all);
+
+    &[data-is-hidden] {
+        visibility: hidden;
+    }
+
+    &-title {
+        &:extend(.Slider-title all);
+    }
+
+    &-slides {
+        &:extend(.Slider-slides all);
+
+        &-slide {
+            &:extend(.Slider-slides-slide all);
+        }
+    }
+    
+}

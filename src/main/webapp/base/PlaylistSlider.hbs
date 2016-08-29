@@ -1,0 +1,15 @@
+{{#defineBlock "PlaylistSlider" extend="base/Slider"}}
+    {{#defineBlockContainer}}
+
+        <div class="{{blockName}}"
+            {{#if nextPlaylistHref}} data-nextPlaylistHref="{{nextPlaylistHref}}"{{/if}}
+            {{#if loopPlaylist}} data-loop-playlist="{{loopPlaylist}}"{{/if}}
+            {{extraAttributes}}>
+            {{#defineBlockBody}}
+                {{element "title"}}
+                {{element "slides"}}
+            {{/defineBlockBody}}
+        </div>
+
+    {{/defineBlockContainer}}
+{{/defineBlock}}

@@ -1,0 +1,25 @@
+.PlaylistSlider {
+
+    &:extend(.Slider all);
+
+    &-title {
+        &:extend(.Slider-title all);
+    }
+
+    &-slides {
+        &:extend(.Slider-slides all);
+
+        &[data-beforeDestroy] {
+
+        }
+
+        &-slide {
+            &:extend(.Slider-slides-slide all);
+
+            &[hidden] {
+                display: none;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,4 @@
+{
+    "_template": "base/util/Image",
+    "src": "{{image(200,200)}}"
+}

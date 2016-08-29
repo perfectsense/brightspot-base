@@ -1,0 +1,22 @@
+{{#defineBlock "Slider"}}
+    {{#defineElement "title"}}
+        <h2 class="{{elementName}}">{{this}}</h2>
+    {{/defineElement}}
+
+    {{#defineElement "slides"}}
+        <div class="{{elementName}}">
+            {{#each this}}
+                <div class="{{elementName}}-slide"{{#if hidden}} hidden{{/if}}>{{this}}</div>
+            {{/each}}
+        </div>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}"{{extraAttributes}}>
+            {{#defineBlockBody}}
+                {{element "title"}}
+                {{element "slides"}}
+            {{/defineBlockBody}}
+        </div>
+    {{/defineBlockContainer}}
+{{/defineBlock}}

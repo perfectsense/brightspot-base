@@ -1,0 +1,11 @@
+{
+    "_template": "base/PlaylistSlider",
+
+    "title": "Playlist Slider",
+    "slides": [
+        {
+            "_repeat": 16,
+            "_dataUrl": "_slides.json"
+        }
+    ]
+}

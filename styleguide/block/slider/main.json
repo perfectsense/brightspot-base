@@ -1,0 +1,11 @@
+{
+    "_template": "base/Slider",
+
+    "title": "Slider",
+    "slides": [
+        {
+            "_repeat": 16,
+            "_dataUrl": "_slides.json"
+        }
+    ]
+}
