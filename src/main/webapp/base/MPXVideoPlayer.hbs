@@ -1,0 +1,25 @@
+{{#defineBlock "MPXVideoPlayer"}}
+
+    {{#defineElement "screen" noWith=true}}
+        <div class="{{elementName}}"
+            data-aspect-ratio="{{#if aspectRatio}}{{aspectRatio}}{{else}}4x3{{/if}}">
+            <iframe id="{{id}}"
+                    src="{{{src}}}?form=html"
+                    onload="$pdk.bind(this, true); $pdk.controller.setIFrame(this, true);"
+                    allowfullscreen
+                    frameborder="0">
+            </iframe>
+        </div>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}"
+            itemprop="video" itemscope itemtype="http://schema.org/VideoObject"
+            {{extraAttributes}}>
+            {{#defineBlockBody}}
+                {{element "screen"}}
+            {{/defineBlockBody}}
+        </div>
+    {{/defineBlockContainer}}
+
+{{/defineBlock}}

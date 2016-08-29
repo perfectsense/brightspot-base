@@ -1,0 +1,23 @@
+{
+    "_template": "base/main/VideoMain",
+
+    "permalink": "video-01-GUID?foo=bar&baz=qux",
+    "preHeadline": "1 of 1",
+
+    "headline": {
+        "_template": "base/util/RawHtml",
+        "html": "Title"
+    },
+
+    "subHeadline": "{{number([0,12])}}:59",
+    "videoHLS": "https://link.theplatform.com/s/{{var('mpxAccountId')}}/yrucumrCUeBd?sst=true",
+
+    "description": {
+        "_template": "base/util/RawHtml",
+        "html": "{{sentences([3,20])}}"
+    },
+
+    "videoPlayer": {
+        "_dataUrl": "/block/mpx-video-player/main.json"
+    }
+}

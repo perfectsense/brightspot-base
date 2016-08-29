@@ -1,4 +1,10 @@
 {
+    "vars": {
+        "exampleUrl": "http://www.perfectsensedigital.com",
+        "mpxAccountId": "1X3jUC",
+        "mpxPlayerId": "yh5o5S5hrJ4c"
+    },
+
     "stylesheets": [
         {
             "name": "Base",
