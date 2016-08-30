@@ -7,8 +7,8 @@ export class SearchMain {
             disableTransition: false,   // prevents the delayed data-attribute addition/removal for transitioning the result items
             selectors: {
                 prefix: '.SearchMain',
-                resultBlock: '.SearchMainResult',
-                itemsFilter: ''         // if you need to get more specific about which elements within the SearchMainResult-items you want to append
+                resultBlock: '.SearchResult',
+                itemsFilter: ''         // if you need to get more specific about which elements within the SearchResult-items you want to append
             }
         }, options)
 

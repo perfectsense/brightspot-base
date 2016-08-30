@@ -1,11 +1,19 @@
-{{#defineBlock "SearchMain" extend="base/main/CreativeWorkMain"}}
+{{#defineBlock "SearchMain"}}
 
     {{#defineElement "header" noWith=true}}
         <header class="{{elementName}}">
-            {{element "byline"}}
+            {{element "subHeadline"}}
             {{element "filter"}}
             {{element "sort"}}
         </header>
+    {{/defineElement}}
+
+    {{#defineElement "headline"}}
+        <div class="{{elementName}}" itemprop="headline">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "subHeadline"}}
+        <div class="{{elementName}}" itemprop="alternativeHeadline">{{this}}</div>
     {{/defineElement}}
 
     {{#defineElement "filter"}}

@@ -2,6 +2,7 @@
     "_template": "base/form/Select",
 
     "id": "selectId-123",
+    "name": "selectName-123",
     "required": true,
     "label": "Choose an option",
     "options": [

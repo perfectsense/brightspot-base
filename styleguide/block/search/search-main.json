@@ -1,14 +1,15 @@
 {
-    "_template": "base/main/SearchMain",
+    "_template": "base/search/SearchMain",
 
     "headline": "{{words(4)}}",
-    "byline": "{{number(10)}} results",
+    "subHeadline": "{{number(10)}} results",
     "submitAction": ".?q=keywords&offset=0&limit=3",
 
     "filter": {
         "_template": "base/form/Select",
 
         "id": "filter-123",
+        "name": "filter-123",
         "label": "filter",
         "autosubmit": true,
         "options": [
@@ -26,6 +27,7 @@
         "_template": "base/form/Select",
 
         "id": "sort-123",
+        "name": "sort-123",
         "label": "sort",
         "autosubmit": true,
         "options": [
@@ -40,7 +42,7 @@
     },
 
     "body": {
-        "_template": "base/main/SearchMainResult",
+        "_template": "base/search/SearchResult",
 
         "items": {
             "_template": "base/util/Concatenated",
