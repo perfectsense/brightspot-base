@@ -1,6 +1,8 @@
 {
     "_template": "base/page/SideNavigation",
 
+    "openButtonLabel": "Open sidenav",
+
     "title": "Title",
 
     "items": [
