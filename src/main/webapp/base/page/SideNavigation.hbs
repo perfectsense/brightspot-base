@@ -36,7 +36,9 @@
     {{#defineBlockContainer}}
 
         <div class="{{blockName}}">
-            {{element "openButton"}}
+            <div class="{{blockName}}-controls">
+                {{element "openButton"}}
+            </div>
             <div class="{{blockName}}-tray">
                 {{#defineBlockBody}}
                 {{element "progress"}}
