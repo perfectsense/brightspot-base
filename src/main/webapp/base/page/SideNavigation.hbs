@@ -12,10 +12,6 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "openButton" noWith=true}}
-        <button class="{{elementName}}">{{#if openButtonLabel}}{{openButtonLabel}}{{/if}}</button>
-    {{/defineElement}}
-
     {{#defineElement "closeButton" noWith=true}}
         <button class="{{elementName}}"></button>
     {{/defineElement}}
@@ -36,17 +32,14 @@
     {{#defineBlockContainer}}
 
         <div class="{{blockName}}">
-            {{element "openButton"}}
-            <div class="{{blockName}}-tray">
-                {{#defineBlockBody}}
-                {{element "progress"}}
-                <div class="{{blockName}}-menu">
-                    {{element "header"}}
-                    {{element "navigation"}}
-                    {{element "footer"}}
-                </div>
-                {{/defineBlockBody}}
+            {{element "progress"}}
+            {{#defineBlockBody}}
+            <div class="{{blockName}}-menu">
+                {{element "header"}}
+                {{element "navigation"}}
+                {{element "footer"}}
             </div>
+            {{/defineBlockBody}}
         </div>
 
     {{/defineBlockContainer}}
