@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<differences>
+    <difference>
+        <className>com/psddev/base/view/base/AuthorView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/AuthorView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/BreadcrumbsView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/BreadcrumbsView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/EnhancementView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/EnhancementView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/GalleryIntroView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/GalleryIntroView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/GallerySlideView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/GallerySlideView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/form/InputView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/form/InputView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/form/OptionView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/form/OptionView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/form/SelectView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/form/SelectView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/form/TextAreaInputView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/form/TextAreaInputView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/form/TextInputView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/form/TextInputView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/form/ValidationErrorView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/form/ValidationErrorView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/form/ValidationMessagesView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/form/ValidationMessagesView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/main/ArticleMainView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/main/ArticleMainView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/main/GalleryMainView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/main/GalleryMainView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/page/ExternalScriptView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/page/ExternalScriptView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/page/ExternalStylesheetView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/page/ExternalStylesheetView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/page/HeadView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/page/HeadView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/page/InlineScriptView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/page/InlineScriptView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/page/InlineStylesheetView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/page/InlineStylesheetView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/page/MetaView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/page/MetaView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/page/PageFooterView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/page/PageFooterView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/page/PageHeaderView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/page/PageHeaderView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/page/PageNavigationView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/page/PageNavigationView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/page/PageView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/page/PageView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/promo/ListPromoView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/promo/ListPromoView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/promo/MediaPromoView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/promo/MediaPromoView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/search/SearchMainView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/search/SearchMainView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/search/SearchResultView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/search/SearchResultView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/util/ConcatenatedView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/util/ConcatenatedView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/util/DateTimeView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/util/DateTimeView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/util/ImageView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/util/ImageView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/util/LinkView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/util/LinkView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/util/RawHtmlView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/util/RawHtmlView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/util/SocialLinkView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/base/util/SocialLinkView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/community/commenting/CommentActionResponseView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/community/commenting/CommentActionResponseView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/community/commenting/CommentEntryView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/community/commenting/CommentEntryView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/community/commenting/CommentLoadMoreResponseView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/community/commenting/CommentLoadMoreResponseView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/community/commenting/CommentView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/community/commenting/CommentView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/community/commenting/CommentingView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/community/commenting/CommentingView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/community/user/UserSignInView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/community/user/UserSignInView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/community/user/UserSignOutView</className>
+        <differenceType>8001</differenceType>
+    </difference>
+
+    <difference>
+        <className>com/psddev/base/view/community/user/UserSignOutView$Builder</className>
+        <differenceType>8001</differenceType>
+    </difference>
+</differences>
