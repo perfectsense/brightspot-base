@@ -1,0 +1,46 @@
+{{#defineBlock "SearchMain"}}
+
+    {{#defineElement "header" noWith=true}}
+        <header class="{{elementName}}">
+            {{element "subHeadline"}}
+            {{element "filter"}}
+            {{element "sort"}}
+        </header>
+    {{/defineElement}}
+
+    {{#defineElement "headline"}}
+        <div class="{{elementName}}" itemprop="headline">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "subHeadline"}}
+        <div class="{{elementName}}" itemprop="alternativeHeadline">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "filter"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "sort"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "body"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <form
+            method="get"
+            class="{{blockName}}"
+            action="{{submitAction}}"
+            itemscope itemtype="https://schema.org/SearchResultsPage"
+            {{extraAttributes}}>
+            {{#defineBlockBody}}
+                {{element "headline"}}
+                {{element "header"}}
+                {{element "body"}}
+            {{/defineBlockBody}}
+        </form>
+    {{/defineBlockContainer}}
+
+{{/defineBlock}}

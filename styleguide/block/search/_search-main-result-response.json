@@ -1,0 +1,21 @@
+{
+    "_wrapper": false,
+    "_template": "base/search/SearchResult",
+
+    "items": {
+        "_template": "base/util/Concatenated",
+
+        "items": [
+            {
+                "_repeat": 9,
+                "_template": "base/util/RawHtml",
+
+                "html": "<div>{{words(3)}}</div>"
+            }
+        ]
+    },
+
+    "loadMore": true,
+    "loadMoreAction": "_search-main-last-result-response?q=keywords&offset={{number([1,10])}}&limit=3",
+    "loadMoreLabel": "Load More (page 2)"
+}

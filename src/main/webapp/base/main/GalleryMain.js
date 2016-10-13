@@ -412,10 +412,6 @@ class Gallery {
             return false;
         });
 
-        // When the modal closes trigger an event on the gallery
-        this.$modal.on('bsp-modal:close', (event, ...eventArgs) => {
-            this.trigger('modal-close');
-        });
     }
 
 
@@ -452,6 +448,11 @@ class Gallery {
         this.$modal.find(this.selectors.modalFullscreen).on('click', event => {
             this.modalFullscreen();
             return false;
+        });
+
+        // When the modal closes trigger an event on the gallery
+        this.$modal.off('bsp-modal:close').on('bsp-modal:close', (event, ...eventArgs) => {
+            this.trigger('modal-close');
         });
 
         // Open the modal, using class 'modal-theme-gallery'

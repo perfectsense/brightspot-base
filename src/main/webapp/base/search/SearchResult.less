@@ -1,0 +1,16 @@
+.SearchResult {
+    &:extend(.SearchResult all);
+
+    &-items {
+        &:extend(.SearchResult-items all);
+    }
+
+    &-loadMore {
+        &:extend(.SearchResult-loadMore all);
+    }
+
+    &-loadMore-button {
+        &:extend(.SearchResult-loadMore-button all);
+        &[disabled] { }
+    }
+}

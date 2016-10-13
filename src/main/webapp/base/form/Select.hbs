@@ -1,0 +1,32 @@
+{{#defineBlock "Select"}}
+
+    {{#defineElement "label"}}
+        <label class="{{elementName}}" for="{{../id}}">{{this}}</label>
+    {{/defineElement}}
+
+    {{#defineElement "select" noWith=true}}
+        <select
+            class="{{elementName}}"
+            name="{{name}}"
+            id="{{id}}"
+            {{#if required}} required{{/if}}
+            {{#if autosubmit}} data-bsp-autosubmit{{/if}}
+            {{#if form}} form="{{form}}"{{/if}}
+            {{#if disabled}} disabled{{/if}}
+            {{#if multiple}} multiple{{/if}}>
+            {{#each options}}
+                {{this}}
+            {{/each}}
+        </select>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}">
+            {{#defineBlockBody}}
+                {{element "label"}}
+                {{element "select"}}
+            {{/defineBlockBody}}
+        </div>
+    {{/defineBlockContainer}}
+
+{{/defineBlock}}
