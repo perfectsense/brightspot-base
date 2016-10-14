@@ -9,10 +9,15 @@ import Commenting from "community/commenting/Commenting.js";
 
 import Gallery from "base/main/GalleryMain.js";
 import { VideoMain } from 'base/main/VideoMain.js';
-
-export default {};
+import { SearchMain } from "base/search/SearchMain.js";
 
 $( document ).ready(function() {
+
+    // Search Main
+    let $searchMain = $('.SearchMain')
+    if ($searchMain.length) {
+        new SearchMain($searchMain, { })
+    }
 
     // How to create a new VideoMain binding
     let $videoMain = $('.VideoMain')
@@ -21,3 +26,5 @@ $( document ).ready(function() {
     }
 
 })
+
+export default {};
