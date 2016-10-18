@@ -3,7 +3,7 @@
   "version": "3.0.1",
   "devDependencies": {
     "bsp-grunt": "perfectsense/brightspot-js-grunt#v4.0.0",
-    "bsp-styleguide": "perfectsense/brightspot-styleguide#v1.1.350-86f868",
+    "bsp-styleguide": "perfectsense/brightspot-styleguide#feature/bsp-2649/gulp-tasks",
     "del": "2.2.2",
     "grunt": "1.0.1",
     "grunt-cli": "1.2.0",
