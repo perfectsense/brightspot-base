@@ -3,7 +3,8 @@
   "version": "3.0.1",
   "devDependencies": {
     "bsp-styleguide": "perfectsense/brightspot-styleguide#feature/bsp-2649/gulp-tasks",
-    "gulp": "3.9.1"
+    "gulp": "3.9.1",
+    "run-sequence": "1.2.2"
   },
   "scripts": {
     "gulp": "gulp",

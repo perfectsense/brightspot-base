@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const runSequence = require('run-sequence');
 const styleguide = require('brightspot-styleguide/tasks/all.js');
 
 // the clean styleguide tasks blanks out the _build and _dist directories
@@ -7,12 +8,12 @@ gulp.task('clean', function () {
 });
 
 // simple bower install that goes through your bower.json and brings those components down into the _build/bower_components folder
-gulp.task('bower-install', ['clean'], function () {
+gulp.task('bower-install', function () {
     return styleguide.bowerInstall();
 });
 
 // this task gathers all the js, less, and css from this folders and copies it to _build so we can do our compilation there
-gulp.task('copy-src', ['clean'], function() {
+gulp.task('copy-src', function() {
     return styleguide.copySrc();
 });
 
@@ -29,21 +30,25 @@ gulp.task('copy-bower', ['bower-install'], function () {
 //                 .pipe(gulp.dest('./_dist/custom-directory-for-bowered-in-component'))
 // });
 
-gulp.task('less', ['copy-src', 'copy-bower'], function() {
+gulp.task('less', function (cb) {
     return gulp.src('_build/All.less')
         .pipe(styleguide.compileStyles())
         .pipe(gulp.dest('./_dist'));
 });
 
-gulp.task('systemjs', ['copy-src', 'copy-bower'], function (cb) {
+gulp.task('systemjs', function (cb) {
     return gulp.src('_build/All.js')
         // commenting out until we actually have something that will work for compileScripts
         //.pipe(styleguide.compileScripts());
         .pipe(gulp.dest('./_dist'));
 });
 
-gulp.task('default', ['less', 'systemjs'], function (cb) {
-    return;
+gulp.task('compile', function (cb) {
+    runSequence('clean', ['copy-src', 'copy-bower'], ['less', 'systemjs'], cb)
+})
+
+gulp.task('default', ['compile'], function (cb) {
+    return
 });
 
 module.exports = gulp;
