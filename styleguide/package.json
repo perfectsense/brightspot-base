@@ -2,16 +2,10 @@
   "name": "brightspot-base",
   "version": "3.0.1",
   "devDependencies": {
-    "bsp-grunt": "perfectsense/brightspot-js-grunt#v4.0.0",
     "bsp-styleguide": "perfectsense/brightspot-styleguide#feature/bsp-2649/gulp-tasks",
-    "del": "2.2.2",
-    "grunt": "1.0.1",
-    "grunt-cli": "1.2.0",
-    "gulp": "3.9.1",
-    "gulp-bower": "0.0.13"
+    "gulp": "3.9.1"
   },
   "scripts": {
-    "grunt": "grunt",
     "gulp": "gulp",
     "styleguide": "styleguide"
   }
