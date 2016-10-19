@@ -37,10 +37,8 @@ gulp.task('less', function (cb) {
 });
 
 gulp.task('systemjs', function (cb) {
-    return gulp.src('_build/All.js')
-        // commenting out until we actually have something that will work for compileScripts
-        //.pipe(styleguide.compileScripts());
-        .pipe(gulp.dest('./_dist'));
+    return styleguide.compileScripts()
+           .pipe(gulp.dest('./_dist'))
 });
 
 gulp.task('compile', function (cb) {
