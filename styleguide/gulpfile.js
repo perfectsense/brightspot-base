@@ -1,6 +1,8 @@
 const gulp = require('gulp');
 const runSequence = require('run-sequence');
-const styleguide = require('brightspot-styleguide/tasks/all.js');
+const Styleguide = require('brightspot-styleguide/styleguide.js');
+
+var styleguide = new Styleguide({ });
 
 // the clean styleguide tasks blanks out the _build and _dist directories
 gulp.task('clean', function () {
@@ -36,13 +38,12 @@ gulp.task('less', function (cb) {
         .pipe(gulp.dest('./_dist'));
 });
 
-gulp.task('systemjs', function (cb) {
+gulp.task('scripts', function (cb) {
     return styleguide.compileScripts()
-           .pipe(gulp.dest('./_dist'))
 });
 
 gulp.task('compile', function (cb) {
-    runSequence('clean', ['copy-src', 'copy-bower'], ['less', 'systemjs'], cb)
+    runSequence('clean', ['copy-src', 'copy-bower'], ['less', 'scripts'], cb)
 })
 
 gulp.task('default', ['compile'], function (cb) {
