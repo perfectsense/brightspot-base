@@ -19,12 +19,10 @@ gulp.task('copy-src', function() {
     return styleguide.copySrc();
 });
 
-// the copyBower styleguide task goes through the main entries in your bower.json dependencies and copies those files
-// from those components to the root of _build for compiling. If you want to override what to copy in from your bowered component,
-// you can create a "overrides" object with alternate main entries to copy those items into the root of _build instead/
-// If you need to copy to somewhere that is NOT root, add an ignore: true to the override for that bower component
-// and copy manually like the example below
-gulp.task('copy-bower', ['bower-install'], function () {
+// Using the bower.json defined in each Bower component, this copies the specified main file
+// into the `_build` directory. If the bower component you're installing doesn't specify a main file,
+// you can define it manually in your bower.json's "overrides" data.
+gulp.task('copy-bower', function () {
     return styleguide.copyBower();
 });
 // gulp.task('copy-custom-bower-files', ['bower-install'], function (cb) {
@@ -32,22 +30,26 @@ gulp.task('copy-bower', ['bower-install'], function () {
 //                 .pipe(gulp.dest('./_dist/custom-directory-for-bowered-in-component'))
 // });
 
-gulp.task('less', function (cb) {
+gulp.task('less', function () {
     return gulp.src('_build/All.less')
         .pipe(styleguide.compileStyles())
         .pipe(gulp.dest(styleguide.distRoot()));
 });
 
-gulp.task('scripts', function (cb) {
+gulp.task('scripts', function () {
     return styleguide.compileScripts()
 });
 
 gulp.task('compile', function (cb) {
-    runSequence('clean', ['copy-src', 'copy-bower'], ['less', 'scripts'], cb)
+    runSequence('clean', 'bower-install', ['copy-src', 'copy-bower'], ['less', 'scripts'], cb)
 })
 
-gulp.task('default', ['compile'], function (cb) {
+gulp.task('default', ['compile'], function () {
     return
 });
+
+gulp.task('watch', function () {
+     gulp.watch('bower_components/**', ['copy-bower'])
+})
 
 module.exports = gulp;
