@@ -35,7 +35,7 @@ gulp.task('copy-bower', ['bower-install'], function () {
 gulp.task('less', function (cb) {
     return gulp.src('_build/All.less')
         .pipe(styleguide.compileStyles())
-        .pipe(gulp.dest('./_dist'));
+        .pipe(gulp.dest(styleguide.distRoot()));
 });
 
 gulp.task('scripts', function (cb) {
