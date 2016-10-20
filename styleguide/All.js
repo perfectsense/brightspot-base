@@ -18,6 +18,6 @@ import Comment from "block/commenting/Comment.js";
 import CommentEntry from "block/commenting/CommentEntry.js";
 import Commenting from "block/commenting/Commenting.js";
 
-//import Gallery from "main/gallery-main/GalleryMain.js";
+import Gallery from "main/gallery-main/GalleryMain.js";
 
 export default {};
