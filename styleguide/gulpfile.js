@@ -29,6 +29,10 @@ gulp.task('js', (done) => {
     // TODO: lint JS files via styleguide helper
 
     const Builder = require('systemjs-builder');
+    const sourcemaps = require('gulp-sourcemaps');
+    const uglify = require('gulp-uglify');
+    const rename = require('gulp-rename');
+
     let builder = new Builder();
 
     // TODO: turn this into styleguide helper?
@@ -45,7 +49,7 @@ gulp.task('js', (done) => {
     });
 
     let buildOptions = {
-        minify: true
+        minify: false
     };
 
     builder.buildStatic('All.js', buildOptions).then((output) => {
@@ -53,6 +57,11 @@ gulp.task('js', (done) => {
 
         gulp.src([ ])
             .pipe(file('All.js', output.source))
+            .pipe(sourcemaps.init())
+            .pipe(gulp.dest(styleguide.distPath()))
+            .pipe(uglify())
+            .pipe(rename({extname: '.min.js'}))
+            .pipe(sourcemaps.write('.'))
             .pipe(gulp.dest(styleguide.distPath()))
             .on('end', done);
     });
