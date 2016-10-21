@@ -68,14 +68,12 @@ gulp.task('js', (done) => {
 });
 
 gulp.task('styleguide', () => {
-    const styleguide = require('brightspot-styleguide/lib/server');
-
     // TODO: turn this into styleguide helper?
     gulp.watch([ '**/*.less', '!_build/**', '!bower_components/**', '!node_modules/**' ], [ 'css' ]);
     gulp.watch([ '**/*.js', '!_build/**', '!bower_components/**', '!node_modules/**' ], [ 'js' ]);
 
     // TODO: turn command line arguments into options
-    styleguide({
+    styleguide.serve({
         host: 'localhost',
         port: 3000
     });
