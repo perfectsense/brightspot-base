@@ -68,13 +68,14 @@ gulp.task('js', (done) => {
 });
 
 gulp.task('styleguide', () => {
+    const args = require('minimist')(process.argv.slice(2));
+    
     // TODO: turn this into styleguide helper?
     gulp.watch([ '**/*.less', '!_build/**', '!bower_components/**', '!node_modules/**' ], [ 'css' ]);
     gulp.watch([ '**/*.js', '!_build/**', '!bower_components/**', '!node_modules/**' ], [ 'js' ]);
 
-    // TODO: turn command line arguments into options
     styleguide.serve({
-        host: 'localhost',
-        port: 3000
+        host: args.host || 'localhost',
+        port: args.port || '3000'
     });
 });
