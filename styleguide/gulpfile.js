@@ -1,11 +1,5 @@
 const gulp = require('gulp');
-
-// TODO: move this logic into brightspot-styleguide
-const styleguide = {
-    buildPath() {
-        return '_build';
-    }
-};
+const styleguide = require('brightspot-styleguide/styleguide');
 
 gulp.task('bower', () => {
     const bower = require('gulp-bower');
@@ -28,7 +22,7 @@ gulp.task('css', () => {
         .pipe(less())
         .pipe(postcss([ autoprefixer('Last 2 versions') ]))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(styleguide.buildPath()));
+        .pipe(gulp.dest(styleguide.distPath()));
 });
 
 gulp.task('js', (done) => {
@@ -59,7 +53,7 @@ gulp.task('js', (done) => {
 
         gulp.src([ ])
             .pipe(file('All.js', output.source))
-            .pipe(gulp.dest(styleguide.buildPath()))
+            .pipe(gulp.dest(styleguide.distPath()))
             .on('end', done);
     });
 });
