@@ -57,8 +57,8 @@ gulp.task('js', (done) => {
 
         gulp.src([ ])
             .pipe(file('All.js', output.source))
-            .pipe(sourcemaps.init())
             .pipe(gulp.dest(styleguide.distPath()))
+            .pipe(sourcemaps.init())
             .pipe(uglify())
             .pipe(rename({extname: '.min.js'}))
             .pipe(sourcemaps.write('.'))
