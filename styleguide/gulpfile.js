@@ -72,8 +72,8 @@ gulp.task('js', (done) => {
 
 gulp.task('watch', () => {
     // TODO: turn this into styleguide helper?
-    gulp.watch([ '**/*.less', '!_build/**', '!bower_components/**', '!node_modules/**' ], [ 'css' ]);
-    gulp.watch([ '**/*.js', '!_build/**', '!bower_components/**', '!node_modules/**' ], [ 'js' ]);
+    gulp.watch([ '**/*.less', `!${styleguide.distPath()}/**`, '!bower_components/**', '!node_modules/**' ], [ 'css' ]);
+    gulp.watch([ '**/*.js', `!${styleguide.distPath()}/**`, '!bower_components/**', '!node_modules/**' ], [ 'js' ]);
 })
 
 gulp.task('styleguide', () => {
