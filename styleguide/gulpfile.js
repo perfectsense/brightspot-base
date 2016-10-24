@@ -1,5 +1,19 @@
 const gulp = require('gulp');
-const styleguide = require('brightspot-styleguide/styleguide');
+const args = require('minimist')(process.argv.slice(2));
+const Styleguide = require('brightspot-styleguide/styleguide');
+const styleguide = new Styleguide(args);
+
+const systemjsConfig = {
+    map: {
+        'bsp-carousel': 'bower_components/bsp-carousel/dist/bsp-carousel/bsp-carousel.js',
+        'bsp-utils': 'bower_components/bsp-utils/bsp-utils.js',
+        'bsp-modal': 'bower_components/bsp-modal/src/js/bsp-modal.js',
+        'masonry': 'bower_components/masonry/dist/masonry.pkgd.js',
+        'jquery': 'bower_components/jquery/dist/jquery.js',
+        'slick': 'bower_components/bsp-carousel/dist/bsp-carousel/slick.js',
+        'vex': 'bower_components/vex/js/vex.js'
+    }
+}
 
 gulp.task('bower', () => {
     const bower = require('gulp-bower');
@@ -35,18 +49,7 @@ gulp.task('js', (done) => {
 
     let builder = new Builder();
 
-    // TODO: turn this into styleguide helper?
-    builder.config({
-        map: {
-            'bsp-carousel': 'bower_components/bsp-carousel/dist/bsp-carousel/bsp-carousel.js',
-            'bsp-utils': 'bower_components/bsp-utils/bsp-utils.js',
-            'bsp-modal': 'bower_components/bsp-modal/src/js/bsp-modal.js',
-            'masonry': 'bower_components/masonry/dist/masonry.pkgd.js',
-            'jquery': 'bower_components/jquery/dist/jquery.js',
-            'slick': 'bower_components/bsp-carousel/dist/bsp-carousel/slick.js',
-            'vex': 'bower_components/vex/js/vex.js'
-        }
-    });
+    builder.config(systemjsConfig);
 
     let buildOptions = {
         minify: false
@@ -67,15 +70,15 @@ gulp.task('js', (done) => {
     });
 });
 
-gulp.task('styleguide', () => {
-    const args = require('minimist')(process.argv.slice(2));
-    
+gulp.task('watch', () => {
     // TODO: turn this into styleguide helper?
     gulp.watch([ '**/*.less', '!_build/**', '!bower_components/**', '!node_modules/**' ], [ 'css' ]);
     gulp.watch([ '**/*.js', '!_build/**', '!bower_components/**', '!node_modules/**' ], [ 'js' ]);
+})
 
+gulp.task('styleguide', () => {
     styleguide.serve({
-        host: args.host || 'localhost',
-        port: args.port || '3000'
+        host: args.host,
+        port: args.port
     });
 });
