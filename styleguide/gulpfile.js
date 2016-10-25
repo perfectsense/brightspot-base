@@ -1,7 +1,9 @@
 const gulp = require('gulp');
 const args = require('minimist')(process.argv.slice(2));
 const Styleguide = require('brightspot-styleguide/styleguide');
-const styleguide = new Styleguide(args);
+
+let config = Object.assign({ v4: true }, args);
+const styleguide = new Styleguide(config);
 
 const systemjsConfig = {
     map: {
@@ -25,13 +27,12 @@ gulp.task('bower', () => {
 
 gulp.task('css', () => {
     // TODO: lint less files via styleguide helper - maybe use? https://www.npmjs.com/package/lesshint
-
     const autoprefixer = require('autoprefixer');
     const less = require('gulp-less');
     const postcss = require('gulp-postcss');
     const sourcemaps = require('gulp-sourcemaps');
 
-    return gulp.src('All.less')
+    return gulp.src(`${styleguide.srcPath()}/All.less`)
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(postcss([ autoprefixer('Last 2 versions') ]))
@@ -41,7 +42,6 @@ gulp.task('css', () => {
 
 gulp.task('js', (done) => {
     // TODO: lint JS files via styleguide helper
-
     const Builder = require('systemjs-builder');
     const sourcemaps = require('gulp-sourcemaps');
     const uglify = require('gulp-uglify');
@@ -55,11 +55,11 @@ gulp.task('js', (done) => {
         minify: false
     };
 
-    builder.buildStatic('All.js', buildOptions).then((output) => {
+    builder.buildStatic(`${styleguide.srcPath()}/All.js`, buildOptions).then((output) => {
         const file = require('gulp-file');
 
         gulp.src([ ])
-            .pipe(file('All.js', output.source))
+            .pipe(file(`${styleguide.srcPath()}/All.js`, output.source))
             .pipe(gulp.dest(styleguide.distPath()))
             .pipe(sourcemaps.init())
             .pipe(uglify())
@@ -72,13 +72,10 @@ gulp.task('js', (done) => {
 
 gulp.task('watch', () => {
     // TODO: turn this into styleguide helper?
-    gulp.watch([ '**/*.less', `!${styleguide.distPath()}/**`, '!bower_components/**', '!node_modules/**' ], [ 'css' ]);
-    gulp.watch([ '**/*.js', `!${styleguide.distPath()}/**`, '!bower_components/**', '!node_modules/**' ], [ 'js' ]);
+    gulp.watch([ `${styleguide.srcPath()}/**/*.less` ], [ 'css' ]);
+    gulp.watch([ `${styleguide.srcPath()}/**/*.js` ], [ 'js' ]);
 })
 
-gulp.task('styleguide', () => {
-    styleguide.serve({
-        host: args.host,
-        port: args.port
-    });
+gulp.task('styleguide', ['watch'], () => {
+    styleguide.serve(config);
 });
