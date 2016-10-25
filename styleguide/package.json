@@ -16,6 +16,7 @@
     "systemjs-builder": "0.15.32"
   },
   "scripts": {
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "gulp-debug": "node --inspect --debug-brk node_modules/gulp/bin/gulp.js"
   }
 }
