@@ -8,11 +8,7 @@ import java.util.List;
 
 public interface Taggable extends Recordable {
 
-    default Data getTaggableData() {
-        return as(Taggable.Data.class);
-    }
-
-    @BeanProperty("taggable")
+    @BeanProperty("tagData")
     class Data extends Modification<Taggable> {
 
         @Indexed
