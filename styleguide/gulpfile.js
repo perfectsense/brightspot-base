@@ -2,7 +2,11 @@ const gulp = require('gulp');
 const args = require('minimist')(process.argv.slice(2));
 const Styleguide = require('brightspot-styleguide/styleguide');
 
-let config = Object.assign({ v4: true }, args);
+let config = Object.assign({
+    "project-path": process.cwd(),   // defines the project's root path
+    "project-src-path": "src"        // defines the project's source path root
+});
+
 const styleguide = new Styleguide(config);
 
 const systemjsConfig = {
@@ -72,7 +76,7 @@ gulp.task('js', (done) => {
 
 gulp.task('watch', () => {
     // TODO: turn this into styleguide helper?
-    gulp.watch([ `${styleguide.srcPath()}/**/*.less` ], [ 'css' ]);
+    gulp.watch([ `${styleguide.srcPath()}/**/*.{less,vars}` ], [ 'css' ]);
     gulp.watch([ `${styleguide.srcPath()}/**/*.js` ], [ 'js' ]);
 })
 
