@@ -29,7 +29,7 @@ Based on [BEM](https://en.bem.info/):
 
 Java-like:
 
-* PascaleCase _block_ names, e.g. `ListPromo`.
+* PascalCase _block_ names, e.g. `ListPromo`.
 * Suffix _block_ names with their parent names, e.g. `ListPromo` which extends
   `Promo`.
 * camelCase _element_ names, e.g. `title`.
@@ -153,15 +153,21 @@ HTML output:
 ### Usage Example - Copy
 
 To create a wide version of `ListPromo` named `WideListPromo`, use the
-`{{#defineBlock}}` helper and reference the template you want to extend:
+`{{#defineBlock}}` helper and reference the path to the template you want to extend. Make sure to define your new `defineBlockContainer` and/or `defineBlockBody` in the extending template:
 
 `WideListPromo.hbs`
 
 ```hbs
 {{#defineBlock "WideListPromo" extend="base/promo/ListPromo"}}
-    {{element "title"}}
-    {{element "items"}}
-    {{element "cta"}}
+    {{#defineBlockContainer}}
+        {{#defineBlockBody}}
+            <div class="{{blockName}}">
+                {{element "title"}}
+                {{element "items"}}
+                {{element "cta"}}
+            </div>
+        {{/defineBlockBody}}
+    {{/defineBlockContainer}}
 {{/defineBlock}}
 ```
 
@@ -186,9 +192,15 @@ _element_, use the `{{element}}` helper:
 
 ```hbs
 {{#defineBlock "CtaFirstListPromo" extend="base/promo/ListPromo"}}
-    {{element "title"}}
-    {{element "cta"}}
-    {{element "items"}}
+    {{#defineBlockContainer}}
+        {{#defineBlockBody}}
+            <div class="{{blockName}}">
+                {{element "title"}}
+                {{element "cta"}}
+                {{element "items"}}
+            </div>
+        {{/defineBlockBody}}
+    {{/defineBlockContainer}}
 {{/defineBlock}}
 ```
 
@@ -212,12 +224,18 @@ To add the `subTitle` _element_ below the `title` _element_:
 
 ```hbs
 {{#defineBlock "SubTitledListPromo" extend="base/promo/ListPromo"}}
-    {{element "title"}}
-    {{#with subTitle}}
-        <div class="SubTitledListPromo-subTitle">{{this}}</div>
-    {{/with}}
-    {{element "items"}}
-    {{element "cta"}}
+    {{#defineBlockContainer}}
+        {{#defineBlockBody}}
+            <div class="{{blockName}}">
+                {{element "title"}}
+                {{#with subTitle}}
+                    <div class="{{blockName}}-subTitle">{{this}}</div>
+                {{/with}}
+                {{element "items"}}
+                {{element "cta"}}
+            </div>
+        {{/defineBlockBody}}
+    {{/defineBlockContainer}}
 {{/defineBlock}}
 ```
 
@@ -407,5 +425,5 @@ BEM helpers:
 
 ---
 
-Save yourself time and keystrokes by adding the following to your favorite editor:
-* Atom: [snippet](https://gist.github.com/jpencola/663af50e4e3f41c5b368e16519c5add9)
+Save yourself time and keystrokes when writing Base handlebars helpers in your favorite editor.
+* Atom: [Brightspot Base Handlebar  Snippets](https://github.com/perfectsense/atom-brightspot-base-snippets)
