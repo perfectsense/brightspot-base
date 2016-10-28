@@ -26,12 +26,12 @@ gulp.task('js', [ styleguide.task.lint.js() ], (done) => {
     builder.config({
         map: {
             'bsp-carousel': 'node_modules/bsp-carousel/dist/bsp-carousel/bsp-carousel.js',
-            'bsp-utils': 'node_modules/bsp-utils/bsp-utils.js',
             'bsp-modal': 'node_modules/bsp-modal/src/js/bsp-modal.js',
-            'masonry': 'node_modules/masonry/dist/masonry.pkgd.js',
+            'bsp-utils': 'node_modules/bsp-utils/bsp-utils.js',
             'jquery': 'node_modules/jquery/dist/jquery.js',
+            'masonry': 'node_modules/masonry-layout/dist/masonry.pkgd.js',
             'slick': 'node_modules/bsp-carousel/dist/bsp-carousel/slick.js',
-            'vex': 'node_modules/vex/js/vex.js'
+            'vex': 'node_modules/vex-js/js/vex.js'
         }
     });
 
