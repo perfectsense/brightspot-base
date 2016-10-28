@@ -19,31 +19,7 @@
     "test",
     "tests"
   ],
-  "brightspot-library-files": [
-    "src/main/webapp/scripts/config.js",
-    "src/main/webapp/scripts/main.js",
-    "src/main/webapp/styles/main.less"
-  ],
-  "brightspot-copy-overrides": {
-    "brightspot-base": [
-      {
-        "cwd": "src/main/webapp",
-        "src": "base/**",
-        "dest": "",
-        "expand": true
-      },
-      {
-        "cwd": "src/main/webapp",
-        "src": "community/**",
-        "dest": "",
-        "expand": true
-      }
-    ],
-    "normalize-css": [
-      {
-        "src": "normalize.css",
-        "dest": "bower/normalize-css/normalize.css"
-      }
-    ]
+  "resolutions": {
+    "jquery": "2.1.4"
   }
 }
