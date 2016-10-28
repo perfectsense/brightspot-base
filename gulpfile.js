@@ -25,13 +25,13 @@ gulp.task('js', [ styleguide.task.lint.js() ], (done) => {
 
     builder.config({
         map: {
-            'bsp-carousel': 'bower_components/bsp-carousel/dist/bsp-carousel/bsp-carousel.js',
-            'bsp-utils': 'bower_components/bsp-utils/bsp-utils.js',
-            'bsp-modal': 'bower_components/bsp-modal/src/js/bsp-modal.js',
-            'masonry': 'bower_components/masonry/dist/masonry.pkgd.js',
-            'jquery': 'bower_components/jquery/dist/jquery.js',
-            'slick': 'bower_components/bsp-carousel/dist/bsp-carousel/slick.js',
-            'vex': 'bower_components/vex/js/vex.js'
+            'bsp-carousel': 'node_modules/bsp-carousel/dist/bsp-carousel/bsp-carousel.js',
+            'bsp-utils': 'node_modules/bsp-utils/bsp-utils.js',
+            'bsp-modal': 'node_modules/bsp-modal/src/js/bsp-modal.js',
+            'masonry': 'node_modules/masonry/dist/masonry.pkgd.js',
+            'jquery': 'node_modules/jquery/dist/jquery.js',
+            'slick': 'node_modules/bsp-carousel/dist/bsp-carousel/slick.js',
+            'vex': 'node_modules/vex/js/vex.js'
         }
     });
 
