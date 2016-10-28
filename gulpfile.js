@@ -1,85 +1,63 @@
+const autoprefixer = require('autoprefixer');
+const Styleguide = require('brightspot-styleguide');
 const gulp = require('gulp');
-const args = require('minimist')(process.argv.slice(2));
-const Styleguide = require('brightspot-styleguide/styleguide');
+const file = require('gulp-file');
+const less = require('gulp-less');
+const postcss = require('gulp-postcss');
+const rename = require('gulp-rename');
+const sourcemaps = require('gulp-sourcemaps');
+const uglify = require('gulp-uglify');
+const Builder = require('systemjs-builder');
 
-let config = Object.assign({
-    "project-path": process.cwd(),   // defines the project's root path
-    "project-src-path": "src"        // defines the project's source path root
-});
+const styleguide = new Styleguide(gulp);
 
-const styleguide = new Styleguide(config);
-
-const systemjsConfig = {
-    map: {
-        'bsp-carousel': 'bower_components/bsp-carousel/dist/bsp-carousel/bsp-carousel.js',
-        'bsp-utils': 'bower_components/bsp-utils/bsp-utils.js',
-        'bsp-modal': 'bower_components/bsp-modal/src/js/bsp-modal.js',
-        'masonry': 'bower_components/masonry/dist/masonry.pkgd.js',
-        'jquery': 'bower_components/jquery/dist/jquery.js',
-        'slick': 'bower_components/bsp-carousel/dist/bsp-carousel/slick.js',
-        'vex': 'bower_components/vex/js/vex.js'
-    }
-}
-
-gulp.task('bower', () => {
-    const bower = require('gulp-bower');
-
-    return bower({
-        cmd: 'update'
-    });
-});
-
-gulp.task('css', () => {
-    // TODO: lint less files via styleguide helper - maybe use? https://www.npmjs.com/package/lesshint
-    const autoprefixer = require('autoprefixer');
-    const less = require('gulp-less');
-    const postcss = require('gulp-postcss');
-    const sourcemaps = require('gulp-sourcemaps');
-
-    return gulp.src(`${styleguide.srcPath()}/All.less`)
+gulp.task('css', [ styleguide.task.lint.less() ], () => {
+    return gulp.src(styleguide.path.src('All.less'))
         .pipe(sourcemaps.init())
         .pipe(less())
-        .pipe(postcss([ autoprefixer('Last 2 versions') ]))
+        .pipe(postcss([ autoprefixer('last 2 versions') ]))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(styleguide.distPath()));
+        .pipe(gulp.dest(styleguide.path.build()));
 });
 
-gulp.task('js', (done) => {
-    // TODO: lint JS files via styleguide helper
-    const Builder = require('systemjs-builder');
-    const sourcemaps = require('gulp-sourcemaps');
-    const uglify = require('gulp-uglify');
-    const rename = require('gulp-rename');
-
+gulp.task('js', [ styleguide.task.lint.js() ], (done) => {
     let builder = new Builder();
 
-    builder.config(systemjsConfig);
+    builder.config({
+        map: {
+            'bsp-carousel': 'bower_components/bsp-carousel/dist/bsp-carousel/bsp-carousel.js',
+            'bsp-utils': 'bower_components/bsp-utils/bsp-utils.js',
+            'bsp-modal': 'bower_components/bsp-modal/src/js/bsp-modal.js',
+            'masonry': 'bower_components/masonry/dist/masonry.pkgd.js',
+            'jquery': 'bower_components/jquery/dist/jquery.js',
+            'slick': 'bower_components/bsp-carousel/dist/bsp-carousel/slick.js',
+            'vex': 'bower_components/vex/js/vex.js'
+        }
+    });
 
     let buildOptions = {
         minify: false
     };
 
-    builder.buildStatic(`${styleguide.srcPath()}/All.js`, buildOptions).then((output) => {
-        const file = require('gulp-file');
-
+    builder.buildStatic(styleguide.path.src('All.js'), buildOptions).then((output) => {
         gulp.src([ ])
-            .pipe(file(`${styleguide.srcPath()}/All.js`, output.source))
-            .pipe(gulp.dest(styleguide.distPath()))
+            .pipe(file(styleguide.path.src('All.js'), output.source))
+            .pipe(gulp.dest(styleguide.path.build()))
             .pipe(sourcemaps.init())
             .pipe(uglify())
-            .pipe(rename({extname: '.min.js'}))
+            .pipe(rename({ extname: '.min.js' }))
             .pipe(sourcemaps.write('.'))
-            .pipe(gulp.dest(styleguide.distPath()))
+            .pipe(gulp.dest(styleguide.path.build()))
             .on('end', done);
     });
 });
 
-gulp.task('watch', () => {
-    // TODO: turn this into styleguide helper?
-    gulp.watch([ `${styleguide.srcPath()}/**/*.{less,vars}` ], [ 'css' ]);
-    gulp.watch([ `${styleguide.srcPath()}/**/*.js` ], [ 'js' ]);
-})
+gulp.task('default', [ 'css', 'js' ], () => {
+});
 
-gulp.task('styleguide', ['watch'], () => {
-    styleguide.serve(config);
+gulp.task('styleguide', () => {
+    gulp.watch(styleguide.path.src('**/*.{less,vars}'), [ 'css' ]);
+    gulp.watch(styleguide.path.src('**/*.js'), [ 'js' ]);
+    gulp.watch(styleguide.path.src('**/*.json'), [ styleguide.task.lint.json() ]);
+    styleguide.serve();
 });
