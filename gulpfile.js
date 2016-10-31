@@ -17,7 +17,7 @@ gulp.task('css', [ styleguide.task.lint.less() ], () => {
         .pipe(less())
         .pipe(postcss([ autoprefixer('last 2 versions') ]))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(styleguide.path.build()));
+        .pipe(gulp.dest(styleguide.path.dist()));
 });
 
 gulp.task('js', [ styleguide.task.lint.js() ], (done) => {
