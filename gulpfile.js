@@ -9,7 +9,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 const Builder = require('systemjs-builder');
 
-const styleguide = new Styleguide(gulp);
+const styleguide = new Styleguide({ }, gulp);
 
 gulp.task('css', [ styleguide.task.lint.less() ], () => {
     return gulp.src(styleguide.path.src('All.less'))
