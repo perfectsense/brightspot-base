@@ -16,8 +16,10 @@
 
     {{#defineElement "media" noWith=true}}
         <div class="{{elementName}}">
-            {{element "mediaControls"}}
-            {{element "mediaContent"}}
+            <div class="{{elementName}}Container">
+                {{element "mediaControls"}}
+                {{element "mediaContent"}}
+            </div>
         </div>
     {{/defineElement}}
 
