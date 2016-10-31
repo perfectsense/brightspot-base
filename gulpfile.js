@@ -42,12 +42,12 @@ gulp.task('js', [ styleguide.task.lint.js() ], (done) => {
     builder.buildStatic(styleguide.path.src('All.js'), buildOptions).then((output) => {
         gulp.src([ ])
             .pipe(file(styleguide.path.src('All.js'), output.source))
-            .pipe(gulp.dest(styleguide.path.build()))
+            .pipe(gulp.dest(styleguide.path.dist()))
             .pipe(sourcemaps.init())
             .pipe(uglify())
             .pipe(rename({ extname: '.min.js' }))
             .pipe(sourcemaps.write('.'))
-            .pipe(gulp.dest(styleguide.path.build()))
+            .pipe(gulp.dest(styleguide.path.dist()))
             .on('end', done);
     });
 });
