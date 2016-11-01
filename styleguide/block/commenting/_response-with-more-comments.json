@@ -1,17 +1,17 @@
 {
   "_wrapper": false,
-  "_template": "community/commenting/CommentLoadMoreResponse",
+  "_template": "CommentLoadMoreResponse.hbs",
 
   "comments": {
-    "_template": "base/util/Concatenated",
+    "_template": "../util/Concatenated.hbs",
     "items": [
       {
         "_repeat": [1,5],
-        "_dataUrl": "/block/commenting/comment.json"
+        "_dataUrl": "comment.json"
       }
     ]
   },
 
   "loadMoreButton": "Show More",
-  "loadMoreAction": "/block/commenting/_response-with-more-comments?page=2"
+  "loadMoreAction": "_response-with-more-comments?page=2"
 }

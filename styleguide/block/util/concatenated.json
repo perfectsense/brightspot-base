@@ -1,9 +1,9 @@
 {
-    "_template": "base/util/Concatenated",
+    "_template": "Concatenated.hbs",
     "delimiter": ", ",
     "items": [
         {
-            "_template": "base/util/RawHtml",
+            "_template": "RawHtml.hbs",
             "_repeat": [ 3, 10 ],
             "html": "{{words(1)}}"
         }

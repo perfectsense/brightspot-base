@@ -1,5 +1,5 @@
 {
-  "_template": "community/user/UserSignOut",
+  "_template": "UserSignOut.hbs",
 
   "button": "Logout",
   "action": ".",

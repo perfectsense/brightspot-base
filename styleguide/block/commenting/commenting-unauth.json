@@ -1,5 +1,5 @@
 {
-  "_template": "community/commenting/Commenting",
+  "_template": "Commenting.hbs",
 
   "id": "324kldsjlj34",
   "textWhenHidden": "View Comments",
@@ -10,18 +10,18 @@
   "loadMoreAction": "/block/commenting/_response-with-more-comments",
 
   "commentEntry": {
-      "_dataUrl": "/block/user/sign-in.json"
+      "_dataUrl": "../user/sign-in.json"
   },
 
   "body": {
-    "_template": "base/util/Concatenated",
+    "_template": "../util/Concatenated.hbs",
     "items": [
       {
         "_repeat": [
           1,
           3
         ],
-        "_dataUrl": "/block/commenting/comment.json",
+        "_dataUrl": "comment.json",
         "replyAction": "/block/commenting/_response-with-sign-in"
       }
     ]

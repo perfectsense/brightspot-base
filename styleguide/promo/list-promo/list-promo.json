@@ -1,5 +1,5 @@
 {
-    "_template": "/base/promo/ListPromo",
+    "_template": "ListPromo.hbs",
     "category": "{{words(1)}}",
     "title": "{{words}}",
     "description": "{{words}}",

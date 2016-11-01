@@ -1,11 +1,11 @@
 {
-    "_template": "/base/main/ArticleMain",
+    "_template": "ArticleMain.hbs",
 
     "datePublished": "2016-02-19T16:43:22+00:00",
     "dateModified": "2016-02-19T17:44:23+00:00",
 
     "breadcrumbs": {
-        "_template": "/base/Breadcrumbs",
+        "_template": "../../Breadcrumbs.hbs",
         "items": [
             "{{words([1, 3])}}",
             "{{words([1, 3])}}",
@@ -18,7 +18,7 @@
     "subHeadline": "{{words}}",
 
     "byline": {
-        "_template": "/base/util/Concatenated",
+        "_template": "../../block/util/Concatenated.hbs",
         "delimiter": ", ",
         "items": [
             "{{name}}",
@@ -28,48 +28,24 @@
     },
 
     "lead": {
-        "_template": "/base/util/Image",
+        "_template": "../../block/util/Image.hbs",
         "src": "{{image(900,450)}}"
     },
 
     "body": {
-        "_template": "/base/util/Concatenated",
+        "_template": "../../block/util/Concatenated.hbs",
         "items": [
             {
-                "_template": "/base/util/RawHtml",
+                "_template": "../../block/util/RawHtml.hbs",
                 "html": "{{paragraphs([3,10])}}"
             },
             {
-                "_template": "/base/Enhancement",
+                "_template": "../../block/enhancement/Enhancement.hbs",
                 "alignment": "left",
                 "content": {
-                    "_template": "/base/util/Image",
+                    "_template": "../../block/util/Image.hbs",
                     "src": "{{image(260,360)}}"
                 }
-            },
-            {
-                "_template": "/base/util/RawHtml",
-                "html": "<h3>Subheadline</h3>"
-            },
-            {
-                "_template": "/base/util/RawHtml",
-                "html": "{{paragraphs([3,10])}}"
-            },
-            {
-                "_template": "/base/Enhancement",
-                "alignment": "right",
-                "content": {
-                    "_template": "/base/util/Image",
-                    "src": "{{image(260,360)}}"
-                }
-            },
-            {
-                "_template": "/base/util/RawHtml",
-                "html": "{{paragraphs([3,10])}}"
-            },
-            {
-                "_template": "/base/util/RawHtml",
-                "html": "{{paragraphs([3,10])}}"
             }
         ]
     },

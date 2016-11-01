@@ -1,5 +1,5 @@
 {
-  "_template": "community/commenting/Commenting",
+  "_template": "Commenting.hbs",
 
   "id": "324kldsjlj34",
   "textWhenHidden": "View Comments",
@@ -10,12 +10,12 @@
   "loadMoreAction": "/SERVERERROR",
 
   "commentEntry": {
-      "_dataUrl": "/block/commenting/comment-entry.json",
+      "_dataUrl": "comment-entry.json",
       "submitAction": "/block/commenting/_response-with-invalid-comment-entry"
   },
 
   "body": {
-    "_template": "base/util/Concatenated",
+    "_template": "../util/Concatenated.hbs",
     "items": [
       {
         "_repeat": [
@@ -29,9 +29,9 @@
   },
 
   "validation": {
-    "_template": "base/form/ValidationMessages",
+    "_template": "../../form/validation/ValidationMessages",
     "serverError": {
-      "_template": "base/util/RawHtml",
+      "_template": "../util/RawHtml.hbs",
       "html": "Sorry! Something went wrong on our end. Please try again later."
     }
   }
