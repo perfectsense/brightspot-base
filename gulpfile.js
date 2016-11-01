@@ -41,7 +41,7 @@ gulp.task('js', [ styleguide.task.lint.js() ], (done) => {
 
     builder.buildStatic(styleguide.path.src('All.js'), buildOptions).then((output) => {
         gulp.src([ ])
-            .pipe(file(styleguide.path.src('All.js'), output.source))
+            .pipe(file('All.js', output.source))
             .pipe(gulp.dest(styleguide.path.dist()))
             .pipe(sourcemaps.init())
             .pipe(uglify())
