@@ -46,6 +46,30 @@
                     "_template": "../../block/util/Image.hbs",
                     "src": "{{image(260,360)}}"
                 }
+            },
+            {
+                "_template": "../../block/util/RawHtml.hbs",
+                "html": "<h3>Subheadline</h3>"
+            },
+            {
+                "_template": "../../block/util/RawHtml.hbs",
+                "html": "{{paragraphs([3,10])}}"
+            },
+            {
+                "_template": "../../block/enhancement/Enhancement.hbs",
+                "alignment": "right",
+                "content": {
+                    "_template": "../../block/util/Image.hbs",
+                    "src": "{{image(260,360)}}"
+                }
+            },
+            {
+                "_template": "../../block/util/RawHtml.hbs",
+                "html": "{{paragraphs([3,10])}}"
+            },
+            {
+                "_template": "../../block/util/RawHtml.hbs",
+                "html": "{{paragraphs([3,10])}}"
             }
         ]
     },
