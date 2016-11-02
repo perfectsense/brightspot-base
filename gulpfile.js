@@ -17,7 +17,7 @@ gulp.task('css', [ styleguide.task.lint.less() ], () => {
         .pipe(less())
         .pipe(postcss([ autoprefixer('last 2 versions') ]))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(styleguide.path.dist()));
+        .pipe(gulp.dest(styleguide.path.build()));
 });
 
 gulp.task('js', [ styleguide.task.lint.js() ], (done) => {
@@ -42,12 +42,12 @@ gulp.task('js', [ styleguide.task.lint.js() ], (done) => {
     builder.buildStatic(styleguide.path.src('All.js'), buildOptions).then((output) => {
         gulp.src([ ])
             .pipe(file('All.js', output.source))
-            .pipe(gulp.dest(styleguide.path.dist()))
+            .pipe(gulp.dest(styleguide.path.build()))
             .pipe(sourcemaps.init())
             .pipe(uglify())
             .pipe(rename({ extname: '.min.js' }))
             .pipe(sourcemaps.write('.'))
-            .pipe(gulp.dest(styleguide.path.dist()))
+            .pipe(gulp.dest(styleguide.path.build()))
             .on('end', done);
     });
 });
