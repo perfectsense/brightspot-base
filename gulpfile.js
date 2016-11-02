@@ -56,8 +56,8 @@ gulp.task('default', [ 'css', 'js' ], () => {
 })
 
 gulp.task('styleguide', () => {
-  gulp.watch(styleguide.path.src('**/*.{less,vars}'), [ 'css' ])
-  gulp.watch(styleguide.path.src('**/*.js'), [ 'js' ])
-  gulp.watch(styleguide.path.src('**/*.json'), [ styleguide.task.lint.json() ])
+  gulp.watch([styleguide.path.src('**/*.{less,vars}'), `!${styleguide.path.build()}**/*`], [ 'css' ])
+  gulp.watch([styleguide.path.src('**/*.js'), `!${styleguide.path.build()}**/*`], [ 'js' ])
+  gulp.watch([styleguide.path.src('**/*.json'), `!${styleguide.path.build()}**/*`], [ styleguide.task.lint.json() ])
   styleguide.serve()
 })
