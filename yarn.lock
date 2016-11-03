@@ -444,8 +444,12 @@ brightspot-styleguide@perfectsense/brightspot-styleguide#master:
     express "^4.13.1"
     font-awesome "^4.4.0"
     geopattern "1.2.3"
+    gulp-jsonlint "1.1.2"
     gulp-lesshint "2.0.0"
+    gulp-notify "2.2.0"
+    gulp-standard "8.0.2"
     handlebars "^4.0.3"
+    history.js browserstate/history.js#v1.8
     iframe-resizer "3.5.0"
     jquery "2.1.4"
     less "^2.5.3"
@@ -459,6 +463,7 @@ brightspot-styleguide@perfectsense/brightspot-styleguide#master:
     recursive-readdir-sync "^1.0.6"
     require-dir "0.3.1"
     sticky-kit "1.1.3"
+    stream-combiner2 "1.1.1"
     terminal-kit "^0.15.10"
     traverse "^0.6.6"
     xml2js "^0.4.15"
@@ -486,6 +491,12 @@ bsp-utils@perfectsense/brightspot-js-utils#3.1.2:
 buffer-shims@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/buffer-shims/-/buffer-shims-1.0.0.tgz#9978ce317388c649ad8793028c3477ef044a8b51"
+
+bufferstreams@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/bufferstreams/-/bufferstreams-1.0.1.tgz#cfb1ad9568d3ba3cfe935ba9abdd952de88aab2a"
+  dependencies:
+    readable-stream "^1.0.33"
 
 buildr@0.8.x:
   version "0.8.7"
@@ -605,6 +616,13 @@ circular-json@^0.3.0:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/circular-json/-/circular-json-0.3.1.tgz#be8b36aefccde8b3ca7aa2d6afc07a37242c0d2d"
 
+clean-css@^3.4.20:
+  version "3.4.20"
+  resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-3.4.20.tgz#c0d8963b5448e030f0bcd3ddd0dac4dfe3dea501"
+  dependencies:
+    commander "2.8.x"
+    source-map "0.4.x"
+
 cli-color@~0.2.2:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/cli-color/-/cli-color-0.2.3.tgz#0a25ceae5a6a1602be7f77d28563c36700274e88"
@@ -703,6 +721,12 @@ colors@1.0.3:
 commander@^2.8.0, "commander@>= 0.6.0", commander@2.9.x:
   version "2.9.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.9.0.tgz#9c99094176e12240cb22d6c5146098400fe0f7d4"
+  dependencies:
+    graceful-readlink ">= 1.0.0"
+
+commander@2.8.x:
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.8.1.tgz#06be367febfda0c330aa1e2a072d3dc9762425d4"
   dependencies:
     graceful-readlink ">= 1.0.0"
 
@@ -1636,6 +1660,17 @@ grunt-contrib-concat@^0.5.1:
   dependencies:
     chalk "^0.5.1"
     source-map "^0.3.0"
+
+gulp-clean-css:
+  version "2.0.13"
+  resolved "https://registry.yarnpkg.com/gulp-clean-css/-/gulp-clean-css-2.0.13.tgz#85def4aaa2af6f06c1646e05111fd7b4b5e627d0"
+  dependencies:
+    clean-css "^3.4.20"
+    gulp-util "^3.0.7"
+    object-assign "^4.1.0"
+    readable-stream "^2.1.5"
+    vinyl-bufferstream "^1.0.1"
+    vinyl-sourcemaps-apply "^0.2.1"
 
 gulp-file@0.3.0:
   version "0.3.0"
@@ -3232,7 +3267,16 @@ read-pkg@^1.0.0:
     normalize-package-data "^2.3.2"
     path-type "^1.0.0"
 
-readable-stream@^2.0.2:
+readable-stream@^1.0.33, readable-stream@~1.1.9:
+  version "1.1.14"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.1.14.tgz#7cf4c54ef648e3813084c636dd2079e166c081d9"
+  dependencies:
+    core-util-is "~1.0.0"
+    inherits "~2.0.1"
+    isarray "0.0.1"
+    string_decoder "~0.10.x"
+
+readable-stream@^2.0.2, readable-stream@^2.1.5:
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.1.5.tgz#66fa8b720e1438b364681f2ad1a63c618448c9d0"
   dependencies:
@@ -3247,15 +3291,6 @@ readable-stream@^2.0.2:
 "readable-stream@>=1.0.33-1 <1.1.0-0", readable-stream@~1.0.17:
   version "1.0.34"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.0.34.tgz#125820e34bc842d2f2aaafafe4c2916ee32c157c"
-  dependencies:
-    core-util-is "~1.0.0"
-    inherits "~2.0.1"
-    isarray "0.0.1"
-    string_decoder "~0.10.x"
-
-readable-stream@~1.1.9:
-  version "1.1.14"
-  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.1.14.tgz#7cf4c54ef648e3813084c636dd2079e166c081d9"
   dependencies:
     core-util-is "~1.0.0"
     inherits "~2.0.1"
@@ -3549,7 +3584,7 @@ source-map@^0.3.0:
   dependencies:
     amdefine ">=0.0.4"
 
-source-map@^0.4.4:
+source-map@^0.4.4, source-map@0.4.x:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.4.4.tgz#eba4f5da9c0dc999de68032d8b4f76173652036b"
   dependencies:
@@ -4007,6 +4042,12 @@ vex-js@2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/vex-js/-/vex-js-2.3.2.tgz#d352329a16645313d3a217e2c842eb84b7a4da06"
 
+vinyl-bufferstream@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/vinyl-bufferstream/-/vinyl-bufferstream-1.0.1.tgz#0537869f580effa4ca45acb47579e4b9fe63081a"
+  dependencies:
+    bufferstreams "1.0.1"
+
 vinyl-fs@^0.3.0:
   version "0.3.14"
   resolved "https://registry.yarnpkg.com/vinyl-fs/-/vinyl-fs-0.3.14.tgz#9a6851ce1cac1c1cea5fe86c0931d620c2cfa9e6"
@@ -4020,7 +4061,7 @@ vinyl-fs@^0.3.0:
     through2 "^0.6.1"
     vinyl "^0.4.0"
 
-vinyl-sourcemaps-apply@^0.2.0:
+vinyl-sourcemaps-apply@^0.2.0, vinyl-sourcemaps-apply@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/vinyl-sourcemaps-apply/-/vinyl-sourcemaps-apply-0.2.1.tgz#ab6549d61d172c2b1b87be5c508d239c8ef87705"
   dependencies:
