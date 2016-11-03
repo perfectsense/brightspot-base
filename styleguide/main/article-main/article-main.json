@@ -21,9 +21,18 @@
         "_template": "/base/util/Concatenated",
         "delimiter": ", ",
         "items": [
-            "{{name}}",
-            "{{name}}",
-            "{{name}}"
+            {
+                "_template": "/base/util/RawHtml",
+                "html": "{{name}}"
+            },
+            {
+                "_template": "/base/util/RawHtml",
+                "html": "{{name}}"
+            },
+            {
+                "_template": "/base/util/RawHtml",
+                "html": "{{name}}"
+            }
         ]
     },
 
