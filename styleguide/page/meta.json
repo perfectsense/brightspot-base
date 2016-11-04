@@ -1,22 +1,22 @@
 {
     "_wrapper": false,
-    "_template": "/base/page/Page",
+    "_template": "Page.hbs",
 
     "head": {
-        "_template": "/base/page/Head",
+        "_template": "Head.hbs",
         "items": [
             {
-                "_template": "/base/page/Meta",
+                "_template": "Meta.hbs",
                 "httpEquiv": "Content-Language",
                 "content": "en"
             },
             {
-                "_template": "/base/page/Meta",
+                "_template": "Meta.hbs",
                 "name": "description",
                 "content": "{{words}}"
             },
             {
-                "_template": "/base/page/Meta",
+                "_template": "Meta.hbs",
                 "property": "og:type",
                 "content": "website"
             }
@@ -24,7 +24,7 @@
     },
 
     "body": {
-        "_template": "/base/util/RawHtml",
+        "_template": "../block/util/RawHtml.hbs",
         "html": "{{paragraphs}}"
     }
 }

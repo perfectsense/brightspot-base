@@ -1,12 +1,12 @@
 {
     "_wrapper": false,
-    "_template": "/base/page/Page",
+    "_template": "Page.hbs",
 
     "head": {
-        "_template": "/base/page/Head",
+        "_template": "Head.hbs",
         "items": [
             {
-                "_template": "/base/page/ExternalStylesheet",
+                "_template": "ExternalStylesheet.hbs",
                 "rel": "stylesheet",
                 "type": "text/css",
                 "media": "screen",
@@ -16,7 +16,7 @@
     },
 
     "body": {
-        "_template": "/base/util/RawHtml",
+        "_template": "../block/util/RawHtml.hbs",
         "html": "{{paragraphs}}"
     }
 }

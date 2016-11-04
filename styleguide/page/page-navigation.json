@@ -1,9 +1,9 @@
 {
-    "_template": "/base/page/PageNavigation",
+    "_template": "PageNavigation.hbs",
     "items": [
         {
             "_repeat": 6,
-            "_template": "/base/util/Link",
+            "_template": "../block/util/Link.hbs",
             "href": "#",
             "body": "{{words(1)}}"
         }
