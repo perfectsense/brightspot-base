@@ -256,7 +256,7 @@ public class Image extends Content implements ColorImage,
     }
 
     @Override
-    protected void beforeCommit() {
+    protected void beforeSave() {
         if (file != null) {
             if (dateTaken == null) {
                 setDateTaken(getDateTakenFallback());
@@ -272,7 +272,5 @@ public class Image extends Content implements ColorImage,
         if (title == null) {
             setTitle(getTitle());
         }
-
-        super.beforeCommit();
     }
 }
