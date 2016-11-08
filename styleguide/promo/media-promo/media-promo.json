@@ -1,9 +1,9 @@
 {
-    "_template": "/base/promo/MediaPromo",
+    "_template": "MediaPromo.hbs",
     "category": "{{words(1)}}",
     "title": "{{words}}",
     "media": {
-        "_template": "/base/util/Image",
+        "_template": "../../block/util/Image.hbs",
         "src": "{{image(40,40)}}"
     },
     "description": "{{words}}",

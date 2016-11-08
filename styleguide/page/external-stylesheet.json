@@ -1,0 +1,22 @@
+{
+    "_wrapper": false,
+    "_template": "Page.hbs",
+
+    "head": {
+        "_template": "Head.hbs",
+        "items": [
+            {
+                "_template": "ExternalStylesheet.hbs",
+                "rel": "stylesheet",
+                "type": "text/css",
+                "media": "screen",
+                "href": "/main.min.css"
+            }
+        ]
+    },
+
+    "body": {
+        "_template": "../block/util/RawHtml.hbs",
+        "html": "{{paragraphs}}"
+    }
+}

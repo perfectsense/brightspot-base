@@ -1,0 +1,30 @@
+{
+    "_wrapper": false,
+    "_template": "Page.hbs",
+
+    "head": {
+        "_template": "Head.hbs",
+        "items": [
+            {
+                "_template": "Meta.hbs",
+                "httpEquiv": "Content-Language",
+                "content": "en"
+            },
+            {
+                "_template": "Meta.hbs",
+                "name": "description",
+                "content": "{{words}}"
+            },
+            {
+                "_template": "Meta.hbs",
+                "property": "og:type",
+                "content": "website"
+            }
+        ]
+    },
+
+    "body": {
+        "_template": "../block/util/RawHtml.hbs",
+        "html": "{{paragraphs}}"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "_wrapper": false,
+    "_template": "Page.hbs",
+
+    "head": {
+        "_template": "Head.hbs",
+        "items": [
+            {
+                "_template": "ExternalScript.hbs",
+                "type": "text/javascript",
+                "src": "/main.js",
+                "async": false,
+                "defer": false
+            }
+        ]
+    },
+
+    "body": {
+        "_template": "../block/util/RawHtml.hbs",
+        "html": "{{paragraphs}}"
+    }
+}

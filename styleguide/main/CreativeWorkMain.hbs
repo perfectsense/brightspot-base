@@ -1,0 +1,27 @@
+{{#defineBlock "CreativeWorkMain" extend="Main.hbs"}}
+    {{#defineElement "meta" noWith=true}}
+        {{#with datePublished}}
+            <meta itemprop="datePublished" content="{{this}}">
+        {{/with}}
+
+        {{#with dateModified}}
+            <meta itemprop="dateModified" content="{{this}}">
+        {{/with}}
+    {{/defineElement}}
+
+    {{#defineElement "preHeadline"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "headline"}}
+        <div class="{{elementName}}" itemprop="headline">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "subHeadline"}}
+        <div class="{{elementName}}" itemprop="alternativeHeadline">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "byline"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+{{/defineBlock}}

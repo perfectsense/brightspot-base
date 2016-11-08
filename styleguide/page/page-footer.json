@@ -1,0 +1,17 @@
+{
+    "_template": "PageFooter.hbs",
+
+    "logo": {
+        "_template": "../block/util/Image.hbs",
+        "src": "{{image(300, 80)}}"
+    },
+
+    "navigation": {
+        "_dataUrl": "page-navigation.json"
+    },
+
+    "copyright": {
+        "_template": "../block/util/RawHtml.hbs",
+        "html": "&copy; 2016"
+    }
+}

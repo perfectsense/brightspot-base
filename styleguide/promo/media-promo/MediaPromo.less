@@ -1,0 +1,9 @@
+@import '../promo/Promo.less';
+
+.MediaPromo {
+    &:extend(.Promo all);
+
+    &-media {
+        &:extend(.MediaPromo-media all);
+    }
+}

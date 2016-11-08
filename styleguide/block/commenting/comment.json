@@ -1,27 +1,27 @@
 {
-  "_template": "community/commenting/Comment",
+  "_template": "Comment",
 
   "author": {
-    "_dataUrl": "/block/author/author.json"
+    "_dataUrl": "../author/author.json"
   },
 
   "time": {
-    "_template": "base/util/DateTime",
+    "_template": "../util/DateTime.hbs",
     "iso": "{{date('iso')}}",
     "body": "{{date()}}"
   },
 
   "body": {
-    "_template": "base/util/RawHtml",
+    "_template": "../util/RawHtml.hbs",
     "html": "{{paragraphs(1)}}"
   },
 
   "replies": [ ],
 
   "validation": {
-    "_template": "base/form/ValidationMessages",
+    "_template": "../../form/validation/ValidationMessages",
     "serverError": {
-      "_template": "base/util/RawHtml",
+      "_template": "../util/RawHtml.hbs",
       "html": "Sorry! Something went wrong on our end. Please try again later."
     }
   },

@@ -1,13 +1,13 @@
 {
   "_wrapper": false,
-  "_template": "community/commenting/CommentActionResponse",
+  "_template": "CommentActionResponse.hbs",
 
   "entry": {
-    "_dataUrl": "/block/commenting/comment-entry.json",
+    "_dataUrl": "comment-entry.json",
     "commentingId": "324kldsjlj34",
 
     "validationError": {
-        "_template": "base/form/ValidationError",
+        "_template": "../../form/validation/ValidationError",
 
         "message": "Server error message. Please try again.",
         "type": "serverError"
