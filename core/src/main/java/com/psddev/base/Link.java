@@ -1,13 +1,13 @@
 package com.psddev.base;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.psddev.base.viewmodel.LinkedTextViewModel;
 import com.psddev.cms.db.ToolUi;
 import com.psddev.cms.view.ViewBinding;
 import com.psddev.dari.db.Record;
 import com.psddev.dari.db.Recordable;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Recordable.Embedded
 @ViewBinding(LinkedTextViewModel.class)
