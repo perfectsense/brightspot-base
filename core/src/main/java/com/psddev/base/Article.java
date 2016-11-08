@@ -4,7 +4,12 @@ import com.psddev.base.rte.ArticleBodyRichTextToolbar;
 import com.psddev.base.viewmodel.ArticleViewModel;
 import com.psddev.base.viewmodel.PageViewModel;
 import com.psddev.base.viewmodel.ViewTypes;
-import com.psddev.cms.db.*;
+import com.psddev.cms.db.Content;
+import com.psddev.cms.db.Directory;
+import com.psddev.cms.db.PageFilter;
+import com.psddev.cms.db.Seo;
+import com.psddev.cms.db.Site;
+import com.psddev.cms.db.ToolUi;
 import com.psddev.cms.view.ViewBinding;
 import com.psddev.dari.util.StringUtils;
 
@@ -17,6 +22,7 @@ import java.util.List;
 @Seo.TitleFields("headline")
 @Seo.DescriptionFields("subHeadline")
 public class Article extends Content implements Directory.Item,
+                                                Linkable,
                                                 Promotable,
                                                 Taggable {
 
