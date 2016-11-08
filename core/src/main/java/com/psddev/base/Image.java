@@ -25,19 +25,19 @@ public class Image extends Content implements ColorImage,
     @Required
     private StorageItem file;
 
+    @ToolUi.Placeholder(dynamicText = "${content.altFallback}", editable = true)
+    private String altText;
+
     @ToolUi.RichText(toolbar = BasicRichTextToolbar.class)
     @ToolUi.Placeholder(dynamicText = "${content.captionFallback}", editable = true)
     private String caption;
 
-    @ToolUi.Placeholder(dynamicText = "${content.altFallback}", editable = true)
-    private String altText;
-
-    @ToolUi.Placeholder(dynamicText = "${content.sourceFallback}", editable = true)
-    private String source;
-
     @ToolUi.RichText(toolbar = BasicRichTextToolbar.class)
     @ToolUi.Placeholder(dynamicText = "${content.creditFallback}", editable = true)
     private String credit;
+
+    @ToolUi.Placeholder(dynamicText = "${content.sourceFallback}", editable = true)
+    private String source;
 
     @ToolUi.Placeholder(dynamicText = "${content.copyrightFallback}", editable = true)
     private String copyrightNotice;
