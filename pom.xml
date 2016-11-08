@@ -90,44 +90,78 @@
         </dependencies>
     </dependencyManagement>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>com.github.eirslett</groupId>
-                <artifactId>frontend-maven-plugin</artifactId>
-                <version>1.2</version>
+    <profiles>
+        <profile>
+            <id>yarn</id>
 
-                <executions>
-                    <execution>
-                        <id>install-node-and-yarn</id>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>install-node-and-yarn</goal>
-                        </goals>
-                        <configuration>
-                            <nodeVersion>v6.9.1</nodeVersion>
-                            <yarnVersion>v0.16.1</yarnVersion>
-                        </configuration>
-                    </execution>
+            <activation>
+                <file>
+                    <exists>yarn.lock</exists>
+                </file>
+            </activation> 
 
-                    <execution>
-                        <id>yarn</id>
-                        <goals>
-                            <goal>yarn</goal>
-                        </goals>
-                    </execution>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.github.eirslett</groupId>
+                        <artifactId>frontend-maven-plugin</artifactId>
+                        <version>1.2</version>
 
-                    <execution>
-                        <id>gulp</id>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>gulp</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+                        <executions>
+                            <execution>
+                                <id>install-node-and-yarn</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>install-node-and-yarn</goal>
+                                </goals>
+                                <configuration>
+                                    <nodeVersion>v6.9.1</nodeVersion>
+                                    <yarnVersion>v0.16.1</yarnVersion>
+                                </configuration>
+                            </execution>
+
+                            <execution>
+                                <id>yarn</id>
+                                <goals>
+                                    <goal>yarn</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>gulp</id>
+
+            <activation>
+                <file>
+                    <exists>gulpfile.js</exists>
+                </file>
+            </activation> 
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.github.eirslett</groupId>
+                        <artifactId>frontend-maven-plugin</artifactId>
+                        <version>1.2</version>
+
+                        <executions>
+                            <execution>
+                                <id>gulp</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>gulp</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
     <repositories>
         <repository>
