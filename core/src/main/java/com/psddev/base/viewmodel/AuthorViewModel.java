@@ -1,23 +1,24 @@
 package com.psddev.base.viewmodel;
 
 import com.psddev.base.Author;
-import com.psddev.base.view.base.AuthorView;
+import com.psddev.base.view.block.author.AuthorView;
+import com.psddev.base.view.block.util.ImageView;
 import com.psddev.cms.view.ViewModel;
 
 public class AuthorViewModel extends ViewModel<Author> implements AuthorView {
 
     @Override
-    public Object getAffiliation() {
+    public String getAffiliation() {
         return null;
     }
 
     @Override
-    public Object getImage() {
+    public ImageView getImage() {
         return null;
     }
 
     @Override
-    public Object getName() {
+    public String getName() {
         return model.getName();
     }
 }

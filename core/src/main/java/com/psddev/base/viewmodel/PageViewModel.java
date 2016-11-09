@@ -1,12 +1,13 @@
 package com.psddev.base.viewmodel;
 
-import com.psddev.base.view.base.page.PageView;
+import com.psddev.base.view.page.HeadView;
+import com.psddev.base.view.page.PageView;
 import com.psddev.dari.db.Recordable;
 
 public class PageViewModel extends StandardViewModel<Recordable> implements PageView {
 
     @Override
-    public Object getHead() {
+    public HeadView getHead() {
         return createView(HeadViewModel.class, model);
     }
 
