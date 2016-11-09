@@ -1,5 +1,5 @@
 {
-  "_template": "community/commenting/Commenting",
+  "_template": "/community/commenting/Commenting",
 
   "id": "324kldsjlj34",
   "textWhenHidden": "View Comments",
@@ -14,7 +14,7 @@
   },
 
   "body": {
-    "_template": "base/util/Concatenated",
+    "_template": "/base/util/Concatenated",
     "items": [
       {
         "_repeat": [

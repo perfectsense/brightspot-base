@@ -1,5 +1,5 @@
 {
-    "_template": "base/page/PageFooter",
+    "_template": "/base/page/PageFooter",
 
     "logo": {
         "_template": "/base/util/Image",

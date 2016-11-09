@@ -1,12 +1,12 @@
 {
-    "_template": "base/search/SearchMain",
+    "_template": "/base/search/SearchMain",
 
     "headline": "{{words(4)}}",
     "subHeadline": "0 results",
     "submitAction": ".?q=keywords&offset=0&limit=3",
 
     "filter": {
-        "_template": "base/form/Select",
+        "_template": "/base/form/Select",
 
         "id": "filter-123",
         "name": "filter-123",
@@ -15,7 +15,7 @@
         "options": [
             {
                 "_repeat": [2,10],
-                "_template": "base/form/Option",
+                "_template": "/base/form/Option",
 
                 "text": "{{words(2)}}",
                 "value": "{{words(2)}}"
@@ -24,7 +24,7 @@
     },
 
     "sort": {
-        "_template": "base/form/Select",
+        "_template": "/base/form/Select",
 
         "id": "sort-123",
         "name": "sort-123",
@@ -33,7 +33,7 @@
         "options": [
             {
                 "_repeat": [2,10],
-                "_template": "base/form/Option",
+                "_template": "/base/form/Option",
 
                 "text": "{{words(2)}}",
                 "value": "{{words(2)}}"
@@ -42,7 +42,7 @@
     },
 
     "body": {
-        "_template": "base/util/RawHtml",
+        "_template": "/base/util/RawHtml",
 
         "html": "Sorry, nothing matches your query. Try another search"
     }

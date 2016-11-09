@@ -1,6 +1,6 @@
 {
   "_wrapper": false,
-  "_template": "community/commenting/CommentActionResponse",
+  "_template": "/community/commenting/CommentActionResponse",
 
   "title": "{{number([2,100])}} comments",
 

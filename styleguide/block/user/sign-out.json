@@ -1,5 +1,5 @@
 {
-  "_template": "community/user/UserSignOut",
+  "_template": "/community/user/UserSignOut",
 
   "button": "Logout",
   "action": ".",

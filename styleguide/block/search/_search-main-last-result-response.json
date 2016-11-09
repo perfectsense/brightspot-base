@@ -1,14 +1,14 @@
 {
     "_wrapper": false,
-    "_template": "base/search/SearchResult",
+    "_template": "/base/search/SearchResult",
 
     "items": {
-        "_template": "base/util/Concatenated",
+        "_template": "/base/util/Concatenated",
 
         "items": [
             {
                 "_repeat": 9,
-                "_template": "base/util/RawHtml",
+                "_template": "/base/util/RawHtml",
 
                 "html": "<div>{{words(3)}}</div>"
             }

@@ -1,5 +1,5 @@
 {
-    "_template": "base/form/Select",
+    "_template": "/base/form/Select",
 
     "id": "selectId-123",
     "name": "selectName-123",
@@ -8,7 +8,7 @@
     "options": [
         {
             "_repeat": [2,10],
-            "_template": "base/form/Option",
+            "_template": "/base/form/Option",
 
             "text": "{{words(2)}}",
             "value": "{{words(1)}}"

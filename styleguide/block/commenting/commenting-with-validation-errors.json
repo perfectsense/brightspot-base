@@ -1,5 +1,5 @@
 {
-  "_template": "community/commenting/Commenting",
+  "_template": "/community/commenting/Commenting",
 
   "id": "324kldsjlj34",
   "textWhenHidden": "View Comments",
@@ -15,7 +15,7 @@
   },
 
   "body": {
-    "_template": "base/util/Concatenated",
+    "_template": "/base/util/Concatenated",
     "items": [
       {
         "_repeat": [
@@ -29,9 +29,9 @@
   },
 
   "validation": {
-    "_template": "base/form/ValidationMessages",
+    "_template": "/base/form/ValidationMessages",
     "serverError": {
-      "_template": "base/util/RawHtml",
+      "_template": "/base/util/RawHtml",
       "html": "Sorry! Something went wrong on our end. Please try again later."
     }
   }

@@ -1,27 +1,27 @@
 {
-  "_template": "community/commenting/Comment",
+  "_template": "/community/commenting/Comment",
 
   "author": {
     "_dataUrl": "/block/author/author.json"
   },
 
   "time": {
-    "_template": "base/util/DateTime",
+    "_template": "/base/util/DateTime",
     "iso": "{{date('iso')}}",
     "body": "{{date()}}"
   },
 
   "body": {
-    "_template": "base/util/RawHtml",
+    "_template": "/base/util/RawHtml",
     "html": "{{paragraphs(1)}}"
   },
 
   "replies": [ ],
 
   "validation": {
-    "_template": "base/form/ValidationMessages",
+    "_template": "/base/form/ValidationMessages",
     "serverError": {
-      "_template": "base/util/RawHtml",
+      "_template": "/base/util/RawHtml",
       "html": "Sorry! Something went wrong on our end. Please try again later."
     }
   },
