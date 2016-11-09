@@ -7,7 +7,7 @@
     "commentingId": "324kldsjlj34",
 
     "validationError": {
-        "_template": "../../form/validation/ValidationError",
+        "_template": "../../form/validation/ValidationError.hbs",
 
         "message": "Server error message. Please try again.",
         "type": "serverError"

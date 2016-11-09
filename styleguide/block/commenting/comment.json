@@ -1,5 +1,5 @@
 {
-  "_template": "Comment",
+  "_template": "Comment.hbs",
 
   "author": {
     "_dataUrl": "../author/author.json"
@@ -19,7 +19,7 @@
   "replies": [ ],
 
   "validation": {
-    "_template": "../../form/validation/ValidationMessages",
+    "_template": "../../form/validation/ValidationMessages.hbs",
     "serverError": {
       "_template": "../util/RawHtml.hbs",
       "html": "Sorry! Something went wrong on our end. Please try again later."

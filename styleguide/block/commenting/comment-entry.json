@@ -29,17 +29,17 @@
   },
 
   "validation": {
-    "_template": "../../form/validation/ValidationMessages",
+    "_template": "../../form/validation/ValidationMessages.hbs",
     "serverError": {
-      "_template": "../util/RawHtml",
+      "_template": "../util/RawHtml.hbs",
       "html": "Sorry! Something went wrong on our end. Please try again later."
     },
     "blank": {
-      "_template": "../util/RawHtml",
+      "_template": "../util/RawHtml.hbs",
       "html": "Please provide a comment."
     },
     "tooLong": {
-      "_template": "../util/RawHtml",
+      "_template": "../util/RawHtml.hbs",
       "html": "Your comment was too long. Please stay within 500 characters."
     }
   },
