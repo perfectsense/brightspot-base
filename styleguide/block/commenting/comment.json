@@ -16,7 +16,7 @@
     "html": "{{paragraphs(1)}}"
   },
 
-  "replies": [ ],
+  "replies": null,
 
   "validation": {
     "_template": "../../form/validation/ValidationMessages.hbs",
