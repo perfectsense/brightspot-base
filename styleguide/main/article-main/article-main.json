@@ -21,9 +21,18 @@
         "_template": "../../block/util/Concatenated.hbs",
         "delimiter": ", ",
         "items": [
-            "{{name}}",
-            "{{name}}",
-            "{{name}}"
+            {
+                "_template": "../../block/util/RawHtml.hbs",
+                "html": "{{name}}"
+            },
+            {
+                "_template": "../../block/util/RawHtml.hbs",
+                "html": "{{name}}"
+            },
+            {
+                "_template": "../../block/util/RawHtml.hbs",
+                "html": "{{name}}"
+            }
         ]
     },
 
