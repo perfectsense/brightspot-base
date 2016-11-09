@@ -1,20 +1,8 @@
 package com.psddev.base;
 
-import com.psddev.cms.db.Content;
 import com.psddev.cms.db.ToolUi;
 
 @ToolUi.Publishable(false)
-public class Author extends Content {
+public class Author extends Person {
 
-    @Required
-    @Indexed
-    private String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }
