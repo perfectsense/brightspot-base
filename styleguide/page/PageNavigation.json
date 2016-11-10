@@ -1,0 +1,11 @@
+{
+    "_template": "PageNavigation.hbs",
+    "items": [
+        {
+            "_repeat": 6,
+            "_template": "../Link.hbs",
+            "href": "#",
+            "body": "{{words(1)}}"
+        }
+    ]
+}

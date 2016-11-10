@@ -1,0 +1,8 @@
+{
+    "_template": "Author.hbs",
+    "image": {
+        "_dataUrl": "/Image.json"
+    },
+    "name": "{{name}}",
+    "affiliation": "{{words([ 1, 3 ])}}"
+}

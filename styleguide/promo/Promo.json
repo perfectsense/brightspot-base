@@ -1,0 +1,9 @@
+{
+    "_template": "Promo.hbs",
+    "category": "{{words(1)}}",
+    "title": "{{words}}",
+    "description": "{{words}}",
+    "cta": {
+        "_dataUrl": "../Link.json"
+    }
+}

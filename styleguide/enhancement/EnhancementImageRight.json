@@ -1,0 +1,8 @@
+{
+  "_template": "Enhancement.hbs",
+  "alignment": "right",
+  "content": {
+      "_template": "../Image.hbs",
+      "src": "{{image(260,360)}}"
+  }
+}

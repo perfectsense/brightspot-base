@@ -1,0 +1,89 @@
+{
+    "_template": "ArticleMain.hbs",
+
+    "datePublished": "2016-02-19T16:43:22+00:00",
+    "dateModified": "2016-02-19T17:44:23+00:00",
+
+    "breadcrumbs": {
+        "_template": "../Breadcrumbs.hbs",
+        "items": [
+            "{{words([1, 3])}}",
+            "{{words([1, 3])}}",
+            "{{words([1, 3])}}"
+        ]
+    },
+
+    "preHeadline": "{{words([4,10])}}",
+    "headline": "{{words([10,15])}}",
+    "subHeadline": "{{words}}",
+
+    "byline": {
+        "_template": "../util/Concatenated.hbs",
+        "delimiter": ", ",
+        "items": [
+            {
+                "_template": "../util/RawHtml.hbs",
+                "html": "{{name}}"
+            },
+            {
+                "_template": "../util/RawHtml.hbs",
+                "html": "{{name}}"
+            },
+            {
+                "_template": "../util/RawHtml.hbs",
+                "html": "{{name}}"
+            }
+        ]
+    },
+
+    "lead": {
+        "_template": "../Image.hbs",
+        "src": "{{image(900,450)}}"
+    },
+
+    "body": {
+        "_template": "../util/Concatenated.hbs",
+        "items": [
+            {
+                "_template": "../util/RawHtml.hbs",
+                "html": "{{paragraphs([3,10])}}"
+            },
+            {
+                "_template": "../enhancement/Enhancement.hbs",
+                "alignment": "left",
+                "content": {
+                    "_template": "../Image.hbs",
+                    "src": "{{image(260,360)}}"
+                }
+            },
+            {
+                "_template": "../util/RawHtml.hbs",
+                "html": "<h3>Subheadline</h3>"
+            },
+            {
+                "_template": "../util/RawHtml.hbs",
+                "html": "{{paragraphs([3,10])}}"
+            },
+            {
+                "_template": "../enhancement/Enhancement.hbs",
+                "alignment": "right",
+                "content": {
+                    "_template": "../Image.hbs",
+                    "src": "{{image(260,360)}}"
+                }
+            },
+            {
+                "_template": "../util/RawHtml.hbs",
+                "html": "{{paragraphs([3,10])}}"
+            },
+            {
+                "_template": "../util/RawHtml.hbs",
+                "html": "{{paragraphs([3,10])}}"
+            }
+        ]
+    },
+
+    "tags": "",
+    "sharebar": "",
+    "comments": ""
+}
