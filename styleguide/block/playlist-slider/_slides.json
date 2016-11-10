@@ -1,4 +1,4 @@
 {
-    "_template": "/base/util/Image",
+    "_template": "/base/util/Image.hbs",
     "src": "{{image(200,200)}}"
 }

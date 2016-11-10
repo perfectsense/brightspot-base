@@ -1,9 +1,9 @@
 {
   "_wrapper": false,
-  "_template": "/community/commenting/CommentLoadMoreResponse",
+  "_template": "/community/commenting/CommentLoadMoreResponse.hbs",
 
   "comments": {
-    "_template": "/base/util/Concatenated",
+    "_template": "/base/util/Concatenated.hbs",
     "items": [
       {
         "_repeat": [1,5],

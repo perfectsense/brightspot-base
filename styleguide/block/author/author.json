@@ -1,7 +1,7 @@
 {
-    "_template": "/base/Author",
+    "_template": "/base/Author.hbs",
     "image": {
-        "_template": "/base/util/Image",
+        "_template": "/base/util/Image.hbs",
         "src": "{{image(50, 50)}}"
     },
     "name": "{{name}}",

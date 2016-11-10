@@ -1,8 +1,8 @@
 {
-    "_template": "/base/page/PageFooter",
+    "_template": "/base/page/PageFooter.hbs",
 
     "logo": {
-        "_template": "/base/util/Image",
+        "_template": "/base/util/Image.hbs",
         "src": "{{image(300, 80)}}"
     },
 
@@ -11,7 +11,7 @@
     },
 
     "copyright": {
-        "_template": "/base/util/RawHtml",
+        "_template": "/base/util/RawHtml.hbs",
         "html": "&copy; 2016"
     }
 }

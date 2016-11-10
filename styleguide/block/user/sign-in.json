@@ -1,25 +1,25 @@
 {
-  "_template": "/community/user/UserSignIn",
+  "_template": "/community/user/UserSignIn.hbs",
 
   "title": "Sign in to post a comment",
   
   "services": {
-    "_template": "/base/util/Concatenated",
+    "_template": "/base/util/Concatenated.hbs",
     "items": [
       {
-        "_template": "/base/util/SocialLink",
+        "_template": "/base/util/SocialLink.hbs",
         "href": "#",
         "socialService": "facebook",
         "body": "Facebook"
       },
       {
-        "_template": "/base/util/SocialLink",
+        "_template": "/base/util/SocialLink.hbs",
         "href": "#",
         "socialService": "twitter",
         "body": "Twitter"
       },
       {
-        "_template": "/base/util/SocialLink",
+        "_template": "/base/util/SocialLink.hbs",
         "href": "#",
         "socialService": "google",
         "body": "Google"

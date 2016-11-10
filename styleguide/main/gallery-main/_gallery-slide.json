@@ -1,8 +1,8 @@
 {
-    "_template": "/base/GallerySlide",
+    "_template": "/base/GallerySlide.hbs",
     
     "mediaContent": {
-        "_template": "/base/util/Image",
+        "_template": "/base/util/Image.hbs",
         "src": "{{image([200, 800], [200, 640])}}"
     },
 

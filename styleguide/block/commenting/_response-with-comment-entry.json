@@ -1,6 +1,6 @@
 {
   "_wrapper": false,
-  "_template": "/community/commenting/CommentActionResponse",
+  "_template": "/community/commenting/CommentActionResponse.hbs",
 
   "entry": {
     "_dataUrl": "/block/commenting/comment-entry.json",

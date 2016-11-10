@@ -1,10 +1,10 @@
 {
-  "_template": "/community/commenting/CommentEntry",
+  "_template": "/community/commenting/CommentEntry.hbs",
 
   "user": {
-    "_template": "/base/Author",
+    "_template": "/base/Author.hbs",
     "image": {
-      "_template": "/base/util/Image",
+      "_template": "/base/util/Image.hbs",
       "src": "{{image(50, 50)}}"
     }
   },
@@ -12,14 +12,14 @@
   "title": "{{name}}",
 
   "logout": {
-    "_template": "/community/user/UserSignOut",
+    "_template": "/community/user/UserSignOut.hbs",
     "button": "Logout",
     "action": "/block/user/_logout-response",
     "target": "_blank"
   },
 
   "input": {
-    "_template": "/base/form/TextAreaInput",
+    "_template": "/base/form/TextAreaInput.hbs",
     "name": "entry-input",
     "id": "34dvpcoxiv34ktgj",
     "required": true,
@@ -29,17 +29,17 @@
   },
 
   "validation": {
-    "_template": "/base/form/ValidationMessages",
+    "_template": "/base/form/ValidationMessages.hbs",
     "serverError": {
-      "_template": "/base/util/RawHtml",
+      "_template": "/base/util/RawHtml.hbs",
       "html": "Sorry! Something went wrong on our end. Please try again later."
     },
     "blank": {
-      "_template": "/base/util/RawHtml",
+      "_template": "/base/util/RawHtml.hbs",
       "html": "Please provide a comment."
     },
     "tooLong": {
-      "_template": "/base/util/RawHtml",
+      "_template": "/base/util/RawHtml.hbs",
       "html": "Your comment was too long. Please stay within 500 characters."
     }
   },

@@ -1,14 +1,14 @@
 {
-    "_template": "/base/page/PageHeader",
+    "_template": "/base/page/PageHeader.hbs",
     "logo": {
-        "_template": "/base/util/Image",
+        "_template": "/base/util/Image.hbs",
         "src": "{{image(300, 80)}}"
     },
     "navigation": {
         "_dataUrl": "/block/page-navigation/page-navigation.json"
     },
     "search": {
-        "_template": "/base/util/RawHtml",
+        "_template": "/base/util/RawHtml.hbs",
         "html": "<input type='text' name='search'/>"
     }
 }

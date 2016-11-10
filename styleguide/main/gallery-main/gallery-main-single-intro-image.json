@@ -1,8 +1,8 @@
 {
-    "_template": "/base/main/GalleryMain",
+    "_template": "/base/main/GalleryMain.hbs",
     
     "intro": {
-        "_template": "/base/GalleryIntro",
+        "_template": "/base/GalleryIntro.hbs",
         "title": "{{words(8,12)}}",
         "description": "{{words(60,120)}}"
     },

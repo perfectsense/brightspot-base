@@ -1,12 +1,12 @@
 {
-    "_template": "/base/util/Concatenated",
+    "_template": "/base/util/Concatenated.hbs",
     "items" : [
         {
-            "_template": "/base/util/RawHtml",
+            "_template": "/base/util/RawHtml.hbs",
             "html": "{{paragraphs(1)}}"
         },
         {
-            "_template": "/base/main/GalleryMain",
+            "_template": "/base/main/GalleryMain.hbs",
             "slides": [
                 {
                     "_dataUrl": "/main/gallery-main/_gallery-slide.json"
@@ -14,11 +14,11 @@
             ]
         },
         {
-            "_template": "/base/util/RawHtml",
+            "_template": "/base/util/RawHtml.hbs",
             "html": "{{paragraphs(1)}}"
         },
         {
-            "_template": "/base/main/GalleryMain",
+            "_template": "/base/main/GalleryMain.hbs",
             "id": "my-singleton-unique-id-2",
             "slides": [
                 {
@@ -27,11 +27,11 @@
             ]
         },
         {
-            "_template": "/base/util/RawHtml",
+            "_template": "/base/util/RawHtml.hbs",
             "html": "{{paragraphs(1)}}"
         },
         {
-            "_template": "/base/main/GalleryMain",
+            "_template": "/base/main/GalleryMain.hbs",
             "id": "my-singleton-unique-id-2",
             "slides": [
                 {
@@ -40,7 +40,7 @@
             ]
         },
         {
-            "_template": "/base/util/RawHtml",
+            "_template": "/base/util/RawHtml.hbs",
             "html": "{{paragraphs(1)}}"
         }
     ]

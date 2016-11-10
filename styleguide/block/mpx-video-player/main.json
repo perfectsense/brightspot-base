@@ -1,5 +1,5 @@
 {
-    "_template": "/base/MPXVideoPlayer",
+    "_template": "/base/MPXVideoPlayer.hbs",
 
     "aspectRatio": "16x9",
     "src": "https://player.theplatform.com/p/{{var('mpxAccountId')}}/{{var('mpxPlayerId')}}/embed/select/media/yrucumrCUeBd?form=html"

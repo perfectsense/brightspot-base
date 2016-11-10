@@ -1,12 +1,12 @@
 {
-    "_template": "/base/search/SearchMain",
+    "_template": "/base/search/SearchMain.hbs",
 
     "headline": "{{words(4)}}",
     "subHeadline": "{{number(10)}} results",
     "submitAction": ".?q=keywords&offset=0&limit=3",
 
     "filter": {
-        "_template": "/base/form/Select",
+        "_template": "/base/form/Select.hbs",
 
         "id": "filter-123",
         "name": "filter-123",
@@ -15,7 +15,7 @@
         "options": [
             {
                 "_repeat": [2,10],
-                "_template": "/base/form/Option",
+                "_template": "/base/form/Option.hbs",
 
                 "text": "{{words(2)}}",
                 "value": "{{words(2)}}"
@@ -24,7 +24,7 @@
     },
 
     "sort": {
-        "_template": "/base/form/Select",
+        "_template": "/base/form/Select.hbs",
 
         "id": "sort-123",
         "name": "sort-123",
@@ -33,7 +33,7 @@
         "options": [
             {
                 "_repeat": [2,10],
-                "_template": "/base/form/Option",
+                "_template": "/base/form/Option.hbs",
 
                 "text": "{{words(2)}}",
                 "value": "{{words(2)}}"
@@ -42,15 +42,15 @@
     },
 
     "body": {
-        "_template": "/base/search/SearchResult",
+        "_template": "/base/search/SearchResult.hbs",
 
         "items": {
-            "_template": "/base/util/Concatenated",
+            "_template": "/base/util/Concatenated.hbs",
 
             "items": [
                 {
                     "_repeat": 9,
-                    "_template": "/base/util/RawHtml",
+                    "_template": "/base/util/RawHtml.hbs",
 
                     "html": "<div>{{words(3)}}</div>"
                 }

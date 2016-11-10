@@ -1,5 +1,5 @@
 {
-    "_template": "/base/form/TextInput",
+    "_template": "/base/form/TextInput.hbs",
 
     "id": "{{number}}",
     "name": "foo",

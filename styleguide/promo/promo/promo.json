@@ -1,5 +1,5 @@
 {
-    "_template": "/base/promo/MediaPromo",
+    "_template": "/base/promo/MediaPromo.hbs",
     "category": "{{words(1)}}",
     "title": "{{words}}",
     "description": "{{words}}",
