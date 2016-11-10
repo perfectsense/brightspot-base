@@ -1,4 +1,4 @@
-package com.psddev.base;
+package com.psddev.base.image;
 
 import java.util.ArrayList;
 import java.util.Arrays;
