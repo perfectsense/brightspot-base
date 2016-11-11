@@ -1,0 +1,38 @@
+{
+  "_template": "Commenting.hbs",
+
+  "id": "324kldsjlj34",
+  "textWhenHidden": "View Comments",
+  "textWhenVisible": "Hide Comments",
+  "title": "3 Comments",
+
+  "loadMoreButton": "Show More",
+  "loadMoreAction": "/SERVERERROR",
+
+  "commentEntry": {
+      "_dataUrl": "comment-entry.json",
+      "submitAction": "/block/commenting/_response-with-invalid-comment-entry"
+  },
+
+  "body": {
+    "_template": "../util/Concatenated.hbs",
+    "items": [
+      {
+        "_repeat": [
+          1,
+          2
+        ],
+        "_dataUrl": "/styleguide/block/commenting/comment.json",
+        "replyAction": "/SERVERERROR"
+      }
+    ]
+  },
+
+  "validation": {
+    "_template": "../../form/validation/ValidationMessages.hbs",
+    "serverError": {
+      "_template": "../util/RawHtml.hbs",
+      "html": "Sorry! Something went wrong on our end. Please try again later."
+    }
+  }
+}
