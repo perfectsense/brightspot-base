@@ -5,6 +5,6 @@
   "title": "{{number([2,100])}} comments",
 
   "comment": {
-    "_dataUrl": "/block/commenting/comment.json"
+    "_dataUrl": "/styleguide/block/commenting/comment.json"
   }
 }

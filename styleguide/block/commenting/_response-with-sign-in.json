@@ -3,6 +3,6 @@
   "_template": "CommentActionResponse.hbs",
 
   "signIn": {
-    "_dataUrl": "/block/user/sign-in.json"
+    "_dataUrl": "/styleguide/block/user/sign-in.json"
   }
 }
