@@ -3,6 +3,7 @@ package com.psddev.base;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.psddev.base.rte.BasicRichTextToolbar;
 import com.psddev.cms.db.Content;
 import com.psddev.cms.db.Directory;
 import com.psddev.cms.db.Site;
@@ -17,11 +18,11 @@ public abstract class Person extends Content implements Directory.Item {
     private Image image;
 
     @DisplayName("Full Biography")
-    @ToolUi.RichText
+    @ToolUi.RichText(toolbar = BasicRichTextToolbar.class)
     private String fullBio;
 
     @DisplayName("Short Biography")
-    @ToolUi.RichText
+    @ToolUi.RichText(toolbar = BasicRichTextToolbar.class)
     private String shortBio;
 
     private List<SocialLink> socialLinks;
