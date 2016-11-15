@@ -1,8 +1,8 @@
 package com.psddev.base.viewmodel;
 
 import com.psddev.base.Author;
-import com.psddev.base.view.block.author.AuthorView;
-import com.psddev.base.view.block.util.ImageView;
+import com.psddev.base.view.styleguide.AuthorView;
+import com.psddev.base.view.styleguide.ImageView;
 import com.psddev.cms.view.ViewModel;
 
 public class AuthorViewModel extends ViewModel<Author> implements AuthorView {
