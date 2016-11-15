@@ -1,7 +1,7 @@
 package com.psddev.base.viewmodel;
 
-import com.psddev.base.view.page.HeadView;
-import com.psddev.base.view.page.PageView;
+import com.psddev.base.view.styleguide.page.HeadView;
+import com.psddev.base.view.styleguide.page.PageView;
 import com.psddev.dari.db.Recordable;
 
 public class PageViewModel extends StandardViewModel<Recordable> implements PageView {
