@@ -393,8 +393,8 @@ balanced-match@^0.4.1:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-0.4.2.tgz#cb3f3e3c732dc0f01ee70b403f302e61d7709838"
 
 beeper@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/beeper/-/beeper-1.1.0.tgz#9ee6fc1ce7f54feaace7ce73588b056037866a2c"
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/beeper/-/beeper-1.1.1.tgz#e6d5ea8c5dad001304a70b22638447f69cb2f809"
 
 bluebird@^3.3.4:
   version "3.4.6"
@@ -432,7 +432,7 @@ braces@^1.8.2:
 
 brightspot-styleguide@perfectsense/brightspot-styleguide#master:
   version "2.0.0"
-  resolved "https://codeload.github.com/perfectsense/brightspot-styleguide/tar.gz/de31d30fb52720404b44dd9a80eb3325ff0ce277"
+  resolved "https://codeload.github.com/perfectsense/brightspot-styleguide/tar.gz/ce6bad06971923ce75ec9ccce587854188bf51b7"
   dependencies:
     body-parser "1.14.1"
     chance "^0.8.0"
@@ -444,8 +444,10 @@ brightspot-styleguide@perfectsense/brightspot-styleguide#master:
     express "^4.13.1"
     font-awesome "^4.4.0"
     geopattern "1.2.3"
+    gulp-filter "4.0.0"
     gulp-jsonlint "1.1.2"
     gulp-lesshint "2.0.0"
+    gulp-load-plugins "1.4.0"
     gulp-notify "2.2.0"
     gulp-standard "8.0.2"
     handlebars "^4.0.3"
@@ -457,16 +459,17 @@ brightspot-styleguide@perfectsense/brightspot-styleguide#master:
     lodash "^3.9.3"
     marked "^0.3.5"
     md5 "2.0.0"
-    minimist "^1.1.2"
+    minimist "1.2.0"
     moment "^2.10.6"
     normalize.css "^3.0.3"
     recursive-readdir-sync "^1.0.6"
     require-dir "0.3.1"
+    sentence-case "2.1.0"
     sticky-kit "1.1.3"
     stream-combiner2 "1.1.1"
     terminal-kit "^0.15.10"
     traverse "^0.6.6"
-    xml2js "^0.4.15"
+    xml2js "0.4.17"
 
 browserslist@~1.4.0:
   version "1.4.0"
@@ -553,8 +556,8 @@ camelcase@^2.0.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-2.1.1.tgz#7c1d16d679a1bbe59ca02cacecfb011e201f5a1f"
 
 caniuse-db@^1.0.30000539, caniuse-db@^1.0.30000554:
-  version "1.0.30000578"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000578.tgz#fc4106bda3ca19df4bd9f35e491063f3d498ff31"
+  version "1.0.30000579"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000579.tgz#9018ef6f0ce61977525ae69c440e538e6ffccf35"
 
 cardinal@^1.0.0:
   version "1.0.0"
@@ -764,7 +767,7 @@ content-type@~1.0.1, content-type@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/content-type/-/content-type-1.0.2.tgz#b7d113aee7a8dd27bd21133c4dc2529df1721eed"
 
-convert-source-map@^1.1.0, convert-source-map@1.X, convert-source-map@1.x:
+convert-source-map@^1.1.0, convert-source-map@1.x, convert-source-map@1.X:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.3.0.tgz#e9f3e9c6e2728efc2676696a70eb382f73106a67"
 
@@ -863,8 +866,8 @@ debug-log@^1.0.0:
   resolved "https://registry.yarnpkg.com/debug-log/-/debug-log-1.0.1.tgz#2307632d4c04382b8df8a32f70b895046d52745f"
 
 debug@^2.1.1, debug@^2.2.0, debug@2.X:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-2.3.0.tgz#3912dc55d7167fc3af17d2b85c13f93deaedaa43"
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-2.3.2.tgz#94cb466ef7d6d2c7e5245cdd6e4104f2d0d70d30"
   dependencies:
     ms "0.7.2"
 
@@ -975,7 +978,7 @@ eachr@~2.0.2:
   dependencies:
     typechecker "^2.0.8"
 
-editions@^1.1.0, editions@^1.1.1:
+editions@^1.1.1, editions@^1.3.3:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/editions/-/editions-1.3.3.tgz#0907101bdda20fac3cbe334c27cbd0688dc99a5b"
 
@@ -1108,8 +1111,8 @@ eslint-config-standard@6.2.1:
   resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-6.2.1.tgz#d3a68aafc7191639e7ee441e7348739026354292"
 
 eslint-plugin-promise@~3.3.0:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.3.1.tgz#c1e980cf7c3cac3300731450fb31d2bb843eb226"
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.3.2.tgz#c1169ae6487a87cdeae44f659f4cf05131b8dc66"
 
 eslint-plugin-react@~6.4.1:
   version "6.4.1"
@@ -1610,8 +1613,8 @@ global-prefix@^0.1.4:
     which "^1.2.10"
 
 globals@^9.0.0, globals@^9.2.0:
-  version "9.12.0"
-  resolved "https://registry.yarnpkg.com/globals/-/globals-9.12.0.tgz#992ce90828c3a55fa8f16fada177adb64664cf9d"
+  version "9.13.0"
+  resolved "https://registry.yarnpkg.com/globals/-/globals-9.13.0.tgz#d97706b61600d8dbe94708c367d3fdcf48470b8f"
 
 globby@^5.0.0:
   version "5.0.0"
@@ -1666,6 +1669,13 @@ grunt-contrib-concat@^0.5.1:
   dependencies:
     chalk "^0.5.1"
     source-map "^0.3.0"
+
+gulp-changed@1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/gulp-changed/-/gulp-changed-1.3.2.tgz#9efc8d325f9805cc7668fdf4e7d60d4b1410f2cf"
+  dependencies:
+    gulp-util "^3.0.0"
+    through2 "^2.0.0"
 
 gulp-clean-css@2.0.13:
   version "2.0.13"
@@ -2630,6 +2640,10 @@ loud-rejection@^1.0.0:
     currently-unhandled "^0.4.1"
     signal-exit "^3.0.0"
 
+lower-case@^1.1.1:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/lower-case/-/lower-case-1.1.3.tgz#c92393d976793eee5ba4edb583cf8eae35bd9bfb"
+
 lru-cache@~1.0.2:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-1.0.6.tgz#aa50f97047422ac72543bda177a9c9d018d98452"
@@ -2793,7 +2807,7 @@ minimist@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.2.0.tgz#4dffe525dae2b864c66c2e23c6271d7afdecefce"
 
-minimist@^1.1.0, minimist@^1.1.1, minimist@^1.1.3, minimist@1.2.0:
+minimist@^1.1.0, minimist@^1.1.1, minimist@^1.1.2, minimist@^1.1.3, minimist@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
 
@@ -2812,8 +2826,8 @@ mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.1:
     minimist "0.0.8"
 
 moment@^2.10.6:
-  version "2.15.2"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.15.2.tgz#1bfdedf6a6e345f322fe956d5df5bd08a8ce84dc"
+  version "2.16.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.16.0.tgz#f38f2c97c9889b0ee18fc6cc392e1e443ad2da8e"
 
 ms@0.7.1:
   version "0.7.1"
@@ -2852,6 +2866,12 @@ negotiator@0.6.1:
 next-tick@0.1.x:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-0.1.0.tgz#1912cce8eb9b697d640fbba94f8f00dec3b94259"
+
+no-case@^2.2.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/no-case/-/no-case-2.3.0.tgz#ca2825ccb76b18e6f79d573dcfbf1eace33dd164"
+  dependencies:
+    lower-case "^1.1.1"
 
 node-emoji@^1.4.1:
   version "1.4.1"
@@ -3139,8 +3159,8 @@ postcss-less@^0.14.0:
     postcss "^5.0.21"
 
 postcss-selector-parser@^2.0.0:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-2.2.1.tgz#fdbf696103b12b0a64060e5610507f410491f7c8"
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-2.2.2.tgz#3d70f5adda130da51c7c0c2fc023f56b1374fe08"
   dependencies:
     flatten "^1.0.2"
     indexes-of "^1.0.1"
@@ -3287,8 +3307,8 @@ readable-stream@^1.0.33, readable-stream@~1.1.9:
     string_decoder "~0.10.x"
 
 readable-stream@^2.0.2, readable-stream@^2.1.5:
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.1.5.tgz#66fa8b720e1438b364681f2ad1a63c618448c9d0"
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.2.1.tgz#c459a6687ad6195f936b959870776edef27a7655"
   dependencies:
     buffer-shims "^1.0.0"
     core-util-is "~1.0.0"
@@ -3515,6 +3535,13 @@ send@0.14.1:
     on-finished "~2.3.0"
     range-parser "~1.2.0"
     statuses "~1.3.0"
+
+sentence-case@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/sentence-case/-/sentence-case-2.1.0.tgz#d592fbed457fd1a59e3af0ee17e99f6fd70d7efd"
+  dependencies:
+    no-case "^2.2.0"
+    upper-case-first "^1.1.2"
 
 sequencify@~0.0.7:
   version "0.0.7"
@@ -3785,8 +3812,8 @@ systemjs-builder@0.15.32:
     uglify-js "^2.6.1"
 
 systemjs@^0.19.39:
-  version "0.19.40"
-  resolved "https://registry.yarnpkg.com/systemjs/-/systemjs-0.19.40.tgz#158f64a9f4ef541a7fda6b40e527ee46b6c54cd0"
+  version "0.19.41"
+  resolved "https://registry.yarnpkg.com/systemjs/-/systemjs-0.19.41.tgz#835d2c0f10bf403b551fedc875f84bb44a02c4eb"
   dependencies:
     when "^3.7.5"
 
@@ -3926,10 +3953,10 @@ typechecker@^2.0.8:
   resolved "https://registry.yarnpkg.com/typechecker/-/typechecker-2.1.0.tgz#d1c2093a54ff8a19f58cff877eeaa54f2242d383"
 
 typechecker@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/typechecker/-/typechecker-4.3.0.tgz#6f6d6815753e88d6812aa80de4a3fd18948e6e62"
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/typechecker/-/typechecker-4.4.0.tgz#efc56882d36e435c6eb978200e22b88278a3f7fc"
   dependencies:
-    editions "^1.1.0"
+    editions "^1.3.3"
 
 typechecker@~2.0.1:
   version "2.0.8"
@@ -3992,6 +4019,16 @@ unique-stream@^1.0.0:
 unpipe@~1.0.0, unpipe@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
+
+upper-case-first@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/upper-case-first/-/upper-case-first-1.1.2.tgz#5d79bedcff14419518fd2edb0a0507c9b6859115"
+  dependencies:
+    upper-case "^1.1.1"
+
+upper-case@^1.1.1:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/upper-case/-/upper-case-1.1.3.tgz#f6b4501c2ec4cdd26ba78be7222961de77621598"
 
 urix@^0.1.0, urix@~0.1.0:
   version "0.1.0"

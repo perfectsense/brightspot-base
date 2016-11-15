@@ -51,14 +51,10 @@ gulp.task('js', [ styleguide.task.lint.js() ], (done) => {
   })
 })
 
-gulp.task('copy', () => {
-  return gulp.src(styleguide.path.src('/**/*.hbs', {base: '.'}))
-              .pipe(gulp.dest(styleguide.path.build()))
+gulp.task('default', [ 'css', 'js', styleguide.task.copy.templates() ], () => {
 })
 
 gulp.task('styleguide', () => {
   styleguide.watch()
   styleguide.serve(argv)
 })
-
-gulp.task('default', [ 'css', 'js', 'copy' ], () => { })

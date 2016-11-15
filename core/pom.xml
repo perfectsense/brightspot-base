@@ -100,7 +100,7 @@
                             <includePluginDependencies>true</includePluginDependencies>
                             <mainClass>com.psddev.styleguide.ViewClassGenerator</mainClass>
                             <arguments>
-                                <argument>--json-dir=${project.basedir}/../styleguide</argument>
+                                <argument>--json-dir=${project.basedir}/../target/gulp</argument>
                                 <argument>--java-package-prefix=com.psddev.base.view</argument>
                                 <argument>--build-dir=${project.build.directory}/generated-sources/styleguide</argument>
                                 <argument>--ignore-files=_config.json,bower.json,package.json</argument>
