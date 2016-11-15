@@ -12,9 +12,6 @@ jdk:
 
 install: true
 
-before_script:
-  - npm run yarn-clean
-
 script: mvn -Plibrary verify
 
 cache:
