@@ -28,7 +28,6 @@
   },
   "scripts": {
     "gulp": "gulp",
-    "gulp-debug": "node --inspect --debug-brk node_modules/gulp/bin/gulp.js",
     "yarn-clean": "yarn cache clean && yarn upgrade"
   }
 }
