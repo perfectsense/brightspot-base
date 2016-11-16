@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.psddev.base.image.StorageItemImageMetadata;
 import com.psddev.base.rte.BasicRichTextToolbar;
 import com.psddev.cms.db.Content;
 import com.psddev.cms.db.ToolUi;

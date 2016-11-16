@@ -4,5 +4,6 @@
             "name": "Base",
             "href": "/_build/All.min.css"
         }
-    ]
+    ],
+    "javaPackage": "com.psddev.base.view"
 }
