@@ -9,7 +9,7 @@ import com.psddev.cms.rte.RichTextToolbarItem;
 import com.psddev.cms.rte.RichTextToolbarSeparator;
 import com.psddev.cms.rte.RichTextToolbarStyle;
 
-public class ArticleBodyRichTextToolbar implements RichTextToolbar {
+public class BodyRichTextToolbar implements RichTextToolbar {
 
     @Override
     public List<RichTextToolbarItem> getItems() {
