@@ -432,7 +432,7 @@ braces@^1.8.2:
 
 brightspot-styleguide@perfectsense/brightspot-styleguide#master:
   version "2.0.0"
-  resolved "https://codeload.github.com/perfectsense/brightspot-styleguide/tar.gz/2348c869d39af18a92b9e7888c1b070ef2fc23ec"
+  resolved "https://codeload.github.com/perfectsense/brightspot-styleguide/tar.gz/a2bcad23d8da49c5d657839471d87792b3d1207c"
   dependencies:
     body-parser "1.14.1"
     chance "^0.8.0"
@@ -444,6 +444,7 @@ brightspot-styleguide@perfectsense/brightspot-styleguide#master:
     express "^4.13.1"
     font-awesome "^4.4.0"
     geopattern "1.2.3"
+    gulp-file "0.3.0"
     gulp-filter "4.0.0"
     gulp-jsonlint "1.1.2"
     gulp-lesshint "2.0.0"
@@ -2610,8 +2611,8 @@ lodash@^3.9.3:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
 lodash@^4.0.0, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.2.0, lodash@^4.3.0:
-  version "4.17.1"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.1.tgz#e75eaf17a34730c6491d9956f4d81f3a044f01bf"
+  version "4.17.2"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.2.tgz#34a3055babe04ce42467b607d700072c7ff6bf42"
 
 lodash@~1.0.1:
   version "1.0.2"
