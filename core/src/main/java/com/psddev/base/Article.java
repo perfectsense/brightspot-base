@@ -1,6 +1,6 @@
 package com.psddev.base;
 
-import com.psddev.base.rte.ArticleBodyRichTextToolbar;
+import com.psddev.base.rte.BodyRichTextToolbar;
 import com.psddev.base.viewmodel.ArticleViewModel;
 import com.psddev.base.viewmodel.PageViewModel;
 import com.psddev.base.viewmodel.ViewTypes;
@@ -38,7 +38,7 @@ public class Article extends Content implements Directory.Item,
     @Indexed
     private List<Author> authors;
 
-    @ToolUi.RichText(toolbar = ArticleBodyRichTextToolbar.class)
+    @ToolUi.RichText(toolbar = BodyRichTextToolbar.class)
     private String body;
 
     public String getHeadline() {
