@@ -439,7 +439,6 @@ brightspot-styleguide@perfectsense/brightspot-styleguide#master:
     express "^4.13.1"
     font-awesome "^4.4.0"
     geopattern "1.2.3"
-    gulp-file "0.3.0"
     gulp-filter "4.0.0"
     gulp-jsonlint "1.1.2"
     gulp-lesshint "2.0.0"
@@ -463,7 +462,7 @@ brightspot-styleguide@perfectsense/brightspot-styleguide#master:
     sentence-case "2.1.0"
     sticky-kit "1.1.3"
     stream-combiner2 "1.1.1"
-    terminal-kit "0.25.1"
+    terminal-kit "^0.15.10"
     traverse "^0.6.6"
     xml2js "0.4.17"
 

@@ -12,14 +12,10 @@
  */
 
 /* eslint-disable no-unused-vars */
-import TextInput from './form/input/TextInput.js'
-import TextAreaInput from './form/input/TextAreaInput.js'
+import TextInput from './form/TextInput.js'
+import TextAreaInput from './form/TextAreaInput.js'
 
-import Comment from './block/commenting/Comment.js'
-import CommentEntry from './block/commenting/CommentEntry.js'
-import Commenting from './block/commenting/Commenting.js'
-
-import Gallery from './main/gallery-main/GalleryMain.js'
+import Gallery from './gallery-main/GalleryMain.js'
 
 export default {}
 /* eslint-enable no-unused-vars */

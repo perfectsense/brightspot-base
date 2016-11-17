@@ -1,8 +1,0 @@
-{
-  "_wrapper": false,
-  "_template": "CommentActionResponse.hbs",
-
-  "signIn": {
-    "_dataUrl": "/styleguide/block/user/sign-in.json"
-  }
-}
