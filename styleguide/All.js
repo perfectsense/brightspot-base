@@ -17,5 +17,8 @@ import TextAreaInput from './form/TextAreaInput.js'
 
 import Gallery from './gallery-main/GalleryMain.js'
 
+import MPXVideo from './video-main/MPXVideoPlayer.js'
+import Video from './video-main/VideoMain.js'
+
 export default {}
 /* eslint-enable no-unused-vars */

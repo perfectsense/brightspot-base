@@ -1,0 +1,10 @@
+{
+    "_template": "MPXVideoPlayer.hbs",
+
+    "id": "{{number([0,300])}}",
+    "aspectRatio": "16x9",
+    "muted": true,
+    "autoplay": true,
+    "seekSeconds": 0,
+    "src": "//player.theplatform.com/p/{{var('mpxAccountId')}}/{{var('mpxPlayerId')}}"
+}
