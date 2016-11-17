@@ -13,15 +13,14 @@ import com.psddev.cms.db.ToolUi;
 import com.psddev.cms.view.ViewBinding;
 import com.psddev.dari.util.StringUtils;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @ViewBinding(value = PageViewModel.class, types = PageFilter.PAGE_VIEW_TYPE)
 @ViewBinding(value = ArticleViewModel.class, types = ViewTypes.BODY)
 
 @Seo.TitleFields("headline")
 @Seo.DescriptionFields("subHeadline")
-public class Article extends Content implements Directory.Item,
+@Seo.OpenGraphType("article")
+public class Article extends Content implements BylineAssignable,
+                                                Directory.Item,
                                                 Linkable,
                                                 Promotable,
                                                 Taggable {
@@ -34,9 +33,6 @@ public class Article extends Content implements Directory.Item,
     private String socialHeadline;
 
     private String subHeadline;
-
-    @Indexed
-    private List<Author> authors;
 
     @ToolUi.RichText(toolbar = ArticleBodyRichTextToolbar.class)
     private String body;
@@ -63,17 +59,6 @@ public class Article extends Content implements Directory.Item,
 
     public void setSubHeadline(String subHeadline) {
         this.subHeadline = subHeadline;
-    }
-
-    public List<Author> getAuthors() {
-        if (authors == null) {
-            return new ArrayList<>();
-        }
-        return authors;
-    }
-
-    public void setAuthors(List<Author> authors) {
-        this.authors = authors;
     }
 
     public String getBody() {
