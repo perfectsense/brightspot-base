@@ -1,1 +1,43 @@
-<img src="{{src}}" alt="{{alt}}"{{#with srcset}} srcset="{{this}}"{{/with}}{{#with width}} width="{{this}}"{{/with}}{{#with height}} height="{{this}}"{{/with}}{{extraAttributes}}>
+{{#defineBlock "Image"}}
+
+  {{#defineElement "container" noWith=true}}
+    {{#if credit}}
+    <div class="{{elementName}}">
+      <img src="{{src}}" alt="{{alt}}"{{#with srcset}} srcset="{{this}}"{{/with}}{{#with width}} width="{{this}}"{{/with}}{{#with height}} height="{{this}}"{{/with}} itemprop="contentUrl" />
+      {{element "credit"}}
+    </div>
+    {{else}}
+      <img src="{{src}}" alt="{{alt}}"{{#with srcset}} srcset="{{this}}"{{/with}}{{#with width}} width="{{this}}"{{/with}}{{#with height}} height="{{this}}"{{/with}} itemprop="contentUrl" />
+    {{/if}}
+  {{/defineElement}}
+
+  {{#defineElement "caption"}}
+    <figcaption class="{{elementName}}" itemprop="caption">{{this}}</figcaption>
+  {{/defineElement}}
+
+  {{#defineElement "credit"}}
+    <div class="{{elementName}}" itemprop="author">{{this}}</div>
+  {{/defineElement}}
+
+  {{#defineElement "tags"}}
+    <ul class="{{elementName}}" itemprop="keywords">
+      {{#each this}}
+        <li class="{{elementName}}-item">{{this}}</li>
+      {{/each}}
+    </ul>
+
+  {{/defineElement}}
+
+  {{#defineBlockContainer}}
+
+    <figure class="{{blockName}}" itemscope itemtype="http://schema.org/ImageObject">
+      {{#defineBlockBody}}
+        {{element "container"}}
+        {{element "caption"}}
+        {{element "tags"}}
+
+      {{/defineBlockBody}}
+    </figure>
+
+  {{/defineBlockContainer}}
+{{/defineBlock}}
