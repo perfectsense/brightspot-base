@@ -1,9 +1,0 @@
-{
-  "_wrapper": false,
-  "_template": "CommentActionResponse.hbs",
-
-  "entry": {
-    "_dataUrl": "comment-entry.json",
-    "commentingId": "324kldsjlj34"
-  }
-}

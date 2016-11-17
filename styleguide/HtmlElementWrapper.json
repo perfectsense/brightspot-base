@@ -1,0 +1,12 @@
+{
+    "_template": "HtmlElementWrapper.hbs",
+    "tagName": "b",
+    "extraAttributes": {
+        "class": "bold",
+        "data-style": "bold"
+    },
+    "body": {
+        "_template": "util/RawHtml.hbs",
+        "text": "Hello World!"
+    }
+}

@@ -5,10 +5,10 @@ import java.util.Collection;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import com.psddev.base.view.styleguide.page.ExternalScriptView;
-import com.psddev.base.view.styleguide.page.ExternalStylesheetView;
-import com.psddev.base.view.styleguide.page.HeadView;
-import com.psddev.base.view.styleguide.page.HeadViewItemsField;
+import com.psddev.base.view.styleguide.ExternalScriptView;
+import com.psddev.base.view.styleguide.ExternalStylesheetView;
+import com.psddev.base.view.styleguide.HeadView;
+import com.psddev.base.view.styleguide.HeadViewItemsField;
 import com.psddev.cms.db.ElFunctionUtils;
 import com.psddev.cms.db.Seo;
 import com.psddev.cms.view.ViewModel;
