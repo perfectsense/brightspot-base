@@ -101,14 +101,4 @@ public class Gallery extends Content implements BylineAssignable,
     public String createPermalink(Site site) {
         return StringUtils.toNormalized(headline);
     }
-
-    @Override
-    public String getPromoTitleFallback() {
-        return headline;
-    }
-
-    @Override
-    public String getPromoDescriptionFallback() {
-        return subHeadline;
-    }
 }
