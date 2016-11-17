@@ -98,7 +98,7 @@
                 <file>
                     <exists>yarn.lock</exists>
                 </file>
-            </activation> 
+            </activation>
 
             <build>
                 <plugins>
@@ -139,7 +139,7 @@
                 <file>
                     <exists>gulpfile.js</exists>
                 </file>
-            </activation> 
+            </activation>
 
             <build>
                 <plugins>
@@ -152,6 +152,11 @@
                             <execution>
                                 <id>gulp</id>
                                 <phase>generate-resources</phase>
+                                <configuration>
+                                  <environmentVariables>
+                                      <DISABLE_NOTIFIER>true</DISABLE_NOTIFIER>
+                                  </environmentVariables>
+                                </configuration>
                                 <goals>
                                     <goal>gulp</goal>
                                 </goals>
