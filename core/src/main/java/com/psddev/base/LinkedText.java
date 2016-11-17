@@ -6,7 +6,7 @@ import com.psddev.dari.db.Recordable;
 import com.psddev.dari.util.StringUtils;
 
 @Recordable.Embedded
-public class LinkedText extends Record {
+public class LinkedText extends Record implements NavigationItem {
 
     @ToolUi.Placeholder(dynamicText = "${content.textFallback}")
     private String text;
