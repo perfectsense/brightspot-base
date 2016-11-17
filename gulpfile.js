@@ -54,7 +54,6 @@ gulp.task('js', [ styleguide.task.lint.js() ], (done) => {
 gulp.task('default', [ 'css', 'js', styleguide.task.copy.templates() ], () => {
 })
 
-gulp.task('styleguide', () => {
-  styleguide.watch()
+gulp.task('styleguide', [ styleguide.task.watch() ], () => {
   styleguide.serve(argv)
 })

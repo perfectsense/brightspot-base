@@ -28,6 +28,7 @@
   },
   "scripts": {
     "gulp": "gulp",
+    "watch": "gulp bsp-styleguide:watch",
     "yarn-clean": "yarn cache clean && yarn upgrade"
   }
 }
