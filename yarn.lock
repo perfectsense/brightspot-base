@@ -186,8 +186,8 @@ async_testing@>=0.3.2:
   resolved "https://registry.yarnpkg.com/async_testing/-/async_testing-0.3.2.tgz#cfb35973230e1175ac65c1a5241085f344a8a8a5"
 
 async-kit@^2.2.0:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/async-kit/-/async-kit-2.2.1.tgz#3f0bf86175a36bc6f0b477f3562b014e22b90f2b"
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/async-kit/-/async-kit-2.2.3.tgz#264751a279ddc5f59b419638b805ae2c49858fb7"
   dependencies:
     nextgen-events "^0.9.0"
     tree-kit "^0.5.26"
@@ -367,8 +367,8 @@ babel-types@^6.16.0, babel-types@^6.18.0, babel-types@^6.19.0:
     to-fast-properties "^1.0.1"
 
 babylon@^6.11.0:
-  version "6.14.0"
-  resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.14.0.tgz#c8ba4b69b544b2cd8f3fb96b06614660a49b7128"
+  version "6.14.1"
+  resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.14.1.tgz#956275fab72753ad9b3435d7afe58f8bf0a29815"
 
 bal-util@1.x:
   version "1.18.0"
@@ -427,7 +427,7 @@ braces@^1.8.2:
 
 brightspot-styleguide@perfectsense/brightspot-styleguide#master:
   version "2.0.0"
-  resolved "https://codeload.github.com/perfectsense/brightspot-styleguide/tar.gz/a2a63eeae2c8c44b4d991161b5c02c10bd4565ee"
+  resolved "https://codeload.github.com/perfectsense/brightspot-styleguide/tar.gz/fda78d89981aaef903c407cbf0057ae2add2e1d7"
   dependencies:
     body-parser "1.14.1"
     chance "^0.8.0"

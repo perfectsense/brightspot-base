@@ -12,13 +12,24 @@
  */
 
 /* eslint-disable no-unused-vars */
+import $ from 'node_modules/jquery/dist/jquery.js'
 import TextInput from './form/TextInput.js'
 import TextAreaInput from './form/TextAreaInput.js'
-
 import Gallery from './gallery-main/GalleryMain.js'
+import VideoMain from './video-main/VideoMain.js'
 
-import MPXVideo from './video-main/MPXVideoPlayer.js'
-import Video from './video-main/VideoMain.js'
+$(document).ready(function () {
+  window.videoPlayers = []
+  window.videoPlayerControllers = []
 
+  window.registerPlayer = function (player, id) {
+    window.videoPlayers.push(player)
+  }
+
+  window.registerPlayerController = function (controller, id) {
+    window.videoPlayerControllers[id] = controller
+  }
+})
 export default {}
+
 /* eslint-enable no-unused-vars */
