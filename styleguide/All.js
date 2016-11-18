@@ -29,7 +29,14 @@ $(document).ready(function () {
   window.registerPlayerController = function (controller, id) {
     window.videoPlayerControllers[id] = controller
   }
+
+  // VideoMain binding
+  let $videoMain = $('.VideoMain')
+  if ($videoMain.length) {
+    window.videoMain = new VideoMain($videoMain, { })
+  }
 })
+
 export default {}
 
 /* eslint-enable no-unused-vars */

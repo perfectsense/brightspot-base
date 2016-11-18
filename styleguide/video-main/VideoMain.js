@@ -1,5 +1,5 @@
 import $ from 'node_modules/jquery/dist/jquery.js'
-import { MPXVideoPlayer } from 'styleguide/video-main/MPXVideoPlayer.js'
+import { MPXVideoPlayer } from './MPXVideoPlayer.js'
 
 export class VideoMain {
 
