@@ -427,7 +427,7 @@ braces@^1.8.2:
 
 brightspot-styleguide@perfectsense/brightspot-styleguide#master:
   version "2.0.0"
-  resolved "https://codeload.github.com/perfectsense/brightspot-styleguide/tar.gz/b3fba15a00232617884c273d6deb1e1747166d94"
+  resolved "https://codeload.github.com/perfectsense/brightspot-styleguide/tar.gz/0402d9f6b2fd2b2c0598350fe1e743b472a3cd28"
   dependencies:
     body-parser "1.14.1"
     chance "^0.8.0"
