@@ -6,15 +6,17 @@
         "_template": "Head.hbs",
         "items": [
             {
-                "_template": "InlineScript.hbs",
+                "_template": "ExternalScript.hbs",
                 "type": "text/javascript",
-                "script": "if (window.console) { console.log(\"Hello World\"); }"
+                "src": "/main.js",
+                "async": false,
+                "defer": false
             }
         ]
     },
 
     "body": {
-        "_template": "util/RawHtml.hbs",
+        "_template": "RawHtml.hbs",
         "html": "{{paragraphs}}"
     }
 }

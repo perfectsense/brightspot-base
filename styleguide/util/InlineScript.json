@@ -6,16 +6,15 @@
         "_template": "Head.hbs",
         "items": [
             {
-                "_template": "InlineStylesheet.hbs",
-                "type": "text/css",
-                "media": "screen",
-                "css": "body { color: red; }"
+                "_template": "InlineScript.hbs",
+                "type": "text/javascript",
+                "script": "if (window.console) { console.log(\"Hello World\"); }"
             }
         ]
     },
 
     "body": {
-        "_template": "util/RawHtml.hbs",
+        "_template": "RawHtml.hbs",
         "html": "{{paragraphs}}"
     }
 }

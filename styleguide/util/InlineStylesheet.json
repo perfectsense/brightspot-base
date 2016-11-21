@@ -6,17 +6,16 @@
         "_template": "Head.hbs",
         "items": [
             {
-                "_template": "ExternalStylesheet.hbs",
-                "rel": "stylesheet",
+                "_template": "InlineStylesheet.hbs",
                 "type": "text/css",
                 "media": "screen",
-                "href": "/main.min.css"
+                "css": "body { color: red; }"
             }
         ]
     },
 
     "body": {
-        "_template": "util/RawHtml.hbs",
+        "_template": "RawHtml.hbs",
         "html": "{{paragraphs}}"
     }
 }
