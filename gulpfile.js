@@ -7,7 +7,7 @@ const argv = require('minimist')(process.argv.slice(2))
 const styleguide = new Styleguide(gulp)
 
 gulp.task('css', [ styleguide.task.lint.less() ], () => {
-  return gulp.src(styleguide.path.src('All.less'))
+  return styleguide.gulp.src('All.less')
             .pipe(plugins.sourcemaps.init())
             .pipe(plugins.less())
             .pipe(plugins.postcss([ autoprefixer('last 2 versions') ]))
