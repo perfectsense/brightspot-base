@@ -9,7 +9,7 @@
             "_template": "GalleryMain.hbs",
             "slides": [
                 {
-                    "_dataUrl": "_GallerySlide.json"
+                    "_dataUrl": "../_GallerySlide.json"
                 }
             ]
         },
@@ -22,7 +22,7 @@
             "id": "my-singleton-unique-id-2",
             "slides": [
                 {
-                    "_dataUrl": "_GallerySlide.json"
+                    "_dataUrl": "../_GallerySlide.json"
                 }
             ]
         },
@@ -35,7 +35,7 @@
             "id": "my-singleton-unique-id-2",
             "slides": [
                 {
-                    "_dataUrl": "_GallerySlide.json"
+                    "_dataUrl": "../_GallerySlide.json"
                 }
             ]
         },

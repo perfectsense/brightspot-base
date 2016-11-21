@@ -15,7 +15,7 @@
 import TextInput from './form/TextInput.js'
 import TextAreaInput from './form/TextAreaInput.js'
 
-import Gallery from './gallery-main/GalleryMain.js'
+import Gallery from './main/GalleryMain.js'
 
 export default {}
 /* eslint-enable no-unused-vars */
