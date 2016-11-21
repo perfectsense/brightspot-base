@@ -15,8 +15,8 @@
 import $ from 'node_modules/jquery/dist/jquery.js'
 import TextInput from './form/TextInput.js'
 import TextAreaInput from './form/TextAreaInput.js'
-import Gallery from './gallery-main/GalleryMain.js'
-import VideoMain from './video-main/VideoMain.js'
+import Gallery from './main/GalleryMain.js'
+import VideoMain from './main/VideoMain.js'
 
 $(document).ready(function () {
   window.videoPlayers = []

@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import com.psddev.base.Article;
 import com.psddev.base.view.styleguide.BreadcrumbsView;
 import com.psddev.base.view.styleguide.ImageView;
-import com.psddev.base.view.styleguide.article_main.ArticleMainView;
+import com.psddev.base.view.styleguide.main.ArticleMainView;
 import com.psddev.base.view.styleguide.util.ConcatenatedView;
 
 public class ArticleViewModel extends BaseViewModel<Article> implements ArticleMainView {

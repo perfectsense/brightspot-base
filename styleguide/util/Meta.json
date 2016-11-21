@@ -24,7 +24,7 @@
     },
 
     "body": {
-        "_template": "util/RawHtml.hbs",
+        "_template": "RawHtml.hbs",
         "html": "{{paragraphs}}"
     }
 }

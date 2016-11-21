@@ -6,7 +6,7 @@
         "data-style": "bold"
     },
     "body": {
-        "_template": "util/RawHtml.hbs",
+        "_template": "RawHtml.hbs",
         "text": "Hello World!"
     }
 }
