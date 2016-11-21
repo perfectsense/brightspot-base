@@ -25,6 +25,9 @@ public class Tag extends Content {
     }
 
     public String getDisplayName() {
+        if (displayName == null) {
+            return getDisplayNameFallback();
+        }
         return displayName;
     }
 
@@ -41,9 +44,6 @@ public class Tag extends Content {
     }
 
     public String getDisplayNameFallback() {
-        if (name != null) {
-            return name;
-        }
-        return null;
+        return name;
     }
 }

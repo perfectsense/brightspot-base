@@ -8,7 +8,9 @@ import com.psddev.base.view.styleguide.ImageView;
 import com.psddev.base.view.styleguide.main.ArticleMainView;
 import com.psddev.base.view.styleguide.util.ConcatenatedView;
 
-public class ArticleViewModel extends BaseViewModel<Article> implements ArticleMainView {
+import com.psddev.cms.view.ViewModel;
+
+public class ArticleViewModel extends ViewModel<Article> implements ArticleMainView {
 
     private static SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss+00:00");
 
