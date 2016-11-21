@@ -3,7 +3,6 @@ package com.psddev.base;
 import com.psddev.base.rte.ArticleBodyRichTextToolbar;
 import com.psddev.base.viewmodel.ArticleViewModel;
 import com.psddev.base.viewmodel.PageViewModel;
-import com.psddev.base.viewmodel.ViewTypes;
 import com.psddev.cms.db.Content;
 import com.psddev.cms.db.Directory;
 import com.psddev.cms.db.PageFilter;
@@ -14,7 +13,7 @@ import com.psddev.cms.view.ViewBinding;
 import com.psddev.dari.util.StringUtils;
 
 @ViewBinding(value = PageViewModel.class, types = PageFilter.PAGE_VIEW_TYPE)
-@ViewBinding(value = ArticleViewModel.class, types = ViewTypes.BODY)
+@ViewBinding(value = ArticleViewModel.class, types = "body")
 
 @Seo.TitleFields("headline")
 @Seo.DescriptionFields("subHeadline")
