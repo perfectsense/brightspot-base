@@ -9,20 +9,22 @@
 
     {{#defineBlockContainer}}
         <article class="{{blockName}}" itemprop="mainEntity" itemscope itemtype="http://schema.org/Article"{{extraAttributes}}>
-            {{element "meta"}}
+            <div class="{{blockName}}-container">
+                {{element "meta"}}
 
-            {{#defineBlockBody}}
-                {{element "breadcrumbs"}}
-                {{element "preHeadline"}}
-                {{element "headline"}}
-                {{element "subHeadline"}}
-                {{element "byline"}}
-                {{element "lead"}}
-                {{element "body"}}
-                {{element "tags"}}
-                {{element "sharebar"}}
-                {{element "comments"}}
-            {{/defineBlockBody}}
+                {{#defineBlockBody}}
+                    {{element "breadcrumbs"}}
+                    {{element "preHeadline"}}
+                    {{element "headline"}}
+                    {{element "subHeadline"}}
+                    {{element "byline"}}
+                    {{element "lead"}}
+                    {{element "body"}}
+                    {{element "tags"}}
+                    {{element "sharebar"}}
+                    {{element "comments"}}
+                {{/defineBlockBody}}
+            </div>
         </article>
     {{/defineBlockContainer}}
 {{/defineBlock}}
