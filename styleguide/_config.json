@@ -6,7 +6,7 @@
   "stylesheets": [
     {
       "name": "Base",
-      "href": "/_build/All.min.css"
+      "href": "/target/gulp/styleguide/All.min.css"
     }
   ],
   "javaPackage": "com.psddev.base.view"

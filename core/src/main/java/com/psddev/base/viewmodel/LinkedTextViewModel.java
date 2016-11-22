@@ -10,7 +10,7 @@ public class LinkedTextViewModel extends ViewModel<LinkedText> implements LinkVi
 
     @Override
     public String getBody() {
-        return model.getTextFinal();
+        return model.getText();
     }
 
     @Override

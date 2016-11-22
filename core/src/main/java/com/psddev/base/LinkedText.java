@@ -8,24 +8,19 @@ import com.psddev.dari.util.StringUtils;
 @Recordable.Embedded
 public class LinkedText extends Record {
 
-    @ToolUi.Placeholder(dynamicText = "${content.textFallback}")
+    @ToolUi.Placeholder(dynamicText = "${content.textFallback}", editable = true)
     private String text;
 
     @Required
     private Link link = new ContentLink();
 
     public String getText() {
-        return text;
+        return !StringUtils.isBlank(text) ? text : getTextFallback();
     }
 
     public String getTextFallback() {
         Link link = getLink();
         return link != null ? link.getLinkText() : null;
-    }
-
-    public String getTextFinal() {
-        String text = getText();
-        return !StringUtils.isBlank(text) ? text : getTextFallback();
     }
 
     public void setText(String text) {
@@ -42,6 +37,6 @@ public class LinkedText extends Record {
 
     @Override
     public String getLabel() {
-        return getTextFinal();
+        return getText();
     }
 }

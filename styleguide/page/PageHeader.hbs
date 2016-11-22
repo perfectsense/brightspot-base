@@ -19,10 +19,12 @@
     {{#defineBlockContainer}}
         <header class="{{blockName}}" itemscope itemtype="http://schema.org/WPHeader"{{extraAttributes}}>
             {{#defineBlockBody}}
-                {{element "logo"}}
-                {{element "hat"}}                
-                {{element "navigation"}}
-                {{element "search"}}
+                <div class="{{blockName}}-container">
+                  {{element "logo"}}
+                  {{element "hat"}}                
+                  {{element "navigation"}}
+                  {{element "search"}}
+                </div>
             {{/defineBlockBody}}
         </header>
     {{/defineBlockContainer}}
