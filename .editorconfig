@@ -9,7 +9,7 @@ indent_style = space
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[*.hbs]
+[*.hbs,*.less]
 insert_final_newline = false
 
 [{package.json,.travis.yml}]
