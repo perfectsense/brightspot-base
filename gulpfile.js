@@ -7,7 +7,7 @@ const argv = require('minimist')(process.argv.slice(2))
 const styleguide = new Styleguide(gulp)
 
 gulp.task('css', [ styleguide.task.lint.less() ], () => {
-  return styleguide.gulp.src('All.less')
+  return gulp.src('styleguide/All.less', { base: '.' })
             .pipe(plugins.sourcemaps.init())
             .pipe(plugins.less())
             .pipe(plugins.postcss([ autoprefixer('last 2 versions') ]))
@@ -37,9 +37,9 @@ gulp.task('js', [ styleguide.task.lint.js() ], (done) => {
     minify: false
   }
 
-  builder.buildStatic(styleguide.path.src('All.js'), buildOptions).then((output) => {
+  builder.buildStatic('styleguide/All.js', buildOptions).then((output) => {
     gulp.src([ ])
-        .pipe(plugins.file('All.js', output.source))
+        .pipe(plugins.file('styleguide/All.js', output.source))
         .pipe(gulp.dest(styleguide.path.build()))
         .pipe(plugins.sourcemaps.init())
         .pipe(plugins.uglify())
