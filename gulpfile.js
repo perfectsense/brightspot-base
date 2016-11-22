@@ -3,7 +3,6 @@ const plugins = require('gulp-load-plugins')()
 const autoprefixer = require('autoprefixer')
 const Styleguide = require('brightspot-styleguide')
 const Builder = require('systemjs-builder')
-const argv = require('minimist')(process.argv.slice(2))
 const styleguide = new Styleguide(gulp)
 
 gulp.task('css', [ styleguide.task.lint.less() ], () => {
@@ -55,5 +54,5 @@ gulp.task('default', [ 'css', 'js', styleguide.task.copy.templates() ], () => {
 })
 
 gulp.task('styleguide', [ styleguide.task.watch() ], () => {
-  styleguide.serve(argv)
+  styleguide.serve()
 })
