@@ -4,6 +4,10 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
+    {{#defineElement "hat"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
     {{#defineElement "navigation"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
@@ -16,6 +20,7 @@
         <header class="{{blockName}}" itemscope itemtype="http://schema.org/WPHeader"{{extraAttributes}}>
             {{#defineBlockBody}}
                 {{element "logo"}}
+                {{element "hat"}}                
                 {{element "navigation"}}
                 {{element "search"}}
             {{/defineBlockBody}}
