@@ -1,5 +1,0 @@
-{
-  "source_ami": "ami-xxxxxxxx",
-  "recipe": "recipe[brightspot-base::gateway]",
-  "layer": "gateway"
-}
