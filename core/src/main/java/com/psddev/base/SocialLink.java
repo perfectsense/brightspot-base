@@ -1,11 +1,28 @@
 package com.psddev.base;
 
-//TODO: Need more reqs on how SocialLink will display (icon vs text)
-public class SocialLink extends ExternalLink {
+import com.psddev.dari.db.Record;
+import com.psddev.dari.db.Recordable;
+import com.psddev.dari.util.StringUtils;
+
+@Recordable.Embedded
+public class SocialLink extends Record {
+
+    @Required
+    @Embedded
+    private ExternalLink externalLink;
 
     private String text;
 
+    @Required
     private SocialNetworkType socialType;
+
+    public ExternalLink getExternalLink() {
+        return externalLink;
+    }
+
+    public void setExternalLink(ExternalLink externalLink) {
+        this.externalLink = externalLink;
+    }
 
     public String getText() {
         return text;
@@ -21,5 +38,18 @@ public class SocialLink extends ExternalLink {
 
     public void setSocialType(SocialNetworkType socialType) {
         this.socialType = socialType;
+    }
+
+    @Override
+    public String getLabel() {
+        if (!StringUtils.isBlank(getText())) {
+            return getText();
+        }
+
+        if (getSocialType() != null) {
+            return getSocialType().getValue();
+        }
+
+        return super.getLabel();
     }
 }
