@@ -36,7 +36,7 @@ gulp.task('js', [ styleguide.task.lint.js() ], (done) => {
     minify: false
   }
 
-  builder.buildStatic('styleguide/All.js', buildOptions).then((output) => {
+  return builder.buildStatic('styleguide/All.js', buildOptions).then((output) => {
     gulp.src([ ])
       .pipe(plugins.file('styleguide/All.js', output.source))
       .pipe(gulp.dest(styleguide.path.build()))
@@ -50,9 +50,9 @@ gulp.task('js', [ styleguide.task.lint.js() ], (done) => {
   })
 })
 
-gulp.task('default', [ 'css', 'js', styleguide.task.copy.templates() ], () => {
-})
-
-gulp.task('styleguide', [ styleguide.task.watch() ], () => {
+gulp.task('styleguide', ['default'], () => {
+  styleguide.watch()
   styleguide.serve()
 })
+
+gulp.task('default', [ 'css', 'js', styleguide.task.copy.templates() ])
