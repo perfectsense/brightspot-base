@@ -1,6 +1,6 @@
 package com.psddev.base;
 
-import com.psddev.base.rte.ArticleBodyRichTextToolbar;
+import com.psddev.base.rte.BodyRichTextToolbar;
 import com.psddev.base.viewmodel.ArticleViewModel;
 import com.psddev.base.viewmodel.PageViewModel;
 import com.psddev.cms.db.Content;
@@ -33,7 +33,7 @@ public class Article extends Content implements BylineAssignable,
 
     private String subHeadline;
 
-    @ToolUi.RichText(toolbar = ArticleBodyRichTextToolbar.class)
+    @ToolUi.RichText(toolbar = BodyRichTextToolbar.class)
     private String body;
 
     public String getHeadline() {
