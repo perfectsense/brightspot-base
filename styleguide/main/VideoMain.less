@@ -1,0 +1,19 @@
+@import 'CreativeWorkMain.less';
+
+.VideoMain {
+
+    &:extend(.CreativeWorkMain all);
+
+    &-videoPlayer {
+        &:extend(.VideoMain-videoPlayer all);
+    }
+
+    &-playlist {
+        &:extend(.VideoMain-playlist all);
+    }
+
+    &-description {
+        &:extend(.VideoMain-description all);
+    }
+
+}

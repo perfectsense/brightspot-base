@@ -1,9 +1,13 @@
 {
-    "stylesheets": [
-        {
-            "name": "Base",
-            "href": "/target/gulp/styleguide/All.min.css"
-        }
-    ],
-    "javaPackage": "com.psddev.base.view"
+  "vars": {
+    "mpxAccountId": "1X3jUC",
+    "mpxPlayerId": "yh5o5S5hrJ4c"
+  },
+  "stylesheets": [
+    {
+      "name": "Base",
+      "href": "/target/gulp/styleguide/All.min.css"
+    }
+  ],
+  "javaPackage": "com.psddev.base.view"
 }

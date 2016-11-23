@@ -1,0 +1,23 @@
+{
+    "_template": "VideoMain.hbs",
+
+    "id": "{{number([1,100])}}",
+    "permalink": "foo/bar?q=qux",
+    "videoPlayer": {
+        "_dataUrl": "_VideoPlayer.json",
+        "hlsUrl": "//link.theplatform.com/s/{{var('mpxAccountId')}}/E5BWsOHBPO9y",
+        "seekSeconds": 18
+    },
+    "preHeadline": {
+        "_template": "../Link.hbs",
+        "body": "Sports",
+        "href": "#"
+    },
+    "headline": "The Air Up There",
+    "subHeadline": {
+        "_template": "../Link.hbs",
+        "body": "caption credit name",
+        "href": "#"
+    },
+    "description": "{{words([15,30])}}"
+}
