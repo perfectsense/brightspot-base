@@ -5,18 +5,17 @@ branches:
   except:
     - /^v[-.0-9]+$/
 
-language: java
+language: node_js
+node_js:
+  - "6.1"
 
-jdk:
-  - oraclejdk8
+before_script:
+  - npm install -g gulp
 
-install: true
-
-script: mvn -Plibrary verify
+script: gulp
 
 cache:
   directories:
-    - $HOME/.m2
     - node
 
 after_success:
