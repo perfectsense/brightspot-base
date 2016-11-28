@@ -10,4 +10,11 @@
     &-body {
         &:extend(.ArticleMain-body all);
     }
+
+    & when (@_styled) {
+        &-lead,
+        &-body {
+            ._Block;
+        }
+    }
 }

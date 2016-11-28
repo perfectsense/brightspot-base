@@ -1,6 +1,18 @@
 .Breadcrumbs {
-
     &-item {
         &:extend(.Breadcrumbs-item all);
+    }
+
+    & when (@_styled) {
+        display: inline-flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        &-item:not(:first-child):before {
+            color: lightgray;
+            content: '/';
+            padding: 0 .5em;
+        }
     }
 }

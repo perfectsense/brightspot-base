@@ -7,34 +7,15 @@
     "breadcrumbs": {
         "_template": "../Breadcrumbs.hbs",
         "items": [
-            "{{words([1, 3])}}",
-            "{{words([1, 3])}}",
-            "{{words([1, 3])}}"
+            "Inspire Confidence",
+            "Stories"
         ]
     },
 
-    "preHeadline": "{{words([4,10])}}",
-    "headline": "{{words([10,15])}}",
-    "subHeadline": "{{words}}",
-
-    "byline": {
-        "_template": "../util/Concatenated.hbs",
-        "delimiter": ", ",
-        "items": [
-            {
-                "_template": "../util/RawHtml.hbs",
-                "html": "{{name}}"
-            },
-            {
-                "_template": "../util/RawHtml.hbs",
-                "html": "{{name}}"
-            },
-            {
-                "_template": "../util/RawHtml.hbs",
-                "html": "{{name}}"
-            }
-        ]
-    },
+    "preHeadline": "Exploration",
+    "headline": "After Many Years and 17 Cities, a Pilot Realizes His Dream Journey",
+    "subHeadline": "Flying Around the World Without a Drop of Fossil Fuel",
+    "byline": "By Rob Irvine",
 
     "lead": {
         "_template": "../Image.hbs",

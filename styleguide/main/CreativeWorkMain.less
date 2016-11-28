@@ -18,4 +18,24 @@
     &-byline {
         &:extend(.CreativeWorkMain-byline all);
     }
+
+    & when (@_styled) {
+        &-preHeadline {
+            ._TextSmall;
+        }
+
+        &-preHeadline,
+        &-headline,
+        &-byline {
+            ._Block;
+        }
+
+        &-preHeadline + &-headline {
+            margin-top: 0;
+        }
+
+        &-headline {
+            ._TextLarge;
+        }
+    }
 }

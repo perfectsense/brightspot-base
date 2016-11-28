@@ -14,4 +14,13 @@
     &-comments {
         &:extend(.Main-comments all);
     }
+
+    & when (@_styled) {
+        &-breadcrumbs,
+        &-tags,
+        &-sharebar,
+        &-comments {
+            ._Block;
+        }
+    }
 }
