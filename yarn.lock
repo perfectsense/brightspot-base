@@ -427,7 +427,7 @@ braces@^1.8.2:
 
 brightspot-styleguide@perfectsense/brightspot-styleguide#master:
   version "2.0.0"
-  resolved "https://codeload.github.com/perfectsense/brightspot-styleguide/tar.gz/4e3f3009ab365660db9836b41b0b9cbd2ef0bdff"
+  resolved "https://codeload.github.com/perfectsense/brightspot-styleguide/tar.gz/1ce93b3038bda0b2fc5f9ad03fd117c66694aa47"
   dependencies:
     body-parser "1.14.1"
     chance "^0.8.0"
@@ -556,8 +556,8 @@ camelcase@^2.0.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-2.1.1.tgz#7c1d16d679a1bbe59ca02cacecfb011e201f5a1f"
 
 caniuse-db@^1.0.30000539, caniuse-db@^1.0.30000554:
-  version "1.0.30000588"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000588.tgz#20baa051c5bd7e33ae32c7781b5379289c3d39d2"
+  version "1.0.30000590"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000590.tgz#306e2b133ce467e8341b2accd223256b4040b2be"
 
 cardinal@^1.0.0:
   version "1.0.0"
@@ -780,7 +780,7 @@ content-type@~1.0.1, content-type@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/content-type/-/content-type-1.0.2.tgz#b7d113aee7a8dd27bd21133c4dc2529df1721eed"
 
-convert-source-map@^1.1.0, convert-source-map@1.X, convert-source-map@1.x:
+convert-source-map@^1.1.0, convert-source-map@1.x, convert-source-map@1.X:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.3.0.tgz#e9f3e9c6e2728efc2676696a70eb382f73106a67"
 
@@ -1673,13 +1673,13 @@ global-modules@^0.2.3:
     is-windows "^0.2.0"
 
 global-prefix@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/global-prefix/-/global-prefix-0.1.4.tgz#05158db1cde2dd491b455e290eb3ab8bfc45c6e1"
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/global-prefix/-/global-prefix-0.1.5.tgz#8d3bc6b8da3ca8112a160d8d496ff0462bfef78f"
   dependencies:
+    homedir-polyfill "^1.0.0"
     ini "^1.3.4"
     is-windows "^0.2.0"
-    osenv "^0.1.3"
-    which "^1.2.10"
+    which "^1.2.12"
 
 globals@^9.0.0, globals@^9.2.0:
   version "9.14.0"
@@ -1742,13 +1742,6 @@ grunt-contrib-concat@^0.5.1:
   dependencies:
     chalk "^0.5.1"
     source-map "^0.3.0"
-
-gulp-changed@1.3.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/gulp-changed/-/gulp-changed-1.3.2.tgz#9efc8d325f9805cc7668fdf4e7d60d4b1410f2cf"
-  dependencies:
-    gulp-util "^3.0.0"
-    through2 "^2.0.0"
 
 gulp-clean-css@2.0.13:
   version "2.0.13"
@@ -1987,6 +1980,12 @@ home-or-tmp@^2.0.0:
   dependencies:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.1"
+
+homedir-polyfill@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/homedir-polyfill/-/homedir-polyfill-1.0.0.tgz#2f07f0dc32bd6f0384cd8c2a103824917fc6e321"
+  dependencies:
+    parse-passwd "^1.0.0"
 
 hosted-git-info@^2.1.4:
   version "2.1.5"
@@ -2400,8 +2399,8 @@ lesshint-reporter-stylish@^1.0.0:
     chalk "^1.1.3"
 
 lesshint@^2.0.0:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/lesshint/-/lesshint-2.2.1.tgz#f0095360b71e11c9936a013d48e06f38c81a6589"
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/lesshint/-/lesshint-2.3.0.tgz#c56c0fa0cda50f20ce781a2d1690c7f86da036ae"
   dependencies:
     commander "^2.8.0"
     exit "^0.1.2"
@@ -3180,13 +3179,6 @@ os-tmpdir@^1.0.0, os-tmpdir@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
 
-osenv@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/osenv/-/osenv-0.1.3.tgz#83cf05c6d6458fc4d5ac6362ea325d92f2754217"
-  dependencies:
-    os-homedir "^1.0.0"
-    os-tmpdir "^1.0.0"
-
 outlayer@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/outlayer/-/outlayer-2.1.0.tgz#83b7beefc19becd3278c8ade988d268788d6f93d"
@@ -3217,6 +3209,10 @@ parse-json@^2.2.0:
   resolved "https://registry.yarnpkg.com/parse-json/-/parse-json-2.2.0.tgz#f480f40434ef80741f8469099f8dea18f55a4dc9"
   dependencies:
     error-ex "^1.2.0"
+
+parse-passwd@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/parse-passwd/-/parse-passwd-1.0.0.tgz#6d5b934a456993b23d37f40a382d6f1666a8e5c6"
 
 parseurl@~1.3.1:
   version "1.3.1"
@@ -4063,8 +4059,8 @@ through2@^0.6.1, through2@^0.6.3:
     xtend ">=4.0.0 <4.1.0-0"
 
 through2@^2.0.0, through2@2.X:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.2.tgz#316d3a4f444af641496aa7f45a713be72576baf4"
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.3.tgz#0004569b37c7c74ba39c43f3ced78d1ad94140be"
   dependencies:
     readable-stream "^2.1.5"
     xtend "~4.0.1"
@@ -4152,8 +4148,8 @@ typedarray@~0.0.5:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
 uglify-js@^2.6, uglify-js@^2.6.0, uglify-js@^2.6.1:
-  version "2.7.4"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.7.4.tgz#a295a0de12b6a650c031c40deb0dc40b14568bd2"
+  version "2.7.5"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.7.5.tgz#4612c0c7baaee2ba7c487de4904ae122079f2ca8"
   dependencies:
     async "~0.2.6"
     source-map "~0.5.1"
@@ -4365,7 +4361,7 @@ when@^3.7.5, when@^3.7.7, when@3.x:
   version "3.7.7"
   resolved "https://registry.yarnpkg.com/when/-/when-3.7.7.tgz#aba03fc3bb736d6c88b091d013d8a8e590d84718"
 
-which@^1.0.5, which@^1.2.10:
+which@^1.0.5, which@^1.2.12:
   version "1.2.12"
   resolved "https://registry.yarnpkg.com/which/-/which-1.2.12.tgz#de67b5e450269f194909ef23ece4ebe416fa1192"
   dependencies:
