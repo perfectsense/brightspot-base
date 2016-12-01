@@ -1,21 +1,41 @@
-@import 'Main.less';
+@import 'Main';
 
 .CreativeWorkMain {
     &:extend(.Main all);
 
     &-preHeadline {
-        &:extend(.Main-preHeadline all);
+        &:extend(.CreativeWorkMain-preHeadline all);
     }
 
     &-headline {
-        &:extend(.Main-headline all);
+        &:extend(.CreativeWorkMain-headline all);
     }
 
     &-subHeadline {
-        &:extend(.Main-subHeadline all);
+        &:extend(.CreativeWorkMain-subHeadline all);
     }
 
     &-byline {
-        &:extend(.Main-byline all);
+        &:extend(.CreativeWorkMain-byline all);
+    }
+
+    & when (@_styled) {
+        &-preHeadline {
+            ._TextSmall;
+        }
+
+        &-preHeadline,
+        &-headline,
+        &-byline {
+            ._Block;
+        }
+
+        &-preHeadline + &-headline {
+            margin-top: 0;
+        }
+
+        &-headline {
+            ._TextLarge;
+        }
     }
 }

@@ -8,7 +8,7 @@ const styleguide = new Styleguide(gulp)
 gulp.task('css', [ styleguide.task.lint.less() ], () => {
   return gulp.src('styleguide/All.less', { base: '.' })
     .pipe(plugins.sourcemaps.init())
-    .pipe(plugins.less())
+    .pipe(plugins.less({ globalVars: { _styled: true } }))
     .pipe(plugins.postcss([ autoprefixer('last 2 versions') ]))
     .pipe(plugins.cleanCss())
     .pipe(plugins.rename({ extname: '.min.css' }))
