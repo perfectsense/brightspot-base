@@ -1,10 +1,30 @@
-<meta charset="UTF-8">
+{{#defineBlock "Head"}}
+    {{#defineElement "styles"}}
+        <link rel="stylesheet" type="text/css" href="/All.min.css">
+    {{/defineElement}}
 
-{{#if title}}<title>{{title}}</title>{{/if}}
-{{#if canonicalLink}}<link rel="canonical" href="{{canonicalLink}}">{{/if}}
-{{#if description}}<meta name="description" content="{{description}}" />{{/if}}
-{{#if keywords}}<meta name="news_keywords" content="{{keywords}}" />{{/if}}
+    {{#defineElement "meta"}}
+        <meta charset="UTF-8">
 
-{{#each items}}
-    {{this}}
-{{/each}}
+        {{#if title}}<title>{{title}}</title>{{/if}}
+        {{#if canonicalLink}}<link rel="canonical" href="{{canonicalLink}}">{{/if}}
+        {{#if description}}<meta name="description" content="{{description}}" />{{/if}}
+        {{#if keywords}}<meta name="keywords" content="{{keywords}}" />{{/if}}
+
+        {{#each items}}
+            {{this}}
+        {{/each}}
+    {{/defineElement}}
+
+    {{#defineElement "scripts"}}
+        <script type="text/javascript" src="/All.min.js"></script>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        {{#defineBlockBody}}
+            {{element "styles"}}
+            {{element "meta"}}
+            {{element "scripts"}}
+        {{/defineBlockBody}}
+    {{/defineBlockContainer}}
+{{/defineBlock}}

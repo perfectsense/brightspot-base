@@ -16,14 +16,6 @@
                 "_template": "util/Meta.hbs",
                 "name": "viewport",
                 "content": "width=device-width, initial-scale=1"
-            },
-            {
-                "_template": "util/ExternalStylesheet.hbs",
-                "href": "{{stylesheet}}"
-            },
-            {
-                "_template": "util/ExternalScript.hbs",
-                "src": "/_build/styleguide/All.min.js"
             }
         ]
     },

@@ -3,11 +3,5 @@
     "mpxAccountId": "1X3jUC",
     "mpxPlayerId": "yh5o5S5hrJ4c"
   },
-  "stylesheets": [
-    {
-      "name": "Base",
-      "href": "/_build/styleguide/All.min.css"
-    }
-  ],
   "javaPackage": "com.psddev.base.view"
 }
