@@ -18,8 +18,10 @@
     "byline": "By Rob Irvine",
 
     "lead": {
-        "_template": "../Image.hbs",
-        "src": "{{image(900,450)}}"
+        "_dataUrl": "../Image.json",
+        "src": "{{image(900,450)}}",
+        "width": 900,
+        "height": 450
     },
 
     "body": {
@@ -30,11 +32,11 @@
                 "html": "{{paragraphs([3,10])}}"
             },
             {
-                "_template": "../enhancement/Enhancement.hbs",
-                "alignment": "left",
+                "_dataUrl": "../enhancement/EnhancementImageRight.json",
                 "content": {
-                    "_template": "../Image.hbs",
-                    "src": "{{image(260,360)}}"
+                    "_dataUrl": "../Image.json",
+                    "src": "{{image(410,100)}}",
+                    "width": 410
                 }
             },
             {
