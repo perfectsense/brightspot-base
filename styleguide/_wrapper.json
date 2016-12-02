@@ -23,7 +23,7 @@
             },
             {
                 "_template": "util/ExternalScript.hbs",
-                "src": "/styleguide/_build/styleguide/All.min.js"
+                "src": "/_build/styleguide/All.min.js"
             }
         ]
     },
