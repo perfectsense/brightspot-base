@@ -9,8 +9,8 @@ To use ListPromo as is, specify it directly in the Styleguide example JSON:
 ::
 
     {
-        "_template": "ListPromo",
-        "title": "foo", 
+        "_template": "ListPromo.hbs",
+        "title": "foo",
         "items": [ "bar" ],
         "cta": "qux"
     }
@@ -36,8 +36,8 @@ WideListPromo.hbs
 
 ::
 
-    {{block "base/promo/ListPromo" name="WideListPromo"}}
-    
+    {{block "base/ListPromo" name="WideListPromo.hbs"}}
+
 HTML output:
 
 ::
@@ -57,7 +57,7 @@ CtaFirstListPromo.hbs
 
 ::
 
-    {{#block "base/promo/ListPromo" name="CtaFirstListPromo"}}
+    {{#block "base/ListPromo" name="CtaFirstListPromo.hbs"}}
         {{element "title"}}
         {{element "cta"}}
         {{element "items"}}
@@ -82,7 +82,7 @@ SubTitledListPromo.hbs
 
 ::
 
-    {{#block "base/promo/ListPromo" name="SubTitledListPromo"}}
+    {{#block "base/ListPromo" name="SubTitledListPromo.hbs"}}
         {{element "title"}}
         {{#with subTitle}}
             <div class="{{blockName}}-subTitle">{{this}}</div>
