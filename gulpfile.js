@@ -21,12 +21,18 @@ gulp.task('js', [ styleguide.task.lint.js() ], (done) => {
   let builder = new Builder()
 
   builder.config({
+    defaultJSExtensions: true,
     map: {
       'bsp-carousel': 'node_modules/bsp-carousel/dist/bsp-carousel/bsp-carousel.js',
       'bsp-modal': 'node_modules/bsp-modal/src/js/bsp-modal.js',
       'bsp-utils': 'node_modules/bsp-utils/bsp-utils.js',
       'jquery': 'node_modules/jquery/dist/jquery.js',
-      'masonry': 'node_modules/masonry-layout/dist/masonry.pkgd.js',
+      'masonry': 'node_modules/masonry-layout/masonry.js',
+      'outlayer/outlayer': 'node_modules/outlayer/outlayer.js',
+      'get-size/get-size': 'node_modules/get-size/get-size.js',
+      'ev-emitter/ev-emitter': 'node_modules/ev-emitter/ev-emitter.js',
+      'fizzy-ui-utils/utils': 'node_modules/fizzy-ui-utils/utils.js',
+      'desandro-matches-selector/matches-selector': 'node_modules/desandro-matches-selector/matches-selector.js',
       'slick': 'node_modules/bsp-carousel/dist/bsp-carousel/slick.js',
       'vex': 'node_modules/vex-js/js/vex.js'
     }
