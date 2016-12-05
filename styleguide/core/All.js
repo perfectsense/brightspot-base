@@ -13,10 +13,10 @@
 
 /* eslint-disable no-unused-vars */
 import $ from 'node_modules/jquery/dist/jquery.js'
-import TextInput from './form/TextInput.js'
-import TextAreaInput from './form/TextAreaInput.js'
-import Gallery from './main/GalleryMain.js'
-import VideoMain from './main/VideoMain.js'
+import TextInput from './TextInput.js'
+import TextAreaInput from './TextAreaInput.js'
+import Gallery from './GalleryMain.js'
+import VideoMain from './VideoMain.js'
 
 $(document).ready(function () {
   window.videoPlayers = []

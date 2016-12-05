@@ -9,7 +9,7 @@ To use ListPromo as is, specify it directly in the Styleguide example JSON:
 ::
 
     {
-        "_template": "base/promo/ListPromo",
+        "_template": "ListPromo",
         "title": "foo", 
         "items": [ "bar" ],
         "cta": "qux"

@@ -6,7 +6,7 @@ const Builder = require('systemjs-builder')
 const styleguide = new Styleguide(gulp)
 
 gulp.task('css', [ styleguide.task.lint.less() ], () => {
-  return gulp.src('styleguide/All.less', { base: '.' })
+  return gulp.src('styleguide/core/All.less', { base: '.' })
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.less({ modifyVars: { _demo: true } }))
     .pipe(plugins.postcss([ autoprefixer('last 2 versions') ]))
@@ -42,9 +42,9 @@ gulp.task('js', [ styleguide.task.lint.js() ], (done) => {
     minify: false
   }
 
-  return builder.buildStatic('styleguide/All.js', buildOptions).then((output) => {
+  return builder.buildStatic('styleguide/core/All.js', buildOptions).then((output) => {
     gulp.src([ ])
-      .pipe(plugins.file('styleguide/All.js', output.source))
+      .pipe(plugins.file('styleguide/core/All.js', output.source))
       .pipe(gulp.dest(styleguide.path.build()))
       .pipe(plugins.sourcemaps.init())
       .pipe(plugins.uglify())
