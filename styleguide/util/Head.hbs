@@ -1,9 +1,9 @@
 {{#defineBlock "Head"}}
-    {{#defineElement "styles"}}
+    {{#defineElement "styles" noWith=true}}
         <link rel="stylesheet" type="text/css" href="/All.min.css">
     {{/defineElement}}
 
-    {{#defineElement "meta"}}
+    {{#defineElement "meta" noWith=true}}
         <meta charset="UTF-8">
 
         {{#if title}}<title>{{title}}</title>{{/if}}
@@ -16,7 +16,7 @@
         {{/each}}
     {{/defineElement}}
 
-    {{#defineElement "scripts"}}
+    {{#defineElement "scripts" noWith=true}}
         <script type="text/javascript" src="/All.min.js"></script>
     {{/defineElement}}
 
