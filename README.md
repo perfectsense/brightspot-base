@@ -129,7 +129,7 @@ it directly in the Styleguide example JSON:
 
 ```json
 {
-    "_template": "base/promo/ListPromo",
+    "_template": "ListPromo",
     "title": "foo",
     "items": [ "bar" ],
     "cta": "qux"
@@ -158,7 +158,7 @@ To create a wide version of `ListPromo` named `WideListPromo`, use the
 `WideListPromo.hbs`
 
 ```hbs
-{{#defineBlock "WideListPromo" extend="base/promo/ListPromo"}}
+{{#defineBlock "WideListPromo" extend="ListPromo.hbs"}}
     {{#defineBlockContainer}}
         {{#defineBlockBody}}
             <div class="{{blockName}}">
@@ -191,7 +191,7 @@ _element_, use the `{{element}}` helper:
 `CtaFirstListPromo.hbs`
 
 ```hbs
-{{#defineBlock "CtaFirstListPromo" extend="base/promo/ListPromo"}}
+{{#defineBlock "CtaFirstListPromo" extend="ListPromo.hbs"}}
     {{#defineBlockContainer}}
         {{#defineBlockBody}}
             <div class="{{blockName}}">
@@ -223,7 +223,7 @@ To add the `subTitle` _element_ below the `title` _element_:
 `SubTitledListPromo.hbs`
 
 ```hbs
-{{#defineBlock "SubTitledListPromo" extend="base/promo/ListPromo"}}
+{{#defineBlock "SubTitledListPromo" extend="ListPromo.hbs"}}
     {{#defineBlockContainer}}
         {{#defineBlockBody}}
             <div class="{{blockName}}">

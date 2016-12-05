@@ -2,7 +2,7 @@
     "_template": "PageFooter.hbs",
 
     "logo": {
-        "_template": "../Image.hbs",
+        "_template": "Image.hbs",
         "src": "{{image(300, 80)}}"
     },
 
@@ -11,7 +11,7 @@
     },
 
     "copyright": {
-        "_template": "../util/RawHtml.hbs",
+        "_template": "RawHtml.hbs",
         "html": "&copy; 2016"
     }
 }

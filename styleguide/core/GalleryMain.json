@@ -2,7 +2,7 @@
     "_template": "GalleryMain.hbs",
 
     "intro": {
-        "_template": "../GalleryIntro.hbs",
+        "_template": "GalleryIntro.hbs",
         "title": "{{words(8,12)}}",
         "titleShort": "{{words(4,8)}}",
         "description": "{{words(60,80)}}",
@@ -13,7 +13,7 @@
 
     "slides": [
         {
-            "_dataUrl": "../_GallerySlide.json",
+            "_dataUrl": "_GallerySlide.json",
             "_repeat": [8,12]
         }
     ]

@@ -3,11 +3,11 @@
     "category": "{{words(1)}}",
     "title": "{{words}}",
     "media": {
-        "_template": "../Image.hbs",
+        "_template": "Image.hbs",
         "src": "{{image(40,40)}}"
     },
     "description": "{{words}}",
     "cta": {
-        "_dataUrl": "../Link.json"
+        "_dataUrl": "Link.json"
     }
 }

@@ -10,6 +10,6 @@
         }
     ],
     "cta": {
-        "_dataUrl": "../Link.json"
+        "_dataUrl": "Link.json"
     }
 }

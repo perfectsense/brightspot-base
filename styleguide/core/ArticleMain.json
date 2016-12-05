@@ -5,7 +5,7 @@
     "dateModified": "2016-02-19T17:44:23+00:00",
 
     "breadcrumbs": {
-        "_template": "../Breadcrumbs.hbs",
+        "_template": "Breadcrumbs.hbs",
         "items": [
             "Inspire Confidence",
             "Stories"
@@ -18,49 +18,49 @@
     "byline": "By Rob Irvine",
 
     "lead": {
-        "_dataUrl": "../Image.json",
+        "_dataUrl": "Image.json",
         "src": "{{image(900,450)}}",
         "width": 900,
         "height": 450
     },
 
     "body": {
-        "_template": "../util/Concatenated.hbs",
+        "_template": "Concatenated.hbs",
         "items": [
             {
-                "_template": "../util/RawHtml.hbs",
+                "_template": "RawHtml.hbs",
                 "html": "{{paragraphs([3,10])}}"
             },
             {
-                "_dataUrl": "../enhancement/EnhancementImageRight.json",
+                "_dataUrl": "EnhancementImageRight.json",
                 "content": {
-                    "_dataUrl": "../Image.json",
+                    "_dataUrl": "Image.json",
                     "src": "{{image(410,100)}}",
                     "width": 410
                 }
             },
             {
-                "_template": "../util/RawHtml.hbs",
+                "_template": "RawHtml.hbs",
                 "html": "<h3>Subheadline</h3>"
             },
             {
-                "_template": "../util/RawHtml.hbs",
+                "_template": "RawHtml.hbs",
                 "html": "{{paragraphs([3,10])}}"
             },
             {
-                "_template": "../enhancement/Enhancement.hbs",
+                "_template": "Enhancement.hbs",
                 "alignment": "right",
                 "content": {
-                    "_template": "../Image.hbs",
+                    "_template": "Image.hbs",
                     "src": "{{image(260,360)}}"
                 }
             },
             {
-                "_template": "../util/RawHtml.hbs",
+                "_template": "RawHtml.hbs",
                 "html": "{{paragraphs([3,10])}}"
             },
             {
-                "_template": "../util/RawHtml.hbs",
+                "_template": "RawHtml.hbs",
                 "html": "{{paragraphs([3,10])}}"
             }
         ]
