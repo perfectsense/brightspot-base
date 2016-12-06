@@ -383,12 +383,13 @@ braces@^1.8.2:
 
 brightspot-styleguide@perfectsense/brightspot-styleguide#master:
   version "2.0.0"
-  resolved "https://codeload.github.com/perfectsense/brightspot-styleguide/tar.gz/0befa583c24161addf782c1678399f2403362a9f"
+  resolved "https://codeload.github.com/perfectsense/brightspot-styleguide/tar.gz/fbfb51715f5e9394bdf4bb9ba749e8f222f81672"
   dependencies:
     chance "^0.8.0"
     daemon "1.1.0"
     escape-html-in-json "1.0.0"
     express "^4.13.1"
+    find-parent-dir "0.3.0"
     font-awesome "^4.4.0"
     fs-extra "^1.0.0"
     geopattern "1.2.3"
@@ -1222,6 +1223,10 @@ finalhandler@0.5.0:
 find-index@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/find-index/-/find-index-0.1.1.tgz#675d358b2ca3892d795a1ab47232f8b6e2e0dde4"
+
+find-parent-dir@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/find-parent-dir/-/find-parent-dir-0.3.0.tgz#33c44b429ab2b2f0646299c5f9f718f376ff8d54"
 
 find-root@^1.0.0:
   version "1.0.0"
