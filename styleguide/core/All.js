@@ -17,6 +17,7 @@ import TextInput from './TextInput.js'
 import TextAreaInput from './TextAreaInput.js'
 import Gallery from './GalleryMain.js'
 import { VideoMain } from './VideoMain.js'
+/* eslint-enable no-unused-vars */
 
 $(document).ready(function () {
   window.videoPlayers = []
@@ -38,5 +39,3 @@ $(document).ready(function () {
 })
 
 export default {}
-
-/* eslint-enable no-unused-vars */
