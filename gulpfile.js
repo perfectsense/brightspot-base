@@ -5,7 +5,7 @@ const Styleguide = require('brightspot-styleguide')
 const Builder = require('systemjs-builder')
 const styleguide = new Styleguide(gulp)
 
-gulp.task('css', [ styleguide.task.lint.less() ], () => {
+gulp.task('css', () => {
   return gulp.src('styleguide/All.less', { base: '.' })
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.less({ modifyVars: { _demo: true } }))
@@ -17,7 +17,7 @@ gulp.task('css', [ styleguide.task.lint.less() ], () => {
     .pipe(styleguide.notify('Finished'))
 })
 
-gulp.task('js', [ styleguide.task.lint.js() ], (done) => {
+gulp.task('js', (done) => {
   let builder = new Builder()
 
   builder.config({
@@ -56,9 +56,5 @@ gulp.task('js', [ styleguide.task.lint.js() ], (done) => {
   })
 })
 
-gulp.task('styleguide', ['default'], () => {
-  styleguide.watch()
-  styleguide.serve()
+gulp.task(styleguide.task.build.project(), [ 'css', 'js' ], () => {
 })
-
-gulp.task('default', [ 'css', 'js', styleguide.task.copy.templates() ])
