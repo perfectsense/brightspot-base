@@ -4,17 +4,17 @@
   "items": [
     {
       "_template": "Link.hbs",
-      "body": "Foo",
+      "body": "Home",
       "href": "{{var('exampleSiteUrl')}}"
     },
     {
       "_template": "Link.hbs",
-      "body": "Bar",
+      "body": "Stories",
       "href": "{{var('exampleSiteUrl')}}"
     },
     {
       "_template": "Link.hbs",
-      "body": "Baz",
+      "body": "Sports",
       "href": "{{var('exampleSiteUrl')}}"
     }
   ]
