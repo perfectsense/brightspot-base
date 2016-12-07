@@ -1,11 +1,12 @@
-const gulp = require('gulp')
-const plugins = require('gulp-load-plugins')()
 const autoprefixer = require('autoprefixer')
 const Styleguide = require('brightspot-styleguide')
+const gulp = require('gulp')
+const plugins = require('gulp-load-plugins')()
 const Builder = require('systemjs-builder')
+
 const styleguide = new Styleguide(gulp)
 
-gulp.task('css', () => {
+gulp.task(styleguide.task.less(), () => {
   return gulp.src('styleguide/All.less', { base: '.' })
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.less({ modifyVars: { _demo: true } }))
@@ -14,10 +15,9 @@ gulp.task('css', () => {
     .pipe(plugins.rename({ extname: '.min.css' }))
     .pipe(plugins.sourcemaps.write('.'))
     .pipe(gulp.dest(styleguide.path.build()))
-    .pipe(styleguide.notify('Finished'))
 })
 
-gulp.task('js', (done) => {
+gulp.task(styleguide.task.js(), (done) => {
   let builder = new Builder()
 
   builder.config({
@@ -42,7 +42,7 @@ gulp.task('js', (done) => {
     minify: false
   }
 
-  return builder.buildStatic('styleguide/All.js', buildOptions).then((output) => {
+  builder.buildStatic('styleguide/All.js', buildOptions).then((output) => {
     gulp.src([ ])
       .pipe(plugins.file('styleguide/All.js', output.source))
       .pipe(gulp.dest(styleguide.path.build()))
@@ -51,10 +51,6 @@ gulp.task('js', (done) => {
       .pipe(plugins.rename({ extname: '.min.js' }))
       .pipe(plugins.sourcemaps.write('.'))
       .pipe(gulp.dest(styleguide.path.build()))
-      .pipe(styleguide.notify('Finished'))
       .on('end', done)
   })
-})
-
-gulp.task(styleguide.task.build.project(), [ 'css', 'js' ], () => {
 })
