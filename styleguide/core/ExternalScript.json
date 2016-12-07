@@ -7,7 +7,7 @@
         "items": [
             {
                 "_template": "ExternalScript.hbs",
-                "type": "text/javascript",
+                "type": "application/javascript",
                 "src": "/main.js",
                 "async": false,
                 "defer": false
