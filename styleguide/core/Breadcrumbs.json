@@ -1,0 +1,21 @@
+{
+  "_template": "Breadcrumbs.hbs",
+
+  "items": [
+    {
+      "_template": "Link.hbs",
+      "body": "Foo",
+      "href": "{{var('exampleSiteUrl')}}"
+    },
+    {
+      "_template": "Link.hbs",
+      "body": "Bar",
+      "href": "{{var('exampleSiteUrl')}}"
+    },
+    {
+      "_template": "Link.hbs",
+      "body": "Baz",
+      "href": "{{var('exampleSiteUrl')}}"
+    }
+  ]
+}
