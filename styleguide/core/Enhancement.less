@@ -7,4 +7,14 @@
     &[data-alignment='right'] {
         &:extend(.Enhancement[data-alignment='right'] all);
     }
+
+    & when (@_demo) {
+        &[data-alignment='left'] {
+            float: left;
+        }
+
+        &[data-alignment='right'] {
+            float: right;
+        }
+    }
 }
