@@ -1,7 +1,8 @@
 {
   "vars": {
     "mpxAccountId": "1X3jUC",
-    "mpxPlayerId": "yh5o5S5hrJ4c"
+    "mpxPlayerId": "yh5o5S5hrJ4c",
+    "exampleSiteUrl": "http://www.perfectsensedigital.com/"
   },
   "javaPackage": "com.psddev.base.view"
 }
