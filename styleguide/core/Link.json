@@ -2,5 +2,5 @@
     "_template": "Link.hbs",
     "href": "https://www.google.com",
     "target": "_blank",
-    "body": "Open Google in a new tab or window"
+    "body": "Link text"
 }

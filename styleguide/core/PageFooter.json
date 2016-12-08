@@ -6,12 +6,20 @@
         "src": "{{image(300, 80)}}"
     },
 
+    "promo": {
+        "_dataUrl": "Promo.json"
+    },
+
+    "socialLinks": {
+        "_dataUrl": "_SocialLinks.json"
+    },
+
     "navigation": {
         "_dataUrl": "PageNavigation.json"
     },
 
     "copyright": {
         "_template": "RawHtml.hbs",
-        "html": "&copy; 2016"
+        "html": "&copy; 2016 Perfect Sense. Site powered by our <a href=\"http://www.brightspot.com/\">Brightspot</a> publishing platform."
     }
 }

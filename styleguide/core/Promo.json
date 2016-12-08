@@ -1,9 +1,10 @@
 {
     "_template": "Promo.hbs",
-    "category": "{{words(1)}}",
+    "category": "Sports",
     "title": "{{words}}",
     "description": "{{words}}",
     "cta": {
-        "_dataUrl": "Link.json"
+        "_dataUrl": "Link.json",
+        "body": "Click here"
     }
 }

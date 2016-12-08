@@ -4,6 +4,14 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
+    {{#defineElement "socialLinks"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "promo"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
     {{#defineElement "navigation"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
@@ -16,7 +24,9 @@
         <footer class="{{blockName}}" itemscope itemtype="https://schema.org/WPFooter"{{extraAttributes}}>
             {{#defineBlockBody}}
                 {{element "logo"}}
+                {{element "promo"}}
                 {{element "navigation"}}
+                {{element "socialLinks"}}
                 {{element "copyright"}}
             {{/defineBlockBody}}
         </footer>
