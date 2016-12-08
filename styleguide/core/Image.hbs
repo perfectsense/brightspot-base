@@ -3,11 +3,11 @@
   {{#defineElement "container" noWith=true}}
     {{#if credit}}
     <div class="{{elementName}}">
-      <img src="{{src}}" alt="{{alt}}"{{#with srcset}} srcset="{{this}}"{{/with}}{{#with width}} width="{{this}}"{{/with}}{{#with height}} height="{{this}}"{{/with}} itemprop="contentUrl" />
+      <img src="{{src}}" alt="{{alt}}"{{#with srcset}} srcset="{{this}}"{{/with}}{{#with width}} width="{{this}}"{{/with}}{{#with height}} height="{{this}}"{{/with}} itemprop="contentUrl" class="Image-tag" />
       {{element "credit"}}
     </div>
     {{else}}
-      <img src="{{src}}" alt="{{alt}}"{{#with srcset}} srcset="{{this}}"{{/with}}{{#with width}} width="{{this}}"{{/with}}{{#with height}} height="{{this}}"{{/with}} itemprop="contentUrl" />
+      <img src="{{src}}" alt="{{alt}}"{{#with srcset}} srcset="{{this}}"{{/with}}{{#with width}} width="{{this}}"{{/with}}{{#with height}} height="{{this}}"{{/with}} itemprop="contentUrl" class="Image-tag" />
     {{/if}}
   {{/defineElement}}
 
