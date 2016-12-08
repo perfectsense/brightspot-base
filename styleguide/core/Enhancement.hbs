@@ -1,1 +1,10 @@
-<div class="Enhancement"{{#with alignment}} data-alignment="{{this}}"{{/with}}{{extraAttributes}}>{{content}}</div>
+{{#defineBlock "Enhancement"}}
+
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}" {{#with alignment}} data-alignment="{{this}}"{{/with}}{{extraAttributes}}>
+            {{#defineBlockBody}}
+                {{content}}
+            {{/defineBlockBody}}
+        </div>
+    {{/defineBlockContainer}}
+{{/defineBlock}}
