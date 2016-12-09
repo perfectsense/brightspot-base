@@ -17,6 +17,7 @@ import TextInput from './TextInput.js'
 import TextAreaInput from './TextAreaInput.js'
 import Gallery from './GalleryMain.js'
 import { VideoMain } from './VideoMain.js'
+import bspCarouselPlugin from 'bsp-carousel-plugin'
 /* eslint-enable no-unused-vars */
 
 $(document).ready(function () {

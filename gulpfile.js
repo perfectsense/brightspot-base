@@ -24,6 +24,7 @@ gulp.task(styleguide.task.js(), (done) => {
     defaultJSExtensions: true,
     map: {
       'bsp-carousel': 'node_modules/bsp-carousel/dist/bsp-carousel/bsp-carousel.js',
+      'bsp-carousel-plugin': 'node_modules/bsp-carousel/src/js/bsp-carousel-plugin.js',
       'bsp-modal': 'node_modules/bsp-modal/src/js/bsp-modal.js',
       'bsp-utils': 'node_modules/bsp-utils/bsp-utils.js',
       'jquery': 'node_modules/jquery/dist/jquery.js',
