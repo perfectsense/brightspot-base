@@ -1,10 +1,11 @@
 {
     "_template": "Input.hbs",
 
-    "id": "{{number}}",
-    "name": "foo",
+    "id": "SearchInput",
+    "label": "Search",
+    "name": "searchQuery",
     "placeholder": "Type here",
     "autofocus": true,
-    "maxlength": 100,
+    "maxlength": 200,
     "required": true
 }
