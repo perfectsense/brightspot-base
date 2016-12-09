@@ -1,33 +1,21 @@
 {{#defineBlock "PageNavigation"}}
 
-{{#defineElement "items"}}
-    {{#*inline 'navItems'}}
-        {{#each items}}
-            <li class="{{elementName}}-item">{{this}}
-              {{#if items}}
-                  <ul class="{{elementName}}-subnav">
-                      {{> navItems}} {{! Recursively render the partial }}
-                  </ul>
-              {{/if}}
-            </li>
+    {{#defineElement "label"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "items"}}
+        <ul class="{{elementName}}">
+        {{#each this}}
+          <li class="{{elementName}}-item" {{#if active}}data-is-active{{/if}}>{{this}}</li>
         {{/each}}
-    {{/inline}}
-    <ul class="{{elementName}}">
-    {{#each this}}
-      <li class="{{elementName}}-item" {{#if active}}data-is-active{{/if}}>{{this}}
-        {{#if items}}
-          <ul class="{{elementName}}-subnav">
-            {{> navItems}}
-          </ul>
-        {{/if}}
-      </li>
-    {{/each}}
-    </ul>
-{{/defineElement}}
+        </ul>
+    {{/defineElement}}
 
     {{#defineBlockContainer}}
         <nav class="{{blockName}}" itemscope itemtype="http://schema.org/SiteNavigationElement"{{extraAttributes}}>
             {{#defineBlockBody}}
+              {{element "label"}}
               {{element "items"}}
             {{/defineBlockBody}}
         </nav>

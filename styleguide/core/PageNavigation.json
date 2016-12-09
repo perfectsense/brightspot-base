@@ -4,15 +4,47 @@
         {
             "_template": "Link.hbs",
             "href": "#",
-            "body": "Browse",
-            "active": false,
-
+            "body": "Home"
+        },
+        {
+            "_template": "PageNavigation.hbs",
+            "active": true,
+            "label": "Topics",
             "items": [
                 {
-                    "_repeat": 3,
                     "_template": "Link.hbs",
                     "href": "#",
-                    "body": "{{words(1)}}"
+                    "body": "Topic 1"
+                },
+                {
+                    "_template": "Link.hbs",
+                    "href": "#",
+                    "body": "Topic 2"
+                },
+                {
+                    "_template": "Link.hbs",
+                    "href": "#",
+                    "body": "Topic 3"
+                }
+            ]
+        },
+        {
+            "_template": "Link.hbs",
+            "href": "#",
+            "body": "About Us"
+        },
+        {
+            "_template": "PageNavigation.hbs",
+            "items": [
+                {
+                    "_template": "Link.hbs",
+                    "href": "#",
+                    "body": "Foo"
+                },
+                {
+                    "_template": "Link.hbs",
+                    "href": "#",
+                    "body": "Bar"
                 }
             ]
         }
