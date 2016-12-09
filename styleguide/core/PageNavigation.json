@@ -2,10 +2,19 @@
     "_template": "PageNavigation.hbs",
     "items": [
         {
-            "_repeat": 6,
             "_template": "Link.hbs",
             "href": "#",
-            "body": "{{words(1)}}"
+            "body": "Browse",
+            "active": false,
+
+            "items": [
+                {
+                    "_repeat": 3,
+                    "_template": "Link.hbs",
+                    "href": "#",
+                    "body": "{{words(1)}}"
+                }
+            ]
         }
     ]
 }

@@ -1,20 +1,20 @@
 {{#defineBlock "PageNavigation"}}
 
 {{#defineElement "items"}}
-{{#*inline 'navItems'}}
-    {{#each items}}
-        <li class="{{elementName}}-item">{{this}}
-          {{#if items}}
-              <ul class="{{elementName}}-subnav">
-                  {{> navItems}} {{! Recursively render the partial }}
-              </ul>
-          {{/if}}
-        </li>
-    {{/each}}
-{{/inline}}
-  <ul class="{{elementName}}">
+    {{#*inline 'navItems'}}
+        {{#each items}}
+            <li class="{{elementName}}-item">{{this}}
+              {{#if items}}
+                  <ul class="{{elementName}}-subnav">
+                      {{> navItems}} {{! Recursively render the partial }}
+                  </ul>
+              {{/if}}
+            </li>
+        {{/each}}
+    {{/inline}}
+    <ul class="{{elementName}}">
     {{#each this}}
-      <li class="{{elementName}}-item">{{this}}
+      <li class="{{elementName}}-item" {{#if active}}data-is-active{{/if}}>{{this}}
         {{#if items}}
           <ul class="{{elementName}}-subnav">
             {{> navItems}}
@@ -22,7 +22,7 @@
         {{/if}}
       </li>
     {{/each}}
-  </ul>
+    </ul>
 {{/defineElement}}
 
     {{#defineBlockContainer}}
