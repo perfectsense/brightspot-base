@@ -75,7 +75,7 @@ class Gallery {
       slidesContainer: `.${cn}-slides`,
       slide: `.${cnSlide}`,
       slideMedia: `.${cnSlide}-media`,
-      slideMediaImg: `.${cnSlide}-mediaContent > img`,
+      slideMediaImg: `.${cnSlide}-mediaContent img`,
       slideMediaZoom: `.${cnSlide}-mediaControlsZoom`,
       controlsCount: `.${cn}-controls-count`,
       controlsButtonsList: `.${cn}-controls-buttons-list`,
