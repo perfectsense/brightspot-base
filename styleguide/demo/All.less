@@ -10,7 +10,7 @@
     }
 }
 
-// Clear absolute position
+// Clear absolute positioning
 ._clearpos() {
     left: auto;
     right: auto;
@@ -88,44 +88,5 @@
         color: dodgerblue;
     }
 
-    @media @mq-sm {
-        .modal-theme-default {
-            .vex-content {
-                width: 80%;
-            }
-        }
-
-        .modal-gallery-fullscreen {
-            .vex-content {
-                width: 100%;
-            }
-        }
-    }
-
-    @media @mq-lg {
-        .modal-theme-default {
-            .vex-content {
-                width: 70%;
-            }
-        }
-
-        .modal-gallery-fullscreen {
-            .vex-content {
-                width: 100%;
-            }
-        }
-    }
-
     ._Gallery();
-
-    .Gallery {
-        .GalleryIntro {
-            ._GalleryIntro--small();
-        }
-    }
-
-    .Gallery-modalControls {
-        .ModalControls--Small();
-        .ModalControls--Vertical();
-    }
 }
