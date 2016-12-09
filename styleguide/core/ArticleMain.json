@@ -43,7 +43,7 @@
                 "html": "{{paragraphs([3,10])}}"
             },
             {
-                "_dataUrl": "EnhancementImageLeft.json"
+                "_dataUrl": "Enhancement.json"
             },
             {
                 "_template": "RawHtml.hbs",
