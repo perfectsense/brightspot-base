@@ -20,4 +20,286 @@
         &:extend(.GallerySlide-infoAttribution all);
     }
 
+    & when (@_demo) {
+
+        &-media {
+            &:extend(.GallerySlide-media all);
+
+            position: relative;
+            cursor: pointer;
+
+            &:hover {
+                button {
+                    &.GallerySlide-mediaControlsZoom {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        button {
+            &.GallerySlide {
+                &-mediaControlsZoom {
+                    // Hide by default, show on :hover
+                    ._Icon();
+                    display: none;
+                    width: 26px;
+                    height: 26px;
+                    background-color: black;
+                    color: white;
+                    outline: none;
+                    border: 1px solid white;
+                    border-radius: 50%;
+                    padding: 0px;
+                    font-size: 0;
+                    &:before {
+                        content: @icon-zoom;
+                        font-size: 23px;
+                    }
+                }
+            }
+        }
+
+        &-mediaControls {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        &-info {
+            &:extend(.GallerySlide-info all);
+        }
+
+        &-infoTitle {
+            &:extend(.GallerySlide-infoTitle all);
+            font-size: 16px;
+            font-weight: 500;
+            color: #dddddd;
+            margin-bottom: 10px;
+        }
+
+        &-infoDescription {
+            &:extend(.GallerySlide-infoDescription all);
+            font-size: 13px;
+            line-height: 1.2;
+            color: #dddddd;
+            margin-bottom: 6px;
+        }
+
+        &-infoAttribution {
+            &:extend(.GallerySlide-infoAttribution all);
+            font-size: 10px;
+            color: #aeaeae;
+        }
+
+        &-infoSocial {
+            &:extend(.GallerySlide-infoSocial all);
+            margin-top: 1rem;
+            display: none;
+            .share-links-wrapper{
+                text-align: left;
+            }
+        }
+
+        @media @mq-sm {
+            .GallerySlide {
+                &-infoTitle {
+                    font-size: 18px;
+
+                    span {
+                       word-wrap: break-word;
+                    }
+                }
+                &-infoDescription {
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+}
+
+/* When the slides are rendered as a single column list */
+._GallerySlide--asList() {
+    display: block;
+
+    .GallerySlide {
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        ._clearfix;
+
+        &-mediaContent {
+            img {
+                display: block;
+                width: auto;
+                margin: 0 auto;
+                min-height: 180px;
+                max-height: 320px;
+            }
+        }
+
+        &-info {
+            margin: 10px 10px 10px 20px;
+        }
+    }
+
+
+    @media @mq-sm {
+
+        display: none;
+
+        .GallerySlide {
+            max-width: 1400px;
+            margin: 40px auto 20px auto;
+            &-infoTitle {
+                font-size: 18px;
+            }
+            &-infoDescription {
+                line-height: 1.4;
+            }
+            &-mediaContent {
+                img {
+                    height: auto;
+                    margin: 0;
+                }
+            }
+            &-media {
+                margin: 15px 15px 0 0;
+            }
+
+            &-mediaContainer {
+                float: left;
+                width: auto;
+                position: relative;
+            }
+
+        }
+    }
+
+    @media @mq-md {
+
+        .GallerySlide {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            &-mediaContent {
+                img {
+                    max-height: 576px;
+                }
+            }
+
+            &-info {
+                margin: 0 20px;
+                max-width: 200px;
+            }
+
+            &-media {
+                margin: 0 20px 0 0;
+            }
+
+        }
+    }
+
+    @media @mq-lg {
+        .GallerySlide {
+            padding-top: 30px;
+            padding-bottom: 30px;
+
+            &-mediaContent {
+                img {
+                    height: auto;
+                }
+            }
+
+        }
+    }
+
+    @media @mq-xl {
+        .GallerySlide {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+}
+
+._GallerySlide--asTile() {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 25px;
+
+    .GallerySlide {
+        width: 45%;
+        margin-bottom: 30px;
+
+        &-mediaContent {
+            img {
+                width: 100%;
+                min-width: 150px;
+                margin: 0 auto;
+            }
+        }
+
+        &-info {
+            margin-top: 10px;
+        }
+    }
+
+    @media @mq-md {
+        margin: 40px auto 20px auto;
+        max-width: 1400px;
+        padding: 30px 25px;
+
+        .GallerySlide {
+            width: 30%;
+        }
+    }
+
+    @media @mq-lg {
+
+        .Gallery {
+
+            &-intro {
+                min-height: 576px;
+                .GalleryIntro {
+                    width: 768px;
+                    padding: 40px 84px;
+                }
+            }
+        }
+    }
+
+    @media @mq-xl {
+
+        padding: 30px 55px;
+
+        .GallerySlide {
+            width: 28%;
+        }
+    }
+}
+
+._GallerySlide--Stacked() {
+    .GallerySlide {
+        &-media {
+            width: 100%;
+        }
+        &-info {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+._GallerySlide--SideBySide( @mediaPosition: right, @mediaWidth: 73% ) {
+
+    .GallerySlide {
+        &-media {
+            float: @mediaPosition;
+            width: @mediaWidth;
+        }
+        &-info {
+            display: block;
+            float: left;
+            width: 20%;
+        }
+    }
 }

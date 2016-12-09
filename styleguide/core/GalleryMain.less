@@ -84,3 +84,867 @@
         // Refer to GallerySlide.less
     }
 }
+
+._Gallery() {
+    // Gallery colors
+    @gallery-color-bg: black;
+    @gallery-color-fg: white;
+    @gallery-color-slide-border: white;
+    @gallery-color-button-bg: white;
+    @gallery-color-button-fg: black;
+    @gallery-color-intro-bg: white;
+    @gallery-color-intro-fg: black;
+    @gallery-color-slide-info-bg: #1b1b1b;
+    @gallery-color-slide-info-fg: white;
+    @gallery-color-modal-controls-bg: #3c3c3c;
+    @gallery-color-modal-controls-fg: white;
+
+    // Mobile first styles
+    // Starting with @mq-xs (320px)
+    .Gallery {
+
+        background-color: @gallery-color-bg;
+        color: @gallery-color-fg;
+        overflow: hidden;
+
+        button {
+            background-color: @gallery-color-button-bg;
+            color: @gallery-color-button-fg;;
+        }
+
+        ._Gallery-intro--XSmall();
+
+        &-controls {
+
+            margin-top: 30px;
+            margin-bottom: 10px;
+            padding: 0 20px;
+
+            &-count {
+                font-size: 16px;
+                color: #dddddd;
+            }
+
+            &-buttons {
+                display: none; // Hide control buttons for small screens
+                img {
+                    width: 16px;
+                    margin-right: 5px;
+                }
+                button {
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    ._Icon();
+                    width: 20px;
+                    height: 20px;
+                    color: #666;
+                    span {
+                        display: none;
+                    }
+                }
+                &-list {
+                    &:before {
+                        content: @icon-list;
+                    }
+                }
+                &-tiles {
+                    &:before {
+                        content: @icon-grid;
+                    }
+                }
+                [data-gallery-button-active] {
+                  text-decoration: none;
+                  pointer-events: none;
+                  color: @gallery-color-modal-controls-fg;
+                }
+            }
+        }
+
+        // Slides are cloned into List and Tiles views, so hide the original slides
+        // unless we're in "singleton" mode. In that case there are not list or tiles views.
+        &-slides {
+            display: none;
+        }
+
+        /* List View */
+        &-slides[data-gallery-view="list"] {
+            ._GallerySlide--asList();
+        }
+
+        /* Tile view */
+        &-slides[data-gallery-view="tiles"] {
+            ._GallerySlide--asTile();
+        }
+
+          /* Singleton view */
+        &[data-gallery-singleton] {
+            background-color: transparent;
+            color: #666;
+            font-size: 12px;
+
+            .Gallery-controls {
+                display: none; //Hide controls on singleton
+            }
+
+            .Gallery-slides {
+
+                display: block;
+
+                // TODO: change this so that its just based on a CSS pseudo-selector
+                .GallerySlide {
+
+                    padding-top: 0;
+                    padding-bottom: 10px;
+                    ._clearfix;
+
+                    &-media {
+                        width: 100%;
+                    }
+                    &-mediaContent {
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                    &-info {
+                        margin: 10px 0px;
+                    }
+                    &-infoTitle, &-infoDescription {
+                        color: #666;
+                    }
+
+                }
+            }
+        }
+
+    }
+
+    // Gallery modal used for zoomed view
+    .modal-theme-gallery {
+        .vex-content {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            margin: 0!important;
+        }
+        // Hide the default close button for the modal since we will provide our own
+        .vex-close {
+            display: none;
+        }
+    }
+
+    // Extra controls that appear in the modal (Close, Prev, Next, Count, Info)
+    .Gallery-modalControls {
+        position: absolute;
+        z-index: 1; // Give a z-index so it sits on top of image
+
+        &Close, &Fullscreen, &Prev, &Next, &Info {
+            background-color: #666;
+            border: none;
+            outline: none;
+            ._Icon();
+            border-radius: 50%;
+            span {
+                display: none;
+            }
+        }
+
+        &Close {
+            padding: 0;
+            &:before {
+                content: @icon-close;
+                position: relative;
+                bottom: 1px;
+            }
+        }
+        &Fullscreen {
+            display: none !important;
+        }
+        &Prev {
+            padding: 0;
+            display:none;
+            &:before {
+                content: @icon-angle-left;
+                position: relative;
+                bottom: 1px;
+                right: 1px;
+            }
+        }
+        &Next {
+            padding: 0;
+            display:none;
+            &:before {
+                content: @icon-angle-right;
+                position: relative;
+                bottom: 1px;
+                left: 1px;
+            }
+        }
+        &Info {
+            padding: 0px;
+            background-color: transparent;
+            color: #666;
+            font-weight: bold;
+            &:before {
+                content: @icon-circle;
+            }
+        }
+        &Count {
+            // Hidden for mobile view but displayed when info button is clicked
+            display: none;
+            color: #666;
+            position: absolute;
+            right: 40px;
+            bottom: 10px;
+            font-size: 12px;
+            // Hack to fix a bug in Chrome browser with fixed position
+            // and force the element to be updated when the content changes
+            // See here: http://stackoverflow.com/a/15203880/101157
+            -webkit-transform: translateZ(0);
+        }
+    }
+
+    // Slides within the modal
+    .Gallery-slides[data-gallery-view="modal"] {
+
+        // The Gallery-slides are hidden initially, so we need to override that and display them.
+        display: block;
+        background-color: @gallery-color-bg;
+
+        // TODO: create a modifier state for this
+        .GallerySlide {
+
+            // Set up a flex columns so the image and info can expand / contract to fill available space
+            display: flex;
+            flex-direction: column;
+
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+
+            &-media {
+                display: flex;
+                width: 100%;
+                height: 100%;
+            }
+
+            &-mediaContainer {
+                display: flex;
+                width: 100%;
+            }
+
+            &-mediaContent {
+
+                // Set up flex display so the image scales to available space
+                display: flex;
+                width: 100%;
+                min-height: 40%;
+
+                img {
+                    // Make the image fill the available space
+                    display: block;
+                    min-width: 100%;
+                    min-height:100%;
+                    // If the image gets stretched, add space so the image stays at same aspect ratio.
+                    object-fit: contain;
+                    //Allows images to use the object-fit styling in IE11 and edge.
+                    font-family: 'object-fit: contain;';
+                }
+            }
+
+            &-mediaControlsZoom {
+                // Since we're already in the modal, hide the zoom control on the image
+                display: none !important;
+            }
+
+            &-info {
+                // Hide the info by default
+                display: none;
+                z-index:1;
+                background-color: @gallery-color-slide-info-bg;
+                color: @gallery-color-slide-info-fg;
+                padding: 20px;
+                font-size: 80%;
+            }
+        }
+    }
+
+    // An attribute is added to indicate when the carousel navigation should be hidden within modal view
+    // (if there is only a single slide to show in the carousel)
+    .Gallery-modal[data-gallery-hidenav] {
+        .Gallery-modalControls {
+            &Prev, &Count, &Next {
+                display: none !important;
+            }
+        }
+    }
+
+    // Hide the "Fullscreen" button if the modal is already in fullscreen,
+    // or if fullscreen mode is not supported
+    .Gallery-modal:fullscreen, .Gallery-modal:not([data-gallery-fullscreen-is-supported]) {
+        .Gallery-modalControls {
+            &Fullscreen {
+                display: none !important;
+            }
+        }
+    }
+
+    // An attribute is added to indicate when the info should be displayed within modal view
+    .Gallery-modal[data-gallery-showinfo] {
+        // TODO: modifier for this
+        .GallerySlide {
+            &-media {
+                // Make the image take up any remaining space not used by the info
+                flex-grow: 1;
+                flex-shrink: 99;
+                height: 0px;
+            }
+
+            &-info {
+                display: block;
+                overflow: auto;
+                // A little extra padding so the text can scroll up past the "Info" button
+                // to ensure the text is not obscured.
+                // padding-bottom: 40px;
+                flex-shrink: 1;
+            }
+
+            &-infoSocial {
+                display: block;
+            }
+        }
+        .Gallery {
+            &-modalControls {
+                &Info {
+                    color: #c3c3c3;
+                }
+
+            }
+        }
+        .Gallery-modal {
+             &ControlsCount {
+                display: inline-block;
+                top: auto;
+                bottom: 7px;
+                position: absolute;
+                right: 40px;
+                left: auto;
+                color: #ddd;
+            }
+        }
+    }
+
+    // For certain sizes show the alternate short text if it is defined
+    @media only screen and (max-width: 567px) {
+        .Gallery, .Gallery-modal {
+            [data-shorttext] {
+                > span {
+                    font-size: 0; display:table;
+                }
+                &:after {
+                    font-size: inherit;
+                    content: attr(data-shortText);
+                }
+            }
+        }
+    }
+
+    // Styles for 568px Breakpoint ==============================================
+    @media @mq-sm {
+
+        .Gallery {
+
+            ._Gallery-intro--Small();
+        }
+
+        .Gallery-slides[data-gallery-view="modal"] {
+            .GallerySlide {
+                &-intro {
+                    // position: absolute;
+                    // bottom: 55px;
+                }
+            }
+        }
+
+       // Modal 568px
+       // Move the slide info to the right instead of the bottom
+        .Gallery-modal[data-gallery-showinfo] {
+         // TODO: modifier for this
+            .GallerySlide {
+               flex-direction: row;
+                &-media {
+                    width: 65%;
+                    height: 100%;
+                }
+                &-info {
+                    display:flex;
+                    flex-direction:column;
+                    justify-content: center;
+                    padding-top: 40px;
+                    width: 35%;
+                }
+            }
+
+        }
+    }
+
+    // Styles for 768px Breakpoint ==============================================
+    @media @mq-md {
+
+        .Gallery {
+
+            ._Gallery-intro--Medium();
+
+            &-controls {
+
+                ._clearfix;
+                max-width: 1400px;
+                margin: 40px auto 20px auto;
+
+                &-count {
+                    float: left;
+                    font-size: 18px;
+                }
+
+                &-buttons {
+                    // Start displaying control buttons at this breakpoint
+                    display: block;
+                    float: right;
+                }
+            }
+
+            &-slides[data-gallery-view-active] {
+              display: block;
+            }
+        }
+
+        // Modal 768px
+        // Goes back to putting the info below the image
+        // Also puts controls at the bottom and adds next/previous buttons
+        // Modal controls appear at the bottom of the screen
+        .Gallery-modalControls {
+            background-color: @gallery-color-modal-controls-bg;
+
+            &Count {
+                width: 100%;
+                text-align: center;
+                display: inline-block;
+                z-index: -1;
+            }
+        }
+
+        .Gallery-modalCarousel {
+            .GallerySlide {
+                &-media {
+                    // Leave space for modal controls
+                    margin-bottom: 60px;
+                }
+            }
+        }
+        .Gallery-modal[data-gallery-showinfo] {
+
+            .GallerySlide {
+                flex-direction: column;
+                &-media {
+                    margin-bottom: 0;
+                    width: 100%;
+                    height: 0px;
+                }
+                &-info {
+                    display:block;
+                    padding-top: 20px;
+                    padding-bottom: 70px;
+                    width: 100vw;
+                }
+            }
+            .Gallery-modal {
+                &ControlsCount {
+                    right: 0px;
+                    bottom: 20px;
+                    color: #666;
+                }
+            }
+        }
+    }
+
+    // Styles for 1024px Breakpoint ===================================
+    @media @mq-lg {
+
+        .Gallery {
+            ._Gallery-intro--Large();
+        }
+
+        // Modal 1024
+        // Goes back to putting the info to the right of the image
+        // Also puts controls at the rigth of the image.
+        .Gallery-modalControls {
+            width: 60px;
+            height: 100vh;
+
+            &Prev, &Next {
+                display: inline-block;
+            }
+
+            &Count {
+                ._clearpos;
+                text-align: center;
+                vertical-align: middle;
+                display: inline-block;
+                z-index: auto;
+                width: 60px;
+                margin-top: 10px;
+            }
+        }
+
+        .Gallery-modalCarousel {
+            // Reduce size of media to leave room for modal controls
+            width: ~"calc(100vw - 60px)";
+            // TODO: modifier mixin for this
+            .GallerySlide {
+                &-media {
+                // Remove space for modal controls at bottom since they are now on right
+                margin-bottom: 0;
+                }
+            }
+        }
+        .Gallery-modal[data-gallery-showinfo] {
+            .Gallery-modalControls {
+                background-color: @gallery-color-modal-controls-bg;
+            }
+            .GallerySlide {
+                flex-direction: row;
+                &-media {
+                    width: 75%;
+                    height: 100%;
+                }
+                &-info {
+                    display:flex;
+                    padding: 0 20px; // leave extra room on right for controls
+                    width: 25%;
+                }
+            }
+            .Gallery-modal {
+                &ControlsCount {
+                    display: inline-block;
+                    top: 50%;
+                    bottom: auto;
+                    position: absolute;
+                    right: auto;
+                    left: auto;
+                    color: #666;
+                }
+            }
+        }
+    }
+
+    // Styles for 1440px Breakpoint =====================================
+    @media @mq-xl {
+
+        .Gallery {
+            &-intro {
+                margin: 0 auto;
+            }
+
+            .GalleryIntro {
+                &-title {
+                    font-size: 36px;
+                    line-height: normal;
+                }
+                &-description {
+                    font-size: 18px;
+                    line-height: inherit;
+                }
+            }
+
+        }
+    }
+}
+
+._Gallery-intro--XSmall() {
+    &-intro {
+        // Gallery-background images to be positioned absolutely
+        position: relative;
+
+        // Set a minimum height but allow it to expand if the GalleryIntro content goes long
+        min-height: 566px;
+
+        // Center the GalleryIntro block
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .GalleryIntro {
+            min-width: unset;
+        }
+
+        &-background {
+
+            &[data-gallery-intro-background="single"] {
+                img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    object-fit: cover;
+                }
+            }
+
+            &[data-gallery-intro-background="montage"] {
+
+                img {
+                    ._clearpos();
+                    position: absolute;
+                    object-fit: cover;
+                    &:nth-child(1) {
+                        top: 0;
+                        left: 0;
+                        width: 66%;
+                        height: 39%;
+                    }
+                    &:nth-child(2) {
+                        top: 0;
+                        right: 0;
+                        width: 31%;
+                        height: 19%;
+                    }
+                    &:nth-child(3) {
+                        top: 21%;
+                        right:0;
+                        width: 31%;
+                        height: 19%;
+                    }
+                    &:nth-child(4) {
+                        width: 31%;
+                        height: 19%;
+                        left: 0;
+                        top: 41%;
+                    }
+                    &:nth-child(5) {
+                        width: 31%;
+                        height: 19%;
+                        left: 0;
+                        top: 62%;
+                    }
+                    &:nth-child(6) {
+                        width: 31%;
+                        height: 19%;
+                        left: 0;
+                        bottom: 0;
+                        top: 83%;
+                    }
+                    &:nth-child(7) {
+                        width: 65%;
+                        height: 60%;
+                        right: 0;
+                        bottom: 0;
+                        top: 42%
+                    }
+                    // Hide anything past seven images
+                    &:nth-child(n+8) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+._Gallery-intro--Small() {
+    &-intro {
+
+        min-height: 326px;
+
+        .GalleryIntro {
+            min-width: 380px;
+            padding: 30px 40px;
+        }
+
+        &-background[data-gallery-intro-background="montage"] {
+
+            img {
+                ._clearpos();
+                // Different image grid:
+                //
+                // 1 2 44444
+                // 333 44444
+                // 333 5 6 7
+
+                &:nth-child(1) {
+                    ._clearpos;
+                    top: 0;
+                    left: 0;
+                    width: 19%;
+                    height: 31%;
+                }
+                &:nth-child(2) {
+                    ._clearpos;
+                    top: 0;
+                    left: 20.5%;
+                    width: 19%;
+                    height: 31%;
+                }
+                &:nth-child(3) {
+                    ._clearpos;
+                    bottom: 0;
+                    left: 0;
+                    width: 39%;
+                    height: 65%;
+                }
+                &:nth-child(4) {
+                    ._clearpos;
+                    right: 0;
+                    top: 0;
+                    width: 59%;
+                    height: 65%;
+                }
+                &:nth-child(5) {
+                    ._clearpos;
+                    left: 40.5%;
+                    bottom: 0;
+                    width: 19%;
+                    height: 31%;
+                }
+                &:nth-child(6) {
+                    ._clearpos;
+                    left: 61%;
+                    bottom: 0;
+                    width: 19%;
+                    height: 31%;
+                }
+                &:nth-child(7) {
+                    ._clearpos;
+                    right: 0;
+                    bottom: 0;
+                    width: 19%;
+                    height: 31%;
+                }
+            }
+        }
+    }
+}
+
+._Gallery-intro--Medium() {
+    &-intro {
+        min-height: 432px;
+
+        .GalleryIntro {
+            width: 568px;
+            padding: 40px;
+        }
+
+        &-background[data-gallery-intro-background="montage"] {
+
+            img {
+                ._clearpos();
+
+                &:nth-child(1) {
+                    top: 0;
+                    left: 0;
+                    width: 19%;
+                    height: 29%;
+                }
+                &:nth-child(2) {
+                    top: 0;
+                    left: 20%;
+                    width: 19%;
+                    height: 29%;
+                }
+                &:nth-child(3) {
+                    bottom: 0;
+                    left: 0;
+                    width: 39%;
+                    height: 66%;
+                }
+                &:nth-child(4) {
+                    right: 0;
+                    top: 0;
+                    width: 59%;
+                    height: 60%;
+                }
+                &:nth-child(5) {
+                    left: 40%;
+                    bottom: 0;
+                    width: 19%;
+                    height: 32%;
+                }
+                &:nth-child(6) {
+                    left: 60%;
+                    bottom: 0;
+                    width: 20%;
+                    height: 32%;
+                }
+                &:nth-child(7) {
+                    right: 0;
+                    bottom: 0;
+                    width: 19%;
+                    height: 32%;
+                }
+            }
+        }
+
+    }
+}
+
+._Gallery-intro--Large() {
+    &-intro {
+        min-height: 576px;
+        .GalleryIntro {
+            width: 768px;
+            padding: 40px 84px;
+        }
+
+        &-background[data-gallery-intro-background="montage"] {
+
+            img {
+                ._clearpos();
+                &:nth-child(1) {
+                    top: 0;
+                    left: 0;
+                    width: 19%;
+                    height: 32%;
+                }
+                &:nth-child(2) {
+                    top: 0;
+                    left: 20%;
+                    width: 19%;
+                    height: 32%;
+                }
+                &:nth-child(3) {
+                    bottom: 0;
+                    left: 0;
+                    width: 39%;
+                    height: 66%;
+                }
+                &:nth-child(4) {
+                    right: 0;
+                    top: 0;
+                    width: 60%;
+                    height: 66%;
+                }
+                &:nth-child(5) {
+                    left: 40%;
+                    bottom: 0;
+                    width: 19%;
+                    height: 32%;
+                }
+                &:nth-child(6) {
+                    left: 60%;
+                    bottom: 0;
+                    width: 20%;
+                    height: 32%;
+                }
+                &:nth-child(7) {
+                    right: 0;
+                    bottom: 0;
+                    width: 19%;
+                    height: 32%;
+                }
+            }
+        }
+    }
+}

@@ -9,3 +9,122 @@
     }
 
 }
+
+._GalleryIntro--small() {
+    z-index: 1;
+    padding: 30px 20px;
+    margin: 0 auto;
+    background-color: white;
+    color: black;
+    margin: 75px 40px;
+    font-weight: 500;
+    width: auto;
+    min-width: 1px;
+    text-align: center;
+
+    &-subtitle {
+        color: dodgerblue;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+
+    &-title {
+        color: #1e1e1e;
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        line-height: 24px;
+    }
+
+    &-description {
+        color: #4a4a4a;
+        font-size: 13px;
+    }
+
+    &-cta {
+        font-size: 22px;
+        margin: 25px 0 5px 0;
+        color: dodgerblue;
+        font-weight: 500;
+        button {
+            background: transparent;
+            border: none;
+            color: dodgerblue;
+            cursor: pointer;
+            margin: 0 auto;
+
+            &:hover {
+                color: #333;
+            }
+
+            &:active {
+                outline: none;
+                border: none;
+            }
+        }
+    }
+
+    &-ctaAddition {
+        font-size: 14px;
+        color: #4a4a4a;
+        font-weight: 500;
+    }
+
+    &-social {
+        display: none;
+
+        .share-links {
+
+            li {
+                background-color: black;
+                border-radius: 50%;
+                margin-right: 5px;
+
+                a {
+                    font-size: initial;
+                        padding-top: 10px;
+                        height: 40px;
+                        width: 33px;
+                    &:hover {
+                        color: #D3D3D3;
+                    }
+                }
+                &:first-child {
+                    padding: 0 .5rem;
+                }
+            }
+        }
+    }
+
+    .share-links-wrapper {
+        margin-bottom: 0;
+    }
+}
+
+._GalleryIntro--medium() {
+
+    &-title {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    &-description {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+    &-social {
+        display: block;
+    }
+
+    &-cta {
+        font-size: 18px;
+    }
+}
+
+._GalleryIntro--large() {
+    margin: 75px 130px;
+    width: auto;
+}

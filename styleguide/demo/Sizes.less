@@ -1,0 +1,75 @@
+// 320
+@media @mq-xs {
+    body:before {
+        content: "mq-xs" !important;
+        display: none !important;
+    }
+
+    .GalleryIntro {
+        ._GalleryIntro--small();
+    }
+
+    .Gallery-modalControls {
+        .ModalControls--Small();
+        .ModalControls--Vertical();
+    }
+}
+
+// 768
+@media @mq-sm {
+    body:before {
+        content: "mq-sm" !important;
+    }
+
+    .GalleryIntro {
+        ._GalleryIntro--medium();
+    }
+
+    .Gallery-slides[data-gallery-view="list"] {
+        ._GallerySlide--SideBySide();
+    }
+
+    .Gallery-modalControls {
+        .ModalControls--Large();
+        .ModalControls--Horizontal();
+    }
+}
+
+// 992
+@media @mq-md {
+    body:before {
+        content: "mq-md" !important;
+    }
+
+    .GalleryIntro {
+        ._GalleryIntro--large();
+    }
+}
+
+// 1024
+@media only screen and (min-width: 1024px) {
+    .Gallery-modalControls {
+        .ModalControls--Vertical();
+    }
+}
+
+// 1200
+@media @mq-lg {
+    body:before {
+        content: "mq-lg" !important;
+    }
+}
+
+// 1330
+@media @mq-xl {
+    body:before {
+        content: "mq-xl" !important;
+    }
+}
+
+// 1440
+@media only screen and (min-width: 1440px) {
+    body:before {
+        content: "mq-xxl" !important;
+    }
+}

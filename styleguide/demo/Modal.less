@@ -1,0 +1,155 @@
+.modal-data {
+    display: none;
+}
+
+body.vex-open {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.vex.modal-theme-default {
+    .vex-content {
+        border-radius: 5px;
+        position: relative;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 100%;
+
+        .component {
+            padding: 0;
+        }
+     }
+}
+
+.vex.modal-gallery-fullscreen {
+    .vex-content {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .vex-close {
+        top: 1rem;
+        right: 1rem;
+
+        &:before {
+            font-size: 40px;
+        }
+    }
+}
+
+.ModalControls--Horizontal() {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    height: 60px;
+    &Close {
+        ._clearpos;
+        position: absolute;
+        right: 25px;
+        bottom: 10px;
+    }
+    &Fullscreen {
+        ._clearpos;
+        position: absolute;
+        left: 80px;
+        bottom: 10px;
+        display: none;
+    }
+
+    &Info {
+        left: 15px;
+        bottom: 10px;
+    }
+
+    &Prev {
+        display: inline-block;
+        position: absolute;
+        right: 53%;
+        bottom: 10px;
+        top: auto;
+    }
+    &Next {
+        display: inline-block;
+        position: absolute;
+        left: 53%;
+        bottom: 10px;
+        top: auto;
+    }
+    &Count {
+        position: absolute;
+        left: 0;
+        bottom: 20px;
+        top: auto;
+    }
+}
+
+.ModalControls--Vertical() {
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    &Close {
+        position: absolute;
+        right:10px;
+        top:10px;
+    }
+    &Fullscreen {
+        position: absolute;
+        right: 15px;
+        top: 60px;
+    }
+    &Info {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        left: auto;
+    }
+    &Prev {
+        position: absolute;
+        right: 10px;
+        top: 45%;
+        left: auto;
+    }
+    &Next {
+        position: absolute;
+        right: 10px;
+        top: 54%;
+        left: auto;
+    }
+    &Count {
+        ._clearpos;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        left: auto;
+    }
+}
+
+.ModalControls--Large() {
+    &Close, &Fullscreen, &Prev, &Next, &Info {
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+    }
+    &Info {
+        font-size: 40px;
+    }
+}
+
+.ModalControls--Small() {
+    &Close, &Fullscreen, &Prev, &Next, &Info {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+    &Info {
+        font-size: 20px;
+    }
+}
