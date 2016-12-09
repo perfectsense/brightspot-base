@@ -8,7 +8,6 @@
         "_dataUrl": "PageNavigation.json"
     },
     "search": {
-        "_template": "RawHtml.hbs",
-        "html": "<input type='text' name='search'/>"
+        "_dataUrl": "Input.json"
     }
 }
