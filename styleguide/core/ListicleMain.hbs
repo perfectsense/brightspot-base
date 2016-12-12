@@ -1,0 +1,40 @@
+{{#defineBlock "Listicle" extend="ArticleMain.hbs"}}
+
+    {{#defineElement "items"}}
+        {{#if ../ordered}}
+            <ol class="{{elementName}}" itemscope itemtype="http://schema.org/ItemList"{{#if ../reversed}} reversed{{/if}}>
+                {{#each this}}
+                    {{this}}
+                {{/each}}
+            </ol>
+        {{else}}
+            <ul class="{{elementName}}" itemprop="articleBody" itemtype="http://schema.org/ItemList">
+                {{#each this}}
+                    {{this}}
+                {{/each}}
+            </ul>
+        {{/if}}
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <article class="{{blockName}}" itemprop="mainEntity" itemscope itemtype="http://schema.org/Article"{{extraAttributes}}>
+            {{element "meta"}}
+
+            {{#defineBlockBody}}
+                {{element "breadcrumbs"}}
+                {{element "preHeadline"}}
+                {{element "headline"}}
+                {{element "subHeadline"}}
+                {{element "byline"}}
+                {{element "authors"}}
+                {{element "datePublished"}}
+                {{element "dateModified"}}
+                {{element "lead"}}
+                {{element "items"}}
+                {{element "tags"}}
+                {{element "sharebar"}}
+                {{element "comments"}}
+            {{/defineBlockBody}}
+        </article>
+    {{/defineBlockContainer}}
+{{/defineBlock}}
