@@ -35,6 +35,7 @@
         },
         {
             "_template": "PageNavigation.hbs",
+            "label": "Articles",
             "items": [
                 {
                     "_template": "Link.hbs",
