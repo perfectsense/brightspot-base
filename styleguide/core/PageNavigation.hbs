@@ -7,13 +7,13 @@
     {{#defineElement "items"}}
         <ul class="{{elementName}}">
         {{#each this}}
-          <li class="{{elementName}}-item" {{#if active}}data-is-active{{/if}}>{{this}}</li>
+          <li class="{{elementName}}-item">{{this}}</li>
         {{/each}}
         </ul>
     {{/defineElement}}
 
     {{#defineBlockContainer}}
-        <nav class="{{blockName}}" itemscope itemtype="http://schema.org/SiteNavigationElement"{{extraAttributes}}>
+        <nav class="{{blockName}}" {{#if active}}data-is-active{{/if}} itemscope itemtype="http://schema.org/SiteNavigationElement"{{extraAttributes}}>
             {{#defineBlockBody}}
               {{element "label"}}
               {{element "items"}}
