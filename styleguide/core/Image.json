@@ -1,8 +1,8 @@
 {
     "_template": "Image.hbs",
-    "src": "{{image(100, 100)}}",
+    "src": "{{image(140, 140)}}",
     "alt": "{{words}}",
     "srcset": "",
-    "width": 100,
-    "height": 100
+    "width": 140,
+    "height": 140
 }
