@@ -1,0 +1,24 @@
+{{#defineBlock "ListicleItem"}}
+
+    {{#defineElement "headline"}}
+        <div class="{{elementName}}" itemprop="name">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "description"}}
+        <div class="{{elementName}}" itemprop="description">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "image"}}
+        <div class="{{elementName}}" itemprop="image">{{this}}</div>
+    {{/defineElement}}
+    
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            {{#defineBlockBody}}
+                {{element "headline"}}
+                {{element "description"}}
+                {{element "image"}}               
+            {{/defineBlockBody}}
+        </div>
+    {{/defineBlockContainer}}
+{{/defineBlock}}
