@@ -1,0 +1,15 @@
+@import 'ArticleMain';
+
+.ListicleMain {
+    &:extend(.ArticleMain all);
+
+    &-items {
+        &:extend(.ListicleMain-items all);
+    }
+
+    & when (@_demo) {
+        &-items {
+            ._Block;
+        }
+    }
+}
