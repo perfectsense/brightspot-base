@@ -56,5 +56,27 @@
                 "html": "{{paragraphs([3,10])}}"
             }
         ]
+    },
+
+    "tags": {
+        "_template": "Concatenated.hbs",
+        "delimiter": ",",
+        "items": [
+            {
+                "_template": "Link.hbs",
+                "href": "#",
+                "body": "Tag 1"
+            },
+            {
+                "_template": "Link.hbs",
+                "href": "#",
+                "body": "Tag 2"
+            },
+            {
+                "_template": "Link.hbs",
+                "href": "#",
+                "body": "Tag 3"
+            }
+        ]
     }
 }
