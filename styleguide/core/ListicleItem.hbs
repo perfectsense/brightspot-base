@@ -13,12 +13,12 @@
     {{/defineElement}}
     
     {{#defineBlockContainer}}
-        <li class="{{blockName}}" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <div class="{{blockName}}" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
             {{#defineBlockBody}}
                 {{element "headline"}}
                 {{element "description"}}
                 {{element "image"}}               
             {{/defineBlockBody}}
-        </li>
+        </div>
     {{/defineBlockContainer}}
 {{/defineBlock}}

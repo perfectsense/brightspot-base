@@ -2,22 +2,26 @@
 
     {{#defineElement "items"}}
         {{#if ../ordered}}
-            <ol class="{{elementName}}" itemscope itemtype="http://schema.org/ItemList"{{#if ../reversed}} reversed{{/if}}>
+            <ol class="{{elementName}}" {{#if ../reversed}} reversed{{/if}}>
                 {{#each this}}
+                    <li class="{{elementName}}-item">
                     {{this}}
+                    </li>
                 {{/each}}
             </ol>
         {{else}}
-            <ul class="{{elementName}}" itemscope itemtype="http://schema.org/ItemList">
+            <ul class="{{elementName}}">
                 {{#each this}}
-                    {{this}}
+                    <li class="{{elementName}}-item">
+                        {{this}}
+                    <li>
                 {{/each}}
             </ul>
         {{/if}}
     {{/defineElement}}
 
     {{#defineBlockContainer}}
-        <article class="{{blockName}}" itemprop="mainEntity" itemscope itemtype="http://schema.org/Article"{{extraAttributes}}>
+        <article class="{{blockName}}" itemprop="mainEntity" itemscope itemtype="http://schema.org/Article http://schema.org/ItemList"{{extraAttributes}}>
             {{element "meta"}}
 
             {{#defineBlockBody}}
