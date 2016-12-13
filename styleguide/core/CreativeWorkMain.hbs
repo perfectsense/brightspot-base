@@ -1,11 +1,11 @@
 {{#defineBlock "CreativeWorkMain" extend="Main.hbs"}}
     {{#defineElement "meta" noWith=true}}
         {{#with datePublishedISO}}
-            <meta itemprop="datePublishedISO" content="{{this}}">
+            <meta itemprop="datePublished" content="{{this}}">
         {{/with}}
 
         {{#with dateModifiedISO}}
-            <meta itemprop="dateModifiedISO" content="{{this}}">
+            <meta itemprop="dateModified" content="{{this}}">
         {{/with}}
     {{/defineElement}}
 
