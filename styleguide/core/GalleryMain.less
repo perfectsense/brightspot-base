@@ -126,16 +126,18 @@
             }
 
             &-buttons {
-                display: none; // Hide control buttons for small screens
+                position: relative;
+                display: none;
+
                 img {
                     width: 16px;
                     margin-right: 5px;
                 }
+
                 button {
                     background-color: transparent;
                     border: none;
                     outline: none;
-                    ._Icon();
                     width: 20px;
                     height: 20px;
                     color: #666;
@@ -143,16 +145,15 @@
                         display: none;
                     }
                 }
+
                 &-list {
-                    &:before {
-                        content: @icon-list;
-                    }
+                    ._IconList();
                 }
+
                 &-tiles {
-                    &:before {
-                        content: @icon-grid;
-                    }
+                    ._IconTiles();
                 }
+
                 [data-gallery-button-active] {
                   text-decoration: none;
                   pointer-events: none;
@@ -246,7 +247,6 @@
             background-color: #666;
             border: none;
             outline: none;
-            ._Icon();
             border-radius: 50%;
             span {
                 display: none;
@@ -254,45 +254,27 @@
         }
 
         &Close {
-            padding: 0;
-            &:before {
-                content: @icon-close;
-                position: relative;
-                bottom: 1px;
-            }
+            ._IconClose();
         }
+
         &Fullscreen {
             display: none !important;
         }
+
         &Prev {
-            padding: 0;
             display:none;
-            &:before {
-                content: @icon-angle-left;
-                position: relative;
-                bottom: 1px;
-                right: 1px;
-            }
+            ._IconPrev();
         }
+
         &Next {
-            padding: 0;
             display:none;
-            &:before {
-                content: @icon-angle-right;
-                position: relative;
-                bottom: 1px;
-                left: 1px;
-            }
+            ._IconNext();
         }
+
         &Info {
-            padding: 0px;
-            background-color: transparent;
-            color: #666;
-            font-weight: bold;
-            &:before {
-                content: @icon-circle;
-            }
+            ._IconInfo();
         }
+
         &Count {
             // Hidden for mobile view but displayed when info button is clicked
             display: none;

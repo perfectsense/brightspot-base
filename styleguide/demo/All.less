@@ -31,8 +31,131 @@
     font-size: .8em;
 }
 
-._Icon() {
+._IconInfo() {
+    border-radius: 50%;
+    border: 2px solid #666;
+    width: 34px;
+    height: 34px;
+    margin: 2px;
 
+    &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        width: 4px;
+        height: 3px;
+        transform: translateX(-50%);
+        pointer-events: none;
+        box-shadow: inset 0 0 0 32px,0 3px,0 5px,0 10px;
+        top: 8px;
+    }
+}
+
+._IconList() {
+    &:before {
+        content: ' ';
+        width: 18px;
+        height: 4px;
+        left: 1px;
+        box-shadow: inset 0 0 0 32px,0 -8px 0 0,0 8px 0 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+._IconTiles() {
+    &:before {
+        content: ' ';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 4px;
+        box-shadow: 0 -8px 0,-8px -8px 0,8px -8px 0,0 0 0 32px inset,-8px 0 0,8px 0 0,0 8px 0,-8px 8px 0,8px 8px 0;
+    }
+}
+
+._IconClose() {
+    transform: rotate(45deg);
+    &:before {
+        content: '';
+        pointer-events: none;
+        width: 20px;
+        height: 2px;
+        box-shadow: inset 0 0 0 32px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    &:after {
+        content: '';
+        pointer-events: none;
+        height: 20px;
+        width: 2px;
+        box-shadow: inset 0 0 0 32px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+._IconPrev() {
+    transform: rotate(180deg);
+    ._IconNext();
+}
+
+._IconNext() {
+    &:before {
+        content: '';
+        pointer-events: none;
+        top: 2px;
+        transform: rotate(45deg);
+        width: 14px;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        margin: auto 0;
+        right: 14px;
+        box-shadow: inset 0 0 0 32px;
+        transform-origin: right;
+    }
+    &:after {
+        content: '';
+        pointer-events: none;
+        top: 0;
+        transform: rotate(-45deg);
+        width: 14px;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        margin: auto 0;
+        right: 14px;
+        box-shadow: inset 0 0 0 32px;
+        transform-origin: right;
+    }
+}
+
+._IconZoom() {
+    border-radius: 80% 20%;
+    transform: rotate(45deg);
+    height: 28px;
+    width: 28px;
+    margin: 3px;
+    &:before {
+        content: '';
+        pointer-events: none;
+        border-radius: 50%;
+        box-shadow: 0 -3px 0 3px inset;
+        height: 11px;
+        width: 11px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
 }
 
 @_demo: false;
