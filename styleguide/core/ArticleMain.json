@@ -60,7 +60,6 @@
 
     "tags": {
         "_template": "Concatenated.hbs",
-        "delimiter": ",",
         "items": [
             {
                 "_template": "Link.hbs",
