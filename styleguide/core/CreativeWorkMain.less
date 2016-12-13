@@ -34,12 +34,14 @@
     & when (@_demo) {
         &-preHeadline {
             ._TextSmall;
+            color: #787878;
         }
 
         &-preHeadline,
         &-headline,
         &-byline {
             ._Block;
+            text-transform: capitalize;
         }
 
         &-preHeadline + &-headline {
@@ -48,6 +50,39 @@
 
         &-headline {
             ._TextLarge;
+        }
+
+        &-subHeadline {
+            ._TextSmall;
+        }
+
+        &-byline {
+            ._TextSmall;
+        }
+
+        &-datePublished {
+            ._Block;
+        }
+
+        &-datePublished,
+        &-dateModified {
+            font-size: 10px;
+            color: #ccc;
+        }
+
+        &-authors {
+            ._Block;
+            .Author {
+                &-image {
+                    .Image-image {
+                        width: 30px;
+                        height: auto;
+                        border-radius: 50%;
+                        border: solid 3px white;
+                        box-shadow: 0px 0px 4px black;
+                    }
+                }
+            }
         }
     }
 }

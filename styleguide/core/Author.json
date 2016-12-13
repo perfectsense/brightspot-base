@@ -4,5 +4,5 @@
         "_dataUrl": "Image.json"
     },
     "name": "{{name}}",
-    "affiliation": "{{words([ 1, 3 ])}}"
+    "affiliation": "ACME, inc."
 }
