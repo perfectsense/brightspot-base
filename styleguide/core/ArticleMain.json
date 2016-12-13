@@ -13,11 +13,13 @@
     "preHeadline": "Exploration",
     "headline": "After Many Years and 17 Cities, a Pilot Realizes His Dream Journey",
     "subHeadline": "Flying Around the World Without a Drop of Fossil Fuel",
-    "byline": "By:",
+    "byline": "",
 
-    "authors": {
-        "_dataUrl": "Author.json"
-    },
+    "authors": [
+        {
+            "_dataUrl": "Author.json"
+        }
+    ],
 
     "lead": {
         "_dataUrl": "Image.json",

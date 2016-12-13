@@ -34,6 +34,8 @@
     {{/defineElement}}
 
     {{#defineElement "authors"}}
-        <div class="{{elementName}}">{{this}}</div>
+        {{#each this}}
+            <div class="{{elementName}}">{{this}}</div>
+        {{/each}}
     {{/defineElement}}
 {{/defineBlock}}
