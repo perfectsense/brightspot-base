@@ -3,12 +3,12 @@
 
     "mediaContent": {
         "_template": "Image.hbs",
-        "src": "{{image([200, 800], [200, 640])}}"
+        "src": "{{image(800, 600)}}"
     },
 
     "infoTitle": "{{words(8,12)}}",
     "infoTitleShort": "{{words(3,6)}}",
     "infoDescription": "{{words(60,120)}}",
     "infoDescriptionShort": "{{words(20,40)}}",
-    "infoAttribution": "Photo by {{name()}}"
+    "infoAttribution": "Photo by: {{name()}}"
 }

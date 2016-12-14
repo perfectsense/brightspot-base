@@ -14,7 +14,7 @@
     },
     {
       "_template": "Link.hbs",
-      "body": "Sports",
+      "body": "Exploration",
       "href": "{{var('exampleSiteUrl')}}"
     }
   ]
