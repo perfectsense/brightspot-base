@@ -13,15 +13,23 @@
     }
 
     & when (@_demo) {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         margin: -1rem -1rem 1rem;
         padding: 1rem;
-        background-color: #e1e1e1;
-
-        &-logo {
-
-        }
     }
+}
+
+._PageHeader--small() {
+    background-color: #e1e1e1;
+    display: block;
+
+    &-navigation,
+    &-search {
+        ._Block;
+    }
+}
+
+._PageHeader--large() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
