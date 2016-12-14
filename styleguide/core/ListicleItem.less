@@ -1,5 +1,5 @@
 .ListicleItem {
-    
+
     &-headline {
         &:extend(.ListicleItem-headline all);
     }
@@ -10,5 +10,13 @@
 
     &-image {
         &:extend(.ListicleItem-image all);
+    }
+
+    & when (@_demo) {
+        ._Block;
+
+        &-headline {
+            ._TextLarge;
+        }
     }
 }
