@@ -1,7 +1,7 @@
 {
     "_template": "Promo.hbs",
-    "category": "Exploration",
-    "title": "{{words}}",
+    "category": "Promo",
+    "title": "Promotional Item Title",
     "description": "{{words}}",
     "cta": {
         "_dataUrl": "Link.json",
