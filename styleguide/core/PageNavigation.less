@@ -5,9 +5,28 @@
 
     &-items {
         &:extend(.PageNavigation-items all);
+    }
 
-        &-item {
-            &:extend(.PageNavigation-items-item all);
+    &-items-item {
+        &:extend(.PageNavigation-items-item all);
+    }
+
+    & when (@_demo) {
+        &-label {
+            display: none;
+        }
+
+        &-items {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        &-items-item {
+            display: inline-block;
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
         }
     }
 }
