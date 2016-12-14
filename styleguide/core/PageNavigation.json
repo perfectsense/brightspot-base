@@ -9,45 +9,29 @@
         {
             "_template": "PageNavigation.hbs",
             "active": true,
-            "label": "Topics",
+            "label": "Stories",
             "items": [
                 {
                     "_template": "Link.hbs",
                     "href": "#",
-                    "body": "Topic 1"
+                    "body": "Exploration"
                 },
                 {
                     "_template": "Link.hbs",
                     "href": "#",
-                    "body": "Topic 2"
+                    "body": "Inspirational"
                 },
                 {
                     "_template": "Link.hbs",
                     "href": "#",
-                    "body": "Topic 3"
+                    "body": "Educational"
                 }
             ]
         },
         {
             "_template": "Link.hbs",
             "href": "#",
-            "body": "About Us"
-        },
-        {
-            "_template": "PageNavigation.hbs",
-            "label": "Articles",
-            "items": [
-                {
-                    "_template": "Link.hbs",
-                    "href": "#",
-                    "body": "Foo"
-                },
-                {
-                    "_template": "Link.hbs",
-                    "href": "#",
-                    "body": "Bar"
-                }
-            ]
+            "body": "About"
         }
     ]
 }

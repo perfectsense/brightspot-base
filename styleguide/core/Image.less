@@ -2,4 +2,12 @@
     &-image {
         &:extend(.Image-image all);
     }
+
+    & when (@_demo) {
+        position: relative;
+
+        &-image {
+            display: block;
+        }
+    }
 }

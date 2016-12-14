@@ -1,12 +1,15 @@
 {
     "_template": "PageHeader.hbs",
+
     "logo": {
         "_template": "Image.hbs",
-        "src": "{{image(300, 80)}}"
+        "src": "{{image(200, 60)}}"
     },
+
     "navigation": {
         "_dataUrl": "PageNavigation.json"
     },
+
     "search": {
         "_dataUrl": "Input.json"
     }

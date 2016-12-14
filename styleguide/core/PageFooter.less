@@ -18,4 +18,10 @@
     &-socialLinks {
         &:extend(.PageFooter-socialLinks all);
     }
+
+    & when (@_demo) {
+        background-color: #e1e1e1;
+        margin: 1rem -1rem -1rem;
+        padding: 1rem;
+    }
 }

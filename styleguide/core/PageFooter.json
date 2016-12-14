@@ -3,7 +3,7 @@
 
     "logo": {
         "_template": "Image.hbs",
-        "src": "{{image(300, 80)}}"
+        "src": "{{image(200, 60)}}"
     },
 
     "promo": {

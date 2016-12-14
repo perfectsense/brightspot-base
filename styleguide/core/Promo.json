@@ -1,6 +1,6 @@
 {
     "_template": "Promo.hbs",
-    "category": "Sports",
+    "category": "Exploration",
     "title": "{{words}}",
     "description": "{{words}}",
     "cta": {
