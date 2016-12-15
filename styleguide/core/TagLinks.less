@@ -1,7 +1,9 @@
 .TagLinks {
     a {
-        &:extend(.TagLinks-item all);
+        &:extend(.TagLinks all);
 
-        margin-right: 20px;
+        & when (@_demo) {
+            margin-right: 20px;
+        }
     }
 }
