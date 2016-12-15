@@ -1,8 +1,6 @@
-import $ from 'jquery'
-import bspUtils from 'bsp-utils'
 import TextInput from './TextInput.js'
 
-class TextAreaInput extends TextInput {
+export default class TextAreaInput extends TextInput {
   constructor ($el, options) {
     super($el, {
       selectors: {
@@ -26,9 +24,3 @@ class TextAreaInput extends TextInput {
     }
   }
 }
-
-export default bspUtils.plugin(false, 'bsp', 'form-textAreaInput', {
-  '_each': function (item) {
-    return new TextAreaInput($(item), this.option(item))
-  }
-})

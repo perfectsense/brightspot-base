@@ -8,6 +8,18 @@ import bspCarouselPlugin from 'bsp-carousel-plugin'
 /* eslint-enable no-unused-vars */
 
 $(document).ready(function () {
+  /* eslint-disable no-new */
+
+  // TextInput
+  $('.TextInput').each((index, value) => {
+    new TextInput($(value))
+  })
+
+  // TextAreaInput
+  $('.TextAreaInput').each((index, value) => {
+    new TextAreaInput($(value))
+  })
+
   window.videoPlayers = []
   window.videoPlayerControllers = []
 
