@@ -2,7 +2,7 @@
 
     {{#defineElement "items"}}
         {{#each this}}
-            {{this}}
+            <a class="{{elementName}}" href="{{href}}"{{#with target}} target="{{this}}"{{/with}}>{{body}}</a>
         {{/each}}
     {{/defineElement}}
 
