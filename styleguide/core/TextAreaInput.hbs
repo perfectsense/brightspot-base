@@ -6,6 +6,7 @@
             class="{{elementName}}"
             {{#with placeholder}}placeholder="{{this}}"{{/with}}
             {{#with autofocus}}autofocus="{{this}}"{{/with}}
+            {{#unless autofocus}}{{#if value}}onclick="this.focus();this.select()"{{/if}}{{/unless}}
             {{#with minlength}}minlength="{{this}}"{{/with}}
             {{#with maxlength}}maxlength="{{this}}"{{/with}}
             aria-invalid={{#if invalid}}"true"{{else}}"false"{{/if}}
@@ -17,14 +18,12 @@
     {{/defineElement}}
 
     {{#defineBlockContainer}}
-        <div class="{{blockName}}" data-bsp-form-textAreaInput>
-
+        <div class="{{blockName}}">
             {{#defineBlockBody}}
                 {{element "input"}}
                 {{element "label"}}
                 {{#if maxlength}}{{element "characterCountdown"}}{{/if}}
             {{/defineBlockBody}}
-
         </div>
     {{/defineBlockContainer}}
 

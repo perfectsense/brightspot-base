@@ -7,6 +7,5 @@
     "autofocus": true,
     "maxlength": 50,
     "required": true,
-
     "characterCountdown": "characters remain"
 }

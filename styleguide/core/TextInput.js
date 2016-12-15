@@ -1,5 +1,4 @@
 import $ from 'jquery'
-import bspUtils from 'bsp-utils'
 
 export default class TextInput {
 
@@ -61,9 +60,3 @@ export default class TextInput {
     this.updateCountdown()
   }
 };
-
-bspUtils.plugin(false, 'bsp', 'form-textInput', {
-  '_each': function (item) {
-    return new TextInput($(item), this.option(item))
-  }
-})
