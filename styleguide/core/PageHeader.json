@@ -11,6 +11,19 @@
     },
 
     "search": {
-        "_dataUrl": "Input.json"
+        "_template": "Form.hbs",
+
+        "actionUrl": "{{var('exampleSiteUrl')}}",
+        "items": [
+            {
+                "_template": "Input.hbs",
+                "placeholder": "Search"
+            }
+
+        ],
+        "actionButton": {
+            "_template": "Button.hbs",
+            "text": "Go"
+        }
     }
 }

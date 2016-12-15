@@ -1,20 +1,20 @@
 {{#defineBlock "Form"}}
 
-{{#defineElement "actionButton"}}
-    <div class="{{elementName}}">{{this}}</div>
-{{/defineElement}}
-
-{{#defineElement "groups"}}
-    {{#each this}}
+    {{#defineElement "actionButton"}}
         <div class="{{elementName}}">{{this}}</div>
-    {{/each}}
-{{/defineElement}}
+    {{/defineElement}}
+
+    {{#defineElement "items"}}
+        {{#each this}}
+            <div class="{{elementName}}-item">{{this}}</div>
+        {{/each}}
+    {{/defineElement}}
 
     {{#defineBlockContainer}}
 
         <form class="{{blockName}}" {{#with actionUrl}} action="{{this}}" {{/with}}>
             {{#defineBlockBody}}
-                {{element "groups"}}
+                {{element "items"}}
                 {{element "actionButton"}}
             {{/defineBlockBody}}
         </div>

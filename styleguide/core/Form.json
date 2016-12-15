@@ -1,22 +1,16 @@
 {
     "_template": "Form.hbs",
+
     "actionUrl": "{{var('exampleSiteUrl')}}",
-    "groups": [
+    "items": [
         {
             "_template": "Input.hbs",
-            "label": "Newsletter",
             "placeholder": "Email"
-        },
-        {
-            "_template": "Input.hbs",
-            "label": "First Name",
-            "placeholder": "Name"
-        },
-        {
-            "_template": "Input.hbs",
-            "label": "Last Name",
-            "placeholder": "Name"
         }
 
-    ]
+    ],
+    "actionButton": {
+        "_template": "Button.hbs",
+        "text": "Sign Up"
+    }
 }
