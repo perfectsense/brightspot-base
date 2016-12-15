@@ -1,0 +1,24 @@
+{
+    "_template": "Select.hbs",
+
+    "options": [
+        {
+            "_template": "Option.hbs",
+            "id": "optionFoo",
+            "value": "Foo"
+        },
+        {
+            "_template": "Option.hbs",
+            "id": "optionBar",
+            "selected": true,
+            "value": "Bar"
+        },
+        {
+            "_template": "Option.hbs",
+            "id": "optionBaz",
+            "disabled": true,
+            "value": "Baz",
+            "label": "Human readable form of Baz"
+        }
+    ]
+}

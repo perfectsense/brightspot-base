@@ -1,0 +1,7 @@
+{
+    "_template": "Option.hbs",
+    "id": "optionId",
+    "value": "abc123",
+    "selected": true,
+    "disabled": false
+}

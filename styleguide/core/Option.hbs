@@ -1,0 +1,15 @@
+{{#defineBlock "Option"}}
+
+    {{#defineBlockContainer}}
+        {{#defineBlockBody}}
+            <option
+                class="{{blockName}}"
+                {{#with id}}id="{{this}}"{{/with}}
+                {{#with value}}value="{{this}}"{{/with}}
+                {{#with disabled}}disabled{{/with}}
+                {{#with selected}}selected{{/with}}
+                {{#with label}}label="{{this}}"{{/with}}>{{value}}</option>
+        {{/defineBlockBody}}
+    {{/defineBlockContainer}}
+
+{{/defineBlock}}
