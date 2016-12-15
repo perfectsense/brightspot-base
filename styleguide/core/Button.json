@@ -1,0 +1,11 @@
+{
+    "_template": "Button.hbs",
+
+    "disabled": false,
+    "form": "form123",
+    "formAction": "http://form-processor-url.example",
+    "name": "buttonName",
+    "type": "button",
+    "value": "computationalValue",
+    "text": "Click Here"
+}
