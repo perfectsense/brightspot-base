@@ -1,0 +1,18 @@
+{{#defineBlock "TagLinks"}}
+
+    {{#defineElement "items"}}
+        {{#each this}}
+            {{this}}
+        {{/each}}
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+
+        <div class="{{blockName}}">
+            {{#defineBlockBody}}
+                {{element "items"}}
+            {{/defineBlockBody}}
+        </div>
+
+    {{/defineBlockContainer}}
+{{/defineBlock}}

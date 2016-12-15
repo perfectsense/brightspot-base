@@ -61,23 +61,6 @@
     },
 
     "tags": {
-        "_template": "Concatenated.hbs",
-        "items": [
-            {
-                "_template": "Link.hbs",
-                "href": "#",
-                "body": "Tag 1"
-            },
-            {
-                "_template": "Link.hbs",
-                "href": "#",
-                "body": "Tag 2"
-            },
-            {
-                "_template": "Link.hbs",
-                "href": "#",
-                "body": "Tag 3"
-            }
-        ]
+        "_dataUrl": "TagLinks.json"
     }
 }
