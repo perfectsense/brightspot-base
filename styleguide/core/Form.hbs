@@ -1,0 +1,23 @@
+{{#defineBlock "Form"}}
+
+{{#defineElement "actionButton"}}
+    <div class="{{elementName}}">{{this}}</div>
+{{/defineElement}}
+
+{{#defineElement "groups"}}
+    {{#each this}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/each}}
+{{/defineElement}}
+
+    {{#defineBlockContainer}}
+
+        <form class="{{blockName}}" {{#with actionUrl}} action="{{this}}" {{/with}}>
+            {{#defineBlockBody}}
+                {{element "groups"}}
+                {{element "actionButton"}}
+            {{/defineBlockBody}}
+        </div>
+
+    {{/defineBlockContainer}}
+{{/defineBlock}}
