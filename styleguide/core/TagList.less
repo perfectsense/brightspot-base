@@ -1,0 +1,19 @@
+.TagList {
+    &-label {
+        &:extend(.TagList-label all);
+    }
+
+    &-items {
+        &:extend(.TagList-items all);
+    }
+
+    &-items-item {
+        &:extend(.TagList-items-item all);
+    }
+
+    & when (@_demo) {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}

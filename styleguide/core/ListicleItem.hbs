@@ -11,13 +11,13 @@
     {{#defineElement "image"}}
         <div class="{{elementName}}" itemprop="image">{{this}}</div>
     {{/defineElement}}
-    
+
     {{#defineBlockContainer}}
         <div class="{{blockName}}" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
             {{#defineBlockBody}}
                 {{element "headline"}}
                 {{element "description"}}
-                {{element "image"}}               
+                {{element "image"}}
             {{/defineBlockBody}}
         </div>
     {{/defineBlockContainer}}
