@@ -10,6 +10,14 @@
     & when (@_demo) {
         &-items {
             ._Block;
+            padding: 0;
+            list-style: none;
+        }
+
+        &-items-item {
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
         }
     }
 }
