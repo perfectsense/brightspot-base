@@ -12,8 +12,25 @@
     }
 
     & when (@_demo) {
-        &:not(:last-child) {
-            margin-right: 20px;
+        &-label,
+        &-items,
+        &-items-item {
+            display: inline-block;
+        }
+
+        &-label {
+            ._TextSmall;
+        }
+
+        &-items {
+            padding: 0;
+            margin-left: 1rem;
+        }
+
+        &-items-item {
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
         }
     }
 }
