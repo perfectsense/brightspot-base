@@ -1,0 +1,17 @@
+{
+  "_wrapper": false,
+  "_template": "CommentLoadMoreResponse.hbs",
+
+  "comments": {
+    "_template": "../core/Concatenated.hbs",
+    "items": [
+      {
+        "_repeat": [1,5],
+        "_dataUrl": "Comment.json"
+      }
+    ]
+  },
+
+  "loadMoreButton": "Show More",
+  "loadMoreAction": "_ResponseWithMoreComments?page=2"
+}

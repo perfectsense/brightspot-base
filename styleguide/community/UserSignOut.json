@@ -1,0 +1,7 @@
+{
+  "_template": "UserSignOut.hbs",
+
+  "button": "Logout",
+  "action": ".",
+  "target": "_blank"
+}

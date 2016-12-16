@@ -1,0 +1,55 @@
+{
+  "_template": "Commenting.hbs",
+
+  "id": "324kldsjlj34",
+  "textWhenHidden": "View Comments",
+  "textWhenVisible": "Hide Comments",
+  "title": "30 Comments",
+
+  "loadMoreButton": "Show More",
+  "loadMoreAction": "_ResponseWithMoreComments.json",
+
+  "commentEntry": {
+      "_dataUrl": "CommentEntry.json"
+  },
+
+  "body": {
+    "_template": "../core/Concatenated.hbs",
+    "items": [
+      {
+        "_repeat": [
+          1,
+          3
+        ],
+        "_dataUrl": "Comment.json"
+      },
+      {
+        "_repeat": [
+          1,
+          3
+        ],
+        "_dataUrl": "Comment.json",
+        "id": "{{number([2,20])}}",
+        "extraAttributes": {
+           "data-is-staff": true
+        }
+      },
+      {
+        "_repeat": [
+          1,
+          3
+        ],
+        "_dataUrl": "Comment.json",
+        "id": "{{number([30,40])}}"
+      }
+    ]
+  },
+
+  "validation": {
+    "_template": "../core/ValidationMessages.hbs",
+    "serverError": {
+      "_template": "../core/RawHtml.hbs",
+      "html": "Sorry! Something went wrong on our end. Please try again later."
+    }
+  }
+}

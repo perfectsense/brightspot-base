@@ -1,0 +1,25 @@
+{{#defineBlock "UserSignOut"}}
+
+    {{#defineElement "button" noWith=true}}
+        <button class="{{elementName}}">{{button}}</button>
+    {{/defineElement}}
+
+    {{#defineElement "form" noWith=true}}
+        <form
+            class="{{elementName}}"
+            action="{{action}}"
+            {{#if target}}target="{{target}}"{{/if}}>
+            {{element "button"}}
+        </form>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}"{{extraAttributes}}>
+
+            {{#defineBlockBody}}
+                {{element "form"}}
+            {{/defineBlockBody}}
+
+        </div>
+    {{/defineBlockContainer}}
+{{/defineBlock}}

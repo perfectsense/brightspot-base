@@ -1,0 +1,43 @@
+.Commenting {
+
+    &-title {
+        &:extend(.Commenting-title all);
+    }
+
+    &-hideToggle {
+        &:extend(.Commenting-hideToggle all);
+        &-hideButton { }
+        &-showButton { }
+    }
+
+    &-loadMore {
+        &:extend(.Commenting-loadMore all);
+        &-button { }
+    }
+
+    &-commentEntry {
+        &:extend(.Commenting-commentEntry all);
+    }
+
+    &-body {
+        &:extend(.Commenting-body all);
+
+        &[data-comments-shown="true"] {
+            height: auto;
+            overflow: visible;
+        }
+
+        &[data-comments-shown="false"] {
+            height: 0;
+            overflow: hidden;
+        }
+    }
+
+    &-actions {
+        &:extend(.Commenting-actions all);
+    }
+
+    &-validation {
+        &:extend(.Commenting-validation all);
+    }
+}
