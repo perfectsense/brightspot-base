@@ -5,16 +5,12 @@
     {{/defineElement}}
 
     {{#defineBlockContainer}}
-        <div class="{{blockName}}"
-            data-bsp-form-textInput
-            data-bsp-form-textInput-options='{ {{#unless characterCountdown}}"countdown":false{{/unless}} }'>
-
+        <div class="{{blockName}}">
             {{#defineBlockBody}}
                 {{element "input"}}
                 {{element "label"}}
                 {{#if maxlength}}{{element "characterCountdown"}}{{/if}}
             {{/defineBlockBody}}
-
         </div>
     {{/defineBlockContainer}}
 
