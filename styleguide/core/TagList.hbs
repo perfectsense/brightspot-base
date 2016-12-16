@@ -1,0 +1,25 @@
+{{#defineBlock "TagList"}}
+
+    {{#defineElement "label"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "items"}}
+        <ul class="{{elementName}}">
+            {{#each this}}
+                <li class="{{elementName}}-item">{{this}}</li>
+            {{/each}}
+        </ul>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+
+        <div class="{{blockName}}">
+            {{#defineBlockBody}}
+                {{element "label"}}
+                {{element "items"}}
+            {{/defineBlockBody}}
+        </div>
+
+    {{/defineBlockContainer}}
+{{/defineBlock}}

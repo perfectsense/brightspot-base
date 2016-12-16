@@ -61,6 +61,6 @@
     },
 
     "tags": {
-        "_dataUrl": "TagLinks.json"
+        "_dataUrl": "TagList.json"
     }
 }
