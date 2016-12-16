@@ -19,13 +19,6 @@
         "_dataUrl": "Author.json"
     }],
 
-    "lead": {
-        "_dataUrl": "Image.json",
-        "src": "{{image(900,450)}}",
-        "width": 900,
-        "height": 450
-    },
-
     "items": [
         {
             "_dataUrl": "ListicleItem.json",
