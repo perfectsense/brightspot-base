@@ -1,0 +1,16 @@
+{
+  "_wrapper": false,
+  "_template": "CommentActionResponse.hbs",
+
+  "entry": {
+    "_dataUrl": "CommentEntry.json",
+    "commentingId": "324kldsjlj34",
+
+    "validationError": {
+        "_template": "../core/ValidationError.hbs",
+
+        "message": "Server error message. Please try again.",
+        "type": "serverError"
+    }
+  }
+}
