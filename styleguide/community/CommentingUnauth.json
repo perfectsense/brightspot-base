@@ -7,7 +7,7 @@
   "title": "30 Comments",
 
   "loadMoreButton": "Show More",
-  "loadMoreAction": "_ResponseWithMoreComments.json",
+  "loadMoreAction": "ResponseWithMoreComments.html",
 
   "commentEntry": {
       "_dataUrl": "UserSignIn.json"
@@ -22,7 +22,7 @@
           3
         ],
         "_dataUrl": "Comment.json",
-        "replyAction": "_ResponseWithSignIn.json"
+        "replyAction": "ResponseWithSignIn.html"
       }
     ]
   }

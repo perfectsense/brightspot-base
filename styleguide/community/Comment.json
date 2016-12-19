@@ -27,5 +27,5 @@
   },
 
   "replyButton": "reply",
-  "replyAction": "_ResponseWithCommentEntry.json"
+  "replyAction": "ResponseWithCommentEntry.json"
 }

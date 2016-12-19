@@ -11,7 +11,7 @@
 
   "commentEntry": {
       "_dataUrl": "CommentEntry.json",
-      "submitAction": "_ResponseWithInvalidCommentEntry.json"
+      "submitAction": "ResponseWithInvalidCommentEntry.html"
   },
 
   "body": {

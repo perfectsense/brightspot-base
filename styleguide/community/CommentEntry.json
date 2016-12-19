@@ -45,5 +45,5 @@
   },
 
   "submitButton": "Post",
-  "submitAction": "_ResponseWithComment.json"
+  "submitAction": "ResponseWithComment.html"
 }

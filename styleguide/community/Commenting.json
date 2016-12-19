@@ -7,7 +7,7 @@
   "title": "30 Comments",
 
   "loadMoreButton": "Show More",
-  "loadMoreAction": "_ResponseWithMoreComments.json",
+  "loadMoreAction": "ResponseWithMoreComments.html",
 
   "commentEntry": {
       "_dataUrl": "CommentEntry.json"
