@@ -21,15 +21,16 @@
 
     &-body {
         &:extend(.Commenting-body all);
+        & when (@_demo) {
+            &[data-comments-shown="true"] {
+                height: auto;
+                overflow: visible;
+            }
 
-        &[data-comments-shown="true"] {
-            height: auto;
-            overflow: visible;
-        }
-
-        &[data-comments-shown="false"] {
-            height: 0;
-            overflow: hidden;
+            &[data-comments-shown="false"] {
+                height: 0;
+                overflow: hidden;
+            }
         }
     }
 
@@ -39,5 +40,51 @@
 
     &-validation {
         &:extend(.Commenting-validation all);
+    }
+
+    & when (@_demo) {
+        &-actions {
+            text-align: center;
+        }
+        &-title {
+            border-bottom: 2px solid #b2b2b2;
+            margin-bottom: 10px;
+        }
+
+        &-hideToggle {
+            [disabled] {
+                display: none;
+            }
+
+            &-hideButton,
+            &-showButton {
+                background-color: transparent;
+                border: none;
+                font-size: 14px;
+                position: relative;
+            }
+
+            &-hideButton {
+                ._IconUp();
+            }
+
+            &-showButton {
+                ._IconDown();
+            }
+        }
+
+        &-loadMore {
+
+            &-button {
+                width: 100%;
+                background-color: transparent;
+                border:1px solid #b2b2b2;
+                color: #b2b2b2;
+
+            }
+            &[data-visible="false"]{
+                display: none;
+            }
+        }
     }
 }

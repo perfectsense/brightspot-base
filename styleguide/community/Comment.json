@@ -2,7 +2,8 @@
   "_template": "Comment.hbs",
 
   "author": {
-    "_dataUrl": "../core/Author.json"
+    "_dataUrl": "../core/Author.json",
+    "affiliation": null
   },
 
   "time": {
@@ -27,5 +28,5 @@
   },
 
   "replyButton": "reply",
-  "replyAction": "ResponseWithCommentEntry.json"
+  "replyAction": "ResponseWithCommentEntry.html"
 }

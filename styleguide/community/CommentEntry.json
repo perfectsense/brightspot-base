@@ -6,10 +6,11 @@
     "image": {
       "_template": "../core/Image.hbs",
       "src": "{{image(50, 50)}}"
-    }
+    },
+    "name": "{{name}}"
   },
 
-  "title": "{{name}}",
+  "title": "{{words(2)}}",
 
   "logout": {
     "_template": "UserSignOut.hbs",
