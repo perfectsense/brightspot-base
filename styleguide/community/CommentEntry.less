@@ -35,6 +35,23 @@
     }
 
     & when (@_demo) {
+        .Author {
+            font-size: 12px;
+            display: flex;
+        }
+
+        .Author-name {
+            &:extend(.Comment .Author-name);
+        }
+
+        .Author-image {
+            &:extend(.Comment .Author-image);
+        }
+
+        .Image-image {
+            &:extend(.Comment .Image-image);
+        }
+
         .TextAreaInput{
             &-input {
                 padding: 5px;
@@ -50,6 +67,20 @@
                 color: #b2b2b2;
             }
         }
+
+        .UserSignOut {
+            display: inline-block;
+            vertical-align: bottom;
+            &-button {
+                font-size: 14px;
+                background: 0 0;
+                border: none;
+                padding: 0;
+                line-height: normal;
+                display: block;
+            }
+        }
+
         &-input  {
             padding-top: 10px;
             clear: both;
@@ -59,9 +90,6 @@
             float: left;
         }
 
-        &-logout {
-            float: right;
-        }
 
         &-actions {
             margin-top: 10px;
