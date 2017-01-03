@@ -1,9 +1,0 @@
-{
-    "_template": "core/Page.hbs",
-
-    "head": {
-        "_delegate": true
-    },
-
-    "body": ""
-}
