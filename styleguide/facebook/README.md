@@ -109,7 +109,7 @@ Embedded Posts are a simple way to put public posts - by a Page or a person on F
 Example implementation:
 
 ```
-    new FacebookPostView.Builder()
+    new FacebookPostEmbedView.Builder()
             .href("https://www.facebook.com/20531316728/posts/10154009990506729/")
             .width(500)
             .build();
