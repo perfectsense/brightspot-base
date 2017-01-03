@@ -1,0 +1,24 @@
+{{#defineBlock "OpenGraphAudioMetadata"}}
+
+    {{! Required Elements }}
+
+    {{#defineElement "url"}}
+        <meta property="og:audio" content="{{this}}" />
+    {{/defineElement}}
+
+    {{! Optional Elements }}
+
+    {{#defineElement "secureUrl"}}
+        <meta property="og:audio:secure_url" content="{{this}}" />
+    {{/defineElement}}
+
+    {{#defineElement "type"}}
+        <meta property="og:audio:type" content="{{this}}" />
+    {{/defineElement}}
+
+    {{#defineBlockBody}}
+        {{element "url"}}
+        {{element "secureUrl"}}
+        {{element "type"}}
+    {{/defineBlockBody}}
+{{/defineBlock}}

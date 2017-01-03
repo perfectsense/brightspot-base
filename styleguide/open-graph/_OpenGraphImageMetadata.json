@@ -1,0 +1,8 @@
+{
+    "_template": "OpenGraphImageMetadata.hbs",
+    "url": "http://cdn.psddev.com/6d/5d/efd1da434d6abd8b1b08b8b29c4c/brightspot-logo-183.png",
+    "secureUrl": "https://cdn.psddev.com/6d/5d/efd1da434d6abd8b1b08b8b29c4c/brightspot-logo-183.png",
+    "type": "image/png",
+    "width": "{{number([300, 400])}}",
+    "height": "{{number([300, 400])}}"
+}
