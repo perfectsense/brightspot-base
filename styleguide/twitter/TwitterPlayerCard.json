@@ -1,0 +1,41 @@
+{
+    "_wrapper": false,
+    "_template": "../core/Page.hbs",
+
+    "head": {
+        "_template": "../core/Head.hbs",
+        "title": "Styleguide",
+        "description": "Brightspot Base Styleguide",
+        "keywords": "Brightspot Base, Styleguide, Inspire Confidence",
+        "items": [
+            {
+                "_template": "../core/Meta.hbs",
+                "httpEquiv": "X-UA-Compatible",
+                "content": "IE=edge"
+            },
+            {
+                "_template": "../core/Meta.hbs",
+                "name": "viewport",
+                "content": "width=device-width, initial-scale=1"
+            },
+            {
+                "_template": "TwitterPlayerCard.hbs",
+                "title": "{{words(10)}}",
+                "site": "brightspotcms",
+                "siteId": "358165108",
+                "description": "{{words(20)}}",
+
+                "imageSource": "http://cdn.psddev.com/6d/5d/efd1da434d6abd8b1b08b8b29c4c/brightspot-logo-183.png",
+                "imageAlt": "alt",
+
+                "player": "http://brightspot.com/iframe/url",
+                "playerWidth": 500,
+                "playerHeight": 500,
+                "playerStream": "http://brightspot.com/stream/url",
+                "playerStreamContentType": "video/mp4"
+            }
+        ]
+    },
+
+    "body": ""
+}

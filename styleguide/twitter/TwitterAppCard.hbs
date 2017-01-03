@@ -1,0 +1,22 @@
+{{#defineBlock "TwitterAppCard" extend="TwitterCard.hbs"}}
+
+    {{#defineElement "card" noWith="true"}}
+        <meta name="twitter:card" content="app"/>
+    {{/defineElement}}
+
+    {{#defineBlockBody}}
+        {{element "appCountry"}}
+        {{element "card"}}
+        {{element "ipadAppId"}}
+        {{element "ipadAppName"}}
+        {{element "ipadAppUrl"}}
+        {{element "iphoneAppId"}}
+        {{element "iphoneAppName"}}
+        {{element "iphoneAppUrl"}}
+        {{element "googlePlayAppId"}}
+        {{element "googlePlayAppName"}}
+        {{element "googlePlayAppUrl"}}
+        {{element "site"}}
+        {{element "siteId"}}
+    {{/defineBlockBody}}
+{{/defineBlock}}
