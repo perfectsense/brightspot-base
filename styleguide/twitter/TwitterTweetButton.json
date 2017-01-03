@@ -1,5 +1,5 @@
 {
-    "_wrapper": "twitter/_wrapper-with-script.json",
+    "_wrapper": "_wrapper-with-script.json",
     "_template": "TwitterTweetButton.hbs",
     "size": "large",
     "url": "http://brightspot.com",
