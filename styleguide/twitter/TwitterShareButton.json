@@ -1,0 +1,12 @@
+{
+    "_wrapper": "_wrapper-with-script.json",
+    "_template": "TwitterShareButton.hbs",
+    "size": "large",
+    "url": "http://brightspot.com",
+    "via": "brightspotcms",
+    "related": "cms, web",
+    "lang": "en",
+    "hashtags": "cms, web",
+    "text": "{{words(5)}}",
+    "body": "Tweet"
+}

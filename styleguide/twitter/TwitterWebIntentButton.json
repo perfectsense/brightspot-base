@@ -1,7 +1,0 @@
-{
-    "_template": "TwitterWebIntentButton.hbs",
-    "body": "Tweet",
-    "target": "_blank",
-    "queryString": "?url=http%3A%2F%2Fbrightspot.com&hashtags=cms&text=foo&hashtags=foo,bar&screen_name=brightspotcms&via=brightspotcms&related=brightspotcms",
-    "intent": "tweet"
-}
