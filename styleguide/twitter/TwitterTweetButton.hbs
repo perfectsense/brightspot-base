@@ -1,0 +1,37 @@
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet"
+
+    {{~#with size~}}
+        data-size="{{this}}"
+    {{/with}}
+
+    {{~#with url~}}
+        data-url="{{this}}"
+    {{/with}}
+
+    {{~#with via~}}
+        data-via="{{this}}"
+    {{/with}}
+
+    {{~#with related~}}
+        data-related="{{this}}"
+    {{/with}}
+
+    {{~#with lang~}}
+        data-lang="{{this}}"
+    {{/with}}
+
+    {{~#with hashtags~}}
+        data-hashtags="{{this}}"
+    {{/with}}
+
+    {{~#with text~}}
+        data-text="{{this}}"
+    {{/with}}
+
+    {{~#with target~}}
+        target="{{this}}"
+    {{/with}}
+>
+    {{body}}
+</a>
