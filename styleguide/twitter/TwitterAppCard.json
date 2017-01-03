@@ -1,22 +1,46 @@
 {
-    "_wrapper": "_wrapper-head-only.json",
-    "_template": "TwitterAppCard.hbs",
-    "creator": "brightspotcms",
-    "creatorId": "358165108",
-    "description": "{{words(20)}}",
-    "site": "brightspotcms",
-    "siteId": "358165108",
-    "appCountry": "US",
+    "_wrapper": false,
+    "_template": "../core/Page.hbs",
 
-    "iphoneAppName": "brightspot",
-    "iphoneAppId": "929750075",
-    "iphoneAppUrl": "brightspot://psddev/5149e249222f9e600a7540ef",
+    "head": {
+        "_template": "../core/Head.hbs",
+        "title": "Styleguide",
+        "description": "Brightspot Base Styleguide",
+        "keywords": "Brightspot Base, Styleguide, Inspire Confidence",
+        "items": [
+            {
+                "_template": "../core/Meta.hbs",
+                "httpEquiv": "X-UA-Compatible",
+                "content": "IE=edge"
+            },
+            {
+                "_template": "../core/Meta.hbs",
+                "name": "viewport",
+                "content": "width=device-width, initial-scale=1"
+            },
+            {
+                "_template": "TwitterAppCard.hbs",
+                "creator": "brightspotcms",
+                "creatorId": "358165108",
+                "description": "{{words(20)}}",
+                "site": "brightspotcms",
+                "siteId": "358165108",
+                "appCountry": "US",
 
-    "ipadAppName": "brightspot",
-    "ipadAppId": "929750075",
-    "ipadAppUrl": "brightspot://psddev/5149e249222f9e600a7540ef",
+                "iphoneAppName": "brightspot",
+                "iphoneAppId": "929750075",
+                "iphoneAppUrl": "brightspot://psddev/5149e249222f9e600a7540ef",
 
-    "googlePlayAppName": "brightspot",
-    "googlePlayAppId": "com.psddev.samples.brightspot",
-    "googlePlayAppUrl": "http://brightspot.psddev.com/5149e249222f9e600a7540ef"
+                "ipadAppName": "brightspot",
+                "ipadAppId": "929750075",
+                "ipadAppUrl": "brightspot://psddev/5149e249222f9e600a7540ef",
+
+                "googlePlayAppName": "brightspot",
+                "googlePlayAppId": "com.psddev.samples.brightspot",
+                "googlePlayAppUrl": "http://brightspot.psddev.com/5149e249222f9e600a7540ef"
+            }
+        ]
+    },
+
+    "body": ""
 }

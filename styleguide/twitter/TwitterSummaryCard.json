@@ -1,12 +1,37 @@
 {
-    "_wrapper": "_wrapper-head-only.json",
-    "_template": "TwitterSummaryCard.hbs",
-    "site": "brightspotcms",
-    "siteId": "358165108",
-    "creator": "brightspotcms",
-    "creatorId": "358165108",
-    "description": "{{words(20)}}",
-    "title": "{{words(10)}}",
-    "imageSource": "http://cdn.psddev.com/6d/5d/efd1da434d6abd8b1b08b8b29c4c/brightspot-logo-183.png",
-    "imageAlt": "brightspot logo"
+    "_wrapper": false,
+    "_template": "../core/Page.hbs",
+
+    "head": {
+        "_template": "../core/Head.hbs",
+        "title": "Styleguide",
+        "description": "Brightspot Base Styleguide",
+        "keywords": "Brightspot Base, Styleguide, Inspire Confidence",
+        "items": [
+            {
+                "_template": "../core/Meta.hbs",
+                "httpEquiv": "X-UA-Compatible",
+                "content": "IE=edge"
+            },
+            {
+                "_template": "../core/Meta.hbs",
+                "name": "viewport",
+                "content": "width=device-width, initial-scale=1"
+            },
+            {
+                "_template": "TwitterSummaryCard.hbs",
+                "site": "brightspotcms",
+                "siteId": "358165108",
+                "creator": "brightspotcms",
+                "creatorId": "358165108",
+                "description": "{{words(20)}}",
+                "title": "{{words(10)}}",
+                "imageSource": "http://cdn.psddev.com/6d/5d/efd1da434d6abd8b1b08b8b29c4c/brightspot-logo-183.png",
+                "imageAlt": "brightspot logo"
+            }
+        ]
+    },
+
+    "body": ""
 }
+
