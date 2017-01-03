@@ -1,6 +1,6 @@
 {{#defineBlock "Form"}}
 
-    {{#defineElement "actionButton"}}
+    {{#defineElement "button"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
@@ -12,10 +12,13 @@
 
     {{#defineBlockContainer}}
 
-        <form class="{{blockName}}" {{#with actionUrl}} action="{{this}}" {{/with}}>
+        <form class="{{blockName}}"
+            {{#with action}} action="{{this}}"{{/with}}
+            {{#with method}} method="{{this}}"{{/with}}
+            {{#with enctype}} enctype="{{this}}"{{/with}}  {{extraAttributes}} >
             {{#defineBlockBody}}
                 {{element "items"}}
-                {{element "actionButton"}}
+                {{element "button"}}
             {{/defineBlockBody}}
         </div>
 

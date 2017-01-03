@@ -1,7 +1,9 @@
 {
     "_template": "Form.hbs",
 
-    "actionUrl": "{{var('exampleSiteUrl')}}",
+    "action": "{{var('exampleSiteUrl')}}",
+    "method": "POST",
+    "enctype": "text/plain",
     "items": [
         {
             "_template": "Input.hbs",
@@ -9,7 +11,7 @@
         }
 
     ],
-    "actionButton": {
+    "button": {
         "_template": "Button.hbs",
         "text": "Sign Up"
     }
