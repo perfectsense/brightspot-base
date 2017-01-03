@@ -4,11 +4,12 @@
     {{~#with display~}}&display={{this}}{{/with}}
     {{~#with href~}}&href={{this}}{{/with}}
     {{~#with redirectUri~}}&redirect_uri={{this}}{{/with}}"
+
     {{~#with target}}
         target="{{this}}"
     {{else}}
         target="_blank"
-    {{/with}}
+    {{~/with~}}
 >
     {{body}}
 </a>
