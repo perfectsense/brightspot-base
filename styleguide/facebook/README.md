@@ -102,6 +102,8 @@ new FacebookShareDialogButtonView.Builder()
 
 ## [Facebook Post Embed](https://developers.facebook.com/docs/plugins/embedded-posts)
 
+![image](https://cloud.githubusercontent.com/assets/1299507/21621964/5eb6b962-d1c9-11e6-8f81-b5c2b06fd503.png)
+
 Embedded Posts are a simple way to put public posts - by a Page or a person on Facebook - into the content of your web site or web page. Only public posts from Facebook Pages and profiles can be embedded.
 
 Example implementation:
