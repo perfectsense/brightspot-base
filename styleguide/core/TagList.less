@@ -1,0 +1,36 @@
+.TagList {
+    &-label {
+        &:extend(.TagList-label all);
+    }
+
+    &-items {
+        &:extend(.TagList-items all);
+    }
+
+    &-items-item {
+        &:extend(.TagList-items-item all);
+    }
+
+    & when (@_demo) {
+        &-label,
+        &-items,
+        &-items-item {
+            display: inline-block;
+        }
+
+        &-label {
+            ._TextSmall;
+        }
+
+        &-items {
+            padding: 0;
+            margin-left: 1rem;
+        }
+
+        &-items-item {
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+    }
+}

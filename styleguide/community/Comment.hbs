@@ -1,0 +1,55 @@
+{{#defineBlock "Comment"}}
+    {{#defineElement "author"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "time"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "body"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "replies" noWith=true}}
+        <section class="{{elementName}}">
+            {{#each replies}}{{this}}{{/each}}
+        </section>
+    {{/defineElement}}
+
+    {{#defineElement "reply" noWith=true}}
+        {{#if replyAction}}
+            <form class="{{elementName}}" method="get" action="{{replyAction}}">
+                <button class="{{elementName}}-button">{{replyButton}}</button>
+            </form>
+        {{/if}}
+    {{/defineElement}}
+
+    {{#defineElement "actions" noWith=true}}
+        <div class="{{elementName}}">
+            {{element "reply"}}
+        </div>
+    {{/defineElement}}
+
+    {{#defineElement "validation"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}"
+            data-bsp-community-comment
+            itemscope itemtype="http://schema.org/Comment"
+            {{extraAttributes}}>
+
+            {{#defineBlockBody}}
+                {{element "author"}}
+                {{element "time"}}
+                {{element "body"}}
+                {{element "actions"}}
+                {{element "replies"}}
+                {{element "validation"}}
+            {{/defineBlockBody}}
+
+        </div>
+    {{/defineBlockContainer}}
+{{/defineBlock}}

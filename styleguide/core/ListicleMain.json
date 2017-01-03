@@ -19,13 +19,6 @@
         "_dataUrl": "Author.json"
     }],
 
-    "lead": {
-        "_dataUrl": "Image.json",
-        "src": "{{image(900,450)}}",
-        "width": 900,
-        "height": 450
-    },
-
     "items": [
         {
             "_dataUrl": "ListicleItem.json",
@@ -37,23 +30,6 @@
     "reversed": true,
 
     "tags": {
-        "_template": "Concatenated.hbs",
-        "items": [
-            {
-                "_template": "Link.hbs",
-                "href": "#",
-                "body": "Tag 1"
-            },
-            {
-                "_template": "Link.hbs",
-                "href": "#",
-                "body": "Tag 2"
-            },
-            {
-                "_template": "Link.hbs",
-                "href": "#",
-                "body": "Tag 3"
-            }
-        ]
+        "_dataUrl": "TagList.json"
     }
 }

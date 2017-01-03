@@ -1,0 +1,49 @@
+{
+  "_template": "CommentEntry.hbs",
+
+  "user": {
+    "_template": "../core/Author.hbs",
+    "image": {
+      "_template": "../core/Image.hbs",
+      "src": "{{image(50, 50)}}"
+    }
+  },
+
+  "title": "{{name}}",
+
+  "logout": {
+    "_template": "UserSignOut.hbs",
+    "button": "Logout",
+    "action": "_logout-response",
+    "target": "_blank"
+  },
+
+  "input": {
+    "_template": "../core/TextAreaInput.hbs",
+    "name": "entry-input",
+    "id": "34dvpcoxiv34ktgj",
+    "required": true,
+    "placeholder": "Comment",
+    "maxlength": 500,
+    "characterCountdown": "characters remaining"
+  },
+
+  "validation": {
+    "_template": "../core/ValidationMessages.hbs",
+    "serverError": {
+      "_template": "../core/RawHtml.hbs",
+      "html": "Sorry! Something went wrong on our end. Please try again later."
+    },
+    "blank": {
+      "_template": "../core/RawHtml.hbs",
+      "html": "Please provide a comment."
+    },
+    "tooLong": {
+      "_template": "../core/RawHtml.hbs",
+      "html": "Your comment was too long. Please stay within 500 characters."
+    }
+  },
+
+  "submitButton": "Post",
+  "submitAction": "ResponseWithComment.html"
+}

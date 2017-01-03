@@ -1,0 +1,31 @@
+{
+  "_template": "Comment.hbs",
+
+  "author": {
+    "_dataUrl": "../core/Author.json"
+  },
+
+  "time": {
+    "_template": "../core/DateTime.hbs",
+    "iso": "{{date('iso')}}",
+    "body": "{{date()}}"
+  },
+
+  "body": {
+    "_template": "../core/RawHtml.hbs",
+    "html": "{{paragraphs(1)}}"
+  },
+
+  "replies": null,
+
+  "validation": {
+    "_template": "../core/ValidationMessages.hbs",
+    "serverError": {
+      "_template": "../core/RawHtml.hbs",
+      "html": "Sorry! Something went wrong on our end. Please try again later."
+    }
+  },
+
+  "replyButton": "reply",
+  "replyAction": "ResponseWithCommentEntry.json"
+}

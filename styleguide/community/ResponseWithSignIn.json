@@ -1,0 +1,8 @@
+{
+  "_wrapper": false,
+  "_template": "CommentActionResponse.hbs",
+
+  "signIn": {
+    "_dataUrl": "UserSignIn.json"
+  }
+}

@@ -10,4 +10,27 @@
     &-credit {
         &:extend(.Figure-credit all);
     }
+
+    & when (@_demo) {
+        &-credit {
+            text-align: right;
+            color: #ccc;
+            font-size: 0.7em;
+            background: #444;
+            padding: 8px;
+        }
+
+        &-caption {
+            font-style: italic;
+            margin-top: .5rem;
+        }
+    }
+}
+
+._Figure--size-fluid() {
+    ._Image--size-fluid;
+}
+
+._Figure--size-auto() {
+    ._Image--size-auto;
 }

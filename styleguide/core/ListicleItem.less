@@ -13,10 +13,51 @@
     }
 
     & when (@_demo) {
-        ._Block;
-
         &-headline {
             ._TextLarge;
+        }
+
+        &-description,
+        &-image {
+            ._Block;
+        }
+    }
+}
+
+._ListicleItem--layout-column() {
+    &-description {
+        display: none;
+    }
+
+    &-image {
+        .Figure {
+            ._Figure--size-fluid();
+        }
+    }
+}
+
+._ListicleItem--layout-row() {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-headline {
+        width: 100%;
+        order: 1;
+    }
+
+    &-description {
+        display: block;
+        width: 60%;
+        order: 3;
+    }
+
+    &-image {
+        box-sizing: border-box;
+        width: 40%;
+        order: 2;
+
+        & + {
+            padding-right: 1rem;
         }
     }
 }
