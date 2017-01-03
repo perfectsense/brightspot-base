@@ -1,0 +1,19 @@
+{{#defineBlock "TwitterSummaryCard" extend="TwitterCard.hbs"}}
+
+    {{#defineElement "card" noWith="true"}}
+        <meta name="twitter:card" content="summary"/>
+    {{/defineElement}}
+
+    {{#defineBlockBody}}
+        {{element "card"}}
+        {{element "creator"}}
+        {{element "creatorId"}}
+        {{element "description"}}
+        {{element "image"}}
+        {{element "imageAlt"}}
+        {{element "site"}}
+        {{element "siteId"}}
+        {{element "title"}}
+    {{/defineBlockBody}}
+{{/defineBlock}}
+
