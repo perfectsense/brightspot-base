@@ -15,7 +15,7 @@
     {{#defineElement "loadMore" noWith=true}}
         {{#if loadMoreAction}}
             <form class="{{elementName}}" method="get" action="{{loadMoreAction}}">
-                <button class="{{elementName}}-button">{{loadMoreButton}}</button>
+                <button class="{{elementName}}-button">{{loadMoreLabel}}</button>
             </form>
         {{/if}}
     {{/defineElement}}
@@ -35,8 +35,15 @@
         </div>
     {{/defineElement}}
 
-    {{#defineElement "validation"}}
-        <div class="{{elementName}}">{{this}}</div>
+
+    {{#defineElement "errorMessageServer"}}
+        <div class="{{elementName}}">{{{this}}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "errorMessages" noWith=true}}
+        <div class="{{elementName}}">
+            {{element "errorMessageServer"}}
+        </div>
     {{/defineElement}}
 
     {{#defineBlockContainer}}
@@ -49,7 +56,7 @@
                 {{element "commentEntry"}}
                 {{element "body"}}
                 {{element "actions"}}
-                {{element "validation"}}
+                {{element "errorMessages"}}
             {{/defineBlockBody}}
         </div>
     {{/defineBlockContainer}}
