@@ -1,46 +1,46 @@
 {
-    "_template": "Concatenated.hbs",
+    "_template": "../Concatenated.hbs",
     "items" : [
         {
-            "_template": "RawHtml.hbs",
+            "_template": "../RawHtml.hbs",
             "html": "{{paragraphs(1)}}"
         },
         {
-            "_template": "GalleryMain.hbs",
+            "_template": "Gallery.hbs",
             "slides": [
                 {
-                    "_dataUrl": "_GallerySlide.json"
+                    "_dataUrl": "_Slide.json"
                 }
             ]
         },
         {
-            "_template": "RawHtml.hbs",
+            "_template": "../RawHtml.hbs",
             "html": "{{paragraphs(1)}}"
         },
         {
-            "_template": "GalleryMain.hbs",
+            "_template": "Gallery.hbs",
             "id": "my-singleton-unique-id-2",
             "slides": [
                 {
-                    "_dataUrl": "_GallerySlide.json"
+                    "_dataUrl": "_Slide.json"
                 }
             ]
         },
         {
-            "_template": "RawHtml.hbs",
+            "_template": "../RawHtml.hbs",
             "html": "{{paragraphs(1)}}"
         },
         {
-            "_template": "GalleryMain.hbs",
+            "_template": "Gallery.hbs",
             "id": "my-singleton-unique-id-2",
             "slides": [
                 {
-                    "_dataUrl": "_GallerySlide.json"
+                    "_dataUrl": "_Slide.json"
                 }
             ]
         },
         {
-            "_template": "RawHtml.hbs",
+            "_template": "../RawHtml.hbs",
             "html": "{{paragraphs(1)}}"
         }
     ]

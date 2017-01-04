@@ -1,7 +1,16 @@
 {{#defineBlock "Gallery"}}
 
-    {{#defineElement "intro"}}
-        <div class="{{elementName}}">{{this}}</div>
+    {{#defineElement "intro" noWith=true}}
+        <div class="{{elementName}}">
+            <div class="{{elementName}}-card">
+                <div class="{{elementName}}-title" {{#with introTitleShort}} data-shorttext="{{this}}"{{/with}} itemprop="headline">
+                    {{#with introTitle}}<span>{{this}}</span>{{/with}}
+                </div>
+                <div class="{{elementName}}-description" {{#with introDescriptionShort}} data-shorttext="{{this}}"{{/with}} itemprop="description">
+                    {{#with introDescription}}<span>{{this}}</span>{{/with}}
+                </div>
+            </div>
+        </div>
     {{/defineElement}}
 
     {{#defineElement "controls" noWith=true}}
@@ -69,7 +78,7 @@
         <section class="{{blockName}}"
             itemscope itemtype="https://schema.org/ImageGallery"
             data-bsp-gallery-list
-            data-bsp-gallery-list-options="{ &quot;singleton&quot;:&quot;{{singleton}}&quot;, &quot;id&quot;:&quot;{{id}}&quot;, &quot;introBackgroundImage&quot;:&quot;{{introBackgroundImage}}&quot; }" {{extraAttributes}}>
+            data-bsp-gallery-list-options="{ &quot;singleton&quot;:&quot;{{singleton}}&quot;, &quot;id&quot;:&quot;{{id}}&quot;, &quot;introBackgroundImageSrc&quot;:&quot;{{introBackgroundImageSrc}}&quot; }" {{extraAttributes}}>
 
             {{#defineBlockBody}}
                 {{#unless singleton}}

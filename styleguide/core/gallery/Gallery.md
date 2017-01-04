@@ -10,14 +10,14 @@
     * `introBackgroundImage`: (URL/Optional) By default, the gallery displays a randomized matrix of images
       as a background. However, you can specify a single image here to use as the background. This URL will
       be placed in the `data-gallery-intro-background-image` HTML parameter and used by the JavaScript.
-    * `slides`: (Array) List of `GallerySlide` blocks.
+    * `slides`: (Array) List of `Slide` blocks.
     * `modal` (HTML) Placeholder for the gallery modal, including additional properties for adding controls to the modal.
 * `GalleryIntro`: Introductory content for the gallery.
     * `title` (String|HTML)
     * `titleShort` (String|HTML) Optional short version of the title.
     * `description` (HTML)
     * `descriptionShort` (HTML) Optional short version of the description.
-* `GallerySlide`: A single slide for the gallery.
+* `Slide`: A single slide for the gallery.
     * `media`
         * `mediaContent`: (Image Element) Image or other content for the slide.
         * `mediaControls` (HTML) Controls to overlay on top of the media.

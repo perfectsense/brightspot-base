@@ -43,7 +43,7 @@ class Gallery {
 
       // Allow classnames to be overridden easily
       classNameMain: 'Gallery',
-      classNameSlide: 'GallerySlide',
+      classNameSlide: 'Slide',
       attrNameMain: 'data-gallery',
 
       // Allow event name to be overridden.

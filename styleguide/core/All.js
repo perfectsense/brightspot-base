@@ -2,7 +2,7 @@
 import $ from 'node_modules/jquery/dist/jquery.js'
 import TextInput from './TextInput.js'
 import TextAreaInput from './TextAreaInput.js'
-import Gallery from './GalleryMain.js'
+import Gallery from './gallery/Gallery.js'
 import { VideoMain } from './VideoMain.js'
 import bspCarouselPlugin from 'bsp-carousel-plugin'
 /* eslint-enable no-unused-vars */
