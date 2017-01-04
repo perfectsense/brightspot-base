@@ -1,31 +1,18 @@
 {
-  "_template": "Comment.hbs",
+    "_template": "Comment.hbs",
 
-  "author": {
-    "_dataUrl": "../core/Author.json"
-  },
+    "authorImageSrc": "{{image(50, 50)}}",
+    "authorName": "{{name}}",
 
-  "time": {
-    "_template": "../core/DateTime.hbs",
-    "iso": "{{date('iso')}}",
-    "body": "{{date()}}"
-  },
+    "timeStampIso": "{{date('iso')}}",
+    "timeStampBody": "{{date()}}",
 
-  "body": {
-    "_template": "../core/RawHtml.hbs",
-    "html": "{{paragraphs(1)}}"
-  },
+    "body": "{{paragraphs(1)}}",
 
-  "replies": null,
+    "replies": null,
 
-  "validation": {
-    "_template": "../core/ValidationMessages.hbs",
-    "serverError": {
-      "_template": "../core/RawHtml.hbs",
-      "html": "Sorry! Something went wrong on our end. Please try again later."
-    }
-  },
+    "errorMessageServer": "Sorry! Something went wrong on our end. Please try again later.",
 
-  "replyButton": "reply",
-  "replyAction": "ResponseWithCommentEntry.json"
+    "replyLabel": "reply",
+    "replyAction": "ResponseWithCommentEntry.json"
 }
