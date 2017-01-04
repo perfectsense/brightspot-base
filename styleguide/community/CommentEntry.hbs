@@ -14,8 +14,8 @@
         </div>
     {{/defineElement}}
 
-    {{#defineElement "logoutLabel"}}
-        <button class="{{elementName}}">{{this}}</button>
+    {{#defineElement "logoutButton" noWith=true}}
+        <button class="{{elementName}}">{{logoutLabel}}</button>
     {{/defineElement}}
 
     {{#defineElement "logoutForm" noWith=true}}
@@ -23,7 +23,7 @@
             class="{{elementName}}"
             {{#if logoutAction}}action="{{logoutAction}}"{{/if}}
             {{#if logoutTarget}}target="{{logoutTarget}}"{{/if}}>
-            {{element "logoutLabel"}}
+            {{element "logoutButton"}}
         </form>
     {{/defineElement}}
 

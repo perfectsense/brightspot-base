@@ -4,13 +4,12 @@
         &:extend(.CommentEntry-user all);
     }
 
-    &-title {
-        &:extend(.CommentEntry-title all);
+    &-userName {
+        &:extend(.CommentEntry-userName all);
     }
 
-    &-logout {
-        &:extend(.CommentEntry-logout all);
-        &-button { }
+    &-logoutButton {
+        &:extend(.CommentEntry-logoutButton all);
     }
 
     &-form {
@@ -21,13 +20,39 @@
         &:extend(.CommentEntry-input all);
     }
 
-    &-validation {
-        &:extend(.CommentEntry-validation all);
+    &-errorMessages {
+        &:extend(.CommentEntry-errorMessages all);
+    }
+
+    &-errorMessageServer {
+        &:extend(.CommentEntry-errorMessageServer all);
+        display: none;
+        &[data-visible] {
+            display: block;
+        }
+    }
+
+    &-errorMessageTooLong {
+        &:extend(.CommentEntry-errorMessageTooLong all);
+        display: none;
+        &[data-visible] {
+            display: block;
+        }
+    }
+
+    &-errorMessageBlank {
+        &:extend(.CommentEntry-errorMessageBlank all);
+        display: none;
+        &[data-visible] {
+            display: block;
+        }
     }
 
     &-submit {
-        &:extend(.CommentEntry-submit-button all);
-        &-button { }
+        &:extend(.CommentEntry-submit all);
+        &-button {
+            &:extend(.CommentEntry-submit-button all);
+        }
     }
 
     &-actions {
