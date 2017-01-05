@@ -7,7 +7,7 @@
     "dateModifiedISO": "2016-02-19T17:44:23+00:00",
 
     "breadcrumbs": {
-        "_dataUrl": "Breadcrumbs.json"
+        "_dataUrl": "../breadcrumbs/Breadcrumbs.json"
     },
 
     "preHeadline": "Exploration",
@@ -17,50 +17,50 @@
 
     "authors": [
         {
-            "_dataUrl": "Author.json"
+            "_dataUrl": "../Author.json"
         }
     ],
 
     "lead": {
-        "_dataUrl": "Image.json",
+        "_dataUrl": "../Image.json",
         "src": "{{image(900,450)}}",
         "width": 900,
         "height": 450
     },
 
     "body": {
-        "_template": "Concatenated.hbs",
+        "_template": "../Concatenated.hbs",
         "items": [
             {
-                "_template": "RawHtml.hbs",
+                "_template": "../RawHtml.hbs",
                 "html": "{{paragraphs([3,10])}}"
             },
             {
-                "_dataUrl": "EnhancementImageRight.json"
+                "_dataUrl": "../EnhancementImageRight.json"
             },
             {
-                "_template": "RawHtml.hbs",
+                "_template": "../RawHtml.hbs",
                 "html": "<h3>Subheadline</h3>"
             },
             {
-                "_template": "RawHtml.hbs",
+                "_template": "../RawHtml.hbs",
                 "html": "{{paragraphs([3,10])}}"
             },
             {
-                "_dataUrl": "Enhancement.json"
+                "_dataUrl": "../Enhancement.json"
             },
             {
-                "_template": "RawHtml.hbs",
+                "_template": "../RawHtml.hbs",
                 "html": "{{paragraphs([3,10])}}"
             },
             {
-                "_template": "RawHtml.hbs",
+                "_template": "../RawHtml.hbs",
                 "html": "{{paragraphs([3,10])}}"
             }
         ]
     },
 
     "tags": {
-        "_dataUrl": "TagList.json"
+        "_dataUrl": "../TagList.json"
     }
 }
