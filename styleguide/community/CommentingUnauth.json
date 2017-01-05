@@ -6,7 +6,7 @@
   "textWhenVisible": "Hide Comments",
   "title": "30 Comments",
 
-  "loadMoreButton": "Show More",
+  "loadMoreLabel": "Show More",
   "loadMoreAction": "ResponseWithMoreComments.html",
 
   "commentEntry": {
