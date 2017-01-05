@@ -1,5 +1,5 @@
 {
-    "_template": "../MPXVideoPlayer.hbs",
+    "_template": "MPXVideoPlayer.hbs",
 
     "id": "{{number([0,300])}}",
     "aspectRatio": "16x9",

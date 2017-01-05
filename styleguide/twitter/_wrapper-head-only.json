@@ -1,5 +1,5 @@
 {
-    "_template": "../core/Page.hbs",
+    "_template": "../core/page/Page.hbs",
 
     "head": {
         "_delegate": true
