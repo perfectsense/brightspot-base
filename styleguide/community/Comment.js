@@ -9,7 +9,7 @@ class Comment {
         prefix: '.Comment',
         commentEntryBlock: '.CommentEntry',
         signInBlock: '.UserSignIn',
-        validationBlock: '.ValidationMessages'
+        validationBlock: '.CommentEntry-errorMessages'
       }
     }, options)
 

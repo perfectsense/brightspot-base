@@ -15,13 +15,24 @@
     {{#defineElement "loadMore" noWith=true}}
         {{#if loadMoreAction}}
             <form class="{{elementName}}" method="get" action="{{loadMoreAction}}">
-                <button class="{{elementName}}-button">{{loadMoreButton}}</button>
+                <button class="{{elementName}}-button">{{loadMoreLabel}}</button>
             </form>
         {{/if}}
     {{/defineElement}}
 
-    {{#defineElement "commentEntry"}}
+    {{#defineElement "signInTitle"}}
         <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "signInLinks"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "signIn" noWith=true}}
+        <div class="{{elementName}}">
+            {{element "signInTitle"}}
+            {{element "signInLinks"}}
+        </div>
     {{/defineElement}}
 
     {{#defineElement "body"}}
@@ -35,8 +46,15 @@
         </div>
     {{/defineElement}}
 
-    {{#defineElement "validation"}}
-        <div class="{{elementName}}">{{this}}</div>
+
+    {{#defineElement "errorMessageServer"}}
+        <div class="{{elementName}}">{{{this}}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "errorMessages" noWith=true}}
+        <div class="{{elementName}}">
+            {{element "errorMessageServer"}}
+        </div>
     {{/defineElement}}
 
     {{#defineBlockContainer}}
@@ -46,10 +64,10 @@
             data-bsp-community-commenting-options='{ {{#if showComments}}"showComments":{{showComments}}{{/if}} }'{{extraAttributes}}>
             {{#defineBlockBody}}
                 {{element "title"}}
-                {{element "commentEntry"}}
+                {{element "signIn"}}
                 {{element "body"}}
                 {{element "actions"}}
-                {{element "validation"}}
+                {{element "errorMessages"}}
             {{/defineBlockBody}}
         </div>
     {{/defineBlockContainer}}

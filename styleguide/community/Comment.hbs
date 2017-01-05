@@ -1,26 +1,37 @@
 {{#defineBlock "Comment"}}
-    {{#defineElement "author"}}
-        <div class="{{elementName}}">{{this}}</div>
+    {{#defineElement "authorImage" noWith=true}}
+        <img class="{{elementName}}" src="{{authorImageSrc}}" />
     {{/defineElement}}
 
-    {{#defineElement "time"}}
-        <div class="{{elementName}}">{{this}}</div>
+    {{#defineElement "authorName"}}
+        <span class="{{elementName}}">{{this}}</span>
+    {{/defineElement}}
+
+    {{#defineElement "author" noWith=true}}
+        <div class="{{elementName}}">
+            {{element "authorImage"}}
+            {{element "authorName"}}
+        </div>
+    {{/defineElement}}
+
+    {{#defineElement "timeStamp" noWith="true"}}
+        <time class="{{elementName}}" itemscope itemtype="http://schema.org/DateTime" datetime="{{timeStampIso}}">{{timeStampBody}}</time>
     {{/defineElement}}
 
     {{#defineElement "body"}}
-        <div class="{{elementName}}">{{this}}</div>
+        <div class="{{elementName}}">{{{this}}}</div>
     {{/defineElement}}
 
     {{#defineElement "replies" noWith=true}}
-        <section class="{{elementName}}">
-            {{#each replies}}{{this}}{{/each}}
-        </section>
+            <section class="{{elementName}}">
+                {{#each replies}}{{this}}{{/each}}
+            </section>
     {{/defineElement}}
 
     {{#defineElement "reply" noWith=true}}
         {{#if replyAction}}
             <form class="{{elementName}}" method="get" action="{{replyAction}}">
-                <button class="{{elementName}}-button">{{replyButton}}</button>
+                <button class="{{elementName}}-button">{{replyLabel}}</button>
             </form>
         {{/if}}
     {{/defineElement}}
@@ -31,8 +42,14 @@
         </div>
     {{/defineElement}}
 
-    {{#defineElement "validation"}}
-        <div class="{{elementName}}">{{this}}</div>
+    {{#defineElement "errorMessageServer"}}
+        {{#if errorMessageServer}}<div class="{{elementName}}">{{{errorMessageServer}}}</div>{{/if}}
+    {{/defineElement}}
+
+    {{#defineElement "errorMessages" noWith=true}}
+        <div class="{{elementName}}">
+            {{element "errorMessageServer"}}
+        </div>
     {{/defineElement}}
 
     {{#defineBlockContainer}}
@@ -43,11 +60,11 @@
 
             {{#defineBlockBody}}
                 {{element "author"}}
-                {{element "time"}}
+                {{element "timeStamp"}}
                 {{element "body"}}
                 {{element "actions"}}
                 {{element "replies"}}
-                {{element "validation"}}
+                {{element "errorMessages"}}
             {{/defineBlockBody}}
 
         </div>

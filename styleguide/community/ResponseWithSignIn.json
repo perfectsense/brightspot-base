@@ -2,7 +2,29 @@
   "_wrapper": false,
   "_template": "CommentActionResponse.hbs",
 
-  "signIn": {
-    "_dataUrl": "UserSignIn.json"
-  }
+
+    "signInTitle": "Sign in to post a comment",
+    "signInLinks": {
+        "_template": "../core/Concatenated.hbs",
+        "items": [
+          {
+            "_template": "../core/SocialLink.hbs",
+            "href": "#",
+            "socialService": "facebook",
+            "body": "Facebook"
+          },
+          {
+            "_template": "../core/SocialLink.hbs",
+            "href": "#",
+            "socialService": "twitter",
+            "body": "Twitter"
+          },
+          {
+            "_template": "../core/SocialLink.hbs",
+            "href": "#",
+            "socialService": "google",
+            "body": "Google"
+          }
+        ]
+    }
 }
