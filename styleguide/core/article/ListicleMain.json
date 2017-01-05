@@ -7,7 +7,7 @@
     "dateModifiedISO": "2016-02-19T17:44:23+00:00",
 
     "breadcrumbs": {
-        "_dataUrl": "breadcrumbs/Breadcrumbs.json"
+        "_dataUrl": "../breadcrumbs/Breadcrumbs.json"
     },
 
     "preHeadline": "Exploration",
@@ -16,7 +16,7 @@
     "byline": "",
 
     "authors": [{
-        "_dataUrl": "author/Author.json"
+        "_dataUrl": "../author/Author.json"
     }],
 
     "items": [
@@ -30,6 +30,6 @@
     "reversed": true,
 
     "tags": {
-        "_dataUrl": "TagList.json"
+        "_dataUrl": "../TagList.json"
     }
 }
