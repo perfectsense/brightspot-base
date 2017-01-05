@@ -36,7 +36,7 @@
                 "html": "{{paragraphs([3,10])}}"
             },
             {
-                "_dataUrl": "../EnhancementImageRight.json"
+                "_dataUrl": "../embed/EmbedImageRight.json"
             },
             {
                 "_template": "../RawHtml.hbs",
@@ -47,7 +47,7 @@
                 "html": "{{paragraphs([3,10])}}"
             },
             {
-                "_dataUrl": "../Enhancement.json"
+                "_dataUrl": "../embed/Embed.json"
             },
             {
                 "_template": "../RawHtml.hbs",
