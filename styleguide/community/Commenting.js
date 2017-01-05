@@ -9,7 +9,7 @@ let Commenting = {
       prefix: '.Commenting',
       commentEntryBlock: '.CommentEntry',
       commentBlock: '.Comment',
-      validationBlock: '.ValidationMessages'
+      validationBlock: '.CommentEntry-errorMessages'
     }
   },
 
@@ -105,7 +105,7 @@ let Commenting = {
           this.$el.trigger('Commenting:onRequestLoadMoreSuccess')
         })
         .fail((data) => {
-          let $errorMessage = this.$el.find(`${this.settings.selectors.prefix}-validation ${this.settings.selectors.validationBlock}-serverError`)
+          let $errorMessage = this.$el.find(`${this.settings.selectors.prefix}-validation ${this.settings.selectors.validationBlock}-server`)
           $errorMessage.attr('data-visible', '')
           this.$el.trigger('Commenting:onRequestLoadMoreError', { data: data })
         })

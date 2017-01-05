@@ -12,8 +12,19 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "signIn"}}
+    {{#defineElement "signInTitle"}}
         <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "signInLinks"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "signIn" noWith=true}}
+        <div class="{{elementName}}">
+            {{element "signInTitle"}}
+            {{element "signInLinks"}}
+        </div>
     {{/defineElement}}
 
     {{#defineBlockContainer}}

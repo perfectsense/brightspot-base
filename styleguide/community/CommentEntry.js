@@ -10,7 +10,7 @@ class CommentEntry {
         commentBlock: '.Comment',
         commentingBlock: '.Commenting',
         signInBlock: '.UserSignIn',
-        validationBlock: '.ValidationMessages',
+        validationBlock: '.CommentEntry-errorMessages',
         responseBlock: '.CommentActionResponse'
       }
     }, options)
@@ -52,7 +52,7 @@ class CommentEntry {
   }
 
   onRequestError (data) {
-    let $errorMessage = this.$context.find(`${this.selectors.validationBlock}-serverError`)
+    let $errorMessage = this.$context.find(`${this.selectors.validationBlock}-server`)
     $errorMessage.attr('data-visible', '')
     this.$context.trigger('CommentEntry:onSubmitCommentError', { error: data })
   }
