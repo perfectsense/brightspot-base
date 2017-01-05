@@ -1,5 +1,5 @@
 {
-    "_template": "Slide.hbs",
+    "_template": "GallerySlide.hbs",
 
     "mediaContent": {
         "_template": "../Image.hbs",
