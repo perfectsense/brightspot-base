@@ -7,12 +7,12 @@
     "height": 140,
 
     "caption": {
-        "_template": "RawHtml.hbs",
+        "_template": "../RawHtml.hbs",
         "html": "This is a <b>picture</b> and I am the <i>caption</i>."
     },
 
     "credit": {
-        "_template": "RawHtml.hbs",
+        "_template": "../RawHtml.hbs",
         "html": "Credit: {{name}}"
     }
 }
