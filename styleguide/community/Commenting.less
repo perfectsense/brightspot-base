@@ -44,6 +44,10 @@
 
     &-errorMessageServer {
         &:extend(.Commenting-errorMessageServer all);
+        display: none;
+        &[data-visible] {
+            display: block;
+        }
     }
 
     & when (@_demo) {
