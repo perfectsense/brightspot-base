@@ -36,4 +36,42 @@
     &-errorMessageServer {
         &:extend(.Comment-errorMessageServer all);
     }
+
+    & when (@_demo) {
+
+        .Author {
+            font-size: 12px;
+            display: block;
+        }
+
+        .Author-name {
+            font-weight: bold;
+        }
+
+        .Author-image {
+            width: 40px;
+            float: left;
+        }
+
+        .Image-image {
+            width: 100%;
+            height: auto
+        }
+
+        &-time {
+            color: #b2b2b2;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        &-body {
+            font-size: 16px;
+            p {
+                margin-top: 10px;
+            }
+        }
+        &-actions {
+            text-align: right;
+
+        }
+    }
 }

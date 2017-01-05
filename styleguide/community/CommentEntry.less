@@ -59,4 +59,66 @@
         &:extend(.CommentEntry-actions all);
     }
 
+    & when (@_demo) {
+        .Author {
+            font-size: 12px;
+            display: flex;
+        }
+
+        .Author-name {
+            &:extend(.Comment .Author-name);
+        }
+
+        .Author-image {
+            &:extend(.Comment .Author-image);
+        }
+
+        .Image-image {
+            &:extend(.Comment .Image-image);
+        }
+
+        .TextAreaInput{
+            &-input {
+                padding: 5px;
+                width: 100%;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12) inset;
+                border-color: #b2b2b2;
+                font-size: 14px;
+                min-height: 75px;
+            }
+            &-characterCountdown {
+                text-align: right;
+                font-size: 12px ;
+                color: #b2b2b2;
+            }
+        }
+
+        .UserSignOut {
+            display: inline-block;
+            vertical-align: bottom;
+            &-button {
+                font-size: 14px;
+                background: 0 0;
+                border: none;
+                padding: 0;
+                line-height: normal;
+                display: block;
+            }
+        }
+
+        &-input  {
+            padding-top: 10px;
+            clear: both;
+        }
+
+        &-user {
+            float: left;
+        }
+
+
+        &-actions {
+            margin-top: 10px;
+            text-align: right;
+        }
+    }
 }

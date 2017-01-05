@@ -98,8 +98,10 @@
             data-commenting-id="{{commentingId}}"
             {{extraAttributes}}>
             {{#defineBlockBody}}
+            <div class="{{blockName}}-auth">
                 {{element "user"}}
                 {{element "logoutForm"}}
+            </div>
                 {{element "form"}}
             {{/defineBlockBody}}
         </div>
