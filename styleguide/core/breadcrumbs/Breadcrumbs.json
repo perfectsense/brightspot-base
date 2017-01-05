@@ -3,17 +3,17 @@
 
   "items": [
     {
-      "_template": "Link.hbs",
+      "_template": "../Link.hbs",
       "body": "Home",
       "href": "{{var('exampleSiteUrl')}}"
     },
     {
-      "_template": "Link.hbs",
+      "_template": "../Link.hbs",
       "body": "Stories",
       "href": "{{var('exampleSiteUrl')}}"
     },
     {
-      "_template": "Link.hbs",
+      "_template": "../Link.hbs",
       "body": "Exploration",
       "href": "{{var('exampleSiteUrl')}}"
     }
