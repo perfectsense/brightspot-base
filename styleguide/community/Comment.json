@@ -2,7 +2,7 @@
   "_template": "Comment.hbs",
 
   "author": {
-    "_dataUrl": "../core/Author.json"
+    "_dataUrl": "../core/author/Author.json"
   },
 
   "time": {

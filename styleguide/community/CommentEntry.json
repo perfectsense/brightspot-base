@@ -2,7 +2,7 @@
   "_template": "CommentEntry.hbs",
 
   "user": {
-    "_template": "../core/Author.hbs",
+    "_template": "../core/author/Author.hbs",
     "image": {
       "_template": "../core/Image.hbs",
       "src": "{{image(50, 50)}}"

@@ -16,7 +16,7 @@
     "byline": "",
 
     "authors": [{
-        "_dataUrl": "Author.json"
+        "_dataUrl": "author/Author.json"
     }],
 
     "items": [
