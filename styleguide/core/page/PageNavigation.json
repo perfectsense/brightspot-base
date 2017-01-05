@@ -2,7 +2,7 @@
     "_template": "PageNavigation.hbs",
     "items": [
         {
-            "_template": "Link.hbs",
+            "_template": "../Link.hbs",
             "href": "#",
             "body": "Home"
         },
@@ -12,24 +12,24 @@
             "label": "Stories",
             "items": [
                 {
-                    "_template": "Link.hbs",
+                    "_template": "../Link.hbs",
                     "href": "#",
                     "body": "Exploration"
                 },
                 {
-                    "_template": "Link.hbs",
+                    "_template": "../Link.hbs",
                     "href": "#",
                     "body": "Inspirational"
                 },
                 {
-                    "_template": "Link.hbs",
+                    "_template": "../Link.hbs",
                     "href": "#",
                     "body": "Educational"
                 }
             ]
         },
         {
-            "_template": "Link.hbs",
+            "_template": "../Link.hbs",
             "href": "#",
             "body": "About"
         }

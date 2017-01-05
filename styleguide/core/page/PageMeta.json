@@ -3,20 +3,20 @@
     "_template": "Page.hbs",
 
     "head": {
-        "_template": "Head.hbs",
+        "_template": "PageHead.hbs",
         "items": [
             {
-                "_template": "Meta.hbs",
+                "_template": "PageMeta.hbs",
                 "httpEquiv": "Content-Language",
                 "content": "en"
             },
             {
-                "_template": "Meta.hbs",
+                "_template": "PageMeta.hbs",
                 "name": "description",
                 "content": "{{words}}"
             },
             {
-                "_template": "Meta.hbs",
+                "_template": "PageMeta.hbs",
                 "property": "og:type",
                 "content": "website"
             }
@@ -24,7 +24,7 @@
     },
 
     "body": {
-        "_template": "RawHtml.hbs",
+        "_template": "../RawHtml.hbs",
         "html": "{{paragraphs}}"
     }
 }

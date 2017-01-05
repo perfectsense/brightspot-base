@@ -3,10 +3,10 @@
     "_template": "Page.hbs",
 
     "head": {
-        "_template": "Head.hbs",
+        "_template": "PageHead.hbs",
         "items": [
             {
-                "_template": "InlineScript.hbs",
+                "_template": "PageInlineScript.hbs",
                 "type": "application/javascript",
                 "script": "if (window.console) { console.log(\"Hello World\"); }"
             }
@@ -14,7 +14,7 @@
     },
 
     "body": {
-        "_template": "RawHtml.hbs",
+        "_template": "../RawHtml.hbs",
         "html": "{{paragraphs}}"
     }
 }

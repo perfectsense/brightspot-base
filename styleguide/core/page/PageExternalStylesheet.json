@@ -3,19 +3,20 @@
     "_template": "Page.hbs",
 
     "head": {
-        "_template": "Head.hbs",
+        "_template": "PageHead.hbs",
         "items": [
             {
-                "_template": "InlineStylesheet.hbs",
+                "_template": "PageExternalStylesheet.hbs",
+                "rel": "stylesheet",
                 "type": "text/css",
                 "media": "screen",
-                "css": "body { color: red; }"
+                "href": "/main.min.css"
             }
         ]
     },
 
     "body": {
-        "_template": "RawHtml.hbs",
+        "_template": "../RawHtml.hbs",
         "html": "{{paragraphs}}"
     }
 }

@@ -2,7 +2,7 @@
     "_template": "PageHeader.hbs",
 
     "logo": {
-        "_template": "Image.hbs",
+        "_template": "../Image.hbs",
         "src": "{{image(200, 60)}}"
     },
 
@@ -11,6 +11,6 @@
     },
 
     "search": {
-        "_dataUrl": "Input.json"
+        "_dataUrl": "../Input.json"
     }
 }
