@@ -1,36 +1,36 @@
-.Slide {
+.GallerySlide {
 
     &-media {
-        &:extend(.Slide-media all);
+        &:extend(.GallerySlide-media all);
     }
 
     &-info {
-        &:extend(.Slide-info all);
+        &:extend(.GallerySlide-info all);
     }
 
     &-infoTitle {
-        &:extend(.Slide-infoTitle all);
+        &:extend(.GallerySlide-infoTitle all);
     }
 
     &-infoDescription {
-        &:extend(.Slide-infoDescription all);
+        &:extend(.GallerySlide-infoDescription all);
     }
 
     &-infoAttribution {
-        &:extend(.Slide-infoAttribution all);
+        &:extend(.GallerySlide-infoAttribution all);
     }
 
     & when (@_demo) {
 
         &-media {
-            &:extend(.Slide-media all);
+            &:extend(.GallerySlide-media all);
 
             position: relative;
             cursor: pointer;
 
             &:hover {
                 button {
-                    &.Slide-mediaControlsZoom {
+                    &.GallerySlide-mediaControlsZoom {
                         display: block;
                     }
                 }
@@ -38,7 +38,7 @@
         }
 
         button {
-            &.Slide {
+            &.GallerySlide {
                 &-mediaControlsZoom {
                     // Hide by default, show on :hover
                     display: none;
@@ -59,11 +59,11 @@
         }
 
         &-info {
-            &:extend(.Slide-info all);
+            &:extend(.GallerySlide-info all);
         }
 
         &-infoTitle {
-            &:extend(.Slide-infoTitle all);
+            &:extend(.GallerySlide-infoTitle all);
             font-size: 16px;
             font-weight: 500;
             color: #dddddd;
@@ -71,7 +71,7 @@
         }
 
         &-infoDescription {
-            &:extend(.Slide-infoDescription all);
+            &:extend(.GallerySlide-infoDescription all);
             font-size: 13px;
             line-height: 1.2;
             color: #dddddd;
@@ -79,13 +79,13 @@
         }
 
         &-infoAttribution {
-            &:extend(.Slide-infoAttribution all);
+            &:extend(.GallerySlide-infoAttribution all);
             font-size: 10px;
             color: #aeaeae;
         }
 
         &-infoSocial {
-            &:extend(.Slide-infoSocial all);
+            &:extend(.GallerySlide-infoSocial all);
             margin-top: 1rem;
             display: none;
             .share-links-wrapper{
@@ -94,7 +94,7 @@
         }
 
         @media @mq-sm {
-            .Slide {
+            .GallerySlide {
                 &-infoTitle {
                     font-size: 18px;
 
@@ -111,10 +111,10 @@
 }
 
 /* When the slides are rendered as a single column list */
-._Slide--asList() {
+._GallerySlide--asList() {
     display: block;
 
-    .Slide {
+    .GallerySlide {
         border-top: 1px solid rgba(255, 255, 255, 0.5);
         padding-top: 10px;
         padding-bottom: 10px;
@@ -141,7 +141,7 @@
 
         display: none;
 
-        .Slide {
+        .GallerySlide {
             max-width: 1400px;
             margin: 40px auto 20px auto;
             &-infoTitle {
@@ -171,7 +171,7 @@
 
     @media @mq-md {
 
-        .Slide {
+        .GallerySlide {
             padding-top: 20px;
             padding-bottom: 20px;
             &-mediaContent {
@@ -193,7 +193,7 @@
     }
 
     @media @mq-lg {
-        .Slide {
+        .GallerySlide {
             padding-top: 30px;
             padding-bottom: 30px;
 
@@ -207,18 +207,18 @@
     }
 
     @media @mq-xl {
-        .Slide {
+        .GallerySlide {
             padding-top: 40px;
             padding-bottom: 40px;
         }
     }
 }
 
-._Slide--asTile() {
+._GallerySlide--asTile() {
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     padding: 25px;
 
-    .Slide {
+    .GallerySlide {
         width: 45%;
         margin-bottom: 30px;
 
@@ -240,7 +240,7 @@
         max-width: 1400px;
         padding: 30px 25px;
 
-        .Slide {
+        .GallerySlide {
             width: 30%;
         }
     }
@@ -263,14 +263,14 @@
 
         padding: 30px 55px;
 
-        .Slide {
+        .GallerySlide {
             width: 28%;
         }
     }
 }
 
-._Slide--Stacked() {
-    .Slide {
+._GallerySlide--Stacked() {
+    .GallerySlide {
         &-media {
             width: 100%;
         }
@@ -281,9 +281,9 @@
     }
 }
 
-._Slide--SideBySide( @mediaPosition: right, @mediaWidth: 73% ) {
+._GallerySlide--SideBySide( @mediaPosition: right, @mediaWidth: 73% ) {
 
-    .Slide {
+    .GallerySlide {
         &-media {
             float: @mediaPosition;
             width: @mediaWidth;

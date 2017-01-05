@@ -9,7 +9,7 @@
 
     "slides": [
         {
-            "_dataUrl": "_Slide.json",
+            "_dataUrl": "_GallerySlide.json",
             "_repeat": [8,12]
         }
     ]
