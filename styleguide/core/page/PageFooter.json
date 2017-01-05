@@ -11,7 +11,7 @@
     },
 
     "socialLinks": {
-        "_dataUrl": "../_SocialLinks.json"
+        "_dataUrl": "../link/_SocialLinks.json"
     },
 
     "navigation": {

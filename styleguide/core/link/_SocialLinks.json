@@ -1,5 +1,5 @@
 {
-    "_template": "Concatenated.hbs",
+    "_template": "../Concatenated.hbs",
     "items": [
         {
             "_template": "SocialLink.hbs",

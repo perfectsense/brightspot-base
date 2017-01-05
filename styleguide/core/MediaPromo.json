@@ -8,6 +8,6 @@
     },
     "description": "{{words}}",
     "cta": {
-        "_dataUrl": "Link.json"
+        "_dataUrl": "link/Link.json"
     }
 }

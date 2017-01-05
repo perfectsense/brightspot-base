@@ -4,7 +4,7 @@
     "title": "Promotional Item Title",
     "description": "{{words}}",
     "cta": {
-        "_dataUrl": "Link.json",
+        "_dataUrl": "link/Link.json",
         "body": "Click here"
     }
 }

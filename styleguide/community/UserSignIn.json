@@ -7,19 +7,19 @@
     "_template": "../core/Concatenated.hbs",
     "items": [
       {
-        "_template": "../core/SocialLink.hbs",
+        "_template": "../core/link/SocialLink.hbs",
         "href": "#",
         "socialService": "facebook",
         "body": "Facebook"
       },
       {
-        "_template": "../core/SocialLink.hbs",
+        "_template": "../core/link/SocialLink.hbs",
         "href": "#",
         "socialService": "twitter",
         "body": "Twitter"
       },
       {
-        "_template": "../core/SocialLink.hbs",
+        "_template": "../core/link/SocialLink.hbs",
         "href": "#",
         "socialService": "google",
         "body": "Google"
