@@ -2,7 +2,7 @@
   "_template": "Enhancement.hbs",
   "alignment": "left",
   "content": {
-      "_template": "Image.hbs",
+      "_template": "image/Image.hbs",
       "src": "{{image(260,360)}}"
   }
 }

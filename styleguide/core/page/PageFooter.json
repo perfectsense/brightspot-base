@@ -2,7 +2,7 @@
     "_template": "PageFooter.hbs",
 
     "logo": {
-        "_template": "../Image.hbs",
+        "_template": "../image/Image.hbs",
         "src": "{{image(200, 60)}}"
     },
 

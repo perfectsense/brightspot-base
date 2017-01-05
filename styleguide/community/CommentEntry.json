@@ -4,7 +4,7 @@
   "user": {
     "_template": "../core/author/Author.hbs",
     "image": {
-      "_template": "../core/Image.hbs",
+      "_template": "../core/image/Image.hbs",
       "src": "{{image(50, 50)}}"
     }
   },

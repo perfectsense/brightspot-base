@@ -3,7 +3,7 @@
     "category": "{{words(1)}}",
     "title": "{{words}}",
     "media": {
-        "_template": "Image.hbs",
+        "_template": "image/Image.hbs",
         "src": "{{image(40,40)}}"
     },
     "description": "{{words}}",

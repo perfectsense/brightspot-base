@@ -22,7 +22,7 @@
     ],
 
     "lead": {
-        "_dataUrl": "../Image.json",
+        "_dataUrl": "../image/Image.json",
         "src": "{{image(900,450)}}",
         "width": 900,
         "height": 450
