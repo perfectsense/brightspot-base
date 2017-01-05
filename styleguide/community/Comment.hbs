@@ -23,9 +23,9 @@
     {{/defineElement}}
 
     {{#defineElement "replies" noWith=true}}
-        <section class="{{elementName}}">
-            {{#each replies}}{{this}}{{/each}}
-        </section>
+            <section class="{{elementName}}">
+                {{#each replies}}{{this}}{{/each}}
+            </section>
     {{/defineElement}}
 
     {{#defineElement "reply" noWith=true}}
@@ -43,11 +43,13 @@
     {{/defineElement}}
 
     {{#defineElement "errorMessageServer"}}
-        <div class="{{elementName}}">{{{errorMessageServer}}}</div>
+        {{#if errorMessageServer}}<div class="{{elementName}}">{{{errorMessageServer}}}</div>{{/if}}
     {{/defineElement}}
 
     {{#defineElement "errorMessages" noWith=true}}
-        {{element "errorMessageServer"}}
+        <div class="{{elementName}}">
+            {{element "errorMessageServer"}}
+        </div>
     {{/defineElement}}
 
     {{#defineBlockContainer}}
