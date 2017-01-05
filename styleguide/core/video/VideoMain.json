@@ -9,13 +9,13 @@
         "seekSeconds": 18
     },
     "preHeadline": {
-        "_template": "Link.hbs",
+        "_template": "../Link.hbs",
         "body": "Sports",
         "href": "#"
     },
     "headline": "The Air Up There",
     "subHeadline": {
-        "_template": "Link.hbs",
+        "_template": "../Link.hbs",
         "body": "caption credit name",
         "href": "#"
     },

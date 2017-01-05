@@ -1,5 +1,5 @@
 import $ from 'node_modules/jquery/dist/jquery.js'
-import { isPDKloaded, isMobileUA } from './Utils.js'
+import { isPDKloaded, isMobileUA } from '../Utils.js'
 
 // PDK Event reference: https://docs.theplatform.com/help/article/link/player-pdkevent-reference
 
