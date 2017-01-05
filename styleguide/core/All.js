@@ -20,6 +20,19 @@ $(document).ready(function () {
     new TextAreaInput($(value))
   })
 
+  // Gallery binding
+  $('.Gallery').each((index, value) => {
+    let gallery = new Gallery($(value), {})
+    // Get options from the data-bsp-gallery-options attribute
+    // let options = this.option(item)
+
+    // Save the Gallery object on the element so it can be accessed later if necessary
+    $(value).data('bsp-gallery', gallery)
+
+    // Run it!
+    gallery.init()
+  })
+
   window.videoPlayers = []
   window.videoPlayerControllers = []
 

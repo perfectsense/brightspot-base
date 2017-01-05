@@ -1,10 +1,9 @@
 import $ from 'jquery'
-import bspUtils from 'bsp-utils'
 import Masonry from 'masonry'
 import bspModal from 'bsp-modal'
 import bspCarousel from 'bsp-carousel'
 
-class Gallery {
+export default class Gallery {
 
   /**
    * Constructor for the gallery. Does not actually initialize the gallery,
@@ -43,7 +42,7 @@ class Gallery {
 
       // Allow classnames to be overridden easily
       classNameMain: 'Gallery',
-      classNameSlide: 'Slide',
+      classNameSlide: 'GallerySlide',
       attrNameMain: 'data-gallery',
 
       // Allow event name to be overridden.
@@ -769,22 +768,3 @@ class Gallery {
     this.$el.trigger(this.settings.eventName + '-' + eventName, [this].concat(eventArgs))
   }
 }
-
-// Set up a bspUtils.plugin so an element with data-bsp-gallery-list
-// will automatically create a Gallery list
-export default bspUtils.plugin(false, 'bsp-gallery', 'list', {
-
-  '_each': function (item) {
-    // Get options from the data-bsp-gallery-options attribute
-    let options = this.option(item)
-
-    // Create the gallery object
-    let gallery = new Gallery(item, options)
-
-    // Save the Gallery object on the element so it can be accessed later if necessary
-    $(item).data('bsp-gallery', gallery)
-
-    // Run it!
-    gallery.init()
-  }
-})
