@@ -1,6 +1,0 @@
-{
-    "_template": "DateTime.hbs",
-
-    "iso": "{{date('iso')}}",
-    "body": "{{date()}}"
-}
