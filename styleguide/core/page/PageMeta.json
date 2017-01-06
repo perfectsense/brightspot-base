@@ -2,26 +2,23 @@
     "_wrapper": false,
     "_template": "Page.hbs",
 
-    "head": {
-        "_template": "PageHead.hbs",
-        "items": [
-            {
-                "_template": "PageMeta.hbs",
-                "httpEquiv": "Content-Language",
-                "content": "en"
-            },
-            {
-                "_template": "PageMeta.hbs",
-                "name": "description",
-                "content": "{{words}}"
-            },
-            {
-                "_template": "PageMeta.hbs",
-                "property": "og:type",
-                "content": "website"
-            }
-        ]
-    },
+    "headItems": [
+        {
+            "_template": "PageMeta.hbs",
+            "httpEquiv": "Content-Language",
+            "content": "en"
+        },
+        {
+            "_template": "PageMeta.hbs",
+            "name": "description",
+            "content": "{{words}}"
+        },
+        {
+            "_template": "PageMeta.hbs",
+            "property": "og:type",
+            "content": "website"
+        }
+    ],
 
     "body": {
         "_template": "../RawHtml.hbs",

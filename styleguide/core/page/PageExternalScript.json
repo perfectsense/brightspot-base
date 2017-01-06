@@ -2,18 +2,15 @@
     "_wrapper": false,
     "_template": "Page.hbs",
 
-    "head": {
-        "_template": "PageHead.hbs",
-        "items": [
-            {
-                "_template": "PageExternalScript.hbs",
-                "type": "application/javascript",
-                "src": "/main.js",
-                "async": false,
-                "defer": false
-            }
-        ]
-    },
+    "headItems": [
+        {
+            "_template": "PageExternalScript.hbs",
+            "type": "application/javascript",
+            "src": "/main.js",
+            "async": false,
+            "defer": false
+        }
+    ],
 
     "body": {
         "_template": "../RawHtml.hbs",

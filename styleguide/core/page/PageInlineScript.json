@@ -2,16 +2,13 @@
     "_wrapper": false,
     "_template": "Page.hbs",
 
-    "head": {
-        "_template": "PageHead.hbs",
-        "items": [
-            {
-                "_template": "PageInlineScript.hbs",
-                "type": "application/javascript",
-                "script": "if (window.console) { console.log(\"Hello World\"); }"
-            }
-        ]
-    },
+    "headItems": [
+        {
+            "_template": "PageInlineScript.hbs",
+            "type": "application/javascript",
+            "script": "if (window.console) { console.log(\"Hello World\"); }"
+        }
+    ],
 
     "body": {
         "_template": "../RawHtml.hbs",

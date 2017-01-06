@@ -1,26 +1,24 @@
 {
     "_template": "../core/page/Page.hbs",
 
-    "head": {
-        "_template": "../core/page/PageHead.hbs",
-        "title": "Styleguide",
-        "description": "Brightspot Twitter Base Styleguide",
-        "items": [
-            {
-                "_template": "../core/page/PageMeta.hbs",
-                "httpEquiv": "X-UA-Compatible",
-                "content": "IE=edge"
-            },
-            {
-                "_template": "../core/page/PageMeta.hbs",
-                "name": "viewport",
-                "content": "width=device-width, initial-scale=1"
-            },
-            {
-                "_dataUrl": "TwitterWidgetsJavaScript.json"
-            }
-        ]
-    },
+    "title": "Styleguide",
+    "description": "Brightspot Twitter Base Styleguide",
+
+    "headItems": [
+        {
+            "_template": "../core/page/PageMeta.hbs",
+            "httpEquiv": "X-UA-Compatible",
+            "content": "IE=edge"
+        },
+        {
+            "_template": "../core/page/PageMeta.hbs",
+            "name": "viewport",
+            "content": "width=device-width, initial-scale=1"
+        },
+        {
+            "_dataUrl": "TwitterWidgetsJavaScript.json"
+        }
+    ],
 
     "body": {
         "_delegate": true

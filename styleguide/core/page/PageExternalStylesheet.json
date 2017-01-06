@@ -2,18 +2,15 @@
     "_wrapper": false,
     "_template": "Page.hbs",
 
-    "head": {
-        "_template": "PageHead.hbs",
-        "items": [
-            {
-                "_template": "PageExternalStylesheet.hbs",
-                "rel": "stylesheet",
-                "type": "text/css",
-                "media": "screen",
-                "href": "/main.min.css"
-            }
-        ]
-    },
+    "headItems": [
+        {
+            "_template": "PageExternalStylesheet.hbs",
+            "rel": "stylesheet",
+            "type": "text/css",
+            "media": "screen",
+            "href": "/main.min.css"
+        }
+    ],
 
     "body": {
         "_template": "../RawHtml.hbs",

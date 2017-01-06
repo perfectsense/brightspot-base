@@ -2,17 +2,14 @@
     "_wrapper": false,
     "_template": "Page.hbs",
 
-    "head": {
-        "_template": "PageHead.hbs",
-        "items": [
-            {
-                "_template": "PageInlineStylesheet.hbs",
-                "type": "text/css",
-                "media": "screen",
-                "css": "body { color: red; }"
-            }
-        ]
-    },
+    "headItems": [
+        {
+            "_template": "PageInlineStylesheet.hbs",
+            "type": "text/css",
+            "media": "screen",
+            "css": "body { color: red; }"
+        }
+    ],
 
     "body": {
         "_template": "../RawHtml.hbs",

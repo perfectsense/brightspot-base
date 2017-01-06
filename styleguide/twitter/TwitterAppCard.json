@@ -2,45 +2,43 @@
     "_wrapper": false,
     "_template": "../core/page/Page.hbs",
 
-    "head": {
-        "_template": "../core/page/PageHead.hbs",
-        "title": "Styleguide",
-        "description": "Brightspot Base Styleguide",
-        "keywords": "Brightspot Base, Styleguide, Inspire Confidence",
-        "items": [
-            {
-                "_template": "../core/page/PageMeta.hbs",
-                "httpEquiv": "X-UA-Compatible",
-                "content": "IE=edge"
-            },
-            {
-                "_template": "../core/page/PageMeta.hbs",
-                "name": "viewport",
-                "content": "width=device-width, initial-scale=1"
-            },
-            {
-                "_template": "TwitterAppCard.hbs",
-                "creator": "brightspotcms",
-                "creatorId": "358165108",
-                "description": "{{words(20)}}",
-                "site": "brightspotcms",
-                "siteId": "358165108",
-                "appCountry": "US",
+    "title": "Styleguide",
+    "description": "Brightspot Base Styleguide",
+    "keywords": "Brightspot Base, Styleguide, Inspire Confidence",
 
-                "iphoneAppName": "brightspot",
-                "iphoneAppId": "929750075",
-                "iphoneAppUrl": "brightspot://psddev/5149e249222f9e600a7540ef",
+    "headItems": [
+        {
+            "_template": "../core/page/PageMeta.hbs",
+            "httpEquiv": "X-UA-Compatible",
+            "content": "IE=edge"
+        },
+        {
+            "_template": "../core/page/PageMeta.hbs",
+            "name": "viewport",
+            "content": "width=device-width, initial-scale=1"
+        },
+        {
+            "_template": "TwitterAppCard.hbs",
+            "creator": "brightspotcms",
+            "creatorId": "358165108",
+            "description": "{{words(20)}}",
+            "site": "brightspotcms",
+            "siteId": "358165108",
+            "appCountry": "US",
 
-                "ipadAppName": "brightspot",
-                "ipadAppId": "929750075",
-                "ipadAppUrl": "brightspot://psddev/5149e249222f9e600a7540ef",
+            "iphoneAppName": "brightspot",
+            "iphoneAppId": "929750075",
+            "iphoneAppUrl": "brightspot://psddev/5149e249222f9e600a7540ef",
 
-                "googlePlayAppName": "brightspot",
-                "googlePlayAppId": "com.psddev.samples.brightspot",
-                "googlePlayAppUrl": "http://brightspot.psddev.com/5149e249222f9e600a7540ef"
-            }
-        ]
-    },
+            "ipadAppName": "brightspot",
+            "ipadAppId": "929750075",
+            "ipadAppUrl": "brightspot://psddev/5149e249222f9e600a7540ef",
+
+            "googlePlayAppName": "brightspot",
+            "googlePlayAppId": "com.psddev.samples.brightspot",
+            "googlePlayAppUrl": "http://brightspot.psddev.com/5149e249222f9e600a7540ef"
+        }
+    ],
 
     "body": ""
 }

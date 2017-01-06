@@ -1,24 +1,22 @@
 {
     "_template": "core/page/Page.hbs",
 
-    "head": {
-        "_template": "core/page/PageHead.hbs",
-        "title": "Styleguide",
-        "description": "Brightspot Base Styleguide",
-        "keywords": "Brightspot Base, Styleguide, Inspire Confidence",
-        "items": [
-            {
-                "_template": "core/page/PageMeta.hbs",
-                "httpEquiv": "X-UA-Compatible",
-                "content": "IE=edge"
-            },
-            {
-                "_template": "core/page/PageMeta.hbs",
-                "name": "viewport",
-                "content": "width=device-width, initial-scale=1"
-            }
-        ]
-    },
+    "title": "Styleguide",
+    "description": "Brightspot Base Styleguide",
+    "keywords": "Brightspot Base, Styleguide, Inspire Confidence",
+
+    "headItems": [
+        {
+            "_template": "core/page/PageMeta.hbs",
+            "httpEquiv": "X-UA-Compatible",
+            "content": "IE=edge"
+        },
+        {
+            "_template": "core/page/PageMeta.hbs",
+            "name": "viewport",
+            "content": "width=device-width, initial-scale=1"
+        }
+    ],
 
     "body": {
         "_delegate": true
