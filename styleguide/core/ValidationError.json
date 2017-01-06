@@ -1,6 +1,0 @@
-{
-    "_template": "ValidationError.hbs",
-
-    "message": "Please sign in first",
-    "type": "unauthenticated"
-}
