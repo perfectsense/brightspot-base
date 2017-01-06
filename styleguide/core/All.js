@@ -1,7 +1,5 @@
 /* eslint-disable no-unused-vars */
 import $ from 'node_modules/jquery/dist/jquery.js'
-import TextInput from './TextInput.js'
-import TextAreaInput from './TextAreaInput.js'
 import Gallery from './gallery/Gallery.js'
 import { VideoMain } from './video/VideoMain.js'
 import bspCarouselPlugin from 'bsp-carousel-plugin'
@@ -9,16 +7,6 @@ import bspCarouselPlugin from 'bsp-carousel-plugin'
 
 $(document).ready(function () {
   /* eslint-disable no-new */
-
-  // TextInput
-  $('.TextInput').each((index, value) => {
-    new TextInput($(value))
-  })
-
-  // TextAreaInput
-  $('.TextAreaInput').each((index, value) => {
-    new TextAreaInput($(value))
-  })
 
   // Gallery binding
   $('.Gallery').each((index, value) => {

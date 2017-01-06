@@ -10,7 +10,5 @@
         "_dataUrl": "PageNavigation.json"
     },
 
-    "search": {
-        "_dataUrl": "../Input.json"
-    }
+    "search": null
 }
