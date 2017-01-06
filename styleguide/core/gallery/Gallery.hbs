@@ -77,8 +77,10 @@
     {{#defineBlockContainer}}
         <section class="{{blockName}}"
             itemscope itemtype="https://schema.org/ImageGallery"
-            data-bsp-gallery-list
-            data-bsp-gallery-list-options="{ &quot;singleton&quot;:&quot;{{singleton}}&quot;, &quot;id&quot;:&quot;{{id}}&quot;, &quot;introBackgroundImageSrc&quot;:&quot;{{introBackgroundImageSrc}}&quot; }" {{extraAttributes}}>
+
+            {{#with id}} id="{{this}}" {{/with}}
+            {{#with singleton}} data-singleton="{{this}}" {{/with}}
+            {{#with introBackgroundImageSrc}} data-introBackgroundImageSrc="{{this}}" {{/with}}
 
             {{#defineBlockBody}}
                 {{#unless singleton}}
