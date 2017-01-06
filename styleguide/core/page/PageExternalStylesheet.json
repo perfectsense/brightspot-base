@@ -2,15 +2,19 @@
     "_wrapper": false,
     "_template": "Page.hbs",
 
-    "headItems": [
-        {
-            "_template": "PageExternalStylesheet.hbs",
-            "rel": "stylesheet",
-            "type": "text/css",
-            "media": "screen",
-            "href": "/styleguide/All.min.css"
-        }
-    ],
+    "headItems": {
+        "_template": "../Concatenated.hbs",
+
+        "items": [
+            {
+                "_template": "PageExternalStylesheet.hbs",
+                "rel": "stylesheet",
+                "type": "text/css",
+                "media": "screen",
+                "href": "/styleguide/All.min.css"
+            }
+        ]
+    },
 
     "body": {
         "_template": "../RawHtml.hbs",

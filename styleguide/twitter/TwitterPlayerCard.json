@@ -6,34 +6,38 @@
     "description": "Brightspot Base Styleguide",
     "keywords": "Brightspot Base, Styleguide, Inspire Confidence",
 
-    "headItems": [
-        {
-            "_template": "../core/page/PageMeta.hbs",
-            "httpEquiv": "X-UA-Compatible",
-            "content": "IE=edge"
-        },
-        {
-            "_template": "../core/page/PageMeta.hbs",
-            "name": "viewport",
-            "content": "width=device-width, initial-scale=1"
-        },
-        {
-            "_template": "TwitterPlayerCard.hbs",
-            "title": "{{words(10)}}",
-            "site": "brightspotcms",
-            "siteId": "358165108",
-            "description": "{{words(20)}}",
+    "headItems": {
+        "_template": "../core/Concatenated.hbs",
 
-            "imageSource": "http://cdn.psddev.com/6d/5d/efd1da434d6abd8b1b08b8b29c4c/brightspot-logo-183.png",
-            "imageAlt": "alt",
+        "items": [
+            {
+                "_template": "../core/page/PageMeta.hbs",
+                "httpEquiv": "X-UA-Compatible",
+                "content": "IE=edge"
+            },
+            {
+                "_template": "../core/page/PageMeta.hbs",
+                "name": "viewport",
+                "content": "width=device-width, initial-scale=1"
+            },
+            {
+                "_template": "TwitterPlayerCard.hbs",
+                "title": "{{words(10)}}",
+                "site": "brightspotcms",
+                "siteId": "358165108",
+                "description": "{{words(20)}}",
 
-            "player": "http://brightspot.com/iframe/url",
-            "playerWidth": 500,
-            "playerHeight": 500,
-            "playerStream": "http://brightspot.com/stream/url",
-            "playerStreamContentType": "video/mp4"
-        }
-    ],
+                "imageSource": "http://cdn.psddev.com/6d/5d/efd1da434d6abd8b1b08b8b29c4c/brightspot-logo-183.png",
+                "imageAlt": "alt",
+
+                "player": "http://brightspot.com/iframe/url",
+                "playerWidth": 500,
+                "playerHeight": 500,
+                "playerStream": "http://brightspot.com/stream/url",
+                "playerStreamContentType": "video/mp4"
+            }
+        ]
+    },
 
     "body": ""
 }

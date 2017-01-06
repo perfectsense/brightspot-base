@@ -1,7 +1,7 @@
 {
     "_template": "../core/page/Page.hbs",
 
-    "head": {
+    "headItems": {
         "_delegate": true
     },
 
