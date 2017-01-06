@@ -6,7 +6,7 @@
         {
             "_template": "PageExternalScript.hbs",
             "type": "application/javascript",
-            "src": "/main.js",
+            "src": "/styleguide/All.min.js",
             "async": false,
             "defer": false
         }
