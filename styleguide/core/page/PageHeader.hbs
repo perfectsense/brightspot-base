@@ -12,8 +12,24 @@
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
-    {{#defineElement "search"}}
-        <div class="{{elementName}}">{{this}}</div>
+    {{#defineElement "search" noWith=true}}
+        <div class="{{elementName}}">
+            <form class="{{elementName}}" action="{{searchUrl}}">
+                {{#with searchInputLabel}}<label for="{{../searchInputId}}" class="{{elementName}}-label">{{this}}</label>{{/with}}
+                <input
+                    type="text"
+                    class="{{elementName}}-input"
+                    {{#if searchInputRequired}}required{{/if}}
+                    {{#with searchInputId}}id="{{this}}"{{/with}}
+                    {{#with searchInputName}}name="{{this}}"{{/with}}
+                    {{#with searchInputPlaceholder}}placeholder="{{this}}"{{/with}}
+                    {{#with searchInputAutofocus}}autofocus="{{this}}"{{/with}}
+                    {{#with searchInputMaxlength}}maxlength="{{this}}"{{/with}}
+                    {{#with searchInputValue}}value="{{this}}"{{/with}}
+                    {{#with searchInputName}}name="{{this}}"{{/with}}>
+                {{#with searchButtonLabel}}<button type="submit" class="{{elementName}}-button">{{this}}</button>{{/with}}
+            </form>
+        </div>
     {{/defineElement}}
 
     {{#defineBlockContainer}}

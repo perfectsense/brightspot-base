@@ -10,5 +10,14 @@
         "_dataUrl": "PageNavigation.json"
     },
 
-    "search": null
+    "searchButtonLabel": "Search",
+    "searchInputAutofocus": true,
+    "searchInputId": "SearchInput",
+    "searchInputLabel": "",
+    "searchInputMaxlength": 250,
+    "searchInputName": "searchQuery",
+    "searchInputPlaceholder": "Type here",
+    "searchInputRequired": true,
+    "searchInputValue": "",
+    "searchUrl": "#"
 }
