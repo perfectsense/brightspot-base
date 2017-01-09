@@ -7,7 +7,7 @@
     },
 
     "promo": {
-        "_dataUrl": "../Promo.json"
+        "_dataUrl": "../promo/Promo.json"
     },
 
     "socialLinks": {

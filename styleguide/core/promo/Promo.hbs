@@ -1,5 +1,21 @@
-{{#defineBlock "MediaPromo" extend="Promo.hbs"}}
+{{#defineBlock "Promo"}}
+    {{#defineElement "category"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "title"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
     {{#defineElement "media"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "description"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "cta"}}
         <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
