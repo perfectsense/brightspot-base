@@ -1,6 +1,6 @@
 {
     "_template": "VideoPlayerPromo.hbs",
-    "url": "_playlist-items/Video-01.html",
+    "url": "playlist-items/Video-01.html",
     "title": "Promo Title",
     "media": {
         "_template": "../image/Image.hbs",
