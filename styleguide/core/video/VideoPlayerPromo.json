@@ -1,0 +1,10 @@
+{
+    "_template": "VideoPlayerPromo.hbs",
+    "url": "_playlist-items/Video-01.html",
+    "title": "Promo Title",
+    "media": {
+        "_template": "../image/Image.hbs",
+        "src": "{{image(100,100)}}"
+    },
+    "description": "Description goes here"
+}

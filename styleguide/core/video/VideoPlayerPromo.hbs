@@ -2,7 +2,10 @@
 
     {{#defineBlockContainer}}
 
-        <div class="{{blockName}}" data-ajax-url="{{url}}">
+        <div class="{{blockName}}"
+            {{#with url}}data-ajax-url="{{this}}"{{/with}}
+            {{#with active}}data-active{{/with}}
+            {{extraAttributes}}>
             {{#defineBlockBody}}
                 {{element "title"}}
                 {{element "media"}}

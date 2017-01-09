@@ -35,11 +35,17 @@ export class VideoMain {
     this._videoPlayer = player
   }
 
+  get activePlaylistItem () {
+    return $(this.selectors.playlistItemsWrapper).find(`${this.selectors.playlistItem}[${this.selectors.activeAttribute}]`)
+  }
+
   constructor ($ctx, options = {}) {
     this.$ctx = $ctx
 
     this.settings = $.extend({}, {
       selectors: {
+        activeAttribute: `data-active`,
+        content: `.VideoMain-content`,
         playlistItemsWrapper: `.VideoMain-playlist .Cluster-items`,
         playlistItem: `.Cluster-items-item .VideoPlayerPromo`
       }
@@ -63,11 +69,22 @@ export class VideoMain {
     $(this.selectors.playlistItemsWrapper).find(this.selectors.playlistItem).on('click', (event) => {
       event.preventDefault()
       event.stopPropagation()
-      debugger
+
       let $playlistItem = $(event.currentTarget)
+      let url = $playlistItem.attr('data-ajax-url')
+
       this.$ctx.trigger('VideoMain:onPlaylistItemClick', {
-        url: $playlistItem.attr('data-ajax-url')
+        url: url
       })
+
+      let $activePlaylistItem = this.activePlaylistItem
+      if ($activePlaylistItem.length) {
+        $activePlaylistItem.removeAttr(this.selectors.activeAttribute)
+      }
+
+      $playlistItem.attr(this.selectors.activeAttribute, '')
+
+      this.fetchView(url)
     })
 
     this.$ctx.trigger('VideoMain:onVideoLoaded', {})
@@ -75,8 +92,7 @@ export class VideoMain {
 
   fetchView (url) {
     $.ajax({
-      url: url,
-      async: false
+      url: url
     })
     .done((response) => {
       this.updateView($(response))
@@ -87,31 +103,22 @@ export class VideoMain {
     })
   }
 
-  updateVideoUrl (url) {
-    this.$ctx.trigger('VideoMain:onUpdateVideoUrl', {
-      videoUrl: url
-    })
-  }
-
   updateView ($html) {
     if (this.$ctx) {
       let $newVideoMain = $html
       this.$ctx.attr('id', $newVideoMain.attr('id'))
       this.videoPlayer.updateView($newVideoMain.find('[itemprop="video"]'))
-      this.$ctx.find('.VideoMain-details').replaceWith($html.find('.VideoMain-details'))
+      this.$ctx.find(this.selectors.content).replaceWith($html.find(this.selectors.content))
     } else {
       $(this.settings.updateTarget).after($html)
       this.$ctx = $html
     }
 
+    this.reset()
     this.init()
   }
 
-  resetVideo () {
-    this.$ctx.removeAttr('data-video-min')
-  }
-
-  minimizeVideo () {
-    this.$ctx.attr('data-video-min', '')
+  reset () {
+    $(this.selectors.playlistItemsWrapper).find(this.selectors.playlistItem).off('click')
   }
 }

@@ -1,0 +1,60 @@
+.VideoPlayerPromo {
+    &-title {
+        &:extend(.VideoPlayerPromo-title all);
+    }
+
+    &-media {
+        &:extend(.VideoPlayerPromo-media all);
+    }
+
+    &-description {
+        &:extend(.VideoPlayerPromo-description all);
+    }
+
+    &[data-active] {
+        &:extend(.VideoPlayerPromo[data-active] all);
+    }
+
+    & when (@_demo) {
+        background: #e7e5e4;
+        transition: opacity 120ms ease-out;
+
+        &:hover {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        &[data-active] {
+            background: #ffeb85;
+        }
+
+        &-title,
+        &-description {
+            padding: .2rem 1rem;
+            text-align: center;
+        }
+
+        &-media {
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 0;
+                height: 0;
+                border-width: 10px 0 10px 16px;
+                border-style: solid;
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+                margin: 7px 9px;
+            }
+        }
+
+        &-media .Image {
+            ._FluidImage;
+        }
+    }
+}

@@ -6,7 +6,11 @@
     "id": "{{number([1,100])}}",
     "permalink": "foo/bar?q=qux",
     "headline": "The Air Up There",
-    "description": "{{words([15,30])}}",
+
+    "description": {
+        "_template": "../RawHtml.hbs",
+        "html": "{{paragraphs(2)}}"
+    },
 
     "videoPlayer": {
         "_dataUrl": "_MPXVideoPlayer.json",
@@ -27,18 +31,23 @@
     "playlist": {
         "_template": "../cluster/Cluster.hbs",
 
-        "title": "Other Videos",
+        "title": "Playlist Videos",
         "items": [
             {
-                "_repeat": 6,
-                "_template": "VideoPlayerPromo.hbs",
-                "url": "_demo/Video-01.html",
-                "title": "Title {{words}}",
-                "media": {
-                    "_template": "../image/Image.hbs",
-                    "src": "{{image(40,40)}}"
-                },
-                "description": "{{words}}"
+                "_dataUrl": "VideoPlayerPromo.json",
+                "url": "_playlist-items/Video-01.html",
+                "title": "The Air Up There",
+                "active": true
+            },
+            {
+                "_dataUrl": "VideoPlayerPromo.json",
+                "url": "_playlist-items/Video-02.html",
+                "title": "Nobody Said It Would Be Easy"
+            },
+            {
+                "_dataUrl": "VideoPlayerPromo.json",
+                "url": "_playlist-items/Video-03.html",
+                "title": "Battle Dawgs"
             }
         ]
     }
