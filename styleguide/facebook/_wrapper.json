@@ -1,0 +1,29 @@
+{
+    "_template": "../core/Page.hbs",
+
+    "head": {
+        "_template": "../core/Head.hbs",
+        "title": "Styleguide",
+        "description": "Brightspot Base Styleguide",
+        "keywords": "Brightspot Base, Styleguide, Inspire Confidence",
+        "items": [
+            {
+                "_template": "../core/Meta.hbs",
+                "httpEquiv": "X-UA-Compatible",
+                "content": "IE=edge"
+            },
+            {
+                "_template": "../core/Meta.hbs",
+                "name": "viewport",
+                "content": "width=device-width, initial-scale=1"
+            },
+            {
+                "_dataUrl": "FacebookJavaScriptSdk.json"
+            }
+        ]
+    },
+
+    "body": {
+        "_delegate": true
+    }
+}

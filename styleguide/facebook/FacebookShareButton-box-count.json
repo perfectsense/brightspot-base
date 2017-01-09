@@ -1,0 +1,8 @@
+{
+    "_wrapper": "_wrapper.json",
+    "_template": "FacebookShareButton.hbs",
+    "href": "",
+    "layout": "box_count",
+    "mobile_iframe": false,
+    "size": "small"
+}
