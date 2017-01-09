@@ -19,7 +19,7 @@
                 "content": "width=device-width, initial-scale=1"
             },
             {
-                "_dataUrl": "TwitterWidgetsJavaScript.json"
+                "_dataUrl": "widgets/TwitterWidgetsJavaScript.json"
             }
         ]
     },

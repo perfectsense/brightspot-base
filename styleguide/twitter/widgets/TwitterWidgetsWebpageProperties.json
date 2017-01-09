@@ -1,5 +1,5 @@
 {
-    "_wrapper": "_wrapper-head-only.json",
+    "_wrapper": "../_wrapper-head-only.json",
     "_template": "TwitterWidgetsWebpageProperties.hbs",
     "borderColor": "{{hexColor(50)}}",
     "csp": true,
