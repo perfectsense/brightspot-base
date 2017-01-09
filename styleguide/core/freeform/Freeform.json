@@ -1,0 +1,14 @@
+{
+    "_template": "Freeform.hbs",
+    "background": "#ddd",
+    "items": [
+        {
+            "_template": "../link/Link.hbs",
+            "body": "Hello"
+        },
+        {
+            "_template": "../link/Link.hbs",
+            "body": "World!"
+        }
+    ]
+}
