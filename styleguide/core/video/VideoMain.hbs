@@ -23,9 +23,9 @@
                 <aside class="{{blockName}}-content"
                     {{#if videoHLS}}data-videoUrl="{{{videoHLS}}}"{{/if}}
                     {{#if videoSeekTime}}data-video-seek-time="{{videoSeekTime}}"{{/if}}>
-                    {{element "preHeadline"}}
-                    <h1>{{element "headline"}}</h1>
-                    {{element "subHeadline"}}
+                    {{element "tags"}}
+                    {{element "headline"}}
+                    {{element "authors"}}
                     {{element "description"}}
                     {{element "sharebar"}}
                 </aside>

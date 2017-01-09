@@ -1,23 +1,45 @@
 {
+    "_wrapper": "_wrapper.json",
+
     "_template": "VideoMain.hbs",
 
     "id": "{{number([1,100])}}",
     "permalink": "foo/bar?q=qux",
-    "videoPlayer": {
-        "_dataUrl": "_VideoPlayer.json",
-        "hlsUrl": "//link.theplatform.com/s/{{var('mpxAccountId')}}/E5BWsOHBPO9y",
-        "seekSeconds": 18
-    },
-    "preHeadline": {
-        "_template": "../link/Link.hbs",
-        "body": "Sports",
-        "href": "#"
-    },
     "headline": "The Air Up There",
-    "subHeadline": {
-        "_template": "../link/Link.hbs",
-        "body": "caption credit name",
-        "href": "#"
+    "description": "{{words([15,30])}}",
+
+    "videoPlayer": {
+        "_dataUrl": "_MPXVideoPlayer.json",
+        "hlsUrl": "//link.theplatform.com/s/1X3jUC/E5BWsOHBPO9y",
+        "seekSeconds": 10
     },
-    "description": "{{words([15,30])}}"
+
+    "tags": {
+        "_dataUrl": "../TagList.json"
+    },
+
+    "authors": [
+        {
+            "_dataUrl": "../author/Author.json"
+        }
+    ],
+
+    "playlist": {
+        "_template": "../cluster/Cluster.hbs",
+
+        "title": "Other Videos",
+        "items": [
+            {
+                "_repeat": 6,
+                "_template": "VideoPlayerPromo.hbs",
+                "url": "_demo/Video-01.html",
+                "title": "Title {{words}}",
+                "media": {
+                    "_template": "../image/Image.hbs",
+                    "src": "{{image(40,40)}}"
+                },
+                "description": "{{words}}"
+            }
+        ]
+    }
 }

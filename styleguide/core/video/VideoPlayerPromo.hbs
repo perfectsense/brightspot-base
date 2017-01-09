@@ -1,0 +1,14 @@
+{{#defineBlock "VideoPlayerPromo" extend="../promo/Promo.hbs"}}
+
+    {{#defineBlockContainer}}
+
+        <div class="{{blockName}}" data-ajax-url="{{url}}">
+            {{#defineBlockBody}}
+                {{element "title"}}
+                {{element "media"}}
+                {{element "description"}}
+            {{/defineBlockBody}}
+        </div>
+
+    {{/defineBlockContainer}}
+{{/defineBlock}}

@@ -64,26 +64,26 @@ export class MPXVideoPlayer {
     this.fullScreen = false
 
     this.playerXml = `<?xml version='1.0'?>
-            <layout>
-                <controls>
-                    <region id='tpBottomFloatRegion'>
-                        <row paddingTop="20">
-                            <spacer width="10%" />
-                            <control id='tpPlay' />
-                            <control id='tpMute' />
-                            //<spacer width="5%" />
-                            <group>
-                                <control id='tpCurrentTime'/>
-                                <control id='tpScrubber'/>
-                                <control id='tpTotalTime'/>
-                            </group>
-                            //<spacer width="5%" />
-                            <control id='tpFullScreen' scaleIcon='true' />
-                            <spacer width="10%" />
-                        </row>
-                    </region>
-                </controls>
-            </layout>`
+      <layout>
+          <controls>
+              <region id='tpBottomFloatRegion'>
+                  <row paddingTop="20">
+                      <spacer width="10%" />
+                      <control id='tpPlay' />
+                      <control id='tpMute' />
+                      //<spacer width="5%" />
+                      <group>
+                          <control id='tpCurrentTime'/>
+                          <control id='tpScrubber'/>
+                          <control id='tpTotalTime'/>
+                      </group>
+                      //<spacer width="5%" />
+                      <control id='tpFullScreen' scaleIcon='true' />
+                      <spacer width="10%" />
+                  </row>
+              </region>
+          </controls>
+      </layout>`
 
     this.$ctx.find('iframe' + '#mpxPlayer' + this.playerId).off('load').on('load', () => {
       this.playerController = window.videoPlayerControllers[this.playerId]
@@ -91,9 +91,6 @@ export class MPXVideoPlayer {
       let checkForPDKReady = setInterval(() => {
         if (isPDKloaded()) {
           clearInterval(checkForPDKReady)
-          // OnPlayerLoaded event
-          // https://docs.theplatform.com/help/article/link/player-pdkevent-reference#PdkEventreference-OnPlayerLoaded
-          this.playerController.addEventListener('OnPlayerLoaded', (e) => { this.onPlayerLoaded(e) })
           this.playerController.addEventListener('OnReleaseStart', (e) => { this.onMediaReady(e) })
           this.playerController.addEventListener('OnMediaStart', (e) => { this.onMediaStart(e) })
           this.playerController.addEventListener('OnMediaPlaying', (e) => { this.onMediaPlaying(e) })
@@ -153,10 +150,6 @@ export class MPXVideoPlayer {
     })
   }
 
-  onPlayerLoaded (event) {
-      // why doesn't this ever fire?
-  }
-
   onMediaReady (event) {
     this.$ctx.trigger('VideoMain:onVideoLoaded', {})
   }
@@ -169,7 +162,7 @@ export class MPXVideoPlayer {
     let seekTo = this.$ctx.attr('data-seek-seconds')
     if (seekTo) {
       seekTo *= 1000
-      this.playerController.seekToPosition(seekTo)
+      setTimeout(() => this.playerController.seekToPosition(seekTo), 200)
     }
 
     this.$ctx.trigger('VideoMain:onVideoPlaybackStarted', {
@@ -184,17 +177,6 @@ export class MPXVideoPlayer {
     this.$ctx.trigger('VideoMain:onPlaybackTimeUpdate', {
       secondsElapsed: data.currentTime / 1000
     })
-
-      /*
-      // video naturally ended.
-      // This isn't exact because PDK never reaches 100 percentComplete for some reason
-      if (Math.round(data.percentComplete) === 100) {
-          this.playerController.removeEventListener("OnMediaPlaying", this.onMediaPlaying)
-          this.$ctx.trigger('VideoMain:onVideoEnded', {
-              percentComplete: data.percentComplete
-          })
-      }
-      */
   }
 
   onMediaEnded (event) {
@@ -213,11 +195,11 @@ export class MPXVideoPlayer {
   }
 
   updateView ($newVideo) {
-        // update the HLS url
+    // update the HLS url
     this.$ctx.attr('data-hls-url', $newVideo.attr('data-hls-url'))
-      // update the seek time
+    // update the seek time
     this.$ctx.attr('data-seek-seconds', $newVideo.attr('data-seek-seconds') || '')
-      // replace the introCard DOM
+    // replace the introCard DOM
     this.$ctx
           .find(`.${this.selectors.blockName}${this.selectors.introCard}`)
           .replaceWith($newVideo.find(`.${this.selectors.blockName}${this.selectors.introCard}`))

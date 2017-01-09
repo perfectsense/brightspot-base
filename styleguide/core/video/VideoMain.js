@@ -40,12 +40,8 @@ export class VideoMain {
 
     this.settings = $.extend({}, {
       selectors: {
-        infoCard: '.InfoCard ',
-        infoCardHeadline: '.InfoCard-headline',
-        infoCardTitle: '.InfoCard-title',
-        companionPromo: '.CompanionPromo',
-        companionsWrapper: '.VideoMain-details-companionsWrapper',
-        infoWrapper: '.VideoMain-details-infoWrapper'
+        playlistItemsWrapper: `.VideoMain-playlist .Cluster-items`,
+        playlistItem: `.Cluster-items-item .VideoPlayerPromo`
       }
     }, options)
 
@@ -53,6 +49,7 @@ export class VideoMain {
       this.init()
     }
   }
+
   init () {
     if (!this.videoPlayer) {
       // MPXVideoPlayer bindings (TODO: move this out to a method)
@@ -62,46 +59,16 @@ export class VideoMain {
       })
     }
 
-        // TODO: refactor this
-    let $videoMainTabs = this.$ctx.find('.VideoMain-tabs')
-    if ($videoMainTabs.length) {
-            // Toggles the active tab
-      $videoMainTabs.children().on('click', (evt) => {
-        let $el = $(evt.target)
-        evt.preventDefault()
-
-        // Only returns a [data-active] sibling, not the original element
-        let currentActiveTab = $el.siblings('[data-active]')
-
-        // These flags will only return true if the queried name is a sibling
-        // of the clicked tab and that sibling tag is active
-        let isSiblingCompanionAndActive = (currentActiveTab.attr('name') === 'companions')
-        let isSiblingInfoAndActive = (currentActiveTab.attr('name') === 'info')
-
-        if (isSiblingCompanionAndActive) {
-          $(this.selectors.companionsWrapper).removeAttr('data-is-visible')
-          $(this.selectors.infoWrapper).attr('data-is-visible', '')
-        } else if (isSiblingInfoAndActive) {
-          $(this.selectors.companionsWrapper).attr('data-is-visible', '')
-          $(this.selectors.infoWrapper).removeAttr('data-is-visible')
-        }
-
-        currentActiveTab.removeAttr('data-active')
-        $el.attr('data-active', '')
+    // Binds click on playlist items
+    $(this.selectors.playlistItemsWrapper).find(this.selectors.playlistItem).on('click', (event) => {
+      event.preventDefault()
+      event.stopPropagation()
+      debugger
+      let $playlistItem = $(event.currentTarget)
+      this.$ctx.trigger('VideoMain:onPlaylistItemClick', {
+        url: $playlistItem.attr('data-ajax-url')
       })
-
-            // Binds click on companion promos
-      $(this.selectors.companionsWrapper).find(this.selectors.companionPromo).on('click', (e) => {
-        e.preventDefault()
-        e.stopPropagation()
-
-        let $companion = $(e.currentTarget)
-        this.$ctx.trigger('VideoMain:onCompanionClick', {
-          url: $companion.attr('data-ajax-url'),
-          mediaType: $companion.attr('data-media-type')
-        })
-      })
-    }
+    })
 
     this.$ctx.trigger('VideoMain:onVideoLoaded', {})
   }
