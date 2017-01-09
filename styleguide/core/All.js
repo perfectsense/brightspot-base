@@ -9,7 +9,7 @@ $(document).ready(function () {
   /* eslint-disable no-new */
 
   // Gallery binding
-  $('.Gallery').each((index, value) => {
+  $('.Gallery, .GalleryMain').each((index, value) => {
     let gallery = new Gallery($(value), {})
     // Get options from the data-bsp-gallery-options attribute
     // let options = this.option(item)
