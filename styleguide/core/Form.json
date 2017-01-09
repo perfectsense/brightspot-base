@@ -1,0 +1,18 @@
+{
+    "_template": "Form.hbs",
+
+    "action": "{{var('exampleSiteUrl')}}",
+    "method": "POST",
+    "enctype": "text/plain",
+    "items": [
+        {
+            "_template": "Input.hbs",
+            "placeholder": "Email"
+        }
+
+    ],
+    "button": {
+        "_template": "Button.hbs",
+        "text": "Sign Up"
+    }
+}
