@@ -1,0 +1,10 @@
+{
+    "_template": "Cluster.hbs",
+    "title": "{{words}}",
+    "items": [
+        {
+            "_dataUrl": "../promo/Promo.json",
+            "_repeat": [ 3, 6 ]
+        }
+    ]
+}

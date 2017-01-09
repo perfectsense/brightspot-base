@@ -1,4 +1,8 @@
-{{#defineBlock "ListPromo" extend="promo/Promo.hbs"}}
+{{#defineBlock "Cluster"}}
+    {{#defineElement "title"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
     {{#defineElement "items"}}
         <ul class="{{elementName}}">
             {{#each this}}
@@ -10,11 +14,8 @@
     {{#defineBlockContainer}}
         <div class="{{blockName}}"{{extraAttributes}}>
             {{#defineBlockBody}}
-                {{element "category"}}
                 {{element "title"}}
-                {{element "description"}}
                 {{element "items"}}
-                {{element "cta"}}
             {{/defineBlockBody}}
         </div>
     {{/defineBlockContainer}}
