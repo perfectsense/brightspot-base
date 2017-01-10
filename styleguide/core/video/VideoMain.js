@@ -1,5 +1,4 @@
 import $ from 'node_modules/jquery/dist/jquery.js'
-import { MPXVideoPlayer } from './MPXVideoPlayer.js'
 
 export class VideoMain {
 
@@ -57,14 +56,6 @@ export class VideoMain {
   }
 
   init () {
-    if (!this.videoPlayer) {
-      // MPXVideoPlayer bindings (TODO: move this out to a method)
-      this.$ctx.find('.MPXVideoPlayer').each((index, value) => {
-        this.videoPlayer = new MPXVideoPlayer($(value))
-        window.registerPlayer(this.videoPlayer, this.videoPlayer.playerId)
-      })
-    }
-
     // Binds click on playlist items
     $(this.selectors.playlistItemsWrapper).find(this.selectors.playlistItem).on('click', (event) => {
       event.preventDefault()

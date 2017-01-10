@@ -13,7 +13,7 @@
     },
 
     "videoPlayer": {
-        "_dataUrl": "_MPXVideoPlayer.json",
+        "_dataUrl": "players/MPXVideoPlayer.json",
         "hlsUrl": "//link.theplatform.com/s/1X3jUC/E5BWsOHBPO9y",
         "seekSeconds": 10
     },

@@ -1,29 +1,13 @@
 {{#defineBlock "MPXVideoPlayer"}}
 
-    {{#defineElement "overlay" noWith=true}}
-        <div class="{{elementName}}">
-            <span class="{{elementName}}-volumeButton"></span>
-            <span class="{{elementName}}-minimizeButton"></span>
-        </div>
-    {{/defineElement}}
-
     {{#defineElement "screen" noWith=true}}
-        <div class="{{elementName}}"
-            data-aspect-ratio="{{#if aspectRatio}}{{aspectRatio}}{{else}}4x3{{/if}}">
+        <div class="{{elementName}}" data-aspect-ratio="{{#if aspectRatio}}{{aspectRatio}}{{else}}4x3{{/if}}">
             <iframe id="mpxPlayer{{id}}" src="{{{src}}}/embed?form=html"
                 onload="registerPlayerController($pdk.bind(this), '{{id}}'); $pdk.controller.setIFrame(this, true);"
                 allowfullscreen
                 frameborder="0">
             </iframe>
         </div>
-    {{/defineElement}}
-
-    {{#defineElement "introCard"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
-
-    {{#defineElement "infoCard"}}
-        <div class="{{elementName}}">{{this}}</div>
     {{/defineElement}}
 
     {{#defineBlockContainer}}
@@ -36,10 +20,7 @@
             {{#if autoplay}}data-autoplay{{/if}}
             {{extraAttributes}}>
             {{#defineBlockBody}}
-                {{element "overlay"}}
                 {{element "screen"}}
-                {{element "introCard"}}
-                {{element "infoCard"}}
             {{/defineBlockBody}}
         </div>
     {{/defineBlockContainer}}

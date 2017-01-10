@@ -1,4 +1,6 @@
 {
+    "_wrapper": "../_wrapper.json",
+
     "_template": "MPXVideoPlayer.hbs",
 
     "id": "Video-Player-Id-Goes-Here",

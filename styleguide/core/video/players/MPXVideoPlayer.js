@@ -1,5 +1,5 @@
 import $ from 'node_modules/jquery/dist/jquery.js'
-import { isPDKloaded, isMobileUA } from '../Utils.js'
+import { isPDKloaded, isMobileUA } from '../../Utils.js'
 
 // PDK Event reference: https://docs.theplatform.com/help/article/link/player-pdkevent-reference
 
@@ -50,13 +50,9 @@ export class MPXVideoPlayer {
 
     this.settings = $.extend({ }, {
       autoplay: true,
-      companionPlayer: false,
       playerIdPrefix: 'mpxPlayer',
       selectors: {
-        blockName: 'MPXVideoPlayer',
-        introCard: '-introCard',
-        videoMinimizeButton: '.MPXVideoPlayer-overlay-minimizeButton',
-        videoVolumeButton: '.MPXVideoPlayer-overlay-volumeButton'
+        blockName: 'MPXVideoPlayer'
       }
     }, options)
 
@@ -112,21 +108,6 @@ export class MPXVideoPlayer {
     } else {
       this.playerController.setReleaseURL(this.$ctx.attr('data-hls-url'), true)
     }
-
-    $(this.selectors.videoMinimizeButton).on({
-      'click': (event) => {
-        this.$ctx.trigger('VideoMain:onMinimize', {})
-      }
-    })
-
-    $(this.selectors.videoVolumeButton).on({
-      'click': (event) => {
-        let id = this.$ctx.attr('id')
-        this.$ctx.trigger('VideoMain:onVolumeChange', {
-          scopeId: id
-        })
-      }
-    })
   }
 
   // Listening on Muted state
@@ -166,8 +147,7 @@ export class MPXVideoPlayer {
     }
 
     this.$ctx.trigger('VideoMain:onVideoPlaybackStarted', {
-      playerId: this.playerId,
-      companionPlayer: this.settings.companionPlayer
+      playerId: this.playerId
     })
   }
 
@@ -181,7 +161,6 @@ export class MPXVideoPlayer {
 
   onMediaEnded (event) {
     this.$ctx.trigger('VideoMain:onVideoEnded', {
-      suppressAutoAdvance: this.settings.companionPlayer,
       playerId: this.playerId
     })
   }
@@ -199,11 +178,7 @@ export class MPXVideoPlayer {
     this.$ctx.attr('data-hls-url', $newVideo.attr('data-hls-url'))
     // update the seek time
     this.$ctx.attr('data-seek-seconds', $newVideo.attr('data-seek-seconds') || '')
-    // replace the introCard DOM
-    this.$ctx
-          .find(`.${this.selectors.blockName}${this.selectors.introCard}`)
-          .replaceWith($newVideo.find(`.${this.selectors.blockName}${this.selectors.introCard}`))
-
+    // re-init
     this.init()
   }
 
