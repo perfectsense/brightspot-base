@@ -1,20 +1,22 @@
 {
     "_wrapper": false,
-    "_template": "../core/Page.hbs",
+    "_template": "../page/Page.hbs",
 
-    "head": {
-        "_template": "../core/Head.hbs",
-        "title": "Styleguide",
-        "description": "Brightspot Base Styleguide",
-        "keywords": "Brightspot Base, Styleguide, Inspire Confidence",
+    "title": "Styleguide - Open Graph",
+    "description": "Brightspot Base Styleguide - Open Graph",
+    "keywords": "Brightspot Base, Styleguide, Inspire Confidence, Open Graph",
+
+    "headItems": {
+        "_template": "../Concatenated.hbs",
+
         "items": [
             {
-                "_template": "../core/Meta.hbs",
+                "_template": "../page/PageMeta.hbs",
                 "httpEquiv": "X-UA-Compatible",
                 "content": "IE=edge"
             },
             {
-                "_template": "../core/Meta.hbs",
+                "_template": "../page/PageMeta.hbs",
                 "name": "viewport",
                 "content": "width=device-width, initial-scale=1"
             },
