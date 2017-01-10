@@ -1,5 +1,5 @@
 {
-    "_template": "OpenGraphVideoMetadata.hbs",
+    "_template": "OpenGraphVideoMeta.hbs",
     "url": "http://url.to.video.mp4",
     "secureUrl": "https://url.to.video.mp4",
     "type": "video/mp4",

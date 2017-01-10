@@ -1,5 +1,5 @@
 {
-    "_template": "OpenGraphImageMetadata.hbs",
+    "_template": "OpenGraphImageMeta.hbs",
     "url": "http://cdn.psddev.com/6d/5d/efd1da434d6abd8b1b08b8b29c4c/brightspot-logo-183.png",
     "secureUrl": "https://cdn.psddev.com/6d/5d/efd1da434d6abd8b1b08b8b29c4c/brightspot-logo-183.png",
     "type": "image/png",

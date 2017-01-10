@@ -1,5 +1,5 @@
 {
-    "_template": "OpenGraphAudioMetadata.hbs",
+    "_template": "OpenGraphAudioMeta.hbs",
     "url": "http://url.to.audio.mp4",
     "secureUrl": "https://url.to.audio.mp4",
     "type": "audio/mp4"

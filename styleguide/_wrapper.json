@@ -18,6 +18,9 @@
                 "_template": "core/page/PageMeta.hbs",
                 "name": "viewport",
                 "content": "width=device-width, initial-scale=1"
+            },
+            {
+                "_dataUrl": "core/page/_OpenGraphMeta.json"
             }
         ]
     },
