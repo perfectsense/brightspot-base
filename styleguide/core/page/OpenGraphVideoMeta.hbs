@@ -1,0 +1,34 @@
+{{#defineBlock "OpenGraphVideoMeta"}}
+
+    {{! Required Elements }}
+
+    {{#defineElement "url"}}
+        <meta property="og:video" content="{{this}}" />
+    {{/defineElement}}
+
+    {{! Optional Elements }}
+
+    {{#defineElement "secureUrl"}}
+        <meta property="og:video:secure_url" content="{{this}}" />
+    {{/defineElement}}
+
+    {{#defineElement "type"}}
+        <meta property="og:video:type" content="{{this}}" />
+    {{/defineElement}}
+
+    {{#defineElement "width"}}
+        <meta property="og:video:width" content="{{this}}" />
+    {{/defineElement}}
+
+    {{#defineElement "height"}}
+        <meta property="og:video:height" content="{{this}}" />
+    {{/defineElement}}
+
+    {{#defineBlockBody}}
+        {{element "url"}}
+        {{element "secureUrl"}}
+        {{element "type"}}
+        {{element "width"}}
+        {{element "height"}}
+    {{/defineBlockBody}}
+{{/defineBlock}}

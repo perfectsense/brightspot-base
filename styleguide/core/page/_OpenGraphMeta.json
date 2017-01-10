@@ -1,0 +1,32 @@
+{
+    "_template": "OpenGraphMeta.hbs",
+    "title": "{{words(5)}}",
+    "type": "website",
+    "url": "http://brightspot.com",
+    "description": "{{words([5, 15])}}",
+    "determiner": "auto",
+    "locale": "en_US",
+    "localeAlternates": [
+        "es_ES",
+        "fr_FR"
+    ],
+    "siteName": "Brightspot Base",
+    "images": [
+        {
+            "_dataUrl": "_OpenGraphImageMeta.json",
+            "_repeat": [1, 4]
+        }
+    ],
+    "videos": [
+        {
+            "_dataUrl": "_OpenGraphVideoMeta.json",
+            "_repeat": [1, 4]
+        }
+    ],
+    "audios": [
+        {
+            "_dataUrl": "_OpenGraphAudioMeta.json",
+            "_repeat": [1, 4]
+        }
+    ]
+}
