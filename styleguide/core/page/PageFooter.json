@@ -1,0 +1,25 @@
+{
+    "_template": "PageFooter.hbs",
+
+    "logo": {
+        "_template": "../image/Image.hbs",
+        "src": "{{image(200, 60)}}"
+    },
+
+    "promo": {
+        "_dataUrl": "../promo/Promo.json"
+    },
+
+    "socialLinks": {
+        "_dataUrl": "../link/_SocialLinks.json"
+    },
+
+    "navigation": {
+        "_dataUrl": "PageNavigation.json"
+    },
+
+    "copyright": {
+        "_template": "../RawHtml.hbs",
+        "html": "&copy; 2016 Perfect Sense. Site powered by our <a href=\"http://www.brightspot.com/\">Brightspot</a> publishing platform."
+    }
+}

@@ -1,0 +1,24 @@
+.Embed {
+
+    &[data-alignment='left'] {
+        &:extend(.Embed[data-alignment='left'] all);
+    }
+
+    &[data-alignment='right'] {
+        &:extend(.Embed[data-alignment='right'] all);
+    }
+
+    & when (@_demo) {
+        margin: 2rem;
+
+        &[data-alignment='left'] {
+            float: left;
+            margin-left: 0;
+        }
+
+        &[data-alignment='right'] {
+            float: right;
+            margin-right: 0;
+        }
+    }
+}

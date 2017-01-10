@@ -5,12 +5,13 @@ class CommentEntry {
   constructor ($context, options) {
     this.$context = $context
     this.settings = $.extend({}, {
+      countdown: true,
       selectors: {
         prefix: '.CommentEntry',
         commentBlock: '.Comment',
         commentingBlock: '.Commenting',
-        signInBlock: '.UserSignIn',
-        validationBlock: '.ValidationMessages',
+        signInBlock: '.Commenting-signIn',
+        validationBlock: '.CommentEntry-errorMessages',
         responseBlock: '.CommentActionResponse'
       }
     }, options)
@@ -23,6 +24,12 @@ class CommentEntry {
       this.onSubmit()
       this.$context.trigger('CommentEntry:onSubmitComment')
     })
+
+    if (this.settings.countdown) {
+      this.$input.on('keyup', (e) => {
+        this.onKeyUp(e)
+      })
+    }
   }
 
   get selectors () {
@@ -35,6 +42,54 @@ class CommentEntry {
 
   get $form () {
     return this.$context.find(`${this.selectors.prefix}-form`)
+  }
+
+  get $input () {
+    return this.$context.find('textarea')
+  }
+
+  get $countDown () {
+    return this.$context.find(`${this.settings.selectors.prefix}-inputCharacterCount`)
+  }
+
+  get previousLength () {
+    let int = this.$countDown.text().match(/[0-9 , \.]+/g)
+    return (int[0] && int[0].length) ? int[0].trim() : null
+  }
+
+  get length () {
+    return this.$input.val().length
+  }
+
+  get remainingCharacters () {
+    let length = this.$input.attr('maxlength') - this.length
+    if (length < 0) length = 0 // just in case :)
+    return length
+  }
+
+  updateCountdown () {
+    let text = this.$countDown.text()
+    let charsLeft = this.remainingCharacters
+    let lastLength = this.previousLength
+
+    if (lastLength) {
+      text = text.replace(lastLength, charsLeft)
+    } else {
+      text = charsLeft
+    }
+
+    this.$countDown.text(text)
+  }
+
+  onKeyUp (event) {
+    this.updateCountdown()
+  }
+
+  onKeyPress (event) {
+    // prevent line-breaks/wrapping in the input
+    if (event.which === 13) {
+      event.preventDefault()
+    }
   }
 
   onSubmit () {
@@ -52,7 +107,7 @@ class CommentEntry {
   }
 
   onRequestError (data) {
-    let $errorMessage = this.$context.find(`${this.selectors.validationBlock}-serverError`)
+    let $errorMessage = this.$context.find(`${this.selectors.validationBlock}-server`)
     $errorMessage.attr('data-visible', '')
     this.$context.trigger('CommentEntry:onSubmitCommentError', { error: data })
   }

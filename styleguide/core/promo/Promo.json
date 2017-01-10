@@ -1,0 +1,13 @@
+{
+    "_template": "Promo.hbs",
+    "category": "{{words(1)}}",
+    "title": "{{words}}",
+    "media": {
+        "_template": "../image/Image.hbs",
+        "src": "{{image(40,40)}}"
+    },
+    "description": "{{words}}",
+    "cta": {
+        "_dataUrl": "../link/Link.json"
+    }
+}

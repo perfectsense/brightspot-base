@@ -1,0 +1,15 @@
+<a class="FacebookShareDialogButton"
+    href="https://www.facebook.com/dialog/share
+    {{~#with facebookAppId~}}?app_id={{this}}{{/with}}
+    {{~#with display~}}&display={{this}}{{/with}}
+    {{~#with href~}}&href={{this}}{{/with}}
+    {{~#with redirectUri~}}&redirect_uri={{this}}{{/with}}"
+
+    {{~#with target}}
+        target="{{this}}"
+    {{else}}
+        target="_blank"
+    {{~/with~}}
+>
+    {{body}}
+</a>

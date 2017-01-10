@@ -5,22 +5,22 @@
 
     "items": [
         {
-            "_template": "Link.hbs",
+            "_template": "link/Link.hbs",
             "href": "{{var('exampleSiteUrl')}}",
             "body": "Courage"
         },
         {
-            "_template": "Link.hbs",
+            "_template": "link/Link.hbs",
             "href": "{{var('exampleSiteUrl')}}",
             "body": "Environment"
         },
         {
-            "_template": "Link.hbs",
+            "_template": "link/Link.hbs",
             "href": "{{var('exampleSiteUrl')}}",
             "body": "Happiness"
         },
         {
-            "_template": "Link.hbs",
+            "_template": "link/Link.hbs",
             "href": "{{var('exampleSiteUrl')}}",
             "body": "Hope"
         }

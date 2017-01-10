@@ -1,23 +1,24 @@
 /* eslint-disable no-unused-vars */
 import $ from 'node_modules/jquery/dist/jquery.js'
-import TextInput from './TextInput.js'
-import TextAreaInput from './TextAreaInput.js'
-import Gallery from './GalleryMain.js'
-import { VideoMain } from './VideoMain.js'
+import Gallery from './gallery/Gallery.js'
+import { VideoMain } from './video/VideoMain.js'
 import bspCarouselPlugin from 'bsp-carousel-plugin'
 /* eslint-enable no-unused-vars */
 
 $(document).ready(function () {
   /* eslint-disable no-new */
 
-  // TextInput
-  $('.TextInput').each((index, value) => {
-    new TextInput($(value))
-  })
+  // Gallery binding
+  $('.Gallery, .GalleryMain').each((index, value) => {
+    let gallery = new Gallery($(value), {})
+    // Get options from the data-bsp-gallery-options attribute
+    // let options = this.option(item)
 
-  // TextAreaInput
-  $('.TextAreaInput').each((index, value) => {
-    new TextAreaInput($(value))
+    // Save the Gallery object on the element so it can be accessed later if necessary
+    $(value).data('bsp-gallery', gallery)
+
+    // Run it!
+    gallery.init()
   })
 
   window.videoPlayers = []

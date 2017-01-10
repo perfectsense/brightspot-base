@@ -1,0 +1,33 @@
+.Promo {
+    &:extend(.Promo all);
+
+    &-category {
+        &:extend(.Promo-category all);
+    }
+
+    &-title {
+        &:extend(.Promo-title all);
+    }
+
+    &-media {
+        &:extend(.Promo-media all);
+    }
+
+    &-description {
+        &:extend(.Promo-description all);
+    }
+
+    &-cta {
+        &:extend(.Promo-cta all);
+    }
+
+    & when (@_demo) {
+        &-title {
+            ._TextLarge;
+        }
+
+        &-description {
+            ._TextSmall;
+        }
+    }
+}

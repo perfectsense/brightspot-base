@@ -1,0 +1,31 @@
+{{#defineBlock "ArticleMain" extend="../CreativeWorkMain.hbs"}}
+    {{#defineElement "lead"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "body"}}
+        <div class="{{elementName}}" itemprop="articleBody">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <article class="{{blockName}}" itemprop="mainEntity" itemscope itemtype="http://schema.org/Article"{{extraAttributes}}>
+            {{element "meta"}}
+
+            {{#defineBlockBody}}
+                {{element "breadcrumbs"}}
+                {{element "preHeadline"}}
+                {{element "headline"}}
+                {{element "subHeadline"}}
+                {{element "byline"}}
+                {{element "authors"}}
+                {{element "datePublished"}}
+                {{element "dateModified"}}
+                {{element "lead"}}
+                {{element "body"}}
+                {{element "tags"}}
+                {{element "sharebar"}}
+                {{element "comments"}}
+            {{/defineBlockBody}}
+        </article>
+    {{/defineBlockContainer}}
+{{/defineBlock}}

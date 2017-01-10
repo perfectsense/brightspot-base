@@ -109,6 +109,41 @@
     }
 }
 
+._IconUp(){
+    &:before,
+    &:after {
+        content: '';
+        pointer-events: none;
+        top: 2px;
+        transform: rotate(135deg);
+        width: 7px;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        margin: auto 0;
+        right: -7px;
+        box-shadow: inset 0 0 0 32px;
+        transform-origin: right;
+    }
+    &:after {
+        transform: rotate(45deg);
+    }
+}
+
+._IconDown(){
+    &:before {
+        top: -7px;
+        transform: rotate(-45deg);
+    }
+
+    &:after {
+        top: -7px;
+        transform: rotate(-135deg);
+    }
+
+    ._IconUp();
+}
+
 ._IconPrev() {
     transform: rotate(180deg);
     ._IconNext();
@@ -189,6 +224,7 @@
 
     @import 'Sizes';
     @import 'Modal';
+    @import 'Gallery';
 
     html {
         font-size: 27px;
@@ -217,6 +253,4 @@
     a {
         color: dodgerblue;
     }
-
-    ._Gallery;
 }

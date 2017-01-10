@@ -1,0 +1,14 @@
+{
+    "_template": "GallerySlide.hbs",
+
+    "mediaContent": {
+        "_template": "../image/Image.hbs",
+        "src": "{{image(800, 600)}}"
+    },
+
+    "infoTitle": "{{words(8,12)}}",
+    "infoTitleShort": "{{words(3,6)}}",
+    "infoDescription": "{{words(60,120)}}",
+    "infoDescriptionShort": "{{words(20,40)}}",
+    "infoAttribution": "Photo by: {{name()}}"
+}

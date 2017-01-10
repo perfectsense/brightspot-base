@@ -6,7 +6,7 @@
   "textWhenVisible": "Hide Comments",
   "title": "3 Comments",
 
-  "loadMoreButton": "Show More",
+  "loadMoreLabel": "Show More",
   "loadMoreAction": "/SERVERERROR",
 
   "commentEntry": {
@@ -27,12 +27,5 @@
       }
     ]
   },
-
-  "validation": {
-    "_template": "../core/ValidationMessages.hbs",
-    "serverError": {
-      "_template": "../core/RawHtml.hbs",
-      "html": "Sorry! Something went wrong on our end. Please try again later."
-    }
-  }
+  "errorMessageServer": "Sorry! Something went wrong on our end. Please try again later."
 }

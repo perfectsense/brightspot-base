@@ -1,0 +1,23 @@
+{
+    "_wrapper": false,
+    "_template": "Page.hbs",
+
+    "headItems": {
+        "_template": "../Concatenated.hbs",
+
+        "items": [
+            {
+                "_template": "PageExternalScript.hbs",
+                "type": "application/javascript",
+                "src": "/styleguide/All.min.js",
+                "async": false,
+                "defer": false
+            }
+        ]
+    },
+
+    "body": {
+        "_template": "../RawHtml.hbs",
+        "html": "{{paragraphs}}"
+    }
+}

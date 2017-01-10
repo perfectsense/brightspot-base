@@ -1,8 +1,0 @@
-{
-    "_template": "Author.hbs",
-    "image": {
-        "_dataUrl": "Image.json"
-    },
-    "name": "{{name}}",
-    "affiliation": "ACME, inc."
-}

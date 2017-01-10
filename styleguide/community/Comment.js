@@ -8,8 +8,8 @@ class Comment {
       selectors: {
         prefix: '.Comment',
         commentEntryBlock: '.CommentEntry',
-        signInBlock: '.UserSignIn',
-        validationBlock: '.ValidationMessages'
+        signInBlock: '.Commenting-signIn',
+        validationBlock: '.CommentEntry-errorMessages'
       }
     }, options)
 

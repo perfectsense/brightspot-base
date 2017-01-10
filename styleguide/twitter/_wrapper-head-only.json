@@ -1,0 +1,9 @@
+{
+    "_template": "../core/page/Page.hbs",
+
+    "headItems": {
+        "_delegate": true
+    },
+
+    "body": ""
+}

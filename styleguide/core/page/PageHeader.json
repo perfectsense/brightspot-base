@@ -1,0 +1,23 @@
+{
+    "_template": "PageHeader.hbs",
+
+    "logo": {
+        "_template": "../image/Image.hbs",
+        "src": "{{image(200, 60)}}"
+    },
+
+    "navigation": {
+        "_dataUrl": "PageNavigation.json"
+    },
+
+    "searchButtonLabel": "Search",
+    "searchInputAutofocus": true,
+    "searchInputId": "SearchInput",
+    "searchInputLabel": "",
+    "searchInputMaxlength": 250,
+    "searchInputName": "searchQuery",
+    "searchInputPlaceholder": "Type here",
+    "searchInputRequired": true,
+    "searchInputValue": "",
+    "searchUrl": "#"
+}

@@ -1,0 +1,16 @@
+{
+    "_template": "GalleryMain.hbs",
+
+    "introTitle": "A Captivating Gallery Title",
+    "introTitleShort": "Short Gallery Title",
+    "introDescription": "A captivating gallery description",
+    "introDescriptionShort": "Short gallery description",
+    "introBackgroundImageSrc": "{{image(640, 400)}}",
+
+    "slides": [
+        {
+            "_dataUrl": "_GallerySlide.json",
+            "_repeat": [8,20]
+        }
+    ]
+}

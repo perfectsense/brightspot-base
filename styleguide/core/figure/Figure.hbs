@@ -1,0 +1,33 @@
+{{#defineBlock "Figure" extend="../image/Image.hbs"}}
+
+    {{#defineElement "container" noWith=true}}
+        {{#if credit}}
+            <div class="{{elementName}}">
+                {{element "image"}}
+                {{element "credit"}}
+            </div>
+        {{else}}
+            {{element "image"}}
+        {{/if}}
+    {{/defineElement}}
+
+    {{#defineElement "caption"}}
+        <figcaption class="{{elementName}}" itemprop="caption">{{this}}</figcaption>
+    {{/defineElement}}
+
+    {{#defineElement "credit"}}
+        <div class="{{elementName}}" itemprop="author">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+
+        <figure class="{{blockName}}" itemscope itemtype="http://schema.org/ImageObject">
+            {{#defineBlockBody}}
+                {{element "container"}}
+                {{element "caption"}}
+            {{/defineBlockBody}}
+        </figure>
+
+    {{/defineBlockContainer}}
+
+{{/defineBlock}}

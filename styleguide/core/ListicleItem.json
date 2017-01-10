@@ -1,8 +1,0 @@
-{
-    "_template": "ListicleItem.hbs",
-    "headline": "{{words(8,12)}}",
-    "description": "{{words(20,40)}}",
-    "image": {
-        "_dataUrl": "Figure.json"
-    }
-}

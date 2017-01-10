@@ -1,0 +1,37 @@
+{
+    "_template": "PageNavigation.hbs",
+    "items": [
+        {
+            "_template": "../link/Link.hbs",
+            "href": "#",
+            "body": "Home"
+        },
+        {
+            "_template": "PageNavigation.hbs",
+            "active": true,
+            "label": "Stories",
+            "items": [
+                {
+                    "_template": "../link/Link.hbs",
+                    "href": "#",
+                    "body": "Exploration"
+                },
+                {
+                    "_template": "../link/Link.hbs",
+                    "href": "#",
+                    "body": "Inspirational"
+                },
+                {
+                    "_template": "../link/Link.hbs",
+                    "href": "#",
+                    "body": "Educational"
+                }
+            ]
+        },
+        {
+            "_template": "../link/Link.hbs",
+            "href": "#",
+            "body": "About"
+        }
+    ]
+}

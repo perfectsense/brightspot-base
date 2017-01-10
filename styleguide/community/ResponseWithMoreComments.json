@@ -12,6 +12,6 @@
     ]
   },
 
-  "loadMoreButton": "Show More",
+  "loadMoreLabel": "Show More",
   "loadMoreAction": "ResponseWithMoreComments.html?page=2"
 }
