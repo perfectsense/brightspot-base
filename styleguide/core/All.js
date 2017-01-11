@@ -4,6 +4,7 @@ import Gallery from './gallery/Gallery.js'
 import { VideoMain } from './video/VideoMain.js'
 import { MPXVideoPlayer } from './video/players/MPXVideoPlayer.js'
 import { HTML5VideoPlayer } from './video/players/HTML5VideoPlayer.js'
+import { YouTubeVideoPlayer } from './video/players/YouTubeVideoPlayer.js'
 import bspCarouselPlugin from 'bsp-carousel-plugin'
 /* eslint-enable no-unused-vars */
 
@@ -36,13 +37,20 @@ $(document).ready(function () {
 
   // MPXVideoPlayer bindings
   $('.MPXVideoPlayer').each((index, value) => {
-    this.videoPlayer = new MPXVideoPlayer($(value))
-    window.registerPlayer(this.videoPlayer, this.videoPlayer.playerId)
+    let player = new MPXVideoPlayer($(value))
+    window.registerPlayer(player, player.playerId)
   })
 
+  // YouTubeVideoPlayer bindings
+  $('.YouTubeVideoPlayer').each((index, value) => {
+    let player = new YouTubeVideoPlayer($(value))
+    window.registerPlayer(player, player.playerId)
+  })
+
+  // HTML5Player bindings
   $('.HTML5VideoPlayer').each((index, value) => {
-    this.videoPlayer = new HTML5VideoPlayer($(value))
-    window.registerPlayer(this.videoPlayer, this.videoPlayer.playerId)
+    let player = new HTML5VideoPlayer($(value))
+    window.registerPlayer(player, player.playerId)
   })
 
   // VideoMain binding
