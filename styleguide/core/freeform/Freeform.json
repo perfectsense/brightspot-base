@@ -3,7 +3,7 @@
     "background": "#ddd",
     "items": [
         {
-            "_include": "FreeformText.json"
+            "_dataUrl": "FreeformText.json"
         },
         {
             "_template": "FreeformText.hbs",
