@@ -3,6 +3,7 @@ import $ from 'node_modules/jquery/dist/jquery.js'
 import Gallery from './gallery/Gallery.js'
 import { VideoMain } from './video/VideoMain.js'
 import { MPXVideoPlayer } from './video/players/MPXVideoPlayer.js'
+import { HTML5VideoPlayer } from './video/players/HTML5VideoPlayer.js'
 import bspCarouselPlugin from 'bsp-carousel-plugin'
 /* eslint-enable no-unused-vars */
 
@@ -36,6 +37,11 @@ $(document).ready(function () {
   // MPXVideoPlayer bindings
   $('.MPXVideoPlayer').each((index, value) => {
     this.videoPlayer = new MPXVideoPlayer($(value))
+    window.registerPlayer(this.videoPlayer, this.videoPlayer.playerId)
+  })
+
+  $('.HTML5VideoPlayer').each((index, value) => {
+    this.videoPlayer = new HTML5VideoPlayer($(value))
     window.registerPlayer(this.videoPlayer, this.videoPlayer.playerId)
   })
 

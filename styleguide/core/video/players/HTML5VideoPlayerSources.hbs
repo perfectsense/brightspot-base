@@ -1,0 +1,11 @@
+{{#defineBlock "HTML5VideoPlayerSources"}}
+
+
+    {{#defineBlockContainer}}
+
+            {{#defineBlockBody}}
+                <source src="{{src}}" {{#with type}}type="{{this}}"{{/with}} {{#with media}}media="{{this}}"{{/with}}{{extraAttributes}}>
+            {{/defineBlockBody}}
+
+    {{/defineBlockContainer}}
+{{/defineBlock}}

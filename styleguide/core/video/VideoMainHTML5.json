@@ -1,0 +1,52 @@
+{
+    "_wrapper": "_wrapper.json",
+
+    "_template": "VideoMain.hbs",
+
+    "id": "{{number([1,100])}}",
+    "permalink": "foo/bar?q=qux",
+    "headline": "The Air Up There",
+
+    "description": {
+        "_template": "../RawHtml.hbs",
+        "html": "{{paragraphs(2)}}"
+    },
+
+    "videoPlayer": {
+        "_dataUrl": "_HTML5VideoPlayer.json"
+    },
+
+    "tags": {
+        "_dataUrl": "../TagList.json"
+    },
+
+    "authors": [
+        {
+            "_dataUrl": "../author/Author.json"
+        }
+    ],
+
+    "playlist": {
+        "_template": "../cluster/Cluster.hbs",
+
+        "title": "Playlist Videos",
+        "items": [
+            {
+                "_dataUrl": "VideoPlayerPromo.json",
+                "url": "playlist-items/VideoHTML5-01.html",
+                "title": "The Air Up There",
+                "active": true
+            },
+            {
+                "_dataUrl": "VideoPlayerPromo.json",
+                "url": "playlist-items/VideoHTML5-02.html",
+                "title": "Nobody Said It Would Be Easy"
+            },
+            {
+                "_dataUrl": "VideoPlayerPromo.json",
+                "url": "playlist-items/VideoHTML5-03.html",
+                "title": "Battle Dawgs"
+            }
+        ]
+    }
+}

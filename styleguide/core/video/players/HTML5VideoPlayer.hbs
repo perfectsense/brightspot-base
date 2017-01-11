@@ -1,0 +1,36 @@
+{{#defineElement "sources"}}
+    {{#each this}}
+        {{this}}
+    {{/each}}
+{{/defineElement}}
+
+{{#defineElement "video"  noWith=true}}
+    <video class="{{elementName}}"
+        {{!--
+            this puts a transparent pixel in place for the placeholder attr and then uses a background image
+            technique: https://iandevlin.com/html5/poster/
+        --}}
+        controls
+        poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        {{#if hlsUrl}}data-hls-url="{{hlsUrl}}"{{/if}}
+        {{#if seekSeconds}}data-seek-seconds="{{seekSeconds}}"{{/if}}
+        {{#if muted}}muted{{/if}}
+        {{#if autoplay}}autoplay{{/if}}
+        {{extraAttributes}}>
+        {{element "sources"}}
+    </video>
+{{/defineElement}}
+
+{{#defineElement "screen" noWith=true}}
+    <div class="{{elementName}}" data-aspect-ratio="{{#if aspectRatio}}{{aspectRatio}}{{else}}4x3{{/if}}">{{element "video"}}</div>
+{{/defineElement}}
+
+{{#defineBlock "HTML5VideoPlayer"}}
+    {{#defineBlockContainer}}
+        <div id="{{blockName}}-{{id}}" class="{{blockName}}">
+            {{#defaultBlockBody}}
+                {{element "screen"}}
+            {{/defaultBlockBody}}
+        </div>
+    {{/defineBlockContainer}}
+{{/defineBlock}}

@@ -1,0 +1,40 @@
+{
+    "_wrapper": "../_wrapper.json",
+
+    "_template": "../VideoMain.hbs",
+
+    "id": "{{number([1,100])}}",
+    "permalink": "foo/bar?q=qux",
+    "headline": "Nobody Said It Would Be Easy",
+
+    "description": {
+        "_template": "../../RawHtml.hbs",
+        "html": "{{paragraphs(1)}}"
+    },
+
+    "videoPlayer": {
+        "_dataUrl": "../players/HTML5VideoPlayer.json",
+        "sources": [
+          {
+            "_template": "HTML5VideoPlayerSources.hbs",
+            "src": "http://d2zihajmogu5jn.cloudfront.net/elephantsdream/ed_hd.mp4",
+            "type": "video/mp4"
+          },
+          {
+            "_template": "HTML5VideoPlayerSources.hbs",
+            "src": "http://d2zihajmogu5jn.cloudfront.net/elephantsdream/ed_hd.ogg",
+            "type": "video/ogg"
+          }
+        ]
+    },
+
+    "tags": {
+        "_dataUrl": "../../TagList.json"
+    },
+
+    "authors": [
+        {
+            "_dataUrl": "../../author/Author.json"
+        }
+    ]
+}
