@@ -1,5 +1,17 @@
-{{#if href~}}
-    <a href="{{href}}"{{#with target}} target="{{this}}"{{/with}}{{extraAttributes}}>{{text}}</a>
-{{~else~}}
-    {{text}}
-{{~/if}}
+{{#defineBlock "Freeform"}}
+    {{#defineElement "text" noWith=true}}
+        {{#if href~}}
+            <a href="{{href}}"{{#with target}} target="{{this}}"{{/with}}{{extraAttributes}}>{{text}}</a>
+        {{~else~}}
+            {{text}}
+        {{~/if}}
+    {{/defineElement}}
+
+    {{#defineBlockContainer}}
+        <div class="{{blockName}}"{{extraAttributes}}>
+            {{#defineBlockBody}}
+                {{element "text"}}
+            {{/defineBlockBody}}
+        </div>
+    {{/defineBlockContainer}}
+{{/defineBlock}}
