@@ -1,6 +1,7 @@
 import $ from 'node_modules/jquery/dist/jquery.js'
 
 export class YouTubeVideoPlayer {
+
   get player () {
     return this._player
   }
@@ -26,6 +27,18 @@ export class YouTubeVideoPlayer {
   }
 
   constructor ($ctx, options = {}) {
+    /*
+    -1 (unstarted)
+    0 (ended)
+    1 (playing)
+    2 (paused)
+    3 (buffering)
+    5 (video cued).
+    */
+    this.stateChangeHandlers = {
+      '-1': this.updateSettings
+    }
+
     this.$ctx = $ctx
 
     this.settings = $.extend({ }, {
@@ -46,7 +59,8 @@ export class YouTubeVideoPlayer {
       this.player = new window.YT.Player(`${this.playerId}`, {
         videoId: `${this.videoId}`,
         events: {
-          onReady: this.onPlayerReady.bind(this)
+          onReady: this.onPlayerReady.bind(this),
+          onStateChange: this.onStateChange.bind(this)
         }
       })
     }
@@ -63,5 +77,21 @@ export class YouTubeVideoPlayer {
     if (this.settings.muted) {
       event.target.mute()
     }
+  }
+
+  onStateChange (event) {
+    let state = event.data
+    console.info(`YouTube Player onStateChange: ${state}`)
+    this.stateChangeHandlers[state]
+    ? this.stateChangeHandlers[state]()
+    : console.info(`stateChangeHandler for state named '${state}' has not been implemented`)
+  }
+
+  updateView ($newVideo) {
+    this.player.loadVideoById($newVideo.attr('data-video-id'))
+  }
+
+  updateSettings () {
+
   }
 }

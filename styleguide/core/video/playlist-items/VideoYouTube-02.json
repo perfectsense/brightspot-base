@@ -1,0 +1,29 @@
+{
+    "_wrapper": "../_wrapper.json",
+
+    "_template": "../VideoMain.hbs",
+
+    "id": "{{number([1,100])}}",
+    "permalink": "foo/bar?q=qux",
+    "headline": "Afterglow",
+
+    "description": {
+        "_template": "../../RawHtml.hbs",
+        "html": "{{paragraphs(2)}}"
+    },
+
+    "videoPlayer": {
+        "_dataUrl": "../players/YouTubeVideoPlayer.json",
+        "videoId": "4DjdJydl-ds"
+    },
+
+    "tags": {
+        "_dataUrl": "../../TagList.json"
+    },
+
+    "authors": [
+        {
+            "_dataUrl": "../../author/Author.json"
+        }
+    ]
+}
