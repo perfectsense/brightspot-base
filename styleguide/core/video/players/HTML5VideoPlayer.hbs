@@ -27,7 +27,7 @@
 
 {{#defineBlock "HTML5VideoPlayer"}}
     {{#defineBlockContainer}}
-        <div id="{{blockName}}-{{id}}" class="{{blockName}}">
+        <div id="{{blockName}}-{{id}}" class="{{blockName}}" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
             {{#defaultBlockBody}}
                 {{element "screen"}}
             {{/defaultBlockBody}}

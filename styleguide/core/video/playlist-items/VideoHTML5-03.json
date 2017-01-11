@@ -5,7 +5,7 @@
 
     "id": "{{number([1,100])}}",
     "permalink": "foo/bar?q=qux",
-    "headline": "Battle Dawgs",
+    "headline": "Big Buck Bunny",
 
     "description": {
         "_template": "../../RawHtml.hbs",
@@ -25,7 +25,7 @@
             "src": "http://www.w3schools.com/html/mov_bbb.ogg",
             "type": "video/ogg"
           }
-        ]      
+        ]
     },
 
     "tags": {

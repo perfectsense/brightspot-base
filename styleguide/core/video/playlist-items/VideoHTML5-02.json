@@ -5,7 +5,7 @@
 
     "id": "{{number([1,100])}}",
     "permalink": "foo/bar?q=qux",
-    "headline": "Nobody Said It Would Be Easy",
+    "headline": "Elephants Dream",
 
     "description": {
         "_template": "../../RawHtml.hbs",

@@ -39,23 +39,14 @@ export class HTML5VideoPlayer {
       }
     }, options)
 
-    this.playerId = this.$ctx.attr('id')
-  }
+    this.$ctx.data('player-instance', this)
 
-  init () {
-    if (this.autoplay === false || isMobileUA()) {
-      this.playerController.loadReleaseURL(this.$ctx.attr('data-hls-url'), true)
-    } else {
-      this.playerController.setReleaseURL(this.$ctx.attr('data-hls-url'), true)
-    }
+    this.playerId = this.$ctx.attr('id')
   }
 
   updateView ($newVideo) {
     // update the HLS url
-    this.$ctx.attr('data-hls-url', $newVideo.attr('data-hls-url'))
-    // update the seek time
-    // re-init
-    this.init()
+    this.$ctx.html($newVideo.html())
   }
 
 }

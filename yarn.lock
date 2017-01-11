@@ -375,8 +375,8 @@ babel-types@^6.16.0, babel-types@^6.18.0, babel-types@^6.21.0:
     to-fast-properties "^1.0.1"
 
 babylon@^6.11.0:
-  version "6.14.1"
-  resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.14.1.tgz#956275fab72753ad9b3435d7afe58f8bf0a29815"
+  version "6.15.0"
+  resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.15.0.tgz#ba65cfa1a80e1759b0e89fb562e27dccae70348e"
 
 balanced-match@^0.4.1:
   version "0.4.2"
@@ -419,7 +419,7 @@ braces@^1.8.2:
 
 brightspot-styleguide@perfectsense/brightspot-styleguide#master:
   version "2.0.0"
-  resolved "https://codeload.github.com/perfectsense/brightspot-styleguide/tar.gz/878ef2f237369437dc9aad50e52054985ab41fd5"
+  resolved "https://codeload.github.com/perfectsense/brightspot-styleguide/tar.gz/962a1b29746cd96be56ef5608e24636358fa4252"
   dependencies:
     chance "^0.8.0"
     daemon "1.1.0"
@@ -514,8 +514,8 @@ camelcase@^2.0.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-2.1.1.tgz#7c1d16d679a1bbe59ca02cacecfb011e201f5a1f"
 
 caniuse-db@^1.0.30000539, caniuse-db@^1.0.30000554:
-  version "1.0.30000604"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000604.tgz#bc139270a777564d19c0aadcd832b491d093bda5"
+  version "1.0.30000605"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000605.tgz#c616e335a6df02f865af5e02add72c897cb6579d"
 
 cardinal@^1.0.0:
   version "1.0.0"
