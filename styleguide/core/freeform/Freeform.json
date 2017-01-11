@@ -3,12 +3,12 @@
     "background": "#ddd",
     "items": [
         {
-            "_template": "../link/Link.hbs",
-            "body": "Hello"
+            "_include": "FreeformText.json"
         },
         {
-            "_template": "../link/Link.hbs",
-            "body": "World!"
+            "_template": "FreeformText.hbs",
+            "href": "#",
+            "text": "World!"
         }
     ]
 }

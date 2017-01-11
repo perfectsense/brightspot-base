@@ -1,0 +1,5 @@
+{{#if href~}}
+    <a href="{{href}}"{{#with target}} target="{{this}}"{{/with}}{{extraAttributes}}>{{text}}</a>
+{{~else~}}
+    {{text}}
+{{~/if}}
