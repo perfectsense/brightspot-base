@@ -13,7 +13,7 @@
     },
 
     "videoPlayer": {
-        "_dataUrl": "_HTML5VideoPlayer.json"
+        "_dataUrl": "players/HTML5VideoPlayer.json"
     },
 
     "tags": {
