@@ -13,14 +13,6 @@ export class MPXVideoPlayer {
     this._id = id
   }
 
-  get fullScreen () {
-    return this._fullScreen
-  }
-
-  set fullScreen (fullScreen) {
-    this._fullScreen = fullScreen
-  }
-
   get playerController () {
     return this._playerController
   }
@@ -56,8 +48,9 @@ export class MPXVideoPlayer {
       }
     }, options)
 
+    this.$ctx.data('player-instance', this)
+
     this.playerId = this.$ctx.attr('id')
-    this.fullScreen = false
 
     this.playerXml = `<?xml version='1.0'?>
       <layout>
@@ -93,7 +86,6 @@ export class MPXVideoPlayer {
           this.playerController.addEventListener('OnReleaseEnd', (e) => { this.onMediaEnded(e) })
           this.playerController.addEventListener('OnMute', (e) => { this.onPlayerMute(e) })
           this.playerController.addEventListener('OnMediaPause', (e) => { this.onPlayerPause(e) })
-          this.playerController.addEventListener('OnShowFullScreen', (e) => { this.onFullScreen(e) })
           this.playerController.addEventListener('OnMediaUnpause', (e) => { this.onPlayerUnpause(e) })
 
           this.init()
@@ -119,8 +111,7 @@ export class MPXVideoPlayer {
 
   onPlayerPause (event) {
     this.$ctx.trigger('VideoMain:onVideoPlaybackStopped', {
-      playerId: this.playerId,
-      fullScreen: this.fullScreen
+      playerId: this.playerId
     })
   }
 
@@ -163,10 +154,6 @@ export class MPXVideoPlayer {
     this.$ctx.trigger('VideoMain:onVideoEnded', {
       playerId: this.playerId
     })
-  }
-
-  onFullScreen (event) {
-    this.fullScreen = event.data
   }
 
   play () {
