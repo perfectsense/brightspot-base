@@ -27,7 +27,7 @@ $(document).ready(function () {
   window.videoPlayers = []
   window.videoPlayerControllers = []
 
-  window.registerPlayer = function (player, id) {
+  window.registerPlayer = function (player) {
     window.videoPlayers.push(player)
   }
 
@@ -37,20 +37,20 @@ $(document).ready(function () {
 
   // MPXVideoPlayer bindings
   $('.MPXVideoPlayer').each((index, value) => {
-    let player = new MPXVideoPlayer($(value))
-    window.registerPlayer(player, player.playerId)
+    let player = new MPXVideoPlayer($(value), { })
+    window.registerPlayer(player)
   })
 
   // YouTubeVideoPlayer bindings
   $('.YouTubeVideoPlayer').each((index, value) => {
-    let player = new YouTubeVideoPlayer($(value))
-    window.registerPlayer(player, player.playerId)
+    let player = new YouTubeVideoPlayer($(value), { })
+    window.registerPlayer(player)
   })
 
   // HTML5Player bindings
   $('.HTML5VideoPlayer').each((index, value) => {
-    let player = new HTML5VideoPlayer($(value))
-    window.registerPlayer(player, player.playerId)
+    let player = new HTML5VideoPlayer($(value), { })
+    window.registerPlayer(player)
   })
 
   // VideoMain binding

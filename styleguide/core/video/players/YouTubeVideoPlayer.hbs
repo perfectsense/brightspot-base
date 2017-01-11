@@ -4,9 +4,7 @@
         <div class="{{elementName}}" data-aspect-ratio="{{#if aspectRatio}}{{aspectRatio}}{{else}}4x3{{/if}}">
             <iframe id="{{id}}"
                 type="text/html"
-                width="640"
-                height="390"
-                src="https://www.youtube.com/embed/{{videoId}}?enablejsapi=1"
+                src="https://www.youtube.com/embed/{{videoId}}?enablejsapi=1{{#with seekSeconds}}&start={{this}}{{/with}}{{#with autoplay}}&autoplay=1{{/with}}"
                 frameborder="0"></iframe>
         </div>
     {{/defineElement}}
@@ -15,7 +13,7 @@
         <div class="{{blockName}}"
             itemprop="video" itemscope itemtype="http://schema.org/VideoObject"
             {{#with videoId}}data-video-id="{{this}}"{{/with}}
-            {{#if seekSeconds}}data-seek-seconds="{{seekSeconds}}"{{/if}}
+            {{#with seekSeconds}}data-seek-seconds="{{this}}"{{/with}}
             {{#if muted}}data-muted{{/if}}
             {{#if autoplay}}data-autoplay{{/if}}
             {{extraAttributes}}>

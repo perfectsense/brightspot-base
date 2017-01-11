@@ -29,9 +29,9 @@ export class YouTubeVideoPlayer {
     this.$ctx = $ctx
 
     this.settings = $.extend({ }, {
-      autoplay: true,
+      muted: this.$ctx[0].hasAttribute(`data-muted`),
       selectors: {
-        blockName: 'YouTubeVideoPlayer'
+        blockName: `YouTubeVideoPlayer`
       }
     }, options)
 
@@ -44,11 +44,9 @@ export class YouTubeVideoPlayer {
     window.onYouTubeIframeAPIReady = () => {
       window.YouTubeAPIReady = true
       this.player = new window.YT.Player(`${this.playerId}`, {
-        width: '640',
-        height: '390',
         videoId: `${this.videoId}`,
         events: {
-          'onStateChange': this.stateChangeListener.bind(this)
+          onReady: this.onPlayerReady.bind(this)
         }
       })
     }
@@ -61,7 +59,9 @@ export class YouTubeVideoPlayer {
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
   }
 
-  stateChangeListener (e) {
-    console.log(`YouTube stateChange: ${e.data}`)
+  onPlayerReady (event) {
+    if (this.settings.muted) {
+      event.target.mute()
+    }
   }
 }
