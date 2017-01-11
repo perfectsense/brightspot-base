@@ -40,7 +40,6 @@ export class VideoMain {
 
   constructor ($ctx, options = {}) {
     this.$ctx = $ctx
-
     this.settings = $.extend({}, {
       selectors: {
         activeAttribute: `data-active`,
@@ -56,6 +55,14 @@ export class VideoMain {
   }
 
   init () {
+    // get a reference to the video player that we are containing
+    let $videoPlayer = this.$ctx.find(`[itemtype="http://schema.org/VideoObject"]`)
+    if ($videoPlayer.length) {
+      this.videoPlayer = $videoPlayer.data('playerInstance')
+    } else {
+      console.error(`No matching video player child was found in this videoMain element! Using query`)
+    }
+
     // Binds click on playlist items
     $(this.selectors.playlistItemsWrapper).find(this.selectors.playlistItem).on('click', (event) => {
       event.preventDefault()
