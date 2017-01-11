@@ -12,10 +12,13 @@
         --}}
         controls
         poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-        {{#if hlsUrl}}data-hls-url="{{hlsUrl}}"{{/if}}
-        {{#if seekSeconds}}data-seek-seconds="{{seekSeconds}}"{{/if}}
+        {{#if autoplay}}autoplay {{/if}}
+        {{#if controls}}controls {{/if}}
+        {{#if loop}}loop{{/if}}
         {{#if muted}}muted{{/if}}
-        {{#if autoplay}}autoplay{{/if}}
+        {{#if preload}}preload="{{preload}}" {{/if}}
+        {{#if height}}height="{{height}}" {{/if}}
+        {{#if width}}width="{{width}}" {{/if}}
         {{extraAttributes}}>
         {{element "sources"}}
     </video>
