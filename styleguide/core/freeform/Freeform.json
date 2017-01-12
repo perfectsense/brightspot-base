@@ -1,0 +1,14 @@
+{
+    "_template": "Freeform.hbs",
+    "background": "#ddd",
+    "items": [
+        {
+            "_dataUrl": "FreeformText.json"
+        },
+        {
+            "_template": "FreeformText.hbs",
+            "href": "#",
+            "text": "World!"
+        }
+    ]
+}

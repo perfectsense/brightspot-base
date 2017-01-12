@@ -6,7 +6,7 @@
             "html": "{{paragraphs(1)}}"
         },
         {
-            "_template": "Gallery.hbs",
+            "_template": "GalleryMain.hbs",
             "slides": [
                 {
                     "_dataUrl": "_GallerySlide.json"
@@ -18,7 +18,7 @@
             "html": "{{paragraphs(1)}}"
         },
         {
-            "_template": "Gallery.hbs",
+            "_template": "GalleryMain.hbs",
             "id": "my-singleton-unique-id-2",
             "slides": [
                 {
@@ -31,7 +31,7 @@
             "html": "{{paragraphs(1)}}"
         },
         {
-            "_template": "Gallery.hbs",
+            "_template": "GalleryMain.hbs",
             "id": "my-singleton-unique-id-2",
             "slides": [
                 {
