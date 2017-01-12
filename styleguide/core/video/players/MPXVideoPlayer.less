@@ -1,35 +1,13 @@
+@import 'VideoPlayer';
+
 .MPXVideoPlayer {
+    &:extend(.VideoPlayer all);
 
     &-screen {
         &:extend(.MPXVideoPlayer-screen all);
     }
 
-    & when (@_demo) {
-        width: 100%;
-        height: auto;
-        position: relative;
-
-        &-screen {
-            position: relative;
-            height: auto;
-            width: 100%;
-
-            &[data-aspect-ratio='16x9'] {
-                position: relative;
-                padding-bottom: 56.25%;
-            }
-
-            &[data-aspect-ratio='4x3'] {
-                padding-bottom: 75.01%;
-            }
-
-            iframe, object {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-        }
+    &-card {
+        &:extend(.MPXVideoPlayer-card all);
     }
 }
