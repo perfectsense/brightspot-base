@@ -11,11 +11,11 @@
             technique: https://iandevlin.com/html5/poster/
         --}}
         poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        preload="{{#if preloadNone}}none {{/if}}{{#if preloadMetaData}}metadata {{/if}}"
         {{#if autoplay}}autoplay {{/if}}
         {{#if controls}}controls {{/if}}
         {{#if loop}}loop{{/if}}
         {{#if muted}}muted{{/if}}
-        {{#if preload}}preload="{{preload}}" {{/if}}
         {{#if height}}height="{{height}}" {{/if}}
         {{#if width}}width="{{width}}" {{/if}}
         {{extraAttributes}}>

@@ -4,11 +4,12 @@
     "id": "{{number([0,100])}}",
     "aspectRatio": "16x9",
     "seekSeconds": 0,
+    "preloadMetaData": true,
+    "preloadNone": true,
     "autoplay": true,
     "controls": true,
     "loop": false,
     "muted": false,
-    "preload": "auto",
     "width": "100%",
     "height": "auto",
     "sources": [
