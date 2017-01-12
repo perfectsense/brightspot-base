@@ -1,6 +1,6 @@
 {{#defineBlock "Freeform"}}
     {{#defineElement "items"}}
-        <div class="{{elementName}}">
+        <div class="{{elementName}}" {{#if ../overlay}}data-overlay{{/if}}>
             {{#each this}}
                 <div class="{{elementName}}-item">{{this}}</div>
             {{/each}}
