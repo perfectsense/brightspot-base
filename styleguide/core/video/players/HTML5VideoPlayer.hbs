@@ -1,40 +1,41 @@
-{{#defineElement "sources"}}
-    {{#each this}}
-        {{this}}
-    {{/each}}
-{{/defineElement}}
-
-{{#defineElement "card"}}
-    <div class="{{elementName}}">{{this}}</div>
-{{/defineElement}}
-
-{{#defineElement "video"  noWith=true}}
-    <video class="{{elementName}}"
-        {{!--
-            this puts a transparent pixel in place for the placeholder attr and then uses a background image
-            technique: https://iandevlin.com/html5/poster/
-        --}}
-        poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-        preload="{{#if preloadNone}}none {{/if}}{{#if preloadMetaData}}metadata {{/if}}"
-        {{#if autoplay}}autoplay {{/if}}
-        {{#if controls}}controls {{/if}}
-        {{#if loop}}loop{{/if}}
-        {{#if muted}}muted{{/if}}
-        {{#if height}}height="{{height}}" {{/if}}
-        {{#if width}}width="{{width}}" {{/if}}
-        {{extraAttributes}}>
-        {{element "sources"}}
-    </video>
-{{/defineElement}}
-
-{{#defineElement "screen" noWith=true}}
-    <div class="{{elementName}}" data-aspect-ratio="{{#if aspectRatio}}{{aspectRatio}}{{else}}4x3{{/if}}">
-        {{element "video"}}
-        {{element "card"}}
-    </div>
-{{/defineElement}}
-
 {{#defineBlock "HTML5VideoPlayer"}}
+
+    {{#defineElement "sources"}}
+        {{#each this}}
+            {{this}}
+        {{/each}}
+    {{/defineElement}}
+
+    {{#defineElement "card"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
+    {{#defineElement "video"  noWith=true}}
+        <video class="{{elementName}}"
+            {{!--
+                this puts a transparent pixel in place for the placeholder attr and then uses a background image
+                technique: https://iandevlin.com/html5/poster/
+            --}}
+            poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            preload="{{#if preloadNone}}none {{/if}}{{#if preloadMetaData}}metadata {{/if}}"
+            {{#if autoplay}}autoplay {{/if}}
+            {{#if controls}}controls {{/if}}
+            {{#if loop}}loop{{/if}}
+            {{#if muted}}muted{{/if}}
+            {{#if height}}height="{{height}}" {{/if}}
+            {{#if width}}width="{{width}}" {{/if}}
+            {{extraAttributes}}>
+            {{element "sources"}}
+        </video>
+    {{/defineElement}}
+
+    {{#defineElement "screen" noWith=true}}
+        <div class="{{elementName}}" data-aspect-ratio="{{#if aspectRatio}}{{aspectRatio}}{{else}}4x3{{/if}}">
+            {{element "video"}}
+            {{element "card"}}
+        </div>
+    {{/defineElement}}
+
     {{#defineBlockContainer}}
         <div id="{{blockName}}-{{id}}" class="{{blockName}}" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
             {{#defaultBlockBody}}
@@ -42,4 +43,5 @@
             {{/defaultBlockBody}}
         </div>
     {{/defineBlockContainer}}
+
 {{/defineBlock}}
