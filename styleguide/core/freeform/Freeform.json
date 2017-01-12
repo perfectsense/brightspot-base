@@ -1,6 +1,7 @@
 {
     "_template": "Freeform.hbs",
     "background": "#ddd",
+    "overlay": false,
     "items": [
         {
             "_dataUrl": "FreeformText.json"
