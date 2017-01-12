@@ -13,10 +13,15 @@
         height: auto;
         position: relative;
 
+        &[data-playback-started] {
+            ._VideoPlayer--playbackStarted;
+        }
+
         &-screen {
             position: relative;
             height: auto;
             width: 100%;
+            overflow: hidden;
             background: black;
 
             &[data-aspect-ratio='16x9'] {
@@ -47,6 +52,7 @@
             justify-content: center;
             align-items: center;
             background: rgba(20, 0, 120, 0.3);
+            transition: all 350ms ease-out 100ms;
 
             .Promo {
                 display: flex;
@@ -62,7 +68,29 @@
                 &-description {
                     ._Block;
                 }
+
+                &-cta a {
+                    width: 33%;
+                    padding: .5rem 1rem;
+                    background-color: dodgerblue;
+                    text-decoration: none;
+                    color: #fff;
+
+                    &:hover {
+                        background-color: #5cadfc;
+                    }
+                }
             }
+        }
+    }
+}
+
+._VideoPlayer--playbackStarted() {
+    .VideoPlayer {
+        &-card {
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(1.1);
         }
     }
 }

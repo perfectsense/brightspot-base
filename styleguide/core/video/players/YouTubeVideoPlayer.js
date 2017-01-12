@@ -38,10 +38,11 @@ export class YouTubeVideoPlayer {
     5 (video cued).
     */
     this.stateChangeHandlers = {
-      '-1': this.updateSettings
+      '1': this.onPlaying.bind(this)
     }
 
     this.$ctx = $ctx
+    this.$ctx.data('player-instance', this)
 
     this.settings = $.extend({ }, {
       muted: this.$ctx[0].hasAttribute(`data-muted`),
@@ -50,10 +51,8 @@ export class YouTubeVideoPlayer {
       }
     }, options)
 
-    this.$ctx.data('player-instance', this)
-
     if (!window.YouTubeAPIReady) {
-      this.injectYouTubeAPI()
+      this.loadYouTubeApi()
     }
 
     window.onYouTubeIframeAPIReady = () => {
@@ -68,7 +67,7 @@ export class YouTubeVideoPlayer {
     }
   }
 
-  injectYouTubeAPI () {
+  loadYouTubeApi () {
     let tag = document.createElement('script')
     tag.src = 'https://www.youtube.com/iframe_api'
     let firstScriptTag = document.getElementsByTagName('script')[0]
@@ -89,11 +88,15 @@ export class YouTubeVideoPlayer {
     : console.info(`stateChangeHandler for state named '${state}' has not been implemented`)
   }
 
-  updateView ($newVideo) {
-    this.player.loadVideoById($newVideo.attr('data-video-id'))
+  updateView ($newVideoPlayer) {
+    this.player.loadVideoById($newVideoPlayer.attr('data-video-id'))
   }
 
-  updateSettings () {
+  onPlaying () {
+    this.$ctx.attr('data-playback-started', '')
+  }
 
+  play () {
+    this.player.playVideo()
   }
 }

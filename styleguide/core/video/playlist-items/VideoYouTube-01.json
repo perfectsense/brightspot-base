@@ -14,7 +14,17 @@
 
     "videoPlayer": {
         "_dataUrl": "../players/YouTubeVideoPlayer.json",
-        "videoId": "NYvM6j56IBk"
+        "videoId": "NYvM6j56IBk",
+        "card": {
+            "_template": "../../promo/Promo.hbs",
+            "title": "The Way I See It",
+            "description": "{{sentences([1,2])}}",
+            "cta": {
+                "_template": "../../link/Link.hbs",
+                "href": "#",
+                "body": "Play"
+            }
+        }
     },
 
     "tags": {

@@ -7,6 +7,6 @@
     "src": "//player.theplatform.com/p/1X3jUC/yh5o5S5hrJ4c",
     "aspectRatio": "16x9",
     "muted": true,
-    "autoplay": true,
+    "autoplay": false,
     "seekSeconds": 10
 }

@@ -18,7 +18,7 @@
         "seekSeconds": 10,
         "card": {
             "_template": "../../promo/Promo.hbs",
-            "title": "The Way I See It",
+            "title": "The Air Up There",
             "description": "{{sentences([1,2])}}",
             "cta": {
                 "_template": "../../link/Link.hbs",

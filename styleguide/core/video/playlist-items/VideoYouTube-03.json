@@ -14,7 +14,17 @@
 
     "videoPlayer": {
         "_dataUrl": "../players/YouTubeVideoPlayer.json",
-        "videoId": "vptvSMdYJdQ"
+        "videoId": "vptvSMdYJdQ",
+        "card": {
+            "_template": "../../promo/Promo.hbs",
+            "title": "Attack of La Niña",
+            "description": "{{sentences([1,2])}}",
+            "cta": {
+                "_template": "../../link/Link.hbs",
+                "href": "#",
+                "body": "Play"
+            }
+        }
     },
 
     "tags": {

@@ -41,7 +41,7 @@ export class MPXVideoPlayer {
     this.$ctx = $ctx
 
     this.settings = $.extend({ }, {
-      autoplay: true,
+      autoplay: this.$ctx[0].hasAttribute(`data-autoplay`),
       playerIdPrefix: 'mpxPlayer',
       selectors: {
         blockName: 'MPXVideoPlayer'
@@ -137,6 +137,8 @@ export class MPXVideoPlayer {
       setTimeout(() => this.playerController.seekToPosition(seekTo), 200)
     }
 
+    this.$ctx.attr('data-playback-started', '')
+
     this.$ctx.trigger('VideoMain:onVideoPlaybackStarted', {
       playerId: this.playerId
     })
@@ -157,7 +159,7 @@ export class MPXVideoPlayer {
   }
 
   play () {
-    this.playerController.pause(false)
+    this.playerController.setReleaseURL(this.$ctx.attr('data-hls-url'), true)
   }
 
   updateView ($newVideo) {

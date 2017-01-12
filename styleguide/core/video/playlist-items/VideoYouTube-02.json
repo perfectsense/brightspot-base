@@ -14,7 +14,17 @@
 
     "videoPlayer": {
         "_dataUrl": "../players/YouTubeVideoPlayer.json",
-        "videoId": "4DjdJydl-ds"
+        "videoId": "4DjdJydl-ds",
+        "card": {
+            "_template": "../../promo/Promo.hbs",
+            "title": "Afterglow",
+            "description": "{{sentences([1,2])}}",
+            "cta": {
+                "_template": "../../link/Link.hbs",
+                "href": "#",
+                "body": "Play"
+            }
+        }
     },
 
     "tags": {

@@ -24,12 +24,7 @@ $(document).ready(function () {
     gallery.init()
   })
 
-  window.videoPlayers = []
   window.videoPlayerControllers = []
-
-  window.registerPlayer = function (player) {
-    window.videoPlayers.push(player)
-  }
 
   window.registerPlayerController = function (controller, id) {
     window.videoPlayerControllers[id] = controller
@@ -38,19 +33,26 @@ $(document).ready(function () {
   // MPXVideoPlayer bindings
   $('.MPXVideoPlayer').each((index, value) => {
     let player = new MPXVideoPlayer($(value), { })
-    window.registerPlayer(player)
+
+    // MPXVideo Card behaviors
+    $(`.MPXVideoPlayer-card .Promo-cta`).on(`click`, (event) => {
+      player.play()
+    })
   })
 
   // YouTubeVideoPlayer bindings
   $('.YouTubeVideoPlayer').each((index, value) => {
     let player = new YouTubeVideoPlayer($(value), { })
-    window.registerPlayer(player)
+
+    // YouTubeVideo Card behaviors
+    $(`.YouTubeVideoPlayer-card .Promo-cta`).on(`click`, (event) => {
+      player.play()
+    })
   })
 
   // HTML5Player bindings
   $('.HTML5VideoPlayer').each((index, value) => {
     let player = new HTML5VideoPlayer($(value), { })
-    window.registerPlayer(player)
   })
 
   // VideoMain binding
