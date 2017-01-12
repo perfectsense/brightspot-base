@@ -15,7 +15,17 @@
     "videoPlayer": {
         "_dataUrl": "players/MPXVideoPlayer.json",
         "hlsUrl": "//link.theplatform.com/s/1X3jUC/E5BWsOHBPO9y",
-        "seekSeconds": 10
+        "seekSeconds": 10,
+        "card": {
+            "_template": "../../promo/Promo.hbs",
+            "title": "The Way I See It",
+            "description": "{{sentences([1,2])}}",
+            "cta": {
+                "_template": "../../link/Link.hbs",
+                "href": "#",
+                "body": "Play"
+            }
+        }
     },
 
     "tags": {

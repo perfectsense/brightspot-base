@@ -1,5 +1,7 @@
 import $ from 'node_modules/jquery/dist/jquery.js'
 
+// YouTube API Reference https://developers.google.com/youtube/iframe_api_reference
+
 export class YouTubeVideoPlayer {
 
   get player () {

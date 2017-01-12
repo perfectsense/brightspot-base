@@ -4,6 +4,10 @@
     {{/each}}
 {{/defineElement}}
 
+{{#defineElement "card"}}
+    <div class="{{elementName}}">{{this}}</div>
+{{/defineElement}}
+
 {{#defineElement "video"  noWith=true}}
     <video class="{{elementName}}"
         {{!--
@@ -24,7 +28,10 @@
 {{/defineElement}}
 
 {{#defineElement "screen" noWith=true}}
-    <div class="{{elementName}}" data-aspect-ratio="{{#if aspectRatio}}{{aspectRatio}}{{else}}4x3{{/if}}">{{element "video"}}</div>
+    <div class="{{elementName}}" data-aspect-ratio="{{#if aspectRatio}}{{aspectRatio}}{{else}}4x3{{/if}}">
+        {{element "video"}}
+        {{element "card"}}
+    </div>
 {{/defineElement}}
 
 {{#defineBlock "HTML5VideoPlayer"}}

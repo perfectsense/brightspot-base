@@ -1,5 +1,9 @@
 {{#defineBlock "MPXVideoPlayer"}}
 
+    {{#defineElement "card"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
     {{#defineElement "screen" noWith=true}}
         <div class="{{elementName}}" data-aspect-ratio="{{#if aspectRatio}}{{aspectRatio}}{{else}}4x3{{/if}}">
             <iframe id="mpxPlayer{{id}}" src="{{{src}}}/embed?form=html"
@@ -7,6 +11,7 @@
                 allowfullscreen
                 frameborder="0">
             </iframe>
+            {{element "card"}}
         </div>
     {{/defineElement}}
 

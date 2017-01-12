@@ -1,5 +1,9 @@
 {{#defineBlock "YouTubeVideoPlayer"}}
 
+    {{#defineElement "card"}}
+        <div class="{{elementName}}">{{this}}</div>
+    {{/defineElement}}
+
     {{#defineElement "screen" noWith=true}}
         <div class="{{elementName}}" data-aspect-ratio="{{#if aspectRatio}}{{aspectRatio}}{{else}}4x3{{/if}}">
             <iframe id="{{id}}"
@@ -7,6 +11,7 @@
                 src="https://www.youtube.com/embed/{{videoId}}?enablejsapi=1{{#with seekSeconds}}&start={{this}}{{/with}}{{#with autoplay}}&autoplay=1{{/with}}"
                 frameborder="0"
                 allowfullscreen></iframe>
+            {{element "card"}}
         </div>
     {{/defineElement}}
 
