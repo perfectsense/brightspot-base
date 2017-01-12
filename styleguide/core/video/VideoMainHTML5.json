@@ -34,18 +34,18 @@
             {
                 "_dataUrl": "VideoPlayerPromo.json",
                 "url": "playlist-items/VideoHTML5-01.html",
-                "title": "The Air Up There",
-                "active": true
+                "title": "Birds going for a Swim"
             },
             {
                 "_dataUrl": "VideoPlayerPromo.json",
                 "url": "playlist-items/VideoHTML5-02.html",
-                "title": "Nobody Said It Would Be Easy"
+                "title": "Elephants Dream"
             },
             {
                 "_dataUrl": "VideoPlayerPromo.json",
                 "url": "playlist-items/VideoHTML5-03.html",
-                "title": "Battle Dawgs"
+                "title": "Big Buck Bunny",
+                "active": true
             }
         ]
     }
