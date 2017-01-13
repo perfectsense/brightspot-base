@@ -1,109 +1,87 @@
-{{#defineBlock "CommentEntry"}}
-    {{#defineElement "userImage" noWith=true}}
-        <img class="{{elementName}}" src="{{userImageSrc}}" />
-    {{/defineElement}}
+{{#block "CommentEntry"}}
+    <div class="{{blockName}}"
+        data-bsp-community-commentEntry
+        data-commenting-id="{{commentingId}}"
+        {{extraAttributes}}>
 
-    {{#defineElement "userName"}}
-        <span class="{{elementName}}">{{this}}</span>
-    {{/defineElement}}
-
-    {{#defineElement "user" noWith=true}}
-        <div class="{{elementName}}">
-            {{element "userImage"}}
-            {{element "userName"}}
-        </div>
-    {{/defineElement}}
-
-    {{#defineElement "logoutButton" noWith=true}}
-        <button class="{{elementName}}">{{logoutLabel}}</button>
-    {{/defineElement}}
-
-    {{#defineElement "logoutForm" noWith=true}}
-        <form
-            class="{{elementName}}"
-            {{#if logoutAction}}action="{{logoutAction}}"{{/if}}
-            {{#if logoutTarget}}target="{{logoutTarget}}"{{/if}}>
-            {{element "logoutButton"}}
-        </form>
-    {{/defineElement}}
-
-
-    {{#defineElement "inputCharacterCount"  noWith=true}}
-        {{#if inputMaxlength}}<div class="{{elementName}}">{{inputMaxlength}} {{inputCharacterCountLabel}}</div>{{/if}}
-    {{/defineElement}}
-
-    {{#defineElement "input" noWith=true}}
-        <div class="{{elementName}}">
-            <textarea
-                name="{{inputName}}"
-                class="{{elementName}}-textarea"
-                {{#with inputPlaceholder}}placeholder="{{this}}"{{/with}}
-                {{#with inputMaxlength}}maxlength="{{this}}"{{/with}}
-                aria-invalid={{#if invalid}}"true"{{else}}"false"{{/if}}
-                {{#if inputRequired}}required{{/if}}>{{value}}</textarea>
-            {{element "inputCharacterCount"}}
-        </div>
-    {{/defineElement}}
-
-
-    {{#defineElement "errorMessageServer"}}
-        <div class="{{elementName}}">{{{this}}}</div>
-    {{/defineElement}}
-
-    {{#defineElement "errorMessageBlank"}}
-        <div class="{{elementName}}">{{{this}}}</div>
-    {{/defineElement}}
-
-    {{#defineElement "errorMessageTooLong"}}
-        <div class="{{elementName}}">{{{this}}}</div>
-    {{/defineElement}}
-
-    {{#defineElement "errorMessages" noWith=true}}
-        <div class="{{elementName}}">
-            {{element "errorMessageServer"}}
-            {{element "errorMessageBlank"}}
-            {{element "errorMessageTooLong"}}
-        </div>
-    {{/defineElement}}
-
-
-    {{#defineElement "submit" noWith=true}}
-        {{#if submitAction}}
-            <div class="{{elementName}}">
-                <button formaction="{{submitAction}}" class="{{elementName}}-button">{{submitLabel}}</button>
-            </div>
-        {{/if}}
-    {{/defineElement}}
-
-    {{#defineElement "actions" noWith=true}}
-        <footer class="{{elementName}}">
-            {{element "submit"}}
-        </footer>
-    {{/defineElement}}
-
-    {{#defineElement "form" noWith=true}}
-        <form
-            method="post"
-            class="{{elementName}}"
-            action="{{submitAction}}">
-            {{element "input"}}
-            {{element "errorMessages"}}
-            {{element "actions"}}
-        </form>
-    {{/defineElement}}
-
-    {{#defineBlockContainer}}
-        <div class="{{blockName}}"
-            data-bsp-community-commentEntry
-            data-commenting-id="{{commentingId}}"
-            {{extraAttributes}}>
-            {{#defineBlockBody}}
+        {{#blockBody}}
             <div class="{{blockName}}-auth">
-                {{element "user"}}
-                {{element "logoutForm"}}
+                {{#element "user" noWith=true}}
+                    <div class="{{elementName}}">
+                        {{#element "userImage" noWith=true}}
+                            <img class="{{elementName}}" src="{{userImageSrc}}" />
+                        {{/element}}
+
+                        {{#element "userName"}}
+                            <span class="{{elementName}}">{{this}}</span>
+                        {{/element}}
+                    </div>
+                {{/element}}
+
+                {{#element "logoutForm" noWith=true}}
+                    <form
+                        class="{{elementName}}"
+                        {{#if logoutAction}}action="{{logoutAction}}"{{/if}}
+                        {{#if logoutTarget}}target="{{logoutTarget}}"{{/if}}>
+
+                        {{#element "logoutButton" noWith=true}}
+                            <button class="{{elementName}}">{{logoutLabel}}</button>
+                        {{/element}}
+                    </form>
+                {{/element}}
             </div>
-                {{element "form"}}
-            {{/defineBlockBody}}
-        </div>
-    {{/defineBlockContainer}}
-{{/defineBlock}}
+
+            {{#element "form" noWith=true}}
+                <form
+                    method="post"
+                    class="{{elementName}}"
+                    action="{{submitAction}}">
+
+                    {{#element "input" noWith=true}}
+                        <div class="{{elementName}}">
+                            <textarea
+                                name="{{inputName}}"
+                                class="{{elementName}}-textarea"
+                                {{#with inputPlaceholder}}placeholder="{{this}}"{{/with}}
+                                {{#with inputMaxlength}}maxlength="{{this}}"{{/with}}
+                                aria-invalid={{#if invalid}}"true"{{else}}"false"{{/if}}
+                                {{#if inputRequired}}required{{/if}}>{{value}}</textarea>
+
+                            {{#element "inputCharacterCount"  noWith=true}}
+                                {{#if inputMaxlength}}<div class="{{elementName}}">{{inputMaxlength}} {{inputCharacterCountLabel}}</div>{{/if}}
+                            {{/element}}
+                        </div>
+                    {{/element}}
+
+                    {{#element "errorMessages" noWith=true}}
+                        <div class="{{elementName}}">
+                            {{#element "errorMessageServer"}}
+                                <div class="{{elementName}}">{{{this}}}</div>
+                            {{/element}}
+
+                            {{#element "errorMessageBlank"}}
+                                <div class="{{elementName}}">{{{this}}}</div>
+                            {{/element}}
+
+                            {{#element "errorMessageTooLong"}}
+                                <div class="{{elementName}}">{{{this}}}</div>
+                            {{/element}}
+                        </div>
+                    {{/element}}
+
+                    {{#element "actions" noWith=true}}
+                        <footer class="{{elementName}}">
+                            {{#element "submit" noWith=true}}
+                                {{#if submitAction}}
+                                    <div class="{{elementName}}">
+                                        <button formaction="{{submitAction}}" class="{{elementName}}-button">{{submitLabel}}</button>
+                                    </div>
+                                {{/if}}
+                            {{/element}}
+                        </footer>
+                    {{/element}}
+                </form>
+            {{/element}}
+        {{/blockBody}}
+    </div>
+{{/block}}

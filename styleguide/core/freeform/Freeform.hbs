@@ -1,3 +1,4 @@
+<<<<<<< 77de33bf965616f99c0898f476fd390af8b43f02
 {{#defineBlock "Freeform"}}
     {{#defineElement "items"}}
         <div class="{{elementName}}"{{#if ../overlay}} data-overlay{{/if}}>
@@ -15,3 +16,18 @@
         </div>
     {{/defineBlockContainer}}
 {{/defineBlock}}
+=======
+{{#block "Freeform"}}
+    <div class="{{blockName}}"{{#with background}} style="background:{{this}}"{{/with}}{{extraAttributes}}>
+        {{#blockBody}}
+            {{#element "items"}}
+                <div class="{{elementName}}">
+                    {{#each this}}
+                        <div class="{{elementName}}-item">{{this}}</div>
+                    {{/each}}
+                </div>
+            {{/element}}
+        {{/blockBody}}
+    </div>
+{{/block}}
+>>>>>>> Changes all handlebars to use the new helpers.

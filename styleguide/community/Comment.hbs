@@ -1,72 +1,55 @@
-{{#defineBlock "Comment"}}
-    {{#defineElement "authorImage" noWith=true}}
-        <img class="{{elementName}}" src="{{authorImageSrc}}" />
-    {{/defineElement}}
+{{#block "Comment"}}
+    <div class="{{blockName}}"
+        data-bsp-community-comment
+        itemscope itemtype="http://schema.org/Comment"
+        {{extraAttributes}}>
 
-    {{#defineElement "authorName"}}
-        <span class="{{elementName}}">{{this}}</span>
-    {{/defineElement}}
+        {{#blockBody}}
+            {{#element "author" noWith=true}}
+                <div class="{{elementName}}">
+                    {{#element "authorImage" noWith=true}}
+                        <img class="{{elementName}}" src="{{authorImageSrc}}" />
+                    {{/element}}
 
-    {{#defineElement "author" noWith=true}}
-        <div class="{{elementName}}">
-            {{element "authorImage"}}
-            {{element "authorName"}}
-        </div>
-    {{/defineElement}}
+                    {{#element "authorName"}}
+                        <span class="{{elementName}}">{{this}}</span>
+                    {{/element}}
+                </div>
+            {{/element}}
 
-    {{#defineElement "timeStamp" noWith="true"}}
-        <time class="{{elementName}}" itemscope itemtype="http://schema.org/DateTime" datetime="{{timeStampIso}}">{{timeStampBody}}</time>
-    {{/defineElement}}
+            {{#element "timeStamp" noWith="true"}}
+                <time class="{{elementName}}" itemscope itemtype="http://schema.org/DateTime" datetime="{{timeStampIso}}">{{timeStampBody}}</time>
+            {{/element}}
 
-    {{#defineElement "body"}}
-        <div class="{{elementName}}">{{{this}}}</div>
-    {{/defineElement}}
+            {{#element "body"}}
+                <div class="{{elementName}}">{{{this}}}</div>
+            {{/element}}
 
-    {{#defineElement "replies" noWith=true}}
-            <section class="{{elementName}}">
-                {{#each replies}}{{this}}{{/each}}
-            </section>
-    {{/defineElement}}
+            {{#element "actions" noWith=true}}
+                <div class="{{elementName}}">
+                    {{#element "reply" noWith=true}}
+                        {{#if replyAction}}
+                            <form class="{{elementName}}" method="get" action="{{replyAction}}">
+                                <button class="{{elementName}}-button">{{replyLabel}}</button>
+                            </form>
+                        {{/if}}
+                    {{/element}}
+                </div>
+            {{/element}}
 
-    {{#defineElement "reply" noWith=true}}
-        {{#if replyAction}}
-            <form class="{{elementName}}" method="get" action="{{replyAction}}">
-                <button class="{{elementName}}-button">{{replyLabel}}</button>
-            </form>
-        {{/if}}
-    {{/defineElement}}
+            {{#element "replies" noWith=true}}
+                <section class="{{elementName}}">
+                    {{#each replies}}{{this}}{{/each}}
+                </section>
+            {{/element}}
 
-    {{#defineElement "actions" noWith=true}}
-        <div class="{{elementName}}">
-            {{element "reply"}}
-        </div>
-    {{/defineElement}}
-
-    {{#defineElement "errorMessageServer"}}
-        {{#if errorMessageServer}}<div class="{{elementName}}">{{{errorMessageServer}}}</div>{{/if}}
-    {{/defineElement}}
-
-    {{#defineElement "errorMessages" noWith=true}}
-        <div class="{{elementName}}">
-            {{element "errorMessageServer"}}
-        </div>
-    {{/defineElement}}
-
-    {{#defineBlockContainer}}
-        <div class="{{blockName}}"
-            data-bsp-community-comment
-            itemscope itemtype="http://schema.org/Comment"
-            {{extraAttributes}}>
-
-            {{#defineBlockBody}}
-                {{element "author"}}
-                {{element "timeStamp"}}
-                {{element "body"}}
-                {{element "actions"}}
-                {{element "replies"}}
-                {{element "errorMessages"}}
-            {{/defineBlockBody}}
-
-        </div>
-    {{/defineBlockContainer}}
-{{/defineBlock}}
+            {{#element "errorMessages" noWith=true}}
+                <div class="{{elementName}}">
+                    {{#element "errorMessageServer"}}
+                        {{#if errorMessageServer}}<div class="{{elementName}}">{{{errorMessageServer}}}</div>{{/if}}
+                    {{/element}}
+                </div>
+            {{/element}}
+        {{/blockBody}}
+    </div>
+{{/block}}

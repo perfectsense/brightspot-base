@@ -1,62 +1,43 @@
-{{#defineBlock "GallerySlide"}}
+{{#block "GallerySlide"}}
+    <div class="{{blockName}}" itemprop="image" itemtype="http://schema.org/ImageObject" {{extraAttributes}}>
+        {{#blockBody}}
+            {{#element "media" noWith=true}}
+                <div class="{{elementName}}">
+                    <div class="{{elementName}}Container">
+                        {{#element "mediaControls" noWith=true}}
+                            <div class="{{elementName}}">
+                                {{#element "mediaControlsZoom" noWith=true}}
+                                    <button title="Increase image size" class="{{elementName}}">Zoom</button>
+                                {{/element}}
+                            </div>
+                        {{/element}}
 
-    {{#defineElement "mediaContent"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+                        {{#element "mediaContent"}}
+                            <div class="{{elementName}}">{{this}}</div>
+                        {{/element}}
+                    </div>
+                </div>
+            {{/element}}
 
-    {{#defineElement "mediaControlsZoom" noWith=true}}
-        <button title="Increase image size" class="{{elementName}}">Zoom</button>
-    {{/defineElement}}
+            {{#element "info" noWith=true}}
+                <div class="{{elementName}}">
+                    {{#element "infoTitle" noWith=true}}
+                        <div class="{{elementName}}" {{#element "infoTitleShort"}}data-shorttext="{{this}}"{{/element}} itemprop="name">
+                            <span>{{infoTitle}}</span>
+                        </div>
+                    {{/element}}
 
-    {{#defineElement "mediaControls" noWith=true}}
-        <div class="{{elementName}}">
-            {{element "mediaControlsZoom"}}
-        </div>
-    {{/defineElement}}
+                    {{#element "infoDescription" noWith=true}}
+                        <div class="{{elementName}}" {{#element "infoDescriptionShort"}}data-shorttext="{{this}}"{{/element}} itemprop="description">
+                            <span>{{infoDescription}}</span>
+                        </div>
+                    {{/element}}
 
-    {{#defineElement "media" noWith=true}}
-        <div class="{{elementName}}">
-            <div class="{{elementName}}Container">
-                {{element "mediaControls"}}
-                {{element "mediaContent"}}
-            </div>
-        </div>
-    {{/defineElement}}
-
-    {{#defineElement "infoTitleShort"}}data-shorttext="{{this}}"{{/defineElement}}
-    {{#defineElement "infoTitle" noWith=true}}
-        <div class="{{elementName}}" {{element "infoTitleShort"}} itemprop="name">
-            <span>{{infoTitle}}</span>
-        </div>
-    {{/defineElement}}
-
-    {{#defineElement "infoDescriptionShort"}}data-shorttext="{{this}}"{{/defineElement}}
-    {{#defineElement "infoDescription" noWith=true}}
-        <div class="{{elementName}}" {{element "infoDescriptionShort"}} itemprop="description">
-            <span>{{infoDescription}}</span>
-        </div>
-    {{/defineElement}}
-
-    {{#defineElement "infoAttribution"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
-
-    {{#defineElement "info" noWith=true}}
-        <div class="{{elementName}}">
-            {{element "infoTitle"}}
-            {{element "infoDescription"}}
-            {{element "infoAttribution"}}
-        </div>
-    {{/defineElement}}
-
-    {{#defineBlockContainer}}
-        <div class="{{blockName}}" itemprop="image" itemtype="http://schema.org/ImageObject" {{extraAttributes}}>
-
-            {{#defineBlockBody}}
-                {{element "media"}}
-                {{element "info"}}
-            {{/defineBlockBody}}
-
-        </div>
-    {{/defineBlockContainer}}
-{{/defineBlock}}
+                    {{#element "infoAttribution"}}
+                        <div class="{{elementName}}">{{this}}</div>
+                    {{/element}}
+                </div>
+            {{/element}}
+        {{/blockBody}}
+    </div>
+{{/block}}

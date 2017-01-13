@@ -1,41 +1,29 @@
-{{#defineBlock "CommentActionResponse"}}
+{{#block "CommentActionResponse"}}
+    <div class="{{blockName}}">
+        {{#blockBody}}
+            {{#element "title"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
 
-    {{#defineElement "title"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+            {{#element "comment"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
 
-    {{#defineElement "comment"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+            {{#element "entry"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
 
-    {{#defineElement "entry"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+            {{#element "signIn" noWith=true}}
+                <div class="{{elementName}}">
+                    {{#element "signInTitle"}}
+                        <div class="{{elementName}}">{{this}}</div>
+                    {{/element}}
 
-    {{#defineElement "signInTitle"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
-
-    {{#defineElement "signInLinks"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
-
-    {{#defineElement "signIn" noWith=true}}
-        <div class="{{elementName}}">
-            {{element "signInTitle"}}
-            {{element "signInLinks"}}
-        </div>
-    {{/defineElement}}
-
-    {{#defineBlockContainer}}
-        <div class="{{blockName}}">
-            {{#defineBlockBody}}
-                {{element "title"}}
-                {{element "comment"}}
-                {{element "entry"}}
-                {{element "signIn"}}
-            {{/defineBlockBody}}
-        </div>
-    {{/defineBlockContainer}}
-
-{{/defineBlock}}
+                    {{#element "signInLinks"}}
+                        <div class="{{elementName}}">{{this}}</div>
+                    {{/element}}
+                </div>
+            {{/element}}
+        {{/blockBody}}
+    </div>
+{{/block}}

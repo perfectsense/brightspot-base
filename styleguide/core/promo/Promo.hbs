@@ -1,33 +1,25 @@
-{{#defineBlock "Promo"}}
-    {{#defineElement "category"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+{{#block "Promo"}}
+    <div class="{{blockName}}"{{extraAttributes}}>
+        {{#blockBody}}
+            {{#element "category"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
 
-    {{#defineElement "title"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+            {{#element "title"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
 
-    {{#defineElement "media"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+            {{#element "media"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
 
-    {{#defineElement "description"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+            {{#element "description"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
 
-    {{#defineElement "cta"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
-
-    {{#defineBlockContainer}}
-        <div class="{{blockName}}"{{extraAttributes}}>
-            {{#defineBlockBody}}
-                {{element "category"}}
-                {{element "title"}}
-                {{element "media"}}
-                {{element "description"}}
-                {{element "cta"}}
-            {{/defineBlockBody}}
-        </div>
-    {{/defineBlockContainer}}
-{{/defineBlock}}
+            {{#element "cta"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
+        {{/blockBody}}
+    </div>
+{{/block}}

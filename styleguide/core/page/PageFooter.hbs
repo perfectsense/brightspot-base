@@ -1,35 +1,25 @@
-{{#defineBlock "PageFooter"}}
+{{#block "PageFooter"}}
+    <footer class="{{blockName}}" itemscope itemtype="https://schema.org/WPFooter"{{extraAttributes}}>
+        {{#blockBody}}
+            {{#element "logo"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
 
-    {{#defineElement "logo"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+            {{#element "promo"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
 
-    {{#defineElement "socialLinks"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+            {{#element "navigation"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
 
-    {{#defineElement "promo"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+            {{#element "socialLinks"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
 
-    {{#defineElement "navigation"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
-
-    {{#defineElement "copyright"}}
-        <small class="{{elementName}}">{{this}}</small>
-    {{/defineElement}}
-
-    {{#defineBlockContainer}}
-        <footer class="{{blockName}}" itemscope itemtype="https://schema.org/WPFooter"{{extraAttributes}}>
-            {{#defineBlockBody}}
-                {{element "logo"}}
-                {{element "promo"}}
-                {{element "navigation"}}
-                {{element "socialLinks"}}
-                {{element "copyright"}}
-            {{/defineBlockBody}}
-        </footer>
-    {{/defineBlockContainer}}
-
-{{/defineBlock}}
+            {{#element "copyright"}}
+                <small class="{{elementName}}">{{this}}</small>
+            {{/element}}
+        {{/blockBody}}
+    </footer>
+{{/block}}

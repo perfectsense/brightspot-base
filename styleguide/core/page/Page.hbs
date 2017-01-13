@@ -1,30 +1,25 @@
-{{#defineBlock "Page"}}
-    {{#defineElement "head" noWith=true}}
-        <head>
-            <meta charset="UTF-8">
-            <link rel="stylesheet" type="text/css" href="/styleguide/All.min.css">
-            {{#if title}}<title>{{title}}</title>{{/if}}
-            {{#if canonicalLink}}<link rel="canonical" href="{{canonicalLink}}">{{/if}}
-            {{#if description}}<meta name="description" content="{{description}}" />{{/if}}
-            {{#if keywords}}<meta name="keywords" content="{{keywords}}" />{{/if}}
-            {{#with headItems}}{{this}}{{/with}}
-            <script type="application/javascript" src="/styleguide/All.min.js"></script>
-        </head>
-    {{/defineElement}}
+{{#block "Page"}}
+    <!DOCTYPE html>
+    <html class="{{blockName}}" itemscope itemtype="http://schema.org/WebPage"{{extraAttributes}}>
+        {{#blockBody}}
+            {{#element "head" noWith=true}}
+                <head>
+                    <meta charset="UTF-8">
+                    <link rel="stylesheet" type="text/css" href="/styleguide/All.min.css">
+                    {{#if title}}<title>{{title}}</title>{{/if}}
+                    {{#if canonicalLink}}<link rel="canonical" href="{{canonicalLink}}">{{/if}}
+                    {{#if description}}<meta name="description" content="{{description}}" />{{/if}}
+                    {{#if keywords}}<meta name="keywords" content="{{keywords}}" />{{/if}}
+                    {{#with headItems}}{{this}}{{/with}}
+                    <script type="application/javascript" src="/styleguide/All.min.js"></script>
+                </head>
+            {{/element}}
 
-    {{#defineElement "body"}}
-        <body class="{{elementName}}">
-            {{this}}
-        </body>
-    {{/defineElement}}
-
-    {{#defineBlockContainer}}
-        <!DOCTYPE html>
-        <html class="{{blockName}}" itemscope itemtype="http://schema.org/WebPage"{{extraAttributes}}>
-            {{#defineBlockBody}}
-                {{element "head"}}
-                {{element "body"}}
-            {{/defineBlockBody}}
-        </html>
-    {{/defineBlockContainer}}
-{{/defineBlock}}
+            {{#element "body"}}
+                <body class="{{elementName}}">
+                    {{this}}
+                </body>
+            {{/element}}
+        {{/blockBody}}
+    </html>
+{{/block}}

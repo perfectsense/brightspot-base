@@ -1,37 +1,31 @@
-{{#defineBlock "VideoMain" extend="../CreativeWorkMain.hbs"}}
+{{#block "VideoMain" extend="../CreativeWorkMain.hbs"}}
+    <article class="{{blockName}}"
+        itemprop="mainEntity" itemscope {{#if playlist}}itemtype="https://schema.org/VideoObject"{{/if}}
+        {{#if permalink}}data-permalink="{{permalink}}"{{/if}}
+        {{#if preventSkippingAds}}data-prevent-skipping-ads="{{preventSkippingAds}}"{{/if}}
+        {{extraAttributes}}>
 
-    {{#defineElement "videoPlayer"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+        {{#blockBody}}
+            {{#element "videoPlayer"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
 
-    {{#defineElement "playlist"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+            <aside class="{{blockName}}-content"
+                {{#if videoHLS}}data-videoUrl="{{{videoHLS}}}"{{/if}}
+                {{#if videoSeekTime}}data-video-seek-time="{{videoSeekTime}}"{{/if}}>
+                {{element "preHeadline"}}
+                <h1>{{element "headline"}}</h1>
+                {{element "subHeadline"}}
 
-    {{#defineElement "description"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+                {{#element "description"}}
+                    <div class="{{elementName}}">{{this}}</div>
+                {{/element}}
 
-    {{#defineBlockContainer}}
-        {{#defineBlockBody}}
-            <article class="{{blockName}}"
-                itemprop="mainEntity" itemscope {{#if playlist}}itemtype="https://schema.org/VideoObject"{{/if}}
-                {{#if permalink}}data-permalink="{{permalink}}"{{/if}}
-                {{#if preventSkippingAds}}data-prevent-skipping-ads="{{preventSkippingAds}}"{{/if}}
-                {{extraAttributes}}>
-                {{element "videoPlayer"}}
-                <aside class="{{blockName}}-content"
-                    {{#if videoHLS}}data-videoUrl="{{{videoHLS}}}"{{/if}}
-                    {{#if videoSeekTime}}data-video-seek-time="{{videoSeekTime}}"{{/if}}>
-                    {{element "tags"}}
-                    {{element "headline"}}
-                    {{element "authors"}}
-                    {{element "description"}}
-                    {{element "sharebar"}}
-                </aside>
-                {{element "playlist"}}
-            </article>
-        {{/defineBlockBody}}
-    {{/defineBlockContainer}}
-
-{{/defineBlock}}
+                {{element "sharebar"}}
+            </aside>
+            {{#element "playlist"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
+        {{/blockBody}}
+    </article>
+{{/block}}

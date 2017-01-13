@@ -1,22 +1,15 @@
-{{#defineBlock "CommentLoadMoreResponse"}}
+{{#block "CommentLoadMoreResponse"}}
+    <div class="{{blockName}}">
+        {{#blockBody}}
+            {{#element "comments"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
 
-    {{#defineElement "comments"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
-
-    {{#defineElement "loadMore" noWith=true}}
-        <div class="{{elementName}}">
-            <button class="Commenting-loadMore-button" {{#if loadMoreAction}}formaction="{{loadMoreAction}}"{{/if}}>{{loadMoreLabel}}</button>
-        </div>
-    {{/defineElement}}
-
-    {{#defineBlockContainer}}
-        <div class="{{blockName}}">
-            {{#defineBlockBody}}
-                {{element "comments"}}
-                {{element "loadMore"}}
-            {{/defineBlockBody}}
-        </div>
-    {{/defineBlockContainer}}
-
-{{/defineBlock}}
+            {{#element "loadMore" noWith=true}}
+                <div class="{{elementName}}">
+                    <button class="Commenting-loadMore-button" {{#if loadMoreAction}}formaction="{{loadMoreAction}}"{{/if}}>{{loadMoreLabel}}</button>
+                </div>
+            {{/element}}
+        {{/blockBody}}
+    </div>
+{{/block}}

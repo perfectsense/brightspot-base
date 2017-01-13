@@ -1,12 +1,10 @@
-{{#defineBlock "TwitterAppCard" extend="TwitterCard.hbs"}}
+{{#block "TwitterAppCard" extend="TwitterCard.hbs"}}
+    {{#blockBody}}
+        {{#element "card" noWith="true"}}
+            <meta name="twitter:card" content="app"/>
+        {{/element}}
 
-    {{#defineElement "card" noWith="true"}}
-        <meta name="twitter:card" content="app"/>
-    {{/defineElement}}
-
-    {{#defineBlockBody}}
         {{element "appCountry"}}
-        {{element "card"}}
         {{element "ipadAppId"}}
         {{element "ipadAppName"}}
         {{element "ipadAppUrl"}}
@@ -18,5 +16,5 @@
         {{element "googlePlayAppUrl"}}
         {{element "site"}}
         {{element "siteId"}}
-    {{/defineBlockBody}}
-{{/defineBlock}}
+    {{/blockBody}}
+{{/block}}

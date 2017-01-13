@@ -1,22 +1,17 @@
-{{#defineBlock "Cluster"}}
-    {{#defineElement "title"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+{{#block "Cluster"}}
+    <div class="{{blockName}}"{{extraAttributes}}>
+        {{#blockBody}}
+            {{#element "title"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
 
-    {{#defineElement "items"}}
-        <ul class="{{elementName}}">
-            {{#each this}}
-                <li class="{{elementName}}-item">{{this}}</li>
-            {{/each}}
-        </ul>
-    {{/defineElement}}
-
-    {{#defineBlockContainer}}
-        <div class="{{blockName}}"{{extraAttributes}}>
-            {{#defineBlockBody}}
-                {{element "title"}}
-                {{element "items"}}
-            {{/defineBlockBody}}
-        </div>
-    {{/defineBlockContainer}}
-{{/defineBlock}}
+            {{#element "items"}}
+                <ul class="{{elementName}}">
+                    {{#each this}}
+                        <li class="{{elementName}}-item">{{this}}</li>
+                    {{/each}}
+                </ul>
+            {{/element}}
+        {{/blockBody}}
+    </div>
+{{/block}}

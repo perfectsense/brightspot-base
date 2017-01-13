@@ -1,23 +1,17 @@
-{{#defineBlock "PageNavigation"}}
+{{#block "PageNavigation"}}
+    <nav class="{{blockName}}" {{#if active}}data-is-active{{/if}} itemscope itemtype="http://schema.org/SiteNavigationElement"{{extraAttributes}}>
+        {{#blockBody}}
+            {{#element "label"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
 
-    {{#defineElement "label"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
-
-    {{#defineElement "items"}}
-        <ul class="{{elementName}}">
-        {{#each this}}
-          <li class="{{elementName}}-item">{{this}}</li>
-        {{/each}}
-        </ul>
-    {{/defineElement}}
-
-    {{#defineBlockContainer}}
-        <nav class="{{blockName}}" {{#if active}}data-is-active{{/if}} itemscope itemtype="http://schema.org/SiteNavigationElement"{{extraAttributes}}>
-            {{#defineBlockBody}}
-              {{element "label"}}
-              {{element "items"}}
-            {{/defineBlockBody}}
-        </nav>
-    {{/defineBlockContainer}}
-{{/defineBlock}}
+            {{#element "items"}}
+                <ul class="{{elementName}}">
+                {{#each this}}
+                  <li class="{{elementName}}-item">{{this}}</li>
+                {{/each}}
+                </ul>
+            {{/element}}
+        {{/blockBody}}
+    </nav>
+{{/block}}

@@ -1,34 +1,27 @@
-{{#defineBlock "OpenGraphVideoMeta"}}
+{{#block "OpenGraphVideoMeta"}}
+    {{#blockBody}}
+        {{! Required Elements }}
 
-    {{! Required Elements }}
+        {{#element "url"}}
+            <meta property="og:video" content="{{this}}" />
+        {{/element}}
 
-    {{#defineElement "url"}}
-        <meta property="og:video" content="{{this}}" />
-    {{/defineElement}}
+        {{! Optional Elements }}
 
-    {{! Optional Elements }}
+        {{#element "secureUrl"}}
+            <meta property="og:video:secure_url" content="{{this}}" />
+        {{/element}}
 
-    {{#defineElement "secureUrl"}}
-        <meta property="og:video:secure_url" content="{{this}}" />
-    {{/defineElement}}
+        {{#element "type"}}
+            <meta property="og:video:type" content="{{this}}" />
+        {{/element}}
 
-    {{#defineElement "type"}}
-        <meta property="og:video:type" content="{{this}}" />
-    {{/defineElement}}
+        {{#element "width"}}
+            <meta property="og:video:width" content="{{this}}" />
+        {{/element}}
 
-    {{#defineElement "width"}}
-        <meta property="og:video:width" content="{{this}}" />
-    {{/defineElement}}
-
-    {{#defineElement "height"}}
-        <meta property="og:video:height" content="{{this}}" />
-    {{/defineElement}}
-
-    {{#defineBlockBody}}
-        {{element "url"}}
-        {{element "secureUrl"}}
-        {{element "type"}}
-        {{element "width"}}
-        {{element "height"}}
-    {{/defineBlockBody}}
-{{/defineBlock}}
+        {{#element "height"}}
+            <meta property="og:video:height" content="{{this}}" />
+        {{/element}}
+    {{/blockBody}}
+{{/block}}

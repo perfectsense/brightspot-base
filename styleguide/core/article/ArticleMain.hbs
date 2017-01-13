@@ -1,31 +1,28 @@
-{{#defineBlock "ArticleMain" extend="../CreativeWorkMain.hbs"}}
-    {{#defineElement "lead"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+{{#block "ArticleMain" extend="../CreativeWorkMain.hbs"}}
+    <article class="{{blockName}}" itemprop="mainEntity" itemscope itemtype="http://schema.org/Article"{{extraAttributes}}>
+        {{element "meta"}}
 
-    {{#defineElement "body"}}
-        <div class="{{elementName}}" itemprop="articleBody">{{this}}</div>
-    {{/defineElement}}
+        {{#blockBody}}
+            {{element "breadcrumbs"}}
+            {{element "preHeadline"}}
+            {{element "headline"}}
+            {{element "subHeadline"}}
+            {{element "byline"}}
+            {{element "authors"}}
+            {{element "datePublished"}}
+            {{element "dateModified"}}
 
-    {{#defineBlockContainer}}
-        <article class="{{blockName}}" itemprop="mainEntity" itemscope itemtype="http://schema.org/Article"{{extraAttributes}}>
-            {{element "meta"}}
+            {{#element "lead"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
 
-            {{#defineBlockBody}}
-                {{element "breadcrumbs"}}
-                {{element "preHeadline"}}
-                {{element "headline"}}
-                {{element "subHeadline"}}
-                {{element "byline"}}
-                {{element "authors"}}
-                {{element "datePublished"}}
-                {{element "dateModified"}}
-                {{element "lead"}}
-                {{element "body"}}
-                {{element "tags"}}
-                {{element "sharebar"}}
-                {{element "comments"}}
-            {{/defineBlockBody}}
-        </article>
-    {{/defineBlockContainer}}
-{{/defineBlock}}
+            {{#element "body"}}
+                <div class="{{elementName}}" itemprop="articleBody">{{this}}</div>
+            {{/element}}
+
+            {{element "tags"}}
+            {{element "sharebar"}}
+            {{element "comments"}}
+        {{/blockBody}}
+    </article>
+{{/block}}
