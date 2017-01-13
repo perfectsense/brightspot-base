@@ -1,43 +1,40 @@
-{{#defineBlock "Listicle" extend="../CreativeWorkMain.hbs"}}
+{{#block "Listicle" extend="../CreativeWorkMain.hbs"}}
+    <article class="{{blockName}}" itemprop="mainEntity" itemscope itemtype="http://schema.org/Article http://schema.org/ItemList"{{extraAttributes}}>
+        {{element "meta"}}
 
-    {{#defineElement "items"}}
-        {{#if ../ordered}}
-            <ol class="{{elementName}}" {{#if ../reversed}} reversed{{/if}}>
-                {{#each this}}
-                    <li class="{{elementName}}-item">
-                    {{this}}
-                    </li>
-                {{/each}}
-            </ol>
-        {{else}}
-            <ul class="{{elementName}}">
-                {{#each this}}
-                    <li class="{{elementName}}-item">
-                        {{this}}
-                    <li>
-                {{/each}}
-            </ul>
-        {{/if}}
-    {{/defineElement}}
+        {{#blockBody}}
+            {{element "breadcrumbs"}}
+            {{element "preHeadline"}}
+            {{element "headline"}}
+            {{element "subHeadline"}}
+            {{element "byline"}}
+            {{element "authors"}}
+            {{element "datePublished"}}
+            {{element "dateModified"}}
 
-    {{#defineBlockContainer}}
-        <article class="{{blockName}}" itemprop="mainEntity" itemscope itemtype="http://schema.org/Article http://schema.org/ItemList"{{extraAttributes}}>
-            {{element "meta"}}
+            {{#element "items"}}
+                {{#if ../ordered}}
+                    <ol class="{{elementName}}" {{#if ../reversed}} reversed{{/if}}>
+                        {{#each this}}
+                            <li class="{{elementName}}-item">
+                            {{this}}
+                            </li>
+                        {{/each}}
+                    </ol>
+                {{else}}
+                    <ul class="{{elementName}}">
+                        {{#each this}}
+                            <li class="{{elementName}}-item">
+                                {{this}}
+                            <li>
+                        {{/each}}
+                    </ul>
+                {{/if}}
+            {{/element}}
 
-            {{#defineBlockBody}}
-                {{element "breadcrumbs"}}
-                {{element "preHeadline"}}
-                {{element "headline"}}
-                {{element "subHeadline"}}
-                {{element "byline"}}
-                {{element "authors"}}
-                {{element "datePublished"}}
-                {{element "dateModified"}}
-                {{element "items"}}
-                {{element "tags"}}
-                {{element "sharebar"}}
-                {{element "comments"}}
-            {{/defineBlockBody}}
-        </article>
-    {{/defineBlockContainer}}
-{{/defineBlock}}
+            {{element "tags"}}
+            {{element "sharebar"}}
+            {{element "comments"}}
+        {{/blockBody}}
+    </article>
+{{/block}}

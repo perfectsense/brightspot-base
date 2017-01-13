@@ -1,45 +1,37 @@
-{{#defineBlock "PageHeader"}}
+{{#block "PageHeader"}}
+    <header class="{{blockName}}" itemscope itemtype="http://schema.org/WPHeader"{{extraAttributes}}>
+        {{#blockBody}}
+            {{#element "logo"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
 
-    {{#defineElement "logo"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+            {{#element "hat"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
 
-    {{#defineElement "hat"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+            {{#element "navigation"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
 
-    {{#defineElement "navigation"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
-
-    {{#defineElement "search" noWith=true}}
-        <div class="{{elementName}}">
-            <form class="{{elementName}}" action="{{searchUrl}}">
-                {{#with searchInputLabel}}<label for="{{../searchInputId}}" class="{{elementName}}-label">{{this}}</label>{{/with}}
-                <input
-                    type="text"
-                    class="{{elementName}}-input"
-                    {{#if searchInputRequired}}required{{/if}}
-                    {{#with searchInputId}}id="{{this}}"{{/with}}
-                    {{#with searchInputName}}name="{{this}}"{{/with}}
-                    {{#with searchInputPlaceholder}}placeholder="{{this}}"{{/with}}
-                    {{#with searchInputAutofocus}}autofocus="{{this}}"{{/with}}
-                    {{#with searchInputMaxlength}}maxlength="{{this}}"{{/with}}
-                    {{#with searchInputValue}}value="{{this}}"{{/with}}
-                    {{#with searchInputName}}name="{{this}}"{{/with}}>
-                {{#with searchButtonLabel}}<button type="submit" class="{{elementName}}-button">{{this}}</button>{{/with}}
-            </form>
-        </div>
-    {{/defineElement}}
-
-    {{#defineBlockContainer}}
-        <header class="{{blockName}}" itemscope itemtype="http://schema.org/WPHeader"{{extraAttributes}}>
-            {{#defineBlockBody}}
-              {{element "logo"}}
-              {{element "hat"}}
-              {{element "navigation"}}
-              {{element "search"}}
-            {{/defineBlockBody}}
-        </header>
-    {{/defineBlockContainer}}
-{{/defineBlock}}
+            {{#element "search" noWith=true}}
+                <div class="{{elementName}}">
+                    <form class="{{elementName}}" action="{{searchUrl}}">
+                        {{#with searchInputLabel}}<label for="{{../searchInputId}}" class="{{elementName}}-label">{{this}}</label>{{/with}}
+                        <input
+                            type="text"
+                            class="{{elementName}}-input"
+                            {{#if searchInputRequired}}required{{/if}}
+                            {{#with searchInputId}}id="{{this}}"{{/with}}
+                            {{#with searchInputName}}name="{{this}}"{{/with}}
+                            {{#with searchInputPlaceholder}}placeholder="{{this}}"{{/with}}
+                            {{#with searchInputAutofocus}}autofocus="{{this}}"{{/with}}
+                            {{#with searchInputMaxlength}}maxlength="{{this}}"{{/with}}
+                            {{#with searchInputValue}}value="{{this}}"{{/with}}
+                            {{#with searchInputName}}name="{{this}}"{{/with}}>
+                        {{#with searchButtonLabel}}<button type="submit" class="{{elementName}}-button">{{this}}</button>{{/with}}
+                    </form>
+                </div>
+            {{/element}}
+        {{/blockBody}}
+    </header>
+{{/block}}

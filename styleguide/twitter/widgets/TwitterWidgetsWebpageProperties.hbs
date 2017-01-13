@@ -1,19 +1,8 @@
-{{#defineBlock "TwitterWidgetsWebpageProperties"}}
-
-    {{#defineElement "borderColor"}}
-        <meta name="twitter:widgets:border-color" content="{{this}}">
-    {{/defineElement}}
-
-    {{#defineElement "linkColor"}}
-        <meta name="twitter:widgets:link-color" content="{{this}}">
-    {{/defineElement}}
-
-    {{#defineElement "theme"}}
-        <meta name="twitter:widgets:theme" content="{{this}}">
-    {{/defineElement}}
-
-    {{#defineBlockBody}}
-        {{element "borderColor"}}
+{{#block "TwitterWidgetsWebpageProperties"}}
+    {{#blockBody}}
+        {{#element "borderColor"}}
+            <meta name="twitter:widgets:border-color" content="{{this}}">
+        {{/element}}
 
         {{#if csp}}
             <meta name="twitter:widgets:csp" content="on">
@@ -23,8 +12,12 @@
             <meta name="twitter:dnt" content="on">
         {{/if}}
 
-        {{element "linkColor"}}
-        {{element "theme"}}
-    {{/defineBlockBody}}
+        {{#element "linkColor"}}
+            <meta name="twitter:widgets:link-color" content="{{this}}">
+        {{/element}}
 
-{{/defineBlock}}
+        {{#element "theme"}}
+            <meta name="twitter:widgets:theme" content="{{this}}">
+        {{/element}}
+    {{/blockBody}}
+{{/block}}

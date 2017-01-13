@@ -1,47 +1,39 @@
-{{#defineBlock "MPXVideoPlayer"}}
+{{#block "MPXVideoPlayer"}}
+    <div id="{{id}}"
+        class="{{blockName}}"
+        itemprop="video" itemscope itemtype="http://schema.org/VideoObject"
+        {{#if hlsUrl}}data-hls-url="{{hlsUrl}}"{{/if}}
+        {{#if seekSeconds}}data-seek-seconds="{{seekSeconds}}"{{/if}}
+        {{#if muted}}data-muted{{/if}}
+        {{#if autoplay}}data-autoplay{{/if}}
+        {{extraAttributes}}>
 
-    {{#defineElement "overlay" noWith=true}}
-        <div class="{{elementName}}">
-            <span class="{{elementName}}-volumeButton"></span>
-            <span class="{{elementName}}-minimizeButton"></span>
-        </div>
-    {{/defineElement}}
+        {{#blockBody}}
+            {{#element "overlay" noWith=true}}
+                <div class="{{elementName}}">
+                    <span class="{{elementName}}-volumeButton"></span>
+                    <span class="{{elementName}}-minimizeButton"></span>
+                </div>
+            {{/element}}
 
-    {{#defineElement "screen" noWith=true}}
-        <div class="{{elementName}}"
-            data-aspect-ratio="{{#if aspectRatio}}{{aspectRatio}}{{else}}4x3{{/if}}">
-            <iframe id="mpxPlayer{{id}}" src="{{{src}}}/embed?form=html"
-                onload="registerPlayerController($pdk.bind(this), '{{id}}'); $pdk.controller.setIFrame(this, true);"
-                allowfullscreen
-                frameborder="0">
-            </iframe>
-        </div>
-    {{/defineElement}}
+            {{#element "screen" noWith=true}}
+                <div class="{{elementName}}"
+                    data-aspect-ratio="{{#if aspectRatio}}{{aspectRatio}}{{else}}4x3{{/if}}">
+                    <iframe id="mpxPlayer{{id}}" src="{{{src}}}/embed?form=html"
+                        onload="registerPlayerController($pdk.bind(this), '{{id}}'); $pdk.controller.setIFrame(this, true);"
+                        allowfullscreen
+                        frameborder="0">
+                    </iframe>
+                </div>
+            {{/element}}
 
-    {{#defineElement "introCard"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+            {{#element "introCard"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
 
-    {{#defineElement "infoCard"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
-
-    {{#defineBlockContainer}}
-        <div id="{{id}}"
-            class="{{blockName}}"
-            itemprop="video" itemscope itemtype="http://schema.org/VideoObject"
-            {{#if hlsUrl}}data-hls-url="{{hlsUrl}}"{{/if}}
-            {{#if seekSeconds}}data-seek-seconds="{{seekSeconds}}"{{/if}}
-            {{#if muted}}data-muted{{/if}}
-            {{#if autoplay}}data-autoplay{{/if}}
-            {{extraAttributes}}>
-            {{#defineBlockBody}}
-                {{element "overlay"}}
-                {{element "screen"}}
-                {{element "introCard"}}
-                {{element "infoCard"}}
-            {{/defineBlockBody}}
-        </div>
-    {{/defineBlockContainer}}
-
-{{/defineBlock}}
+            {{#element "infoCard"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
+        {{/blockBody}}
+    </div>
+{{/block}}

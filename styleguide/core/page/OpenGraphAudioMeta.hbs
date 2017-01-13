@@ -1,24 +1,19 @@
-{{#defineBlock "OpenGraphAudioMeta"}}
+{{#block "OpenGraphAudioMeta"}}
+    {{#blockBody}}
+        {{! Required Elements }}
 
-    {{! Required Elements }}
+        {{#element "url"}}
+            <meta property="og:audio" content="{{this}}" />
+        {{/element}}
 
-    {{#defineElement "url"}}
-        <meta property="og:audio" content="{{this}}" />
-    {{/defineElement}}
+        {{! Optional Elements }}
 
-    {{! Optional Elements }}
+        {{#element "secureUrl"}}
+            <meta property="og:audio:secure_url" content="{{this}}" />
+        {{/element}}
 
-    {{#defineElement "secureUrl"}}
-        <meta property="og:audio:secure_url" content="{{this}}" />
-    {{/defineElement}}
-
-    {{#defineElement "type"}}
-        <meta property="og:audio:type" content="{{this}}" />
-    {{/defineElement}}
-
-    {{#defineBlockBody}}
-        {{element "url"}}
-        {{element "secureUrl"}}
-        {{element "type"}}
-    {{/defineBlockBody}}
-{{/defineBlock}}
+        {{#element "type"}}
+            <meta property="og:audio:type" content="{{this}}" />
+        {{/element}}
+    {{/blockBody}}
+{{/block}}

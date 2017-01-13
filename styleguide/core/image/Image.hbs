@@ -1,16 +1,9 @@
-{{#defineBlock "Image"}}
-
-    {{#defineElement "image" noWith=true}}
-        <img class="{{elementName}}" src="{{src}}" alt="{{alt}}"{{#with srcset}} srcset="{{this}}"{{/with}}{{#with width}} width="{{this}}"{{/with}}{{#with height}} height="{{this}}"{{/with}} />
-    {{/defineElement}}
-
-    {{#defineBlockContainer}}
-
-        <div class="{{blockName}}">
-            {{#defineBlockBody}}
-                {{element "image"}}
-            {{/defineBlockBody}}
-        </div>
-
-    {{/defineBlockContainer}}
-{{/defineBlock}}
+{{#block "Image"}}
+    <div class="{{blockName}}">
+        {{#blockBody}}
+            {{#element "image" noWith=true}}
+                <img class="{{elementName}}" src="{{src}}" alt="{{alt}}"{{#with srcset}} srcset="{{this}}"{{/with}}{{#with width}} width="{{this}}"{{/with}}{{#with height}} height="{{this}}"{{/with}} />
+            {{/element}}
+        {{/blockBody}}
+    </div>
+{{/block}}

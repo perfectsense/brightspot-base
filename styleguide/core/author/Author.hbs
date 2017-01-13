@@ -1,23 +1,17 @@
-{{#defineBlock "Author"}}
-    {{#defineElement "image"}}
-        <div class="{{elementName}}" itemprop="image">{{this}}</div>
-    {{/defineElement}}
+{{#block "Author"}}
+    <div class="{{blockName}}" itemprop="author" itemscope itemtype="http://schema.org/Person"{{extraAttributes}}>
+        {{#blockBody}}
+            {{#element "image"}}
+                <div class="{{elementName}}" itemprop="image">{{this}}</div>
+            {{/element}}
 
-    {{#defineElement "name"}}
-        <div class="{{elementName}}" itemprop="name">{{this}}</div>
-    {{/defineElement}}
+            {{#element "name"}}
+                <div class="{{elementName}}" itemprop="name">{{this}}</div>
+            {{/element}}
 
-    {{#defineElement "affiliation"}}
-        <div class="{{elementName}}" itemprop="affiliation">{{this}}</div>
-    {{/defineElement}}
-
-    {{#defineBlockContainer}}
-        <div class="{{blockName}}" itemprop="author" itemscope itemtype="http://schema.org/Person"{{extraAttributes}}>
-            {{#defineBlockBody}}
-                {{element "image"}}
-                {{element "name"}}
-                {{element "affiliation"}}
-            {{/defineBlockBody}}
-        </div>
-    {{/defineBlockContainer}}
-{{/defineBlock}}
+            {{#element "affiliation"}}
+                <div class="{{elementName}}" itemprop="affiliation">{{this}}</div>
+            {{/element}}
+        {{/blockBody}}
+    </div>
+{{/block}}

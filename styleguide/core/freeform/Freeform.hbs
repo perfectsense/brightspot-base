@@ -1,17 +1,13 @@
-{{#defineBlock "Freeform"}}
-    {{#defineElement "items"}}
-        <div class="{{elementName}}">
-            {{#each this}}
-                <div class="{{elementName}}-item">{{this}}</div>
-            {{/each}}
-        </div>
-    {{/defineElement}}
-
-    {{#defineBlockContainer}}
-        <div class="{{blockName}}"{{#with background}} style="background:{{this}}"{{/with}}{{extraAttributes}}>
-            {{#defineBlockBody}}
-                {{element "items"}}
-            {{/defineBlockBody}}
-        </div>
-    {{/defineBlockContainer}}
-{{/defineBlock}}
+{{#block "Freeform"}}
+    <div class="{{blockName}}"{{#with background}} style="background:{{this}}"{{/with}}{{extraAttributes}}>
+        {{#blockBody}}
+            {{#element "items"}}
+                <div class="{{elementName}}">
+                    {{#each this}}
+                        <div class="{{elementName}}-item">{{this}}</div>
+                    {{/each}}
+                </div>
+            {{/element}}
+        {{/blockBody}}
+    </div>
+{{/block}}

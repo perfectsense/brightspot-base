@@ -1,11 +1,9 @@
-{{#defineBlock "TwitterPlayerCard" extend="TwitterCard.hbs"}}
+{{#block "TwitterPlayerCard" extend="TwitterCard.hbs"}}
+    {{#blockBody}}
+        {{#element "card" noWith="true"}}
+            <meta name="twitter:card" content="player"/>
+        {{/element}}
 
-    {{#defineElement "card" noWith="true"}}
-        <meta name="twitter:card" content="player"/>
-    {{/defineElement}}
-
-    {{#defineBlockBody}}
-        {{element "card"}}
         {{element "description"}}
         {{element "image"}}
         {{element "imageAlt"}}
@@ -17,5 +15,5 @@
         {{element "site"}}
         {{element "siteId"}}
         {{element "title"}}
-    {{/defineBlockBody}}
-{{/defineBlock}}
+    {{/blockBody}}
+{{/block}}

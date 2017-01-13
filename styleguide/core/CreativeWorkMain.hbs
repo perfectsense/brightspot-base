@@ -1,5 +1,5 @@
-{{#defineBlock "CreativeWorkMain" extend="Main.hbs"}}
-    {{#defineElement "meta" noWith=true}}
+{{#block "CreativeWorkMain" extend="Main.hbs"}}
+    {{#element "meta" noWith=true}}
         {{#with datePublishedISO}}
             <meta itemprop="datePublished" content="{{this}}">
         {{/with}}
@@ -7,35 +7,35 @@
         {{#with dateModifiedISO}}
             <meta itemprop="dateModified" content="{{this}}">
         {{/with}}
-    {{/defineElement}}
+    {{/element}}
 
-    {{#defineElement "datePublished"}}
+    {{#element "datePublished"}}
         <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+    {{/element}}
 
-    {{#defineElement "dateModified"}}
+    {{#element "dateModified"}}
         <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+    {{/element}}
 
-    {{#defineElement "preHeadline"}}
+    {{#element "preHeadline"}}
         <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+    {{/element}}
 
-    {{#defineElement "headline"}}
+    {{#element "headline"}}
         <div class="{{elementName}}" itemprop="headline">{{this}}</div>
-    {{/defineElement}}
+    {{/element}}
 
-    {{#defineElement "subHeadline"}}
+    {{#element "subHeadline"}}
         <div class="{{elementName}}" itemprop="alternativeHeadline">{{this}}</div>
-    {{/defineElement}}
+    {{/element}}
 
-    {{#defineElement "byline"}}
+    {{#element "byline"}}
         <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+    {{/element}}
 
-    {{#defineElement "authors"}}
+    {{#element "authors"}}
         {{#each this}}
             <div class="{{elementName}}">{{this}}</div>
         {{/each}}
-    {{/defineElement}}
-{{/defineBlock}}
+    {{/element}}
+{{/block}}
