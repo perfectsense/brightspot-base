@@ -1,5 +1,9 @@
 ---
 
+# DO NOT USE THIS REPOSITORY. USE [BRIGHTSPOT EXPRESS](https://github.com/perfectsense/brightspot-express) INSTEAD.
+
+---
+
 # Brightspot Base
 
 ---
