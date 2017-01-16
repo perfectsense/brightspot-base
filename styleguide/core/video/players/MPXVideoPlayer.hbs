@@ -1,33 +1,28 @@
-{{#defineBlock "MPXVideoPlayer"}}
+{{#block "MPXVideoPlayer"}}
+    <div id="{{id}}"
+        class="{{blockName}}"
+        itemprop="video" itemscope itemtype="http://schema.org/VideoObject"
+        {{#if hlsUrl}}data-hls-url="{{hlsUrl}}"{{/if}}
+        {{#if seekSeconds}}data-seek-seconds="{{seekSeconds}}"{{/if}}
+        {{#if muted}}data-muted{{/if}}
+        {{#if autoplay}}data-autoplay{{/if}}
+        {{extraAttributes}}>
 
-    {{#defineElement "card"}}
-        <div class="{{elementName}}">{{this}}</div>
-    {{/defineElement}}
+        {{#blockBody}}
 
-    {{#defineElement "screen" noWith=true}}
-        <div class="{{elementName}}" data-aspect-ratio="{{#if aspectRatio}}{{aspectRatio}}{{else}}4x3{{/if}}">
-            <iframe id="mpxPlayer{{id}}" src="{{{src}}}/embed?form=html"
-                onload="registerPlayerController($pdk.bind(this), '{{id}}'); $pdk.controller.setIFrame(this, true);"
-                allowfullscreen
-                frameborder="0">
-            </iframe>
-            {{element "card"}}
-        </div>
-    {{/defineElement}}
+            {{#element "screen" noWith=true}}
+                <div class="{{elementName}}" data-aspect-ratio="{{#if aspectRatio}}{{aspectRatio}}{{else}}4x3{{/if}}">
+                    <iframe id="mpxPlayer{{id}}" src="{{{src}}}/embed?form=html"
+                        onload="registerPlayerController($pdk.bind(this), '{{id}}'); $pdk.controller.setIFrame(this, true);"
+                        allowfullscreen
+                        frameborder="0">
+                    </iframe>
+                    {{#element "card"}}
+                        <div class="{{elementName}}">{{this}}</div>
+                    {{/element}}
+                </div>
+            {{/element}}
 
-    {{#defineBlockContainer}}
-        <div id="{{id}}"
-            class="{{blockName}}"
-            itemprop="video" itemscope itemtype="http://schema.org/VideoObject"
-            {{#if hlsUrl}}data-hls-url="{{hlsUrl}}"{{/if}}
-            {{#if seekSeconds}}data-seek-seconds="{{seekSeconds}}"{{/if}}
-            {{#if muted}}data-muted{{/if}}
-            {{#if autoplay}}data-autoplay{{/if}}
-            {{extraAttributes}}>
-            {{#defineBlockBody}}
-                {{element "screen"}}
-            {{/defineBlockBody}}
-        </div>
-    {{/defineBlockContainer}}
-
-{{/defineBlock}}
+        {{/blockBody}}
+    </div>
+{{/block}}
