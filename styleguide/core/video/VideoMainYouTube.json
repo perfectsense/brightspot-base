@@ -1,0 +1,63 @@
+{
+    "_wrapper": "_wrapper.json",
+
+    "_template": "VideoMain.hbs",
+
+    "id": "{{number([1,100])}}",
+    "permalink": "foo/bar?q=qux",
+    "headline": "The Way I See It",
+
+    "description": {
+        "_template": "../RawHtml.hbs",
+        "html": "{{paragraphs(2)}}"
+    },
+
+    "videoPlayer": {
+        "_dataUrl": "players/YouTubeVideoPlayer.json",
+        "videoId": "NYvM6j56IBk",
+        "card": {
+            "_template": "../../promo/Promo.hbs",
+            "title": "The Way I See It",
+            "description": "{{sentences([1,2])}}",
+            "cta": {
+                "_template": "../../link/Link.hbs",
+                "href": "#",
+                "body": "Play"
+            }
+        }
+    },
+
+    "tags": {
+        "_dataUrl": "../TagList.json"
+    },
+
+    "authors": [
+        {
+            "_dataUrl": "../author/Author.json"
+        }
+    ],
+
+    "playlist": {
+        "_template": "../cluster/Cluster.hbs",
+
+        "title": "Playlist Videos",
+        "items": [
+            {
+                "_dataUrl": "VideoPlayerPromo.json",
+                "url": "playlist-items/VideoYouTube-01.html",
+                "title": "The Way I See It",
+                "active": true
+            },
+            {
+                "_dataUrl": "VideoPlayerPromo.json",
+                "url": "playlist-items/VideoYouTube-02.html",
+                "title": "Afterglow"
+            },
+            {
+                "_dataUrl": "VideoPlayerPromo.json",
+                "url": "playlist-items/VideoYouTube-03.html",
+                "title": "Attack of La Niña"
+            }
+        ]
+    }
+}

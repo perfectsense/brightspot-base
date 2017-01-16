@@ -1,0 +1,13 @@
+@import 'VideoPlayer';
+
+.YouTubeVideoPlayer {
+    &:extend(.VideoPlayer all);
+
+    &-screen {
+        &:extend(.YouTubeVideoPlayer-screen all);
+    }
+
+    &-card {
+        &:extend(.YouTubeVideoPlayer-card all);
+    }
+}

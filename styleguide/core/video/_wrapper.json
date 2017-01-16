@@ -1,0 +1,31 @@
+{
+    "_template": "../page/Page.hbs",
+
+    "title": "Styleguide",
+    "description": "Brightspot Base Styleguide",
+
+    "headItems": {
+        "_template": "../Concatenated.hbs",
+
+        "items": [
+            {
+                "_template": "../page/PageMeta.hbs",
+                "httpEquiv": "X-UA-Compatible",
+                "content": "IE=edge"
+            },
+            {
+                "_template": "../page/PageMeta.hbs",
+                "name": "viewport",
+                "content": "width=device-width, initial-scale=1"
+            },
+            {
+                "_template": "../page/PageExternalScript.hbs",
+                "src": "//player.theplatform.com/pdk/1X3jUC/tpPdkController.js"
+            }
+        ]
+    },
+
+    "body": {
+        "_delegate": true
+    }
+}

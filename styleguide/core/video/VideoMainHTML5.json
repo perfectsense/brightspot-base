@@ -1,0 +1,62 @@
+{
+    "_wrapper": "_wrapper.json",
+
+    "_template": "VideoMain.hbs",
+
+    "id": "{{number([1,100])}}",
+    "permalink": "foo/bar?q=qux",
+    "headline": "The Air Up There",
+
+    "description": {
+        "_template": "../RawHtml.hbs",
+        "html": "{{paragraphs(2)}}"
+    },
+
+    "videoPlayer": {
+        "_dataUrl": "players/HTML5VideoPlayer.json",
+        "card": {
+            "_template": "../../promo/Promo.hbs",
+            "title": "The Way I See It",
+            "description": "{{sentences([1,2])}}",
+            "cta": {
+                "_template": "../../link/Link.hbs",
+                "href": "#",
+                "body": "Play"
+            }
+        }
+    },
+
+    "tags": {
+        "_dataUrl": "../TagList.json"
+    },
+
+    "authors": [
+        {
+            "_dataUrl": "../author/Author.json"
+        }
+    ],
+
+    "playlist": {
+        "_template": "../cluster/Cluster.hbs",
+
+        "title": "Playlist Videos",
+        "items": [
+            {
+                "_dataUrl": "VideoPlayerPromo.json",
+                "url": "playlist-items/VideoHTML5-01.html",
+                "title": "Birds going for a Swim"
+            },
+            {
+                "_dataUrl": "VideoPlayerPromo.json",
+                "url": "playlist-items/VideoHTML5-02.html",
+                "title": "Elephants Dream"
+            },
+            {
+                "_dataUrl": "VideoPlayerPromo.json",
+                "url": "playlist-items/VideoHTML5-03.html",
+                "title": "Big Buck Bunny",
+                "active": true
+            }
+        ]
+    }
+}

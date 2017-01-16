@@ -4,4 +4,32 @@
     &-items {
         &:extend(.Cluster-items all);
     }
+
+    & when (@_demo) {
+        &-items {
+            list-style: none;
+            padding: 0;
+        }
+
+        &-title {
+            ._TextLarge;
+        }
+    }
+}
+
+._Cluster--threeColumnGrid() {
+    &-items {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -1rem;
+        overflow: hidden;
+    }
+
+    &-items-item {
+        flex: 0 33.33%;
+        min-width: 0;
+        box-sizing: border-box;
+        padding-right: 1rem;
+        padding-top: 1rem;
+    }
 }

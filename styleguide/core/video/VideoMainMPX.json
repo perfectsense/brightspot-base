@@ -1,0 +1,64 @@
+{
+    "_wrapper": "_wrapper.json",
+
+    "_template": "VideoMain.hbs",
+
+    "id": "{{number([1,100])}}",
+    "permalink": "foo/bar?q=qux",
+    "headline": "The Air Up There",
+
+    "description": {
+        "_template": "../RawHtml.hbs",
+        "html": "{{paragraphs(2)}}"
+    },
+
+    "videoPlayer": {
+        "_dataUrl": "players/MPXVideoPlayer.json",
+        "hlsUrl": "//link.theplatform.com/s/1X3jUC/E5BWsOHBPO9y",
+        "seekSeconds": 10,
+        "card": {
+            "_template": "../../promo/Promo.hbs",
+            "title": "The Air Up There",
+            "description": "{{sentences([1,2])}}",
+            "cta": {
+                "_template": "../../link/Link.hbs",
+                "href": "#",
+                "body": "Play"
+            }
+        }
+    },
+
+    "tags": {
+        "_dataUrl": "../TagList.json"
+    },
+
+    "authors": [
+        {
+            "_dataUrl": "../author/Author.json"
+        }
+    ],
+
+    "playlist": {
+        "_template": "../cluster/Cluster.hbs",
+
+        "title": "Playlist Videos",
+        "items": [
+            {
+                "_dataUrl": "VideoPlayerPromo.json",
+                "url": "playlist-items/Video-01.html",
+                "title": "The Air Up There",
+                "active": true
+            },
+            {
+                "_dataUrl": "VideoPlayerPromo.json",
+                "url": "playlist-items/Video-02.html",
+                "title": "Nobody Said It Would Be Easy"
+            },
+            {
+                "_dataUrl": "VideoPlayerPromo.json",
+                "url": "playlist-items/Video-03.html",
+                "title": "Battle Dawgs"
+            }
+        ]
+    }
+}

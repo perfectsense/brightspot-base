@@ -1,0 +1,27 @@
+{
+    "_template": "HTML5VideoPlayer.hbs",
+
+    "id": "{{number([0,100])}}",
+    "aspectRatio": "16x9",
+    "seekSeconds": 0,
+    "preloadMetaData": true,
+    "preloadNone": true,
+    "autoplay": true,
+    "controls": true,
+    "loop": false,
+    "muted": false,
+    "width": "100%",
+    "height": "auto",
+    "sources": [
+      {
+        "_template": "HTML5VideoPlayerSources.hbs",
+        "src": "http://www.w3schools.com/html/mov_bbb.mp4",
+        "type": "video/mp4"
+      },
+      {
+        "_template": "HTML5VideoPlayerSources.hbs",
+        "src": "http://www.w3schools.com/html/mov_bbb.ogg",
+        "type": "video/ogg"
+      }
+    ]
+}

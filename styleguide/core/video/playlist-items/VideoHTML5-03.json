@@ -1,0 +1,40 @@
+{
+    "_wrapper": "../_wrapper.json",
+
+    "_template": "../VideoMain.hbs",
+
+    "id": "{{number([1,100])}}",
+    "permalink": "foo/bar?q=qux",
+    "headline": "Big Buck Bunny",
+
+    "description": {
+        "_template": "../../RawHtml.hbs",
+        "html": "{{paragraphs(2)}}"
+    },
+
+    "videoPlayer": {
+        "_dataUrl": "../players/HTML5VideoPlayer.json",
+        "sources": [
+          {
+            "_template": "HTML5VideoPlayerSources.hbs",
+            "src": "http://www.w3schools.com/html/mov_bbb.mp4",
+            "type": "video/mp4"
+          },
+          {
+            "_template": "HTML5VideoPlayerSources.hbs",
+            "src": "http://www.w3schools.com/html/mov_bbb.ogg",
+            "type": "video/ogg"
+          }
+        ]
+    },
+
+    "tags": {
+        "_dataUrl": "../../TagList.json"
+    },
+
+    "authors": [
+        {
+            "_dataUrl": "../../author/Author.json"
+        }
+    ]
+}

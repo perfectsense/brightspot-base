@@ -1,0 +1,10 @@
+{
+    "_template": "YouTubeVideoPlayer.hbs",
+
+    "id": "YOUTUBE-PLAYER-ID-GOES-HERE",
+    "videoId": "NYvM6j56IBk",
+    "aspectRatio": "16x9",
+    "autoplay": false,
+    "muted": false,
+    "seekSeconds": 20
+}

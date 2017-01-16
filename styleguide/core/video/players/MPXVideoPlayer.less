@@ -1,0 +1,13 @@
+@import 'VideoPlayer';
+
+.MPXVideoPlayer {
+    &:extend(.VideoPlayer all);
+
+    &-screen {
+        &:extend(.MPXVideoPlayer-screen all);
+    }
+
+    &-card {
+        &:extend(.MPXVideoPlayer-card all);
+    }
+}

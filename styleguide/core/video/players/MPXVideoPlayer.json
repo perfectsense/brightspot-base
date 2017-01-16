@@ -1,0 +1,12 @@
+{
+    "_wrapper": "../_wrapper.json",
+
+    "_template": "MPXVideoPlayer.hbs",
+
+    "id": "Video-Player-Id-Goes-Here",
+    "src": "//player.theplatform.com/p/1X3jUC/yh5o5S5hrJ4c",
+    "aspectRatio": "16x9",
+    "muted": true,
+    "autoplay": false,
+    "seekSeconds": 10
+}

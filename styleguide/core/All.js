@@ -2,6 +2,9 @@
 import $ from 'node_modules/jquery/dist/jquery.js'
 import Gallery from './gallery/Gallery.js'
 import { VideoMain } from './video/VideoMain.js'
+import { MPXVideoPlayer } from './video/players/MPXVideoPlayer.js'
+import { HTML5VideoPlayer } from './video/players/HTML5VideoPlayer.js'
+import { YouTubeVideoPlayer } from './video/players/YouTubeVideoPlayer.js'
 import bspCarouselPlugin from 'bsp-carousel-plugin'
 /* eslint-enable no-unused-vars */
 
@@ -21,16 +24,36 @@ $(document).ready(function () {
     gallery.init()
   })
 
-  window.videoPlayers = []
   window.videoPlayerControllers = []
-
-  window.registerPlayer = function (player, id) {
-    window.videoPlayers.push(player)
-  }
 
   window.registerPlayerController = function (controller, id) {
     window.videoPlayerControllers[id] = controller
   }
+
+  // MPXVideoPlayer bindings
+  $('.MPXVideoPlayer').each((index, value) => {
+    let player = new MPXVideoPlayer($(value), { })
+
+    // MPXVideo Card behaviors
+    $(`.MPXVideoPlayer-card .Promo-cta`).on(`click`, (event) => {
+      player.play()
+    })
+  })
+
+  // YouTubeVideoPlayer bindings
+  $('.YouTubeVideoPlayer').each((index, value) => {
+    let player = new YouTubeVideoPlayer($(value), { })
+
+    // YouTubeVideo Card behaviors
+    $(`.YouTubeVideoPlayer-card .Promo-cta`).on(`click`, (event) => {
+      player.play()
+    })
+  })
+
+  // HTML5Player bindings
+  $('.HTML5VideoPlayer').each((index, value) => {
+    let player = new HTML5VideoPlayer($(value), { })
+  })
 
   // VideoMain binding
   let $videoMain = $('.VideoMain')

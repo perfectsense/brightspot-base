@@ -1,0 +1,13 @@
+@import 'VideoPlayer';
+
+.HTML5VideoPlayer {
+    &:extend(.VideoPlayer all);
+
+    &-screen {
+        &:extend(.HTML5VideoPlayer-screen all);
+    }
+
+    &-card {
+        &:extend(.HTML5VideoPlayer-screen all);
+    }
+}

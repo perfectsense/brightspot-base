@@ -1,5 +1,4 @@
 import $ from 'node_modules/jquery/dist/jquery.js'
-import { MPXVideoPlayer } from './MPXVideoPlayer.js'
 
 export class VideoMain {
 
@@ -35,17 +34,18 @@ export class VideoMain {
     this._videoPlayer = player
   }
 
+  get activePlaylistItem () {
+    return $(this.selectors.playlistItemsWrapper).find(`${this.selectors.playlistItem}[${this.selectors.activeAttribute}]`)
+  }
+
   constructor ($ctx, options = {}) {
     this.$ctx = $ctx
-
     this.settings = $.extend({}, {
       selectors: {
-        infoCard: '.InfoCard ',
-        infoCardHeadline: '.InfoCard-headline',
-        infoCardTitle: '.InfoCard-title',
-        companionPromo: '.CompanionPromo',
-        companionsWrapper: '.VideoMain-details-companionsWrapper',
-        infoWrapper: '.VideoMain-details-infoWrapper'
+        activeAttribute: `data-active`,
+        content: `.VideoMain-content`,
+        playlistItemsWrapper: `.VideoMain-playlist .Cluster-items`,
+        playlistItem: `.Cluster-items-item .VideoPlayerPromo`
       }
     }, options)
 
@@ -53,63 +53,44 @@ export class VideoMain {
       this.init()
     }
   }
+
   init () {
-    if (!this.videoPlayer) {
-      // MPXVideoPlayer bindings (TODO: move this out to a method)
-      this.$ctx.find('.MPXVideoPlayer').each((index, value) => {
-        this.videoPlayer = new MPXVideoPlayer($(value))
-        window.registerPlayer(this.videoPlayer, this.videoPlayer.playerId)
-      })
+    // get a reference to the video player that we are containing
+    let $videoPlayer = this.$ctx.find(`[itemtype="http://schema.org/VideoObject"]`)
+    if ($videoPlayer.length) {
+      this.videoPlayer = $videoPlayer.data('playerInstance')
+    } else {
+      console.error(`No matching video player child was found in this videoMain element! Using query`)
     }
 
-        // TODO: refactor this
-    let $videoMainTabs = this.$ctx.find('.VideoMain-tabs')
-    if ($videoMainTabs.length) {
-            // Toggles the active tab
-      $videoMainTabs.children().on('click', (evt) => {
-        let $el = $(evt.target)
-        evt.preventDefault()
+    // Binds click on playlist items
+    $(this.selectors.playlistItemsWrapper).find(this.selectors.playlistItem).on('click', (event) => {
+      event.preventDefault()
+      event.stopPropagation()
 
-        // Only returns a [data-active] sibling, not the original element
-        let currentActiveTab = $el.siblings('[data-active]')
+      let $playlistItem = $(event.currentTarget)
+      let url = $playlistItem.attr('data-ajax-url')
 
-        // These flags will only return true if the queried name is a sibling
-        // of the clicked tab and that sibling tag is active
-        let isSiblingCompanionAndActive = (currentActiveTab.attr('name') === 'companions')
-        let isSiblingInfoAndActive = (currentActiveTab.attr('name') === 'info')
-
-        if (isSiblingCompanionAndActive) {
-          $(this.selectors.companionsWrapper).removeAttr('data-is-visible')
-          $(this.selectors.infoWrapper).attr('data-is-visible', '')
-        } else if (isSiblingInfoAndActive) {
-          $(this.selectors.companionsWrapper).attr('data-is-visible', '')
-          $(this.selectors.infoWrapper).removeAttr('data-is-visible')
-        }
-
-        currentActiveTab.removeAttr('data-active')
-        $el.attr('data-active', '')
+      this.$ctx.trigger('VideoMain:onPlaylistItemClick', {
+        url: url
       })
 
-            // Binds click on companion promos
-      $(this.selectors.companionsWrapper).find(this.selectors.companionPromo).on('click', (e) => {
-        e.preventDefault()
-        e.stopPropagation()
+      let $activePlaylistItem = this.activePlaylistItem
+      if ($activePlaylistItem.length) {
+        $activePlaylistItem.removeAttr(this.selectors.activeAttribute)
+      }
 
-        let $companion = $(e.currentTarget)
-        this.$ctx.trigger('VideoMain:onCompanionClick', {
-          url: $companion.attr('data-ajax-url'),
-          mediaType: $companion.attr('data-media-type')
-        })
-      })
-    }
+      $playlistItem.attr(this.selectors.activeAttribute, '')
+
+      this.fetchView(url)
+    })
 
     this.$ctx.trigger('VideoMain:onVideoLoaded', {})
   }
 
   fetchView (url) {
     $.ajax({
-      url: url,
-      async: false
+      url: url
     })
     .done((response) => {
       this.updateView($(response))
@@ -120,31 +101,22 @@ export class VideoMain {
     })
   }
 
-  updateVideoUrl (url) {
-    this.$ctx.trigger('VideoMain:onUpdateVideoUrl', {
-      videoUrl: url
-    })
-  }
-
   updateView ($html) {
     if (this.$ctx) {
       let $newVideoMain = $html
       this.$ctx.attr('id', $newVideoMain.attr('id'))
       this.videoPlayer.updateView($newVideoMain.find('[itemprop="video"]'))
-      this.$ctx.find('.VideoMain-details').replaceWith($html.find('.VideoMain-details'))
+      this.$ctx.find(this.selectors.content).replaceWith($html.find(this.selectors.content))
     } else {
       $(this.settings.updateTarget).after($html)
       this.$ctx = $html
     }
 
+    this.reset()
     this.init()
   }
 
-  resetVideo () {
-    this.$ctx.removeAttr('data-video-min')
-  }
-
-  minimizeVideo () {
-    this.$ctx.attr('data-video-min', '')
+  reset () {
+    $(this.selectors.playlistItemsWrapper).find(this.selectors.playlistItem).off('click')
   }
 }
