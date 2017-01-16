@@ -1,0 +1,38 @@
+{
+    "_template": "ArticleMain.hbs",
+
+    "datePublished": "Published: December 11, 2016",
+    "datePublishedISO": "2016-02-19T16:43:22+00:00",
+    "dateModified": "Modified: December 12, 2016",
+    "dateModifiedISO": "2016-02-19T17:44:23+00:00",
+
+    "breadcrumbs": {
+        "_dataUrl": "../breadcrumbs/Breadcrumbs.json"
+    },
+
+    "preHeadline": "Exploration",
+    "headline": "After Many Years and 17 Cities, a Pilot Realizes His Dream Journey",
+    "subHeadline": "Flying Around the World Without a Drop of Fossil Fuel",
+    "byline": "",
+
+    "authors": [
+        {
+            "_dataUrl": "../author/Author.json"
+        }
+    ],
+
+    "lead": {
+        "_dataUrl": "../image/Image.json",
+        "src": "{{image(900,450)}}",
+        "width": 900,
+        "height": 450
+    },
+
+    "body": {
+        "_dataUrl": "ListBody.json"
+    },
+
+    "tags": {
+        "_dataUrl": "../TagList.json"
+    }
+}
