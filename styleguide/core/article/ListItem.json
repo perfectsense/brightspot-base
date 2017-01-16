@@ -1,0 +1,8 @@
+{
+    "_template": "ListItem.hbs",
+    "headline": "{{words}}",
+    "body": {
+        "_template": "../RawHtml.hbs",
+        "html": "{{paragraphs([3,10])}}"
+    }
+}

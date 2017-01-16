@@ -29,7 +29,7 @@
     },
 
     "body": {
-        "_dataUrl": "RichTextBody.json"
+        "_dataUrl": "ListBody.json"
     },
 
     "tags": {
