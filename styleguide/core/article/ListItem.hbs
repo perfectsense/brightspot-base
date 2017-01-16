@@ -1,0 +1,13 @@
+{{#block "ListItem"}}
+    <div class="{{blockName}}" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        {{#blockBody}}
+            {{#element "headline"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
+
+            {{#element "body"}}
+                <div class="{{elementName}}">{{this}}</div>
+            {{/element}}
+        {{/blockBody}}
+    </div>
+{{/block}}

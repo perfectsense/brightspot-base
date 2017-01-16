@@ -29,35 +29,7 @@
     },
 
     "body": {
-        "_template": "../Concatenated.hbs",
-        "items": [
-            {
-                "_template": "../RawHtml.hbs",
-                "html": "{{paragraphs([3,10])}}"
-            },
-            {
-                "_dataUrl": "../embed/EmbedImageRight.json"
-            },
-            {
-                "_template": "../RawHtml.hbs",
-                "html": "<h3>Subheadline</h3>"
-            },
-            {
-                "_template": "../RawHtml.hbs",
-                "html": "{{paragraphs([3,10])}}"
-            },
-            {
-                "_dataUrl": "../embed/Embed.json"
-            },
-            {
-                "_template": "../RawHtml.hbs",
-                "html": "{{paragraphs([3,10])}}"
-            },
-            {
-                "_template": "../RawHtml.hbs",
-                "html": "{{paragraphs([3,10])}}"
-            }
-        ]
+        "_dataUrl": "RichTextBody.json"
     },
 
     "tags": {

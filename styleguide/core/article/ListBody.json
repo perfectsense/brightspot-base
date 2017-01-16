@@ -1,0 +1,9 @@
+{
+    "_template": "ListBody.hbs",
+    "items": [
+        {
+            "_dataUrl": "ListItem.json",
+            "_repeat": [5, 10]
+        }
+    ]
+}
