@@ -2,7 +2,7 @@
     <div class="{{blockName}}"{{#with background}} style="background:{{this}}"{{/with}}{{extraAttributes}}>
         {{#blockBody}}
             {{#element "items"}}
-                <div class="{{elementName}}"{{#if ../overlay}} data-overlay{{/if}}>
+                <div class="{{elementName}}">
                     {{#each this}}
                         <div class="{{elementName}}-item">{{this}}</div>
                     {{/each}}
